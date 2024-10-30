@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1512859615	Testing			\Default Work Unit\Testing	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	256575689	Words Like Weapons Guitar	C:\Users\joseb\Documents\WwiseProjects\GameOff 2024\.cache\Windows\SFX\Words Like Weapons Guitar_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Words Like Weapons Guitar		1945274
+
