@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	385506998	Testing_Event			\Default Work Unit\Testing_Event	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	433645736	testing_music	C:\Users\joseb\Documents\GitHub\PixelGame\.cache\Windows\SFX\Words Like Weapons Guitar_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\testing_music		40337124
+
