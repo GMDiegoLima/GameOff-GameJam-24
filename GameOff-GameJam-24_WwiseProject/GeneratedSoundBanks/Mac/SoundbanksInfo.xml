@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
+	<RootPaths>
+		<ProjectRoot>../..</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Mac</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{D326F752-7CA2-0A14-FDB1-63ECE89D0199}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+		</SoundBank>
+		<SoundBank Id="1512859615" Type="User" Language="SFX" Hash="{3558A175-BC33-A1E5-3370-9DF3BA634B87}">
+			<ShortName>Testing</ShortName>
+			<Path>Testing.bnk</Path>
+			<Media>
+				<File Id="812529937" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Words Like Weapons Guitar.wav</ShortName>
+					<CachePath>SFX/Words Like Weapons Guitar_818F3B66.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="946158365" Name="TestingEvent" DurationType="OneShot" DurationMin="210.08868" DurationMax="210.08868">
+					<MediaRefs>
+						<MediaRef Id="812529937"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{6E0BF46E-8B55-CB80-61CD-F87A87BF6720}</FileHash>
+</SoundBanksInfo>

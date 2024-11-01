@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	946158365	TestingEvent			\Default Work Unit\TestingEvent	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	812529937	TestingSound	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Windows\SFX\Words Like Weapons Guitar_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\TestingSound		40337124
+

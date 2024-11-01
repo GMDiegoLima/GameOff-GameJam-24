@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	946158365	TestingEvent			\Default Work Unit\TestingEvent	
+
