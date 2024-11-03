@@ -160,5 +160,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a6564517d502734b83a3732e976e80c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tipoDeCorpo: 3
-  spriteRenderer: {fileID: 0}
+  bodyType: 3

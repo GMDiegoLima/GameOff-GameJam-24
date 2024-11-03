@@ -59,14 +59,12 @@ public class PlayerController : MonoBehaviour
                 if (canEmbody && currentBody == Bodies.Ghost)
                 {
                     currentBody = availableBody;
-                    _animator.SetTrigger("Possess");
                     _animator.SetBool("isGhost", false);
-                    Debug.Log("Possessed" + availableBody);
+                    Debug.Log("Possessed " + availableBody);
                     Invoke("Embody", 0.5f);
                 }
                 else if (currentBody != Bodies.Ghost)
                 {
-                    currentBody = Bodies.Ghost;
                     Invoke("Disembody", 0.5f);
                     Debug.Log("Left the body");
                 }
@@ -96,7 +94,23 @@ public class PlayerController : MonoBehaviour
 
             Destroy(enemyBodyPrefab);
         }
-        UpdateBodyState();
+        switch (currentBody)
+        {
+            case Bodies.Main:
+                speed = 5f;
+                break;
+            case Bodies.Wolf:
+                speed = 6f;
+                break;
+
+            case Bodies.FatBat:
+                speed = 4f;
+                break;
+
+            case Bodies.Goblin:
+                speed = 5.5f;
+                break;
+        }
     }
 
     void Disembody()
@@ -110,10 +124,19 @@ public class PlayerController : MonoBehaviour
         shellSpriteRenderer.sprite = _spriteRenderer.sprite;
         shellSpriteRenderer.sortingOrder = _spriteRenderer.sortingOrder - 1;
 
-        _animator.runtimeAnimatorController = originalAnimatorController;
+        BoxCollider2D collider = enemyBodyPrefab.AddComponent<BoxCollider2D>();
+        collider.isTrigger = true;
+        enemyBodyPrefab.tag = "DeadBody";
 
+        EnemyBody enemyBodyComponent = enemyBodyPrefab.AddComponent<EnemyBody>();
+        enemyBodyComponent.bodyType = currentBody;
+        currentBody = Bodies.Ghost;
+
+        Animator shellAnimator = enemyBodyPrefab.AddComponent<Animator>();
+        shellAnimator.runtimeAnimatorController = _animator.runtimeAnimatorController;
+        
+        _animator.runtimeAnimatorController = originalAnimatorController;
         _animator.SetBool("isGhost", true);
-        _animator.SetTrigger("TransformToGhost");
 
         speed = 7f;
     }
@@ -125,31 +148,6 @@ public class PlayerController : MonoBehaviour
         characterBody.MovePosition(newPosition);
     }
 
-    void UpdateBodyState()
-    {
-        switch (currentBody)
-        {
-            case Bodies.Main:
-                _animator.SetTrigger("TransformToMain");
-                speed = 5f;
-                break;
-            case Bodies.Wolf:
-                _animator.SetTrigger("TransformToWolf");
-                speed = 6f;
-                break;
-
-            case Bodies.FatBat:
-                _animator.SetTrigger("TransformToFatBat");
-                speed = 4f;
-                break;
-
-            case Bodies.Goblin:
-                _animator.SetTrigger("TransformToGoblin");
-                speed = 5.5f;
-                break;
-        }
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("DeadBody"))
@@ -159,7 +157,7 @@ public class PlayerController : MonoBehaviour
             EnemyBody enemyBody = other.GetComponent<EnemyBody>();
             if (enemyBody != null)
             {
-                availableBody = enemyBody.tipoDeCorpo;
+                availableBody = enemyBody.bodyType;
                 enemyBodyPrefab = enemyBody.gameObject;
                 Debug.Log("Can embody: " + availableBody);
             }
