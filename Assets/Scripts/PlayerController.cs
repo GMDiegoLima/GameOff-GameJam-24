@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     private Bodies availableBody = Bodies.Ghost;
     private bool canEmbody = false;
 
-    private GameObject currentBodyObject;
+    private GameObject enemyBodyPrefab;
     private SpriteRenderer _spriteRenderer;
 
     public bool alive = true;
@@ -79,25 +79,32 @@ public class PlayerController : MonoBehaviour
     }
     void Embody()
     {
-        if (currentBodyObject != null)
+        if (enemyBodyPrefab != null)
         {
-            transform.position = currentBodyObject.transform.position;
+            transform.position = enemyBodyPrefab.transform.position;
 
-            SpriteRenderer enemySpriteRenderer = currentBodyObject.GetComponent<SpriteRenderer>();
+            SpriteRenderer enemySpriteRenderer = enemyBodyPrefab.GetComponent<SpriteRenderer>();
             if (enemySpriteRenderer != null)
             {
                 _spriteRenderer.sprite = enemySpriteRenderer.sprite;
             }
+
+            Animator bodyShellAnimator = enemyBodyPrefab.GetComponent<Animator>();
+             _animator.runtimeAnimatorController = bodyShellAnimator.runtimeAnimatorController;
+
+             Destroy(enemyBodyPrefab);
         }
         UpdateBodyState();
     }
 
     void Disembody()
     {
-        currentBodyObject = new GameObject("BodyShell");
-        currentBodyObject.transform.position = transform.position;
+        enemyBodyPrefab = new GameObject("BodyShell");
+        enemyBodyPrefab.transform.position = transform.position;
+        enemyBodyPrefab.transform.localScale = transform.localScale;
 
-        SpriteRenderer shellSpriteRenderer = currentBodyObject.AddComponent<SpriteRenderer>();
+        SpriteRenderer shellSpriteRenderer = enemyBodyPrefab.AddComponent<SpriteRenderer>();
+        
         shellSpriteRenderer.sprite = _spriteRenderer.sprite;
         shellSpriteRenderer.sortingOrder = _spriteRenderer.sortingOrder - 1;
 
@@ -149,6 +156,7 @@ public class PlayerController : MonoBehaviour
             if (enemyBody != null)
             {
                 availableBody = enemyBody.tipoDeCorpo;
+                enemyBodyPrefab = enemyBody.gameObject;
                 Debug.Log("Can embody: " + availableBody);
             }
         }
@@ -158,9 +166,10 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("DeadBody"))
         {
-            currentBodyObject = null;
+            enemyBodyPrefab = null;
             canEmbody = false;
             availableBody = Bodies.Ghost;
+            Debug.Log("Cannot embody anymore");
         }
     }
 }

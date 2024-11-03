@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1107 &-8755039920870519653
+--- !u!1107 &-6265285387965740316
 AnimatorStateMachine:
   serializedVersion: 6
   m_ObjectHideFlags: 1
@@ -25,7 +25,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Wolf
+  m_Name: FatBat
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Vertical
@@ -55,7 +55,7 @@ AnimatorController:
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
-    m_StateMachine: {fileID: -8755039920870519653}
+    m_StateMachine: {fileID: -6265285387965740316}
     m_Mask: {fileID: 0}
     m_Motions: []
     m_Behaviours: []

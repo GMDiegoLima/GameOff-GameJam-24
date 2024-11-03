@@ -3,10 +3,10 @@ using UnityEngine;
 public class EnemyBody : MonoBehaviour
 {
     public PlayerController.Bodies tipoDeCorpo;
-    private SpriteRenderer _spriteRenderer;
+    public SpriteRenderer spriteRenderer;
 
     void Start()
     {
-        _spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 }
