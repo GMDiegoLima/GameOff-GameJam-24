@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     Vector2 inputMovement;
 
     private Animator _animator;
+    private RuntimeAnimatorController originalAnimatorController;
 
     public enum Bodies
     {
@@ -33,6 +34,7 @@ public class PlayerController : MonoBehaviour
         velocity = new Vector2(speed, speed);
         characterBody = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
+        originalAnimatorController = _animator.runtimeAnimatorController; 
         _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
@@ -90,9 +92,9 @@ public class PlayerController : MonoBehaviour
             }
 
             Animator bodyShellAnimator = enemyBodyPrefab.GetComponent<Animator>();
-             _animator.runtimeAnimatorController = bodyShellAnimator.runtimeAnimatorController;
+            _animator.runtimeAnimatorController = bodyShellAnimator.runtimeAnimatorController;
 
-             Destroy(enemyBodyPrefab);
+            Destroy(enemyBodyPrefab);
         }
         UpdateBodyState();
     }
@@ -107,6 +109,8 @@ public class PlayerController : MonoBehaviour
         
         shellSpriteRenderer.sprite = _spriteRenderer.sprite;
         shellSpriteRenderer.sortingOrder = _spriteRenderer.sortingOrder - 1;
+
+        _animator.runtimeAnimatorController = originalAnimatorController;
 
         _animator.SetBool("isGhost", true);
         _animator.SetTrigger("TransformToGhost");
