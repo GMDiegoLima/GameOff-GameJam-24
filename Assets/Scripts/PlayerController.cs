@@ -26,6 +26,10 @@ public class PlayerController : MonoBehaviour
     private GameObject enemyBodyPrefab;
     private SpriteRenderer _spriteRenderer;
 
+    private bool isMovingToTarget = false;
+    private Vector3 targetPosition;
+    private float transitionSpeed = 5f;
+
     public bool alive = true;
     public GameObject gameOver;
 
@@ -55,13 +59,20 @@ public class PlayerController : MonoBehaviour
                 _animator.SetFloat("LastVertical", inputMovement.y);
             }
 
+            if (isMovingToTarget)
+            {
+                MoveToTarget();
+                return;
+            }
+
             if (Input.GetKeyDown("q")) {
                 if (canEmbody && currentBody == Bodies.Ghost)
                 {
                     currentBody = availableBody;
                     _animator.SetBool("isGhost", false);
+                    targetPosition = enemyBodyPrefab.transform.position;
+                    isMovingToTarget = true;
                     Debug.Log("Possessed " + availableBody);
-                    Invoke("Embody", 0.5f);
                 }
                 else if (currentBody != Bodies.Ghost)
                 {
@@ -77,6 +88,16 @@ public class PlayerController : MonoBehaviour
             inputMovement = new Vector2(0, 0);
         }
     }
+    void MoveToTarget()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, targetPosition, transitionSpeed * Time.deltaTime);
+        if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
+        {
+            isMovingToTarget = false;
+            Embody();
+        }
+    }
+
     void Embody()
     {
         if (enemyBodyPrefab != null)
