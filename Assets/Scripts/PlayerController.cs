@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class PlayerController : MonoBehaviour
         Goblin,
     }
     public Bodies currentBody = Bodies.Main;
+    public TextMeshProUGUI embodyText;
     private Bodies availableBody = Bodies.Ghost;
     private bool canEmbody = false;
 
@@ -74,12 +76,12 @@ public class PlayerController : MonoBehaviour
                 }
                 else if (currentBody != Bodies.Ghost)
                 {
-                    enemyBodyPrefab = new GameObject("BodyShell");
+                    enemyBodyPrefab = new GameObject(currentBody + " body");
                     enemyBodyPrefab.transform.position = transform.position;
                     enemyBodyPrefab.transform.localScale = transform.localScale;
 
                     SpriteRenderer shellSpriteRenderer = enemyBodyPrefab.AddComponent<SpriteRenderer>();
-                    
+
                     shellSpriteRenderer.sprite = _spriteRenderer.sprite;
                     shellSpriteRenderer.sortingOrder = _spriteRenderer.sortingOrder - 1;
                     _animator.SetTrigger("Disembody");
@@ -173,6 +175,14 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("DeadBody"))
         {
             canEmbody = true;
+            if (currentBody == Bodies.Ghost)
+            {
+                embodyText.enabled = true;
+            }
+            else
+            {
+                embodyText.enabled = false;
+            }
 
             EnemyBody enemyBody = other.GetComponent<EnemyBody>();
             if (enemyBody != null)
@@ -188,6 +198,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("DeadBody"))
         {
+            embodyText.enabled = false;
             enemyBodyPrefab = null;
             canEmbody = false;
             availableBody = Bodies.Ghost;
