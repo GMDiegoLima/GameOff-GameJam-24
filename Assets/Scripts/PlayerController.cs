@@ -25,19 +25,17 @@ public class PlayerController : MonoBehaviour
 
     private GameObject enemyBodyPrefab;
     private SpriteRenderer _spriteRenderer;
-
     private bool isMovingToTarget = false;
     private Vector3 targetPosition;
-    private float transitionSpeed = 5f;
 
     public bool alive = true;
     public GameObject gameOver;
 
     void Start()
     {
+        _animator = GetComponent<Animator>();
         velocity = new Vector2(speed, speed);
         characterBody = GetComponent<Rigidbody2D>();
-        _animator = GetComponent<Animator>();
         originalAnimatorController = _animator.runtimeAnimatorController; 
         _spriteRenderer = GetComponent<SpriteRenderer>();
     }
@@ -69,7 +67,6 @@ public class PlayerController : MonoBehaviour
                 if (canEmbody && currentBody == Bodies.Ghost)
                 {
                     currentBody = availableBody;
-                    _animator.SetBool("isGhost", false);
                     targetPosition = enemyBodyPrefab.transform.position;
                     isMovingToTarget = true;
                     Debug.Log("Possessed " + availableBody);
@@ -90,10 +87,11 @@ public class PlayerController : MonoBehaviour
     }
     void MoveToTarget()
     {
-        transform.position = Vector3.MoveTowards(transform.position, targetPosition, transitionSpeed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, targetPosition, 5f * Time.deltaTime);
         if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
         {
             isMovingToTarget = false;
+            _animator.SetBool("isGhost", false);
             Embody();
         }
     }
@@ -123,11 +121,9 @@ public class PlayerController : MonoBehaviour
             case Bodies.Wolf:
                 speed = 6f;
                 break;
-
             case Bodies.FatBat:
                 speed = 4f;
                 break;
-
             case Bodies.Goblin:
                 speed = 5.5f;
                 break;
@@ -145,8 +141,9 @@ public class PlayerController : MonoBehaviour
         shellSpriteRenderer.sprite = _spriteRenderer.sprite;
         shellSpriteRenderer.sortingOrder = _spriteRenderer.sortingOrder - 1;
 
-        BoxCollider2D collider = enemyBodyPrefab.AddComponent<BoxCollider2D>();
+        CircleCollider2D collider = enemyBodyPrefab.AddComponent<CircleCollider2D>();
         collider.isTrigger = true;
+        collider.radius = 1.5f;
         enemyBodyPrefab.tag = "DeadBody";
 
         EnemyBody enemyBodyComponent = enemyBodyPrefab.AddComponent<EnemyBody>();
