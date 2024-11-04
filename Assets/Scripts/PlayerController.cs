@@ -68,12 +68,22 @@ public class PlayerController : MonoBehaviour
                 {
                     currentBody = availableBody;
                     targetPosition = enemyBodyPrefab.transform.position;
+                    // _animator.SetTrigger("Embody");
                     isMovingToTarget = true;
                     Debug.Log("Possessed " + availableBody);
                 }
                 else if (currentBody != Bodies.Ghost)
                 {
-                    Invoke("Disembody", 0.5f);
+                    enemyBodyPrefab = new GameObject("BodyShell");
+                    enemyBodyPrefab.transform.position = transform.position;
+                    enemyBodyPrefab.transform.localScale = transform.localScale;
+
+                    SpriteRenderer shellSpriteRenderer = enemyBodyPrefab.AddComponent<SpriteRenderer>();
+                    
+                    shellSpriteRenderer.sprite = _spriteRenderer.sprite;
+                    shellSpriteRenderer.sortingOrder = _spriteRenderer.sortingOrder - 1;
+                    _animator.SetTrigger("Disembody");
+                    Invoke("Disembody", 0.44f);
                     Debug.Log("Left the body");
                 }
             }
@@ -92,6 +102,7 @@ public class PlayerController : MonoBehaviour
         {
             isMovingToTarget = false;
             _animator.SetBool("isGhost", false);
+            // Invoke("Embody", 0.4f);
             Embody();
         }
     }
@@ -132,15 +143,6 @@ public class PlayerController : MonoBehaviour
 
     void Disembody()
     {
-        enemyBodyPrefab = new GameObject("BodyShell");
-        enemyBodyPrefab.transform.position = transform.position;
-        enemyBodyPrefab.transform.localScale = transform.localScale;
-
-        SpriteRenderer shellSpriteRenderer = enemyBodyPrefab.AddComponent<SpriteRenderer>();
-        
-        shellSpriteRenderer.sprite = _spriteRenderer.sprite;
-        shellSpriteRenderer.sortingOrder = _spriteRenderer.sortingOrder - 1;
-
         CircleCollider2D collider = enemyBodyPrefab.AddComponent<CircleCollider2D>();
         collider.isTrigger = true;
         collider.radius = 1.5f;
