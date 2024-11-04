@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
         Wolf,
         FatBat,
         Goblin,
+        Skeleton
     }
     public Bodies currentBody = Bodies.Main;
     public TextMeshProUGUI embodyText;
