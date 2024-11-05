@@ -9,8 +9,8 @@ public class PlayerController : MonoBehaviour
     Vector2 velocity;
     Vector2 inputMovement;
 
-    private Animator _animator;
-    private RuntimeAnimatorController originalAnimatorController;
+    Animator _animator;
+    RuntimeAnimatorController originalAnimatorController;
 
     public enum Bodies
     {
@@ -23,13 +23,13 @@ public class PlayerController : MonoBehaviour
     }
     public Bodies currentBody = Bodies.Main;
     public TextMeshProUGUI embodyText;
-    private Bodies availableBody = Bodies.Ghost;
-    private bool canEmbody = false;
+    Bodies availableBody = Bodies.Ghost;
+    bool canEmbody = false;
 
-    private GameObject enemyBodyPrefab;
-    private SpriteRenderer _spriteRenderer;
-    private bool isMovingToTarget = false;
-    private Vector3 targetPosition;
+    GameObject enemyBodyPrefab;
+    SpriteRenderer _spriteRenderer;
+    bool isMovingToTarget = false;
+    Vector3 targetPosition;
 
     public bool alive = true;
     public GameObject gameOver;
