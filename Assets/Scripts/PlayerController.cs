@@ -75,16 +75,21 @@ public class PlayerController : MonoBehaviour
                     isMovingToTarget = true;
                     Debug.Log("Possessed " + availableBody);
                 }
-                else if (currentBody != Bodies.Ghost)
+                else if (currentBody != Bodies.Ghost && enemyBodyPrefab == null)
                 {
                     enemyBodyPrefab = new GameObject(currentBody + " body");
+                    enemyBodyPrefab.tag = "DeadBody";
+
                     enemyBodyPrefab.transform.position = transform.position;
                     enemyBodyPrefab.transform.localScale = transform.localScale;
 
                     SpriteRenderer shellSpriteRenderer = enemyBodyPrefab.AddComponent<SpriteRenderer>();
-
                     shellSpriteRenderer.sprite = _spriteRenderer.sprite;
                     shellSpriteRenderer.sortingOrder = _spriteRenderer.sortingOrder - 1;
+                    
+                    Animator shellAnimator = enemyBodyPrefab.AddComponent<Animator>();
+                    shellAnimator.runtimeAnimatorController = _animator.runtimeAnimatorController;
+                    shellAnimator.SetBool("Dead", true);
                     _animator.SetTrigger("Disembody");
                     Invoke("Disembody", 0.44f);
                     Debug.Log("Left the body");
@@ -114,6 +119,8 @@ public class PlayerController : MonoBehaviour
     {
         if (enemyBodyPrefab != null)
         {
+            Animator bodyShellAnimator = enemyBodyPrefab.GetComponent<Animator>();
+            _animator.runtimeAnimatorController = bodyShellAnimator.runtimeAnimatorController;
             transform.position = enemyBodyPrefab.transform.position;
 
             SpriteRenderer enemySpriteRenderer = enemyBodyPrefab.GetComponent<SpriteRenderer>();
@@ -121,9 +128,6 @@ public class PlayerController : MonoBehaviour
             {
                 _spriteRenderer.sprite = enemySpriteRenderer.sprite;
             }
-
-            Animator bodyShellAnimator = enemyBodyPrefab.GetComponent<Animator>();
-            _animator.runtimeAnimatorController = bodyShellAnimator.runtimeAnimatorController;
 
             Destroy(enemyBodyPrefab);
         }
@@ -141,27 +145,28 @@ public class PlayerController : MonoBehaviour
             case Bodies.Goblin:
                 speed = 5.5f;
                 break;
+            case Bodies.Skeleton:
+                speed = 3f;
+                break;
         }
     }
 
     void Disembody()
     {
-        CircleCollider2D collider = enemyBodyPrefab.AddComponent<CircleCollider2D>();
-        collider.isTrigger = true;
-        collider.radius = 1.5f;
-        enemyBodyPrefab.tag = "DeadBody";
+        if (enemyBodyPrefab != null)
+        {
+            EnemyBody enemyBodyComponent = enemyBodyPrefab.AddComponent<EnemyBody>();
+            enemyBodyComponent.bodyType = currentBody;
+            currentBody = Bodies.Ghost;
 
-        EnemyBody enemyBodyComponent = enemyBodyPrefab.AddComponent<EnemyBody>();
-        enemyBodyComponent.bodyType = currentBody;
-        currentBody = Bodies.Ghost;
+            _animator.runtimeAnimatorController = originalAnimatorController;
+            _animator.SetBool("isGhost", true);
+            CircleCollider2D collider = enemyBodyPrefab.AddComponent<CircleCollider2D>();
+            collider.isTrigger = true;
+            collider.radius = 1.5f;
 
-        Animator shellAnimator = enemyBodyPrefab.AddComponent<Animator>();
-        shellAnimator.runtimeAnimatorController = _animator.runtimeAnimatorController;
-        
-        _animator.runtimeAnimatorController = originalAnimatorController;
-        _animator.SetBool("isGhost", true);
-
-        speed = 7f;
+            speed = 7f;
+        }
     }
 
     void FixedUpdate()
@@ -173,18 +178,10 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("DeadBody"))
+        if (other.CompareTag("DeadBody") && currentBody == Bodies.Ghost)
         {
+            embodyText.enabled = true;
             canEmbody = true;
-            if (currentBody == Bodies.Ghost)
-            {
-                embodyText.enabled = true;
-            }
-            else
-            {
-                embodyText.enabled = false;
-            }
-
             EnemyBody enemyBody = other.GetComponent<EnemyBody>();
             if (enemyBody != null)
             {
@@ -197,7 +194,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("DeadBody"))
+        if (other.CompareTag("DeadBody") && other.gameObject == enemyBodyPrefab)
         {
             embodyText.enabled = false;
             enemyBodyPrefab = null;
