@@ -10,9 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 6271610525284946468}
   - component: {fileID: 1921930640122397641}
+  - component: {fileID: 5579570579450846632}
   - component: {fileID: 6862298743724003880}
   - component: {fileID: 5941055443064172931}
   - component: {fileID: 4587860536581880562}
+  - component: {fileID: 2293686943694970709}
+  - component: {fileID: 5322064252601388979}
   m_Layer: 0
   m_Name: Wolf
   m_TagString: DeadBody
@@ -32,7 +35,8 @@ Transform:
   m_LocalPosition: {x: 0.1161623, y: -0.4338077, z: 0.033329744}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 1283745739106947589}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1921930640122397641
@@ -71,6 +75,33 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 1.5
+--- !u!50 &5579570579450846632
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5640444739511689665}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!212 &6862298743724003880
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -161,3 +192,97 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bodyType: 2
+--- !u!114 &2293686943694970709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5640444739511689665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82f14951600924800911e7b1908b32d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actorName: Wolf
+  moveSpeed: 0
+  damage: 0
+  attackRange: 1
+  attackCD: 0
+  patrolViewRangeX: 0
+  chaseViewRangeX: 0
+--- !u!114 &5322064252601388979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5640444739511689665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96632d25d3494770a7c62b8bfcf5964, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actor: {fileID: 0}
+--- !u!1001 &260119696405537039
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6271610525284946468}
+    m_Modifications:
+    - target: {fileID: 1318682292468691722, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318682292468691722, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318682292468691722, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318682292468691722, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318682292468691722, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318682292468691722, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318682292468691722, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318682292468691722, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318682292468691722, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318682292468691722, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3813708288895922085, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
+      propertyPath: m_Name
+      value: Eye
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
+--- !u!4 &1283745739106947589 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1318682292468691722, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
+  m_PrefabInstance: {fileID: 260119696405537039}
+  m_PrefabAsset: {fileID: 0}
