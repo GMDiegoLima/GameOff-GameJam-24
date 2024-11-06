@@ -12,18 +12,18 @@ public class PressurePlateTrigger : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") || other.CompareTag("PressureTrigger"))
         {
             animator.SetBool("Activated", true);
             onActivate?.Invoke();
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") || other.CompareTag("PressureTrigger"))
         {
             animator.SetBool("Activated", false);
             onDeactivate?.Invoke();

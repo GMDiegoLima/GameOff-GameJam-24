@@ -4,7 +4,7 @@ using TMPro;
 
 public class LeverTrigger : MonoBehaviour
 {
-    private bool canPull;
+    bool canPull;
     public bool activated;
     public TextMeshProUGUI pullText;
     public UnityEvent onActivate;
@@ -13,12 +13,14 @@ public class LeverTrigger : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        animator.enabled = false;
     }
 
     void Update()
     {
         if (canPull && Input.GetKeyDown("e"))
         {
+            animator.enabled = true;
             activated = !activated;
             if (activated)
             {
@@ -32,7 +34,7 @@ public class LeverTrigger : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
@@ -41,7 +43,7 @@ public class LeverTrigger : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {

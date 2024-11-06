@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: player_dead
+  m_Name: pressureplate_disabled
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,7 +21,7 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -7278587395936577998, guid: 52f97a7734184754081a7625db244e12, type: 3}
+      value: {fileID: 641250416531573229, guid: 1717bbfa0c010f045b4e8b113781543a, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -44,7 +44,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -7278587395936577998, guid: 52f97a7734184754081a7625db244e12, type: 3}
+    - {fileID: 641250416531573229, guid: 1717bbfa0c010f045b4e8b113781543a, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
