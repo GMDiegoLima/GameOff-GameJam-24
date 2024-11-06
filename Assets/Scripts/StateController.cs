@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class StateController : MonoBehaviour
 {
-    public GameActor actor;
+    [HideInInspector] public GameActor actor;
     private IState currentState;
 
     private void Awake()

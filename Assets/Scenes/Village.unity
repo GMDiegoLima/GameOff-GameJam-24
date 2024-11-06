@@ -329,13 +329,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3917906253159701135, guid: 1eabea1b4111acd449aec41eba28d58a, type: 3}
+      propertyPath: actorName
+      value: FatBat
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706713769738668447, guid: 1eabea1b4111acd449aec41eba28d58a, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 758673646730616367, guid: 1eabea1b4111acd449aec41eba28d58a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1222396398}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1eabea1b4111acd449aec41eba28d58a, type: 3}
 --- !u!1 &619394800
 GameObject:
@@ -717,23 +722,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e927855a21151b84b91c7e9583679c23, type: 3}
---- !u!1 &1222396392 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 758673646730616367, guid: 1eabea1b4111acd449aec41eba28d58a, type: 3}
-  m_PrefabInstance: {fileID: 596239977}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1222396398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1222396392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95edea136c536464eb2055997bfcf5e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1238042694
 GameObject:
   m_ObjectHideFlags: 0
