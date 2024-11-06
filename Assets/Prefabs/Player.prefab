@@ -517,7 +517,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2838263819315806477, guid: 21f11c0c5a9a8564097921176b6711e0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -640,6 +640,7 @@ MonoBehaviour:
   currentBody: 0
   embodyText: {fileID: 428538844500421307}
   alive: 1
+  flying: 0
   gameOver: {fileID: 0}
 --- !u!114 &5228655556956484796
 MonoBehaviour:
