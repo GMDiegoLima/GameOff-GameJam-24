@@ -3,8 +3,8 @@ using UnityEngine.Events;
 
 public class PressurePlateTrigger : MonoBehaviour
 {
-    private bool canActivate;
     public UnityEvent onActivate;
+    public UnityEvent onDeactivate;
     Animator animator;
 
     void Start()
@@ -12,20 +12,12 @@ public class PressurePlateTrigger : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    void Update()
-    {
-        if (canActivate) {
-            onActivate?.Invoke();
-            canActivate = false;
-        }
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            canActivate = true;
             animator.SetBool("Activated", true);
+            onActivate?.Invoke();
         }
     }
 
@@ -33,8 +25,8 @@ public class PressurePlateTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            canActivate = false;
             animator.SetBool("Activated", false);
+            onDeactivate?.Invoke();
         }
     }
 }

@@ -20,9 +20,14 @@ public class LeverTrigger : MonoBehaviour
         if (canPull && Input.GetKeyDown("e"))
         {
             activated = !activated;
-            if (activated) {
+            if (activated)
+            {
                 animator.SetBool("Activated", true);
                 onActivate?.Invoke();
+            }
+            else
+            {
+                animator.SetBool("Activated", false);
             }
         }
     }
