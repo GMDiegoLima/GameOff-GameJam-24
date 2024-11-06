@@ -1,10 +1,15 @@
 using UnityEngine;
 
-public class Enemy : GameActor 
+public class FatBat : GameActor 
 {
     protected override void Awake()
     {
         base.Awake();
+        actorName = "FatBat";
+        moveSpeed = 7f;
+        damage = 1f;
+        attackRange = 3f;
+        attackCD = 2f;
     }
 
     protected override void Update()

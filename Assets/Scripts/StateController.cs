@@ -8,6 +8,7 @@ public class StateController : MonoBehaviour
     private void Awake()
     {
         actor = GetComponent<GameActor>();
+        actor.isControllerEnabled = true;
         currentState = new PatrolState();
     }
 
