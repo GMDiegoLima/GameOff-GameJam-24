@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
     Vector3 targetPosition;
 
     public bool alive = true;
+    public bool flying = false;
     public GameObject gameOver;
 
     void Start()
@@ -73,6 +74,7 @@ public class PlayerController : MonoBehaviour
                     targetPosition = enemyBodyPrefab.transform.position;
                     // _animator.SetTrigger("Embody");
                     isMovingToTarget = true;
+                    _animator.Play("Embody");
                     Debug.Log("Possessed " + availableBody);
                 }
                 else if (currentBody != Bodies.Ghost && enemyBodyPrefab == null)
@@ -90,8 +92,9 @@ public class PlayerController : MonoBehaviour
                     Animator shellAnimator = enemyBodyPrefab.AddComponent<Animator>();
                     shellAnimator.runtimeAnimatorController = _animator.runtimeAnimatorController;
                     shellAnimator.SetBool("Dead", true);
-                    _animator.SetTrigger("Disembody");
-                    Invoke("Disembody", 0.44f);
+                    _animator.Play("Disembody");
+                    flying = true;
+                    Invoke("Disembody", 0.5f);
                     Debug.Log("Left the body");
                 }
             }
@@ -135,18 +138,23 @@ public class PlayerController : MonoBehaviour
         {
             case Bodies.Main:
                 speed = 5f;
+                flying = false;
                 break;
             case Bodies.Wolf:
                 speed = 6f;
+                flying = false;
                 break;
             case Bodies.FatBat:
                 speed = 4f;
+                flying = true;
                 break;
             case Bodies.Goblin:
                 speed = 5.5f;
+                flying = false;
                 break;
             case Bodies.Skeleton:
                 speed = 3f;
+                flying = false;
                 break;
         }
     }
@@ -176,7 +184,7 @@ public class PlayerController : MonoBehaviour
         characterBody.MovePosition(newPosition);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("DeadBody") && currentBody == Bodies.Ghost)
         {
@@ -192,7 +200,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("DeadBody") && other.gameObject == enemyBodyPrefab)
         {
