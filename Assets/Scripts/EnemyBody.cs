@@ -3,5 +3,5 @@ using UnityEngine;
 public class EnemyBody : MonoBehaviour
 {
     public PlayerController.Bodies bodyType;
-    public bool alive;
+    public bool alive = true;
 }

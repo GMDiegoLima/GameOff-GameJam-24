@@ -8,15 +8,15 @@ public class Projetile : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            PlayerController playerbody = other.GetComponent<PlayerController>();
+            playerbody = other.GetComponent<PlayerController>();
             if (playerbody != null)
             {
                 playerbody.alive = false;
             }
         }
-        else if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Enemy"))
         {
-            EnemyBody enemyBody = other.GetComponent<EnemyBody>();
+            enemyBody = other.GetComponent<EnemyBody>();
             if (enemyBody != null)
             {
                 enemyBody.alive = false;
