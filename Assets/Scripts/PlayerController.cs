@@ -3,20 +3,14 @@ using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
-    /*
 
-    [SerializeField] private GameActor currentActor;
-    [SerializeField] private GameObject currentPrefab;
-    [SerializeField] private GameObject availablePrefab;
-    
-    // public float speed;
-    // Rigidbody2D characterBody;
+    public float speed;
+    Rigidbody2D characterBody;
     Vector2 velocity;
     Vector2 inputMovement;
 
-    // Animator _animator;
+    Animator _animator;
     RuntimeAnimatorController originalAnimatorController;
-    */
 
     public enum Bodies
     {
@@ -27,15 +21,13 @@ public class PlayerController : MonoBehaviour
         Goblin,
         Skeleton
     }
-
-    /*
-
     public Bodies currentBody = Bodies.Main;
     public TextMeshProUGUI embodyText;
     Bodies availableBody = Bodies.Ghost;
     bool canEmbody = false;
 
-    // SpriteRenderer _spriteRenderer;
+    GameObject enemyBodyPrefab;
+    SpriteRenderer _spriteRenderer;
     bool isMovingToTarget = false;
     Vector3 targetPosition;
 
@@ -43,20 +35,13 @@ public class PlayerController : MonoBehaviour
     public bool flying = false;
     public GameObject gameOver;
 
-    private void Awake()
-    {
-        currentPrefab = Resources.Load("Assets / Prefabs / GameActors / MainCharacter.prefab") as GameObject;
-        UpdateCurrentActor();
-    }
-
     void Start()
     {
-        //_animator = GetComponent<Animator>();
-        //originalAnimatorController = _animator.runtimeAnimatorController; 
-        //currentActor = GetComponent<GameActor>();
-        velocity = new Vector2(currentActor.moveSpeed, currentActor.moveSpeed);
-        //characterBody = GetComponent<Rigidbody2D>();
-        //_spriteRenderer = GetComponent<SpriteRenderer>();
+        _animator = GetComponent<Animator>();
+        velocity = new Vector2(speed, speed);
+        characterBody = GetComponent<Rigidbody2D>();
+        originalAnimatorController = _animator.runtimeAnimatorController;
+        _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -67,13 +52,13 @@ public class PlayerController : MonoBehaviour
                 Input.GetAxisRaw("Horizontal"),
                 Input.GetAxisRaw("Vertical")
                 );
-            currentActor.Anim.SetFloat("Horizontal", inputMovement.x);
-            currentActor.Anim.SetFloat("Vertical", inputMovement.y);
+            _animator.SetFloat("Horizontal", inputMovement.x);
+            _animator.SetFloat("Vertical", inputMovement.y);
 
             if (inputMovement != Vector2.zero)
             {
-                currentActor.Anim.SetFloat("LastHorizontal", inputMovement.x);
-                currentActor.Anim.SetFloat("LastVertical", inputMovement.y);
+                _animator.SetFloat("LastHorizontal", inputMovement.x);
+                _animator.SetFloat("LastVertical", inputMovement.y);
             }
 
             if (isMovingToTarget)
@@ -82,32 +67,33 @@ public class PlayerController : MonoBehaviour
                 return;
             }
 
-            if (Input.GetKeyDown("q")) {
+            if (Input.GetKeyDown("q"))
+            {
                 if (canEmbody && currentBody == Bodies.Ghost)
                 {
                     currentBody = availableBody;
-                    targetPosition = currentPrefab.transform.position;
+                    targetPosition = enemyBodyPrefab.transform.position;
                     // _animator.SetTrigger("Embody");
                     isMovingToTarget = true;
-                    currentActor.Anim.Play("Embody");
+                    _animator.Play("Embody");
                     Debug.Log("Possessed " + availableBody);
                 }
-                else if (currentBody != Bodies.Ghost && currentPrefab == null)
+                else if (currentBody != Bodies.Ghost && enemyBodyPrefab == null)
                 {
-                    currentPrefab = new GameObject(currentBody + " body");
-                    currentPrefab.tag = "DeadBody";
+                    enemyBodyPrefab = new GameObject(currentBody + " body");
+                    enemyBodyPrefab.tag = "DeadBody";
 
-                    currentPrefab.transform.position = transform.position;
-                    currentPrefab.transform.localScale = transform.localScale;
+                    enemyBodyPrefab.transform.position = transform.position;
+                    enemyBodyPrefab.transform.localScale = transform.localScale;
 
-                    SpriteRenderer shellSpriteRenderer = currentPrefab.AddComponent<SpriteRenderer>();
-                    shellSpriteRenderer.sprite = currentActor.Sprite.sprite;
-                    shellSpriteRenderer.sortingOrder = currentActor.Sprite.sortingOrder - 1;
-                    
-                    Animator shellAnimator = currentPrefab.AddComponent<Animator>();
-                    shellAnimator.runtimeAnimatorController = currentActor.Anim.runtimeAnimatorController;
+                    SpriteRenderer shellSpriteRenderer = enemyBodyPrefab.AddComponent<SpriteRenderer>();
+                    shellSpriteRenderer.sprite = _spriteRenderer.sprite;
+                    shellSpriteRenderer.sortingOrder = _spriteRenderer.sortingOrder - 1;
+
+                    Animator shellAnimator = enemyBodyPrefab.AddComponent<Animator>();
+                    shellAnimator.runtimeAnimatorController = _animator.runtimeAnimatorController;
                     shellAnimator.SetBool("Dead", true);
-                    currentActor.Anim.Play("Disembody");
+                    _animator.Play("Disembody");
                     flying = true;
                     Invoke("Disembody", 0.5f);
                     Debug.Log("Left the body");
@@ -127,29 +113,27 @@ public class PlayerController : MonoBehaviour
         if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
         {
             isMovingToTarget = false;
-            currentActor.Anim.SetBool("isGhost", false);
-            Invoke("Embody", 0.4f);
+            _animator.SetBool("isGhost", false);
+            // Invoke("Embody", 0.4f);
             Embody();
         }
     }
 
     void Embody()
     {
-        if (availablePrefab != null)
+        if (enemyBodyPrefab != null)
         {
-            //Animator bodyShellAnimator = enemyBodyPrefab.GetComponent<Animator>();
-            //_animator.runtimeAnimatorController = bodyShellAnimator.runtimeAnimatorController;
-            currentPrefab = availablePrefab;
-            transform.position = availablePrefab.transform.position;
-            UpdateCurrentActor();
+            Animator bodyShellAnimator = enemyBodyPrefab.GetComponent<Animator>();
+            _animator.runtimeAnimatorController = bodyShellAnimator.runtimeAnimatorController;
+            transform.position = enemyBodyPrefab.transform.position;
 
-            //SpriteRenderer enemySpriteRenderer = currentPrefab.GetComponent<SpriteRenderer>();
-            //if (enemySpriteRenderer != null)
-            //{
-            //    currentActor.Sprite.sprite = enemySpriteRenderer.sprite;
-            //}
+            SpriteRenderer enemySpriteRenderer = enemyBodyPrefab.GetComponent<SpriteRenderer>();
+            if (enemySpriteRenderer != null)
+            {
+                _spriteRenderer.sprite = enemySpriteRenderer.sprite;
+            }
 
-            Destroy(availablePrefab);
+            Destroy(enemyBodyPrefab);
         }
         switch (currentBody)
         {
@@ -178,25 +162,27 @@ public class PlayerController : MonoBehaviour
 
     void Disembody()
     {
-        if (currentPrefab != null)
+        if (enemyBodyPrefab != null)
         {
-            EnemyBody enemyBodyComponent = currentPrefab.AddComponent<EnemyBody>();
+            EnemyBody enemyBodyComponent = enemyBodyPrefab.AddComponent<EnemyBody>();
             enemyBodyComponent.bodyType = currentBody;
             currentBody = Bodies.Ghost;
 
-            currentActor.Anim.runtimeAnimatorController = originalAnimatorController;
-            currentActor.Anim.SetBool("isGhost", true);
-            CircleCollider2D collider = currentPrefab.AddComponent<CircleCollider2D>();
+            _animator.runtimeAnimatorController = originalAnimatorController;
+            _animator.SetBool("isGhost", true);
+            CircleCollider2D collider = enemyBodyPrefab.AddComponent<CircleCollider2D>();
             collider.isTrigger = true;
             collider.radius = 1.5f;
+
+            speed = 7f;
         }
     }
 
     void FixedUpdate()
     {
         Vector2 delta = inputMovement * velocity * Time.deltaTime;
-        Vector2 newPosition = currentActor.Body.position + delta;
-        currentActor.Body.MovePosition(newPosition);
+        Vector2 newPosition = characterBody.position + delta;
+        characterBody.MovePosition(newPosition);
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -209,7 +195,7 @@ public class PlayerController : MonoBehaviour
             if (enemyBody != null)
             {
                 availableBody = enemyBody.bodyType;
-                availablePrefab = enemyBody.gameObject;
+                enemyBodyPrefab = enemyBody.gameObject;
                 Debug.Log("Can embody: " + availableBody);
             }
         }
@@ -217,21 +203,13 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("DeadBody") && other.gameObject == currentPrefab)
+        if (other.CompareTag("DeadBody") && other.gameObject == enemyBodyPrefab)
         {
             embodyText.enabled = false;
-            availablePrefab = null;
+            enemyBodyPrefab = null;
             canEmbody = false;
             availableBody = Bodies.Ghost;
             Debug.Log("Cannot embody anymore");
         }
     }
-
-    void UpdateCurrentActor()
-    {
-        currentActor = currentPrefab.GetComponent<GameActor>();
-        currentActor.isControlledByAI = false;
-        velocity = new Vector2(currentActor.moveSpeed, currentActor.moveSpeed);
-	}
-*/
 }
