@@ -3,14 +3,14 @@ using UnityEngine;
 public class Hole : MonoBehaviour
 {
     public GameObject player;
-    PlayerController playerScript;
+    PlayerStateController playerScript;
     Animator playerAnimator;
 
     void Start()
     {
         if (player != null)
         {
-            playerScript = player.GetComponent<PlayerController>();
+            playerScript = player.GetComponent<PlayerStateController>();
             playerAnimator = player.GetComponent<Animator>();
         }
     }

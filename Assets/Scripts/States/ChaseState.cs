@@ -6,48 +6,50 @@ public class ChaseState : IState
     private Color gizmoColor = Color.red;
     public string Name { get => name; set => name = value; }
     public Color GizmoColor { get => gizmoColor; set => gizmoColor = value; }
-
+    
+    private EnemyAIController controller;
     public Transform target;
 
-    public ChaseState(Transform aTarget)
+    public ChaseState(EnemyAIController anEnemyAIController, Transform aTarget)
     {
+        controller = anEnemyAIController;
         target = aTarget;
 	}
 
-    public void Enter(StateController controller)
+    public void Enter()
     {
         Debug.Log(controller.actor.actorName + " Enter Chase State");
-        controller.actor.ChangeToChaseView();
+        controller.ChangeToChaseView();
 	}
 
-    public void Update(StateController controller)
+    public void Update()
     {
         controller.actor.Chase(target);
-        CheckTransition(controller);
+        CheckTransition();
 	}
 
-    public void Exit(StateController controller)
+    public void Exit()
     { 
         Debug.Log(controller.actor.actorName + " Exit Chase State");
 	}
 
     
-    public void CheckTransition(StateController controller)
+    public void CheckTransition()
     { 
-        if (!controller.actor.IsTargetInSight())
+        if (!controller.IsTargetInSight())
         {
-            controller.TransitionToState(new SeekState());
+            controller.TransitionToState(new SeekState(controller));
 		}
-        if (controller.actor.IsTargetInAttackRange())
+        if (controller.IsTargetInAttackRange())
         {
-            controller.TransitionToState(new AttackState());
+            controller.TransitionToState(new AttackState(controller));
 		}
 	}
 
-    public void DrawGizmos(StateController controller)
+    public void DrawGizmos()
     {
         Gizmos.color = Color.white;
-        Vector2 dir = (controller.actor.GetTargetTransform().position - controller.actor.transform.position).normalized;
+        Vector2 dir = (controller.GetTargetTransform().position - controller.actor.transform.position).normalized;
         Gizmos.DrawRay(controller.transform.position, dir * controller.actor.attackRange);
 	}
 }

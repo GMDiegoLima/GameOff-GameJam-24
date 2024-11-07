@@ -7,35 +7,42 @@ public class AttackState : IState
     public string Name { get => name; set => name = value; }
     public Color GizmoColor { get => gizmoColor; set => gizmoColor = value; }
 
-    public void Enter(StateController controller)
+    private EnemyAIController controller;
+    
+    public AttackState(EnemyAIController anEnemyAIController)
+    {
+        controller = anEnemyAIController;
+	}
+
+    public void Enter()
     {
         Debug.Log(controller.actor.actorName + " Enter Attack State");
 	}
 
-    public void Update(StateController controller)
+    public void Update()
     {
         controller.actor.Attack();
-        CheckTransition(controller);
+        CheckTransition();
 	}
 
-    public void Exit(StateController controller)
+    public void Exit()
     { 
         Debug.Log(controller.actor.actorName + " Exit Attack State");
 	}
 
     
-    public void CheckTransition(StateController controller)
+    public void CheckTransition()
     { 
-        if (!controller.actor.IsTargetInAttackRange())
+        if (!controller.IsTargetInAttackRange())
         {
-            controller.TransitionToState(new ChaseState(controller.actor.GetTargetTransform()));
+            controller.TransitionToState(new ChaseState(controller, controller.GetTargetTransform()));
 		}
 	}
 
-    public void DrawGizmos(StateController controller)
+    public void DrawGizmos()
     {
         Gizmos.color = Color.red;
-        Vector2 dir = (controller.actor.GetTargetTransform().position - controller.actor.transform.position).normalized;
+        Vector2 dir = (controller.GetTargetTransform().position - controller.actor.transform.position).normalized;
         Gizmos.DrawRay(controller.transform.position, dir * controller.actor.attackRange);
 	}
 }

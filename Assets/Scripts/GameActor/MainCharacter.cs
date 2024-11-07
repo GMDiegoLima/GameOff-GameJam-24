@@ -1,10 +1,9 @@
 using UnityEngine;
 
-public class MainCharactor : GameActor 
+public class MainCharacter : GameActor 
 {
-    protected override void Awake()
+    protected void Awake()
     {
-        base.Awake();
         actorName = "MainCharactor";
         moveSpeed = 5f;
         damage = 2f;

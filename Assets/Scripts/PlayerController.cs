@@ -3,15 +3,20 @@ using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
-    private GameActor currentActor;
+    /*
+
+    [SerializeField] private GameActor currentActor;
+    [SerializeField] private GameObject currentPrefab;
+    [SerializeField] private GameObject availablePrefab;
     
     // public float speed;
     // Rigidbody2D characterBody;
     Vector2 velocity;
     Vector2 inputMovement;
 
-    //Animator _animator;
-    //RuntimeAnimatorController originalAnimatorController;
+    // Animator _animator;
+    RuntimeAnimatorController originalAnimatorController;
+    */
 
     public enum Bodies
     {
@@ -22,12 +27,14 @@ public class PlayerController : MonoBehaviour
         Goblin,
         Skeleton
     }
-    //public Bodies currentBody = Bodies.Main;
+
+    /*
+
+    public Bodies currentBody = Bodies.Main;
     public TextMeshProUGUI embodyText;
-    //Bodies availableBody = Bodies.Ghost;
+    Bodies availableBody = Bodies.Ghost;
     bool canEmbody = false;
 
-    //GameObject enemyBodyPrefab;
     // SpriteRenderer _spriteRenderer;
     bool isMovingToTarget = false;
     Vector3 targetPosition;
@@ -38,7 +45,8 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        SwitchActor(ActorType.MainCharactor);
+        currentPrefab = Resources.Load("Assets / Prefabs / GameActors / MainCharacter.prefab") as GameObject;
+        UpdateCurrentActor();
     }
 
     void Start()
@@ -74,39 +82,37 @@ public class PlayerController : MonoBehaviour
                 return;
             }
 
-            /*
             if (Input.GetKeyDown("q")) {
                 if (canEmbody && currentBody == Bodies.Ghost)
                 {
                     currentBody = availableBody;
-                    targetPosition = enemyBodyPrefab.transform.position;
+                    targetPosition = currentPrefab.transform.position;
                     // _animator.SetTrigger("Embody");
                     isMovingToTarget = true;
-                    _animator.Play("Embody");
+                    currentActor.Anim.Play("Embody");
                     Debug.Log("Possessed " + availableBody);
                 }
-                else if (currentBody != Bodies.Ghost && enemyBodyPrefab == null)
+                else if (currentBody != Bodies.Ghost && currentPrefab == null)
                 {
-                    enemyBodyPrefab = new GameObject(currentBody + " body");
-                    enemyBodyPrefab.tag = "DeadBody";
+                    currentPrefab = new GameObject(currentBody + " body");
+                    currentPrefab.tag = "DeadBody";
 
-                    enemyBodyPrefab.transform.position = transform.position;
-                    enemyBodyPrefab.transform.localScale = transform.localScale;
+                    currentPrefab.transform.position = transform.position;
+                    currentPrefab.transform.localScale = transform.localScale;
 
-                    SpriteRenderer shellSpriteRenderer = enemyBodyPrefab.AddComponent<SpriteRenderer>();
-                    shellSpriteRenderer.sprite = _spriteRenderer.sprite;
-                    shellSpriteRenderer.sortingOrder = _spriteRenderer.sortingOrder - 1;
+                    SpriteRenderer shellSpriteRenderer = currentPrefab.AddComponent<SpriteRenderer>();
+                    shellSpriteRenderer.sprite = currentActor.Sprite.sprite;
+                    shellSpriteRenderer.sortingOrder = currentActor.Sprite.sortingOrder - 1;
                     
-                    Animator shellAnimator = enemyBodyPrefab.AddComponent<Animator>();
-                    shellAnimator.runtimeAnimatorController = _animator.runtimeAnimatorController;
+                    Animator shellAnimator = currentPrefab.AddComponent<Animator>();
+                    shellAnimator.runtimeAnimatorController = currentActor.Anim.runtimeAnimatorController;
                     shellAnimator.SetBool("Dead", true);
-                    _animator.Play("Disembody");
+                    currentActor.Anim.Play("Disembody");
                     flying = true;
                     Invoke("Disembody", 0.5f);
                     Debug.Log("Left the body");
                 }
             }
-            */
 
         }
         else
@@ -122,27 +128,28 @@ public class PlayerController : MonoBehaviour
         {
             isMovingToTarget = false;
             currentActor.Anim.SetBool("isGhost", false);
-            // Invoke("Embody", 0.4f);
-            // Embody();
+            Invoke("Embody", 0.4f);
+            Embody();
         }
     }
 
-    /*
     void Embody()
     {
-        if (enemyBodyPrefab != null)
+        if (availablePrefab != null)
         {
-            Animator bodyShellAnimator = enemyBodyPrefab.GetComponent<Animator>();
-            _animator.runtimeAnimatorController = bodyShellAnimator.runtimeAnimatorController;
-            transform.position = enemyBodyPrefab.transform.position;
+            //Animator bodyShellAnimator = enemyBodyPrefab.GetComponent<Animator>();
+            //_animator.runtimeAnimatorController = bodyShellAnimator.runtimeAnimatorController;
+            currentPrefab = availablePrefab;
+            transform.position = availablePrefab.transform.position;
+            UpdateCurrentActor();
 
-            SpriteRenderer enemySpriteRenderer = enemyBodyPrefab.GetComponent<SpriteRenderer>();
-            if (enemySpriteRenderer != null)
-            {
-                _spriteRenderer.sprite = enemySpriteRenderer.sprite;
-            }
+            //SpriteRenderer enemySpriteRenderer = currentPrefab.GetComponent<SpriteRenderer>();
+            //if (enemySpriteRenderer != null)
+            //{
+            //    currentActor.Sprite.sprite = enemySpriteRenderer.sprite;
+            //}
 
-            Destroy(enemyBodyPrefab);
+            Destroy(availablePrefab);
         }
         switch (currentBody)
         {
@@ -171,22 +178,19 @@ public class PlayerController : MonoBehaviour
 
     void Disembody()
     {
-        if (enemyBodyPrefab != null)
+        if (currentPrefab != null)
         {
-            EnemyBody enemyBodyComponent = enemyBodyPrefab.AddComponent<EnemyBody>();
+            EnemyBody enemyBodyComponent = currentPrefab.AddComponent<EnemyBody>();
             enemyBodyComponent.bodyType = currentBody;
             currentBody = Bodies.Ghost;
 
-            _animator.runtimeAnimatorController = originalAnimatorController;
-            _animator.SetBool("isGhost", true);
-            CircleCollider2D collider = enemyBodyPrefab.AddComponent<CircleCollider2D>();
+            currentActor.Anim.runtimeAnimatorController = originalAnimatorController;
+            currentActor.Anim.SetBool("isGhost", true);
+            CircleCollider2D collider = currentPrefab.AddComponent<CircleCollider2D>();
             collider.isTrigger = true;
             collider.radius = 1.5f;
-
-            speed = 7f;
         }
     }
-    */
 
     void FixedUpdate()
     {
@@ -197,7 +201,6 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        /*
         if (other.CompareTag("DeadBody") && currentBody == Bodies.Ghost)
         {
             embodyText.enabled = true;
@@ -206,45 +209,29 @@ public class PlayerController : MonoBehaviour
             if (enemyBody != null)
             {
                 availableBody = enemyBody.bodyType;
-                enemyBodyPrefab = enemyBody.gameObject;
+                availablePrefab = enemyBody.gameObject;
                 Debug.Log("Can embody: " + availableBody);
             }
         }
-        */
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        /*
-        if (other.CompareTag("DeadBody") && other.gameObject == enemyBodyPrefab)
+        if (other.CompareTag("DeadBody") && other.gameObject == currentPrefab)
         {
             embodyText.enabled = false;
-            enemyBodyPrefab = null;
+            availablePrefab = null;
             canEmbody = false;
             availableBody = Bodies.Ghost;
             Debug.Log("Cannot embody anymore");
         }
-        */
     }
 
-    void SwitchActor(ActorType actorType)
+    void UpdateCurrentActor()
     {
-        Destroy(currentActor);
-
-        switch (actorType)
-        {
-            case ActorType.MainCharactor:
-                gameObject.AddComponent<MainCharactor>();
-                break;
-            case ActorType.Wolf:
-                gameObject.AddComponent<Wolf>();
-                break;
-            case ActorType.Fatbat:
-                gameObject.AddComponent<FatBat>();
-                break;
-		}
-        currentActor = GetComponent<GameActor>();
-        currentActor.isControllerEnabled = false;
+        currentActor = currentPrefab.GetComponent<GameActor>();
+        currentActor.isControlledByAI = false;
         velocity = new Vector2(currentActor.moveSpeed, currentActor.moveSpeed);
 	}
+*/
 }

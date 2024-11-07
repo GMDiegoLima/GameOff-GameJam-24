@@ -2,9 +2,8 @@ using UnityEngine;
 
 public class Wolf : GameActor 
 {
-    protected override void Awake()
+    protected void Awake()
     {
-        base.Awake();
         actorName = "Wolf";
         moveSpeed = 6f;
         damage = 3f;

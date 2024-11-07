@@ -1,44 +1,37 @@
 using UnityEngine;
 
-public class StateController : MonoBehaviour
+public abstract class StateController : MonoBehaviour
 {
     [HideInInspector] public GameActor actor;
-    private IState currentState;
+    protected IState currentState;
+    protected Rigidbody2D body;
+    protected Animator anim;
+    protected SpriteRenderer sprite;
 
-    private void Awake()
+    protected virtual void Awake()
     {
+        body = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
         actor = GetComponent<GameActor>();
-        actor.isControllerEnabled = true;
-        currentState = new PatrolState();
+
+        actor.controller = this;
     }
 
-    private void Start()
+    protected virtual void Start()
     {
-        currentState.Enter(this);       
+        currentState?.Enter();
     }
 
-    private void Update()
+    protected virtual void Update()
     {
-        currentState.Update(this);
+        currentState?.Update();
     }
 
     public void TransitionToState(IState nextState)
     {
-        currentState.Exit(this);
+        currentState?.Exit();
         currentState = nextState;
-        currentState.Enter(this);
+        currentState?.Enter();
 	}
-
-    private void OnDrawGizmos()
-    {
-        if (!Application.isPlaying) return;
-
-        Gizmos.color = Color.red;
-        if (currentState != null && currentState.GizmoColor != null)
-        {
-            Gizmos.color = currentState.GizmoColor;
-            actor.SetViewGizmoColor(currentState.GizmoColor);
-        }
-        currentState.DrawGizmos(this);
-    }
 }

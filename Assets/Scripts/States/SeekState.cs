@@ -7,40 +7,46 @@ public class SeekState : IState
     public string Name { get => name; set => name = value; }
     public Color GizmoColor { get => gizmoColor; set => gizmoColor = value; }
 
+    private EnemyAIController controller;
     private float seekTime = 3f;
     private float timer;
 
-    public void Enter(StateController controller)
+    public SeekState(EnemyAIController anEnemyAIController)
+    {
+        controller = anEnemyAIController;
+	}
+
+    public void Enter()
     {
         Debug.Log(controller.actor.actorName + " Enter Seek State");
 	}
 
-    public void Update(StateController controller)
+    public void Update()
     {
         controller.actor.Seek();
         timer += Time.deltaTime;
-        CheckTransition(controller);
+        CheckTransition();
 	}
 
-    public void Exit(StateController controller)
+    public void Exit()
     { 
         Debug.Log(controller.actor.actorName + " Exit Seek State");
 	}
 
     
-    public void CheckTransition(StateController controller)
+    public void CheckTransition()
     { 
-        if (controller.actor.IsTargetInSight())
+        if (controller.IsTargetInSight())
         {
-            controller.TransitionToState(new ChaseState(controller.actor.GetTargetTransform()));
+            controller.TransitionToState(new ChaseState(controller, controller.GetTargetTransform()));
 		}
         else if (timer >= seekTime)
         { 
-            controller.TransitionToState(new PatrolState());
+            controller.TransitionToState(new PatrolState(controller));
 		}    
 	}
 
-    public void DrawGizmos(StateController controller)
+    public void DrawGizmos()
     { 
 	}
 }

@@ -2,9 +2,8 @@ using UnityEngine;
 
 public class FatBat : GameActor 
 {
-    protected override void Awake()
+    protected void Awake()
     {
-        base.Awake();
         actorName = "FatBat";
         moveSpeed = 7f;
         damage = 1f;
@@ -29,7 +28,6 @@ public class FatBat : GameActor
 
     public override void Patrol()
     { 
-        
 	}
 
     public override void Chase(Transform aTarget)
