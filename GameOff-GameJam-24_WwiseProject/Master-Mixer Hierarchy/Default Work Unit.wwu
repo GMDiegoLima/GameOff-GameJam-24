@@ -9,6 +9,18 @@
 							<ObjectRef Name="System" ID="{13156BA8-63F3-4486-8314-F4D2C521090C}" WorkUnitID="{78692C86-3677-4599-BAC4-CF1FD6F94F8E}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="PlayerMaster" ID="{D01A8093-2A83-4A28-B6F4-9ACBE895E3E2}"/>
+						<Bus Name="NpcMaster" ID="{F87815E8-2DE2-42C8-9916-E488EC4512CF}"/>
+						<Bus Name="EnvironmentMaster" ID="{62B62982-297F-4972-A18C-953007655576}"/>
+						<Bus Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}"/>
+						<AuxBus Name="Reverbs" ID="{B66B14F3-598E-4FEF-9E0B-ABAF86482D47}">
+							<ChildrenList>
+								<AuxBus Name="Dungeon" ID="{79594F08-47B9-4500-B53C-C122672D579C}"/>
+								<AuxBus Name="Overworld" ID="{5395CA3D-5923-49D2-A162-92A12E6C579F}"/>
+							</ChildrenList>
+						</AuxBus>
+					</ChildrenList>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>

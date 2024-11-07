@@ -5,8 +5,23 @@
 			<ChildrenList>
 				<SoundBank Name="Testing" ID="{A7126F40-FD3E-4457-B5D1-B415844BA383}">
 					<ObjectInclusionList>
-						<ObjectRef Name="TestingEvent" ID="{4F0CA2D0-690D-43FB-82C1-E87487D2E1CD}" WorkUnitID="{344D9946-B9AF-449C-984A-3A8203E4FC13}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="TestingEvent" ID="{4F0CA2D0-690D-43FB-82C1-E87487D2E1CD}" WorkUnitID="{8A41F3AB-76E2-4F07-B024-4B23C326E276}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Main" ID="{93536651-6257-4A23-B927-CEC7323273DD}">
+					<ObjectInclusionList/>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Music" ID="{2CFA879A-4959-4282-8FB2-95883D127C77}">
+					<ObjectInclusionList/>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Title" ID="{661944BA-0677-4520-B1DD-F26C0DA0A23C}">
+					<ObjectInclusionList/>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>

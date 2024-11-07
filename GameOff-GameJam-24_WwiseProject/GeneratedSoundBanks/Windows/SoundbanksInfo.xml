@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{B6CBD692-12EC-CDBA-0932-48F63C40C91F}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{DB919CE2-C770-15AB-B318-53E2AD55079B}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -19,16 +19,67 @@
 				</AudioDevices>
 			</Plugins>
 			<Busses>
+				<Bus Id="2033911932" Name="NpcMaster"/>
+				<Bus Id="3199789248" Name="MusicMaster"/>
+				<Bus Id="3538689948" Name="PlayerMaster"/>
+				<Bus Id="3802034858" Name="EnvironmentMaster"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
+			<AuxBusses>
+				<AuxBus Id="608898761" Name="Dungeon">
+					<AuxBusRefs>
+						<AuxBusRef Id="3545700988" Name="Reverbs"/>
+					</AuxBusRefs>
+				</AuxBus>
+				<AuxBus Id="1562068129" Name="Overworld">
+					<AuxBusRefs>
+						<AuxBusRef Id="3545700988" Name="Reverbs"/>
+					</AuxBusRefs>
+				</AuxBus>
+				<AuxBus Id="3545700988" Name="Reverbs"/>
+			</AuxBusses>
+			<StateGroups>
+				<StateGroup Id="185713839" Name="RoomState">
+					<States>
+						<State Id="608898761" Name="Dungeon"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="1562068129" Name="Overworld"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="1045871717" Name="GameStatus">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="984691642" Name="InGame"/>
+						<State Id="3374585465" Name="InMenu"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="3800848640" Name="PlayerStatus">
+					<States>
+						<State Id="655265632" Name="Alive"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2909291642" Name="Stealth"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+			<SwitchGroups>
+				<SwitchGroup Id="478119480" Name="GroundTextures">
+					<Switches>
+						<Switch Id="1216965916" Name="stone"/>
+						<Switch Id="2058049674" Name="wood"/>
+						<Switch Id="2195636714" Name="dirt"/>
+						<Switch Id="2654748154" Name="water"/>
+						<Switch Id="4248645337" Name="grass"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1512859615" Type="User" Language="SFX" Hash="{3558A175-BC33-A1E5-3370-9DF3BA634B87}">
+		<SoundBank Id="1512859615" Type="User" Language="SFX" Hash="{13A6BC9D-13AB-78EF-9243-074305DE2CA4}">
 			<ShortName>Testing</ShortName>
 			<Path>Testing.bnk</Path>
 			<Media>
 				<File Id="812529937" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Words Like Weapons Guitar.wav</ShortName>
-					<CachePath>SFX/Words Like Weapons Guitar_818F3B66.wem</CachePath>
+					<CachePath>SFX/Words Like Weapons Guitar_F06BAF76.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -39,6 +90,18 @@
 				</Event>
 			</Events>
 		</SoundBank>
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{3B51E889-948F-7EDA-A1E8-111109B087A1}">
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3705726509" Type="User" Language="SFX" Hash="{67C5050C-D012-A060-C8CF-0B80AF561B0F}">
+			<ShortName>Title</ShortName>
+			<Path>Title.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{8075EEFB-2136-8445-22D7-93138A5F3A36}">
+			<ShortName>Music</ShortName>
+			<Path>Music.bnk</Path>
+		</SoundBank>
 	</SoundBanks>
-	<FileHash>{245E5395-5D87-DC16-26E3-E897F9CE7FEE}</FileHash>
+	<FileHash>{DEEFE3F9-22D9-9E02-2678-C55BE579BCA2}</FileHash>
 </SoundBanksInfo>
