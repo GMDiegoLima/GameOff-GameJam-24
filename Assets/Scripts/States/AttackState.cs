@@ -7,11 +7,16 @@ public class AttackState : IState
     public string Name { get => name; set => name = value; }
     public Color GizmoColor { get => gizmoColor; set => gizmoColor = value; }
 
-    private EnemyAIController controller;
+    private StateController controller;
     
     public AttackState(EnemyAIController anEnemyAIController)
     {
         controller = anEnemyAIController;
+	}
+
+    public AttackState(PlayerStateController aPlayerStateController)
+    {
+        controller = aPlayerStateController;
 	}
 
     public void Enter()
@@ -33,16 +38,23 @@ public class AttackState : IState
     
     public void CheckTransition()
     { 
-        if (!controller.IsTargetInAttackRange())
+        if (controller.actor.isControlledByAI)
         {
-            controller.TransitionToState(new ChaseState(controller, controller.GetTargetTransform()));
-		}
-	}
+            var enemyAIController = (EnemyAIController)controller;
+            if (!enemyAIController.IsTargetInAttackRange())
+            {
+                controller.TransitionToState(new ChaseState(enemyAIController, enemyAIController.GetTargetTransform()));
+            }
+        }
+    }
 
     public void DrawGizmos()
     {
-        Gizmos.color = Color.red;
-        Vector2 dir = (controller.GetTargetTransform().position - controller.actor.transform.position).normalized;
-        Gizmos.DrawRay(controller.transform.position, dir * controller.actor.attackRange);
-	}
+        if (controller.actor.isControlledByAI)
+        {
+            Gizmos.color = Color.red;
+            Vector2 dir = (((EnemyAIController)controller).GetTargetTransform().position - controller.actor.transform.position).normalized;
+            Gizmos.DrawRay(controller.transform.position, dir * controller.actor.attackRange);
+        }
+    }
 }
