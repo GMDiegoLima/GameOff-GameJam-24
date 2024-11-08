@@ -125,17 +125,17 @@ public class EnemyAIController : StateController
         float x = velocity.x;
         float y = velocity.y;
         float angle = Mathf.Atan2(y, x) * Mathf.Rad2Deg;
-        Debug.Log("Degree:" + angle);
-        if (angle > -90 && angle < 45)
+        if (angle > -45 && angle < 45)
         {
             view.transform.rotation = Quaternion.Euler(0, 0, 180);
             view.transform.localPosition= new Vector2(view.sizeX * 0.5f, 0);
 		} 
-        //else if (angle > -135 && angle < -45)
-        //{
-        //    view.transform.rotation = Quaternion.Euler(0, 0, 180);
-		//}
-        else if (angle < -90 || angle > 135)
+        else if (angle > -135 && angle < -45)
+        {
+            view.transform.rotation = Quaternion.Euler(0, 0, 180);
+            view.transform.localPosition= new Vector2(0, 0);
+		}
+        else if (angle < -135 || angle > 135)
         {
             view.transform.rotation = Quaternion.Euler(0, 0, 180);
             view.transform.localPosition= new Vector2(-view.sizeX * 0.5f, 0);
