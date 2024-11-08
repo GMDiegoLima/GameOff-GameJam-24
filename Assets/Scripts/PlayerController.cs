@@ -3,7 +3,9 @@ using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
-    
+    [SerializeField] private KeyCode embodyKey;
+    [SerializeField] private PlayerStateController playerStateController;
+
     public float speed;
     Rigidbody2D characterBody;
     Vector2 velocity;
@@ -37,11 +39,13 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        _animator = GetComponent<Animator>();
         velocity = new Vector2(speed, speed);
         characterBody = GetComponent<Rigidbody2D>();
-        originalAnimatorController = _animator.runtimeAnimatorController; 
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        _animator = GetComponent<Animator>();
+        originalAnimatorController = _animator.runtimeAnimatorController;
+
+        playerStateController = GetComponent<PlayerStateController>();
     }
 
     void Update()
@@ -67,7 +71,8 @@ public class PlayerController : MonoBehaviour
                 return;
             }
 
-            if (Input.GetKeyDown("q")) {
+            if (Input.GetKeyDown(embodyKey))
+            {
                 if (canEmbody && currentBody == Bodies.Ghost)
                 {
                     currentBody = availableBody;
@@ -88,7 +93,7 @@ public class PlayerController : MonoBehaviour
                     SpriteRenderer shellSpriteRenderer = enemyBodyPrefab.AddComponent<SpriteRenderer>();
                     shellSpriteRenderer.sprite = _spriteRenderer.sprite;
                     shellSpriteRenderer.sortingOrder = _spriteRenderer.sortingOrder - 1;
-                    
+
                     Animator shellAnimator = enemyBodyPrefab.AddComponent<Animator>();
                     shellAnimator.runtimeAnimatorController = _animator.runtimeAnimatorController;
                     shellAnimator.SetBool("Dead", true);
@@ -139,14 +144,17 @@ public class PlayerController : MonoBehaviour
             case Bodies.Main:
                 speed = 5f;
                 flying = false;
+                gameObject.AddComponent<MainCharacter>();
                 break;
             case Bodies.Wolf:
                 speed = 6f;
                 flying = false;
+                gameObject.AddComponent<Wolf>();
                 break;
             case Bodies.FatBat:
                 speed = 4f;
                 flying = true;
+                gameObject.AddComponent<FatBat>();
                 break;
             case Bodies.Goblin:
                 speed = 5.5f;
@@ -157,6 +165,7 @@ public class PlayerController : MonoBehaviour
                 flying = false;
                 break;
         }
+        playerStateController.UpdateCurrentActor(GetComponent<GameActor>());
     }
 
     void Disembody()
@@ -174,6 +183,8 @@ public class PlayerController : MonoBehaviour
             collider.radius = 1.5f;
 
             speed = 7f;
+
+            playerStateController.RemoveCurrentActor();
         }
     }
 
