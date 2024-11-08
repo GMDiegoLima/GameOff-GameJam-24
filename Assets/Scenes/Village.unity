@@ -580,6 +580,10 @@ PrefabInstance:
       value: FatBat
       objectReference: {fileID: 0}
     - target: {fileID: 758673646730616367, guid: 1eabea1b4111acd449aec41eba28d58a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 758673646730616367, guid: 1eabea1b4111acd449aec41eba28d58a, type: 3}
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
@@ -637,6 +641,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3055231633068254372, guid: 1eabea1b4111acd449aec41eba28d58a, type: 3}
       propertyPath: alive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3309353948802793445, guid: 1eabea1b4111acd449aec41eba28d58a, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8531538263300713591, guid: 1eabea1b4111acd449aec41eba28d58a, type: 3}
@@ -53505,11 +53513,19 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 946922637704556114, guid: 1c06ca1406631944da3858e71d81651b, type: 3}
+      propertyPath: scanAngle
+      value: 0.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 946922637704556114, guid: 1c06ca1406631944da3858e71d81651b, type: 3}
       propertyPath: targetLayer.m_Bits
       value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 3532970625190614034, guid: 1c06ca1406631944da3858e71d81651b, type: 3}
       propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3607592532796754665, guid: 1c06ca1406631944da3858e71d81651b, type: 3}
+      propertyPath: movePeriod
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3607592532796754665, guid: 1c06ca1406631944da3858e71d81651b, type: 3}
@@ -54434,7 +54450,6 @@ MonoBehaviour:
   isMoving: 0
   movePeriodTimer: 0
   stopPeriodTimer: 0
-  patrolPoints: []
 --- !u!1 &1963811144
 GameObject:
   m_ObjectHideFlags: 0

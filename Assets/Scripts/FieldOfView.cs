@@ -25,26 +25,6 @@ public class FieldOfView : MonoBehaviour
         targetTransform = hit.transform; 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag(targetTag))
-        {
-            Debug.Log(targetTag + " in sight");
-            isTargetInSight = true;
-            targetTransform = collision.transform;
-		}
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag(targetTag))
-        {
-            Debug.Log(targetTag + " not in sight");
-            isTargetInSight = false;
-            targetTransform = null;
-		}
-    }
-
     private void OnDrawGizmos()
     {
         if (!Application.isPlaying) return;
