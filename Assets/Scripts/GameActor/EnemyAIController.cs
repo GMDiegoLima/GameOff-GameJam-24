@@ -5,6 +5,7 @@ public class EnemyAIController : StateController
 {
     private FieldOfView view;
     public Vector2 velocity;
+    public float chaseSpeed;
     public float movePeriod = 3;
     public float stopPeriod = 3;
     public bool isMoving;
@@ -40,6 +41,15 @@ public class EnemyAIController : StateController
     protected override void Update()
     {
         base.Update();
+
+        anim.SetFloat("Horizontal", velocity.x);
+        anim.SetFloat("Vertical", velocity.y);
+
+        if (velocity != Vector2.zero)
+        {
+            anim.SetFloat("LastHorizontal", velocity.x);
+            anim.SetFloat("LastVertical", velocity.y);
+        }
     }
 
     public override void Attack() 
@@ -86,18 +96,13 @@ public class EnemyAIController : StateController
                 stopPeriodTimer = 0;
 			}
         }
-
-        anim.SetFloat("Horizontal", velocity.x);
-        anim.SetFloat("Vertical", velocity.y);
-
-        if (velocity != Vector2.zero)
-        {
-            anim.SetFloat("LastHorizontal", velocity.x);
-            anim.SetFloat("LastVertical", velocity.y);
-        }
 	}
 
-    public void Chase(Transform aTarget) {}
+    public void Chase(Transform aTarget) 
+	{
+        if (!isMoving) isMoving = true;
+        velocity = chaseSpeed * (aTarget.position - transform.position).normalized;
+	}
 
     public void Seek() {}
 
@@ -112,7 +117,7 @@ public class EnemyAIController : StateController
 
     private void SetRandomMovePeriod()
     {
-        movePeriod = Random.Range(2, 5);
+        movePeriod = Random.Range(1, 3);
 	}
 
     private void SetRandomStopPeriod()
