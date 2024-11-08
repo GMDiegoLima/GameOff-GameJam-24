@@ -2,26 +2,27 @@ using UnityEngine;
 
 public class FieldOfView : MonoBehaviour
 {
-    private BoxCollider2D boxCollider;
     public bool isTargetInSight;
     public string targetTag = "Player";
+    public LayerMask targetLayer;
     public Color gizmoColor;
     [HideInInspector] public Transform targetTransform;
 
     public float sizeX;
     public float sizeY;
-    private float offsetX;
+    public float sacnAngle;
 
     private void Awake()
     {
-        boxCollider = GetComponent<BoxCollider2D>();
     }
 
     private void Update()
     {
-        boxCollider.offset = new Vector2(offsetX, boxCollider.offset.y);          
-        boxCollider.size = new Vector2(sizeX, sizeY);
-        offsetX = sizeX / 2;
+        sacnAngle = transform.rotation.z;
+        RaycastHit2D hit = Physics2D.BoxCast(transform.position, new Vector2(sizeX, 1), sacnAngle, transform.up,
+                                             sizeY, targetLayer);
+        isTargetInSight = hit;
+        targetTransform = hit.transform; 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -48,6 +49,8 @@ public class FieldOfView : MonoBehaviour
     {
         if (!Application.isPlaying) return;
         Gizmos.color = gizmoColor;
-        Gizmos.DrawWireCube((Vector2)transform.position + boxCollider.offset, transform.parent.localScale * boxCollider.size);
+        Gizmos.DrawWireCube(transform.position + transform.up * sizeY / 2, 
+			                transform.parent.localScale * new Vector2(sizeX, sizeY));
+        Gizmos.DrawRay(transform.position, transform.up.normalized * sizeY);
     }
 }

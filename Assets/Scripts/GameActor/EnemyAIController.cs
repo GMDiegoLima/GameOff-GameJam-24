@@ -1,8 +1,11 @@
 using UnityEngine;
+using System.Collections;
 
 public class EnemyAIController : StateController 
 {
     private FieldOfView view;
+    public float velocity;
+    [SerializeField] Transform[] patrolPoints;
 
     protected override void Awake()
     {
@@ -14,7 +17,9 @@ public class EnemyAIController : StateController
     {
         actor.isControlledByAI = true;
         actor.patrolViewRangeX = view.sizeX;
+        actor.patrolViewRangeY = view.sizeY;
         actor.chaseViewRangeX = view.sizeX * 2;
+        actor.chaseViewRangeY = view.sizeY * 2;
         currentState = new PatrolState(this);
     }
 
@@ -31,11 +36,13 @@ public class EnemyAIController : StateController
     public void ChangeToPatrolView()
     {
         view.sizeX = actor.patrolViewRangeX;
+        view.sizeY = actor.patrolViewRangeY;
 	}
 
     public void ChangeToChaseView()
     {
         view.sizeX = actor.chaseViewRangeX;
+        view.sizeY = actor.chaseViewRangeY;
 	}
 
     public void SetViewGizmoColor(Color aColor)

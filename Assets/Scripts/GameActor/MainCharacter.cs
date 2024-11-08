@@ -16,11 +16,6 @@ public class MainCharacter : GameActor
         base.Update();       
     }
 
-    public override void MoveTo(Vector2 aPosition)
-    {
-        base.MoveTo(aPosition);
-	}
-
     public override void Attack()
     {
         attackCDTimer = 0;

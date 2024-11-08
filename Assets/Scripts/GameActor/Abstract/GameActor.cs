@@ -15,11 +15,14 @@ public abstract class GameActor : MonoBehaviour
     public float damage;
     public float attackRange;
     public float attackCD;
+    public float velocity;
     protected float attackCDTimer;
 
     // Setup by EnemyAIController
     [HideInInspector] public float patrolViewRangeX;
+    [HideInInspector] public float patrolViewRangeY;
     [HideInInspector] public float chaseViewRangeX;
+    [HideInInspector] public float chaseViewRangeY;
     [HideInInspector] public bool isControlledByAI;
     [HideInInspector] public StateController controller;
 
@@ -28,13 +31,7 @@ public abstract class GameActor : MonoBehaviour
         attackCDTimer += Time.deltaTime;
     }
 
-    public virtual void MoveTo(Vector2 aPosition)
-    { 
-	    
-	}
-
-
-    public abstract void Attack();
+    public virtual void Attack() {}
     public virtual void Patrol() {}
     public virtual void Chase(Transform aTarget) {}
     public virtual void Seek() {}

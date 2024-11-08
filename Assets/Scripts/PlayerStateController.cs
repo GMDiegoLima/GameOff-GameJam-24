@@ -2,6 +2,18 @@ using UnityEngine;
 
 public class PlayerStateController : StateController 
 {
+    [SerializeField] KeyCode attackKey;
+
+    protected override void Update()
+    {
+        base.Update();
+        if (Input.GetKeyDown(attackKey))
+        {
+            Debug.Log(actor.actorName + "::Attack()");
+            actor.Attack();
+		}
+    }
+
     public void RemoveCurrentActor()
     { 
         Destroy(actor);
@@ -10,7 +22,6 @@ public class PlayerStateController : StateController
     public void UpdateCurrentActor(GameActor anActor)
     {
         actor = anActor;
-        Debug.Log("Update Actor: " + actor.actorName);
         actor.controller = this;
 	}
 }

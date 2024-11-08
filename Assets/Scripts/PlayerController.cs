@@ -3,6 +3,7 @@ using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private KeyCode embodyKey;
     [SerializeField] private PlayerStateController playerStateController;
 
     public float speed;
@@ -38,11 +39,11 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        _animator = GetComponent<Animator>();
         velocity = new Vector2(speed, speed);
         characterBody = GetComponent<Rigidbody2D>();
-        originalAnimatorController = _animator.runtimeAnimatorController;
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        _animator = GetComponent<Animator>();
+        originalAnimatorController = _animator.runtimeAnimatorController;
 
         playerStateController = GetComponent<PlayerStateController>();
     }
@@ -70,7 +71,7 @@ public class PlayerController : MonoBehaviour
                 return;
             }
 
-            if (Input.GetKeyDown("q"))
+            if (Input.GetKeyDown(embodyKey))
             {
                 if (canEmbody && currentBody == Bodies.Ghost)
                 {

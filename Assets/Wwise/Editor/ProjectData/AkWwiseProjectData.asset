@@ -378,8 +378,8 @@ MonoBehaviour:
         guid: d0a20c4f0d69fb4382c1e87487d2e1cd
       Path: Events/TestingEvents/TestingEvent
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 210.08868
+      minDuration: 210.08868
   - PhysicalPath: Events/UI.wwu
     PathAndIcons:
     - ElementName: Events
