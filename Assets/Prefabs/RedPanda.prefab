@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5304558792018706570}
   - component: {fileID: 6292283901682376117}
   m_Layer: 0
-  m_Name: Capybara
+  m_Name: RedPanda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -8681170379017598411, guid: d043459d560ee34418ff8a1bfb26fd52, type: 3}
+  m_Sprite: {fileID: 4793416884089414703, guid: 7b6a5a39ff6f4c24585e656a8fa12d14, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,7 +98,7 @@ Animator:
   m_GameObject: {fileID: 4573035926865543830}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e062c4f4e37206e489d56f1d3476b179, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7df68117a24f0c045b1992822dbe104c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
