@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8dcf3e5f7f18e1f4a82d442054b05f90
+guid: d043459d560ee34418ff8a1bfb26fd52
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5223184103882936151
-    second: cobblestone ground_0
+      213: -8681170379017598411
+    second: npc_capivara_idle__0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,11 +113,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cobblestone ground_0
+      name: npc_capivara_idle__0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
+        x: 16
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -128,40 +128,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9a0379b2bb58387b0800000000000000
-      internalID: -5223184103882936151
+      spriteID: 53a430cf889468780800000000000000
+      internalID: -8681170379017598411
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cobblestone ground_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3839a4d18e1c30f4580d18ba6f8b1b6a
-      internalID: -1885135048
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cobblestone ground_2
+      name: npc_capivara_idle__1
       rect:
         serializedVersion: 2
         x: 32
-        y: 32
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -172,18 +150,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac82180639ca7884ba162bcc18066cde
-      internalID: 108181183
+      spriteID: cc7291c5d2fe47f4f860c578a43b4e3a
+      internalID: -2076708288
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cobblestone ground_3
+      name: npc_capivara_idle__2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 16
+        x: 48
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -194,118 +172,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5b0a6bfde3942f459874a5119a7a566
-      internalID: 440308159
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cobblestone ground_4
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4f9d9d092af74764bb218351517afb97
-      internalID: 1793090212
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cobblestone ground_5
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7e024afc5fcf36a4e9c27141e9a8f75b
-      internalID: 870623830
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cobblestone ground_6
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2bacc737180987b4d9f83116bc0e5683
-      internalID: 1866702113
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cobblestone ground_7
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 87179a4f94d7a904a845fddb4072786d
-      internalID: -1951468113
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cobblestone ground_8
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4ce081fca5183cd40a6540553dd5fa49
-      internalID: 1848187949
+      spriteID: 7f7fb0af3484deb488806f25ec5fd6a0
+      internalID: -252966034
       vertices: []
       indices: 
       edges: []
@@ -314,7 +182,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2d638d6ffd248c14f8ad803453b9f122
+    spriteID: fa8e67b630b2c244cbf776a0b46b03b7
     internalID: 0
     vertices: []
     indices: 
@@ -324,15 +192,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      cobblestone ground_0: -5223184103882936151
-      cobblestone ground_1: -1885135048
-      cobblestone ground_2: 108181183
-      cobblestone ground_3: 440308159
-      cobblestone ground_4: 1793090212
-      cobblestone ground_5: 870623830
-      cobblestone ground_6: 1866702113
-      cobblestone ground_7: -1951468113
-      cobblestone ground_8: 1848187949
+      npc_capivara_idle__0: -8681170379017598411
+      npc_capivara_idle__1: -2076708288
+      npc_capivara_idle__2: -252966034
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

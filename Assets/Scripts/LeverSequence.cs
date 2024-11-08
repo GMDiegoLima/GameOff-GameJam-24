@@ -7,7 +7,6 @@ public class LeverSequence : MonoBehaviour
     bool canPull;
     public bool activated;
     public TextMeshProUGUI pullText;
-    public UnityEvent onActivate;
     public string leverName;
     public SequencePuzzle sequencePuzzle;
     Animator animator;
@@ -27,12 +26,12 @@ public class LeverSequence : MonoBehaviour
             if (activated)
             {
                 animator.SetBool("Activated", true);
-                onActivate?.Invoke();
                 sequencePuzzle.RegisterActivation(leverName);
             }
             else
             {
                 animator.SetBool("Activated", false);
+                sequencePuzzle.RemoveItem(leverName);
             }
         }
     }

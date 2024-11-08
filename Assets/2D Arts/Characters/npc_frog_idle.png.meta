@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: a94ec2d4815b34d4ab0d2800ee5d4b5b
+guid: 7ad996898e488fe4d86e110b16574c54
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8676118798838792709
-    second: npc_capivara_idle_0
+      213: 6397803750201607060
+    second: npc_frog_idle_0
+  - first:
+      213: -7983893158284594624
+    second: npc_frog_idle_1
+  - first:
+      213: 7003488485433286968
+    second: npc_frog_idle_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +119,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: npc_capivara_idle_0
+      name: npc_frog_idle_0
       rect:
         serializedVersion: 2
         x: 16
@@ -128,14 +134,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 50200e95414c76870800000000000000
-      internalID: 8676118798838792709
+      spriteID: 493cd612d9099c850800000000000000
+      internalID: 6397803750201607060
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: npc_capivara_idle_1
+      name: npc_frog_idle_1
       rect:
         serializedVersion: 2
         x: 32
@@ -148,16 +154,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: a93a320f3d757e243aa07a4af9ac3d32
-      internalID: 714755785
+      spriteID: 04276c71973833190800000000000000
+      internalID: -7983893158284594624
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: npc_capivara_idle_2
+      name: npc_frog_idle_2
       rect:
         serializedVersion: 2
         x: 48
@@ -170,10 +176,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 3f7560cf7902d5f438bc89b99041d523
-      internalID: 78720878
+      spriteID: 8312ac2eba3613160800000000000000
+      internalID: 7003488485433286968
       vertices: []
       indices: 
       edges: []
@@ -182,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d19c1bddfd060ab4a9db06b33fc975cd
+    spriteID: 8ef4222d966997b42b3b186b186ae330
     internalID: 0
     vertices: []
     indices: 
@@ -192,9 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      npc_capivara_idle_0: 8676118798838792709
-      npc_capivara_idle_1: 714755785
-      npc_capivara_idle_2: 78720878
+      npc_frog_idle_0: 6397803750201607060
+      npc_frog_idle_1: -7983893158284594624
+      npc_frog_idle_2: 7003488485433286968
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

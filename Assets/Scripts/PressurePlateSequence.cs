@@ -20,7 +20,6 @@ public class PressurePlateSequence : MonoBehaviour
         {
             animator.SetBool("Activated", true);
             sequencePuzzle.RegisterActivation(plateName);
-
         }
     }
 

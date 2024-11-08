@@ -9,8 +9,8 @@ public class SequencePuzzle : MonoBehaviour
     public UnityEvent onPuzzleSolved;
     public UnityEvent onPuzzleReset;
 
-    private List<string> playerSequence = new List<string>();
-    private bool puzzleSolved;
+    List<string> playerSequence = new List<string>();
+    bool puzzleSolved;
 
     public void RegisterActivation(string triggerName)
     {
@@ -31,7 +31,7 @@ public class SequencePuzzle : MonoBehaviour
         }
     }
 
-    private bool IsCorrectSoFar()
+    bool IsCorrectSoFar()
     {
         for (int i = 0; i < playerSequence.Count; i++)
         {
@@ -41,7 +41,7 @@ public class SequencePuzzle : MonoBehaviour
         return true;
     }
 
-    private bool IsSequenceCorrect()
+    bool IsSequenceCorrect()
     {
         if (playerSequence.Count != correctSequence.Count) return false;
 
@@ -53,10 +53,15 @@ public class SequencePuzzle : MonoBehaviour
         return true;
     }
 
-    private void ResetPuzzle()
+    void ResetPuzzle()
     {
         playerSequence.Clear();
         onPuzzleReset.Invoke();
         Debug.Log("Wrong sequence! Puzzle Reseted.");
+    }
+
+    public void RemoveItem(string triggerName)
+    {
+        playerSequence.Remove(triggerName);
     }
 }
