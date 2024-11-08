@@ -28,7 +28,6 @@ public class Wolf : GameActor
 
     public override void Patrol()
     { 
-        
 	}
 
     public override void Chase(Transform aTarget)

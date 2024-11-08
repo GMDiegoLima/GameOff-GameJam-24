@@ -49,7 +49,7 @@ public class ChaseState : IState
     public void DrawGizmos()
     {
         Gizmos.color = Color.white;
-        Vector2 dir = (controller.GetTargetTransform().position - controller.actor.transform.position).normalized;
+        Vector2 dir = (controller.GetTargetTransform().position - controller.transform.position).normalized;
         Gizmos.DrawRay(controller.transform.position, dir * controller.actor.attackRange);
 	}
 }

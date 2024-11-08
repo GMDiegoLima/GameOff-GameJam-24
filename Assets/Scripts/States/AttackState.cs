@@ -53,7 +53,7 @@ public class AttackState : IState
         if (controller.actor.isControlledByAI)
         {
             Gizmos.color = Color.red;
-            Vector2 dir = (((EnemyAIController)controller).GetTargetTransform().position - controller.actor.transform.position).normalized;
+            Vector2 dir = (((EnemyAIController)controller).GetTargetTransform().position - controller.transform.position).normalized;
             Gizmos.DrawRay(controller.transform.position, dir * controller.actor.attackRange);
         }
     }

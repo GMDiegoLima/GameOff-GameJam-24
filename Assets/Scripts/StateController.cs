@@ -2,7 +2,7 @@ using UnityEngine;
 
 public abstract class StateController : MonoBehaviour
 {
-    [HideInInspector] public GameActor actor;
+    public GameActor actor;
     protected IState currentState;
     protected Rigidbody2D body;
     protected Animator anim;
@@ -34,4 +34,5 @@ public abstract class StateController : MonoBehaviour
         currentState = nextState;
         currentState?.Enter();
 	}
+
 }

@@ -3,6 +3,7 @@ using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private PlayerStateController playerStateController;
 
     public float speed;
     Rigidbody2D characterBody;
@@ -42,6 +43,8 @@ public class PlayerController : MonoBehaviour
         characterBody = GetComponent<Rigidbody2D>();
         originalAnimatorController = _animator.runtimeAnimatorController;
         _spriteRenderer = GetComponent<SpriteRenderer>();
+
+        playerStateController = GetComponent<PlayerStateController>();
     }
 
     void Update()
@@ -140,14 +143,17 @@ public class PlayerController : MonoBehaviour
             case Bodies.Main:
                 speed = 5f;
                 flying = false;
+                gameObject.AddComponent<MainCharacter>();
                 break;
             case Bodies.Wolf:
                 speed = 6f;
                 flying = false;
+                gameObject.AddComponent<Wolf>();
                 break;
             case Bodies.FatBat:
                 speed = 4f;
                 flying = true;
+                gameObject.AddComponent<FatBat>();
                 break;
             case Bodies.Goblin:
                 speed = 5.5f;
@@ -158,6 +164,7 @@ public class PlayerController : MonoBehaviour
                 flying = false;
                 break;
         }
+        playerStateController.UpdateCurrentActor(GetComponent<GameActor>());
     }
 
     void Disembody()
@@ -175,6 +182,8 @@ public class PlayerController : MonoBehaviour
             collider.radius = 1.5f;
 
             speed = 7f;
+
+            playerStateController.RemoveCurrentActor();
         }
     }
 
