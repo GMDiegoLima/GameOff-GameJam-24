@@ -1,19 +1,29 @@
 using UnityEngine;
-using System.Collections;
 
 public class EnemyAIController : StateController 
 {
-    private FieldOfView view;
     public Vector2 velocity;
-    public float chaseSpeed;
-    public float movePeriod = 3;
-    public float stopPeriod = 3;
-    public bool isMoving;
+
+    [Header("Adjustable")]
+    [SerializeField] private float chaseSpeed;
+    [SerializeField] private float minMovePeriod;
+    [SerializeField] private float maxMovePeriod;
+    [SerializeField] private float minStopPeriod;
+    [SerializeField] private float maxStopPeriod;
+    [SerializeField] private float minVelocity;
+    [SerializeField] private float maxVelocity;
+
+    [Header("For Dubug")]
+    [SerializeField] private bool isMoving;
+    [SerializeField] private float movePeriodTimer; 
+    [SerializeField] private float stopPeriodTimer; 
+
+    private FieldOfView view;
+    private float movePeriod = 2f;
+    private float stopPeriod = 2f;
     private bool isVelocityUpdated;
     private bool isMovePeriodUpdated;
     private bool isStopPeriodUpdated;
-    [SerializeField] private float movePeriodTimer; 
-    [SerializeField] private float stopPeriodTimer; 
 
     protected override void Awake()
     {
@@ -108,8 +118,8 @@ public class EnemyAIController : StateController
 
     private void SetRandomVelocity()
     {
-        float x = Random.Range(-3f, 3f);
-        float y = Random.Range(-3f, 3f);
+        float x = Random.Range(minVelocity, maxVelocity);
+        float y = Random.Range(minVelocity, maxVelocity);
         movePeriodTimer = 0;
         velocity = new Vector2(x, y);
         UpdateScanAngle();
@@ -117,12 +127,12 @@ public class EnemyAIController : StateController
 
     private void SetRandomMovePeriod()
     {
-        movePeriod = Random.Range(1, 3);
+        movePeriod = Random.Range(minMovePeriod, maxMovePeriod);
 	}
 
     private void SetRandomStopPeriod()
     { 
-        stopPeriod = Random.Range(2, 5);
+        stopPeriod = Random.Range(minStopPeriod, maxStopPeriod);
 	}
 
     private void UpdateScanAngle()

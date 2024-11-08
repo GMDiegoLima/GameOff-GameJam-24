@@ -45,6 +45,10 @@ public class AttackState : IState
             {
                 controller.TransitionToState(new ChaseState(enemyAIController, enemyAIController.GetTargetTransform()));
             }
+            if (!enemyAIController.IsTargetInSight())
+            {
+                controller.TransitionToState(new SeekState(enemyAIController));
+            }
         }
     }
 
