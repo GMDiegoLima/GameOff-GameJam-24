@@ -13,7 +13,6 @@ public class EnemyAIController : StateController
     private bool isStopPeriodUpdated;
     [SerializeField] private float movePeriodTimer; 
     [SerializeField] private float stopPeriodTimer; 
-    [SerializeField] Transform[] patrolPoints;
 
     protected override void Awake()
     {
@@ -41,7 +40,6 @@ public class EnemyAIController : StateController
     protected override void Update()
     {
         base.Update();
-
     }
 
     public override void Attack() 
@@ -109,6 +107,7 @@ public class EnemyAIController : StateController
         float y = Random.Range(-3f, 3f);
         movePeriodTimer = 0;
         velocity = new Vector2(x, y);
+        UpdateScanAngle();
     }
 
     private void SetRandomMovePeriod()
@@ -119,6 +118,34 @@ public class EnemyAIController : StateController
     private void SetRandomStopPeriod()
     { 
         stopPeriod = Random.Range(2, 5);
+	}
+
+    private void UpdateScanAngle()
+    {
+        float x = velocity.x;
+        float y = velocity.y;
+        float angle = Mathf.Atan2(y, x) * Mathf.Rad2Deg;
+        Debug.Log("Degree:" + angle);
+        if (angle > -45 && angle < 45)
+        {
+            view.transform.rotation = Quaternion.Euler(0, 0, 270);
+		} 
+        else if (angle > -135 && angle < -45)
+        {
+            view.transform.rotation = Quaternion.Euler(0, 0, 180);
+            //view.scanAngle = 270; 
+		}
+        else if (angle < -135 || angle > 135)
+        {
+            view.transform.rotation = Quaternion.Euler(0, 0, 90);
+            //view.scanAngle = 180;
+		}
+        else 
+		{
+            view.transform.rotation = Quaternion.Euler(0, 0, 0);
+            //view.scanAngle = 90;
+		}
+
 	}
 
     public bool IsTargetInSight()

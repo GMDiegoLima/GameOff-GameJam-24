@@ -10,7 +10,7 @@ public class FieldOfView : MonoBehaviour
 
     public float sizeX;
     public float sizeY;
-    public float sacnAngle;
+    public float scanAngle;
 
     private void Awake()
     {
@@ -18,8 +18,8 @@ public class FieldOfView : MonoBehaviour
 
     private void Update()
     {
-        sacnAngle = transform.rotation.z;
-        RaycastHit2D hit = Physics2D.BoxCast(transform.position, new Vector2(sizeX, 1), sacnAngle, transform.up,
+        scanAngle = transform.rotation.z;
+        RaycastHit2D hit = Physics2D.BoxCast(transform.position, new Vector2(sizeX, 1), scanAngle, transform.up,
                                              sizeY, targetLayer);
         isTargetInSight = hit;
         targetTransform = hit.transform; 
