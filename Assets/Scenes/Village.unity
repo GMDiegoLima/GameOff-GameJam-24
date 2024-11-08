@@ -593,6 +593,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1709161108692393757, guid: 1eabea1b4111acd449aec41eba28d58a, type: 3}
       propertyPath: sizeY
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709161108692393757, guid: 1eabea1b4111acd449aec41eba28d58a, type: 3}
+      propertyPath: scanDistance
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1709161108692393757, guid: 1eabea1b4111acd449aec41eba28d58a, type: 3}
@@ -53466,11 +53470,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 946922637704556114, guid: 1c06ca1406631944da3858e71d81651b, type: 3}
       propertyPath: sizeY
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 946922637704556114, guid: 1c06ca1406631944da3858e71d81651b, type: 3}
       propertyPath: scanAngle
-      value: 0.21
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 946922637704556114, guid: 1c06ca1406631944da3858e71d81651b, type: 3}
+      propertyPath: scanDistance
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 946922637704556114, guid: 1c06ca1406631944da3858e71d81651b, type: 3}
       propertyPath: targetLayer.m_Bits

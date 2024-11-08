@@ -19,10 +19,7 @@ public abstract class GameActor : MonoBehaviour
     protected float attackCDTimer;
 
     // Setup by EnemyAIController
-    [HideInInspector] public float patrolViewRangeX;
-    [HideInInspector] public float patrolViewRangeY;
-    [HideInInspector] public float chaseViewRangeX;
-    [HideInInspector] public float chaseViewRangeY;
+
     [HideInInspector] public bool isControlledByAI;
     [HideInInspector] public StateController controller;
 

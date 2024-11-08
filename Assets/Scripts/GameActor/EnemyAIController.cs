@@ -34,10 +34,6 @@ public class EnemyAIController : StateController
     protected override void Start()
     {
         actor.isControlledByAI = true;
-        actor.patrolViewRangeX = view.sizeX;
-        actor.patrolViewRangeY = view.sizeY;
-        actor.chaseViewRangeX = view.sizeX * 2;
-        actor.chaseViewRangeY = view.sizeY * 2;
         currentState = new PatrolState(this);
     }
 
@@ -112,6 +108,7 @@ public class EnemyAIController : StateController
 	{
         if (!isMoving) isMoving = true;
         velocity = chaseSpeed * (aTarget.position - transform.position).normalized;
+        view.transform.localPosition = Vector2.zero;
 	}
 
     public void Seek() {}
@@ -137,6 +134,7 @@ public class EnemyAIController : StateController
 
     private void UpdateScanAngle()
     {
+        // Actually change the position and rotation of Eye
         float x = velocity.x;
         float y = velocity.y;
         float angle = Mathf.Atan2(y, x) * Mathf.Rad2Deg;
@@ -175,14 +173,16 @@ public class EnemyAIController : StateController
 
     public void ChangeToPatrolView()
     {
-        view.sizeX = actor.patrolViewRangeX;
-        view.sizeY = actor.patrolViewRangeY;
+        view.sizeX = view.patrolViewSizeX;
+        view.sizeY = view.patrolViewSizeY;
+        view.scanDistance = view.patrolViewDistance;
 	}
 
     public void ChangeToChaseView()
     {
-        view.sizeX = actor.chaseViewRangeX;
-        view.sizeY = actor.chaseViewRangeY;
+        view.sizeX = view.chaseViewSizeX;
+        view.sizeY = view.chaseViewSizeY;
+        view.scanDistance = 0;
 	}
 
     public void SetViewGizmoColor(Color aColor)
