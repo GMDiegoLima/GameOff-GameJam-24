@@ -4,7 +4,15 @@ using System.Collections;
 public class EnemyAIController : StateController 
 {
     private FieldOfView view;
-    public float velocity;
+    public Vector2 velocity;
+    public float movePeriod = 3;
+    public float stopPeriod = 3;
+    public bool isMoving;
+    private bool isVelocityUpdated;
+    private bool isMovePeriodUpdated;
+    private bool isStopPeriodUpdated;
+    [SerializeField] private float movePeriodTimer; 
+    [SerializeField] private float stopPeriodTimer; 
     [SerializeField] Transform[] patrolPoints;
 
     protected override void Awake()
@@ -22,6 +30,96 @@ public class EnemyAIController : StateController
         actor.chaseViewRangeY = view.sizeY * 2;
         currentState = new PatrolState(this);
     }
+
+    private void FixedUpdate()
+    {
+        Vector2 delta = velocity * Time.deltaTime;
+        Vector2 newPosition = body.position + delta;
+        body.MovePosition(newPosition);
+    }
+
+    protected override void Update()
+    {
+        base.Update();
+
+    }
+
+    public override void Attack() 
+	{
+        base.Attack();
+	}
+
+    public void Patrol() 
+	{
+        if (isMoving)
+        {
+            movePeriodTimer += Time.deltaTime;
+            if (!isVelocityUpdated)
+            {
+                SetRandomVelocity();
+                isVelocityUpdated = true;
+            }
+            if (!isMovePeriodUpdated)
+            {
+                SetRandomMovePeriod();
+                isMovePeriodUpdated = true;
+            }
+            if (movePeriodTimer >= movePeriod)
+            {
+                isMoving = false;
+                isVelocityUpdated = false;
+                isMovePeriodUpdated = false;
+                movePeriodTimer = 0;
+            }
+        }
+        else
+        {
+            stopPeriodTimer += Time.deltaTime;
+            velocity = Vector2.zero;
+            if (!isStopPeriodUpdated)
+            {
+                SetRandomStopPeriod();
+                isStopPeriodUpdated = true;
+            }
+            if (stopPeriodTimer >= stopPeriod)
+            {
+                isMoving = true;
+                isStopPeriodUpdated = false;
+                stopPeriodTimer = 0;
+			}
+        }
+
+        anim.SetFloat("Horizontal", velocity.x);
+        anim.SetFloat("Vertical", velocity.y);
+
+        if (velocity != Vector2.zero)
+        {
+            anim.SetFloat("LastHorizontal", velocity.x);
+            anim.SetFloat("LastVertical", velocity.y);
+        }
+	}
+
+    public void Chase(Transform aTarget) {}
+
+    public void Seek() {}
+
+    private void SetRandomVelocity()
+    {
+        float x = Random.Range(-3f, 3f);
+        float y = Random.Range(-3f, 3f);
+        movePeriodTimer = 0;
+        velocity = new Vector2(x, y);
+    }
+
+    private void SetRandomMovePeriod()
+    {
+        movePeriod = Random.Range(2, 5);
+	}
+
+    private void SetRandomStopPeriod()
+    { 
+        stopPeriod = Random.Range(2, 5);
+	}
 
     public bool IsTargetInSight()
     {

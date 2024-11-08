@@ -23,7 +23,7 @@ public class SeekState : IState
 
     public void Update()
     {
-        controller.actor.Seek();
+        controller.Seek();
         timer += Time.deltaTime;
         CheckTransition();
 	}

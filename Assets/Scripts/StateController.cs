@@ -35,4 +35,8 @@ public abstract class StateController : MonoBehaviour
         currentState?.Enter();
 	}
 
+    public virtual void Attack() 
+	{
+        actor.Attack();
+	}
 }

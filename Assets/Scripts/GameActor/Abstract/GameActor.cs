@@ -32,7 +32,4 @@ public abstract class GameActor : MonoBehaviour
     }
 
     public virtual void Attack() {}
-    public virtual void Patrol() {}
-    public virtual void Chase(Transform aTarget) {}
-    public virtual void Seek() {}
 }

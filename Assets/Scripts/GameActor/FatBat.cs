@@ -20,17 +20,4 @@ public class FatBat : GameActor
     {
         attackCDTimer = 0;
 	}
-
-    public override void Patrol()
-    { 
-	}
-
-    public override void Chase(Transform aTarget)
-    { 
-	}
-
-    public override void Seek()
-    { 
-	}
-
 }

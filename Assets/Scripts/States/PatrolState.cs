@@ -22,7 +22,7 @@ public class PatrolState : IState
 
     public void Update()
     {
-        controller.actor.Patrol();
+        controller.Patrol();
         CheckTransition();
 	}
 

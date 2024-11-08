@@ -24,4 +24,9 @@ public class PlayerStateController : StateController
         actor = anActor;
         actor.controller = this;
 	}
+
+    public override void Attack()
+    {
+        base.Attack();
+    }
 }

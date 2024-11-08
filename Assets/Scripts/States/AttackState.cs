@@ -26,7 +26,7 @@ public class AttackState : IState
 
     public void Update()
     {
-        controller.actor.Attack();
+        controller.Attack();
         CheckTransition();
 	}
 

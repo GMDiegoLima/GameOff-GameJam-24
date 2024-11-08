@@ -24,7 +24,7 @@ public class ChaseState : IState
 
     public void Update()
     {
-        controller.actor.Chase(target);
+        controller.Chase(target);
         CheckTransition();
 	}
 
