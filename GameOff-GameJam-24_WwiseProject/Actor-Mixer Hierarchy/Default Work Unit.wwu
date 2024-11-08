@@ -1,31 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{3B6D6122-CC4B-4031-90CB-8C49388F36AD}" SchemaVersion="119">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{3B6D6122-CC4B-4031-90CB-8C49388F36AD}" PersistMode="Standalone">
-			<ChildrenList>
-				<Sound Name="TestingSound" ID="{18E2A6DE-FE34-4C77-9033-2E44A99BF2FE}" ShortID="449939590">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="Words Like Weapons Guitar" ID="{D35872DA-B44F-4357-B452-AB5CE30D75ED}">
-							<Language>SFX</Language>
-							<AudioFile>Words Like Weapons Guitar.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="812529937"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="Words Like Weapons Guitar" ID="{D35872DA-B44F-4357-B452-AB5CE30D75ED}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-			</ChildrenList>
-		</WorkUnit>
+		<WorkUnit Name="Default Work Unit" ID="{3B6D6122-CC4B-4031-90CB-8C49388F36AD}" PersistMode="Standalone"/>
 	</AudioObjects>
 </WwiseDocument>
