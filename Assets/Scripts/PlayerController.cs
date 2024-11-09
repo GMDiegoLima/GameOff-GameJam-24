@@ -186,6 +186,19 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.CompareTag("PressureTrigger") && flying)
+        {
+            _animator.SetBool("Pushing", false);
+            Rigidbody2D rb_rock = other.gameObject.GetComponent<Rigidbody2D>();
+            rb_rock.simulated = false;
+        }
+        if (other.CompareTag("PressureTrigger") && !flying)
+        {
+            Debug.Log("Pedra");
+            _animator.SetBool("Pushing", true);
+            Rigidbody2D rb_rock = other.gameObject.GetComponent<Rigidbody2D>();
+            rb_rock.simulated = true;
+        }
         if (other.CompareTag("DeadBody") && currentBody == Bodies.Ghost)
         {
             embodyText.enabled = true;
@@ -209,6 +222,10 @@ public class PlayerController : MonoBehaviour
             canEmbody = false;
             availableBody = Bodies.Ghost;
             Debug.Log("Cannot embody anymore");
+        }
+        if (other.CompareTag("PressureTrigger") && !flying)
+        {
+            _animator.SetBool("Pushing", false);
         }
     }
 }
