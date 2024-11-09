@@ -3,7 +3,9 @@ using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
-    
+    [SerializeField] private KeyCode embodyKey;
+    [SerializeField] private PlayerStateController playerStateController;
+
     public float speed;
     Rigidbody2D characterBody;
     Vector2 velocity;
@@ -42,6 +44,7 @@ public class PlayerController : MonoBehaviour
         characterBody = GetComponent<Rigidbody2D>();
         originalAnimatorController = _animator.runtimeAnimatorController; 
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        playerStateController = GetComponent<PlayerStateController>();
     }
 
     void Update()
@@ -67,7 +70,7 @@ public class PlayerController : MonoBehaviour
                 return;
             }
 
-            if (Input.GetKeyDown("q")) {
+            if (Input.GetKeyDown(embodyKey)) {
                 if (canEmbody && currentBody == Bodies.Ghost)
                 {
                     currentBody = availableBody;
@@ -157,6 +160,7 @@ public class PlayerController : MonoBehaviour
                 flying = false;
                 break;
         }
+        playerStateController.UpdateCurrentActor(GetComponent<GameActor>());
     }
 
     void Disembody()
@@ -174,6 +178,7 @@ public class PlayerController : MonoBehaviour
             collider.radius = 1.5f;
 
             speed = 7f;
+            playerStateController.RemoveCurrentActor();
         }
     }
 
