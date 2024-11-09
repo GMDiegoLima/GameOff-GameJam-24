@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      wire_straight_0: 2084665107860214595
+      wire_straight_1: 896988837246292278
+      wire_straight_2: -1063639453247956006
+      wire_straight_3: 8309311682723653152
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
