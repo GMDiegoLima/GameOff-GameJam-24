@@ -8,7 +8,6 @@ public class MainCharacter : GameActor
         moveSpeed = 5f;
         damage = 2f;
         attackRange = 2f;
-        attackCD = 1f;
     }
 
     protected override void Update()
@@ -18,6 +17,5 @@ public class MainCharacter : GameActor
 
     public override void Attack()
     {
-        attackCDTimer = 0;
     }
 }

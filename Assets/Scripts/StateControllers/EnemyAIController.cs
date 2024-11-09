@@ -12,11 +12,13 @@ public class EnemyAIController : StateController
     [SerializeField] private float maxStopPeriod;
     [SerializeField] private float minVelocity;
     [SerializeField] private float maxVelocity;
+    [SerializeField] private float attackCD;
 
     [Header("For Dubug")]
     [SerializeField] private bool isMoving;
     [SerializeField] private float movePeriodTimer;
     [SerializeField] private float stopPeriodTimer;
+    [SerializeField] private float attackCDTimer;
 
     private FieldOfView view;
     private float movePeriod = 2f;
@@ -47,24 +49,23 @@ public class EnemyAIController : StateController
     protected override void Update()
     {
         base.Update();
-
-        anim.SetFloat("Horizontal", velocity.x);
-        anim.SetFloat("Vertical", velocity.y);
-
-        if (velocity != Vector2.zero)
-        {
-            anim.SetFloat("LastHorizontal", velocity.x);
-            anim.SetFloat("LastVertical", velocity.y);
-        }
+        HandleAnim();
+        attackCDTimer += Time.deltaTime;
     }
 
+    // -------------- States --------------
     public override void Attack()
     {
-        base.Attack();
+        velocity = Vector2.zero;
+        if (attackCDTimer < attackCD) return;
+        base.Attack(); // actor.Attack()
+        anim.Play("Attack");
+        attackCDTimer = 0;
     }
 
     public void Patrol()
     {
+        // Randomly set move period, stop period, and velocity
         if (isMoving)
         {
             movePeriodTimer += Time.deltaTime;
@@ -108,10 +109,28 @@ public class EnemyAIController : StateController
     {
         if (!isMoving) isMoving = true;
         velocity = chaseSpeed * (aTarget.position - transform.position).normalized;
-        view.transform.localPosition = Vector2.zero;
+        view.transform.localPosition = Vector2.zero; // set the boxcast to be in the center and cast outward
     }
 
-    public void Seek() { }
+    public void Seek() 
+	{
+	    // Now seek is just to keep the same velocity for 3 sec
+	}
+
+    // -------------- States --------------
+
+
+    private void HandleAnim()
+    { 
+        anim.SetFloat("Horizontal", velocity.x);
+        anim.SetFloat("Vertical", velocity.y);
+
+        if (velocity != Vector2.zero)
+        {
+            anim.SetFloat("LastHorizontal", velocity.x);
+            anim.SetFloat("LastVertical", velocity.y);
+        }
+	}
 
     private void SetRandomVelocity()
     {
@@ -134,7 +153,8 @@ public class EnemyAIController : StateController
 
     private void UpdateScanAngle()
     {
-        // Actually change the position and rotation of Eye
+        // It's actually changing the position and rotation of Eye transform
+        // The boxcast is always cast up
         float x = velocity.x;
         float y = velocity.y;
         float angle = Mathf.Atan2(y, x) * Mathf.Rad2Deg;

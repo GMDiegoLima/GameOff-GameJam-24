@@ -3,14 +3,18 @@ using UnityEngine;
 public class PlayerStateController : StateController
 {
     [SerializeField] KeyCode attackKey;
+    [SerializeField] float attackCD;
+
+    [Header("For Debug")]
+    [SerializeField] float attackCDTimer;
 
     protected override void Update()
     {
         base.Update();
-        if (Input.GetKeyDown(attackKey))
+        attackCDTimer += Time.deltaTime;
+        if (Input.GetKeyDown(attackKey) && attackCDTimer >= attackCD)
         {
-            Debug.Log(actor.actorName + "::Attack()");
-            actor.Attack();
+            Attack();
         }
     }
 
@@ -27,6 +31,9 @@ public class PlayerStateController : StateController
 
     public override void Attack()
     {
-        base.Attack();
+        base.Attack(); // actor.Attack()
+        Debug.Log(actor.actorName + "::Attack()");
+        anim.Play("Attack");
+        attackCDTimer = 0;
     }
 }

@@ -8,7 +8,6 @@ public class FatBat : GameActor
         moveSpeed = 7f;
         damage = 1f;
         attackRange = 3f;
-        attackCD = 2f;
     }
 
     protected override void Update()
@@ -18,6 +17,5 @@ public class FatBat : GameActor
 
     public override void Attack()
     {
-        attackCDTimer = 0;
     }
 }

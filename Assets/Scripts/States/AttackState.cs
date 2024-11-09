@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class AttackState : IState
+public class AttackState : IState 
 {
     private string name;
     private Color gizmoColor = Color.red;
@@ -8,36 +8,36 @@ public class AttackState : IState
     public Color GizmoColor { get => gizmoColor; set => gizmoColor = value; }
 
     private StateController controller;
-
+    
     public AttackState(EnemyAIController anEnemyAIController)
     {
         controller = anEnemyAIController;
-    }
+	}
 
     public AttackState(PlayerStateController aPlayerStateController)
     {
         controller = aPlayerStateController;
-    }
+	}
 
     public void Enter()
     {
         Debug.Log(controller.actor.actorName + " Enter Attack State");
-    }
+	}
 
     public void Update()
     {
         controller.Attack();
         CheckTransition();
-    }
+	}
 
     public void Exit()
-    {
+    { 
         Debug.Log(controller.actor.actorName + " Exit Attack State");
-    }
+	}
 
-
+    
     public void CheckTransition()
-    {
+    { 
         if (controller.actor.isControlledByAI)
         {
             var enemyAIController = (EnemyAIController)controller;

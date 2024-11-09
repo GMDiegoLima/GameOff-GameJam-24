@@ -8,7 +8,6 @@ public class Wolf : GameActor
         moveSpeed = 6f;
         damage = 3f;
         attackRange = 2f;
-        attackCD = 2f;
     }
 
     protected override void Update()
@@ -18,6 +17,5 @@ public class Wolf : GameActor
 
     public override void Attack()
     {
-        attackCDTimer = 0;
     }
 }
