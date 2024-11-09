@@ -14,7 +14,7 @@ public class FieldOfView : MonoBehaviour
 
     [Header("Patrol Range")]
     public float patrolViewSizeX;
-    public float patrolViewSizeY;
+    [HideInInspector] public float patrolViewSizeY = 1; // Normally just set to 1 
     public float patrolViewDistance;
 
     [Header("Chase Range (From Center)")]

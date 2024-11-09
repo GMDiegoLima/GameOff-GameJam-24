@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      npc_capivara_idle__0: -8681170379017598411
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
