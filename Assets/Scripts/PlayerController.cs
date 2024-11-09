@@ -142,14 +142,17 @@ public class PlayerController : MonoBehaviour
             case Bodies.Main:
                 speed = 5f;
                 flying = false;
+                gameObject.AddComponent<MainCharacter>();
                 break;
             case Bodies.Wolf:
                 speed = 6f;
                 flying = false;
+                gameObject.AddComponent<Wolf>();
                 break;
             case Bodies.FatBat:
                 speed = 4f;
                 flying = true;
+                gameObject.AddComponent<FatBat>();
                 break;
             case Bodies.Goblin:
                 speed = 5.5f;

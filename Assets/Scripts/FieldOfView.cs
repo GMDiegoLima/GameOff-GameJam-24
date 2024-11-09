@@ -3,7 +3,6 @@ using UnityEngine;
 public class FieldOfView : MonoBehaviour
 {
     public bool isTargetInSight;
-    public string targetTag = "Player";
     public LayerMask targetLayer;
     public Color gizmoColor;
     [HideInInspector] public Transform targetTransform;
