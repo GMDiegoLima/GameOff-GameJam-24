@@ -1,25 +1,39 @@
 using UnityEngine;
 
-public class CableRotation : MonoBehaviour
+public class WireRotation : MonoBehaviour
 {
     public float correctRotation;
-    public bool isCorrect = false;
+    public bool enabled = false;
     bool canRotate = false;
+    Animator animator;
+    
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     void Update()
     {
+        if (enabled)
+        {
+            animator.SetBool("Enabled", true);
+        }
+        else
+        {
+            animator.SetBool("Enabled", false);
+        }
         if (Input.GetKeyDown("e") && canRotate)
         {
             transform.Rotate(0, 0, 90f);
             if (Mathf.Approximately(transform.eulerAngles.z, correctRotation))
             {
-                isCorrect = true;
+                enabled = true;
             }
             else
             {
-                isCorrect = false;
+                enabled = false;
             }
-            CableManager.Instance.CheckPuzzleStatus();
+            WireManager.Instance.CheckPuzzleStatus();
         }
     }
 

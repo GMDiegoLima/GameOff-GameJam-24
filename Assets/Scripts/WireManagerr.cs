@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class CableManager : MonoBehaviour
+public class WireManager : MonoBehaviour
 {
-    public static CableManager Instance;
-    public CableRotation[] cables;
+    public static WireManager Instance;
+    public WireRotation[] cables;
     public UnityEvent onPuzzleSuccess;
 
     private void Awake()
@@ -21,9 +21,9 @@ public class CableManager : MonoBehaviour
 
     public void CheckPuzzleStatus()
     {
-        foreach (CableRotation cable in cables)
+        foreach (WireRotation cable in cables)
         {
-            if (!cable.isCorrect)
+            if (!cable.enabled)
             {
                 return;
             }

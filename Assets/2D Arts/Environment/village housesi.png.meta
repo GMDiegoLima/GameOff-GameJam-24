@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: f163aef2b0a283046ad5765cdd66e6cf
+guid: b0cbe8642e8f8544f9bd68fec6ca0a5e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2084665107860214595
-    second: wire_straight_0
+      213: 5972984172755536676
+    second: village housesi_0
   - first:
-      213: 896988837246292278
-    second: wire_straight_1
+      213: -166921061686776331
+    second: village housesi_1
   - first:
-      213: -1063639453247956006
-    second: wire_straight_2
+      213: 2641245628603387539
+    second: village housesi_2
   - first:
-      213: 8309311682723653152
-    second: wire_straight_3
+      213: 1502606124415654552
+    second: village housesi_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wire_straight_0
+      name: village housesi_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
-        width: 16
-        height: 16
+        x: 1
+        y: 102
+        width: 78
+        height: 79
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 343d8added73eec10800000000000000
-      internalID: 2084665107860214595
+      spriteID: 42bcf1a757d44e250800000000000000
+      internalID: 5972984172755536676
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wire_straight_1
+      name: village housesi_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 16
-        width: 16
-        height: 16
+        x: 84
+        y: 102
+        width: 101
+        height: 84
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,20 +159,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6315e83589eb27c00800000000000000
-      internalID: 896988837246292278
+      spriteID: 5fde0a4cd2afeadf0800000000000000
+      internalID: -166921061686776331
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wire_straight_2
+      name: village housesi_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 16
+        x: 2
+        y: 27
+        width: 76
+        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,8 +181,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: adb901c7d813d31f0800000000000000
-      internalID: -1063639453247956006
+      spriteID: 39e4571c7e697a420800000000000000
+      internalID: 2641245628603387539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: village housesi_3
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 2
+        width: 84
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89a1f1b1f445ad410800000000000000
+      internalID: 1502606124415654552
       vertices: []
       indices: 
       edges: []
@@ -191,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 3fe73eccce1eeae428e1be04e9515f98
+    spriteID: 96101698fedf930479413ab5e38c268c
     internalID: 0
     vertices: []
     indices: 
@@ -201,9 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      wire_straight_0: 2084665107860214595
-      wire_straight_1: 896988837246292278
-      wire_straight_2: -1063639453247956006
+      village housesi_0: 5972984172755536676
+      village housesi_1: -166921061686776331
+      village housesi_2: 2641245628603387539
+      village housesi_3: 1502606124415654552
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

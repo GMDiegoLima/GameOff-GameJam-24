@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using TMPro;
 
@@ -38,6 +40,10 @@ public class PlayerController : MonoBehaviour
     public bool flying = false;
     public GameObject gameOver;
 
+    public GameObject heldItem = null;
+    public Transform itemHoldPosition;
+    List<GameObject> nearbyItems = new List<GameObject>();
+
     void Start()
     {
         _animator = GetComponent<Animator>();
@@ -77,7 +83,6 @@ public class PlayerController : MonoBehaviour
                 {
                     currentBody = availableBody;
                     targetPosition = enemyBodyPrefab.transform.position;
-                    // _animator.SetTrigger("Embody");
                     isMovingToTarget = true;
                     _animator.Play("Embody");
                     Debug.Log("Possessed " + availableBody);
@@ -103,7 +108,28 @@ public class PlayerController : MonoBehaviour
                     Debug.Log("Left the body");
                 }
             }
+            if (Input.GetKeyDown("e") && nearbyItems.Count > 0)
+            {
+                GameObject closestItem = GetClosestItem();
+                if (heldItem)
+                {
+                    DropItem();
+                    PickUpItem(closestItem);
+                }
+                else
+                {
+                    PickUpItem(closestItem);
+                }
 
+            }
+            if (Input.GetKeyDown("g") && heldItem != null)
+            {
+                DropItem();
+            }
+            if (heldItem != null)
+            {
+                heldItem.transform.position = itemHoldPosition.position;
+            }
         }
         else
         {
@@ -118,7 +144,6 @@ public class PlayerController : MonoBehaviour
         {
             isMovingToTarget = false;
             _animator.SetBool("isGhost", false);
-            // Invoke("Embody", 0.4f);
             Embody();
         }
     }
@@ -190,11 +215,31 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void UpdateActorState()
+    void UpdateActorState()
     { 
         flying = playerStateController.actor.canFlay;
         speed = playerStateController.actor.moveSpeed;
 	}
+
+    GameObject GetClosestItem()
+    {
+        return nearbyItems
+            .OrderBy(item => Vector2.Distance(transform.position, item.transform.position))
+            .FirstOrDefault();
+    }
+    void PickUpItem(GameObject item)
+    {
+        heldItem = item;
+        heldItem.transform.SetParent(transform);
+        heldItem.transform.position = itemHoldPosition.position;
+        nearbyItems.Remove(item);
+    }
+    public void DropItem()
+    {
+        heldItem.transform.SetParent(null);
+        nearbyItems.Add(heldItem);
+        heldItem = null;
+    }
 
     void FixedUpdate()
     {
@@ -230,6 +275,10 @@ public class PlayerController : MonoBehaviour
                 Debug.Log("Can embody: " + availableBody);
             }
         }
+        if (other.CompareTag("Item") && !flying)
+        {
+            nearbyItems.Add(other.gameObject);
+        }
     }
 
     void OnTriggerExit2D(Collider2D other)
@@ -245,6 +294,10 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("PressureTrigger") && !flying)
         {
             _animator.SetBool("Pushing", false);
+        }
+        if (other.CompareTag("Item"))
+        {
+            nearbyItems.Remove(other.gameObject);
         }
     }
 }

@@ -2,21 +2,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class SequencePuzzle : MonoBehaviour
+public class PuzzleSequence : MonoBehaviour
 {
     public List<string> correctSequence;
 
     public UnityEvent onPuzzleSolved;
     public UnityEvent onPuzzleReset;
 
-    List<string> playerSequence = new List<string>();
-    bool puzzleSolved;
+    private List<string> playerSequence = new List<string>();
+    [HideInInspector]
+    public bool puzzleSolved;
 
     public void RegisterActivation(string triggerName)
     {
         if (puzzleSolved) return;
 
         playerSequence.Add(triggerName);
+        Debug.Log($"Sequence updated: {string.Join(", ", playerSequence)}");
         if (!IsCorrectSoFar())
         {
             ResetPuzzle();
@@ -26,12 +28,12 @@ public class SequencePuzzle : MonoBehaviour
         if (playerSequence.Count == correctSequence.Count && IsSequenceCorrect())
         {
             puzzleSolved = true;
-            onPuzzleSolved.Invoke();
             Debug.Log("Puzzle Solved!");
+            onPuzzleSolved.Invoke();
         }
     }
 
-    bool IsCorrectSoFar()
+    private bool IsCorrectSoFar()
     {
         for (int i = 0; i < playerSequence.Count; i++)
         {
@@ -41,7 +43,7 @@ public class SequencePuzzle : MonoBehaviour
         return true;
     }
 
-    bool IsSequenceCorrect()
+    private bool IsSequenceCorrect()
     {
         if (playerSequence.Count != correctSequence.Count) return false;
 
@@ -53,11 +55,17 @@ public class SequencePuzzle : MonoBehaviour
         return true;
     }
 
-    void ResetPuzzle()
+    private void ResetPuzzle()
     {
+        Debug.Log("Wrong sequence! Puzzle Reseted.");
         playerSequence.Clear();
         onPuzzleReset.Invoke();
-        Debug.Log("Wrong sequence! Puzzle Reseted.");
+    }
+
+    public void ResetPuzzleState()
+    {
+        puzzleSolved = false;
+        playerSequence.Clear();
     }
 
     public void RemoveItem(string triggerName)

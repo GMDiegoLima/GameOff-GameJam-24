@@ -8,7 +8,7 @@ public class LeverSequence : MonoBehaviour
     public bool activated;
     public TextMeshProUGUI pullText;
     public string leverName;
-    public SequencePuzzle sequencePuzzle;
+    public PuzzleSequence sequencePuzzle;
     Animator animator;
 
     void Start()

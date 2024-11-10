@@ -1,10 +1,12 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class PressurePlateSequence : MonoBehaviour
 {
     public GameObject player;
     PlayerController playerScript;
-    public SequencePuzzle sequencePuzzle;
+    public List<PuzzleSequence> puzzles;
+    public PuzzleSequenceManager puzzleManager;
     public string plateName;
     Animator animator;
 
@@ -16,16 +18,31 @@ public class PressurePlateSequence : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && !playerScript.flying || other.CompareTag("PressureTrigger"))
+        if ((other.CompareTag("Player") && !playerScript.flying) || other.CompareTag("PressureTrigger"))
         {
             animator.SetBool("Activated", true);
-            sequencePuzzle.RegisterActivation(plateName);
+
+            PuzzleSequence activePuzzle = puzzleManager.GetActivePuzzle();
+            if (activePuzzle != null)
+            {
+                activePuzzle.RegisterActivation(plateName);
+            }
+            else
+            {
+                Debug.LogWarning("Nenhum puzzle ativo encontrado.");
+            }
+        }
+
+        PuzzleSequence currentPuzzle = puzzleManager.GetActivePuzzle();
+        if (currentPuzzle != null && currentPuzzle.puzzleSolved)
+        {
+            puzzleManager.OnPuzzleSolved();
         }
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && !playerScript.flying || other.CompareTag("PressureTrigger"))
+        if ((other.CompareTag("Player") && !playerScript.flying) || other.CompareTag("PressureTrigger"))
         {
             animator.SetBool("Activated", false);
         }

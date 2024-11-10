@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: f163aef2b0a283046ad5765cdd66e6cf
+guid: 081a4c406fd6d7a46b16e2a0cee9c9f8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2084665107860214595
-    second: wire_straight_0
-  - first:
-      213: 896988837246292278
-    second: wire_straight_1
-  - first:
-      213: -1063639453247956006
-    second: wire_straight_2
-  - first:
-      213: 8309311682723653152
-    second: wire_straight_3
+      213: 6987187225303812555
+    second: enemy_wolf_push_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,10 +113,32 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wire_straight_0
+      name: enemy_wolf_push_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 16
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc9816ff2c977f060800000000000000
+      internalID: 6987187225303812555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_wolf_push_1
+      rect:
+        serializedVersion: 2
+        x: 16
         y: 32
         width: 16
         height: 16
@@ -135,19 +148,19 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 343d8added73eec10800000000000000
-      internalID: 2084665107860214595
+      spriteID: 3fe85093fa7151442918cce839cdee85
+      internalID: -943226735
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wire_straight_1
+      name: enemy_wolf_push_2
       rect:
         serializedVersion: 2
-        x: 0
+        x: 16
         y: 16
         width: 16
         height: 16
@@ -157,32 +170,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6315e83589eb27c00800000000000000
-      internalID: 896988837246292278
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wire_straight_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: adb901c7d813d31f0800000000000000
-      internalID: -1063639453247956006
+      spriteID: 5eb53a48c4de1cd4389c4fc3135235ef
+      internalID: -1682984397
       vertices: []
       indices: 
       edges: []
@@ -191,7 +182,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 3fe73eccce1eeae428e1be04e9515f98
+    spriteID: 99545e35367bc624aacf3b5891044ae2
     internalID: 0
     vertices: []
     indices: 
@@ -201,9 +192,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      wire_straight_0: 2084665107860214595
-      wire_straight_1: 896988837246292278
-      wire_straight_2: -1063639453247956006
+      enemy_wolf_push_0: 6987187225303812555
+      enemy_wolf_push_1: -943226735
+      enemy_wolf_push_2: -1682984397
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

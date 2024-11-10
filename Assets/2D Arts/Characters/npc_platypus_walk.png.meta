@@ -1,19 +1,16 @@
 fileFormatVersion: 2
-guid: f163aef2b0a283046ad5765cdd66e6cf
+guid: be889fd9db375224c9d4e54275be9cde
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2084665107860214595
-    second: wire_straight_0
+      213: -7405089765955968267
+    second: npc_platypus_walk_0
   - first:
-      213: 896988837246292278
-    second: wire_straight_1
+      213: -8386705620701832878
+    second: npc_platypus_walk_1
   - first:
-      213: -1063639453247956006
-    second: wire_straight_2
-  - first:
-      213: 8309311682723653152
-    second: wire_straight_3
+      213: 2493558748297772606
+    second: npc_platypus_walk_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -60,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -84,7 +81,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -122,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wire_straight_0
+      name: npc_platypus_walk_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
-        width: 16
-        height: 16
+        x: 15
+        y: 47
+        width: 34
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +134,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 343d8added73eec10800000000000000
-      internalID: 2084665107860214595
+      spriteID: 5f2605a7716db3990800000000000000
+      internalID: -7405089765955968267
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wire_straight_1
+      name: npc_platypus_walk_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 16
-        width: 16
-        height: 16
+        x: 15
+        y: 31
+        width: 34
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,20 +156,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6315e83589eb27c00800000000000000
-      internalID: 896988837246292278
+      spriteID: 2599b423caf6c9b80800000000000000
+      internalID: -8386705620701832878
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wire_straight_2
+      name: npc_platypus_walk_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 16
+        x: 15
+        y: 15
+        width: 33
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,8 +178,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: adb901c7d813d31f0800000000000000
-      internalID: -1063639453247956006
+      spriteID: e3e3bda5876ea9220800000000000000
+      internalID: 2493558748297772606
       vertices: []
       indices: 
       edges: []
@@ -191,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 3fe73eccce1eeae428e1be04e9515f98
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -200,10 +197,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      wire_straight_0: 2084665107860214595
-      wire_straight_1: 896988837246292278
-      wire_straight_2: -1063639453247956006
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
