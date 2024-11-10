@@ -1,8 +1,8 @@
-public class Wolf : GameActor
+public class Skeleton : GameActor 
 {
     protected void Awake()
     {
-        actorName = "Wolf";
+        actorName = "Skeleton";
         moveSpeed = 6f;
         damage = 3f;
         attackRange = 2f;

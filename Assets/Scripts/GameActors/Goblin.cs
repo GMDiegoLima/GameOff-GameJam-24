@@ -1,10 +1,10 @@
-public class Wolf : GameActor
+public class Goblin : GameActor 
 {
     protected void Awake()
     {
-        actorName = "Wolf";
-        moveSpeed = 6f;
-        damage = 3f;
+        actorName = "Goblin";
+        moveSpeed = 5f;
+        damage = 2f;
         attackRange = 2f;
     }
 
