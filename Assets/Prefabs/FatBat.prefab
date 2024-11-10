@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 1608298449754829732}
   - component: {fileID: 3055231633068254372}
   - component: {fileID: 2476882757876158681}
-  - component: {fileID: 3285149386285444070}
   m_Layer: 0
   m_Name: FatBat
   m_TagString: Enemy
@@ -205,38 +204,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e946b9d3239924d6dac6d781a87da44f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actor: {fileID: 0}
+  actor: {fileID: 11400000, guid: 59339952d8b17451b84d75135bd8217d, type: 2}
   velocity: {x: 0, y: 0}
-  chaseSpeed: 3
   minMovePeriod: 1
   maxMovePeriod: 2
   minStopPeriod: 1
   maxStopPeriod: 2
-  minVelocity: -3
-  maxVelocity: 3
   attackCD: 2
   isMoving: 0
   movePeriodTimer: 0
   stopPeriodTimer: 0
   attackCDTimer: 0
---- !u!114 &3285149386285444070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 758673646730616367}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8719941e0e96b4f70b71cc9b31a479c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actorName: 
-  moveSpeed: 0
-  damage: 0
-  attackRange: 0
-  isControlledByAI: 0
-  controller: {fileID: 0}
+  chaseSpeed: 3
+  minVelocity: -3
+  maxVelocity: 3
 --- !u!1001 &592623029178608109
 PrefabInstance:
   m_ObjectHideFlags: 0
