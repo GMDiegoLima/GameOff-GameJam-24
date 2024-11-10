@@ -23,15 +23,13 @@ public class PlayerStateController : StateController
         Destroy(actor);
     }
 
-    public void UpdateCurrentActor(GameActor anActor)
+    public void UpdateActorController()
     {
-        actor = anActor;
         actor.controller = this;
     }
 
     public override void Attack()
     {
-        base.Attack(); // actor.Attack()
         Debug.Log(actor.actorName + "::Attack()");
         anim.Play("Attack");
         attackCDTimer = 0;

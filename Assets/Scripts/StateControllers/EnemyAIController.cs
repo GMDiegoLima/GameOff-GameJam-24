@@ -5,13 +5,10 @@ public class EnemyAIController : StateController
     public Vector2 velocity;
 
     [Header("Adjustable")]
-    [SerializeField] private float chaseSpeed;
     [SerializeField] private float minMovePeriod;
     [SerializeField] private float maxMovePeriod;
     [SerializeField] private float minStopPeriod;
     [SerializeField] private float maxStopPeriod;
-    [SerializeField] private float minVelocity;
-    [SerializeField] private float maxVelocity;
     [SerializeField] private float attackCD;
 
     [Header("For Dubug")]
@@ -19,6 +16,9 @@ public class EnemyAIController : StateController
     [SerializeField] private float movePeriodTimer;
     [SerializeField] private float stopPeriodTimer;
     [SerializeField] private float attackCDTimer;
+    [SerializeField] private float chaseSpeed;
+    [SerializeField] private float minVelocity;
+    [SerializeField] private float maxVelocity;
 
     private FieldOfView view;
     private float movePeriod = 2f;
@@ -30,6 +30,9 @@ public class EnemyAIController : StateController
     protected override void Awake()
     {
         base.Awake();
+        chaseSpeed = actor.moveSpeed;
+        minVelocity = -actor.moveSpeed;
+        maxVelocity = actor.moveSpeed;
         view = GetComponentInChildren<FieldOfView>();
     }
 
@@ -58,7 +61,6 @@ public class EnemyAIController : StateController
     {
         velocity = Vector2.zero;
         if (attackCDTimer < attackCD) return;
-        base.Attack(); // actor.Attack()
         anim.Play("Attack");
         attackCDTimer = 0;
     }

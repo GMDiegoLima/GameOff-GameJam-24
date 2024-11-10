@@ -13,7 +13,6 @@ public abstract class StateController : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
-        actor = GetComponent<GameActor>();
 
         actor.controller = this;
     }
@@ -37,6 +36,5 @@ public abstract class StateController : MonoBehaviour
 
     public virtual void Attack()
     {
-        actor.Attack();
     }
 }

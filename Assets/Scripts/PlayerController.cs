@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private KeyCode embodyKey;
     [SerializeField] private PlayerStateController playerStateController;
+    [SerializeField] private GameActorSOHolder gameActorSOHolder;
 
     public float speed;
     Rigidbody2D characterBody;
@@ -45,6 +46,7 @@ public class PlayerController : MonoBehaviour
         originalAnimatorController = _animator.runtimeAnimatorController; 
         _spriteRenderer = GetComponent<SpriteRenderer>();
         playerStateController = GetComponent<PlayerStateController>();
+        gameActorSOHolder = GetComponent<GameActorSOHolder>();
     }
 
     void Update()
@@ -140,30 +142,33 @@ public class PlayerController : MonoBehaviour
         switch (currentBody)
         {
             case Bodies.Main:
-                speed = 5f;
-                flying = false;
-                gameObject.AddComponent<MainCharacter>();
+                //speed = 5f;
+                //flying = false;
+                playerStateController.actor = gameActorSOHolder.mainCharacter;
                 break;
             case Bodies.Wolf:
-                speed = 6f;
-                flying = false;
-                gameObject.AddComponent<Wolf>();
+                //speed = 6f;
+                //flying = false;
+                playerStateController.actor = gameActorSOHolder.wolf;
                 break;
             case Bodies.FatBat:
-                speed = 4f;
-                flying = true;
-                gameObject.AddComponent<FatBat>();
+                //speed = 4f;
+                //flying = true;
+                playerStateController.actor = gameActorSOHolder.fatBat;
                 break;
             case Bodies.Goblin:
-                speed = 5.5f;
-                flying = false;
+                //speed = 5.5f;
+                //flying = false;
+                playerStateController.actor = gameActorSOHolder.goblin;
                 break;
             case Bodies.Skeleton:
-                speed = 3f;
-                flying = false;
+                //speed = 3f;
+                //flying = false;
+                playerStateController.actor = gameActorSOHolder.skeleton;
                 break;
         }
-        playerStateController.UpdateCurrentActor(GetComponent<GameActor>());
+        UpdateActorState();
+        playerStateController.UpdateActorController();
     }
 
     void Disembody()
@@ -180,10 +185,16 @@ public class PlayerController : MonoBehaviour
             collider.isTrigger = true;
             collider.radius = 1.5f;
 
-            speed = 7f;
-            playerStateController.RemoveCurrentActor();
+            playerStateController.actor = gameActorSOHolder.ghost;
+            UpdateActorState();
         }
     }
+
+    private void UpdateActorState()
+    { 
+        flying = playerStateController.actor.canFlay;
+        speed = playerStateController.actor.moveSpeed;
+	}
 
     void FixedUpdate()
     {
