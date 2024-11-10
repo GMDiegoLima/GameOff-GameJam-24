@@ -9,7 +9,7 @@ public enum ActorType
 
 public abstract class GameActor : MonoBehaviour
 {
-    [Header("GameActor Variables (Set in script)")]
+    [Header("GameActor Variables")]
     public string actorName;
     public float moveSpeed;
     public float damage;

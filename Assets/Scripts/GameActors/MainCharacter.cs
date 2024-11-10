@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class MainCharacter : GameActor
 {
     protected void Awake()
