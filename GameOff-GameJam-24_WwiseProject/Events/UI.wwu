@@ -6,6 +6,63 @@
 				<Property Name="Color" Type="int16" Value="13"/>
 				<Property Name="OverrideColor" Type="bool" Value="True"/>
 			</PropertyList>
+			<ChildrenList>
+				<Event Name="normal_dialogue" ID="{D15ED8B5-1490-49AC-B725-DB2C61B4040F}">
+					<ChildrenList>
+						<Action Name="" ID="{FE80B1F0-CEDD-4DD3-A807-107FE47B69E1}" ShortID="903284907">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ui_dialogue_var_01" ID="{53C61CF4-44AA-4963-BBE4-F4B92DE95F96}" WorkUnitID="{AD304E25-12B1-44CD-BEF6-31AAB87D667D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="evil_dialogue" ID="{BBD332CC-B42A-45AE-8915-727AD712FC97}">
+					<ChildrenList>
+						<Action Name="" ID="{90516112-F948-4BCF-AFDD-B3643DBEDBBF}" ShortID="496916715">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ui_dialogue_var_02" ID="{2A693E30-EEB1-4D1F-ABA5-1B024D0ED056}" WorkUnitID="{AD304E25-12B1-44CD-BEF6-31AAB87D667D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="menu_cursor_select" ID="{300DF912-886B-4030-9E13-967BD9251991}">
+					<ChildrenList>
+						<Action Name="" ID="{0422A19A-A2A0-4EB2-92A6-ACA1E00F357C}" ShortID="817426766">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ui_menu_select" ID="{C42C3B72-0512-45DA-AF44-872D5186C7FB}" WorkUnitID="{AD304E25-12B1-44CD-BEF6-31AAB87D667D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="menu_cursor_move" ID="{61E46C59-9097-4A23-B265-0000D087E02F}">
+					<ChildrenList>
+						<Action Name="" ID="{A3508C0B-0DCB-4A60-AE7B-040B506A4DCF}" ShortID="182097366">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ui_menu_move" ID="{222D3967-4766-4976-BB05-629095E5C0FB}" WorkUnitID="{AD304E25-12B1-44CD-BEF6-31AAB87D667D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="menu_cursor_back" ID="{BF4FCF3B-8483-4549-ADFE-C09859851C3C}">
+					<ChildrenList>
+						<Action Name="" ID="{5A56C619-28E2-4328-8704-617A15F8B6D6}" ShortID="652842791">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ui_menu_back" ID="{CFD14057-1165-48D4-9DA9-7201D9C2EC4E}" WorkUnitID="{AD304E25-12B1-44CD-BEF6-31AAB87D667D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
 		</WorkUnit>
 	</Events>
 </WwiseDocument>
