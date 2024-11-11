@@ -27,6 +27,11 @@ public class WireConnection : MonoBehaviour
             enabled = false;
             animator.SetBool("Enabled", false);
         }
+
+        if (Input.GetKeyDown("j") && canBite)
+        {
+            animator.SetBool("Bitten", true);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
