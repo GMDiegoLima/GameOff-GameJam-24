@@ -7,12 +7,17 @@ public class DeadState : IState
     public string Name { get => name; set => name = value; }
     public Color GizmoColor { get => gizmoColor; set => gizmoColor = value; }
 
-    private EnemyAIController controller;
+    private StateController controller;
 
     public DeadState(EnemyAIController anEnemyAIController)
     {
         controller = anEnemyAIController;
     }
+
+    public DeadState(PlayerStateController aPlayerStateController)
+    {
+        controller = aPlayerStateController;
+	}
 
     public void Enter()
     {

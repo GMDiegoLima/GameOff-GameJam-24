@@ -55,6 +55,14 @@ public class AttackState : IState
                 controller.TransitionToState(new DeadState(enemyAIController));
 			}
         }
+        else
+        { 
+            var playerStateController = (PlayerStateController)controller;
+            if (playerStateController.IsActorDead())
+            {
+                controller.TransitionToState(new DeadState(playerStateController));
+			}
+		}
     }
 
     public void DrawGizmos()

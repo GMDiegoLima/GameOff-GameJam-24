@@ -652,10 +652,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goblin
       objectReference: {fileID: 0}
-    - target: {fileID: 1873842805440964811, guid: c1f45bd180a39df4d95e54ea0533b60b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5463444181609725263, guid: c1f45bd180a39df4d95e54ea0533b60b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.88
@@ -696,28 +692,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6568426007886683120, guid: c1f45bd180a39df4d95e54ea0533b60b, type: 3}
-      propertyPath: damage
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6568426007886683120, guid: c1f45bd180a39df4d95e54ea0533b60b, type: 3}
-      propertyPath: actorName
-      value: Goblin
-      objectReference: {fileID: 0}
-    - target: {fileID: 6568426007886683120, guid: c1f45bd180a39df4d95e54ea0533b60b, type: 3}
-      propertyPath: moveSpeed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6568426007886683120, guid: c1f45bd180a39df4d95e54ea0533b60b, type: 3}
-      propertyPath: attackRange
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7219582200338571638, guid: c1f45bd180a39df4d95e54ea0533b60b, type: 3}
-      propertyPath: actor
-      value: 
-      objectReference: {fileID: 11400000, guid: 91e3b40bd5e30453986c8367ea3161b0, type: 2}
-    m_RemovedComponents:
-    - {fileID: 6568426007886683120, guid: c1f45bd180a39df4d95e54ea0533b60b, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -956,14 +931,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: FatBat
       objectReference: {fileID: 0}
-    - target: {fileID: 758673646730616367, guid: 1eabea1b4111acd449aec41eba28d58a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2476882757876158681, guid: 1eabea1b4111acd449aec41eba28d58a, type: 3}
-      propertyPath: actor
-      value: 
-      objectReference: {fileID: 11400000, guid: 59339952d8b17451b84d75135bd8217d, type: 2}
     - target: {fileID: 2923587810093096519, guid: 1eabea1b4111acd449aec41eba28d58a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.64
@@ -1004,24 +971,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3285149386285444070, guid: 1eabea1b4111acd449aec41eba28d58a, type: 3}
-      propertyPath: damage
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3285149386285444070, guid: 1eabea1b4111acd449aec41eba28d58a, type: 3}
-      propertyPath: actorName
-      value: FatBat
-      objectReference: {fileID: 0}
-    - target: {fileID: 3285149386285444070, guid: 1eabea1b4111acd449aec41eba28d58a, type: 3}
-      propertyPath: moveSpeed
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3285149386285444070, guid: 1eabea1b4111acd449aec41eba28d58a, type: 3}
-      propertyPath: attackRange
-      value: 3
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3285149386285444070, guid: 1eabea1b4111acd449aec41eba28d58a, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -53507,52 +53457,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton
       objectReference: {fileID: 0}
-    - target: {fileID: 4928228534917901041, guid: e927855a21151b84b91c7e9583679c23, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7935641793805506052, guid: e927855a21151b84b91c7e9583679c23, type: 3}
-      propertyPath: damage
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7935641793805506052, guid: e927855a21151b84b91c7e9583679c23, type: 3}
-      propertyPath: actorName
-      value: Skeleton
-      objectReference: {fileID: 0}
-    - target: {fileID: 7935641793805506052, guid: e927855a21151b84b91c7e9583679c23, type: 3}
-      propertyPath: moveSpeed
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7935641793805506052, guid: e927855a21151b84b91c7e9583679c23, type: 3}
-      propertyPath: attackRange
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8132735316152579534, guid: e927855a21151b84b91c7e9583679c23, type: 3}
-      propertyPath: actor
-      value: 
-      objectReference: {fileID: 11400000, guid: 852ac28c5ee124c0ab296bef8fb7184c, type: 2}
-    - target: {fileID: 8132735316152579534, guid: e927855a21151b84b91c7e9583679c23, type: 3}
-      propertyPath: attackCD
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8132735316152579534, guid: e927855a21151b84b91c7e9583679c23, type: 3}
-      propertyPath: maxMovePeriod
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8132735316152579534, guid: e927855a21151b84b91c7e9583679c23, type: 3}
-      propertyPath: maxStopPeriod
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8132735316152579534, guid: e927855a21151b84b91c7e9583679c23, type: 3}
-      propertyPath: minMovePeriod
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8132735316152579534, guid: e927855a21151b84b91c7e9583679c23, type: 3}
-      propertyPath: minStopPeriod
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7935641793805506052, guid: e927855a21151b84b91c7e9583679c23, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -53922,17 +53827,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3052135606880161706, guid: 1c06ca1406631944da3858e71d81651b, type: 3}
-      propertyPath: actor
-      value: 
-      objectReference: {fileID: 11400000, guid: 52a94e16a8d3e431db8209df8fdeab87, type: 2}
     - target: {fileID: 5640444739511689665, guid: 1c06ca1406631944da3858e71d81651b, type: 3}
       propertyPath: m_Name
       value: Wolf
-      objectReference: {fileID: 0}
-    - target: {fileID: 5640444739511689665, guid: 1c06ca1406631944da3858e71d81651b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6271610525284946468, guid: 1c06ca1406631944da3858e71d81651b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -53974,8 +53871,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3165651683272420161, guid: 1c06ca1406631944da3858e71d81651b, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -55868,6 +55764,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3034644213434563346, guid: 98ace3a7e2f7d894fbd09d390e488fb9, type: 3}
+      propertyPath: attackTargetLayer.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 5101954939185985587, guid: 98ace3a7e2f7d894fbd09d390e488fb9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.07

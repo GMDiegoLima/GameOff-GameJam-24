@@ -120,7 +120,7 @@ public class EnemyAIController : StateController
 	    // Now seek is just to keep the same velocity for 3 sec
 	}
 
-    public void Dead()
+    public override void Dead()
     {
         transform.tag = "DeadBody";
         anim.SetBool("Dead", true);

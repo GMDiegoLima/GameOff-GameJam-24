@@ -39,7 +39,6 @@ public abstract class StateController : MonoBehaviour
         currentState?.Enter();
     }
 
-    public virtual void Attack()
-    {
-    }
+    public abstract void Attack();
+    public abstract void Dead();
 }

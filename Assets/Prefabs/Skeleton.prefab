@@ -15,7 +15,8 @@ GameObject:
   - component: {fileID: 8487490053491993112}
   - component: {fileID: 6939554816727245810}
   - component: {fileID: 8132735316152579534}
-  m_Layer: 0
+  - component: {fileID: 2350636821554187055}
+  m_Layer: 7
   m_Name: Skeleton
   m_TagString: DeadBody
   m_Icon: {fileID: 0}
@@ -206,11 +207,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actor: {fileID: 11400000, guid: 852ac28c5ee124c0ab296bef8fb7184c, type: 2}
   velocity: {x: 0, y: 0}
-  minMovePeriod: 0
-  maxMovePeriod: 0
-  minStopPeriod: 0
-  maxStopPeriod: 0
-  attackCD: 0
+  minMovePeriod: 1
+  maxMovePeriod: 2
+  minStopPeriod: 1
+  maxStopPeriod: 2
+  attackCD: 3
   isMoving: 0
   movePeriodTimer: 0
   stopPeriodTimer: 0
@@ -218,6 +219,20 @@ MonoBehaviour:
   chaseSpeed: 0
   minVelocity: 0
   maxVelocity: 0
+--- !u!114 &2350636821554187055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4928228534917901041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 285373c530d924505b0e920b18a19779, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 0
+  currentHealth: 0
 --- !u!1001 &6739519533399903817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -229,6 +244,10 @@ PrefabInstance:
     - target: {fileID: 473531691185981149, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
       propertyPath: m_Name
       value: Eye
+      objectReference: {fileID: 0}
+    - target: {fileID: 473531691185981149, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1020663912763633245, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
       propertyPath: chaseViewSizeX
