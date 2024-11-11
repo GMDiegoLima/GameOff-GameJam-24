@@ -332,6 +332,11 @@
 				<Sound Name="sfx_obj_rock_pushing" ID="{080AB722-8DB3-42D7-930B-6798E5701BDB}" ShortID="640463222">
 					<PropertyList>
 						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>5</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">

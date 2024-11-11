@@ -25,6 +25,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="rock_push" ID="{5631B497-E4E9-48B5-AB5E-7F17CFB8C54F}">
+					<ChildrenList>
+						<Action Name="" ID="{A108D801-F8FC-439C-9EDD-34F852657F37}" ShortID="855579076">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_obj_rock_pushing" ID="{080AB722-8DB3-42D7-930B-6798E5701BDB}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

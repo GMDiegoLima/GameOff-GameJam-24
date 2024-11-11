@@ -38,7 +38,11 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 5f4f5e7b82a37845af9cc9a493363df5
     GuidInternal: 
+<<<<<<< Updated upstream
     m_lastTime: -8584702507100462125
+=======
+    m_lastTime: -8584702511696901984
+>>>>>>> Stashed changes
     List:
     - name: AmbianceMaster
       guid: 82382bb52095ac47bea0336993ea3ab1
@@ -271,7 +275,11 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 147542aa1fa9a344bad32b33b1da2794
     GuidInternal: 
+<<<<<<< Updated upstream
     m_lastTime: -8584702507096878325
+=======
+    m_lastTime: -8584702511696719150
+>>>>>>> Stashed changes
     List:
     - name: Main
       guid: 516653935762234ab927cec7323273dd
@@ -399,7 +407,11 @@ MonoBehaviour:
     ParentPath: Events\Sfx\Objects
     guid: 95d724611b757e49a6d0bffaed670749
     GuidInternal: 
+<<<<<<< Updated upstream
     m_lastTime: -8584702507102169062
+=======
+    m_lastTime: -8584702427596015468
+>>>>>>> Stashed changes
     List:
     - name: lever
       guid: 5eca40fcb05b5d4f85a7e821bfe318b2
@@ -439,6 +451,29 @@ MonoBehaviour:
         guid: 676453e608b1f842be633f089aa63950
       Path: Events\Sfx\Objects\plate
       maxAttenuation: 0
+<<<<<<< Updated upstream
+=======
+      maxDuration: 0.7966875
+      minDuration: 0.6513125
+    - name: rock_push
+      guid: 97b43156e9e4b548ab5e7f17cfb8c54f
+      id: 2827948781
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Sfx
+        ObjectType: 12
+        guid: a9a08c566b9bba4c93c7fb9940d85a50
+      - ElementName: Objects
+        ObjectType: 12
+        guid: 95d724611b757e49a6d0bffaed670749
+      - ElementName: rock_push
+        ObjectType: 3
+        guid: 97b43156e9e4b548ab5e7f17cfb8c54f
+      Path: Events\Sfx\Objects\rock_push
+      maxAttenuation: 0
+>>>>>>> Stashed changes
       maxDuration: -1
       minDuration: -1
   - PhysicalPath: Events\Player.wwu
@@ -455,7 +490,11 @@ MonoBehaviour:
     ParentPath: Events\Sfx\Player
     guid: 91e911cd66578b43a479c4169178acad
     GuidInternal: 
+<<<<<<< Updated upstream
     m_lastTime: -8584702507102089103
+=======
+    m_lastTime: -8584702511696953145
+>>>>>>> Stashed changes
     List:
     - name: footsteps
       guid: d31eeb442c97244ca5212e103fe21f9a
@@ -531,7 +570,11 @@ MonoBehaviour:
     ParentPath: Events\UI
     guid: e17c3b6f572bab48a6af326f7e59cebc
     GuidInternal: 
+<<<<<<< Updated upstream
     m_lastTime: -8584702507101999158
+=======
+    m_lastTime: -8584702511696952052
+>>>>>>> Stashed changes
     List:
     - name: evil_dialogue
       guid: cc32d3bb2ab4ae458915727ad712fc97
@@ -856,7 +899,11 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 5cc297846a0efe469836302b9e9b2cb5
     GuidInternal: 
+<<<<<<< Updated upstream
     m_lastTime: -8584702507096748395
+=======
+    m_lastTime: -8584702511696707119
+>>>>>>> Stashed changes
     List:
     - name: GroundTextures
       guid: b569fc3fed9d2243a28296f56107e31b
@@ -970,7 +1017,7 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584711280198707967
     List: []
-  ExpandedFileSystemItemIds: 0200000006000000090000000a0000000c0000000e00000015000000160000001d0000001e000000240000002b0000002c0000002e0000002f0000003100000032000000330000003400000036000000370000003f000000
+  ExpandedFileSystemItemIds: 0200000006000000090000000a0000000c0000000e0000001000000015000000160000001d0000001e000000240000002b0000002c0000002e0000002f0000003100000032000000330000003400000036000000370000003f000000
   ExpandedWaapiItemIds: 0300000006000000090000000a0000000c0000000e0000000f00000016000000240000002e0000002f00000036000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
