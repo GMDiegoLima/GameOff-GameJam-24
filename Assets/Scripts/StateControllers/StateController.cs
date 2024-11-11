@@ -1,5 +1,7 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D), typeof(Animator), typeof(SpriteRenderer))]
+[RequireComponent(typeof(Health))]
 public abstract class StateController : MonoBehaviour
 {
     public GameActor actor;
@@ -7,12 +9,15 @@ public abstract class StateController : MonoBehaviour
     protected Rigidbody2D body;
     protected Animator anim;
     protected SpriteRenderer sprite;
+    protected Health health;
 
     protected virtual void Awake()
     {
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
+        health = GetComponent<Health>();
+        health.maxHealth = actor.health;
 
         actor.controller = this;
     }
@@ -34,7 +39,6 @@ public abstract class StateController : MonoBehaviour
         currentState?.Enter();
     }
 
-    public virtual void Attack()
-    {
-    }
+    public abstract void Attack();
+    public abstract void Dead();
 }

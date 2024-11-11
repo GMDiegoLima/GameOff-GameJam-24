@@ -44,6 +44,10 @@ public class SeekState : IState
         {
             controller.TransitionToState(new PatrolState(controller));
         }
+        if (controller.IsActorDead())
+        {
+            controller.TransitionToState(new DeadState(controller));
+        }
     }
 
     public void DrawGizmos()

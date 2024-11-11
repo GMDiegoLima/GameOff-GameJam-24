@@ -16,5 +16,7 @@ MonoBehaviour:
   moveSpeed: 3
   damage: 1
   attackRange: 2
+  health: 3
+  canFlay: 0
   isControlledByAI: 0
   controller: {fileID: 0}

@@ -44,6 +44,10 @@ public class ChaseState : IState
         {
             controller.TransitionToState(new AttackState(controller));
         }
+        if (controller.IsActorDead())
+        {
+            controller.TransitionToState(new DeadState(controller));
+        }
     }
 
     public void DrawGizmos()

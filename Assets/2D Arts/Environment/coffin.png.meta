@@ -1,16 +1,25 @@
 fileFormatVersion: 2
-guid: be889fd9db375224c9d4e54275be9cde
+guid: 9322313c556f74cd6a057889de15cc3c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7405089765955968267
-    second: npc_platypus_walk_0
+      213: -213601592502135325
+    second: coffin_0
   - first:
-      213: -8386705620701832878
-    second: npc_platypus_walk_1
+      213: 4679728786752610250
+    second: coffin_1
   - first:
-      213: 2493558748297772606
-    second: npc_platypus_walk_2
+      213: -4928349905066675033
+    second: coffin_2
+  - first:
+      213: 407117943545423985
+    second: coffin_3
+  - first:
+      213: 1258154237437709528
+    second: coffin_4
+  - first:
+      213: 5149379722746566620
+    second: coffin_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -102,30 +111,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: npc_platypus_walk_0
+      name: coffin_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 47
-        width: 34
-        height: 17
+        x: 0
+        y: 0
+        width: 22
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5f2605a7716db3990800000000000000
-      internalID: -7405089765955968267
+      spriteID: 3e5d37bbb72290df0800000000000000
+      internalID: -213601592502135325
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: npc_platypus_walk_1
+      name: coffin_1
       rect:
         serializedVersion: 2
-        x: 15
-        y: 31
-        width: 34
-        height: 17
+        x: 32
+        y: 0
+        width: 23
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2599b423caf6c9b80800000000000000
-      internalID: -8386705620701832878
+      spriteID: acf1f8b898cb1f040800000000000000
+      internalID: 4679728786752610250
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: npc_platypus_walk_2
+      name: coffin_2
       rect:
         serializedVersion: 2
-        x: 15
-        y: 15
-        width: 33
-        height: 17
+        x: 61
+        y: 0
+        width: 23
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,8 +174,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e3e3bda5876ea9220800000000000000
-      internalID: 2493558748297772606
+      spriteID: 7a4bba37fdbfa9bb0800000000000000
+      internalID: -4928349905066675033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coffin_3
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 0
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17866b6dc9f56a500800000000000000
+      internalID: 407117943545423985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coffin_4
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 0
+        width: 35
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dc802bec9cd57110800000000000000
+      internalID: 1258154237437709528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coffin_5
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 0
+        width: 39
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd798e34395467740800000000000000
+      internalID: 5149379722746566620
       vertices: []
       indices: 
       edges: []
@@ -197,10 +259,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      npc_platypus_walk_0: -7405089765955968267
-      npc_platypus_walk_1: -8386705620701832878
-      npc_platypus_walk_2: 2493558748297772606
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

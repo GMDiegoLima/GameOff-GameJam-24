@@ -15,13 +15,14 @@ GameObject:
   - component: {fileID: 1608298449754829732}
   - component: {fileID: 3055231633068254372}
   - component: {fileID: 2476882757876158681}
-  m_Layer: 0
+  - component: {fileID: 5875732642804135389}
+  m_Layer: 7
   m_Name: FatBat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2923587810093096519
 Transform:
   m_ObjectHideFlags: 0
@@ -206,8 +207,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actor: {fileID: 11400000, guid: 59339952d8b17451b84d75135bd8217d, type: 2}
   velocity: {x: 0, y: 0}
-  minMovePeriod: 1
-  maxMovePeriod: 2
+  minMovePeriod: 0
+  maxMovePeriod: 20
   minStopPeriod: 1
   maxStopPeriod: 2
   attackCD: 2
@@ -218,6 +219,20 @@ MonoBehaviour:
   chaseSpeed: 3
   minVelocity: -3
   maxVelocity: 3
+--- !u!114 &5875732642804135389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758673646730616367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 285373c530d924505b0e920b18a19779, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 0
+  currentHealth: 0
 --- !u!1001 &592623029178608109
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -229,6 +244,10 @@ PrefabInstance:
     - target: {fileID: 473531691185981149, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
       propertyPath: m_Name
       value: Eye
+      objectReference: {fileID: 0}
+    - target: {fileID: 473531691185981149, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1020663912763633245, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
       propertyPath: chaseViewSizeX

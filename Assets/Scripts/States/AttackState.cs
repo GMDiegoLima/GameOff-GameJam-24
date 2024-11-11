@@ -14,6 +14,7 @@ public class AttackState : IState
         controller = anEnemyAIController;
 	}
 
+    // Player can also use this state
     public AttackState(PlayerStateController aPlayerStateController)
     {
         controller = aPlayerStateController;
@@ -49,7 +50,19 @@ public class AttackState : IState
             {
                 controller.TransitionToState(new SeekState(enemyAIController));
             }
+            if (enemyAIController.IsActorDead())
+            {
+                controller.TransitionToState(new DeadState(enemyAIController));
+			}
         }
+        else
+        { 
+            var playerStateController = (PlayerStateController)controller;
+            if (playerStateController.IsActorDead())
+            {
+                controller.TransitionToState(new DeadState(playerStateController));
+			}
+		}
     }
 
     public void DrawGizmos()

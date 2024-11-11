@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      npc_armadillo_walk_0: 6263358341822086411
+      npc_armadillo_walk_1: -6817305944234192107
+      npc_armadillo_walk_2: -7819536927607275066
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

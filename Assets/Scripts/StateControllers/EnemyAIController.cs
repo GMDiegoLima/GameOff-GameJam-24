@@ -21,6 +21,7 @@ public class EnemyAIController : StateController
     [SerializeField] private float maxVelocity;
 
     private FieldOfView view;
+
     private float movePeriod = 2f;
     private float stopPeriod = 2f;
     private bool isVelocityUpdated;
@@ -33,7 +34,7 @@ public class EnemyAIController : StateController
         chaseSpeed = actor.moveSpeed;
         minVelocity = -actor.moveSpeed;
         maxVelocity = actor.moveSpeed;
-        view = GetComponentInChildren<FieldOfView>();
+        view = GetComponentInChildren<FieldOfView>(); // Get from Eye
     }
 
     protected override void Start()
@@ -119,8 +120,14 @@ public class EnemyAIController : StateController
 	    // Now seek is just to keep the same velocity for 3 sec
 	}
 
-    // -------------- States --------------
+    public override void Dead()
+    {
+        transform.tag = "DeadBody";
+        anim.SetBool("Dead", true);
+        this.enabled = false;
+	}
 
+    // -------------- States --------------
 
     private void HandleAnim()
     { 
@@ -182,6 +189,11 @@ public class EnemyAIController : StateController
         }
 
     }
+
+    public bool IsActorDead()
+    {
+        return health.currentHealth <= 0;
+	}
 
     public bool IsTargetInSight()
     {

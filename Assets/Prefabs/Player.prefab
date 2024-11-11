@@ -181,7 +181,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 3.03125
+  orthographic size: 3.4903846
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -469,6 +469,37 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &6264644602355099936
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8366464045760755937}
+  m_Layer: 6
+  m_Name: Hold Position
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8366464045760755937
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6264644602355099936}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.269, y: -0.295, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5101954939185985587}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7502211404744608201
 GameObject:
   m_ObjectHideFlags: 0
@@ -590,6 +621,7 @@ GameObject:
   - component: {fileID: 5228655556956484796}
   - component: {fileID: 3034644213434563346}
   - component: {fileID: 3666151093451807533}
+  - component: {fileID: 7998022208340781655}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -612,6 +644,7 @@ Transform:
   m_Children:
   - {fileID: 2448286069880416546}
   - {fileID: 2659974134684787957}
+  - {fileID: 8366464045760755937}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7440261158151776843
@@ -785,6 +818,8 @@ MonoBehaviour:
   alive: 1
   flying: 0
   gameOver: {fileID: 1225693969533668786}
+  heldItem: {fileID: 0}
+  itemHoldPosition: {fileID: 8366464045760755937}
 --- !u!114 &5228655556956484796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -818,7 +853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 603b2a161a0a74e7d8e51d52f3304274, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actor: {fileID: 0}
+  actor: {fileID: 11400000, guid: 6d29fdb14380547579a4d5d05ed59e1d, type: 2}
   attackKey: 106
   attackCD: 1.5
   attackCDTimer: 0
@@ -835,10 +870,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCharacter: {fileID: 11400000, guid: 6d29fdb14380547579a4d5d05ed59e1d, type: 2}
+  ghost: {fileID: 11400000, guid: 181dfee4d8fbe4c3aac85235adfedeaf, type: 2}
   wolf: {fileID: 11400000, guid: 52a94e16a8d3e431db8209df8fdeab87, type: 2}
   fatBat: {fileID: 11400000, guid: 59339952d8b17451b84d75135bd8217d, type: 2}
   skeleton: {fileID: 11400000, guid: 852ac28c5ee124c0ab296bef8fb7184c, type: 2}
   goblin: {fileID: 11400000, guid: 91e3b40bd5e30453986c8367ea3161b0, type: 2}
+--- !u!114 &7998022208340781655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7772584563165250645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 285373c530d924505b0e920b18a19779, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 0
+  currentHealth: 0
 --- !u!1 &8465604308000546617
 GameObject:
   m_ObjectHideFlags: 0
