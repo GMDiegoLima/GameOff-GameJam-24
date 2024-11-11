@@ -111,6 +111,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -259,7 +272,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      npc_redpanda_walk_0: -8009179368928455277
+      npc_redpanda_walk_1: 1993619971487572156
+      npc_redpanda_walk_2: 1342381928799043978
+      npc_redpanda_walk_3: 7101040400389157969
+      npc_redpanda_walk_4: -6374002820889150419
+      npc_redpanda_walk_5: -5700982101091734563
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

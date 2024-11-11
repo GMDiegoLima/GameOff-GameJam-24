@@ -3,49 +3,55 @@ using UnityEngine.Events;
 using UnityEngine;
 using TMPro;
 
-public class PuzzleBalance : MonoBehaviour
+public class PuzzleBalanceTwo : MonoBehaviour
 {
     public PlayerController player;
+    public GameObject leftPlate;
+    public GameObject rightPlate;
     public TextMeshProUGUI addWeightText;
-    public GameObject plate;
-    public int correctweight;
     public int maxItems;
     public List<Transform> weightsPositions;
-    Vector3 plateOrigin;
+    Vector3 leftPlateOrigin;
+    Vector3 rightPlateOrigin;
     int holdingWeight;
     int checkWeight = 0;
     bool canAdd;
     GameObject item;
     Collider2D itemCollider;
-    List<int> weights = new List<int>();
+    List<int> leftWeights = new List<int>();
+    public int rightWeight;
     public UnityEvent onPuzzleSolved;
 
     void Start()
     {
-        plateOrigin = plate.transform.position;
+        leftPlateOrigin = leftPlate.transform.position;
+        rightPlateOrigin = rightPlate.transform.position;
     }
 
     void Update()
     {
         if (canAdd && Input.GetKeyDown("g"))
         {
-            if (weights.Count < maxItems)
+            if (leftWeights.Count < maxItems)
             {
-                weights.Add(holdingWeight);
+                leftWeights.Add(holdingWeight);
                 player.DropItem();
                 itemCollider.enabled = false;
-                item.transform.SetParent(weightsPositions[weights.Count - 1]);
-                item.transform.position = weightsPositions[weights.Count - 1].position;
-                Vector3 platePosition = plate.transform.position;
-                platePosition.y -= holdingWeight*0.01f;
-                plate.transform.position = platePosition;
+                item.transform.SetParent(weightsPositions[leftWeights.Count - 1]);
+                item.transform.position = weightsPositions[leftWeights.Count - 1].position;
+                Vector3 leftPlatePosition = leftPlate.transform.position;
+                Vector3 rightPlatePosition = rightPlate.transform.position;
+                leftPlatePosition.y -= holdingWeight*0.01f;
+                leftPlate.transform.position = leftPlatePosition;
+                rightPlatePosition.y += holdingWeight*0.01f;
+                rightPlate.transform.position = rightPlatePosition;
                 holdingWeight = 0;
                 checkWeight = 0;
-                foreach (int weight in weights)
+                foreach (int weight in leftWeights)
                 {
                     checkWeight += weight;
                 }
-                if (checkWeight == correctweight)
+                if (checkWeight == rightWeight)
                 {
                     Debug.Log("Puzzle solved");
                     onPuzzleSolved.Invoke();
@@ -55,15 +61,15 @@ public class PuzzleBalance : MonoBehaviour
             {
                 Debug.Log("Need to solve the puzzle using max of " + maxItems + " items");
             }
-            
         }
     }
 
     public void ResetBalance()
     {
-        weights.Clear();
+        leftWeights.Clear();
         checkWeight = 0;
-        plate.transform.position = plateOrigin;
+        leftPlate.transform.position = leftPlateOrigin;
+        rightPlate.transform.position = rightPlateOrigin;
         foreach (Transform weightPosition in weightsPositions)
         {
             foreach (Transform child in weightPosition)

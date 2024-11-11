@@ -5,6 +5,7 @@ public class WireConnection : MonoBehaviour
     public WireConnection straightWire;
     public WireRotation curvedWire;
     public bool enabled = false;
+    bool canBite;
     Animator animator;
 
     void Start()
@@ -25,6 +26,21 @@ public class WireConnection : MonoBehaviour
         {
             enabled = false;
             animator.SetBool("Enabled", false);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player") && other.GetComponent<PlayerController>().currentBody == PlayerController.Bodies.Wolf)
+        {
+            canBite = true;
+        }
+    }
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player") || other.GetComponent<PlayerController>().currentBody != PlayerController.Bodies.Wolf)
+        {
+            canBite = false;
         }
     }
 }
