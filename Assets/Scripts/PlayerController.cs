@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     public float speed;
     Rigidbody2D characterBody;
     Vector2 velocity;
-    Vector2 inputMovement;
+    Vector2 direction;
 
     Animator _animator;
     RuntimeAnimatorController originalAnimatorController;
@@ -59,17 +59,17 @@ public class PlayerController : MonoBehaviour
     {
         if (alive)
         {
-            inputMovement = new Vector2(
+            direction = new Vector2(
                 Input.GetAxisRaw("Horizontal"),
                 Input.GetAxisRaw("Vertical")
-                );
-            _animator.SetFloat("Horizontal", inputMovement.x);
-            _animator.SetFloat("Vertical", inputMovement.y);
+                ).normalized;
+            _animator.SetFloat("Horizontal", direction.x);
+            _animator.SetFloat("Vertical", direction.y);
 
-            if (inputMovement != Vector2.zero)
+            if (direction != Vector2.zero)
             {
-                _animator.SetFloat("LastHorizontal", inputMovement.x);
-                _animator.SetFloat("LastVertical", inputMovement.y);
+                _animator.SetFloat("LastHorizontal", direction.x);
+                _animator.SetFloat("LastVertical", direction.y);
             }
 
             if (isMovingToTarget)
@@ -134,7 +134,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             gameOver.SetActive(true);
-            inputMovement = new Vector2(0, 0);
+            direction = new Vector2(0, 0);
         }
     }
     void MoveToTarget()
@@ -243,7 +243,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector2 delta = inputMovement * velocity * Time.deltaTime;
+        Vector2 delta = direction * velocity * Time.deltaTime;
         Vector2 newPosition = characterBody.position + delta;
         characterBody.MovePosition(newPosition);
     }

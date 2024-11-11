@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 5f4f5e7b82a37845af9cc9a493363df5
     GuidInternal: 
-    m_lastTime: -8584702523269375207
+    m_lastTime: -8584702507100462125
     List:
     - name: AmbianceMaster
       guid: 82382bb52095ac47bea0336993ea3ab1
@@ -271,7 +271,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 147542aa1fa9a344bad32b33b1da2794
     GuidInternal: 
-    m_lastTime: -8584702520180287376
+    m_lastTime: -8584702507096878325
     List:
     - name: Main
       guid: 516653935762234ab927cec7323273dd
@@ -399,7 +399,7 @@ MonoBehaviour:
     ParentPath: Events\Sfx\Objects
     guid: 95d724611b757e49a6d0bffaed670749
     GuidInternal: 
-    m_lastTime: -8584702524856493107
+    m_lastTime: -8584702507102169062
     List:
     - name: lever
       guid: 5eca40fcb05b5d4f85a7e821bfe318b2
@@ -419,8 +419,8 @@ MonoBehaviour:
         guid: 5eca40fcb05b5d4f85a7e821bfe318b2
       Path: Events\Sfx\Objects\lever
       maxAttenuation: 0
-      maxDuration: 2.000625
-      minDuration: 2.000625
+      maxDuration: -1
+      minDuration: -1
     - name: plate
       guid: 676453e608b1f842be633f089aa63950
       id: 282449107
@@ -439,8 +439,8 @@ MonoBehaviour:
         guid: 676453e608b1f842be633f089aa63950
       Path: Events\Sfx\Objects\plate
       maxAttenuation: 0
-      maxDuration: 0.7966875
-      minDuration: 0.6513125
+      maxDuration: -1
+      minDuration: -1
   - PhysicalPath: Events\Player.wwu
     PathAndIcons:
     - ElementName: Events
@@ -455,7 +455,7 @@ MonoBehaviour:
     ParentPath: Events\Sfx\Player
     guid: 91e911cd66578b43a479c4169178acad
     GuidInternal: 
-    m_lastTime: -8584702529837629436
+    m_lastTime: -8584702507102089103
     List:
     - name: footsteps
       guid: d31eeb442c97244ca5212e103fe21f9a
@@ -475,8 +475,8 @@ MonoBehaviour:
         guid: d31eeb442c97244ca5212e103fe21f9a
       Path: Events\Sfx\Player\footsteps
       maxAttenuation: 0
-      maxDuration: 0.13360417
-      minDuration: 0.061020833
+      maxDuration: -1
+      minDuration: -1
   - PhysicalPath: Events\Sfx.wwu
     PathAndIcons:
     - ElementName: Events
@@ -531,7 +531,7 @@ MonoBehaviour:
     ParentPath: Events\UI
     guid: e17c3b6f572bab48a6af326f7e59cebc
     GuidInternal: 
-    m_lastTime: -8584702529411901582
+    m_lastTime: -8584702507101999158
     List:
     - name: evil_dialogue
       guid: cc32d3bb2ab4ae458915727ad712fc97
@@ -548,8 +548,8 @@ MonoBehaviour:
         guid: cc32d3bb2ab4ae458915727ad712fc97
       Path: Events\UI\evil_dialogue
       maxAttenuation: 0
-      maxDuration: 0.11425
-      minDuration: 0.11425
+      maxDuration: -1
+      minDuration: -1
     - name: menu_cursor_back
       guid: 3bcf4fbf83844945adfec09859851c3c
       id: 2485905105
@@ -565,8 +565,8 @@ MonoBehaviour:
         guid: 3bcf4fbf83844945adfec09859851c3c
       Path: Events\UI\menu_cursor_back
       maxAttenuation: 0
-      maxDuration: 0.79733336
-      minDuration: 0.79733336
+      maxDuration: -1
+      minDuration: -1
     - name: menu_cursor_move
       guid: 596ce4619790234ab2650000d087e02f
       id: 1306883239
@@ -582,8 +582,8 @@ MonoBehaviour:
         guid: 596ce4619790234ab2650000d087e02f
       Path: Events\UI\menu_cursor_move
       maxAttenuation: 0
-      maxDuration: 0.7389375
-      minDuration: 0.7389375
+      maxDuration: -1
+      minDuration: -1
     - name: menu_cursor_select
       guid: 12f90d306b8830409e13967bd9251991
       id: 3200708208
@@ -599,8 +599,8 @@ MonoBehaviour:
         guid: 12f90d306b8830409e13967bd9251991
       Path: Events\UI\menu_cursor_select
       maxAttenuation: 0
-      maxDuration: 0.792
-      minDuration: 0.792
+      maxDuration: -1
+      minDuration: -1
     - name: normal_dialogue
       guid: b5d85ed19014ac49b725db2c61b4040f
       id: 365141489
@@ -616,8 +616,8 @@ MonoBehaviour:
         guid: b5d85ed19014ac49b725db2c61b4040f
       Path: Events\UI\normal_dialogue
       maxAttenuation: 0
-      maxDuration: 0.11385417
-      minDuration: 0.11385417
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -856,7 +856,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 5cc297846a0efe469836302b9e9b2cb5
     GuidInternal: 
-    m_lastTime: -8584702529837583235
+    m_lastTime: -8584702507096748395
     List:
     - name: GroundTextures
       guid: b569fc3fed9d2243a28296f56107e31b
