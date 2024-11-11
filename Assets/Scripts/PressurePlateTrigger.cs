@@ -20,6 +20,7 @@ public class PressurePlateTrigger : MonoBehaviour
         if (other.CompareTag("Player") && !playerScript.flying || other.CompareTag("PressureTrigger"))
         {
             animator.SetBool("Activated", true);
+            AkSoundEngine.PostEvent("plate", gameObject);
             onActivate?.Invoke();
         }
     }

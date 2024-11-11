@@ -253,6 +253,7 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("PressureTrigger") && flying)
         {
             _animator.SetBool("Pushing", false);
+            AkSoundEngine.ExecuteActionOnEvent("rock_push", AkActionOnEventType.AkActionOnEventType_Stop, gameObject);
             Rigidbody2D rb_rock = other.gameObject.GetComponent<Rigidbody2D>();
             rb_rock.simulated = false;
         }
@@ -260,6 +261,7 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Pedra");
             _animator.SetBool("Pushing", true);
+            AkSoundEngine.PostEvent("rock_push", gameObject);
             Rigidbody2D rb_rock = other.gameObject.GetComponent<Rigidbody2D>();
             rb_rock.simulated = true;
         }
@@ -294,6 +296,7 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("PressureTrigger") && !flying)
         {
             _animator.SetBool("Pushing", false);
+            AkSoundEngine.ExecuteActionOnEvent("rock_push", AkActionOnEventType.AkActionOnEventType_Stop, gameObject);
         }
         if (other.CompareTag("Item"))
         {

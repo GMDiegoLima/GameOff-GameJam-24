@@ -26,11 +26,13 @@ public class LeverSequence : MonoBehaviour
             if (activated)
             {
                 animator.SetBool("Activated", true);
+                AkSoundEngine.PostEvent("lever", gameObject);
                 sequencePuzzle.RegisterActivation(leverName);
             }
             else
             {
                 animator.SetBool("Activated", false);
+                AkSoundEngine.PostEvent("lever", gameObject);
                 sequencePuzzle.RemoveItem(leverName);
             }
         }

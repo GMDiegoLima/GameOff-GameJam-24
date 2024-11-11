@@ -17,7 +17,7 @@ public class Hole : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && !playerScript.flying)
+        if (other.CompareTag("Player"))
         {
             Invoke("gameOver", 0.1f);
         }
