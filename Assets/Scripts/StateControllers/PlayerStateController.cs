@@ -11,11 +11,7 @@ public class PlayerStateController : StateController
     protected override void Update()
     {
         base.Update();
-        attackCDTimer += Time.deltaTime;
-        if (Input.GetKeyDown(attackKey) && attackCDTimer >= attackCD)
-        {
-            Attack();
-        }
+        HandleAttack();
     }
 
     public void RemoveCurrentActor()
@@ -27,6 +23,15 @@ public class PlayerStateController : StateController
     {
         actor.controller = this;
     }
+
+    private void HandleAttack()
+    { 
+        attackCDTimer += Time.deltaTime;
+        if (Input.GetKeyDown(attackKey) && attackCDTimer >= attackCD)
+        {
+            Attack();
+        }
+	}
 
     public override void Attack()
     {

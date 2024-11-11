@@ -1,0 +1,42 @@
+using UnityEngine;
+
+public class DeadState : IState 
+{
+    private string name;
+    private Color gizmoColor = Color.red;
+    public string Name { get => name; set => name = value; }
+    public Color GizmoColor { get => gizmoColor; set => gizmoColor = value; }
+
+    private EnemyAIController controller;
+
+    public DeadState(EnemyAIController anEnemyAIController)
+    {
+        controller = anEnemyAIController;
+    }
+
+    public void Enter()
+    {
+        Debug.Log(controller.actor.actorName + " Enter Dead State");
+    }
+
+    public void Update()
+    {
+        controller.Dead();
+        //CheckTransition();
+    }
+
+    public void Exit()
+    {
+        Debug.Log(controller.actor.actorName + " Exit Dead State");
+    }
+
+
+    public void CheckTransition()
+    {
+        // No transition to other state after dead
+    }
+
+    public void DrawGizmos()
+    {
+    }
+}

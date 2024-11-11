@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      npc_frog_walk_0: -7191204902524808709
+      npc_frog_walk_1: -1090412553387462962
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

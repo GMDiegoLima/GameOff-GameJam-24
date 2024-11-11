@@ -37,6 +37,10 @@ public class PatrolState : IState
         {
             controller.TransitionToState(new ChaseState(controller, controller.GetTargetTransform()));
         }
+        if (controller.IsActorDead())
+        {
+            controller.TransitionToState(new DeadState(controller));
+        }
     }
 
     public void DrawGizmos()

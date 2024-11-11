@@ -16,6 +16,7 @@ public class GameActor : ScriptableObject
     public float moveSpeed;
     public float damage;
     public float attackRange;
+    public float health;
     public bool canFlay;
 
     [HideInInspector] public bool isControlledByAI; // Setup by EnemyAIController
