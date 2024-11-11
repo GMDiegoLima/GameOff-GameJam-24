@@ -15,9 +15,13 @@ State	ID	Name	State Group			Notes
 	2909291642	Stealth	PlayerStatus			
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
-	2033911932	NpcMaster			\Default Work Unit\Master Audio Bus\NpcMaster	
+	1436777591	AmbianceMaster			\Default Work Unit\Master Audio Bus\EnvironmentMaster\AmbianceMaster	
+	1557941045	Characters			\Default Work Unit\Master Audio Bus\Characters	
+	1992125169	UiMaster			\Default Work Unit\Master Audio Bus\UiMaster	
+	2033911932	NpcMaster			\Default Work Unit\Master Audio Bus\Characters\NpcMaster	
+	3123271961	ObjectsMaster			\Default Work Unit\Master Audio Bus\EnvironmentMaster\ObjectsMaster	
 	3199789248	MusicMaster			\Default Work Unit\Master Audio Bus\MusicMaster	
-	3538689948	PlayerMaster			\Default Work Unit\Master Audio Bus\PlayerMaster	
+	3538689948	PlayerMaster			\Default Work Unit\Master Audio Bus\Characters\PlayerMaster	
 	3802034858	EnvironmentMaster			\Default Work Unit\Master Audio Bus\EnvironmentMaster	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 

@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{6124D795-751B-497E-A6D0-BFFAED670749}" SchemaVersion="119" RootDocumentID="{568CA0A9-9B6B-4CBA-93C7-FB9940D85A50}" ParentDocumentID="{568CA0A9-9B6B-4CBA-93C7-FB9940D85A50}">
 	<Events>
-		<WorkUnit Name="Objects" ID="{6124D795-751B-497E-A6D0-BFFAED670749}" OwnerID="{568CA0A9-9B6B-4CBA-93C7-FB9940D85A50}" PersistMode="Nested"/>
+		<WorkUnit Name="Objects" ID="{6124D795-751B-497E-A6D0-BFFAED670749}" OwnerID="{568CA0A9-9B6B-4CBA-93C7-FB9940D85A50}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="lever" ID="{FC40CA5E-5BB0-4F5D-85A7-E821BFE318B2}">
+					<ChildrenList>
+						<Action Name="" ID="{E9B55EC4-E0DD-4C3C-A399-070AC06C45BC}" ShortID="66597893">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_obj_lever" ID="{BBF2E0A1-A4DA-4189-BBDB-9AC04AB254BA}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="plate" ID="{E6536467-B108-42F8-BE63-3F089AA63950}">
+					<ChildrenList>
+						<Action Name="" ID="{FF914C05-03CA-49CE-A107-115B51DED115}" ShortID="541925106">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="plate_on_off" ID="{B86C7ECB-FC4C-49E1-B5C6-01E69D141B33}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

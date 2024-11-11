@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: f059ccdab8a9cb488fc779e69f905b3e
     GuidInternal: 
-    m_lastTime: -8584711299244560549
+    m_lastTime: -8584711280198698041
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,8 +38,45 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 5f4f5e7b82a37845af9cc9a493363df5
     GuidInternal: 
-    m_lastTime: -8584706101945181204
+    m_lastTime: -8584702523269375207
     List:
+    - name: AmbianceMaster
+      guid: 82382bb52095ac47bea0336993ea3ab1
+      id: 1436777591
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5f4f5e7b82a37845af9cc9a493363df5
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: EnvironmentMaster
+        ObjectType: 2
+        guid: 8229b6627f297249a18c953007655576
+      - ElementName: AmbianceMaster
+        ObjectType: 2
+        guid: 82382bb52095ac47bea0336993ea3ab1
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\EnvironmentMaster\AmbianceMaster
+    - name: Characters
+      guid: b80f7cc7378251458cdfe03d11b926f3
+      id: 1557941045
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5f4f5e7b82a37845af9cc9a493363df5
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Characters
+        ObjectType: 2
+        guid: b80f7cc7378251458cdfe03d11b926f3
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Characters
     - name: Dungeon
       guid: 084f5979b9470045b53cc122672d579c
       id: 608898761
@@ -121,10 +158,33 @@ MonoBehaviour:
       - ElementName: Master Audio Bus
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Characters
+        ObjectType: 2
+        guid: b80f7cc7378251458cdfe03d11b926f3
       - ElementName: NpcMaster
         ObjectType: 2
         guid: e81578f8e22dc8429916e488ec4512cf
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\NpcMaster
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Characters\NpcMaster
+    - name: ObjectsMaster
+      guid: c90a888689a84e41baba0bce2dc658c8
+      id: 3123271961
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5f4f5e7b82a37845af9cc9a493363df5
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: EnvironmentMaster
+        ObjectType: 2
+        guid: 8229b6627f297249a18c953007655576
+      - ElementName: ObjectsMaster
+        ObjectType: 2
+        guid: c90a888689a84e41baba0bce2dc658c8
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\EnvironmentMaster\ObjectsMaster
     - name: Overworld
       guid: 3dca95532359d249a16292a12e6c579f
       id: 1562068129
@@ -158,10 +218,13 @@ MonoBehaviour:
       - ElementName: Master Audio Bus
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Characters
+        ObjectType: 2
+        guid: b80f7cc7378251458cdfe03d11b926f3
       - ElementName: PlayerMaster
         ObjectType: 2
         guid: 93801ad0832a284ab6f49acbe895e3e2
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PlayerMaster
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Characters\PlayerMaster
     - name: Reverbs
       guid: f3146bb68e59ef4f9e0babaf86482d47
       id: 3545700988
@@ -179,6 +242,23 @@ MonoBehaviour:
         ObjectType: 1
         guid: f3146bb68e59ef4f9e0babaf86482d47
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs
+    - name: UiMaster
+      guid: 553c934b10c47b43bcc9a94593e5e356
+      id: 1992125169
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5f4f5e7b82a37845af9cc9a493363df5
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: UiMaster
+        ObjectType: 2
+        guid: 553c934b10c47b43bcc9a94593e5e356
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\UiMaster
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -191,7 +271,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 147542aa1fa9a344bad32b33b1da2794
     GuidInternal: 
-    m_lastTime: -8584706101945071244
+    m_lastTime: -8584702520180287376
     List:
     - name: Main
       guid: 516653935762234ab927cec7323273dd
@@ -319,8 +399,48 @@ MonoBehaviour:
     ParentPath: Events\Sfx\Objects
     guid: 95d724611b757e49a6d0bffaed670749
     GuidInternal: 
-    m_lastTime: -8584706101947501214
-    List: []
+    m_lastTime: -8584702524856493107
+    List:
+    - name: lever
+      guid: 5eca40fcb05b5d4f85a7e821bfe318b2
+      id: 2782712987
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Sfx
+        ObjectType: 12
+        guid: a9a08c566b9bba4c93c7fb9940d85a50
+      - ElementName: Objects
+        ObjectType: 12
+        guid: 95d724611b757e49a6d0bffaed670749
+      - ElementName: lever
+        ObjectType: 3
+        guid: 5eca40fcb05b5d4f85a7e821bfe318b2
+      Path: Events\Sfx\Objects\lever
+      maxAttenuation: 0
+      maxDuration: 2.000625
+      minDuration: 2.000625
+    - name: plate
+      guid: 676453e608b1f842be633f089aa63950
+      id: 282449107
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Sfx
+        ObjectType: 12
+        guid: a9a08c566b9bba4c93c7fb9940d85a50
+      - ElementName: Objects
+        ObjectType: 12
+        guid: 95d724611b757e49a6d0bffaed670749
+      - ElementName: plate
+        ObjectType: 3
+        guid: 676453e608b1f842be633f089aa63950
+      Path: Events\Sfx\Objects\plate
+      maxAttenuation: 0
+      maxDuration: 0.7966875
+      minDuration: 0.6513125
   - PhysicalPath: Events\Player.wwu
     PathAndIcons:
     - ElementName: Events
@@ -335,8 +455,28 @@ MonoBehaviour:
     ParentPath: Events\Sfx\Player
     guid: 91e911cd66578b43a479c4169178acad
     GuidInternal: 
-    m_lastTime: -8584706101947441299
-    List: []
+    m_lastTime: -8584702529837629436
+    List:
+    - name: footsteps
+      guid: d31eeb442c97244ca5212e103fe21f9a
+      id: 2385628198
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Sfx
+        ObjectType: 12
+        guid: a9a08c566b9bba4c93c7fb9940d85a50
+      - ElementName: Player
+        ObjectType: 12
+        guid: 91e911cd66578b43a479c4169178acad
+      - ElementName: footsteps
+        ObjectType: 3
+        guid: d31eeb442c97244ca5212e103fe21f9a
+      Path: Events\Sfx\Player\footsteps
+      maxAttenuation: 0
+      maxDuration: 0.13360417
+      minDuration: 0.061020833
   - PhysicalPath: Events\Sfx.wwu
     PathAndIcons:
     - ElementName: Events
@@ -391,8 +531,93 @@ MonoBehaviour:
     ParentPath: Events\UI
     guid: e17c3b6f572bab48a6af326f7e59cebc
     GuidInternal: 
-    m_lastTime: -8584706101947293041
-    List: []
+    m_lastTime: -8584702529411901582
+    List:
+    - name: evil_dialogue
+      guid: cc32d3bb2ab4ae458915727ad712fc97
+      id: 1316490268
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: UI
+        ObjectType: 12
+        guid: e17c3b6f572bab48a6af326f7e59cebc
+      - ElementName: evil_dialogue
+        ObjectType: 3
+        guid: cc32d3bb2ab4ae458915727ad712fc97
+      Path: Events\UI\evil_dialogue
+      maxAttenuation: 0
+      maxDuration: 0.11425
+      minDuration: 0.11425
+    - name: menu_cursor_back
+      guid: 3bcf4fbf83844945adfec09859851c3c
+      id: 2485905105
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: UI
+        ObjectType: 12
+        guid: e17c3b6f572bab48a6af326f7e59cebc
+      - ElementName: menu_cursor_back
+        ObjectType: 3
+        guid: 3bcf4fbf83844945adfec09859851c3c
+      Path: Events\UI\menu_cursor_back
+      maxAttenuation: 0
+      maxDuration: 0.79733336
+      minDuration: 0.79733336
+    - name: menu_cursor_move
+      guid: 596ce4619790234ab2650000d087e02f
+      id: 1306883239
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: UI
+        ObjectType: 12
+        guid: e17c3b6f572bab48a6af326f7e59cebc
+      - ElementName: menu_cursor_move
+        ObjectType: 3
+        guid: 596ce4619790234ab2650000d087e02f
+      Path: Events\UI\menu_cursor_move
+      maxAttenuation: 0
+      maxDuration: 0.7389375
+      minDuration: 0.7389375
+    - name: menu_cursor_select
+      guid: 12f90d306b8830409e13967bd9251991
+      id: 3200708208
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: UI
+        ObjectType: 12
+        guid: e17c3b6f572bab48a6af326f7e59cebc
+      - ElementName: menu_cursor_select
+        ObjectType: 3
+        guid: 12f90d306b8830409e13967bd9251991
+      Path: Events\UI\menu_cursor_select
+      maxAttenuation: 0
+      maxDuration: 0.792
+      minDuration: 0.792
+    - name: normal_dialogue
+      guid: b5d85ed19014ac49b725db2c61b4040f
+      id: 365141489
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: UI
+        ObjectType: 12
+        guid: e17c3b6f572bab48a6af326f7e59cebc
+      - ElementName: normal_dialogue
+        ObjectType: 3
+        guid: b5d85ed19014ac49b725db2c61b4040f
+      Path: Events\UI\normal_dialogue
+      maxAttenuation: 0
+      maxDuration: 0.11385417
+      minDuration: 0.11385417
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -405,7 +630,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 0533b2126855c3498ab62c34ebefeb20
     GuidInternal: 
-    m_lastTime: -8584711299256563915
+    m_lastTime: -8584711280209491901
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -631,7 +856,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 5cc297846a0efe469836302b9e9b2cb5
     GuidInternal: 
-    m_lastTime: -8584706101944926042
+    m_lastTime: -8584702529837583235
     List:
     - name: GroundTextures
       guid: b569fc3fed9d2243a28296f56107e31b
@@ -696,6 +921,22 @@ MonoBehaviour:
         - ElementName: stone
           ObjectType: 10
           guid: 8c5c85c2a3294344a070303bdd153154
+      - name: tile
+        guid: 6509d8a84e19eb4bb2ebbd5f8e0931f2
+        id: 2637588553
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 5cc297846a0efe469836302b9e9b2cb5
+        - ElementName: GroundTextures
+          ObjectType: 11
+          guid: b569fc3fed9d2243a28296f56107e31b
+        - ElementName: tile
+          ObjectType: 10
+          guid: 6509d8a84e19eb4bb2ebbd5f8e0931f2
       - name: water
         guid: 14056ee44d676a4e910f904e86ac3e38
         id: 2654748154
@@ -712,22 +953,6 @@ MonoBehaviour:
         - ElementName: water
           ObjectType: 10
           guid: 14056ee44d676a4e910f904e86ac3e38
-      - name: wood
-        guid: 6509d8a84e19eb4bb2ebbd5f8e0931f2
-        id: 2058049674
-        PathAndIcons:
-        - ElementName: Switches
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 5cc297846a0efe469836302b9e9b2cb5
-        - ElementName: GroundTextures
-          ObjectType: 11
-          guid: b569fc3fed9d2243a28296f56107e31b
-        - ElementName: wood
-          ObjectType: 10
-          guid: 6509d8a84e19eb4bb2ebbd5f8e0931f2
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
@@ -743,10 +968,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: e7f4d602c8fed14aa82827ae83c24654
     GuidInternal: 
-    m_lastTime: -8584711299244580735
+    m_lastTime: -8584711280198707967
     List: []
-  ExpandedFileSystemItemIds: 03000000090000000a0000000e0000000f00000016000000240000002e0000002f00000036000000
-  ExpandedWaapiItemIds: 090000000a0000002e0000002f00000036000000
+  ExpandedFileSystemItemIds: 0200000006000000090000000a0000000c0000000e00000015000000160000001d0000001e000000240000002b0000002c0000002e0000002f0000003100000032000000330000003400000036000000370000003f000000
+  ExpandedWaapiItemIds: 0300000006000000090000000a0000000c0000000e0000000f00000016000000240000002e0000002f00000036000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 1
