@@ -94,7 +94,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{18BCDD05-CB5F-5795-AE96-625F3BEF6321}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{C2466F34-14C4-D8FA-A108-433173D856FB}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -113,6 +113,10 @@
 				<File Id="138217890" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_footsteps_parquet_var_02.wav</ShortName>
 					<CachePath>SFX/sfx_footsteps_parquet_var_02_F06BAF76.wem</CachePath>
+				</File>
+				<File Id="221138627" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_obj_rock_pushing.wav</ShortName>
+					<CachePath>SFX/sfx_obj_rock_pushing_8EC3C7C0.wem</CachePath>
 				</File>
 				<File Id="225222591" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ui_move_var_01.wav</ShortName>
@@ -240,6 +244,11 @@
 						<MediaRef Id="858639589"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2827948781" Name="rock_push" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="221138627"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 			<SwitchGroups>
 				<SwitchGroup Id="478119480" Name="GroundTextures">
@@ -262,5 +271,5 @@
 			<Path>Music.bnk</Path>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{3DED40DB-7598-02D1-790D-68FF43A0E20F}</FileHash>
+	<FileHash>{1A672628-ECDA-CFF1-2F67-B7C83005F340}</FileHash>
 </SoundBanksInfo>
