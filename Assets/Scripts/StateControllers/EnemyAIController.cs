@@ -41,6 +41,7 @@ public class EnemyAIController : StateController
     {
         actor.isControlledByAI = true;
         currentState = new PatrolState(this);
+        UpdateScanAngle();
     }
 
     private void FixedUpdate()
@@ -112,7 +113,8 @@ public class EnemyAIController : StateController
     {
         if (!isMoving) isMoving = true;
         velocity = chaseSpeed * (aTarget.position - transform.position).normalized;
-        view.transform.localPosition = Vector2.zero; // set the boxcast to be in the center and cast outward
+        Vector3 playerDir = aTarget.position - transform.position;
+        view.transform.rotation = Quaternion.Euler(playerDir);
     }
 
     public void Seek() 
@@ -162,32 +164,29 @@ public class EnemyAIController : StateController
 
     private void UpdateScanAngle()
     {
-        // It's actually changing the position and rotation of Eye transform
-        // The boxcast is always cast up
+        // It's actually changing the rotation of Eye transform
+        // The Raycast always cast up
         float x = velocity.x;
         float y = velocity.y;
         float angle = Mathf.Atan2(y, x) * Mathf.Rad2Deg;
-        if (angle > -45 && angle < 45)
+        if (angle > -45 && angle < 45) // facing right
+        {
+            view.transform.rotation = Quaternion.Euler(0, 0, 270);
+        }
+        else if (angle > -135 && angle < -45) // facing down
         {
             view.transform.rotation = Quaternion.Euler(0, 0, 180);
-            view.transform.localPosition = new Vector2(view.sizeX * 0.5f, 0);
         }
-        else if (angle > -135 && angle < -45)
+        else if (angle < -135 || angle > 135) // facing left
         {
-            view.transform.rotation = Quaternion.Euler(0, 0, 180);
-            view.transform.localPosition = new Vector2(0, 0);
+            view.transform.rotation = Quaternion.Euler(0, 0, 90);
         }
-        else if (angle < -135 || angle > 135)
-        {
-            view.transform.rotation = Quaternion.Euler(0, 0, 180);
-            view.transform.localPosition = new Vector2(-view.sizeX * 0.5f, 0);
-        }
-        else
+        else // facing up
         {
             view.transform.rotation = Quaternion.Euler(0, 0, 0);
-            view.transform.localPosition = new Vector2(0, 0);
         }
-
+        view.right45 = (view.transform.up + view.transform.right).normalized;
+        view.left45 = (view.transform.up - view.transform.right).normalized;
     }
 
     public bool IsActorDead()
@@ -207,16 +206,14 @@ public class EnemyAIController : StateController
 
     public void ChangeToPatrolView()
     {
-        view.sizeX = view.patrolViewSizeX;
-        view.sizeY = view.patrolViewSizeY;
         view.scanDistance = view.patrolViewDistance;
+        view.isChasing = false;
     }
 
     public void ChangeToChaseView()
     {
-        view.sizeX = view.chaseViewSizeX;
-        view.sizeY = view.chaseViewSizeY;
-        view.scanDistance = 0;
+        view.scanDistance = view.chaseViewDistance;
+        view.isChasing = true;
     }
 
     public void SetViewGizmoColor(Color aColor)

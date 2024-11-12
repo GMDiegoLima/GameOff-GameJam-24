@@ -6,8 +6,8 @@ using TMPro;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private KeyCode embodyKey;
-    [SerializeField] private PlayerStateController playerStateController;
-    [SerializeField] private GameActorSOHolder gameActorSOHolder;
+    private PlayerStateController playerStateController;
+    private GameActorSOHolder gameActorSOHolder;
 
     public float speed;
     Rigidbody2D characterBody;

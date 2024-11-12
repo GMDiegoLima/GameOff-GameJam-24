@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6862298743724003880}
   - component: {fileID: 5941055443064172931}
   - component: {fileID: 2826652023372049870}
+  - component: {fileID: 1689085764033945485}
   - component: {fileID: 4587860536581880562}
   - component: {fileID: 3052135606880161706}
   - component: {fileID: 3093141061861664081}
@@ -179,6 +180,43 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!70 &1689085764033945485
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5640444739511689665}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.0071382523, y: -0.028553605}
+  m_Size: {x: 0.58597183, y: 0.7715709}
+  m_Direction: 0
 --- !u!114 &4587860536581880562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,17 +246,17 @@ MonoBehaviour:
   actor: {fileID: 11400000, guid: 52a94e16a8d3e431db8209df8fdeab87, type: 2}
   velocity: {x: 0, y: 0}
   minMovePeriod: 1
-  maxMovePeriod: 2
-  minStopPeriod: 1
-  maxStopPeriod: 3
+  maxMovePeriod: 1
+  minStopPeriod: 3
+  maxStopPeriod: 5
   attackCD: 1.5
   isMoving: 0
   movePeriodTimer: 0
   stopPeriodTimer: 0
   attackCDTimer: 0
-  chaseSpeed: 3
-  minVelocity: -3
-  maxVelocity: 3
+  chaseSpeed: 1
+  minVelocity: -1
+  maxVelocity: 1
 --- !u!114 &3093141061861664081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,12 +304,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1020663912763633245, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
+      propertyPath: chaseViewDistance
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1020663912763633245, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
       propertyPath: patrolViewDistance
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1020663912763633245, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
       propertyPath: targetLayer.m_Bits
       value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1020663912763633245, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
+      propertyPath: enemyViewLayer.m_Bits
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 6029557757394872174, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
       propertyPath: m_LocalPosition.x
