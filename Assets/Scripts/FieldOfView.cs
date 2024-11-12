@@ -3,44 +3,84 @@ using UnityEngine;
 public class FieldOfView : MonoBehaviour
 {
     public bool isTargetInSight;
-    public LayerMask targetLayer;
+    public LayerMask enemyViewLayer;
     public Color gizmoColor;
+
+    private RaycastHit2D hit;
     [HideInInspector] public Transform targetTransform;
 
-    [HideInInspector] public float sizeX;
-    [HideInInspector] public float sizeY;
+    [HideInInspector] public float scanAngle;
     [HideInInspector] public float scanDistance;
 
-    [Header("Patrol Range")]
-    public float patrolViewSizeX;
-    public float patrolViewSizeY; // Normally just set to 1 
     public float patrolViewDistance;
+    public float chaseViewDistance;
 
-    [Header("Chase Range (From Center)")]
-    public float chaseViewSizeX;
-    public float chaseViewSizeY;
+    [HideInInspector] public bool isChasing;
 
+    [HideInInspector] public Vector3 right45;
+    [HideInInspector] public Vector3 left45;
     private void Start()
     {
-        sizeX = patrolViewSizeX;
-        sizeY = patrolViewSizeY;
         scanDistance = patrolViewDistance;
     }
 
     private void Update()
     {
-        RaycastHit2D hit = Physics2D.BoxCast(transform.position, new Vector2(sizeX, sizeY), 0, transform.up,
-                                             scanDistance, targetLayer);
-        isTargetInSight = hit;
-        targetTransform = hit.transform;
+        //int numHit = Physics2D.BoxCast(transform.position, new Vector2(sizeX, sizeY), 0, transform.up,
+        //                                     filter, hitResults, scanDistance);
+
+        hit = Physics2D.Raycast(transform.position, transform.up, scanDistance, enemyViewLayer);
+        if (hit && hit.transform.CompareTag("Player"))
+        {
+            isTargetInSight = hit;
+            targetTransform = hit.transform;
+        }
+        else 
+		{
+            isTargetInSight = false;
+            targetTransform = null;
+		}
+        HandleScan();
     }
+
+    private void HandleScan()
+    {
+        if (!isChasing) PatrolScan();
+        else ChaseScan();
+	}
+
+    private void PatrolScan()
+    {
+        // Scan 90 degrees
+        if (Quaternion.Angle(Quaternion.Euler(transform.up), Quaternion.Euler(left45)) <= 0.01f)
+        {
+            transform.Rotate(0, 0, -90);
+            return;
+		}
+        else
+        {
+            transform.Rotate(0, 0, 90 * 5 * Time.deltaTime); // scan 90 degree 5 times in one sec
+        }
+    }
+
+    private void ChaseScan()
+    {
+        // Scan 360 degrees
+        transform.Rotate(0, 0, 360 * 5 * Time.deltaTime); // scan 360 degree 5 times in one sec
+    }
+
 
     private void OnDrawGizmos()
     {
         if (!Application.isPlaying) return;
         Gizmos.color = gizmoColor;
-        Gizmos.DrawWireCube(transform.position + transform.up * (scanDistance / 2),
-                            transform.parent.localScale * new Vector2(sizeX, sizeY * scanDistance + sizeY));
-        //Gizmos.DrawRay(transform.position, transform.up.normalized * scanDistance);
+        Gizmos.DrawRay(transform.position, transform.up * scanDistance);
+        if (!isChasing)
+        {
+            Gizmos.color = Color.blue;
+            Gizmos.DrawRay(transform.position, left45 * scanDistance);
+            Gizmos.color = Color.red;
+            Gizmos.DrawRay(transform.position, right45 * scanDistance);
+        }
     }
 }

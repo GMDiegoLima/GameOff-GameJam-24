@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2359627699557903470}
   - component: {fileID: 7480179284409898477}
   - component: {fileID: 3980325356498231047}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: CinemachineCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 7115343983619327914}
   - component: {fileID: 8783473457304808022}
   - component: {fileID: 49192808312748465}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -181,7 +181,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 3.4903846
+  orthographic size: 3.4375
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -344,7 +344,7 @@ GameObject:
   - component: {fileID: 7887783547697656936}
   - component: {fileID: 7847232799316828564}
   - component: {fileID: 4970293005761325284}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: gamover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -478,7 +478,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8366464045760755937}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Hold Position
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -512,7 +512,7 @@ GameObject:
   - component: {fileID: 2273023511887152494}
   - component: {fileID: 999823318562859492}
   - component: {fileID: 715530624875133289}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -622,7 +622,7 @@ GameObject:
   - component: {fileID: 3034644213434563346}
   - component: {fileID: 3666151093451807533}
   - component: {fileID: 7998022208340781655}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -856,6 +856,9 @@ MonoBehaviour:
   actor: {fileID: 11400000, guid: 6d29fdb14380547579a4d5d05ed59e1d, type: 2}
   attackKey: 106
   attackCD: 1.5
+  attackTargetLayer:
+    serializedVersion: 2
+    m_Bits: 128
   attackCDTimer: 0
 --- !u!114 &3666151093451807533
 MonoBehaviour:
@@ -901,13 +904,13 @@ GameObject:
   - component: {fileID: 8891628325161712344}
   - component: {fileID: 5767548726198288705}
   - component: {fileID: 7583460453320916127}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: BlackoutPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7436706657864203591
 RectTransform:
   m_ObjectHideFlags: 0
@@ -917,7 +920,7 @@ RectTransform:
   m_GameObject: {fileID: 8465604308000546617}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5139532317743366531}
@@ -993,7 +996,7 @@ GameObject:
   - component: {fileID: 8351416515631205686}
   - component: {fileID: 1449415371116162710}
   - component: {fileID: 428538844500421307}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: embody text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
