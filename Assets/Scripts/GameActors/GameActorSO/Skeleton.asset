@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Skeleton
   m_EditorClassIdentifier: 
   actorName: Skeleton
+  actorType: 4
   moveSpeed: 2
   damage: 1
   attackRange: 1

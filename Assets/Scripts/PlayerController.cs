@@ -167,28 +167,18 @@ public class PlayerController : MonoBehaviour
         switch (currentBody)
         {
             case Bodies.Main:
-                //speed = 5f;
-                //flying = false;
                 playerStateController.actor = gameActorSOHolder.mainCharacter;
                 break;
             case Bodies.Wolf:
-                //speed = 6f;
-                //flying = false;
                 playerStateController.actor = gameActorSOHolder.wolf;
                 break;
             case Bodies.FatBat:
-                //speed = 4f;
-                //flying = true;
                 playerStateController.actor = gameActorSOHolder.fatBat;
                 break;
             case Bodies.Goblin:
-                //speed = 5.5f;
-                //flying = false;
                 playerStateController.actor = gameActorSOHolder.goblin;
                 break;
             case Bodies.Skeleton:
-                //speed = 3f;
-                //flying = false;
                 playerStateController.actor = gameActorSOHolder.skeleton;
                 break;
         }

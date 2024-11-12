@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: Ghost
   m_EditorClassIdentifier: 
   actorName: Ghost
+  actorType: 1
   moveSpeed: 5
   damage: 0
   attackRange: 0
+  health: 0
   canFlay: 1
   isControlledByAI: 0
   controller: {fileID: 0}
