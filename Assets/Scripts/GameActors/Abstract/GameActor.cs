@@ -3,8 +3,11 @@ using UnityEngine;
 public enum ActorType
 {
     MainCharactor,
+    Ghost,
     Wolf,
     Fatbat,
+    Skeleton,
+    Goblin
 }
 
 
@@ -13,6 +16,7 @@ public class GameActor : ScriptableObject
 {
     [Header("GameActor Variables")]
     public string actorName;
+    public ActorType actorType;
     public float moveSpeed;
     public float damage;
     public float attackRange;

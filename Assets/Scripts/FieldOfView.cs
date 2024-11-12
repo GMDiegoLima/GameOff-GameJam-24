@@ -2,23 +2,21 @@ using UnityEngine;
 
 public class FieldOfView : MonoBehaviour
 {
-    public bool isTargetInSight;
-    public LayerMask enemyViewLayer;
-    public Color gizmoColor;
-
-    private RaycastHit2D hit;
-    [HideInInspector] public Transform targetTransform;
-
-    [HideInInspector] public float scanAngle;
-    [HideInInspector] public float scanDistance;
-
     public float patrolViewDistance;
     public float chaseViewDistance;
+    public LayerMask enemyViewLayer;
 
+    private RaycastHit2D hit;
+
+    [HideInInspector] public Color gizmoColor;
+    [HideInInspector] public bool isTargetInSight;
+    [HideInInspector] public Transform targetTransform;
+    [HideInInspector] public float scanAngle;
+    [HideInInspector] public float scanDistance;
     [HideInInspector] public bool isChasing;
-
     [HideInInspector] public Vector3 right45;
     [HideInInspector] public Vector3 left45;
+
     private void Start()
     {
         scanDistance = patrolViewDistance;
@@ -26,9 +24,6 @@ public class FieldOfView : MonoBehaviour
 
     private void Update()
     {
-        //int numHit = Physics2D.BoxCast(transform.position, new Vector2(sizeX, sizeY), 0, transform.up,
-        //                                     filter, hitResults, scanDistance);
-
         hit = Physics2D.Raycast(transform.position, transform.up, scanDistance, enemyViewLayer);
         if (hit && hit.transform.CompareTag("Player"))
         {
