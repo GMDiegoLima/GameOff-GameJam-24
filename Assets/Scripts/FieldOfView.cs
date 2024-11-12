@@ -24,7 +24,15 @@ public class FieldOfView : MonoBehaviour
 
     private void Update()
     {
-        hit = Physics2D.Raycast(transform.position, transform.up, scanDistance, enemyViewLayer);
+        if (isChasing)
+        {
+            hit = Physics2D.CircleCast(transform.position, chaseViewDistance, transform.up, 0, enemyViewLayer);
+        }
+        else
+        {
+            hit = Physics2D.Raycast(transform.position, transform.up, scanDistance, enemyViewLayer);
+            PatrolScan();
+        }
         if (hit && hit.transform.CompareTag("Player"))
         {
             isTargetInSight = hit;
@@ -35,7 +43,7 @@ public class FieldOfView : MonoBehaviour
             isTargetInSight = false;
             targetTransform = null;
 		}
-        HandleScan();
+        //HandleScan();
     }
 
     private void HandleScan()
@@ -69,9 +77,13 @@ public class FieldOfView : MonoBehaviour
     {
         if (!Application.isPlaying) return;
         Gizmos.color = gizmoColor;
-        Gizmos.DrawRay(transform.position, transform.up * scanDistance);
+        if (isChasing)
+        {
+            Gizmos.DrawWireSphere(transform.position, chaseViewDistance);
+		}
         if (!isChasing)
         {
+            Gizmos.DrawRay(transform.position, transform.up * scanDistance);
             Gizmos.color = Color.blue;
             Gizmos.DrawRay(transform.position, left45 * scanDistance);
             Gizmos.color = Color.red;
