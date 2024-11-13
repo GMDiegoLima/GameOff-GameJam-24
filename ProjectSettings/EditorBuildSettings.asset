@@ -15,8 +15,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Graveyard.unity
     guid: 2f7ab9e61f810d647984a31b3e0f55f7
   - enabled: 1
-    path: Assets/Scenes/World.unity
-    guid: bf29c758d74a6fa42916154f1b3f16d9
+    path: Assets/Scenes/Dungeon.unity
+    guid: 1e6eef9df2ad1574e8c407ef3c7d6219
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

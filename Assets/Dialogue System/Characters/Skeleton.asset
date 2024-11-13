@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f4a308dae7ffd048a8b0eb8d5ae4a02, type: 3}
   m_Name: Skeleton
   m_EditorClassIdentifier: 
-  characterPhoto: {fileID: -1708997961419951014, guid: 4b17369398672834ea881bd1fcf1aa51, type: 3}
+  characterPhoto: {fileID: -779120972710099853, guid: 75a8c6f4af9df504fa91bebc7db314d8, type: 3}
   characterName: You

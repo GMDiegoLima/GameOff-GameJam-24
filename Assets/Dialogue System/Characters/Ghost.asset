@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f4a308dae7ffd048a8b0eb8d5ae4a02, type: 3}
   m_Name: Ghost
   m_EditorClassIdentifier: 
-  characterPhoto: {fileID: 6656582412914418087, guid: 0d3db0088964ade4893277a5511706b9, type: 3}
+  characterPhoto: {fileID: 9100024569545774398, guid: ba66ca1b784494249a6a5cdd97b4465a, type: 3}
   characterName: Ghost

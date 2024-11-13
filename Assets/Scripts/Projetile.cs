@@ -12,6 +12,7 @@ public class Projetile : MonoBehaviour
             if (playerbody != null)
             {
                 playerbody.alive = false;
+                Destroy(gameObject);
             }
         }
         if (other.CompareTag("Enemy"))
@@ -20,6 +21,7 @@ public class Projetile : MonoBehaviour
             if (enemyBody != null)
             {
                 enemyBody.alive = false;
+                Destroy(gameObject);
             }
         }
     }

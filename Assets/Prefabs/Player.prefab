@@ -810,8 +810,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   embodyKey: 113
-  playerStateController: {fileID: 0}
-  gameActorSOHolder: {fileID: 0}
   speed: 7
   currentBody: 0
   embodyText: {fileID: 428538844500421307}
@@ -903,7 +901,7 @@ GameObject:
   - component: {fileID: 7436706657864203591}
   - component: {fileID: 8891628325161712344}
   - component: {fileID: 5767548726198288705}
-  - component: {fileID: 7583460453320916127}
+  - component: {fileID: 4249041165421898756}
   m_Layer: 8
   m_Name: BlackoutPanel
   m_TagString: Untagged
@@ -968,23 +966,28 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!111 &7583460453320916127
-Animation:
+--- !u!95 &4249041165421898756
+Animator:
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8465604308000546617}
   m_Enabled: 1
-  serializedVersion: 4
-  m_Animation: {fileID: 7400000, guid: dfea684fe7f5fad45b9a966964af4474, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: dfea684fe7f5fad45b9a966964af4474, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
   m_UpdateMode: 0
-  m_CullingType: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8954617714067582843
 GameObject:
   m_ObjectHideFlags: 0
