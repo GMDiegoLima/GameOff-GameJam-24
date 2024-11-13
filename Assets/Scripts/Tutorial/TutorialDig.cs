@@ -38,6 +38,11 @@ public class TutorialDig : MonoBehaviour
         }
     }
 
+    public void FinishTutorial()
+    {
+        TutorialManager.Instance.tutorialFinished = true;
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         canDig = true;

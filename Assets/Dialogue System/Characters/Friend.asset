@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f4a308dae7ffd048a8b0eb8d5ae4a02, type: 3}
   m_Name: Friend
   m_EditorClassIdentifier: 
-  characterPhoto: {fileID: -2017055913124566070, guid: 25dfb11ab986fe046878f95b6a1fc11a, type: 3}
+  characterPhoto: {fileID: -8158911684044067527, guid: 21758517d725b124cb45c9fc4b0a303a, type: 3}
   characterName: Friend

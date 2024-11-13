@@ -117,7 +117,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -139,7 +139,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 32
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -161,7 +161,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 32
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -182,8 +182,8 @@ TextureImporter:
       name: grass tileset_3
       rect:
         serializedVersion: 2
-        x: 64
-        y: 32
+        x: 0
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -204,8 +204,8 @@ TextureImporter:
       name: grass tileset_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 16
+        x: 16
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -226,8 +226,8 @@ TextureImporter:
       name: grass tileset_5
       rect:
         serializedVersion: 2
-        x: 16
-        y: 16
+        x: 32
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -248,8 +248,8 @@ TextureImporter:
       name: grass tileset_6
       rect:
         serializedVersion: 2
-        x: 32
-        y: 16
+        x: 0
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -270,8 +270,8 @@ TextureImporter:
       name: grass tileset_7
       rect:
         serializedVersion: 2
-        x: 48
-        y: 16
+        x: 16
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -292,8 +292,8 @@ TextureImporter:
       name: grass tileset_8
       rect:
         serializedVersion: 2
-        x: 64
-        y: 16
+        x: 32
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -314,7 +314,7 @@ TextureImporter:
       name: grass tileset_9
       rect:
         serializedVersion: 2
-        x: 80
+        x: 0
         y: 16
         width: 16
         height: 16
@@ -336,8 +336,8 @@ TextureImporter:
       name: grass tileset_10
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 16
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -358,8 +358,8 @@ TextureImporter:
       name: grass tileset_11
       rect:
         serializedVersion: 2
-        x: 16
-        y: 0
+        x: 32
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -380,7 +380,7 @@ TextureImporter:
       name: grass tileset_12
       rect:
         serializedVersion: 2
-        x: 32
+        x: 0
         y: 0
         width: 16
         height: 16
@@ -394,28 +394,6 @@ TextureImporter:
       bones: []
       spriteID: 907e879fb813ae145baeb7fb3e907df2
       internalID: -1214322476
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: grass tileset_13
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 01b25b8f95484704a888ca34c097b6b0
-      internalID: 219732863
       vertices: []
       indices: 
       edges: []
@@ -439,7 +417,6 @@ TextureImporter:
       grass tileset_10: 977345106
       grass tileset_11: 762571726
       grass tileset_12: -1214322476
-      grass tileset_13: 219732863
       grass tileset_2: 371100944
       grass tileset_3: -869468147
       grass tileset_4: -206004622

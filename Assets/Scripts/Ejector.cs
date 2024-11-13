@@ -32,22 +32,29 @@ public class Ejector : MonoBehaviour
             if (rb != null)
             {
                 Vector2 direction = Vector2.zero;
+                float rotationAngle = 0f;
                 switch (shootDirection)
                 {
                     case Directions.Up:
                         direction = Vector2.up;
+                        rotationAngle = 180f;
                         break;
                     case Directions.Left:
                         direction = Vector2.left;
+                        rotationAngle = -90f;
                         break;
                     case Directions.Right:
                         direction = Vector2.right;
+                        rotationAngle = 90f;
                         break;
                     case Directions.Down:
                         direction = Vector2.down;
+                        rotationAngle = 0f;
                         break;
                 }
+                projectile.transform.rotation = Quaternion.Euler(0, 0, rotationAngle);
                 rb.linearVelocity = direction * projectileSpeed;
+                Destroy(projectile, 5f);
             }
         }
     }
