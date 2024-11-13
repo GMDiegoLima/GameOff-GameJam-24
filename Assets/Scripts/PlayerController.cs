@@ -191,6 +191,7 @@ public class PlayerController : MonoBehaviour
         if (enemyBodyPrefab != null)
         {
             EnemyBody enemyBodyComponent = enemyBodyPrefab.AddComponent<EnemyBody>();
+            enemyBodyComponent.alive = false;
             enemyBodyComponent.bodyType = currentBody;
             currentBody = Bodies.Ghost;
 
