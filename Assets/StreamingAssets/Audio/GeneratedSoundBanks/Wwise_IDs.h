@@ -13,6 +13,15 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID EVIL_DIALOGUE = 1316490268U;
+        static const AkUniqueID FOOTSTEPS = 2385628198U;
+        static const AkUniqueID LEVER = 2782712987U;
+        static const AkUniqueID MENU_CURSOR_BACK = 2485905105U;
+        static const AkUniqueID MENU_CURSOR_MOVE = 1306883239U;
+        static const AkUniqueID MENU_CURSOR_SELECT = 3200708208U;
+        static const AkUniqueID NORMAL_DIALOGUE = 365141489U;
+        static const AkUniqueID PLATE = 282449107U;
+        static const AkUniqueID ROCK_PUSH = 2827948781U;
         static const AkUniqueID TESTINGEVENT = 946158365U;
     } // namespace EVENTS
 
@@ -67,8 +76,8 @@ namespace AK
                 static const AkUniqueID DIRT = 2195636714U;
                 static const AkUniqueID GRASS = 4248645337U;
                 static const AkUniqueID STONE = 1216965916U;
+                static const AkUniqueID TILE = 2637588553U;
                 static const AkUniqueID WATER = 2654748154U;
-                static const AkUniqueID WOOD = 2058049674U;
             } // namespace SWITCH
         } // namespace GROUNDTEXTURES
 
@@ -85,11 +94,15 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID AMBIANCEMASTER = 1436777591U;
+        static const AkUniqueID CHARACTERS = 1557941045U;
         static const AkUniqueID ENVIRONMENTMASTER = 3802034858U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MUSICMASTER = 3199789248U;
         static const AkUniqueID NPCMASTER = 2033911932U;
+        static const AkUniqueID OBJECTSMASTER = 3123271961U;
         static const AkUniqueID PLAYERMASTER = 3538689948U;
+        static const AkUniqueID UIMASTER = 1992125169U;
     } // namespace BUSSES
 
     namespace AUX_BUSSES

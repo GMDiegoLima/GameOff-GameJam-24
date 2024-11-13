@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{CD11E991-5766-438B-A479-C4169178ACAD}" SchemaVersion="119" RootDocumentID="{568CA0A9-9B6B-4CBA-93C7-FB9940D85A50}" ParentDocumentID="{568CA0A9-9B6B-4CBA-93C7-FB9940D85A50}">
 	<Events>
-		<WorkUnit Name="Player" ID="{CD11E991-5766-438B-A479-C4169178ACAD}" OwnerID="{568CA0A9-9B6B-4CBA-93C7-FB9940D85A50}" PersistMode="Nested"/>
+		<WorkUnit Name="Player" ID="{CD11E991-5766-438B-A479-C4169178ACAD}" OwnerID="{568CA0A9-9B6B-4CBA-93C7-FB9940D85A50}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="footsteps" ID="{44EB1ED3-972C-4C24-A521-2E103FE21F9A}">
+					<ChildrenList>
+						<Action Name="" ID="{52C57D60-60F7-4F2A-A2D7-1C8FCC4D6CEA}" ShortID="452232952">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="player_footsteps" ID="{EDCAB433-4A6F-4EF2-ADFF-DAE616C87168}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

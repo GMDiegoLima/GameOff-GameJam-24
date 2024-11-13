@@ -21,6 +21,7 @@ public class PressurePlateSequence : MonoBehaviour
         if ((other.CompareTag("Player") && !playerScript.flying) || other.CompareTag("PressureTrigger"))
         {
             animator.SetBool("Activated", true);
+            AkSoundEngine.PostEvent("plate", gameObject);
 
             PuzzleSequence activePuzzle = puzzleManager.GetActivePuzzle();
             if (activePuzzle != null)

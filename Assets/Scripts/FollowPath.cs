@@ -1,10 +1,12 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class FollowPath : MonoBehaviour
 {
-    public Transform[] waypoints;
+    public List<Transform> waypoints = new List<Transform>();
     public float speed;
     int currentWaypointIndex = 0;
+    bool hasReachedEnd = false;
     Animator animator;
 
     void Start()
@@ -14,7 +16,7 @@ public class FollowPath : MonoBehaviour
 
     void Update()
     {
-        if (waypoints.Length == 0) return;
+        if (waypoints.Count == 0 || hasReachedEnd) return;
 
         Transform targetWaypoint = waypoints[currentWaypointIndex];
 
@@ -34,9 +36,9 @@ public class FollowPath : MonoBehaviour
         if (Vector2.Distance(transform.position, targetWaypoint.position) < 0.1f)
         {
             currentWaypointIndex++;
-            if (currentWaypointIndex >= waypoints.Length)
+            if (currentWaypointIndex >= waypoints.Count)
             {
-                currentWaypointIndex = waypoints.Length - 1;
+                hasReachedEnd = true;
             }
         }
     }

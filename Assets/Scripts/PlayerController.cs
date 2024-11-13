@@ -6,13 +6,13 @@ using TMPro;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private KeyCode embodyKey;
-    [SerializeField] private PlayerStateController playerStateController;
-    [SerializeField] private GameActorSOHolder gameActorSOHolder;
+    private PlayerStateController playerStateController;
+    private GameActorSOHolder gameActorSOHolder;
 
     public float speed;
     Rigidbody2D characterBody;
     Vector2 velocity;
-    Vector2 inputMovement;
+    Vector2 direction;
 
     Animator _animator;
     RuntimeAnimatorController originalAnimatorController;
@@ -59,17 +59,17 @@ public class PlayerController : MonoBehaviour
     {
         if (alive)
         {
-            inputMovement = new Vector2(
+            direction = new Vector2(
                 Input.GetAxisRaw("Horizontal"),
                 Input.GetAxisRaw("Vertical")
-                );
-            _animator.SetFloat("Horizontal", inputMovement.x);
-            _animator.SetFloat("Vertical", inputMovement.y);
+                ).normalized;
+            _animator.SetFloat("Horizontal", direction.x);
+            _animator.SetFloat("Vertical", direction.y);
 
-            if (inputMovement != Vector2.zero)
+            if (direction != Vector2.zero)
             {
-                _animator.SetFloat("LastHorizontal", inputMovement.x);
-                _animator.SetFloat("LastVertical", inputMovement.y);
+                _animator.SetFloat("LastHorizontal", direction.x);
+                _animator.SetFloat("LastVertical", direction.y);
             }
 
             if (isMovingToTarget)
@@ -134,7 +134,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             gameOver.SetActive(true);
-            inputMovement = new Vector2(0, 0);
+            direction = new Vector2(0, 0);
         }
     }
     void MoveToTarget()
@@ -167,28 +167,18 @@ public class PlayerController : MonoBehaviour
         switch (currentBody)
         {
             case Bodies.Main:
-                //speed = 5f;
-                //flying = false;
                 playerStateController.actor = gameActorSOHolder.mainCharacter;
                 break;
             case Bodies.Wolf:
-                //speed = 6f;
-                //flying = false;
                 playerStateController.actor = gameActorSOHolder.wolf;
                 break;
             case Bodies.FatBat:
-                //speed = 4f;
-                //flying = true;
                 playerStateController.actor = gameActorSOHolder.fatBat;
                 break;
             case Bodies.Goblin:
-                //speed = 5.5f;
-                //flying = false;
                 playerStateController.actor = gameActorSOHolder.goblin;
                 break;
             case Bodies.Skeleton:
-                //speed = 3f;
-                //flying = false;
                 playerStateController.actor = gameActorSOHolder.skeleton;
                 break;
         }
@@ -243,7 +233,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector2 delta = inputMovement * velocity * Time.deltaTime;
+        Vector2 delta = direction * velocity * Time.deltaTime;
         Vector2 newPosition = characterBody.position + delta;
         characterBody.MovePosition(newPosition);
     }
@@ -253,6 +243,7 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("PressureTrigger") && flying)
         {
             _animator.SetBool("Pushing", false);
+            AkSoundEngine.ExecuteActionOnEvent("rock_push", AkActionOnEventType.AkActionOnEventType_Stop, gameObject);
             Rigidbody2D rb_rock = other.gameObject.GetComponent<Rigidbody2D>();
             rb_rock.simulated = false;
         }
@@ -260,6 +251,7 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Pedra");
             _animator.SetBool("Pushing", true);
+            AkSoundEngine.PostEvent("rock_push", gameObject);
             Rigidbody2D rb_rock = other.gameObject.GetComponent<Rigidbody2D>();
             rb_rock.simulated = true;
         }
@@ -294,6 +286,7 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("PressureTrigger") && !flying)
         {
             _animator.SetBool("Pushing", false);
+            AkSoundEngine.ExecuteActionOnEvent("rock_push", AkActionOnEventType.AkActionOnEventType_Stop, gameObject);
         }
         if (other.CompareTag("Item"))
         {

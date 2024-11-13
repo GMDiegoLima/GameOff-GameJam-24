@@ -266,12 +266,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1020663912763633245, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
+      propertyPath: chaseViewDistance
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1020663912763633245, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
       propertyPath: patrolViewDistance
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1020663912763633245, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
       propertyPath: targetLayer.m_Bits
       value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1020663912763633245, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
+      propertyPath: enemyViewLayer.m_Bits
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 6029557757394872174, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
       propertyPath: m_LocalPosition.x
