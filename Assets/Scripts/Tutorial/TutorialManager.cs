@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// Used to disable dialogue and collider border on the village when the player finish the tutorial
 public class TutorialManager : MonoBehaviour
 {
     public static TutorialManager Instance { get; private set; }

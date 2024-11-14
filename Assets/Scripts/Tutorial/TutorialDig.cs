@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 
+// All the actions necessary on the graveyard for the tutorial are here
 public class TutorialDig : MonoBehaviour
 {
     public PlayerController player;

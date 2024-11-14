@@ -1,5 +1,6 @@
 using UnityEngine;
 
+// Used to shot one projectile from the walls
 public class Ejector : MonoBehaviour
 {
     Animator animator;

@@ -1,51 +1,74 @@
 using UnityEngine;
 using System.Collections.Generic;
 
+// Used for 2 puzzles (Sequence and Activations)
 public class PressurePlateSequence : MonoBehaviour
 {
-    public GameObject player;
     PlayerController playerScript;
-    public List<PuzzleSequence> puzzles;
-    public PuzzleSequenceManager puzzleManager;
+    public PuzzleSequenceManager puzzleSeqManager;
+    public PuzzleActivations puzzleActManager;
     public string plateName;
     Animator animator;
 
     void Start()
     {
         animator = GetComponent<Animator>();
-        playerScript = player.GetComponent<PlayerController>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if ((other.CompareTag("Player") && !playerScript.flying) || other.CompareTag("PressureTrigger"))
+        if (other.gameObject.GetComponent<PlayerController>() != null || other.CompareTag("PressureTrigger"))
         {
-            animator.SetBool("Activated", true);
-            AkSoundEngine.PostEvent("plate", gameObject);
-
-            PuzzleSequence activePuzzle = puzzleManager.GetActivePuzzle();
-            if (activePuzzle != null)
+            playerScript = other.GetComponent<PlayerController>();
+            if ((other.CompareTag("Player") && !playerScript.flying) || other.CompareTag("PressureTrigger"))
             {
-                activePuzzle.RegisterActivation(plateName);
-            }
-            else
-            {
-                Debug.LogWarning("Nenhum puzzle ativo encontrado.");
-            }
-        }
+                animator.SetBool("Activated", true);
+                AkSoundEngine.PostEvent("plate", gameObject);
 
-        PuzzleSequence currentPuzzle = puzzleManager.GetActivePuzzle();
-        if (currentPuzzle != null && currentPuzzle.puzzleSolved)
-        {
-            puzzleManager.OnPuzzleSolved();
+                if (puzzleSeqManager != null)
+                {
+                    PuzzleSequence activePuzzle = puzzleSeqManager.GetActivePuzzle();
+                    if (activePuzzle != null)
+                    {
+                        activePuzzle.RegisterActivation(plateName);
+                    }
+                }
+                else if (puzzleActManager != null)
+                {
+                    puzzleActManager.RegisterActivation(plateName);
+                }
+            }
+
+            if (puzzleSeqManager != null)
+            {
+                PuzzleSequence currentPuzzle = puzzleSeqManager.GetActivePuzzle();
+                if (currentPuzzle != null && currentPuzzle.puzzleSolved)
+                {
+                    puzzleSeqManager.OnPuzzleSolved();
+                }
+            }
+
+            else if (puzzleActManager != null && puzzleActManager.IsPuzzleSolved())
+            {
+                Debug.Log("PuzzleActivations resolvido.");
+            }
         }
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if ((other.CompareTag("Player") && !playerScript.flying) || other.CompareTag("PressureTrigger"))
+        if (other.gameObject.GetComponent<PlayerController>() != null || other.CompareTag("PressureTrigger"))
         {
-            animator.SetBool("Activated", false);
+            playerScript = other.GetComponent<PlayerController>();
+            if ((other.CompareTag("Player") && !playerScript.flying) || other.CompareTag("PressureTrigger"))
+            {
+                if (puzzleActManager != null)
+                {
+                    
+                    puzzleActManager.RemoveActivation(plateName);
+                }
+                animator.SetBool("Activated", false);
+            }
         }
     }
 }

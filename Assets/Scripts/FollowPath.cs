@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
+// Can be used to make one GameObject follow somw waypoints
 public class FollowPath : MonoBehaviour
 {
     public List<Transform> waypoints = new List<Transform>();

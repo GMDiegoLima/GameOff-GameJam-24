@@ -2585,7 +2585,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7027632970052796844, guid: 98ace3a7e2f7d894fbd09d390e488fb9, type: 3}
       propertyPath: orthographic size
-      value: 3.375
+      value: 3.84375
       objectReference: {fileID: 0}
     - target: {fileID: 7436706657864203591, guid: 98ace3a7e2f7d894fbd09d390e488fb9, type: 3}
       propertyPath: m_LocalScale.x
@@ -3144,7 +3144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8557568673631317014, guid: a0dbeffc84669e24f994d387893a803d, type: 3}
       propertyPath: sentences.Array.data[1].sentence
-      value: Let's dig up the grave with a flower
+      value: Let's dig the grave that has a flower
       objectReference: {fileID: 0}
     - target: {fileID: 8557568673631317014, guid: a0dbeffc84669e24f994d387893a803d, type: 3}
       propertyPath: sentences.Array.data[2].sentence
@@ -3161,7 +3161,7 @@ PrefabInstance:
     - target: {fileID: 8557568673631317014, guid: a0dbeffc84669e24f994d387893a803d, type: 3}
       propertyPath: sentences.Array.data[2].dialogueCharacter
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 4752645aa0d4f144783c729ff9e40e5a, type: 2}
     - target: {fileID: 8557568673631317014, guid: a0dbeffc84669e24f994d387893a803d, type: 3}
       propertyPath: sentences.Array.data[0].sentenceEvent.m_PersistentCalls.m_Calls.Array.size
       value: 1

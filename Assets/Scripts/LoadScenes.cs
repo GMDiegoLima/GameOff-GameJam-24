@@ -1,10 +1,18 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// used on events to load scenes
 public class LoadScenes : MonoBehaviour
 {
     public GameObject blackoutPanel;
     Animator blackoutAnimator;
+    void Start()
+    {
+        if (blackoutPanel != null)
+        {
+            blackoutAnimator = blackoutPanel.GetComponent<Animator>();
+        }
+    }
     public void loadVillage()
     {
         SceneManager.LoadSceneAsync(1);
@@ -20,7 +28,10 @@ public class LoadScenes : MonoBehaviour
     }
     public void FadeIn()
     {
-        blackoutAnimator = blackoutPanel.GetComponent<Animator>();
         blackoutAnimator.Play("FadeIn");
+    }
+    public void FadeOut()
+    {
+        blackoutAnimator.Play("FadeOut");
     }
 }

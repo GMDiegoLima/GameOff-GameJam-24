@@ -1,36 +1,44 @@
 using UnityEngine;
 using UnityEngine.Events;
 
+// Call one event when someone enter the trigger of the Pressure Plate
 public class PressurePlateTrigger : MonoBehaviour
 {
     public UnityEvent onActivate;
     public UnityEvent onDeactivate;
-    public GameObject player;
     PlayerController playerScript;
     Animator animator;
 
     void Start()
     {
         animator = GetComponent<Animator>();
-        playerScript = player.GetComponent<PlayerController>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && !playerScript.flying || other.CompareTag("PressureTrigger"))
+        if (other.gameObject.GetComponent<PlayerController>() != null || other.CompareTag("PressureTrigger"))
         {
-            animator.SetBool("Activated", true);
-            AkSoundEngine.PostEvent("plate", gameObject);
-            onActivate?.Invoke();
+            playerScript = other.GetComponent<PlayerController>();
+            if (other.CompareTag("Player") && !playerScript.flying || other.CompareTag("PressureTrigger"))
+            {
+                animator.SetBool("Activated", true);
+                AkSoundEngine.PostEvent("plate", gameObject);
+                onActivate?.Invoke();
+            }
         }
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && !playerScript.flying || other.CompareTag("PressureTrigger"))
+        if (other.gameObject.GetComponent<PlayerController>() != null || other.CompareTag("PressureTrigger"))
         {
-            animator.SetBool("Activated", false);
-            onDeactivate?.Invoke();
+            playerScript = other.GetComponent<PlayerController>();
+            if (other.CompareTag("Player") && !playerScript.flying || other.CompareTag("PressureTrigger"))
+            {
+                animator.SetBool("Activated", false);
+                onDeactivate?.Invoke();
+            }
         }
     }
 }
+
