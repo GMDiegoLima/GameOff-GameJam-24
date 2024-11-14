@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class EnemyAIController : StateController
 {
@@ -27,6 +29,9 @@ public class EnemyAIController : StateController
     private bool isVelocityUpdated;
     private bool isMovePeriodUpdated;
     private bool isStopPeriodUpdated;
+
+    public LinkedList<Vector3> targetFootprints = new(); // for chasing
+    private Vector3 nextFootprint = Vector3.positiveInfinity;
 
     protected override void Awake()
     {
@@ -111,15 +116,45 @@ public class EnemyAIController : StateController
 
     public void Chase(Transform aTarget)
     {
-        if (!isMoving) isMoving = true;
-        velocity = chaseSpeed * (aTarget.position - transform.position).normalized;
+        // Record the target's footsprints and follow it
+        if (!isMoving)
+        {
+            isMoving = true;
+            stopPeriodTimer = 0f;
+        }
+
+        if (targetFootprints.Count == 0)
+        { 
+            targetFootprints.AddLast(aTarget.position);
+		}
+        else if ((aTarget.position - targetFootprints.Last.Value).magnitude > 1f)
+        {
+            // Don't add the footsprint if too close to the last one
+            targetFootprints.AddLast(aTarget.position);
+        }
+
+        nextFootprint = targetFootprints.First.Value;
+        velocity = chaseSpeed * (nextFootprint - transform.position).normalized;
+
+        if ((transform.position - nextFootprint).magnitude < 0.1f && targetFootprints.Count != 0)
+        {
+            targetFootprints.RemoveFirst();
+        }
+
         Vector3 playerDir = aTarget.position - transform.position;
         view.transform.rotation = Quaternion.Euler(playerDir);
     }
 
     public void Seek() 
 	{
-	    // Now seek is just to keep the same velocity for 3 sec
+        // Follow the remaining footprints
+        if (!isMoving) isMoving = true;
+        nextFootprint = targetFootprints.First.Value;
+        velocity = chaseSpeed * (nextFootprint - transform.position).normalized;
+        if ((transform.position - nextFootprint).magnitude < 0.1f && targetFootprints.Count != 0)
+        {
+            targetFootprints.RemoveFirst();
+        }
 	}
 
     public override void Dead()
@@ -130,6 +165,7 @@ public class EnemyAIController : StateController
 	}
 
     // -------------- States --------------
+
 
     private void HandleAnim()
     { 
@@ -241,5 +277,6 @@ public class EnemyAIController : StateController
             SetViewGizmoColor(currentState.GizmoColor);
         }
         currentState.DrawGizmos();
+
     }
 }

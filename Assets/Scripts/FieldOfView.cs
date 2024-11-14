@@ -10,7 +10,7 @@ public class FieldOfView : MonoBehaviour
 
     [HideInInspector] public Color gizmoColor;
     [HideInInspector] public bool isTargetInSight;
-    [HideInInspector] public Transform targetTransform;
+    public Transform targetTransform;
     [HideInInspector] public float scanAngle;
     [HideInInspector] public float scanDistance;
     [HideInInspector] public bool isChasing;
@@ -26,7 +26,7 @@ public class FieldOfView : MonoBehaviour
     {
         if (isChasing)
         {
-            hit = Physics2D.CircleCast(transform.position, chaseViewDistance, transform.up, 0, enemyViewLayer);
+            hit = Physics2D.CircleCast(transform.position, chaseViewDistance, transform.up, 0.1f, enemyViewLayer);
         }
         else
         {
@@ -43,14 +43,7 @@ public class FieldOfView : MonoBehaviour
             isTargetInSight = false;
             targetTransform = null;
 		}
-        //HandleScan();
     }
-
-    private void HandleScan()
-    {
-        if (!isChasing) PatrolScan();
-        else ChaseScan();
-	}
 
     private void PatrolScan()
     {
@@ -65,13 +58,6 @@ public class FieldOfView : MonoBehaviour
             transform.Rotate(0, 0, 90 * 5 * Time.deltaTime); // scan 90 degree 5 times in one sec
         }
     }
-
-    private void ChaseScan()
-    {
-        // Scan 360 degrees
-        transform.Rotate(0, 0, 360 * 5 * Time.deltaTime); // scan 360 degree 5 times in one sec
-    }
-
 
     private void OnDrawGizmos()
     {
