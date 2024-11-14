@@ -1,5 +1,6 @@
 using UnityEngine;
 
+// Make the GameObject follow one target, used on the friend for the tutorial in the graveyard
 public class TutorialFollow : MonoBehaviour
 {
     public GameObject target;

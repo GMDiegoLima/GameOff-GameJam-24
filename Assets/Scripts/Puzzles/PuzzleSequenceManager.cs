@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Used to manage the Sequence Puzzles to handle multiples puzzles
 public class PuzzleSequenceManager : MonoBehaviour
 {
     public List<PuzzleSequence> puzzles;

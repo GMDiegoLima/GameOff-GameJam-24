@@ -1,5 +1,6 @@
 using UnityEngine;
 
+// Used with Ejector to be shot
 public class Projetile : MonoBehaviour
 {
     PlayerController playerbody;

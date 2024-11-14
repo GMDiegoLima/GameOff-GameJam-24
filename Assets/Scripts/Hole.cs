@@ -1,5 +1,6 @@
 using UnityEngine;
 
+// Used to kill one character when fall into the hole
 public class Hole : MonoBehaviour
 {
     public GameObject player;
@@ -17,7 +18,7 @@ public class Hole : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !playerScript.flying)
         {
             Invoke("gameOver", 0.1f);
         }
