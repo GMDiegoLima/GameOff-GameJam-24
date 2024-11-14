@@ -18,7 +18,7 @@ public class ChaseState : IState
 
     public void Enter()
     {
-        Debug.Log(controller.actor.actorName + " Enter Chase State");
+        Debug.Log(controller.actor.actorTag + " Enter Chase State");
         controller.ChangeToChaseView();
     }
 
@@ -31,7 +31,7 @@ public class ChaseState : IState
     public void Exit()
     {
         //controller.targetFootprints.Clear();
-        Debug.Log(controller.actor.actorName + " Exit Chase State");
+        Debug.Log(controller.actor.actorTag + " Exit Chase State");
     }
 
 

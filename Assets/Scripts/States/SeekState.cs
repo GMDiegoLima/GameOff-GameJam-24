@@ -16,7 +16,7 @@ public class SeekState : IState
 
     public void Enter()
     {
-        Debug.Log(controller.actor.actorName + " Enter Seek State");
+        Debug.Log(controller.actor.actorTag + " Enter Seek State");
     }
 
     public void Update()
@@ -27,7 +27,7 @@ public class SeekState : IState
 
     public void Exit()
     {
-        Debug.Log(controller.actor.actorName + " Exit Seek State");
+        Debug.Log(controller.actor.actorTag + " Exit Seek State");
     }
 
 

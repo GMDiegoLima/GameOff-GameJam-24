@@ -46,7 +46,7 @@ public class PlayerStateController : StateController
     // ------------ State -------------
     public override void Attack()
     {
-        Debug.Log(actor.actorName + "::Attack()");
+        Debug.Log(actor.actorTag + "::Attack()");
         anim.Play("Attack");
         Vector2 dir = new Vector2(anim.GetFloat("LastHorizontal"), anim.GetFloat("LastVertical")).normalized;
         RaycastHit2D hit = Physics2D.BoxCast(transform.position, new Vector2(1, 1), 0, 

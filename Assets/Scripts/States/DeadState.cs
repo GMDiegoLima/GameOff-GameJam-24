@@ -21,7 +21,7 @@ public class DeadState : IState
 
     public void Enter()
     {
-        Debug.Log(controller.actor.actorName + " Enter Dead State");
+        Debug.Log(controller.actor.actorTag + " Enter Dead State");
     }
 
     public void Update()
@@ -32,7 +32,7 @@ public class DeadState : IState
 
     public void Exit()
     {
-        Debug.Log(controller.actor.actorName + " Exit Dead State");
+        Debug.Log(controller.actor.actorTag + " Exit Dead State");
     }
 
 

@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 3093141061861664081}
   m_Layer: 7
   m_Name: Wolf
-  m_TagString: DeadBody
+  m_TagString: Wolf
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -305,11 +305,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1020663912763633245, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
       propertyPath: chaseViewDistance
-      value: 4
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1020663912763633245, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
       propertyPath: patrolViewDistance
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1020663912763633245, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
       propertyPath: targetLayer.m_Bits
