@@ -333,7 +333,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &155701628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -380,6 +380,10 @@ PrefabInstance:
     - target: {fileID: 8201446916346317594, guid: 4e994be25c1212d40b3a72968da4605d, type: 3}
       propertyPath: m_Name
       value: PressurePlate (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8201446916346317594, guid: 4e994be25c1212d40b3a72968da4605d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8367224968520593515, guid: 4e994be25c1212d40b3a72968da4605d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -598,7 +602,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &223852836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1129,6 +1133,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lever
       objectReference: {fileID: 0}
+    - target: {fileID: 8201446916346317594, guid: d78b10e77625e1845867c6f794b0326d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8367224968520593515, guid: d78b10e77625e1845867c6f794b0326d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.18
@@ -1565,7 +1573,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!58 &787627880
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1856,6 +1864,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3052135606880161706, guid: 1c06ca1406631944da3858e71d81651b, type: 3}
+      propertyPath: footprintPrefab
+      value: 
+      objectReference: {fileID: 8516849441995735467, guid: 95770948b1f194a0f8a96e84ddc21204, type: 3}
     - target: {fileID: 5640444739511689665, guid: 1c06ca1406631944da3858e71d81651b, type: 3}
       propertyPath: m_Name
       value: Wolf
@@ -1870,7 +1882,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6271610525284946468, guid: 1c06ca1406631944da3858e71d81651b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.033329744
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6271610525284946468, guid: 1c06ca1406631944da3858e71d81651b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1899,6 +1911,14 @@ PrefabInstance:
     - target: {fileID: 6271610525284946468, guid: 1c06ca1406631944da3858e71d81651b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8412178107898563318, guid: 1c06ca1406631944da3858e71d81651b, type: 3}
+      propertyPath: chaseViewDistance
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8412178107898563318, guid: 1c06ca1406631944da3858e71d81651b, type: 3}
+      propertyPath: patrolViewDistance
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8412178107898563318, guid: 1c06ca1406631944da3858e71d81651b, type: 3}
       propertyPath: playerLayer.m_Bits
@@ -2393,7 +2413,7 @@ GameObject:
   - component: {fileID: 1132998905}
   - component: {fileID: 1132998904}
   - component: {fileID: 1132998903}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3131,6 +3151,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PressurePlate (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8201446916346317594, guid: 4e994be25c1212d40b3a72968da4605d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8367224968520593515, guid: 4e994be25c1212d40b3a72968da4605d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.37
@@ -3762,6 +3786,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ejector
       objectReference: {fileID: 0}
+    - target: {fileID: 4658500681949524481, guid: eb4361c2fcec1504fbe577994a4f58f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4847533920639682644, guid: eb4361c2fcec1504fbe577994a4f58f6, type: 3}
       propertyPath: m_Size.x
       value: 0.12
@@ -3951,7 +3979,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!58 &1671485157
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4107,6 +4135,10 @@ PrefabInstance:
     - target: {fileID: 8201446916346317594, guid: 4e994be25c1212d40b3a72968da4605d, type: 3}
       propertyPath: m_Name
       value: PressurePlate
+      objectReference: {fileID: 0}
+    - target: {fileID: 8201446916346317594, guid: 4e994be25c1212d40b3a72968da4605d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8367224968520593515, guid: 4e994be25c1212d40b3a72968da4605d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4390,6 +4422,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock
       objectReference: {fileID: 0}
+    - target: {fileID: 5222557687953266675, guid: 9b72e07cc6bdecd428e4ea487acbe499, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4499,7 +4535,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7027632970052796844, guid: 98ace3a7e2f7d894fbd09d390e488fb9, type: 3}
       propertyPath: orthographic size
-      value: 3.4375
+      value: 3.3020833
       objectReference: {fileID: 0}
     - target: {fileID: 7772584563165250645, guid: 98ace3a7e2f7d894fbd09d390e488fb9, type: 3}
       propertyPath: m_Name
@@ -4659,6 +4695,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FatBat
       objectReference: {fileID: 0}
+    - target: {fileID: 758673646730616367, guid: 1eabea1b4111acd449aec41eba28d58a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2923587810093096519, guid: 1eabea1b4111acd449aec41eba28d58a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.68
@@ -4715,6 +4755,10 @@ PrefabInstance:
     - target: {fileID: 1873842805440964811, guid: c1f45bd180a39df4d95e54ea0533b60b, type: 3}
       propertyPath: m_Name
       value: Goblin
+      objectReference: {fileID: 0}
+    - target: {fileID: 1873842805440964811, guid: c1f45bd180a39df4d95e54ea0533b60b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5463444181609725263, guid: c1f45bd180a39df4d95e54ea0533b60b, type: 3}
       propertyPath: m_LocalPosition.x
