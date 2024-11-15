@@ -8,10 +8,6 @@ TagManager:
   - Enemy
   - PressureTrigger
   - Item
-  - Wolf
-  - FatBat
-  - Skeleton
-  - Goblin
   layers:
   - Default
   - TransparentFX

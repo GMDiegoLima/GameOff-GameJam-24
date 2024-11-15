@@ -22,11 +22,11 @@ public class DeadState : IState
     public void Enter()
     {
         Debug.Log(controller.actor.actorTag + " Enter Dead State");
+        controller.Dead();
     }
 
     public void Update()
     {
-        controller.Dead();
         //CheckTransition();
     }
 

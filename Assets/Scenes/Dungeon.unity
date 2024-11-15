@@ -13407,7 +13407,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7027632970052796844, guid: 98ace3a7e2f7d894fbd09d390e488fb9, type: 3}
       propertyPath: orthographic size
-      value: 3.375
+      value: 3.3020833
       objectReference: {fileID: 0}
     - target: {fileID: 7644273294598822489, guid: 98ace3a7e2f7d894fbd09d390e488fb9, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -13913,10 +13913,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: FatBat
       objectReference: {fileID: 0}
-    - target: {fileID: 758673646730616367, guid: 1eabea1b4111acd449aec41eba28d58a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2923587810093096519, guid: 1eabea1b4111acd449aec41eba28d58a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.479999
@@ -14035,10 +14031,6 @@ PrefabInstance:
     - target: {fileID: 1873842805440964811, guid: c1f45bd180a39df4d95e54ea0533b60b, type: 3}
       propertyPath: m_Name
       value: Goblin
-      objectReference: {fileID: 0}
-    - target: {fileID: 1873842805440964811, guid: c1f45bd180a39df4d95e54ea0533b60b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5463444181609725263, guid: c1f45bd180a39df4d95e54ea0533b60b, type: 3}
       propertyPath: m_LocalPosition.x

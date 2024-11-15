@@ -16,7 +16,7 @@ MonoBehaviour:
   actorType: 4
   moveSpeed: 2
   damage: 1
-  attackRange: 1
+  attackRange: 2
   health: 1
   canFlay: 0
   isControlledByAI: 1
