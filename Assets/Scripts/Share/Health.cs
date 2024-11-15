@@ -3,7 +3,7 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [Header("Set by StateController")]
-    public float maxHealth;
+    [HideInInspector] public float maxHealth;
     public float currentHealth;
 
     private void Start()

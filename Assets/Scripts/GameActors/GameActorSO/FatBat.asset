@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 189268109bf1644939bb40094eb958ff, type: 3}
   m_Name: FatBat
   m_EditorClassIdentifier: 
-  actorName: FatBat
+  actorTag: FatBat
   actorType: 3
   moveSpeed: 4
   damage: 1
-  attackRange: 3
+  attackRange: 2
   health: 1
   canFlay: 1
   isControlledByAI: 1

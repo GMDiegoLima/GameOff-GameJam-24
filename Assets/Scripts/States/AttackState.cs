@@ -22,7 +22,7 @@ public class AttackState : IState
 
     public void Enter()
     {
-        Debug.Log(controller.actor.actorName + " Enter Attack State");
+        Debug.Log(controller.actor.actorTag + " Enter Attack State");
 	}
 
     public void Update()
@@ -33,7 +33,7 @@ public class AttackState : IState
 
     public void Exit()
     { 
-        Debug.Log(controller.actor.actorName + " Exit Attack State");
+        Debug.Log(controller.actor.actorTag + " Exit Attack State");
 	}
 
     
