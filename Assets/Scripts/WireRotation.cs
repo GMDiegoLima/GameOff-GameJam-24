@@ -26,15 +26,15 @@ public class WireRotation : MonoBehaviour
         if (Input.GetKeyDown("e") && canRotate)
         {
             transform.Rotate(0, 0, 90f);
+            if (Mathf.Approximately(transform.eulerAngles.z, correctRotation) && (straightWire != null && straightWire.enabled || straightWire == null))
+            {
+                enabled = true;
+            }
+            else
+            {
+                enabled = false;
+            }
             WireManager.Instance.CheckPuzzleStatus();
-        }
-        if (Mathf.Approximately(transform.eulerAngles.z, correctRotation) && (straightWire != null && straightWire.enabled || straightWire == null))
-        {
-            enabled = true;
-        }
-        else
-        {
-            enabled = false;
         }
     }
 
