@@ -11,6 +11,8 @@ public class EnemyAIController : StateController
     [SerializeField] private float maxMovePeriod;
     [SerializeField] private float minStopPeriod;
     [SerializeField] private float maxStopPeriod;
+    [SerializeField] private float minVelocity;
+    [SerializeField] private float maxVelocity;
     [SerializeField] private float attackCD;
 
     [Header("For Dubug")]
@@ -19,10 +21,9 @@ public class EnemyAIController : StateController
     [SerializeField] private float stopPeriodTimer;
     [SerializeField] private float attackCDTimer;
     [SerializeField] private float chaseSpeed;
-    [SerializeField] private float minVelocity;
-    [SerializeField] private float maxVelocity;
 
     private FieldOfView view;
+    private CapsuleCollider2D bodyCollider;
 
     private float movePeriod = 2f;
     private float stopPeriod = 2f;
@@ -37,9 +38,8 @@ public class EnemyAIController : StateController
     {
         base.Awake();
         chaseSpeed = actor.moveSpeed;
-        minVelocity = -actor.moveSpeed;
-        maxVelocity = actor.moveSpeed;
         view = GetComponentInChildren<FieldOfView>(); // Get from Eye
+        bodyCollider = GetComponentInChildren<CapsuleCollider2D>(); // Get from BodyCollider
     }
 
     protected override void Start()
@@ -159,8 +159,11 @@ public class EnemyAIController : StateController
 
     public override void Dead()
     {
-        transform.tag = "DeadBody";
         anim.SetBool("Dead", true);
+        gameObject.tag = "DeadBody";
+        velocity = Vector2.zero;
+        view.enabled = false;
+        bodyCollider.enabled = false;
         this.enabled = false;
 	}
 

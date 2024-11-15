@@ -21,18 +21,18 @@ public class DeadState : IState
 
     public void Enter()
     {
-        Debug.Log(controller.actor.actorName + " Enter Dead State");
+        Debug.Log(controller.actor.actorTag + " Enter Dead State");
+        controller.Dead();
     }
 
     public void Update()
     {
-        controller.Dead();
         //CheckTransition();
     }
 
     public void Exit()
     {
-        Debug.Log(controller.actor.actorName + " Exit Dead State");
+        Debug.Log(controller.actor.actorTag + " Exit Dead State");
     }
 
 

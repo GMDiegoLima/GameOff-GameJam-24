@@ -36,17 +36,18 @@ public class PlayerStateController : StateController
 
     private void HandleAttack()
     { 
-        attackCDTimer += Time.deltaTime;
+        attackCDTimer = Mathf.Clamp(attackCDTimer + Time.deltaTime, 0f, attackCD);
         if (Input.GetKeyDown(attackKey) && attackCDTimer >= attackCD)
         {
             Attack();
+            attackCDTimer = 0;
         }
-	}
+    }
 
     // ------------ State -------------
     public override void Attack()
     {
-        Debug.Log(actor.actorName + "::Attack()");
+        Debug.Log(actor.actorTag + "::Attack()");
         anim.Play("Attack");
         Vector2 dir = new Vector2(anim.GetFloat("LastHorizontal"), anim.GetFloat("LastVertical")).normalized;
         RaycastHit2D hit = Physics2D.BoxCast(transform.position, new Vector2(1, 1), 0, 
@@ -60,12 +61,12 @@ public class PlayerStateController : StateController
                 Debug.Log("Hit someone");
             }
         }
-        attackCDTimer = 0;
     }
 
     public override void Dead()
     {
         anim.SetBool("Dead", true);
+        playerController.alive = false;
     }
     // ------------ State -------------
 
@@ -80,6 +81,6 @@ public class PlayerStateController : StateController
 
         Gizmos.color = Color.green;
         Vector2 dir = new Vector2(anim.GetFloat("LastHorizontal"), anim.GetFloat("LastVertical")).normalized;
-        Gizmos.DrawRay(transform.position, dir * (actor.attackRange + 0.5f));
+        Gizmos.DrawRay(transform.position, dir * (actor.attackRange + 0.5f)); // Attack range
     }
 }
