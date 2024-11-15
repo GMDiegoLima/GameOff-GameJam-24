@@ -16,10 +16,10 @@ public class PressurePlateTrigger : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.GetComponent<PlayerController>() != null || other.CompareTag("PressureTrigger"))
+        if (other.gameObject.GetComponent<PlayerController>() != null || other.CompareTag("PressureTrigger") || other.CompareTag("Item"))
         {
             playerScript = other.GetComponent<PlayerController>();
-            if (other.CompareTag("Player") && !playerScript.flying || other.CompareTag("PressureTrigger"))
+            if ((other.CompareTag("Player") && !playerScript.flying) || other.CompareTag("PressureTrigger") || other.CompareTag("Item"))
             {
                 animator.SetBool("Activated", true);
                 AkSoundEngine.PostEvent("plate", gameObject);
@@ -30,10 +30,10 @@ public class PressurePlateTrigger : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.GetComponent<PlayerController>() != null || other.CompareTag("PressureTrigger"))
+        if (other.gameObject.GetComponent<PlayerController>() != null || other.CompareTag("PressureTrigger") || other.CompareTag("Item"))
         {
             playerScript = other.GetComponent<PlayerController>();
-            if (other.CompareTag("Player") && !playerScript.flying || other.CompareTag("PressureTrigger"))
+            if ((other.CompareTag("Player") && !playerScript.flying) || other.CompareTag("PressureTrigger") || other.CompareTag("Item"))
             {
                 animator.SetBool("Activated", false);
                 onDeactivate?.Invoke();

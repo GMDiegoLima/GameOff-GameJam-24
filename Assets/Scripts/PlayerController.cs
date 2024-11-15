@@ -271,7 +271,7 @@ public class PlayerController : MonoBehaviour
                 Debug.Log("Can embody: " + availableBody);
             }
         }
-        if (other.CompareTag("Item") && !flying)
+        if (other.CompareTag("Item") && currentBody != Bodies.Ghost)
         {
             nearbyItems.Add(other.gameObject);
         }
