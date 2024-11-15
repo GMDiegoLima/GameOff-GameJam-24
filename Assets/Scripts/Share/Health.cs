@@ -8,7 +8,8 @@ public class Health : MonoBehaviour
 
     private void Start()
     {
-        currentHealth = maxHealth;
+        currentHealth = 0;
+        //currentHealth = maxHealth;
     }
 
     public void TakeDamage(float anAmount)
