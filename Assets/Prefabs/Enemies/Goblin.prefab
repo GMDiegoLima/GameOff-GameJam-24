@@ -214,12 +214,12 @@ MonoBehaviour:
   maxStopPeriod: 2
   minVelocity: -3
   maxVelocity: 3
+  chaseSpeed: 3
   attackCD: 1
   isMoving: 0
   movePeriodTimer: 0
   stopPeriodTimer: 0
   attackCDTimer: 0
-  chaseSpeed: 2
 --- !u!114 &3501770415817325890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -342,6 +342,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1020663912763633245, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
       propertyPath: enemyViewLayer.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 1020663912763633245, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
+      propertyPath: enemyChaseLayer.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 1020663912763633245, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
+      propertyPath: enemyPatrolLayer.m_Bits
       value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 6029557757394872174, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
