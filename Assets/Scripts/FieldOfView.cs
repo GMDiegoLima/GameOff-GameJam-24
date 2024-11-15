@@ -7,9 +7,11 @@ public class FieldOfView : MonoBehaviour
     public float chaseViewDistance;
     public LayerMask enemyPatrolLayer;
     public LayerMask enemyChaseLayer;
+    public LayerMask ghostLayer;
 
     private int enemyPatrolLayerInt;
     private int enemyChaseLayerInt;
+    private int ghostLayerInt;
 
     private RaycastHit2D hit;
 
@@ -29,6 +31,7 @@ public class FieldOfView : MonoBehaviour
         scanDistance = patrolViewDistance;
         enemyPatrolLayerInt = LayerMask.NameToLayer("EnemyPatrol");
         enemyChaseLayerInt = LayerMask.NameToLayer("EnemyChase");
+        ghostLayerInt = LayerMask.NameToLayer("Ghost");
     }
 
     private void Update()
