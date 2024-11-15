@@ -1,48 +1,65 @@
 using UnityEngine;
+using System;
 
 public class FieldOfView : MonoBehaviour
 {
     public float patrolViewDistance;
     public float chaseViewDistance;
-    public LayerMask enemyViewLayer;
+    public LayerMask enemyPatrolLayer;
+    public LayerMask enemyChaseLayer;
+
+    private int enemyPatrolLayerInt;
+    private int enemyChaseLayerInt;
 
     private RaycastHit2D hit;
 
+    [Header("For Debug")]
+    public Transform targetTransform;
+
     [HideInInspector] public Color gizmoColor;
     [HideInInspector] public bool isTargetInSight;
-    public Transform targetTransform;
+    [HideInInspector] public bool isChasing;
     [HideInInspector] public float scanAngle;
     [HideInInspector] public float scanDistance;
-    [HideInInspector] public bool isChasing;
-    [HideInInspector] public Vector3 right45;
-    [HideInInspector] public Vector3 left45;
+    [HideInInspector] public Vector3 right45; // For patrol scan
+    [HideInInspector] public Vector3 left45; // For patrol scan
 
     private void Start()
     {
         scanDistance = patrolViewDistance;
+        enemyPatrolLayerInt = LayerMask.NameToLayer("EnemyPatrol");
+        enemyChaseLayerInt = LayerMask.NameToLayer("EnemyChase");
     }
 
     private void Update()
     {
         if (isChasing)
         {
-            hit = Physics2D.CircleCast(transform.position, chaseViewDistance, transform.up, 0.1f, enemyViewLayer);
+            hit = Physics2D.CircleCast(transform.position, chaseViewDistance, transform.up, 0.1f, enemyChaseLayer);
+            if (!hit)
+            {
+                isTargetInSight = false;
+                if (targetTransform != null)
+                {
+                    targetTransform.gameObject.layer = enemyPatrolLayerInt;
+                    Debug.Log("player in layer: " + enemyPatrolLayerInt);
+                    targetTransform = null;
+                }
+            }
         }
         else
         {
-            hit = Physics2D.Raycast(transform.position, transform.up, scanDistance, enemyViewLayer);
+            hit = Physics2D.Raycast(transform.position, transform.up, scanDistance, enemyPatrolLayer);
             PatrolScan();
+            if (hit && hit.transform.CompareTag("Player"))
+            {
+                isTargetInSight = hit;
+                targetTransform = hit.transform;
+                targetTransform.gameObject.layer = enemyChaseLayerInt;
+                Debug.Log("player in layer: " + enemyChaseLayerInt);
+            }
         }
-        if (hit && hit.transform.CompareTag("Player"))
-        {
-            isTargetInSight = hit;
-            targetTransform = hit.transform;
-        }
-        else 
-		{
-            isTargetInSight = false;
-            targetTransform = null;
-		}
+
     }
 
     private void PatrolScan()

@@ -13,6 +13,7 @@ public class EnemyAIController : StateController
     [SerializeField] private float maxStopPeriod;
     [SerializeField] private float minVelocity;
     [SerializeField] private float maxVelocity;
+    [SerializeField] private float chaseSpeed;
     [SerializeField] private float attackCD;
 
     [Header("For Dubug")]
@@ -20,7 +21,6 @@ public class EnemyAIController : StateController
     [SerializeField] private float movePeriodTimer;
     [SerializeField] private float stopPeriodTimer;
     [SerializeField] private float attackCDTimer;
-    [SerializeField] private float chaseSpeed;
 
     private FieldOfView view;
     private CapsuleCollider2D bodyCollider;
@@ -37,7 +37,6 @@ public class EnemyAIController : StateController
     protected override void Awake()
     {
         base.Awake();
-        chaseSpeed = actor.moveSpeed;
         view = GetComponentInChildren<FieldOfView>(); // Get from Eye
         bodyCollider = GetComponentInChildren<CapsuleCollider2D>(); // Get from BodyCollider
     }
