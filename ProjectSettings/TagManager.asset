@@ -8,7 +8,6 @@ TagManager:
   - Enemy
   - PressureTrigger
   - Item
-  - Wall
   layers:
   - Default
   - TransparentFX
@@ -18,9 +17,9 @@ TagManager:
   - UI
   - Player
   - Enemy
-  - EnemyView
-  - 
-  - 
+  - EnemyPatrol
+  - EnemyChase
+  - Ghost
   - 
   - 
   - 

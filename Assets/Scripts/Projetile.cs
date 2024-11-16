@@ -1,28 +1,27 @@
 using UnityEngine;
 
+// Used with Ejector to be shot
 public class Projetile : MonoBehaviour
 {
-    PlayerController playerbody;
-    EnemyBody enemyBody;
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            playerbody = other.GetComponent<PlayerController>();
-            if (playerbody != null)
+            Health playerHealth;
+            if (other.TryGetComponent<Health>(out playerHealth))
             {
-                playerbody.alive = false;
+                playerHealth.TakeDamage(1f);
                 Destroy(gameObject);
-            }
+			}
         }
         if (other.CompareTag("Enemy"))
         {
-            enemyBody = other.GetComponent<EnemyBody>();
-            if (enemyBody != null)
+            Health enemyHealth;
+            if (other.TryGetComponent<Health>(out enemyHealth))
             {
-                enemyBody.alive = false;
+                enemyHealth.TakeDamage(1f);
                 Destroy(gameObject);
-            }
+			}
         }
     }
 }

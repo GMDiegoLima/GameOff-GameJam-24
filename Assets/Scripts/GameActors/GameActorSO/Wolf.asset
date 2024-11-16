@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 189268109bf1644939bb40094eb958ff, type: 3}
   m_Name: Wolf
   m_EditorClassIdentifier: 
-  actorName: Wolf
+  actorTag: Wolf
   actorType: 2
-  moveSpeed: 5
+  moveSpeed: 3
   damage: 1
   attackRange: 2
   health: 1
   canFlay: 0
-  isControlledByAI: 1
+  isControlledByAI: 0
   controller: {fileID: 0}

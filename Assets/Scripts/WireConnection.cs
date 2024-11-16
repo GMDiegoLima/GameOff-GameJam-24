@@ -17,7 +17,12 @@ public class WireConnection : MonoBehaviour
     {
         bool isStraightWireEnabled = straightWire != null && straightWire.enabled;
         bool isCurvedWireEnabled = curvedWire != null && curvedWire.enabled;
-        if (isStraightWireEnabled || isCurvedWireEnabled)
+        if ((isStraightWireEnabled || isCurvedWireEnabled) && animator.GetBool("Bitten"))
+        {
+            enabled = false;
+            animator.SetBool("Enabled", false);
+        }
+        if (((isStraightWireEnabled || isCurvedWireEnabled) || (straightWire == null && curvedWire == null)) && !animator.GetBool("Bitten"))
         {
             enabled = true;
             animator.SetBool("Enabled", true);

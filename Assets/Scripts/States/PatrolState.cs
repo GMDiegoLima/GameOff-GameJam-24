@@ -16,7 +16,7 @@ public class PatrolState : IState
 
     public void Enter()
     {
-        Debug.Log(controller.actor.actorName + " Enter Patrol State");
+        Debug.Log(controller.actor.actorTag + " Enter Patrol State");
         controller.ChangeToPatrolView();
     }
 
@@ -28,7 +28,7 @@ public class PatrolState : IState
 
     public void Exit()
     {
-        Debug.Log(controller.actor.actorName + " Exit Patrol State");
+        Debug.Log(controller.actor.actorTag + " Exit Patrol State");
     }
 
     public void CheckTransition()

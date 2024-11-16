@@ -18,7 +18,7 @@ public class ChaseState : IState
 
     public void Enter()
     {
-        Debug.Log(controller.actor.actorName + " Enter Chase State");
+        Debug.Log(controller.actor.actorTag + " Enter Chase State");
         controller.ChangeToChaseView();
     }
 
@@ -30,7 +30,8 @@ public class ChaseState : IState
 
     public void Exit()
     {
-        Debug.Log(controller.actor.actorName + " Exit Chase State");
+        //controller.targetFootprints.Clear();
+        Debug.Log(controller.actor.actorTag + " Exit Chase State");
     }
 
 
@@ -56,5 +57,10 @@ public class ChaseState : IState
         Gizmos.color = Color.white;
         Vector2 dir = (controller.GetTargetTransform().position - controller.transform.position).normalized;
         Gizmos.DrawRay(controller.transform.position, dir * controller.actor.attackRange);
+
+        foreach(Vector3 v in controller.targetFootprints)
+        {
+            Gizmos.DrawWireSphere(v, 0.5f);
+		}
     }
 }

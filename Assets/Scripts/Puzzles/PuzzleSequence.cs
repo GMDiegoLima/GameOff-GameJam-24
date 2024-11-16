@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+// Create one sequence that need to be match to be solved
 public class PuzzleSequence : MonoBehaviour
 {
     public List<string> correctSequence;
@@ -31,6 +32,11 @@ public class PuzzleSequence : MonoBehaviour
             Debug.Log("Puzzle Solved!");
             onPuzzleSolved.Invoke();
         }
+    }
+
+    public void RemoveActivation(string triggerName)
+    {
+        playerSequence.Remove(triggerName);
     }
 
     private bool IsCorrectSoFar()

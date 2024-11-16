@@ -6,6 +6,9 @@ using TMPro;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private KeyCode embodyKey;
+    [SerializeField] private KeyCode pickKey;
+    [SerializeField] private KeyCode dropKey;
+
     private PlayerStateController playerStateController;
     private GameActorSOHolder gameActorSOHolder;
 
@@ -108,7 +111,7 @@ public class PlayerController : MonoBehaviour
                     Debug.Log("Left the body");
                 }
             }
-            if (Input.GetKeyDown("e") && nearbyItems.Count > 0)
+            if (Input.GetKeyDown(pickKey) && nearbyItems.Count > 0)
             {
                 GameObject closestItem = GetClosestItem();
                 if (heldItem)
@@ -122,7 +125,7 @@ public class PlayerController : MonoBehaviour
                 }
 
             }
-            if (Input.GetKeyDown("g") && heldItem != null)
+            if (Input.GetKeyDown(dropKey) && heldItem != null)
             {
                 DropItem();
             }
@@ -191,6 +194,7 @@ public class PlayerController : MonoBehaviour
         if (enemyBodyPrefab != null)
         {
             EnemyBody enemyBodyComponent = enemyBodyPrefab.AddComponent<EnemyBody>();
+            enemyBodyComponent.alive = false;
             enemyBodyComponent.bodyType = currentBody;
             currentBody = Bodies.Ghost;
 
@@ -267,7 +271,7 @@ public class PlayerController : MonoBehaviour
                 Debug.Log("Can embody: " + availableBody);
             }
         }
-        if (other.CompareTag("Item") && !flying)
+        if (other.CompareTag("Item") && currentBody != Bodies.Ghost)
         {
             nearbyItems.Add(other.gameObject);
         }

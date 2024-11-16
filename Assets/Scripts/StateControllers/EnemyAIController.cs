@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class EnemyAIController : StateController
 {
@@ -9,6 +11,9 @@ public class EnemyAIController : StateController
     [SerializeField] private float maxMovePeriod;
     [SerializeField] private float minStopPeriod;
     [SerializeField] private float maxStopPeriod;
+    [SerializeField] private float minVelocity;
+    [SerializeField] private float maxVelocity;
+    [SerializeField] private float chaseSpeed;
     [SerializeField] private float attackCD;
 
     [Header("For Dubug")]
@@ -16,11 +21,9 @@ public class EnemyAIController : StateController
     [SerializeField] private float movePeriodTimer;
     [SerializeField] private float stopPeriodTimer;
     [SerializeField] private float attackCDTimer;
-    [SerializeField] private float chaseSpeed;
-    [SerializeField] private float minVelocity;
-    [SerializeField] private float maxVelocity;
 
     private FieldOfView view;
+    private CapsuleCollider2D bodyCollider;
 
     private float movePeriod = 2f;
     private float stopPeriod = 2f;
@@ -28,13 +31,14 @@ public class EnemyAIController : StateController
     private bool isMovePeriodUpdated;
     private bool isStopPeriodUpdated;
 
+    public LinkedList<Vector3> targetFootprints = new(); // for chasing
+    private Vector3 nextFootprint = Vector3.positiveInfinity;
+
     protected override void Awake()
     {
         base.Awake();
-        chaseSpeed = actor.moveSpeed;
-        minVelocity = -actor.moveSpeed;
-        maxVelocity = actor.moveSpeed;
         view = GetComponentInChildren<FieldOfView>(); // Get from Eye
+        bodyCollider = GetComponentInChildren<CapsuleCollider2D>(); // Get from BodyCollider
     }
 
     protected override void Start()
@@ -111,25 +115,59 @@ public class EnemyAIController : StateController
 
     public void Chase(Transform aTarget)
     {
-        if (!isMoving) isMoving = true;
-        velocity = chaseSpeed * (aTarget.position - transform.position).normalized;
+        // Record the target's footsprints and follow it
+        if (!isMoving)
+        {
+            isMoving = true;
+            stopPeriodTimer = 0f;
+        }
+
+        if (targetFootprints.Count == 0)
+        { 
+            targetFootprints.AddLast(aTarget.position);
+		}
+        else if ((aTarget.position - targetFootprints.Last.Value).magnitude > 1f)
+        {
+            // Don't add the footsprint if too close to the last one
+            targetFootprints.AddLast(aTarget.position);
+        }
+
+        nextFootprint = targetFootprints.First.Value;
+        velocity = chaseSpeed * (nextFootprint - transform.position).normalized;
+
+        if ((transform.position - nextFootprint).magnitude < 0.1f && targetFootprints.Count != 0)
+        {
+            targetFootprints.RemoveFirst();
+        }
+
         Vector3 playerDir = aTarget.position - transform.position;
         view.transform.rotation = Quaternion.Euler(playerDir);
     }
 
     public void Seek() 
 	{
-	    // Now seek is just to keep the same velocity for 3 sec
+        // Follow the remaining footprints
+        if (!isMoving) isMoving = true;
+        nextFootprint = targetFootprints.First.Value;
+        velocity = chaseSpeed * (nextFootprint - transform.position).normalized;
+        if ((transform.position - nextFootprint).magnitude < 0.1f && targetFootprints.Count != 0)
+        {
+            targetFootprints.RemoveFirst();
+        }
 	}
 
     public override void Dead()
     {
-        transform.tag = "DeadBody";
         anim.SetBool("Dead", true);
+        gameObject.tag = "DeadBody";
+        velocity = Vector2.zero;
+        view.enabled = false;
+        bodyCollider.enabled = false;
         this.enabled = false;
 	}
 
     // -------------- States --------------
+
 
     private void HandleAnim()
     { 
@@ -241,5 +279,6 @@ public class EnemyAIController : StateController
             SetViewGizmoColor(currentState.GizmoColor);
         }
         currentState.DrawGizmos();
+
     }
 }
