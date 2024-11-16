@@ -3,7 +3,7 @@ using UnityEngine;
 public class DoorWired : MonoBehaviour
 {
     public WireConnection connectedWire;
-    public Collider2D collider;
+    Collider2D collider;
     Animator animator;
 
     void Start()
