@@ -17,9 +17,18 @@ public class PlayerStateController : StateController
         playerController = GetComponent<PlayerController>();
     }
 
+    protected override void Start()
+    {
+        UpdateActorController();
+        currentState = new AliveState(this);
+        currentState.Enter();
+    }
+
     protected override void Update()
     {
         base.Update();
+
+        attackCDTimer = Mathf.Clamp(attackCDTimer + Time.deltaTime, 0f, attackCD);
         HandleAttack();
     }
 
@@ -28,15 +37,8 @@ public class PlayerStateController : StateController
         Destroy(actor);
     }
 
-    public void UpdateActorController()
-    {
-        actor.isControlledByAI = false;
-        actor.controller = this;
-    }
-
-    private void HandleAttack()
+    public void HandleAttack()
     { 
-        attackCDTimer = Mathf.Clamp(attackCDTimer + Time.deltaTime, 0f, attackCD);
         if (Input.GetKeyDown(attackKey) && attackCDTimer >= attackCD)
         {
             Attack();
@@ -44,24 +46,33 @@ public class PlayerStateController : StateController
         }
     }
 
-    // ------------ State -------------
     public override void Attack()
     {
         Debug.Log(actor.actorTag + "::Attack()");
         anim.Play("Attack");
         Vector2 dir = new Vector2(anim.GetFloat("LastHorizontal"), anim.GetFloat("LastVertical")).normalized;
-        RaycastHit2D hit = Physics2D.BoxCast(transform.position, new Vector2(1, 1), 0, 
-			                                dir, actor.attackRange, attackTargetLayer);
+        RaycastHit2D hit = Physics2D.BoxCast(transform.position, new Vector2(1, 1), 0,
+                                            dir, actor.attackRange, attackTargetLayer);
         if (hit)
         {
-            Health enemyHealth;  
-			if (hit.transform.TryGetComponent<Health>(out enemyHealth))
+            if (hit.transform.TryGetComponent<Health>(out Health enemyHealth))
             {
                 enemyHealth.TakeDamage(actor.damage);
-                Debug.Log("Hit someone");
+                Debug.Log("Attack someone");
+            }
+            if (actor.actorType == ActorType.Wolf && hit.transform.TryGetComponent<IBiteable>(out IBiteable aBiteable))
+            {
+                aBiteable.GetBit();
+                Debug.Log("Bit something");
             }
         }
     }
+
+    // ------------ State -------------
+    public void Alive()
+    { 
+        // For initial state
+	}
 
     public override void Dead()
     {
@@ -69,6 +80,17 @@ public class PlayerStateController : StateController
         playerController.alive = false;
     }
     // ------------ State -------------
+
+    public void UpdateActorController()
+    {
+        actor.isControlledByAI = false;
+        actor.controller = this;
+    }
+
+    public bool IsActorMoving()
+    {
+        return !(anim.GetFloat("Horizontal") == 0 && anim.GetFloat("Vertical") == 0);
+	}
 
     public bool IsActorDead()
     {
