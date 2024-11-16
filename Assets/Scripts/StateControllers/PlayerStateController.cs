@@ -1,10 +1,12 @@
 using UnityEngine;
+using System.Collections;
 
 public class PlayerStateController : StateController
 {
     [SerializeField] KeyCode attackKey;
     [SerializeField] float attackCD;
     [SerializeField] LayerMask attackTargetLayer;
+    [SerializeField] GameObject bonePrefab;
 
     [Header("For Debug")]
     [SerializeField] float attackCDTimer;
@@ -51,6 +53,13 @@ public class PlayerStateController : StateController
         Debug.Log(actor.actorTag + "::Attack()");
         anim.Play("Attack");
         Vector2 dir = new Vector2(anim.GetFloat("LastHorizontal"), anim.GetFloat("LastVertical")).normalized;
+
+        if (actor.actorType == ActorType.Skeleton)
+        {
+            ThrowBone(dir);
+            return;
+		}
+
         RaycastHit2D hit = Physics2D.BoxCast(transform.position, new Vector2(1, 1), 0,
                                             dir, actor.attackRange, attackTargetLayer);
         if (hit)
@@ -93,15 +102,29 @@ public class PlayerStateController : StateController
         actor.controller = this;
     }
 
-    public bool IsActorMoving()
-    {
-        return !(anim.GetFloat("Horizontal") == 0 && anim.GetFloat("Vertical") == 0);
-	}
-
     public bool IsActorDead()
     {
         return health.currentHealth <= 0;
 	}
+    
+    private void ThrowBone(Vector2 dir)
+    {
+        Debug.Log("Throw bone");
+        GameObject theBone = Instantiate(bonePrefab, transform.position, Quaternion.identity);
+        StartCoroutine(BoneLaunchRoutine(theBone, dir));
+	}
+
+    IEnumerator BoneLaunchRoutine(GameObject aBone, Vector2 dir)
+    {
+        Vector3 bonePos = aBone.transform.position;
+        Vector3 endPos = bonePos + (Vector3)dir * 3f;
+        while (bonePos != endPos)
+        {
+            aBone.transform.position = Vector3.MoveTowards(aBone.transform.position, endPos, 3f * Time.deltaTime);
+            yield return new WaitWhile(() => aBone.transform.position == endPos);
+        }
+    }
+
 
     private void OnDrawGizmos()
     {
