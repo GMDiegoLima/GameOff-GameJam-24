@@ -7,17 +7,11 @@ public class AttackState : IState
     public string Name { get => name; set => name = value; }
     public Color GizmoColor { get => gizmoColor; set => gizmoColor = value; }
 
-    private StateController controller;
+    private EnemyAIController controller;
     
     public AttackState(EnemyAIController anEnemyAIController)
     {
         controller = anEnemyAIController;
-	}
-
-    // Player can also use this state
-    public AttackState(PlayerStateController aPlayerStateController)
-    {
-        controller = aPlayerStateController;
 	}
 
     public void Enter()
@@ -38,39 +32,27 @@ public class AttackState : IState
 
     
     public void CheckTransition()
-    { 
-        if (controller.actor.isControlledByAI)
+    {
+        if (!controller.IsTargetInAttackRange())
         {
-            var enemyAIController = (EnemyAIController)controller;
-            if (!enemyAIController.IsTargetInAttackRange())
-            {
-                controller.TransitionToState(new ChaseState(enemyAIController, enemyAIController.GetTargetTransform()));
-            }
-            if (!enemyAIController.IsTargetInSight())
-            {
-                controller.TransitionToState(new SeekState(enemyAIController));
-            }
-            if (enemyAIController.IsActorDead())
-            {
-                controller.TransitionToState(new DeadState(enemyAIController));
-			}
+            controller.TransitionToState(new ChaseState(controller, controller.GetTargetTransform()));
         }
-        else
-        { 
-            var playerStateController = (PlayerStateController)controller;
-            if (playerStateController.IsActorDead())
-            {
-                controller.TransitionToState(new DeadState(playerStateController));
-			}
-		}
-    }
+        if (!controller.IsTargetInSight())
+        {
+            controller.TransitionToState(new SeekState(controller));
+        }
+        if (controller.IsActorDead())
+        {
+            controller.TransitionToState(new DeadState(controller));
+        }
+}
 
     public void DrawGizmos()
     {
         if (controller.actor.isControlledByAI)
         {
             Gizmos.color = Color.red;
-            Vector2 dir = (((EnemyAIController)controller).GetTargetTransform().position - controller.transform.position).normalized;
+            Vector2 dir = (controller.GetTargetTransform().position - controller.transform.position).normalized;
             Gizmos.DrawRay(controller.transform.position, dir * controller.actor.attackRange);
         }
     }

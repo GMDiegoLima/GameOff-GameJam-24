@@ -211,14 +211,14 @@ MonoBehaviour:
   maxMovePeriod: 2
   minStopPeriod: 1
   maxStopPeriod: 2
+  minVelocity: 0
+  maxVelocity: 0
+  chaseSpeed: 0
   attackCD: 3
   isMoving: 0
   movePeriodTimer: 0
   stopPeriodTimer: 0
   attackCDTimer: 0
-  chaseSpeed: 0
-  minVelocity: 0
-  maxVelocity: 0
 --- !u!114 &2350636821554187055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,12 +266,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1020663912763633245, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
+      propertyPath: ghostLayer.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 1020663912763633245, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
       propertyPath: patrolViewDistance
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1020663912763633245, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
       propertyPath: targetLayer.m_Bits
       value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1020663912763633245, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
+      propertyPath: enemyViewLayer.m_Bits
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 6029557757394872174, guid: e85fe7389dbb34b7ca31b85d716202c5, type: 3}
       propertyPath: m_LocalPosition.x
