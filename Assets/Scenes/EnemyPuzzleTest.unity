@@ -5965,10 +5965,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3034644213434563346, guid: 98ace3a7e2f7d894fbd09d390e488fb9, type: 3}
-      propertyPath: bonePrefab
-      value: 
-      objectReference: {fileID: 8306940293054401521, guid: 2b005f546af4c4ba7b3a68764b4e449f, type: 3}
     - target: {fileID: 5101954939185985587, guid: 98ace3a7e2f7d894fbd09d390e488fb9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.96
@@ -6008,10 +6004,6 @@ PrefabInstance:
     - target: {fileID: 5101954939185985587, guid: 98ace3a7e2f7d894fbd09d390e488fb9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7027632970052796844, guid: 98ace3a7e2f7d894fbd09d390e488fb9, type: 3}
-      propertyPath: orthographic size
-      value: 3.1354167
       objectReference: {fileID: 0}
     - target: {fileID: 7772584563165250645, guid: 98ace3a7e2f7d894fbd09d390e488fb9, type: 3}
       propertyPath: m_Name
