@@ -5,12 +5,9 @@ public class FieldOfView : MonoBehaviour
 {
     public float patrolViewDistance;
     public float chaseViewDistance;
-    public LayerMask enemyPatrolLayer;
-    public LayerMask enemyChaseLayer;
+    public LayerMask enemyViewLayer;
     public LayerMask ghostLayer;
 
-    private int enemyPatrolLayerInt;
-    private int enemyChaseLayerInt;
     private int ghostLayerInt;
 
     private RaycastHit2D hit;
@@ -29,8 +26,6 @@ public class FieldOfView : MonoBehaviour
     private void Start()
     {
         scanDistance = patrolViewDistance;
-        enemyPatrolLayerInt = LayerMask.NameToLayer("EnemyPatrol");
-        enemyChaseLayerInt = LayerMask.NameToLayer("EnemyChase");
         ghostLayerInt = LayerMask.NameToLayer("Ghost");
     }
 
@@ -38,28 +33,24 @@ public class FieldOfView : MonoBehaviour
     {
         if (isChasing)
         {
-            hit = Physics2D.CircleCast(transform.position, chaseViewDistance, transform.up, 0.1f, enemyChaseLayer);
-            if (!hit)
-            {
+            float dis = (targetTransform.position - transform.position).magnitude;
+            if (dis > chaseViewDistance)
+            { 
                 isTargetInSight = false;
-                if (targetTransform != null)
-                {
-                    targetTransform.gameObject.layer = enemyPatrolLayerInt;
-                    Debug.Log("player in layer: " + enemyPatrolLayerInt);
-                    targetTransform = null;
-                }
-            }
+			}
+            else 
+			{ 
+                isTargetInSight = true;
+			}
         }
         else
         {
-            hit = Physics2D.Raycast(transform.position, transform.up, scanDistance, enemyPatrolLayer);
+            hit = Physics2D.Raycast(transform.position, transform.up, scanDistance, enemyViewLayer);
             PatrolScan();
             if (hit && hit.transform.CompareTag("Player"))
             {
                 isTargetInSight = hit;
                 targetTransform = hit.transform;
-                targetTransform.gameObject.layer = enemyChaseLayerInt;
-                Debug.Log("player in layer: " + enemyChaseLayerInt);
             }
         }
 

@@ -19,6 +19,7 @@ public class ChaseState : IState
     public void Enter()
     {
         Debug.Log(controller.actor.actorTag + " Enter Chase State");
+        controller.targetFootprints.Clear();
         controller.ChangeToChaseView();
     }
 
