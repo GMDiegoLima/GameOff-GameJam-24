@@ -54,6 +54,7 @@ public class PlayerStateController : StateController
         anim.Play("Attack");
         Vector2 dir = new Vector2(anim.GetFloat("LastHorizontal"), anim.GetFloat("LastVertical")).normalized;
 
+        // Attack based on current actor type
         if (actor.actorType == ActorType.Skeleton)
         {
             ThrowBone(dir);

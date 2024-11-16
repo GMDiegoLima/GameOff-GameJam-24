@@ -11,8 +11,10 @@ public class PlayerController : MonoBehaviour
 
     private PlayerStateController playerStateController;
     private GameActorSOHolder gameActorSOHolder;
+    private int ghostLayerInt;
+    private int enemyViewLayerInt;
 
-    public float speed;
+    //public float speed;
     Rigidbody2D characterBody;
     Vector2 velocity;
     Vector2 direction;
@@ -50,12 +52,15 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         _animator = GetComponent<Animator>();
-        velocity = new Vector2(speed, speed);
         characterBody = GetComponent<Rigidbody2D>();
         originalAnimatorController = _animator.runtimeAnimatorController; 
         _spriteRenderer = GetComponent<SpriteRenderer>();
         playerStateController = GetComponent<PlayerStateController>();
         gameActorSOHolder = GetComponent<GameActorSOHolder>();
+        ghostLayerInt = LayerMask.NameToLayer("Ghost");
+        enemyViewLayerInt = LayerMask.NameToLayer("EnemyView");
+
+        UpdateActorState(); // update velocity and canFly based on actor 
     }
 
     void Update()
@@ -187,6 +192,7 @@ public class PlayerController : MonoBehaviour
         }
         UpdateActorState();
         playerStateController.UpdateActorController();
+        gameObject.layer = enemyViewLayerInt;
     }
 
     void Disembody()
@@ -206,13 +212,15 @@ public class PlayerController : MonoBehaviour
 
             playerStateController.actor = gameActorSOHolder.ghost;
             UpdateActorState();
+            gameObject.layer = ghostLayerInt;
         }
     }
 
     void UpdateActorState()
     { 
         flying = playerStateController.actor.canFlay;
-        speed = playerStateController.actor.moveSpeed;
+        float speed = playerStateController.actor.moveSpeed;
+        velocity = new Vector2(speed, speed);
 	}
 
     GameObject GetClosestItem()
