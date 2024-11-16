@@ -6,7 +6,7 @@ public class PlayerStateController : StateController
     [SerializeField] KeyCode attackKey;
     [SerializeField] float attackCD;
     [SerializeField] LayerMask attackTargetLayer;
-    [SerializeField] GameObject bonePrefab;
+    [SerializeField] GameObject bonePrefab; // For Skeleton
 
     [Header("For Debug")]
     [SerializeField] float attackCDTimer;
