@@ -45,6 +45,7 @@ public class EnemyAIController : StateController
     {
         actor.isControlledByAI = true;
         currentState = new PatrolState(this);
+        currentState.Enter();
         UpdateScanAngle();
     }
 

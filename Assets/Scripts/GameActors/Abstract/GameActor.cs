@@ -23,7 +23,6 @@ public class GameActor : ScriptableObject
     public float health;
     public bool canFlay;
 
-
     [HideInInspector] public bool isControlledByAI; // Setup by EnemyAIController
     [HideInInspector] public StateController controller;
 }
