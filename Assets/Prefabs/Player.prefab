@@ -91,7 +91,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackerSettings:
     BindingMode: 4
-    PositionDamping: {x: 1, y: 1, z: 1}
+    PositionDamping: {x: 0, y: 0, z: 0}
     AngularDampingMode: 0
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
@@ -181,7 +181,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 3.3020833
+  orthographic size: 3.1354167
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -813,7 +813,6 @@ MonoBehaviour:
   embodyKey: 113
   pickKey: 101
   dropKey: 103
-  speed: 7
   currentBody: 0
   embodyText: {fileID: 428538844500421307}
   alive: 1
@@ -860,6 +859,7 @@ MonoBehaviour:
   attackTargetLayer:
     serializedVersion: 2
     m_Bits: 128
+  bonePrefab: {fileID: 8306940293054401521, guid: 2b005f546af4c4ba7b3a68764b4e449f, type: 3}
   attackCDTimer: 0
 --- !u!114 &3666151093451807533
 MonoBehaviour:
