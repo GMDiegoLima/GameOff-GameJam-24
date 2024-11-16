@@ -25,13 +25,18 @@ public class FieldOfView : MonoBehaviour
 
     private void Start()
     {
+        targetTransform = FindFirstObjectByType<PlayerController>().transform;
         scanDistance = patrolViewDistance;
         ghostLayerInt = LayerMask.NameToLayer("Ghost");
     }
 
     private void Update()
     {
-        if (isChasing)
+        if (targetTransform.gameObject.layer == ghostLayerInt)
+        {
+            isTargetInSight = false;	
+		}
+        else if (isChasing)
         {
             float dis = (targetTransform.position - transform.position).magnitude;
             if (dis > chaseViewDistance)
@@ -49,8 +54,7 @@ public class FieldOfView : MonoBehaviour
             PatrolScan();
             if (hit && hit.transform.CompareTag("Player"))
             {
-                isTargetInSight = hit;
-                targetTransform = hit.transform;
+                isTargetInSight = true;
             }
         }
 
