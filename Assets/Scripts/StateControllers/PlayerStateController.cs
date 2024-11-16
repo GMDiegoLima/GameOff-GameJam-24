@@ -27,7 +27,7 @@ public class PlayerStateController : StateController
     protected override void Update()
     {
         base.Update();
-        currentState.Update();
+
         attackCDTimer = Mathf.Clamp(attackCDTimer + Time.deltaTime, 0f, attackCD);
         HandleAttack();
     }
@@ -55,11 +55,15 @@ public class PlayerStateController : StateController
                                             dir, actor.attackRange, attackTargetLayer);
         if (hit)
         {
-            Health enemyHealth;
-            if (hit.transform.TryGetComponent<Health>(out enemyHealth))
+            if (hit.transform.TryGetComponent<Health>(out Health enemyHealth))
             {
                 enemyHealth.TakeDamage(actor.damage);
-                Debug.Log("Hit someone");
+                Debug.Log("Attack someone");
+            }
+            if (actor.actorType == ActorType.Wolf && hit.transform.TryGetComponent<IBiteable>(out IBiteable aBiteable))
+            {
+                aBiteable.GetBit();
+                Debug.Log("Bit something");
             }
         }
     }
