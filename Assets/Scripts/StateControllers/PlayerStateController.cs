@@ -55,15 +55,21 @@ public class PlayerStateController : StateController
                                             dir, actor.attackRange, attackTargetLayer);
         if (hit)
         {
+            Debug.Log("Hit");
             if (hit.transform.TryGetComponent<Health>(out Health enemyHealth))
             {
-                enemyHealth.TakeDamage(actor.damage);
                 Debug.Log("Attack someone");
+                enemyHealth.TakeDamage(actor.damage);
             }
             if (actor.actorType == ActorType.Wolf && hit.transform.TryGetComponent<IBiteable>(out IBiteable aBiteable))
             {
-                aBiteable.GetBit();
                 Debug.Log("Bit something");
+                aBiteable.GetBit();
+            }
+            if (actor.actorType == ActorType.Goblin && hit.transform.TryGetComponent<ICuttable>(out ICuttable aCuttable))
+            {
+                Debug.Log("Cut something");
+                aCuttable.GetCut();
             }
         }
     }
