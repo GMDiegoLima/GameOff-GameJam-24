@@ -1,21 +1,17 @@
 using UnityEngine;
-using System.Collections;
 
 public class Stone : MonoBehaviour, IBlowable
 {
-    public void GetBlow(Vector2 dir)
+    Rigidbody2D body;
+
+    private void Awake()
+    {
+        body = GetComponent<Rigidbody2D>();
+    }
+
+    public void GetBlow(Vector2 dir, float force)
     {
         Debug.Log("Stone get blow");
-        StartCoroutine(GetBlowRoutine(dir));
+        body.AddForce(dir * force, ForceMode2D.Impulse);
 	}
-
-    IEnumerator GetBlowRoutine(Vector2 dir)
-    { 
-        Vector3 endPos = transform.position + (Vector3)dir * 3f;
-        while (true)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, endPos, 3f * Time.deltaTime);
-            yield return new WaitWhile(() => transform.position == endPos);
-        }
-    }
 }

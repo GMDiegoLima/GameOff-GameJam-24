@@ -8,6 +8,12 @@ public class PlayerStateController : StateController
     [SerializeField] LayerMask attackTargetLayer;
     [SerializeField] GameObject bonePrefab; // For Skeleton
 
+    [Header("For FatBat")]
+    [SerializeField] float blowForce;
+
+    [Header("For Skeleton")]
+    [SerializeField] float throwForce;
+
     [Header("For Debug")]
     [SerializeField] float attackCDTimer;
 
@@ -84,7 +90,7 @@ public class PlayerStateController : StateController
             else if (actor.actorType == ActorType.Fatbat && hit.transform.TryGetComponent<IBlowable>(out IBlowable aBlowable))
             { 
                 Debug.Log("Blow something");
-                aBlowable.GetBlow(dir);
+                aBlowable.GetBlow(dir, blowForce);
 			}
         }
     }
@@ -116,8 +122,9 @@ public class PlayerStateController : StateController
     private void ThrowBone(Vector2 dir)
     {
         Debug.Log("Throw bone");
-        GameObject theBone = Instantiate(bonePrefab, transform.position, Quaternion.identity);
-        StartCoroutine(BoneLaunchRoutine(theBone, dir));
+        GameObject theBone = Instantiate(bonePrefab, transform.position + (Vector3)dir, Quaternion.identity);
+        theBone.GetComponent<Rigidbody2D>().AddForce(dir * throwForce, ForceMode2D.Impulse);
+        //StartCoroutine(BoneLaunchRoutine(theBone, dir));
 	}
 
     IEnumerator BoneLaunchRoutine(GameObject aBone, Vector2 dir)

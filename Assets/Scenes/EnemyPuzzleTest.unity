@@ -6962,6 +6962,7 @@ GameObject:
   - component: {fileID: 2015413956}
   - component: {fileID: 2015413955}
   - component: {fileID: 2015413954}
+  - component: {fileID: 2015413958}
   m_Layer: 7
   m_Name: Stone
   m_TagString: Untagged
@@ -7097,6 +7098,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &2015413958
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015413953}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 10
+  m_LinearDamping: 1
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!4 &2079792151 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6271610525284946468, guid: 1c06ca1406631944da3858e71d81651b, type: 3}
