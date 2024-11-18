@@ -11,7 +11,7 @@ public abstract class StateController : MonoBehaviour
     protected SpriteRenderer sprite;
     protected Health health;
 
-    public bool isPoisoned;
+    [HideInInspector] public bool isPoisoned;
 
     protected virtual void Awake()
     {

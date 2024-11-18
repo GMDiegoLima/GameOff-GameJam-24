@@ -7,7 +7,7 @@ public class PoisonousArea : MonoBehaviour
     [SerializeField] float damage;
     [SerializeField] float poisonCD;
 
-    private BoxCollider2D boxCollider;
+    private BoxCollider2D boxCollider; 
 
     private void Awake()
     {

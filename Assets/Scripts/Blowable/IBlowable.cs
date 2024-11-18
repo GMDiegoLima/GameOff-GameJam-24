@@ -1,4 +1,6 @@
+using UnityEngine;
+
 public interface IBlowable
 {
-    public void GetBlow();
+    public void GetBlow(Vector2 dir);
 }
