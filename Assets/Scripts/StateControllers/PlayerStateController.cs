@@ -84,7 +84,7 @@ public class PlayerStateController : StateController
             else if (actor.actorType == ActorType.Fatbat && hit.transform.TryGetComponent<IBlowable>(out IBlowable aBlowable))
             { 
                 Debug.Log("Blow something");
-                aBlowable.GetBlow();
+                aBlowable.GetBlow(dir);
 			}
         }
     }
@@ -124,7 +124,8 @@ public class PlayerStateController : StateController
     {
         Vector3 bonePos = aBone.transform.position;
         Vector3 endPos = bonePos + (Vector3)dir * 3f;
-        while (bonePos != endPos)
+
+        while (true)
         {
             aBone.transform.position = Vector3.MoveTowards(aBone.transform.position, endPos, 3f * Time.deltaTime);
             yield return new WaitWhile(() => aBone.transform.position == endPos);

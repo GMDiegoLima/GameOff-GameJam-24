@@ -22,8 +22,8 @@ public class PatrolState : IState
 
     public void Update()
     {
-        controller.Patrol();
         CheckTransition();
+        controller.Patrol();
     }
 
     public void Exit()

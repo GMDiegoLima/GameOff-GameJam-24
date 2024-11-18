@@ -11,6 +11,8 @@ public abstract class StateController : MonoBehaviour
     protected SpriteRenderer sprite;
     protected Health health;
 
+    [HideInInspector] public bool isPoisoned;
+
     protected virtual void Awake()
     {
         body = GetComponent<Rigidbody2D>();

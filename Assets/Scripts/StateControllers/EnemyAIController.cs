@@ -39,13 +39,13 @@ public class EnemyAIController : StateController
         base.Awake();
         view = GetComponentInChildren<FieldOfView>(); // Get from Eye
         bodyCollider = GetComponentInChildren<CapsuleCollider2D>(); // Get from BodyCollider
+        actor.isControlledByAI = true;
+        currentState = new PatrolState(this);
+        currentState.Enter();
     }
 
     protected override void Start()
     {
-        actor.isControlledByAI = true;
-        currentState = new PatrolState(this);
-        currentState.Enter();
         UpdateScanAngle();
     }
 
@@ -230,7 +230,7 @@ public class EnemyAIController : StateController
 
     public bool IsActorDead()
     {
-        return health.currentHealth <= 0;
+        return health.currentHealth <= 0f;
 	}
 
     public bool IsTargetInSight()
