@@ -855,12 +855,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actor: {fileID: 11400000, guid: 6d29fdb14380547579a4d5d05ed59e1d, type: 2}
+  isPoisoned: 0
   attackKey: 106
   attackCD: 1.5
   attackTargetLayer:
     serializedVersion: 2
     m_Bits: 128
   bonePrefab: {fileID: 8306940293054401521, guid: 2b005f546af4c4ba7b3a68764b4e449f, type: 3}
+  blowForce: 5
+  throwForce: 3
   attackCDTimer: 0
 --- !u!114 &3666151093451807533
 MonoBehaviour:
