@@ -8,6 +8,7 @@ public class TutorialDig : MonoBehaviour
     public GameObject background;
     public TextMeshProUGUI disembodyText;
     public TextMeshProUGUI digText;
+    public Health skeletonHealth;
     bool canDig;
     bool dug = false;
     bool embodied = false;
@@ -22,6 +23,7 @@ public class TutorialDig : MonoBehaviour
             digText.enabled = false;
             transform.Find("Coffin").gameObject.SetActive(true);
             transform.Find("Skeleton").gameObject.SetActive(true);
+            skeletonHealth.currentHealth = 0f;
         }
 
         if (Input.GetKeyDown("q") && dug && canDig)
