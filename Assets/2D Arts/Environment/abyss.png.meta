@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      abyss_0: 7455004350058920043
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
