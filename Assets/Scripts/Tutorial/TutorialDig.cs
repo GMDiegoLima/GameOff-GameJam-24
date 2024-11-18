@@ -13,6 +13,11 @@ public class TutorialDig : MonoBehaviour
     bool embodied = false;
     public GameObject lastDialogue;
 
+    private void Start()
+    {
+        
+    }
+
     void Update()
     {
         if (Input.GetKeyDown("e") && !player.flying && !dug && canDig)
@@ -21,7 +26,9 @@ public class TutorialDig : MonoBehaviour
             disembodyText.enabled = true;
             digText.enabled = false;
             transform.Find("Coffin").gameObject.SetActive(true);
-            transform.Find("Skeleton").gameObject.SetActive(true);
+            GameObject skeleton = transform.Find("Skeleton").gameObject;
+            skeleton.SetActive(true);
+            skeleton.GetComponent<Health>().maxHealth = 0;
         }
 
         if (Input.GetKeyDown("q") && dug && canDig)
