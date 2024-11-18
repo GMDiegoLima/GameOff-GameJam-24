@@ -8,6 +8,7 @@ public class TutorialDig : MonoBehaviour
     public GameObject background;
     public TextMeshProUGUI disembodyText;
     public TextMeshProUGUI digText;
+    public Health skeletonHealth;
     bool canDig;
     bool dug = false;
     bool embodied = false;
