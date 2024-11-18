@@ -138,6 +138,7 @@ public class PlayerController : MonoBehaviour
             {
                 heldItem.transform.position = itemHoldPosition.position;
             }
+            gameOver.SetActive(false);
         }
         else
         {
