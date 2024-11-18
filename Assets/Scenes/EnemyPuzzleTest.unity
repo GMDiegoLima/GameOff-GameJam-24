@@ -6283,6 +6283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d753e75a88f144bb894b844e2adb1e0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  balanceItem: {fileID: 0}
 --- !u!212 &1155294187
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6560,7 +6561,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5640444739511689665, guid: 1c06ca1406631944da3858e71d81651b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6271610525284946468, guid: 1c06ca1406631944da3858e71d81651b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6621,7 +6622,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 758673646730616367, guid: 1eabea1b4111acd449aec41eba28d58a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2476882757876158681, guid: 1eabea1b4111acd449aec41eba28d58a, type: 3}
       propertyPath: maxMovePeriod
