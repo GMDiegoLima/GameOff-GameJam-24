@@ -71,16 +71,21 @@ public class PlayerStateController : StateController
                 Debug.Log("Attack someone");
                 enemyHealth.TakeDamage(actor.damage);
             }
-            if (actor.actorType == ActorType.Wolf && hit.transform.TryGetComponent<IBiteable>(out IBiteable aBiteable))
+            else if (actor.actorType == ActorType.Wolf && hit.transform.TryGetComponent<IBiteable>(out IBiteable aBiteable))
             {
                 Debug.Log("Bit something");
                 aBiteable.GetBit();
             }
-            if (actor.actorType == ActorType.Goblin && hit.transform.TryGetComponent<ICuttable>(out ICuttable aCuttable))
+            else if (actor.actorType == ActorType.Goblin && hit.transform.TryGetComponent<ICuttable>(out ICuttable aCuttable))
             {
                 Debug.Log("Cut something");
                 aCuttable.GetCut();
             }
+            else if (actor.actorType == ActorType.Fatbat && hit.transform.TryGetComponent<IBlowable>(out IBlowable aBlowable))
+            { 
+                Debug.Log("Blow something");
+                aBlowable.GetBlow();
+			}
         }
     }
 
