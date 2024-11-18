@@ -77,6 +77,14 @@ public class PlayerStateController : StateController
                 Debug.Log("Attack someone");
                 enemyHealth.TakeDamage(actor.damage);
             }
+            else if (actor.actorType == ActorType.Fatbat)
+            { 
+                Debug.Log("Blow something");
+                if (hit.transform.TryGetComponent<Rigidbody2D>(out Rigidbody2D aBody))
+                {
+                    aBody.AddForce(dir * blowForce, ForceMode2D.Impulse);
+				}
+			}
             else if (actor.actorType == ActorType.Wolf && hit.transform.TryGetComponent<IBiteable>(out IBiteable aBiteable))
             {
                 Debug.Log("Bit something");
@@ -87,11 +95,6 @@ public class PlayerStateController : StateController
                 Debug.Log("Cut something");
                 aCuttable.GetCut();
             }
-            else if (actor.actorType == ActorType.Fatbat && hit.transform.TryGetComponent<IBlowable>(out IBlowable aBlowable))
-            { 
-                Debug.Log("Blow something");
-                aBlowable.GetBlow(dir, blowForce);
-			}
         }
     }
 
