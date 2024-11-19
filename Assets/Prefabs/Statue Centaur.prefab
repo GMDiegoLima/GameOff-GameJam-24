@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3393326115221774309}
   - component: {fileID: 5736582185246893705}
   m_Layer: 0
-  m_Name: Statue lamia
+  m_Name: Statue Centaur
   m_TagString: PressureTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,7 +96,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.0053189397, y: -0.5603967}
+  m_Offset: {x: 0.0053189397, y: -0.58845806}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -106,7 +106,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.8829826, y: 0.49620724}
+  m_Size: {x: 0.8829826, y: 0.44008446}
   m_EdgeRadius: 0
 --- !u!212 &3393326115221774309
 SpriteRenderer:
@@ -152,7 +152,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: -2394322552645861191, guid: 9a139948ad083374894b9ae062256997, type: 3}
+  m_Sprite: {fileID: 4980041100063456034, guid: 01efd59c1a7a8b941b91ca3569169172, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -197,7 +197,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.0053191185, y: -0.5504286}
+  m_Offset: {x: 0.0053191185, y: -0.5897274}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -207,5 +207,5 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.0680861, y: 0.7012477}
+  m_Size: {x: 1.0680861, y: 0.62265015}
   m_EdgeRadius: 0

@@ -1,7 +1,7 @@
 using UnityEngine;
 
 // Used to kill one character when fall into the hole
-public class Hole : MonoBehaviour
+public class Abyss : MonoBehaviour
 {
     public GameObject player;
     PlayerController playerScript;

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8527af864503a470a8014d968c41228f
+guid: 01efd59c1a7a8b941b91ca3569169172
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6471283316645381607
-    second: dungeon door_0
+      213: 4980041100063456034
+    second: centaur_statue_object_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dungeon door_0
+      name: centaur_statue_object_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 16
-        height: 16
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,30 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7e54f81e3ed9ec950800000000000000
-      internalID: 6471283316645381607
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dungeon door_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f7b69a733ab9ac843ac02bb0f720a2dc
-      internalID: -425525272
+      spriteID: 22bb020cef8ac1540800000000000000
+      internalID: 4980041100063456034
       vertices: []
       indices: 
       edges: []
@@ -160,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2acd6adb87d87ee4180f148a2260df3f
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -170,8 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      dungeon door_0: 6471283316645381607
-      dungeon door_1: -425525272
+      centaur_statue_object_0: 4980041100063456034
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

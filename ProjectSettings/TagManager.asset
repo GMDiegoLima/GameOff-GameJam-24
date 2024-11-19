@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - PressureTrigger
   - Item
+  - Wall
   layers:
   - Default
   - TransparentFX

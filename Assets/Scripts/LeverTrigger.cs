@@ -47,7 +47,7 @@ public class LeverTrigger : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.GetComponent<PlayerController>() != null && !other.GetComponent<PlayerController>().flying)
+        if (other.CompareTag("Player"))
         {
             canPull = false;
             pullText.enabled = false;

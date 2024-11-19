@@ -3028,6 +3028,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2553974124135151611, guid: e927855a21151b84b91c7e9583679c23, type: 3}
   m_PrefabInstance: {fileID: 1659707424}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1659707426 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2350636821554187055, guid: e927855a21151b84b91c7e9583679c23, type: 3}
+  m_PrefabInstance: {fileID: 1659707424}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 285373c530d924505b0e920b18a19779, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1761043704
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25767,6 +25778,7 @@ MonoBehaviour:
   background: {fileID: 1828850350}
   disembodyText: {fileID: 1253359409}
   digText: {fileID: 505401401}
+  skeletonHealth: {fileID: 1659707426}
   lastDialogue: {fileID: 1638464147}
 --- !u!95 &1974400997
 Animator:
