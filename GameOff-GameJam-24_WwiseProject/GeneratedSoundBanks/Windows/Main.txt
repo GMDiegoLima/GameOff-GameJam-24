@@ -6,7 +6,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	2385628198	footsteps			\Sfx\Player\footsteps	
 	2485905105	menu_cursor_back			\UI\menu_cursor_back	
 	2782712987	lever			\Sfx\Objects\lever	
-	2827948781	rock_push			\Sfx\Objects\rock_push	
 	3200708208	menu_cursor_select			\UI\menu_cursor_select	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
@@ -24,7 +23,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	54325868	ui_menu_move	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Windows\SFX\ui_move_var_02_F06BAF76.wem		\Actor-Mixer Hierarchy\UI\ui_menu_move		10401
 	57660160	sfx_footsteps_grass_var_03	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Windows\SFX\sfx_footsteps_grass_var_03_F06BAF76.wem		\Actor-Mixer Hierarchy\SFX\WORLD\player_footsteps\footsteps_grass\sfx_footsteps_grass_var_03		1817
 	138217890	sfx_footsteps_parquet_var_02	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Windows\SFX\sfx_footsteps_parquet_var_02_F06BAF76.wem		\Actor-Mixer Hierarchy\SFX\WORLD\player_footsteps\footsteps_parquet\sfx_footsteps_parquet_var_02		2328
-	221138627	sfx_obj_rock_pushing	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Windows\SFX\sfx_obj_rock_pushing_8EC3C7C0.wem		\Actor-Mixer Hierarchy\SFX\WORLD\sfx_obj_rock_pushing		58416
 	225222591	ui_menu_back	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Windows\SFX\ui_move_var_01_F06BAF76.wem		\Actor-Mixer Hierarchy\UI\ui_menu_back		10549
 	232811396	ui_dialogue_var_01	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Windows\SFX\ui_dialogue_var_01_F06BAF76.wem		\Actor-Mixer Hierarchy\UI\ui_dialogue_var_01		2057
 	305096193	sfx_obj_plate_on	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Windows\SFX\sfx_obj_plate_on_F06BAF76.wem		\Actor-Mixer Hierarchy\SFX\WORLD\plate_on_off\sfx_obj_plate_on		9207

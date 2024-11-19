@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{EB570AA0-D126-1DDB-05DE-70B093A15813}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{BDA3E691-1370-85F5-0EAD-D2F79C8BF597}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -21,6 +21,7 @@
 			<Busses>
 				<Bus Id="1436777591" Name="AmbianceMaster"/>
 				<Bus Id="1557941045" Name="Characters"/>
+				<Bus Id="1681633080" Name="sfxMaster"/>
 				<Bus Id="1992125169" Name="UiMaster"/>
 				<Bus Id="2033911932" Name="NpcMaster"/>
 				<Bus Id="3123271961" Name="ObjectsMaster"/>
@@ -42,6 +43,11 @@
 				</AuxBus>
 				<AuxBus Id="3545700988" Name="Reverbs"/>
 			</AuxBusses>
+			<GameParameters>
+				<GameParameter Id="393239870" Name="SFX"/>
+				<GameParameter Id="3991942870" Name="Music"/>
+				<GameParameter Id="4056684167" Name="Master"/>
+			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="185713839" Name="RoomState">
 					<States>
@@ -94,7 +100,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{C2466F34-14C4-D8FA-A108-433173D856FB}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{18BCDD05-CB5F-5795-AE96-625F3BEF6321}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -113,10 +119,6 @@
 				<File Id="138217890" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_footsteps_parquet_var_02.wav</ShortName>
 					<CachePath>SFX/sfx_footsteps_parquet_var_02_F06BAF76.wem</CachePath>
-				</File>
-				<File Id="221138627" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>sfx_obj_rock_pushing.wav</ShortName>
-					<CachePath>SFX/sfx_obj_rock_pushing_8EC3C7C0.wem</CachePath>
 				</File>
 				<File Id="225222591" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ui_move_var_01.wav</ShortName>
@@ -244,11 +246,6 @@
 						<MediaRef Id="858639589"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2827948781" Name="rock_push" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="221138627"/>
-					</MediaRefs>
-				</Event>
 			</Events>
 			<SwitchGroups>
 				<SwitchGroup Id="478119480" Name="GroundTextures">
@@ -271,5 +268,5 @@
 			<Path>Music.bnk</Path>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{1A672628-ECDA-CFF1-2F67-B7C83005F340}</FileHash>
+	<FileHash>{85066238-7966-21E1-30C6-F5BD14411DFB}</FileHash>
 </SoundBanksInfo>
