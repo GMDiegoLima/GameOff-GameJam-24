@@ -1,21 +1,21 @@
 using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(BoxCollider2D))]
+[RequireComponent(typeof(Collider2D))]
 public class PoisonousArea : MonoBehaviour
 {
     [SerializeField] float damage;
     [SerializeField] float poisonCD;
 
-    private BoxCollider2D boxCollider; 
+    Collider2D collider; 
 
-    private void Awake()
+    void Awake()
     {
-        boxCollider = GetComponent<BoxCollider2D>();
-        boxCollider.isTrigger = true;
+        collider = GetComponent<Collider2D>();
+        collider.isTrigger = true;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.TryGetComponent<StateController>(out StateController aController))
         { 
@@ -29,7 +29,7 @@ public class PoisonousArea : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    void OnTriggerExit2D(Collider2D collision)
     { 
         if (collision.TryGetComponent<StateController>(out StateController aController))
         {

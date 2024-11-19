@@ -3,8 +3,14 @@ using UnityEngine;
 public class Chest : MonoBehaviour
 {
     public GameObject itemToDrop;
+    Animator animator;
     bool canOpen;
     bool opened;
+
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     void Update()
     {
@@ -12,8 +18,8 @@ public class Chest : MonoBehaviour
         {
             Debug.Log("Chest open");
             opened = true;
+            animator.SetBool("Open", true);
             Instantiate(itemToDrop, transform.position, Quaternion.identity);
-            Destroy(gameObject);
         }
     }
 
