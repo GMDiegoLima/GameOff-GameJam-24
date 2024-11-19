@@ -21,6 +21,7 @@ namespace AK
         static const AkUniqueID MENU_CURSOR_SELECT = 3200708208U;
         static const AkUniqueID NORMAL_DIALOGUE = 365141489U;
         static const AkUniqueID PLATE = 282449107U;
+        static const AkUniqueID ROCK_PUSH = 2827948781U;
         static const AkUniqueID TESTINGEVENT = 946158365U;
     } // namespace EVENTS
 

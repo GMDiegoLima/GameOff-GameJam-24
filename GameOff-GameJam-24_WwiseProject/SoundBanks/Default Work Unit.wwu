@@ -16,6 +16,7 @@
 						<ObjectRef Name="plate" ID="{E6536467-B108-42F8-BE63-3F089AA63950}" WorkUnitID="{6124D795-751B-497E-A6D0-BFFAED670749}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="menu_cursor_back" ID="{BF4FCF3B-8483-4549-ADFE-C09859851C3C}" WorkUnitID="{6F3B7CE1-2B57-48AB-A6AF-326F7E59CEBC}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="evil_dialogue" ID="{BBD332CC-B42A-45AE-8915-727AD712FC97}" WorkUnitID="{6F3B7CE1-2B57-48AB-A6AF-326F7E59CEBC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="rock_push" ID="{5631B497-E4E9-48B5-AB5E-7F17CFB8C54F}" WorkUnitID="{6124D795-751B-497E-A6D0-BFFAED670749}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="normal_dialogue" ID="{D15ED8B5-1490-49AC-B725-DB2C61B4040F}" WorkUnitID="{6F3B7CE1-2B57-48AB-A6AF-326F7E59CEBC}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="menu_cursor_move" ID="{61E46C59-9097-4A23-B265-0000D087E02F}" WorkUnitID="{6F3B7CE1-2B57-48AB-A6AF-326F7E59CEBC}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="footsteps" ID="{44EB1ED3-972C-4C24-A521-2E103FE21F9A}" WorkUnitID="{CD11E991-5766-438B-A479-C4169178ACAD}" Origin="Manual" Filter="7"/>
