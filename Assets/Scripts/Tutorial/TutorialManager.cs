@@ -10,7 +10,9 @@ public class TutorialManager : MonoBehaviour
     public GameObject dialogueTutorial;
     public GameObject borderTutorial;
 
-    private void Awake()
+    int keyCount = 0;
+
+    void Awake()
     {
         if (Instance == null)
         {
@@ -47,5 +49,10 @@ public class TutorialManager : MonoBehaviour
                 borderTutorial.SetActive(true);
             }
         }
+    }
+    public void AddKey()
+    {
+        keyCount++;
+        Debug.Log($"Chaves coletadas: {keyCount}");
     }
 }

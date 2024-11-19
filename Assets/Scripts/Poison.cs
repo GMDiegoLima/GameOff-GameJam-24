@@ -1,7 +1,7 @@
 using UnityEngine;
 
-// Used to kill one character when fall into the abyss
-public class Abyss : MonoBehaviour
+// Used to kill one character when fall into the hole
+public class Poison : MonoBehaviour
 {
     public GameObject player;
     PlayerController playerScript;
@@ -18,14 +18,15 @@ public class Abyss : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && !playerScript.flying)
+        if (other.CompareTag("Player") && playerScript.currentBody != PlayerController.Bodies.Skeleton)
         {
-            Invoke("gameOver", 0.4f);
+            Invoke("gameOver", 0.1f);
         }
     }
 
     void gameOver()
     {
-        playerScript.fell = true;
+        playerAnimator.SetBool("Dead", true);
+        playerScript.alive = false;
     }
 }

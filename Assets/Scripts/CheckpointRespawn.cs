@@ -13,6 +13,7 @@ public class CheckpointRespawn : MonoBehaviour
     public void Respawn()
     {
         player.alive = true;
+        player.fell = false;
         checkpoint.Respawn();
     }
 }

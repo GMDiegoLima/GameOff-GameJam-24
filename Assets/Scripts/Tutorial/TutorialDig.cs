@@ -23,7 +23,7 @@ public class TutorialDig : MonoBehaviour
             digText.enabled = false;
             transform.Find("Coffin").gameObject.SetActive(true);
             transform.Find("Skeleton").gameObject.SetActive(true);
-            skeletonHealth.currentHealth = 0f;
+            skeletonHealth.maxHealth = 0f;
         }
 
         if (Input.GetKeyDown("q") && dug && canDig)

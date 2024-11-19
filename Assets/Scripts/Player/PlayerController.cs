@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
     Vector3 targetPosition;
 
     public bool alive = true;
+    public bool fell = false;
     public bool flying = false;
     public GameObject gameOver;
 
@@ -65,7 +66,13 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (alive)
+        if (fell)
+        {
+            gameOver.SetActive(true);
+            _animator.Play("Falling");
+            direction = new Vector2(0, 0);
+        }
+        if (alive & !fell)
         {
             direction = new Vector2(
                 Input.GetAxisRaw("Horizontal"),
@@ -138,11 +145,13 @@ public class PlayerController : MonoBehaviour
             {
                 heldItem.transform.position = itemHoldPosition.position;
             }
+            _animator.SetBool("Dead", false);
             gameOver.SetActive(false);
         }
-        else
+        if (!alive && !fell)
         {
             gameOver.SetActive(true);
+            _animator.SetBool("Dead", true);
             direction = new Vector2(0, 0);
         }
     }
@@ -232,10 +241,13 @@ public class PlayerController : MonoBehaviour
     }
     void PickUpItem(GameObject item)
     {
-        heldItem = item;
-        heldItem.transform.SetParent(transform);
-        heldItem.transform.position = itemHoldPosition.position;
-        nearbyItems.Remove(item);
+        if (nearbyItems.Contains(item))
+        {
+            heldItem = item;
+            heldItem.transform.SetParent(transform);
+            heldItem.transform.position = itemHoldPosition.position;
+            nearbyItems.Remove(item);
+        }
     }
     public void DropItem()
     {
