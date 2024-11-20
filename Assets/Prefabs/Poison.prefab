@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5631196806950395396}
-  - component: {fileID: 6437602940318568314}
+  - component: {fileID: 661193551223667852}
   - component: {fileID: 3723731888259070457}
   - component: {fileID: 2890369575056931689}
   - component: {fileID: 2294074254834021295}
@@ -35,8 +35,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!58 &6437602940318568314
-CircleCollider2D:
+--- !u!61 &661193551223667852
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -65,12 +65,22 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.067251444, y: 241476}
-  m_Radius: 2.8230305
+  m_Offset: {x: -0.16589308, y: 0.31951022}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 7.9570274, y: 2.5806699}
+  m_EdgeRadius: 0
 --- !u!198 &3723731888259070457
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -641,7 +651,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    gravitySource: 0
+    gravitySource: 1
     maxNumParticles: 1000
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
@@ -4884,4 +4894,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0.5
-  poisonCD: 0
+  poisonCD: 1.5
