@@ -2,15 +2,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 // Used to disable dialogue and collider border on the village when the player finish the tutorial
-public class TutorialManager : MonoBehaviour
+public class GlobalManager : MonoBehaviour
 {
-    public static TutorialManager Instance { get; private set; }
+    public static GlobalManager Instance { get; private set; }
 
     public bool tutorialFinished = false;
     public GameObject dialogueTutorial;
     public GameObject borderTutorial;
 
-    int keyCount = 0;
+    public int keyCount = 0;
 
     void Awake()
     {

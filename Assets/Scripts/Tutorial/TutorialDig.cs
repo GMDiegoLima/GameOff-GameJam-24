@@ -43,7 +43,7 @@ public class TutorialDig : MonoBehaviour
 
     public void FinishTutorial()
     {
-        TutorialManager.Instance.tutorialFinished = true;
+        GlobalManager.Instance.tutorialFinished = true;
     }
 
     void OnTriggerEnter2D(Collider2D other)

@@ -6,7 +6,7 @@ public class Key : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            TutorialManager.Instance.AddKey();
+            GlobalManager.Instance.AddKey();
             Destroy(gameObject);
         }
     }
