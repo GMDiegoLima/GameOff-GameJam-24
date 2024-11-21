@@ -2254,7 +2254,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3708104701682895990}
+      - m_Target: {fileID: 1437722058409169525}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -2266,7 +2266,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1437722058409169525}
+      - m_Target: {fileID: 5070683682463139471}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -3895,7 +3895,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -4761378060302496180, guid: c20833eb9bc1aba4fa02aaff6eb10818, type: 3}
+  m_Sprite: {fileID: 8623578666103024701, guid: a14357f669efdc04cb3ed4cb142bd5e4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

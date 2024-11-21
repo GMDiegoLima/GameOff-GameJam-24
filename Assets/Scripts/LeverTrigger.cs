@@ -8,6 +8,7 @@ public class LeverTrigger : MonoBehaviour
     public bool activated;
     public TextMeshProUGUI pullText;
     public UnityEvent onActivate;
+    public UnityEvent onDeactivate;
     Animator animator;
 
     void Start()

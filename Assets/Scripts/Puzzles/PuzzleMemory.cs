@@ -18,7 +18,6 @@ public class PuzzleMemory : MonoBehaviour
             sequence[i] = i;
             platforms[i].enabled = false;
         }
-        StartCoroutine(DisplaySequence());
     }
 
     public void CheckPlatform(int platform)
@@ -39,15 +38,19 @@ public class PuzzleMemory : MonoBehaviour
             StartCoroutine(DisplaySequence()); 
         }
     }
+    public void ShowSequence()
+    {
+        StartCoroutine(DisplaySequence()); 
+    }
 
     IEnumerator DisplaySequence()
     {
         foreach (int index in sequence)
         {
             platforms[index].enabled = true;
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.25f);
             platforms[index].enabled = false;
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.25f);
         }
     }
 }

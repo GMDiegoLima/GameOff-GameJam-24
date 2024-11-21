@@ -21,6 +21,7 @@ public class PuzzleBalanceTwo : MonoBehaviour
     List<int> leftWeights = new List<int>();
     public int rightWeight;
     public UnityEvent onPuzzleSolved;
+    public UnityEvent onPuzzleFail;
 
     void Start()
     {
@@ -55,6 +56,11 @@ public class PuzzleBalanceTwo : MonoBehaviour
                 {
                     Debug.Log("Puzzle solved");
                     onPuzzleSolved.Invoke();
+                }
+                else
+                {
+                    Debug.Log("Wrong weight: " + checkWeight);
+                    onPuzzleFail.Invoke();
                 }
             }
             else

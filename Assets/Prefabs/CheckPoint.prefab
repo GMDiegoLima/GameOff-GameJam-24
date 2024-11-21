@@ -195,6 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a96da1efeb95a76438c7b08ed87e7fb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerCollider: {fileID: 4636996288283155694}
 --- !u!95 &2664289991868876476
 Animator:
   serializedVersion: 7

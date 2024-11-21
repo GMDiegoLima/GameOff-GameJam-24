@@ -19,6 +19,7 @@ public class PuzzleBalance : MonoBehaviour
     Collider2D itemCollider;
     List<int> weights = new List<int>();
     public UnityEvent onPuzzleSolved;
+    public UnityEvent onPuzzleFail;
 
     void Start()
     {
@@ -49,6 +50,11 @@ public class PuzzleBalance : MonoBehaviour
                 {
                     Debug.Log("Puzzle solved");
                     onPuzzleSolved.Invoke();
+                }
+                else
+                {
+                    Debug.Log("Wrong weight: " + checkWeight);
+                    onPuzzleFail.Invoke();
                 }
             }
             else
