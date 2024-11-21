@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class DoorH : MonoBehaviour
 {
-    private Vector3 openPosition;
-    private Vector3 closePosition;
+    Vector3 openPosition;
+    Vector3 closePosition;
     bool open = false;
     bool close = false;
 

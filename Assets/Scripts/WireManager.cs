@@ -6,6 +6,7 @@ public class WireManager : MonoBehaviour
     public static WireManager Instance;
     public WireRotation[] cables;
     public UnityEvent onPuzzleSuccess;
+    public UnityEvent onPuzzleFail;
 
     private void Awake()
     {
@@ -25,6 +26,7 @@ public class WireManager : MonoBehaviour
         {
             if (!cable.enabled)
             {
+                onPuzzleFail?.Invoke();
                 return;
             }
         }

@@ -252,7 +252,6 @@ public class PlayerController : MonoBehaviour
     public void DropItem()
     {
         heldItem.transform.SetParent(null);
-        nearbyItems.Add(heldItem);
         heldItem = null;
     }
 

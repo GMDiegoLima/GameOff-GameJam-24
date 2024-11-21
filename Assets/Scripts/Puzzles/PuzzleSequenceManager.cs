@@ -1,10 +1,12 @@
 using System.Collections.Generic;
+using UnityEngine.Events;
 using UnityEngine;
 
 // Used to manage the Sequence Puzzles to handle multiples puzzles
 public class PuzzleSequenceManager : MonoBehaviour
 {
     public List<PuzzleSequence> puzzles;
+    public UnityEvent allPuzzlesSolved;
     private int currentPuzzleIndex = 0;
 
     void Start()
@@ -43,6 +45,7 @@ public class PuzzleSequenceManager : MonoBehaviour
         }
         else
         {
+            allPuzzlesSolved.Invoke();
             Debug.Log("All puzzles have been solved");
         }
     }

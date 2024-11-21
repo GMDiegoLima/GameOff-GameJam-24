@@ -15,26 +15,25 @@ public class WireRotation : MonoBehaviour
 
     void Update()
     {
-        if (enabled)
+        UpdateCableState();
+        animator.SetBool("Enabled", enabled);
+        if (Input.GetKeyDown("e") && canRotate)
         {
-            animator.SetBool("Enabled", true);
+            transform.Rotate(0, 0, 90f);
+            UpdateCableState();
+            WireManager.Instance.CheckPuzzleStatus();
         }
-        else
-        {
-            animator.SetBool("Enabled", false);
-        }
-        if (Mathf.Approximately(transform.eulerAngles.z, correctRotation) && (straightWire != null && straightWire.enabled || straightWire == null))
+    }
+    void UpdateCableState()
+    {
+        if (Mathf.Approximately(transform.eulerAngles.z, correctRotation) &&
+            (straightWire != null && straightWire.enabled || straightWire == null))
         {
             enabled = true;
         }
         else
         {
             enabled = false;
-        }
-        if (Input.GetKeyDown("e") && canRotate)
-        {
-            transform.Rotate(0, 0, 90f);
-            WireManager.Instance.CheckPuzzleStatus();
         }
     }
 

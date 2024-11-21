@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class WireConnection : MonoBehaviour
 {
+    [SerializeField] private KeyCode cutKey;
     public WireConnection straightWire;
     public WireRotation curvedWire;
     public bool enabled = false;
@@ -33,7 +34,7 @@ public class WireConnection : MonoBehaviour
             animator.SetBool("Enabled", false);
         }
 
-        if (Input.GetKeyDown("j") && canCut)
+        if (Input.GetKeyDown(cutKey) && canCut)
         {
             animator.SetBool("Bitten", true);
         }
