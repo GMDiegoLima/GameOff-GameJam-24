@@ -19,9 +19,11 @@ public class GameActor : ScriptableObject
 
     [Header("Player Variables")]
     public float moveSpeed; 
+    public bool canFlay;
+
+    [Header("Shared Variables")]
     public float damage;
     public float attackRange;
-    public bool canFlay;
 
     [Header("Enemy AI Variables")]
     public float health;

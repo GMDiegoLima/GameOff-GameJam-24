@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actorTag: Skeleton
   actorType: 4
-  moveSpeed: 2
-  damage: 1
-  attackRange: 2
-  health: 1
+  moveSpeed: 2.5
   canFlay: 0
+  damage: 1
+  attackRange: 1
+  health: 1
   isControlledByAI: 1
   controller: {fileID: 0}

@@ -209,6 +209,10 @@ MonoBehaviour:
   actor: {fileID: 11400000, guid: 852ac28c5ee124c0ab296bef8fb7184c, type: 2}
   isPoisoned: 0
   velocity: {x: 0, y: 0}
+  enemyViewLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  bonePrefab: {fileID: 8306940293054401521, guid: 2b005f546af4c4ba7b3a68764b4e449f, type: 3}
   minMovePeriod: 1
   maxMovePeriod: 2
   minStopPeriod: 1
