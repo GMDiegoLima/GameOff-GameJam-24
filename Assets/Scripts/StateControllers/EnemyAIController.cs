@@ -155,13 +155,16 @@ public class EnemyAIController : StateController
 	{
         // Follow the remaining footprints
         if (!isMoving) isMoving = true;
-        nextFootprint = targetFootprints.First.Value;
-        velocity = chaseSpeed * (nextFootprint - transform.position).normalized;
-        if ((transform.position - nextFootprint).magnitude < 0.1f && targetFootprints.Count != 0)
+        if (targetFootprints.Count != 0)
         {
-            targetFootprints.RemoveFirst();
+            nextFootprint = targetFootprints.First.Value;
+            velocity = chaseSpeed * (nextFootprint - transform.position).normalized;
+            if ((transform.position - nextFootprint).magnitude < 0.1f)
+            {
+                targetFootprints.RemoveFirst();
+            }
         }
-	}
+    }
 
     public override void Dead()
     {

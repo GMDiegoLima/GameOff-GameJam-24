@@ -8,6 +8,8 @@ public class SeekState : IState
     public Color GizmoColor { get => gizmoColor; set => gizmoColor = value; }
 
     private EnemyAIController controller;
+    private float seekTime = 3f;
+    private float seekTimer;
 
     public SeekState(EnemyAIController anEnemyAIController)
     {
@@ -23,6 +25,7 @@ public class SeekState : IState
     public void Update()
     {
         controller.Seek();
+        seekTimer += Time.deltaTime;
         CheckTransition();
     }
 
@@ -39,9 +42,13 @@ public class SeekState : IState
             controller.TransitionToState(new ChaseState(controller, controller.GetTargetTransform()));
         }
         else if (controller.targetFootprints.Count == 0)
-        { 
-            controller.TransitionToState(new PatrolState(controller));
-		}
+        {
+            controller.velocity = Vector2.zero;
+            if (seekTimer >= seekTime)
+            {
+                controller.TransitionToState(new PatrolState(controller));
+            }
+        }
         if (controller.IsActorDead())
         {
             controller.TransitionToState(new DeadState(controller));
