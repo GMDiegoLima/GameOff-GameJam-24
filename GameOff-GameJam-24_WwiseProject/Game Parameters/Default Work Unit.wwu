@@ -5,17 +5,17 @@
 			<ChildrenList>
 				<Folder Name="VolumeMenu" ID="{DA373EA9-3767-400E-98CC-B9D5BA5691D2}" ShortID="451404736">
 					<ChildrenList>
-						<GameParameter Name="Master" ID="{5424E05C-F1EC-419A-A405-E6BF68B07111}">
+						<GameParameter Name="master" ID="{5424E05C-F1EC-419A-A405-E6BF68B07111}">
 							<PropertyList>
 								<Property Name="InitialValue" Type="Real64" Value="100"/>
 							</PropertyList>
 						</GameParameter>
-						<GameParameter Name="Music" ID="{86217303-0D72-4A68-B18C-D085E47B5E21}">
+						<GameParameter Name="music" ID="{86217303-0D72-4A68-B18C-D085E47B5E21}">
 							<PropertyList>
 								<Property Name="InitialValue" Type="Real64" Value="100"/>
 							</PropertyList>
 						</GameParameter>
-						<GameParameter Name="SFX" ID="{40240E27-63F2-4C37-B5D1-32F7DA6A9C95}">
+						<GameParameter Name="sfx" ID="{40240E27-63F2-4C37-B5D1-32F7DA6A9C95}">
 							<PropertyList>
 								<Property Name="InitialValue" Type="Real64" Value="100"/>
 							</PropertyList>
