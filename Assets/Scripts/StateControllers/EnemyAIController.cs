@@ -284,7 +284,7 @@ public class EnemyAIController : StateController
         // Attack based on current actor type
         if (actor.actorType == ActorType.Skeleton)
         {
-            ThrowBone(aDir);
+            ThrowBone((view.targetTransform.position - transform.position).normalized);
             return;
 		}
 
@@ -304,7 +304,7 @@ public class EnemyAIController : StateController
     {
         Debug.Log("Throw bone");
         GameObject theBone = Instantiate(bonePrefab, transform.position + (Vector3)dir, Quaternion.identity);
-        theBone.GetComponent<Rigidbody2D>().AddForce(dir * 3f, ForceMode2D.Impulse);
+        theBone.GetComponent<Rigidbody2D>().AddForce(dir * 6f, ForceMode2D.Impulse);
 	}
 
     private void OnDrawGizmos()

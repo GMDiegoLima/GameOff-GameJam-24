@@ -127,21 +127,7 @@ public class PlayerStateController : StateController
         Debug.Log("Throw bone");
         GameObject theBone = Instantiate(bonePrefab, transform.position + (Vector3)dir, Quaternion.identity);
         theBone.GetComponent<Rigidbody2D>().AddForce(dir * throwForce, ForceMode2D.Impulse);
-        //StartCoroutine(BoneLaunchRoutine(theBone, dir));
 	}
-
-    IEnumerator BoneLaunchRoutine(GameObject aBone, Vector2 dir)
-    {
-        Vector3 bonePos = aBone.transform.position;
-        Vector3 endPos = bonePos + (Vector3)dir * 3f;
-
-        while (true)
-        {
-            aBone.transform.position = Vector3.MoveTowards(aBone.transform.position, endPos, 3f * Time.deltaTime);
-            yield return new WaitWhile(() => aBone.transform.position == endPos);
-        }
-    }
-
 
     private void OnDrawGizmos()
     {
