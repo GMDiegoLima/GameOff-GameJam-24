@@ -171,22 +171,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton
       objectReference: {fileID: 0}
-    - target: {fileID: 4928228534917901041, guid: e927855a21151b84b91c7e9583679c23, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8132735316152579534, guid: e927855a21151b84b91c7e9583679c23, type: 3}
-      propertyPath: chaseSpeed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8132735316152579534, guid: e927855a21151b84b91c7e9583679c23, type: 3}
-      propertyPath: maxVelocity
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8132735316152579534, guid: e927855a21151b84b91c7e9583679c23, type: 3}
-      propertyPath: minVelocity
-      value: -2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6260,10 +6244,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wolf
       objectReference: {fileID: 0}
-    - target: {fileID: 5640444739511689665, guid: 1c06ca1406631944da3858e71d81651b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6271610525284946468, guid: 1c06ca1406631944da3858e71d81651b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.09
@@ -6320,18 +6300,6 @@ PrefabInstance:
     - target: {fileID: 758673646730616367, guid: 1eabea1b4111acd449aec41eba28d58a, type: 3}
       propertyPath: m_Name
       value: FatBat
-      objectReference: {fileID: 0}
-    - target: {fileID: 758673646730616367, guid: 1eabea1b4111acd449aec41eba28d58a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2476882757876158681, guid: 1eabea1b4111acd449aec41eba28d58a, type: 3}
-      propertyPath: maxMovePeriod
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2476882757876158681, guid: 1eabea1b4111acd449aec41eba28d58a, type: 3}
-      propertyPath: minMovePeriod
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2923587810093096519, guid: 1eabea1b4111acd449aec41eba28d58a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6451,10 +6419,6 @@ PrefabInstance:
     - target: {fileID: 1873842805440964811, guid: c1f45bd180a39df4d95e54ea0533b60b, type: 3}
       propertyPath: m_Name
       value: Goblin
-      objectReference: {fileID: 0}
-    - target: {fileID: 1873842805440964811, guid: c1f45bd180a39df4d95e54ea0533b60b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5463444181609725263, guid: c1f45bd180a39df4d95e54ea0533b60b, type: 3}
       propertyPath: m_LocalPosition.x
