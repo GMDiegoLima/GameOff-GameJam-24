@@ -5,6 +5,8 @@ using System.Collections.Generic;
 public class EnemyAIController : StateController
 {
     public Vector2 velocity;
+    [SerializeField] private LayerMask enemyViewLayer;
+    [SerializeField] private GameObject bonePrefab;
 
     [Header("Adjustable")]
     [SerializeField] private float minMovePeriod;
@@ -70,6 +72,8 @@ public class EnemyAIController : StateController
     {
         velocity = Vector2.zero;
         if (attackCDTimer < attackCD) return;
+        Vector2 dir = new Vector2(anim.GetFloat("LastHorizontal"), anim.GetFloat("LastVertical")).normalized;
+        HandleActorAttack(dir);
         anim.Play("Attack");
         attackCDTimer = 0;
     }
@@ -151,13 +155,16 @@ public class EnemyAIController : StateController
 	{
         // Follow the remaining footprints
         if (!isMoving) isMoving = true;
-        nextFootprint = targetFootprints.First.Value;
-        velocity = chaseSpeed * (nextFootprint - transform.position).normalized;
-        if ((transform.position - nextFootprint).magnitude < 0.1f && targetFootprints.Count != 0)
+        if (targetFootprints.Count != 0)
         {
-            targetFootprints.RemoveFirst();
+            nextFootprint = targetFootprints.First.Value;
+            velocity = chaseSpeed * (nextFootprint - transform.position).normalized;
+            if ((transform.position - nextFootprint).magnitude < 0.1f)
+            {
+                targetFootprints.RemoveFirst();
+            }
         }
-	}
+    }
 
     public override void Dead()
     {
@@ -270,6 +277,35 @@ public class EnemyAIController : StateController
         }
         return false;
     }
+
+    private void HandleActorAttack(Vector2 aDir)
+    { 
+
+        // Attack based on current actor type
+        if (actor.actorType == ActorType.Skeleton)
+        {
+            ThrowBone(aDir);
+            return;
+		}
+
+        RaycastHit2D hit = Physics2D.BoxCast(transform.position, new Vector2(1, 1), 0,
+                                            aDir, actor.attackRange, enemyViewLayer);
+        if (hit)
+        {
+            if (hit.transform.TryGetComponent<Health>(out Health enemyHealth))
+            {
+                Debug.Log("Got hit by enemy");
+                enemyHealth.TakeDamage(actor.damage);
+            }
+        }
+	}
+
+    private void ThrowBone(Vector2 dir)
+    {
+        Debug.Log("Throw bone");
+        GameObject theBone = Instantiate(bonePrefab, transform.position + (Vector3)dir, Quaternion.identity);
+        theBone.GetComponent<Rigidbody2D>().AddForce(dir * 3f, ForceMode2D.Impulse);
+	}
 
     private void OnDrawGizmos()
     {
