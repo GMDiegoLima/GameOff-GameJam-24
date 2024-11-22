@@ -12,6 +12,7 @@ public class SeekState : IState
     public SeekState(EnemyAIController anEnemyAIController)
     {
         controller = anEnemyAIController;
+        controller.chaseMark.TurnOff();
     }
 
     public void Enter()

@@ -24,6 +24,7 @@ public class EnemyAIController : StateController
 
     private FieldOfView view;
     private CapsuleCollider2D bodyCollider;
+    [HideInInspector] public ChaseMark chaseMark;
 
     private float movePeriod = 2f;
     private float stopPeriod = 2f;
@@ -39,6 +40,7 @@ public class EnemyAIController : StateController
         base.Awake();
         view = GetComponentInChildren<FieldOfView>(); // Get from Eye
         bodyCollider = GetComponentInChildren<CapsuleCollider2D>(); // Get from BodyCollider
+        chaseMark = GetComponentInChildren<ChaseMark>(); // Get from BodyCollider
         actor.isControlledByAI = true;
         currentState = new PatrolState(this);
         currentState.Enter();
