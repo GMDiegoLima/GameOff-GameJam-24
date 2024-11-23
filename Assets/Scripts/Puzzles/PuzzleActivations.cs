@@ -9,13 +9,11 @@ public class PuzzleActivations : MonoBehaviour
     public UnityEvent onPuzzleSolved;
     public UnityEvent onPuzzleFail;
 
-    private HashSet<string> activatedLevers = new HashSet<string>();
+    HashSet<string> activatedLevers = new HashSet<string>();
     bool puzzleSolved;
 
     public void RegisterActivation(string triggerName)
     {
-        if (puzzleSolved) return;
-
         activatedLevers.Add(triggerName);
         Debug.Log($"Activated: {string.Join(", ", activatedLevers)}");
 
@@ -38,6 +36,16 @@ public class PuzzleActivations : MonoBehaviour
         {
             puzzleSolved = false;
             Debug.Log("Puzzle Failed!");
+            onPuzzleFail.Invoke();
+        }
+        if (IsPuzzleSolved())
+        {
+            puzzleSolved = true;
+            Debug.Log("Puzzle Solved!");
+            onPuzzleSolved.Invoke();
+        }
+        else
+        {
             onPuzzleFail.Invoke();
         }
     }

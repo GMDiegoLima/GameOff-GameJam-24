@@ -3,7 +3,7 @@ using UnityEngine;
 // Used by the Checkpoint and CheckpointRespawn to set checkpoint and respawn the player
 public class PlayerCheckpoint : MonoBehaviour
 {
-    private Vector3 lastCheckpoint;
+    Vector3 lastCheckpoint;
 
     public void SetCheckpoint(Vector3 checkpointPosition)
     {

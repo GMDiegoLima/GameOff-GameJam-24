@@ -3,7 +3,6 @@ using UnityEngine;
 // Used to shot one projectile from the walls
 public class Ejector : MonoBehaviour
 {
-    Animator animator;
     public GameObject projectilePrefab;
     public Transform firePoint;
     public float projectileSpeed = 10f;
@@ -16,18 +15,10 @@ public class Ejector : MonoBehaviour
     }
     public Directions shootDirection;
 
-    void Start()
-    {
-        animator = GetComponent<Animator>();
-        animator.enabled = false;
-    }
-
     public void Shot()
     {
         if (projectilePrefab != null && firePoint != null)
         {
-            animator.enabled = true;
-            animator.Play("Shot");
             GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
             Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
             if (rb != null)
