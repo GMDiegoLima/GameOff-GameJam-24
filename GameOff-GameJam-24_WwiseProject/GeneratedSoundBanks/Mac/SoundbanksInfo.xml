@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{4E134B55-768B-6C49-E8F0-AE3046B61ED6}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{2B03A87E-47A0-90E6-02F0-ADE19CB487FF}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -21,6 +21,7 @@
 			<Busses>
 				<Bus Id="1436777591" Name="AmbianceMaster"/>
 				<Bus Id="1557941045" Name="Characters"/>
+				<Bus Id="1681633080" Name="sfxMaster"/>
 				<Bus Id="1992125169" Name="UiMaster"/>
 				<Bus Id="2033911932" Name="NpcMaster"/>
 				<Bus Id="3123271961" Name="ObjectsMaster"/>
@@ -42,6 +43,11 @@
 				</AuxBus>
 				<AuxBus Id="3545700988" Name="Reverbs"/>
 			</AuxBusses>
+			<GameParameters>
+				<GameParameter Id="393239870" Name="SFX"/>
+				<GameParameter Id="3991942870" Name="Music"/>
+				<GameParameter Id="4056684167" Name="Master"/>
+			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="185713839" Name="RoomState">
 					<States>
@@ -271,5 +277,5 @@
 			<Path>Music.bnk</Path>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{DB4EDE9A-5800-BA1E-3C74-C4F3870A825F}</FileHash>
+	<FileHash>{7044D54D-C082-EE15-8165-366A5E6B11E7}</FileHash>
 </SoundBanksInfo>

@@ -123,6 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb546b4d15547f840ab9d01b34940222, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cutKey: 32
   straightWire: {fileID: 0}
   curvedWire: {fileID: 0}
   enabled: 0

@@ -1,7 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-// Used for 2 puzzles (Sequence and Activations)
 public class PressurePlateSequence : MonoBehaviour
 {
     PlayerController playerScript;
@@ -9,66 +8,91 @@ public class PressurePlateSequence : MonoBehaviour
     public PuzzleActivations puzzleActManager;
     public string plateName;
     Animator animator;
+    private HashSet<Collider2D> collidingObjects = new HashSet<Collider2D>();
 
     void Start()
     {
         animator = GetComponent<Animator>();
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void Update()
     {
-        if (other.gameObject.GetComponent<PlayerController>() != null || other.CompareTag("PressureTrigger"))
+        if (collidingObjects.Count > 0)
         {
-            playerScript = other.GetComponent<PlayerController>();
-            if ((other.CompareTag("Player") && !playerScript.flying) || other.CompareTag("PressureTrigger"))
+            if (!animator.GetBool("Activated"))
             {
                 animator.SetBool("Activated", true);
                 AkSoundEngine.PostEvent("plate", gameObject);
-
-                if (puzzleSeqManager != null)
-                {
-                    PuzzleSequence activePuzzle = puzzleSeqManager.GetActivePuzzle();
-                    if (activePuzzle != null)
-                    {
-                        activePuzzle.RegisterActivation(plateName);
-                    }
-                }
-                else if (puzzleActManager != null)
-                {
-                    puzzleActManager.RegisterActivation(plateName);
-                }
+                HandleActivation();
             }
-
-            if (puzzleSeqManager != null)
+        }
+        else
+        {
+            if (animator.GetBool("Activated"))
             {
-                PuzzleSequence currentPuzzle = puzzleSeqManager.GetActivePuzzle();
-                if (currentPuzzle != null && currentPuzzle.puzzleSolved)
-                {
-                    puzzleSeqManager.OnPuzzleSolved();
-                }
+                animator.SetBool("Activated", false);
+                HandleDeactivation();
+            }
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (IsValidCollider(other))
+        {
+            collidingObjects.Add(other);
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (collidingObjects.Contains(other))
+        {
+            collidingObjects.Remove(other);
+        }
+    }
+
+    bool IsValidCollider(Collider2D collider)
+    {
+        if (collider.GetComponent<PlayerController>() != null || collider.CompareTag("PressureTrigger"))
+        {
+            playerScript = collider.GetComponent<PlayerController>();
+            return collider.CompareTag("PressureTrigger") || (collider.CompareTag("Player") && !playerScript.flying);
+        }
+        return false;
+    }
+
+    void HandleActivation()
+    {
+        if (puzzleSeqManager != null)
+        {
+            PuzzleSequence activePuzzle = puzzleSeqManager.GetActivePuzzle();
+            if (activePuzzle != null)
+            {
+                activePuzzle.RegisterActivation(plateName);
             }
 
-            else if (puzzleActManager != null && puzzleActManager.IsPuzzleSolved())
+            if (activePuzzle != null && activePuzzle.puzzleSolved)
+            {
+                puzzleSeqManager.OnPuzzleSolved();
+            }
+        }
+        else if (puzzleActManager != null)
+        {
+            puzzleActManager.RegisterActivation(plateName);
+
+            if (puzzleActManager.IsPuzzleSolved())
             {
                 Debug.Log("PuzzleActivations resolvido.");
             }
         }
     }
 
-    void OnTriggerExit2D(Collider2D other)
+    void HandleDeactivation()
     {
-        if (other.gameObject.GetComponent<PlayerController>() != null || other.CompareTag("PressureTrigger"))
+        if (puzzleActManager != null)
         {
-            playerScript = other.GetComponent<PlayerController>();
-            if ((other.CompareTag("Player") && !playerScript.flying) || other.CompareTag("PressureTrigger"))
-            {
-                if (puzzleActManager != null)
-                {
-                    
-                    puzzleActManager.RemoveActivation(plateName);
-                }
-                animator.SetBool("Activated", false);
-            }
+            puzzleActManager.RemoveActivation(plateName);
         }
     }
 }

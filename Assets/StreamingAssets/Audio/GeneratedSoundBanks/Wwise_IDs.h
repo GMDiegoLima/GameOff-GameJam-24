@@ -83,6 +83,13 @@ namespace AK
 
     } // namespace SWITCHES
 
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID MASTER = 4056684167U;
+        static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID SFX = 393239870U;
+    } // namespace GAME_PARAMETERS
+
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
@@ -102,6 +109,7 @@ namespace AK
         static const AkUniqueID NPCMASTER = 2033911932U;
         static const AkUniqueID OBJECTSMASTER = 3123271961U;
         static const AkUniqueID PLAYERMASTER = 3538689948U;
+        static const AkUniqueID SFXMASTER = 1681633080U;
         static const AkUniqueID UIMASTER = 1992125169U;
     } // namespace BUSSES
 

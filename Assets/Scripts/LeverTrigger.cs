@@ -8,6 +8,7 @@ public class LeverTrigger : MonoBehaviour
     public bool activated;
     public TextMeshProUGUI pullText;
     public UnityEvent onActivate;
+    public UnityEvent onDeactivate;
     Animator animator;
 
     void Start()
@@ -38,7 +39,7 @@ public class LeverTrigger : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.gameObject.GetComponent<PlayerController>() != null && !other.GetComponent<PlayerController>().flying)
         {
             canPull = true;
             pullText.enabled = true;

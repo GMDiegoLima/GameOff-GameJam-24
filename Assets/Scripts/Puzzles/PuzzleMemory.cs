@@ -7,10 +7,10 @@ public class PuzzleMemory : MonoBehaviour
     public SpriteRenderer[] platforms;
     public UnityEvent onPuzzleSolved;
     public UnityEvent onPuzzleReset;
-    private int[] sequence;
-    private int playerIndex = 0;
+    int[] sequence;
+    int playerIndex = 0;
 
-    private void Start()
+    void Start()
     {
         sequence = new int[platforms.Length];
         for (int i = 0; i < platforms.Length; i++)
@@ -18,7 +18,6 @@ public class PuzzleMemory : MonoBehaviour
             sequence[i] = i;
             platforms[i].enabled = false;
         }
-        StartCoroutine(DisplaySequence());
     }
 
     public void CheckPlatform(int platform)
@@ -30,14 +29,13 @@ public class PuzzleMemory : MonoBehaviour
             if (playerIndex >= sequence.Length)
             {
                 Debug.Log("Puzzle Solved !");
+                onPuzzleSolved.Invoke();
             }
         }
-        else
-        {
-            Debug.Log("Error ! Wrong Sequence. Puzzle restarted !");
-            playerIndex = 0;
-            StartCoroutine(DisplaySequence()); 
-        }
+    }
+    public void ShowSequence()
+    {
+        StartCoroutine(DisplaySequence()); 
     }
 
     IEnumerator DisplaySequence()
@@ -45,9 +43,9 @@ public class PuzzleMemory : MonoBehaviour
         foreach (int index in sequence)
         {
             platforms[index].enabled = true;
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.25f);
             platforms[index].enabled = false;
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.25f);
         }
     }
 }

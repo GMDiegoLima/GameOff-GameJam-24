@@ -8,6 +8,8 @@ public class TutorialDig : MonoBehaviour
     public GameObject background;
     public TextMeshProUGUI disembodyText;
     public TextMeshProUGUI digText;
+    public GameObject flower;
+    public Health skeletonHealth;
     bool canDig;
     bool dug = false;
     bool embodied = false;
@@ -18,10 +20,12 @@ public class TutorialDig : MonoBehaviour
         if (Input.GetKeyDown("e") && !player.flying && !dug && canDig)
         {
             dug = true;
+            Destroy(flower);
             disembodyText.enabled = true;
             digText.enabled = false;
             transform.Find("Coffin").gameObject.SetActive(true);
             transform.Find("Skeleton").gameObject.SetActive(true);
+            skeletonHealth.maxHealth = 0f;
         }
 
         if (Input.GetKeyDown("q") && dug && canDig)
@@ -41,7 +45,7 @@ public class TutorialDig : MonoBehaviour
 
     public void FinishTutorial()
     {
-        TutorialManager.Instance.tutorialFinished = true;
+        GlobalManager.Instance.tutorialFinished = true;
     }
 
     void OnTriggerEnter2D(Collider2D other)

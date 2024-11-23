@@ -2,10 +2,11 @@ using UnityEngine;
 
 public class WireConnection : MonoBehaviour
 {
+    [SerializeField] private KeyCode cutKey;
     public WireConnection straightWire;
     public WireRotation curvedWire;
     public bool enabled = false;
-    bool canBite;
+    bool canCut;
     Animator animator;
 
     void Start()
@@ -33,7 +34,7 @@ public class WireConnection : MonoBehaviour
             animator.SetBool("Enabled", false);
         }
 
-        if (Input.GetKeyDown("j") && canBite)
+        if (Input.GetKeyDown(cutKey) && canCut)
         {
             animator.SetBool("Bitten", true);
         }
@@ -41,16 +42,16 @@ public class WireConnection : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && other.GetComponent<PlayerController>().currentBody == PlayerController.Bodies.Wolf)
+        if (other.CompareTag("Player") && other.GetComponent<PlayerController>().currentBody == PlayerController.Bodies.Goblin)
         {
-            canBite = true;
+            canCut = true;
         }
     }
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player") || other.GetComponent<PlayerController>().currentBody != PlayerController.Bodies.Wolf)
+        if (other.CompareTag("Player"))
         {
-            canBite = false;
+            canCut = false;
         }
     }
 }

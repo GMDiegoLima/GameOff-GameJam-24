@@ -3,6 +3,7 @@ using UnityEngine;
 // Used with Ejector to be shot
 public class Projetile : MonoBehaviour
 {
+    int collisionCount = 0;
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -22,6 +23,14 @@ public class Projetile : MonoBehaviour
                 enemyHealth.TakeDamage(1f);
                 Destroy(gameObject);
 			}
+        }
+        if (other.CompareTag("Wall"))
+        {
+            collisionCount++;
+            if (collisionCount > 1)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

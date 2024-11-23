@@ -4,12 +4,15 @@
 		<WorkUnit Name="TEST" ID="{C2BC7785-C659-43AD-84B4-5AEF0E322394}" PersistMode="Standalone">
 			<ChildrenList>
 				<Sound Name="TestingSound" ID="{18E2A6DE-FE34-4C77-9033-2E44A99BF2FE}" ShortID="449939590">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+							<ObjectRef Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>

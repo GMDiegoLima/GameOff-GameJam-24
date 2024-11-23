@@ -10,27 +10,149 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Bus Name="EnvironmentMaster" ID="{62B62982-297F-4972-A18C-953007655576}">
-							<ChildrenList>
-								<Bus Name="ObjectsMaster" ID="{86880AC9-A889-414E-BABA-0BCE2DC658C8}"/>
-								<Bus Name="AmbianceMaster" ID="{B52B3882-9520-47AC-BEA0-336993EA3AB1}"/>
-							</ChildrenList>
+						<Bus Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}">
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{1955A0FE-5E3A-441B-AB2D-07DE9BD750E0}" ShortID="1039621067">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="music" ID="{86217303-0D72-4A68-B18C-D085E47B5E21}" WorkUnitID="{12B23305-5568-49C3-8AB6-2C34EBEFEB20}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{F3C0F859-3C7D-44B9-BB9A-F89113E1E9F8}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
 						</Bus>
-						<Bus Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}"/>
 						<AuxBus Name="Reverbs" ID="{B66B14F3-598E-4FEF-9E0B-ABAF86482D47}">
 							<ChildrenList>
 								<AuxBus Name="Dungeon" ID="{79594F08-47B9-4500-B53C-C122672D579C}"/>
 								<AuxBus Name="Overworld" ID="{5395CA3D-5923-49D2-A162-92A12E6C579F}"/>
 							</ChildrenList>
 						</AuxBus>
-						<Bus Name="UiMaster" ID="{4B933C55-C410-437B-BCC9-A94593E5E356}"/>
-						<Bus Name="Characters" ID="{C77C0FB8-8237-4551-8CDF-E03D11B926F3}">
+						<Bus Name="sfxMaster" ID="{D107A17C-F1A5-49DA-91FE-AE798B6DF1BB}">
 							<ChildrenList>
-								<Bus Name="NpcMaster" ID="{F87815E8-2DE2-42C8-9916-E488EC4512CF}"/>
-								<Bus Name="PlayerMaster" ID="{D01A8093-2A83-4A28-B6F4-9ACBE895E3E2}"/>
+								<Bus Name="Characters" ID="{C77C0FB8-8237-4551-8CDF-E03D11B926F3}">
+									<ChildrenList>
+										<Bus Name="NpcMaster" ID="{F87815E8-2DE2-42C8-9916-E488EC4512CF}"/>
+										<Bus Name="PlayerMaster" ID="{D01A8093-2A83-4A28-B6F4-9ACBE895E3E2}"/>
+									</ChildrenList>
+								</Bus>
+								<Bus Name="EnvironmentMaster" ID="{62B62982-297F-4972-A18C-953007655576}">
+									<ChildrenList>
+										<Bus Name="ObjectsMaster" ID="{86880AC9-A889-414E-BABA-0BCE2DC658C8}"/>
+										<Bus Name="AmbianceMaster" ID="{B52B3882-9520-47AC-BEA0-336993EA3AB1}"/>
+									</ChildrenList>
+								</Bus>
+								<Bus Name="UiMaster" ID="{4B933C55-C410-437B-BCC9-A94593E5E356}"/>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{6EBF7439-13DE-450D-997A-8C742E14332A}" ShortID="87711315">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="sfx" ID="{40240E27-63F2-4C37-B5D1-32F7DA6A9C95}" WorkUnitID="{12B23305-5568-49C3-8AB6-2C34EBEFEB20}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{E350A0E9-921B-41A8-A1A8-40F656FFF205}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
 						</Bus>
 					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{6265A02E-401B-4204-88EC-666E29DCA6A9}" ShortID="417774187">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Volume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="master" ID="{5424E05C-F1EC-419A-A405-E6BF68B07111}" WorkUnitID="{12B23305-5568-49C3-8AB6-2C34EBEFEB20}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{AB3C2DB2-1DFA-4D71-8C55-4289892929B0}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>
