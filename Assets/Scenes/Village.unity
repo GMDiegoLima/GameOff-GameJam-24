@@ -40549,7 +40549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedScene: 3
-  playerSpawnPosition: {x: 0, y: 0}
+  playerSpawnPosition: {x: 73.7, y: 37.6}
 --- !u!61 &1499959653
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41711,7 +41711,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7027632970052796844, guid: 98ace3a7e2f7d894fbd09d390e488fb9, type: 3}
       propertyPath: orthographic size
-      value: 3.375
+      value: 3.625
       objectReference: {fileID: 0}
     - target: {fileID: 7155231759311967505, guid: 98ace3a7e2f7d894fbd09d390e488fb9, type: 3}
       propertyPath: m_IsActive

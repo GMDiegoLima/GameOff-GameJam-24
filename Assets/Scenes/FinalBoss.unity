@@ -137415,7 +137415,7 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!43 &1030361268
+--- !u!43 &1552045705
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137650,11 +137650,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7027632970052796844, guid: 98ace3a7e2f7d894fbd09d390e488fb9, type: 3}
       propertyPath: orthographic size
-      value: 5.53125
+      value: 4.821429
       objectReference: {fileID: 0}
     - target: {fileID: 7772584563165250645, guid: 98ace3a7e2f7d894fbd09d390e488fb9, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8050349923908596309, guid: 98ace3a7e2f7d894fbd09d390e488fb9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 8050349923908596309, guid: 98ace3a7e2f7d894fbd09d390e488fb9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -138010,7 +138018,7 @@ MonoBehaviour:
     rid: 6760980906772004960
   m_ShadowCastingSource: 2
   m_ShadowMesh:
-    m_Mesh: {fileID: 1030361268}
+    m_Mesh: {fileID: 1552045705}
     m_LocalBounds:
       m_Center: {x: 23.5, y: 28.5, z: 0}
       m_Extent: {x: 4.5, y: 2.5, z: 0}

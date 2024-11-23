@@ -7,6 +7,8 @@ public class PuzzleBalance : MonoBehaviour
 {
     public PlayerController player;
     public TextMeshProUGUI addWeightText;
+    public GameObject weightIndicator;
+    public TextMeshProUGUI weightIndicatorText;
     public GameObject plate;
     public int correctweight;
     public int maxItems;
@@ -24,6 +26,7 @@ public class PuzzleBalance : MonoBehaviour
     void Start()
     {
         plateOrigin = plate.transform.position;
+        weightIndicator.SetActive(false);
     }
 
     void Update()
@@ -32,6 +35,7 @@ public class PuzzleBalance : MonoBehaviour
         {
             if (weights.Count < maxItems)
             {
+                weightIndicator.SetActive(true);
                 weights.Add(holdingWeight);
                 player.DropItem();
                 itemCollider.enabled = false;
@@ -46,6 +50,7 @@ public class PuzzleBalance : MonoBehaviour
                 {
                     checkWeight += weight;
                 }
+                weightIndicatorText.text = checkWeight.ToString();
                 if (checkWeight == correctweight)
                 {
                     Debug.Log("Puzzle solved");

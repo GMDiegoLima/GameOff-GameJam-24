@@ -8,6 +8,7 @@ public class TutorialDig : MonoBehaviour
     public GameObject background;
     public TextMeshProUGUI disembodyText;
     public TextMeshProUGUI digText;
+    public GameObject flower;
     public Health skeletonHealth;
     bool canDig;
     bool dug = false;
@@ -19,6 +20,7 @@ public class TutorialDig : MonoBehaviour
         if (Input.GetKeyDown("e") && !player.flying && !dug && canDig)
         {
             dug = true;
+            Destroy(flower);
             disembodyText.enabled = true;
             digText.enabled = false;
             transform.Find("Coffin").gameObject.SetActive(true);

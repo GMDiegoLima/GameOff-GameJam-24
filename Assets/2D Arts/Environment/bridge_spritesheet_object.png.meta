@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: 36febc48073e0e748bc2964f704e5ff4
+guid: d71dd414d924e4e448d799e36adc0130
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7480410312756610671
-    second: torch_checkpoint_object_0
-  - first:
-      213: -634805155868335959
-    second: torch_checkpoint_object_1
-  - first:
-      213: 656180553969387958
-    second: torch_checkpoint_object_2
-  - first:
-      213: 7326468093949439849
-    second: torch_checkpoint_object_3
+      213: 5645686709791742947
+    second: bridge_spritesheet_object_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,89 +113,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: torch_checkpoint_object_0
+      name: bridge_spritesheet_object_0
       rect:
         serializedVersion: 2
         x: 16
-        y: 32
-        width: 16
-        height: 32
+        y: 16
+        width: 48
+        height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 19939f5147e303890800000000000000
-      internalID: -7480410312756610671
+      spriteID: 3ebd7428622895e40800000000000000
+      internalID: 5645686709791742947
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: torch_checkpoint_object_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9a0a1e6f218b037f0800000000000000
-      internalID: -634805155868335959
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: torch_checkpoint_object_2
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 32
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6b94ddbbcb83b1900800000000000000
-      internalID: 656180553969387958
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: torch_checkpoint_object_3
+      name: bridge_spritesheet_object_1
       rect:
         serializedVersion: 2
         x: 64
-        y: 32
-        width: 16
-        height: 32
+        y: 16
+        width: 48
+        height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 96fe6160ae7dca560800000000000000
-      internalID: 7326468093949439849
+      spriteID: 9b86a34b84ae6b34a94d0bd34a1b5ba1
+      internalID: 183083667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bridge_spritesheet_object_2
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 16
+        width: 48
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80df38573ee18ac4da5494851afa5577
+      internalID: 1865139227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bridge_spritesheet_object_3
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 16
+        width: 48
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a99feb8bacd830c47a5eb29988831f9c
+      internalID: -256027621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bridge_spritesheet_object_4
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 16
+        width: 48
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d58ab8bac2efd0489c5b4678455db8a
+      internalID: 176089630
       vertices: []
       indices: 
       edges: []
@@ -213,7 +226,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f1ffbb8c7e551504fa94442d0243e5fc
+    spriteID: 9a0e1a287dd58344ab1f64c3e3a5ad3b
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +236,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      torch_checkpoint_object_0: -7480410312756610671
-      torch_checkpoint_object_1: -634805155868335959
-      torch_checkpoint_object_2: 656180553969387958
-      torch_checkpoint_object_3: 7326468093949439849
+      bridge_spritesheet_object_0: 5645686709791742947
+      bridge_spritesheet_object_1: 183083667
+      bridge_spritesheet_object_2: 1865139227
+      bridge_spritesheet_object_3: -256027621
+      bridge_spritesheet_object_4: 176089630
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

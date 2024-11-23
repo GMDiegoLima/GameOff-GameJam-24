@@ -19,9 +19,9 @@ public class PressurePlateMemory : MonoBehaviour
     {
         if ((other.CompareTag("Player") && !playerScript.flying) || other.CompareTag("PressureTrigger"))
         {
+            puzzleManager.CheckPlatform(plateInt);
             animator.SetBool("Activated", true);
             AkSoundEngine.PostEvent("plate", gameObject);
-            puzzleManager.CheckPlatform(plateInt);
         }
     }
 

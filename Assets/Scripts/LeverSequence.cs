@@ -8,7 +8,8 @@ public class LeverSequence : MonoBehaviour
     public bool activated;
     public TextMeshProUGUI pullText;
     public string leverName;
-    public PuzzleSequence sequencePuzzle;
+    public PuzzleSequenceManager puzzleSeqManager;
+    public PuzzleActivations puzzleActManager;
     Animator animator;
 
     void Start()
@@ -23,17 +24,30 @@ public class LeverSequence : MonoBehaviour
         {
             animator.enabled = true;
             activated = !activated;
-            if (activated)
+            animator.SetBool("Activated", activated);
+            AkSoundEngine.PostEvent("lever", gameObject);
+            if (puzzleSeqManager != null)
             {
-                animator.SetBool("Activated", true);
-                AkSoundEngine.PostEvent("lever", gameObject);
-                sequencePuzzle.RegisterActivation(leverName);
+                PuzzleSequence activePuzzle = puzzleSeqManager.GetActivePuzzle();
+                if (activated)
+                {
+                    activePuzzle.RegisterActivation(leverName);
+                }
+                else
+                {
+                    activePuzzle.RemoveActivation(leverName);
+                }
             }
-            else
+            if (puzzleActManager != null)
             {
-                animator.SetBool("Activated", false);
-                AkSoundEngine.PostEvent("lever", gameObject);
-                sequencePuzzle.RemoveItem(leverName);
+                if (activated)
+                {
+                    puzzleActManager.RegisterActivation(leverName);
+                }
+                else
+                {
+                    puzzleActManager.RemoveActivation(leverName);
+                }
             }
         }
     }

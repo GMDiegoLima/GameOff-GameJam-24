@@ -1,19 +1,25 @@
 fileFormatVersion: 2
-guid: 36febc48073e0e748bc2964f704e5ff4
+guid: c017676fc1c61bf4880500f1fed16c9f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7480410312756610671
-    second: torch_checkpoint_object_0
+      213: 1267997466789973777
+    second: spike_trap_0
   - first:
-      213: -634805155868335959
-    second: torch_checkpoint_object_1
+      213: -1352397676652071882
+    second: spike_trap_1
   - first:
-      213: 656180553969387958
-    second: torch_checkpoint_object_2
+      213: -4317575240271982671
+    second: spike_trap_2
   - first:
-      213: 7326468093949439849
-    second: torch_checkpoint_object_3
+      213: 6216971889954247071
+    second: spike_trap_3
+  - first:
+      213: -3581882678996813913
+    second: spike_trap_4
+  - first:
+      213: -6730052584705050645
+    second: spike_trap_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,89 +128,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: torch_checkpoint_object_0
+      name: spike_trap_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11f8c185af4d89110800000000000000
+      internalID: 1267997466789973777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spike_trap_1
       rect:
         serializedVersion: 2
         x: 16
-        y: 32
+        y: 0
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 19939f5147e303890800000000000000
-      internalID: -7480410312756610671
+      spriteID: 634f6187a715b3de0800000000000000
+      internalID: -1352397676652071882
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: torch_checkpoint_object_1
+      name: spike_trap_2
       rect:
         serializedVersion: 2
         x: 32
-        y: 32
+        y: 0
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9a0a1e6f218b037f0800000000000000
-      internalID: -634805155868335959
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: torch_checkpoint_object_2
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 32
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6b94ddbbcb83b1900800000000000000
-      internalID: 656180553969387958
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: torch_checkpoint_object_3
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 96fe6160ae7dca560800000000000000
-      internalID: 7326468093949439849
+      spriteID: 1bf0198c134e414c0800000000000000
+      internalID: -4317575240271982671
       vertices: []
       indices: 
       edges: []
@@ -213,7 +197,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f1ffbb8c7e551504fa94442d0243e5fc
+    spriteID: 853ebd73a7c05d34da0aebb71eaa2536
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +207,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      torch_checkpoint_object_0: -7480410312756610671
-      torch_checkpoint_object_1: -634805155868335959
-      torch_checkpoint_object_2: 656180553969387958
-      torch_checkpoint_object_3: 7326468093949439849
+      spike_trap_0: 1267997466789973777
+      spike_trap_1: -1352397676652071882
+      spike_trap_2: -4317575240271982671
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
