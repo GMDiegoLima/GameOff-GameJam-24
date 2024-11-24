@@ -12,6 +12,12 @@
 						<Switch Name="water" ID="{E46E0514-674D-4E6A-910F-904E86AC3E38}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="Player_movement" ID="{82E73AEB-ECFB-43BF-B090-ABD91711D0F9}">
+					<ChildrenList>
+						<Switch Name="moving" ID="{13E928FF-C584-4C6B-B40A-A69FAA416F4B}"/>
+						<Switch Name="static" ID="{C2A68CFF-E448-4F06-86F5-D20591617293}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

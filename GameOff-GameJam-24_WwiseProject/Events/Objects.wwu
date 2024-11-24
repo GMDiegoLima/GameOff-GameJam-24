@@ -36,6 +36,18 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="coffin" ID="{1CE56CAF-F71E-43AD-A644-DCCFAC2CA173}">
+					<ChildrenList>
+						<Action Name="" ID="{6A8D86FF-8846-460C-A9A2-B59A87B891F3}" ShortID="1045506958">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_obj_coffin" ID="{825C5AE2-6565-44E5-BECD-9110207AC615}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="door_opens" ID="{05BCEF4A-FE78-4DAD-A9FB-2D37C59F0227}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

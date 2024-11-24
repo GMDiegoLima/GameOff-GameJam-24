@@ -14,6 +14,62 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="dig" ID="{1189ADBD-E4E0-4068-B9DB-12D531AF1D17}">
+					<ChildrenList>
+						<Action Name="" ID="{3142704B-2A17-4CC0-9F51-EAF3421C7E2A}" ShortID="258066573">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_dig" ID="{A2DC9CB2-904A-4385-ACC7-300C6382BE4C}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="item_pick" ID="{3130E1EE-F675-41E5-96EF-23C1FC4D4546}">
+					<ChildrenList>
+						<Action Name="" ID="{2E9F3AF9-6C8B-4121-8BA5-22B221837B0E}" ShortID="315318970">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_item_drop" ID="{3D70F3D8-81BB-454A-9290-4AFB9FC7EEE6}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B333797C-1FB5-41BA-ACC7-76B38C34DF0A}" ShortID="860525323">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_item_pick" ID="{38ED6F7C-1895-402E-890C-2B686F70A8E3}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="item_drop" ID="{D07CCE5A-B723-4E7B-AF16-BF9D07071B63}">
+					<ChildrenList>
+						<Action Name="" ID="{95402D56-2DFF-41D2-9760-794E723739CB}" ShortID="697156972">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_item_pick" ID="{38ED6F7C-1895-402E-890C-2B686F70A8E3}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D3849E25-DD26-432E-98C5-A0058BC1C300}" ShortID="461444916">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_item_drop" ID="{3D70F3D8-81BB-454A-9290-4AFB9FC7EEE6}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="embody" ID="{6F49FA94-5DB1-46AF-8E27-991FDE2A4F51}"/>
+				<Event Name="disembody" ID="{09B61C89-4E83-4493-8338-F7B198ECE2B8}"/>
+				<Event Name="hurt" ID="{E7177CB7-DECB-4A5D-A01F-BAC3B9357430}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

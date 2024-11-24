@@ -22,6 +22,7 @@
 						</GameParameter>
 					</ChildrenList>
 				</Folder>
+				<GameParameter Name="player_health" ID="{60122350-6D92-44B5-938F-57DF204EEEF3}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

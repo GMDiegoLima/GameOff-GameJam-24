@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{BDA3E691-1370-85F5-0EAD-D2F79C8BF597}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{A2022151-3FF8-C050-49CF-E44429A215FB}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -44,9 +44,9 @@
 				<AuxBus Id="3545700988" Name="Reverbs"/>
 			</AuxBusses>
 			<GameParameters>
-				<GameParameter Id="393239870" Name="SFX"/>
-				<GameParameter Id="3991942870" Name="Music"/>
-				<GameParameter Id="4056684167" Name="Master"/>
+				<GameParameter Id="393239870" Name="sfx"/>
+				<GameParameter Id="3991942870" Name="music"/>
+				<GameParameter Id="4056684167" Name="master"/>
 			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="185713839" Name="RoomState">
@@ -83,34 +83,30 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1512859615" Type="User" Language="SFX" Hash="{13A6BC9D-13AB-78EF-9243-074305DE2CA4}">
+		<SoundBank Id="1512859615" Type="User" Language="SFX" Hash="{D882BCD6-B7DE-EDF8-D9F6-E251B6696CC3}">
 			<ShortName>Testing</ShortName>
 			<Path>Testing.bnk</Path>
 			<Media>
 				<File Id="812529937" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Words Like Weapons Guitar.wav</ShortName>
-					<CachePath>SFX/Words Like Weapons Guitar_F06BAF76.wem</CachePath>
+					<CachePath>SFX/Words Like Weapons Guitar_8EC3C7C0.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
-				<Event Id="946158365" Name="TestingEvent" DurationType="OneShot" DurationMin="210.08868" DurationMax="210.08868">
+				<Event Id="946158365" Name="TestingEvent" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="812529937"/>
 					</MediaRefs>
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{C2466F34-14C4-D8FA-A108-433173D856FB}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{CE46865A-5F7D-3D8F-F400-DFEB75D4783C}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
-				<File Id="7661146" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>ui_dialogue_var_02.wav</ShortName>
-					<CachePath>SFX/ui_dialogue_var_02_F06BAF76.wem</CachePath>
-				</File>
-				<File Id="54325868" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>ui_move_var_02.wav</ShortName>
-					<CachePath>SFX/ui_move_var_02_F06BAF76.wem</CachePath>
+				<File Id="21760791" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_dig.wav</ShortName>
+					<CachePath>SFX/sfx_dig_F06BAF76.wem</CachePath>
 				</File>
 				<File Id="57660160" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_footsteps_grass_var_03.wav</ShortName>
@@ -124,14 +120,6 @@
 					<ShortName>sfx_obj_rock_pushing.wav</ShortName>
 					<CachePath>SFX/sfx_obj_rock_pushing_8EC3C7C0.wem</CachePath>
 				</File>
-				<File Id="225222591" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>ui_move_var_01.wav</ShortName>
-					<CachePath>SFX/ui_move_var_01_F06BAF76.wem</CachePath>
-				</File>
-				<File Id="232811396" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>ui_dialogue_var_01.wav</ShortName>
-					<CachePath>SFX/ui_dialogue_var_01_F06BAF76.wem</CachePath>
-				</File>
 				<File Id="305096193" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_obj_plate_on.wav</ShortName>
 					<CachePath>SFX/sfx_obj_plate_on_F06BAF76.wem</CachePath>
@@ -143,6 +131,10 @@
 				<File Id="377805870" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_footsteps_parquet_var_01.wav</ShortName>
 					<CachePath>SFX/sfx_footsteps_parquet_var_01_F06BAF76.wem</CachePath>
+				</File>
+				<File Id="411483413" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_obj_coffin.wav</ShortName>
+					<CachePath>SFX/sfx_obj_coffin_F06BAF76.wem</CachePath>
 				</File>
 				<File Id="424907451" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_footsteps_stone_var_02.wav</ShortName>
@@ -156,17 +148,25 @@
 					<ShortName>sfx_footsteps_parquet_var_03.wav</ShortName>
 					<CachePath>SFX/sfx_footsteps_parquet_var_03_F06BAF76.wem</CachePath>
 				</File>
+				<File Id="526766253" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_item_drop.wav</ShortName>
+					<CachePath>SFX/sfx_item_drop_F06BAF76.wem</CachePath>
+				</File>
+				<File Id="672148358" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_creatures_alert.wav</ShortName>
+					<CachePath>SFX/sfx_creatures_alert_F06BAF76.wem</CachePath>
+				</File>
 				<File Id="858639589" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_obj_plate_off.wav</ShortName>
 					<CachePath>SFX/sfx_obj_plate_off_95749A7B.wem</CachePath>
 				</File>
-				<File Id="865284003" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>ui_select.wav</ShortName>
-					<CachePath>SFX/ui_select_F06BAF76.wem</CachePath>
-				</File>
 				<File Id="905515257" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_footsteps_grass_var_02.wav</ShortName>
 					<CachePath>SFX/sfx_footsteps_grass_var_02_F06BAF76.wem</CachePath>
+				</File>
+				<File Id="932525853" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_item_pick.wav</ShortName>
+					<CachePath>SFX/sfx_item_pick_F06BAF76.wem</CachePath>
 				</File>
 				<File Id="932597001" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_footsteps_stone_var_01.wav</ShortName>
@@ -178,9 +178,23 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="1316490268" Name="evil_dialogue" DurationType="OneShot" DurationMin="0.11425" DurationMax="0.11425">
+				<Event Id="3423338245" Name="bat_attack" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2274969374" Name="coffin" DurationType="OneShot" DurationMin="1.9962916" DurationMax="1.9962916">
 					<MediaRefs>
-						<MediaRef Id="7661146"/>
+						<MediaRef Id="411483413"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="445985471" Name="dig" DurationType="OneShot" DurationMin="0.23660417" DurationMax="0.23660417">
+					<MediaRefs>
+						<MediaRef Id="21760791"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1029929321" Name="disembody" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3875653779" Name="door_opens" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3989366099" Name="embody" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="493036092" Name="enemy_alert" DurationType="OneShot" DurationMin="0.5535625" DurationMax="0.5535625">
+					<MediaRefs>
+						<MediaRef Id="672148358"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2385628198" Name="footsteps" DurationType="OneShot" DurationMin="0.061020833" DurationMax="0.13360417">
@@ -219,29 +233,21 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
+				<Event Id="2534371823" Name="goblin_attack" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3193947170" Name="hurt" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2177967876" Name="item_drop" DurationType="OneShot" DurationMin="1.0758958" DurationMax="1.0758958">
+					<MediaRefs>
+						<MediaRef Id="526766253"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4159556712" Name="item_pick" DurationType="OneShot" DurationMin="0.86160415" DurationMax="0.86160415">
+					<MediaRefs>
+						<MediaRef Id="932525853"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2782712987" Name="lever" DurationType="OneShot" DurationMin="2.000625" DurationMax="2.000625">
 					<MediaRefs>
 						<MediaRef Id="477432091"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="2485905105" Name="menu_cursor_back" DurationType="OneShot" DurationMin="0.79733336" DurationMax="0.79733336">
-					<MediaRefs>
-						<MediaRef Id="225222591"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="1306883239" Name="menu_cursor_move" DurationType="OneShot" DurationMin="0.7389375" DurationMax="0.7389375">
-					<MediaRefs>
-						<MediaRef Id="54325868"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="3200708208" Name="menu_cursor_select" DurationType="OneShot" DurationMin="0.792" DurationMax="0.792">
-					<MediaRefs>
-						<MediaRef Id="865284003"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="365141489" Name="normal_dialogue" DurationType="OneShot" DurationMin="0.11385417" DurationMax="0.11385417">
-					<MediaRefs>
-						<MediaRef Id="232811396"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="282449107" Name="plate" DurationType="OneShot" DurationMin="0.6513125" DurationMax="0.7966875">
@@ -255,6 +261,8 @@
 						<MediaRef Id="221138627"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2888548111" Name="skeleton_attack" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1571748476" Name="wolf_attack" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 			<SwitchGroups>
 				<SwitchGroup Id="478119480" Name="GroundTextures">
@@ -272,10 +280,20 @@
 			<ShortName>Title</ShortName>
 			<Path>Title.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{8075EEFB-2136-8445-22D7-93138A5F3A36}">
+		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{46E856FC-DCCD-366C-838D-F4C085D911AD}">
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
+			<Events>
+				<Event Id="612075679" Name="Checkpoint" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionTrigger>
+						<ActionTriggerEntry Id="612075679" Name="checkpoint"/>
+					</ActionTrigger>
+				</Event>
+			</Events>
+			<Triggers>
+				<Trigger Id="612075679" Name="checkpoint"/>
+			</Triggers>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{ADD39CCE-5F6A-41ED-FF9C-B6AA59C35E6A}</FileHash>
+	<FileHash>{1C0DE751-67EA-4D68-ECAF-E981778BB47B}</FileHash>
 </SoundBanksInfo>

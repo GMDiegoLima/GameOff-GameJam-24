@@ -6,6 +6,9 @@
 				<Property Name="Color" Type="int16" Value="2"/>
 				<Property Name="OverrideColor" Type="bool" Value="True"/>
 			</PropertyList>
+			<ChildrenList>
+				<Folder Name="Stingers" ID="{E2C7E0E7-8B71-4C65-AA7F-AE8E50E44211}" ShortID="912149915"/>
+			</ChildrenList>
 		</WorkUnit>
 	</Events>
 </WwiseDocument>

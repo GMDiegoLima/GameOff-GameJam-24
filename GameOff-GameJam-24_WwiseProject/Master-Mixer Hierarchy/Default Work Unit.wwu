@@ -11,6 +11,34 @@
 					</ReferenceList>
 					<ChildrenList>
 						<Bus Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}">
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="GameStatus" ID="{F4DB2D47-C80F-4A3A-9990-91BFF40CD847}"/>
+									</StateGroupInfo>
+									<StateGroupInfo>
+										<StateGroupRef Name="PlayerStatus" ID="{306AABD8-E55E-47B1-A676-ECD02DA6A13E}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Dead" ID="{049C9A16-C3E8-4215-B257-9430833D0F0A}"/>
+										<CustomState Name="" ID="{8343C252-46C5-4E72-8029-555A84523BC0}" ShortID="817709869"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="InMenu" ID="{7BEFC686-0C0A-4567-A1C5-1DFF432F1365}"/>
+										<CustomState Name="" ID="{9ED15927-BF32-4A91-B885-C84E559E5A22}" ShortID="22556136"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Alive" ID="{B1696563-4FE0-470C-9098-472520DAD3C2}"/>
+										<CustomState Name="" ID="{23463009-FA58-4F03-AC10-5B8A6E3CA0DF}" ShortID="11330391"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="InGame" ID="{CF648247-C9ED-4CAF-9FD9-E80F63C6FEC3}"/>
+										<CustomState Name="" ID="{DC1280E0-7583-4203-A5C0-CCE497F19A56}" ShortID="50732950"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 							<ObjectLists>
 								<ObjectList Name="RTPC">
 									<Reference>

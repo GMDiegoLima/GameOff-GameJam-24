@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{01554CCD-93E7-4ACF-8B39-3F9662AF8AF0}" SchemaVersion="119" RootDocumentID="{568CA0A9-9B6B-4CBA-93C7-FB9940D85A50}" ParentDocumentID="{568CA0A9-9B6B-4CBA-93C7-FB9940D85A50}">
 	<Events>
-		<WorkUnit Name="Creatures_npcs" ID="{01554CCD-93E7-4ACF-8B39-3F9662AF8AF0}" OwnerID="{568CA0A9-9B6B-4CBA-93C7-FB9940D85A50}" PersistMode="Nested"/>
+		<WorkUnit Name="Creatures_npcs" ID="{01554CCD-93E7-4ACF-8B39-3F9662AF8AF0}" OwnerID="{568CA0A9-9B6B-4CBA-93C7-FB9940D85A50}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="enemy_alert" ID="{CCD93C26-AF2E-4C2A-B008-B19274BEF66F}">
+					<ChildrenList>
+						<Action Name="" ID="{1C07A1BD-7C6F-49CF-A379-04954646C20D}" ShortID="229026206">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_creatures_alert" ID="{F957F6E3-DB36-4FA3-8E39-068A180B6C69}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="wolf_attack" ID="{5C3F56A1-B401-40AE-B90C-AE71CBD8E0C1}"/>
+				<Event Name="bat_attack" ID="{555B771C-159E-47B6-BB14-5D411BAB00F3}"/>
+				<Event Name="skeleton_attack" ID="{DEB1C334-3506-4C7B-87D4-00BD4FF6D19C}"/>
+				<Event Name="goblin_attack" ID="{E6ED7FC6-89C5-444D-BFF4-8AC7D760FFA4}"/>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

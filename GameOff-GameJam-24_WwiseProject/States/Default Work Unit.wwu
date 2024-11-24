@@ -14,14 +14,7 @@
 					<ChildrenList>
 						<State Name="None" ID="{887F4B91-E1EC-4289-A888-53C17D7BE257}"/>
 						<State Name="Alive" ID="{B1696563-4FE0-470C-9098-472520DAD3C2}"/>
-						<State Name="Stealth" ID="{049C9A16-C3E8-4215-B257-9430833D0F0A}"/>
-					</ChildrenList>
-				</StateGroup>
-				<StateGroup Name="RoomState" ID="{C302C865-8DE6-45E9-915B-A334443D6BB8}">
-					<ChildrenList>
-						<State Name="None" ID="{E3A0DB39-C7FC-4961-AA55-D9E52A5A75A2}"/>
-						<State Name="Overworld" ID="{86BE48FC-4D19-4026-9589-A41133143770}"/>
-						<State Name="Dungeon" ID="{8C6B02E3-66F8-4B09-B164-5D46D9DBB26D}"/>
+						<State Name="Dead" ID="{049C9A16-C3E8-4215-B257-9430833D0F0A}"/>
 					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>

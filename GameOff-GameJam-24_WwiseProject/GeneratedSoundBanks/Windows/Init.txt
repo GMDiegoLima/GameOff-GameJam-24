@@ -15,9 +15,9 @@ State	ID	Name	State Group			Notes
 	2909291642	Stealth	PlayerStatus			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
-	393239870	SFX			\Default Work Unit\VolumeMenu\SFX	
-	3991942870	Music			\Default Work Unit\VolumeMenu\Music	
-	4056684167	Master			\Default Work Unit\VolumeMenu\Master	
+	393239870	sfx			\Default Work Unit\VolumeMenu\sfx	
+	3991942870	music			\Default Work Unit\VolumeMenu\music	
+	4056684167	master			\Default Work Unit\VolumeMenu\master	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	1436777591	AmbianceMaster			\Default Work Unit\Master Audio Bus\sfxMaster\EnvironmentMaster\AmbianceMaster	

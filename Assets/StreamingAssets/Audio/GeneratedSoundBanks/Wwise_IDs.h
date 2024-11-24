@@ -13,16 +13,25 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID EVIL_DIALOGUE = 1316490268U;
+        static const AkUniqueID BAT_ATTACK = 3423338245U;
+        static const AkUniqueID CHECKPOINT = 612075679U;
+        static const AkUniqueID COFFIN = 2274969374U;
+        static const AkUniqueID DIG = 445985471U;
+        static const AkUniqueID DISEMBODY = 1029929321U;
+        static const AkUniqueID DOOR_OPENS = 3875653779U;
+        static const AkUniqueID EMBODY = 3989366099U;
+        static const AkUniqueID ENEMY_ALERT = 493036092U;
         static const AkUniqueID FOOTSTEPS = 2385628198U;
+        static const AkUniqueID GOBLIN_ATTACK = 2534371823U;
+        static const AkUniqueID HURT = 3193947170U;
+        static const AkUniqueID ITEM_DROP = 2177967876U;
+        static const AkUniqueID ITEM_PICK = 4159556712U;
         static const AkUniqueID LEVER = 2782712987U;
-        static const AkUniqueID MENU_CURSOR_BACK = 2485905105U;
-        static const AkUniqueID MENU_CURSOR_MOVE = 1306883239U;
-        static const AkUniqueID MENU_CURSOR_SELECT = 3200708208U;
-        static const AkUniqueID NORMAL_DIALOGUE = 365141489U;
         static const AkUniqueID PLATE = 282449107U;
         static const AkUniqueID ROCK_PUSH = 2827948781U;
+        static const AkUniqueID SKELETON_ATTACK = 2888548111U;
         static const AkUniqueID TESTINGEVENT = 946158365U;
+        static const AkUniqueID WOLF_ATTACK = 1571748476U;
     } // namespace EVENTS
 
     namespace STATES
@@ -89,6 +98,13 @@ namespace AK
         static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID SFX = 393239870U;
     } // namespace GAME_PARAMETERS
+
+    namespace TRIGGERS
+    {
+        static const AkUniqueID CHECKPOINT = 612075679U;
+        static const AkUniqueID PATH_CORRECT = 4156519531U;
+        static const AkUniqueID PATH_WRONG = 3587245554U;
+    } // namespace TRIGGERS
 
     namespace BANKS
     {

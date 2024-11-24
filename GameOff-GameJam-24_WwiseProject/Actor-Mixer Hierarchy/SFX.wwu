@@ -3,6 +3,7 @@
 	<AudioObjects>
 		<WorkUnit Name="SFX" ID="{69DFDA44-94CD-4766-BE60-AEF22150072B}" PersistMode="Standalone">
 			<PropertyList>
+				<Property Name="Color" Type="int16" Value="19"/>
 				<Property Name="OverrideColor" Type="bool" Value="True"/>
 			</PropertyList>
 			<ChildrenList>

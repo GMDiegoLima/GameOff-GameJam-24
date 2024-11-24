@@ -1,13 +1,21 @@
 Event	ID	Name			Wwise Object Path	Notes
 	282449107	plate			\Sfx\Objects\plate	
-	365141489	normal_dialogue			\UI\normal_dialogue	
-	1306883239	menu_cursor_move			\UI\menu_cursor_move	
-	1316490268	evil_dialogue			\UI\evil_dialogue	
+	445985471	dig			\Sfx\Player\dig	
+	493036092	enemy_alert			\Sfx\Creatures_npcs\enemy_alert	
+	1029929321	disembody			\Sfx\Player\disembody	
+	1571748476	wolf_attack			\Sfx\Creatures_npcs\wolf_attack	
+	2177967876	item_drop			\Sfx\Player\item_drop	
+	2274969374	coffin			\Sfx\Objects\coffin	
 	2385628198	footsteps			\Sfx\Player\footsteps	
-	2485905105	menu_cursor_back			\UI\menu_cursor_back	
+	2534371823	goblin_attack			\Sfx\Creatures_npcs\goblin_attack	
 	2782712987	lever			\Sfx\Objects\lever	
 	2827948781	rock_push			\Sfx\Objects\rock_push	
-	3200708208	menu_cursor_select			\UI\menu_cursor_select	
+	2888548111	skeleton_attack			\Sfx\Creatures_npcs\skeleton_attack	
+	3193947170	hurt			\Sfx\Player\hurt	
+	3423338245	bat_attack			\Sfx\Creatures_npcs\bat_attack	
+	3875653779	door_opens			\Sfx\Objects\door_opens	
+	3989366099	embody			\Sfx\Player\embody	
+	4159556712	item_pick			\Sfx\Player\item_pick	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
 	478119480	GroundTextures			\Default Work Unit\GroundTextures	
@@ -20,22 +28,22 @@ Switch	ID	Name	Switch Group			Notes
 	4248645337	grass	GroundTextures			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	7661146	ui_dialogue_var_02	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Mac\SFX\ui_dialogue_var_02_F06BAF76.wem		\Actor-Mixer Hierarchy\UI\ui_dialogue_var_02		2135
-	54325868	ui_menu_move	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Mac\SFX\ui_move_var_02_F06BAF76.wem		\Actor-Mixer Hierarchy\UI\ui_menu_move		10401
+	21760791	sfx_dig	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Mac\SFX\sfx_dig_F06BAF76.wem		\Actor-Mixer Hierarchy\SFX\WORLD\sfx_dig		3481
 	57660160	sfx_footsteps_grass_var_03	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Mac\SFX\sfx_footsteps_grass_var_03_F06BAF76.wem		\Actor-Mixer Hierarchy\SFX\WORLD\player_footsteps\footsteps_grass\sfx_footsteps_grass_var_03		1817
 	138217890	sfx_footsteps_parquet_var_02	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Mac\SFX\sfx_footsteps_parquet_var_02_F06BAF76.wem		\Actor-Mixer Hierarchy\SFX\WORLD\player_footsteps\footsteps_parquet\sfx_footsteps_parquet_var_02		2328
 	221138627	sfx_obj_rock_pushing	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Mac\SFX\sfx_obj_rock_pushing_8EC3C7C0.wem		\Actor-Mixer Hierarchy\SFX\WORLD\sfx_obj_rock_pushing		58416
-	225222591	ui_menu_back	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Mac\SFX\ui_move_var_01_F06BAF76.wem		\Actor-Mixer Hierarchy\UI\ui_menu_back		10549
-	232811396	ui_dialogue_var_01	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Mac\SFX\ui_dialogue_var_01_F06BAF76.wem		\Actor-Mixer Hierarchy\UI\ui_dialogue_var_01		2057
 	305096193	sfx_obj_plate_on	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Mac\SFX\sfx_obj_plate_on_F06BAF76.wem		\Actor-Mixer Hierarchy\SFX\WORLD\plate_on_off\sfx_obj_plate_on		9207
 	376194961	sfx_footsteps_grass_var_01	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Mac\SFX\sfx_footsteps_grass_var_01_F06BAF76.wem		\Actor-Mixer Hierarchy\SFX\WORLD\player_footsteps\footsteps_grass\sfx_footsteps_grass_var_01		2065
 	377805870	sfx_footsteps_parquet_var_01	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Mac\SFX\sfx_footsteps_parquet_var_01_F06BAF76.wem		\Actor-Mixer Hierarchy\SFX\WORLD\player_footsteps\footsteps_parquet\sfx_footsteps_parquet_var_01		2639
+	411483413	sfx_obj_coffin	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Mac\SFX\sfx_obj_coffin_F06BAF76.wem		\Actor-Mixer Hierarchy\SFX\WORLD\sfx_obj_coffin		26518
 	424907451	sfx_footsteps_stone_var_02	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Mac\SFX\sfx_footsteps_stone_var_02_F06BAF76.wem		\Actor-Mixer Hierarchy\SFX\WORLD\player_footsteps\footsteps_stone\sfx_footsteps_stone_var_02		3119
 	477432091	sfx_obj_lever	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Mac\SFX\sfx_obj_lever_F06BAF76.wem		\Actor-Mixer Hierarchy\SFX\WORLD\sfx_obj_lever		25528
 	493842783	sfx_footsteps_parquet_var_03	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Mac\SFX\sfx_footsteps_parquet_var_03_F06BAF76.wem		\Actor-Mixer Hierarchy\SFX\WORLD\player_footsteps\footsteps_parquet\sfx_footsteps_parquet_var_03		2442
+	526766253	sfx_item_drop	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Mac\SFX\sfx_item_drop_F06BAF76.wem		\Actor-Mixer Hierarchy\SFX\WORLD\sfx_item_drop		15068
+	672148358	sfx_creatures_alert	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Mac\SFX\sfx_creatures_alert_F06BAF76.wem		\Actor-Mixer Hierarchy\SFX\WORLD\sfx_creatures_alert		8775
 	858639589	sfx_obj_plate_off	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Mac\SFX\sfx_obj_plate_off_95749A7B.wem		\Actor-Mixer Hierarchy\SFX\WORLD\plate_on_off\sfx_obj_plate_off		11445
-	865284003	ui_menu_select	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Mac\SFX\ui_select_F06BAF76.wem		\Actor-Mixer Hierarchy\UI\ui_menu_select		11412
 	905515257	sfx_footsteps_grass_var_02	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Mac\SFX\sfx_footsteps_grass_var_02_F06BAF76.wem		\Actor-Mixer Hierarchy\SFX\WORLD\player_footsteps\footsteps_grass\sfx_footsteps_grass_var_02		2638
+	932525853	sfx_item_pick	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Mac\SFX\sfx_item_pick_F06BAF76.wem		\Actor-Mixer Hierarchy\SFX\WORLD\sfx_item_pick		14036
 	932597001	sfx_footsteps_stone_var_01	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Mac\SFX\sfx_footsteps_stone_var_01_F06BAF76.wem		\Actor-Mixer Hierarchy\SFX\WORLD\player_footsteps\footsteps_stone\sfx_footsteps_stone_var_01		2942
 	996341417	sfx_footsteps_stone_var_03	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Mac\SFX\sfx_footsteps_stone_var_03_F06BAF76.wem		\Actor-Mixer Hierarchy\SFX\WORLD\player_footsteps\footsteps_stone\sfx_footsteps_stone_var_03		1968
 

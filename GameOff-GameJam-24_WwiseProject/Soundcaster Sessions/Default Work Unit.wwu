@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{5E90FA6F-68C9-400A-8754-171B62262598}" SchemaVersion="119">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{5E90FA6F-68C9-400A-8754-171B62262598}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{5E90FA6F-68C9-400A-8754-171B62262598}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="DropPickTesting" ID="{B2CA2D84-D020-4002-97B7-F24ACD2ECB3A}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="item_pick" ID="{3130E1EE-F675-41E5-96EF-23C1FC4D4546}" WorkUnitID="{CD11E991-5766-438B-A479-C4169178ACAD}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="item_drop" ID="{D07CCE5A-B723-4E7B-AF16-BF9D07071B63}" WorkUnitID="{CD11E991-5766-438B-A479-C4169178ACAD}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="master" ID="{5424E05C-F1EC-419A-A405-E6BF68B07111}"/>
+							<Value>100</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="dirt" ID="{1224AF38-3A90-483F-9CAD-880A912F7490}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>
