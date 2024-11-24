@@ -130,12 +130,13 @@ public class EnemyAIController : StateController
         }
 
         if (targetFootprints.Count == 0)
-        { 
+        {
             targetFootprints.AddLast(aTarget.position);
 		}
         else if ((aTarget.position - targetFootprints.Last.Value).magnitude > 1f)
         {
             // Don't add the footsprint if too close to the last one
+            Debug.Log("Add a footprint");
             targetFootprints.AddLast(aTarget.position);
         }
 
