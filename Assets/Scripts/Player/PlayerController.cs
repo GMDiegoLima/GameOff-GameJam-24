@@ -273,7 +273,7 @@ public class PlayerController : MonoBehaviour
         }
         if (other.CompareTag("PressureTrigger") && !flying)
         {
-            Debug.Log("Pedra");
+            Debug.Log("Pushing");
             _animator.SetBool("Pushing", true);
             AkSoundEngine.PostEvent("rock_push", gameObject);
             Rigidbody2D rb_rock = other.gameObject.GetComponent<Rigidbody2D>();

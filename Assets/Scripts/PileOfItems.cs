@@ -4,6 +4,7 @@ public class PileOfItems : MonoBehaviour
 {
     public GameObject item;
     public Transform pileOfItems;
+    Collider2D spawnedItemCollider;
     bool canPick;
 
     void Update()
@@ -13,6 +14,7 @@ public class PileOfItems : MonoBehaviour
             if (item != null)
             {
                 GameObject spawnedItem = Instantiate(item, transform.position, Quaternion.identity);
+                spawnedItemCollider = spawnedItem.GetComponent<Collider2D>();
                 switch (item.name)
                 {
                     case "bone":
@@ -36,6 +38,7 @@ public class PileOfItems : MonoBehaviour
                 }
                 spawnedItem.transform.SetParent(pileOfItems);
                 spawnedItem.transform.localPosition = Vector3.zero;
+                spawnedItemCollider.enabled = true;
             }
         }
     }

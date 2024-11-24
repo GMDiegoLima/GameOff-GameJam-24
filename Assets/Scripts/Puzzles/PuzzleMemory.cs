@@ -7,10 +7,10 @@ public class PuzzleMemory : MonoBehaviour
     public SpriteRenderer[] platforms;
     public UnityEvent onPuzzleSolved;
     public UnityEvent onPuzzleReset;
-    private int[] sequence;
-    private int playerIndex = 0;
+    int[] sequence;
+    int playerIndex = 0;
 
-    private void Start()
+    void Start()
     {
         sequence = new int[platforms.Length];
         for (int i = 0; i < platforms.Length; i++)
@@ -29,13 +29,8 @@ public class PuzzleMemory : MonoBehaviour
             if (playerIndex >= sequence.Length)
             {
                 Debug.Log("Puzzle Solved !");
+                onPuzzleSolved.Invoke();
             }
-        }
-        else
-        {
-            Debug.Log("Error ! Wrong Sequence. Puzzle restarted !");
-            playerIndex = 0;
-            StartCoroutine(DisplaySequence()); 
         }
     }
     public void ShowSequence()

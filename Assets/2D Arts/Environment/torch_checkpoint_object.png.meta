@@ -125,7 +125,7 @@ TextureImporter:
       name: torch_checkpoint_object_0
       rect:
         serializedVersion: 2
-        x: 15
+        x: 16
         y: 32
         width: 16
         height: 32

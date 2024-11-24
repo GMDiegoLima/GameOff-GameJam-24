@@ -8,17 +8,26 @@ public class TutorialDig : MonoBehaviour
     public GameObject background;
     public TextMeshProUGUI disembodyText;
     public TextMeshProUGUI digText;
+    public GameObject flower;
     public Health skeletonHealth;
+    SpriteRenderer sprite;
     bool canDig;
     bool dug = false;
     bool embodied = false;
     public GameObject lastDialogue;
+
+    void Start()
+    {
+        sprite = GetComponent<SpriteRenderer>();
+    }
 
     void Update()
     {
         if (Input.GetKeyDown("e") && !player.flying && !dug && canDig)
         {
             dug = true;
+            sprite.enabled = true;
+            Destroy(flower);
             disembodyText.enabled = true;
             digText.enabled = false;
             transform.Find("Coffin").gameObject.SetActive(true);

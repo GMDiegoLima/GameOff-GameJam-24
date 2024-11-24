@@ -5,27 +5,29 @@ using UnityEngine.SceneManagement;
 public class DungeonEntrance : MonoBehaviour
 {
     [SerializeField] private KeyCode openEntranceKey;
-    public Portal entrance;
+    public GameObject entrance;
     public int necessarykeys;
     public Collider2D collider;
-    Animator animator;
     bool canOpen;
 
     void Start()
     {
-        animator = GetComponent<Animator>();
-        entrance.enabled = false;
+        entrance.SetActive(false);
     }
 
     void Update()
     {
         if (canOpen && Input.GetKeyDown(openEntranceKey))
         {
-            animator.SetBool("Open", true);
-            collider.enabled = false;
-            entrance.enabled = true;
+            OpenDungeon();
         }
 
+    }
+
+    public void OpenDungeon()
+    {
+        collider.enabled = false;
+        entrance.SetActive(true);
     }
 
     void OnTriggerEnter2D(Collider2D other)

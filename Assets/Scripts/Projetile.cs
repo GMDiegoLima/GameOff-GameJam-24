@@ -3,6 +3,7 @@ using UnityEngine;
 // Used with Ejector to be shot
 public class Projetile : MonoBehaviour
 {
+    public float damage = 1f;
     int collisionCount = 0;
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -11,7 +12,7 @@ public class Projetile : MonoBehaviour
             Health playerHealth;
             if (other.TryGetComponent<Health>(out playerHealth))
             {
-                playerHealth.TakeDamage(1f);
+                playerHealth.TakeDamage(damage);
                 Destroy(gameObject);
 			}
         }
@@ -20,7 +21,7 @@ public class Projetile : MonoBehaviour
             Health enemyHealth;
             if (other.TryGetComponent<Health>(out enemyHealth))
             {
-                enemyHealth.TakeDamage(1f);
+                enemyHealth.TakeDamage(damage);
                 Destroy(gameObject);
 			}
         }

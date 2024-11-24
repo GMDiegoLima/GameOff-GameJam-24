@@ -7,14 +7,13 @@ public class PuzzleActivations : MonoBehaviour
 {
     public List<string> requiredActivations;
     public UnityEvent onPuzzleSolved;
+    public UnityEvent onPuzzleFail;
 
-    private HashSet<string> activatedLevers = new HashSet<string>();
+    HashSet<string> activatedLevers = new HashSet<string>();
     bool puzzleSolved;
 
     public void RegisterActivation(string triggerName)
     {
-        if (puzzleSolved) return;
-
         activatedLevers.Add(triggerName);
         Debug.Log($"Activated: {string.Join(", ", activatedLevers)}");
 
@@ -24,11 +23,31 @@ public class PuzzleActivations : MonoBehaviour
             Debug.Log("Puzzle Solved!");
             onPuzzleSolved.Invoke();
         }
+        else
+        {
+            onPuzzleFail.Invoke();
+        }
     }
 
     public void RemoveActivation(string triggerName)
     {
         activatedLevers.Remove(triggerName);
+        if (puzzleSolved && !IsPuzzleSolved())
+        {
+            puzzleSolved = false;
+            Debug.Log("Puzzle Failed!");
+            onPuzzleFail.Invoke();
+        }
+        if (IsPuzzleSolved())
+        {
+            puzzleSolved = true;
+            Debug.Log("Puzzle Solved!");
+            onPuzzleSolved.Invoke();
+        }
+        else
+        {
+            onPuzzleFail.Invoke();
+        }
     }
 
     public bool IsPuzzleSolved()
