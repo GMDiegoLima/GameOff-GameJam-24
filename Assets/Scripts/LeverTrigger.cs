@@ -23,16 +23,15 @@ public class LeverTrigger : MonoBehaviour
         {
             animator.enabled = true;
             activated = !activated;
+            animator.SetBool("Activated", activated);
+            AkSoundEngine.PostEvent("lever", gameObject);
             if (activated)
             {
-                animator.SetBool("Activated", true);
-                AkSoundEngine.PostEvent("lever", gameObject);
                 onActivate?.Invoke();
             }
             else
             {
-                animator.SetBool("Activated", false);
-                AkSoundEngine.PostEvent("lever", gameObject);
+                onDeactivate?.Invoke();
             }
         }
     }

@@ -1,5 +1,6 @@
 using UnityEngine;
 
+// Equip owned items when player change scene
 public class EquipmentManager : MonoBehaviour
 {
     public Transform hatPosition;
@@ -24,6 +25,7 @@ public class EquipmentManager : MonoBehaviour
 
                 instantiatedHat.transform.SetParent(hatPosition);
                 instantiatedHat.transform.localPosition = Vector3.zero;
+                break;
             }
         }
 
@@ -36,6 +38,7 @@ public class EquipmentManager : MonoBehaviour
 
                 instantiatedGlasses.transform.SetParent(glassesPosition);
                 instantiatedGlasses.transform.localPosition = Vector3.zero;
+                break;
             }
         }
     }

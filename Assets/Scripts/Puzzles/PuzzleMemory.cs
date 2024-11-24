@@ -7,12 +7,14 @@ public class PuzzleMemory : MonoBehaviour
     public SpriteRenderer[] platforms;
     public UnityEvent onPuzzleSolved;
     public UnityEvent onPuzzleReset;
+    bool[] activatedPlatforms;
     int[] sequence;
     int playerIndex = 0;
 
     void Start()
     {
         sequence = new int[platforms.Length];
+        activatedPlatforms = new bool[platforms.Length];
         for (int i = 0; i < platforms.Length; i++)
         {
             sequence[i] = i;
@@ -25,6 +27,7 @@ public class PuzzleMemory : MonoBehaviour
         if (platform == playerIndex)
         {
             platforms[sequence[playerIndex]].enabled = true;
+            activatedPlatforms[sequence[playerIndex]] = true;
             playerIndex++;
             if (playerIndex >= sequence.Length)
             {
@@ -46,6 +49,17 @@ public class PuzzleMemory : MonoBehaviour
             yield return new WaitForSeconds(0.25f);
             platforms[index].enabled = false;
             yield return new WaitForSeconds(0.25f);
+        }
+        RestoreActivatedPlatforms();
+    }
+    void RestoreActivatedPlatforms()
+    {
+        for (int i = 0; i < platforms.Length; i++)
+        {
+            if (activatedPlatforms[i])
+            {
+                platforms[i].enabled = true;
+            }
         }
     }
 }

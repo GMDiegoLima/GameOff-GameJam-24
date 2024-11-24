@@ -5,6 +5,7 @@ using UnityEngine.Rendering.Universal;
 public class Checkpoint : MonoBehaviour
 {
     public Collider2D triggerCollider;
+    public Transform spawnPosition;
     Light2D light;
     Animator animator;
     void Start()
@@ -21,7 +22,7 @@ public class Checkpoint : MonoBehaviour
             {
                 animator.SetBool("Enabled", true);
                 light.enabled = true;
-                player.SetCheckpoint(transform.position);
+                player.SetCheckpoint(spawnPosition.position);
                 triggerCollider.enabled = false;
                 Debug.Log("Checkpoint saved!");
             }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CheckpointRespawn : MonoBehaviour
 {
@@ -14,9 +15,18 @@ public class CheckpointRespawn : MonoBehaviour
 
     public void Respawn()
     {
-        player.alive = true;
-        player.fell = false;
-        playerHealth.currentHealth = 3;
-        checkpoint.Respawn();
+        string currentSceneName = SceneManager.GetActiveScene().name;
+        Debug.Log("currentSceneName");
+        if (currentSceneName == "FinalBoss")
+        {
+            SceneManager.LoadSceneAsync(6);
+        }
+        else
+        {
+            player.alive = true;
+            player.fell = false;
+            playerHealth.currentHealth = 3;
+            checkpoint.Respawn();
+        }
     }
 }

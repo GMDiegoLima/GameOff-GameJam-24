@@ -8215,6 +8215,7 @@ GameObject:
   - component: {fileID: 7998022208340781655}
   - component: {fileID: 6580158434178094576}
   - component: {fileID: 1817688726325685436}
+  - component: {fileID: 3655929917743790783}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -8523,6 +8524,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23b39baa30c242b40831e371419a81a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3655929917743790783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7772584563165250645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 403cfeb38c432c74d9b2954788b5c55b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hatPosition: {fileID: 3792731304104649354}
+  glassesPosition: {fileID: 6635667433717572709}
+  allHats:
+  - {fileID: 574396718760465388, guid: 0ac2c0c49aff26146be04a498c264900, type: 3}
+  allGlasses: []
 --- !u!1 &8461029784987146223
 GameObject:
   m_ObjectHideFlags: 0

@@ -236,6 +236,7 @@ public class PlayerController : MonoBehaviour
     GameObject GetClosestItem()
     {
         return nearbyItems
+            .Where(item => item != null)
             .OrderBy(item => Vector2.Distance(transform.position, item.transform.position))
             .FirstOrDefault();
     }
