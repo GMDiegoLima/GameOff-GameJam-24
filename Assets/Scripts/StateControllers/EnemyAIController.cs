@@ -136,7 +136,6 @@ public class EnemyAIController : StateController
         else if ((aTarget.position - targetFootprints.Last.Value).magnitude > 1f)
         {
             // Don't add the footsprint if too close to the last one
-            Debug.Log("Add a footprint");
             targetFootprints.AddLast(aTarget.position);
         }
 
@@ -293,10 +292,10 @@ public class EnemyAIController : StateController
                                             aDir, actor.attackRange, enemyViewLayer);
         if (hit)
         {
-            if (hit.transform.TryGetComponent<Health>(out Health enemyHealth))
+            if (hit.transform.TryGetComponent<Health>(out Health playerHealth))
             {
                 Debug.Log("Got hit by enemy");
-                enemyHealth.TakeDamage(actor.damage);
+                playerHealth.TakeDamage(actor.damage);
             }
         }
 	}

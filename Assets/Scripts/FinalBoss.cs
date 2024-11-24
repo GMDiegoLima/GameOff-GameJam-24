@@ -13,6 +13,7 @@ public class FinalBoss : MonoBehaviour
     [SerializeField] float changeOutfitCDTimer;
 
     [Header("Adjustable")]
+    [SerializeField] private float maxHealth;
     [SerializeField] private float minMovePeriod;
     [SerializeField] private float maxMovePeriod;
     [SerializeField] private float minStopPeriod;
@@ -38,7 +39,7 @@ public class FinalBoss : MonoBehaviour
         anim = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
         health = GetComponent<Health>();
-        health.maxHealth = 5f;
+        health.maxHealth = maxHealth;
         isAlive = true;
     }
 

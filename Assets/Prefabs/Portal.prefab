@@ -106,4 +106,4 @@ MonoBehaviour:
   - {fileID: 4928228534917901041, guid: e927855a21151b84b91c7e9583679c23, type: 3}
   - {fileID: 5640444739511689665, guid: 1c06ca1406631944da3858e71d81651b, type: 3}
   generatePoint: {fileID: 5537054805388634062}
-  generateCD: 5
+  generateCD: 8
