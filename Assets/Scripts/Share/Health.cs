@@ -5,6 +5,7 @@ public class Health : MonoBehaviour
     [Header("Set by StateController")]
     [HideInInspector] public float maxHealth;
     public float currentHealth;
+    public bool isDead { get => currentHealth <= 0;}
 
     private void Start()
     {
