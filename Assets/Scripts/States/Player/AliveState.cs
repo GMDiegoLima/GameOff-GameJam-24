@@ -3,7 +3,7 @@ using UnityEngine;
 public class AliveState : IState 
 {
     private string name;
-    private Color gizmoColor = Color.red;
+    private Color gizmoColor = Color.green;
     public string Name { get => name; set => name = value; }
     public Color GizmoColor { get => gizmoColor; set => gizmoColor = value; }
 
