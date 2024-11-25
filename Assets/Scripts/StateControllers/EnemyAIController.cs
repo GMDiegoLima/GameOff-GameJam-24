@@ -168,6 +168,7 @@ public class EnemyAIController : StateController
 
     public override void Dead()
     {
+        chaseMark.TurnOff();
         anim.SetBool("Dead", true);
         gameObject.tag = "DeadBody";
         velocity = Vector2.zero;

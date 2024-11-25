@@ -159,6 +159,7 @@ MonoBehaviour:
   - {fileID: 9100000, guid: ba729791011c10744aa9e38655b8f537, type: 2}
   changeOutfitCD: 6
   changeOutfitCDTimer: 0
+  maxHealth: 3
   minMovePeriod: 1
   maxMovePeriod: 2
   minStopPeriod: 1
