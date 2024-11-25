@@ -117,11 +117,6 @@ public class PlayerStateController : StateController
         actor.controller = this;
     }
 
-    public bool IsActorDead()
-    {
-        return health.currentHealth <= 0;
-	}
-    
     private void ThrowBone(Vector2 dir)
     {
         Debug.Log("Throw bone");

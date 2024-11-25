@@ -238,11 +238,6 @@ public class EnemyAIController : StateController
         view.left45 = (view.transform.up - view.transform.right).normalized;
     }
 
-    public bool IsActorDead()
-    {
-        return health.currentHealth <= 0f;
-	}
-
     public bool IsTargetInSight()
     {
         return view.isTargetInSight;

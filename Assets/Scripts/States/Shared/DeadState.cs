@@ -27,7 +27,7 @@ public class DeadState : IState
 
     public void Update()
     {
-        //CheckTransition();
+        CheckTransition();
     }
 
     public void Exit()
@@ -38,7 +38,11 @@ public class DeadState : IState
 
     public void CheckTransition()
     {
-        // No transition to other state after dead
+        if (!controller.IsActorDead())
+        {
+            // For player to respawn
+            controller.TransitionToState(new AliveState((PlayerStateController)controller));
+		}
     }
 
     public void DrawGizmos()

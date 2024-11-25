@@ -41,6 +41,11 @@ public abstract class StateController : MonoBehaviour
         currentState?.Enter();
     }
 
+    public bool IsActorDead()
+    {
+        return health.currentHealth <= 0f;
+	}
+
     public abstract void Attack();
     public abstract void Dead();
 }
