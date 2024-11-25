@@ -23,11 +23,6 @@ public class DeadState : IState
     {
         Debug.Log(controller.actor.actorTag + " Enter Dead State");
         controller.Dead();
-        if (controller.actor.isControlledByAI)
-        {
-            EnemyAIController ai = (EnemyAIController)controller;
-            ai.chaseMark.TurnOff();
-		}
     }
 
     public void Update()
