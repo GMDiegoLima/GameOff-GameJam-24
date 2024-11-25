@@ -26,6 +26,7 @@ public class TutorialDig : MonoBehaviour
         if (Input.GetKeyDown("e") && !player.flying && !dug && canDig)
         {
             dug = true;
+            AkSoundEngine.PostEvent("coffin", gameObject);
             sprite.enabled = true;
             Destroy(flower);
             disembodyText.enabled = true;

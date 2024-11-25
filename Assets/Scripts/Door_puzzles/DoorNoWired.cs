@@ -20,6 +20,7 @@ public class DoorNoWired : MonoBehaviour
             }
             else
             {
+                AkSoundEngine.PostEvent("door_opens", gameObject);
                 transform.position = Vector3.MoveTowards(transform.position, openPosition, 0.2f * Time.deltaTime);
             }
         }

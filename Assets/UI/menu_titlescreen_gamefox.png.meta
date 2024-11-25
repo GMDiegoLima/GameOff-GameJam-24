@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      menu_titlescreen_gamefox_0: -6861669837926294925
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 963a067769c8db94586be1b92f6b07dc, type: 3}
+  m_Name: 13E928FF-C584-4C6B-B40A-A69FAA416F4B
+  m_EditorClassIdentifier: 
+  objectName: moving
+  id: 2649703675
+  guid: 13E928FF-C584-4C6B-B40A-A69FAA416F4B
+  WwiseSwitchGroupReference: {fileID: 11400000, guid: 35f4e39179f14074f88c35d6f2b6750b, type: 2}

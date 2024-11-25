@@ -8417,6 +8417,7 @@ MonoBehaviour:
   gameOver: {fileID: 1225693969533668786}
   heldItem: {fileID: 0}
   itemHoldPosition: {fileID: 8366464045760755937}
+  stepInterval: 0.3
 --- !u!114 &5228655556956484796
 MonoBehaviour:
   m_ObjectHideFlags: 0

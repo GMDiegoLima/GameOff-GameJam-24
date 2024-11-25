@@ -20,6 +20,7 @@ public class Checkpoint : MonoBehaviour
             PlayerCheckpoint player = collision.GetComponent<PlayerCheckpoint>();
             if (player != null)
             {
+                AkSoundEngine.PostEvent("checkpoint", gameObject);
                 animator.SetBool("Enabled", true);
                 light.enabled = true;
                 player.SetCheckpoint(spawnPosition.position);

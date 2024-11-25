@@ -50,6 +50,10 @@ public class PlayerController : MonoBehaviour
     public Transform itemHoldPosition;
     List<GameObject> nearbyItems = new List<GameObject>();
 
+    public float stepInterval = 0.3f;
+    public AK.Wwise.Event footstepsEvent;
+    float stepTimer;
+
     void Start()
     {
         _animator = GetComponent<Animator>();
@@ -68,6 +72,7 @@ public class PlayerController : MonoBehaviour
     {
         if (fell)
         {
+            AkSoundEngine.SetState("PlayerStatus", "Dead");
             gameOver.SetActive(true);
             _animator.Play("Falling");
             direction = new Vector2(0, 0);
@@ -99,6 +104,7 @@ public class PlayerController : MonoBehaviour
                     currentBody = availableBody;
                     targetPosition = enemyBodyPrefab.transform.position;
                     isMovingToTarget = true;
+                    AkSoundEngine.PostEvent("embody", gameObject);
                     _animator.Play("Embody");
                     Debug.Log("Possessed " + availableBody);
                 }
@@ -118,6 +124,7 @@ public class PlayerController : MonoBehaviour
                     shellAnimator.runtimeAnimatorController = _animator.runtimeAnimatorController;
                     shellAnimator.SetBool("Dead", true);
                     _animator.Play("Disembody");
+                    AkSoundEngine.PostEvent("disembody", gameObject);
                     flying = true;
                     Invoke("Disembody", 0.5f);
                     Debug.Log("Left the body");
@@ -145,11 +152,13 @@ public class PlayerController : MonoBehaviour
             {
                 heldItem.transform.position = itemHoldPosition.position;
             }
+            AkSoundEngine.SetState("PlayerStatus", "Alive");
             _animator.SetBool("Dead", false);
             gameOver.SetActive(false);
         }
         if (!alive && !fell)
         {
+            AkSoundEngine.SetState("PlayerStatus", "Dead");
             gameOver.SetActive(true);
             _animator.SetBool("Dead", true);
             direction = new Vector2(0, 0);
@@ -244,6 +253,7 @@ public class PlayerController : MonoBehaviour
     {
         if (nearbyItems.Contains(item))
         {
+            AkSoundEngine.PostEvent("item_pick", gameObject);
             heldItem = item;
             heldItem.transform.SetParent(transform);
             heldItem.transform.position = itemHoldPosition.position;
@@ -252,6 +262,7 @@ public class PlayerController : MonoBehaviour
     }
     public void DropItem()
     {
+        AkSoundEngine.PostEvent("item_drop", gameObject);
         heldItem.transform.SetParent(null);
         heldItem = null;
     }
@@ -259,6 +270,21 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         Vector2 delta = direction * velocity * Time.deltaTime;
+        if (direction != Vector2.zero)
+        {
+            stepTimer -= Time.deltaTime;
+            AkSoundEngine.SetSwitch("Player_movement", "moving", gameObject);
+            if (stepTimer <= 0)
+            {
+                footstepsEvent.Post(gameObject);
+                stepTimer = stepInterval;
+            }
+        }
+        else
+        {
+            stepTimer = 0;
+            AkSoundEngine.SetSwitch("Player_movement", "static", gameObject);
+        }
         Vector2 newPosition = characterBody.position + delta;
         characterBody.MovePosition(newPosition);
     }
