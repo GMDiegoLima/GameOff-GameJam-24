@@ -1,18 +1,18 @@
 State Group	ID	Name			Wwise Object Path	Notes
-	185713839	RoomState			\Default Work Unit\RoomState	
 	1045871717	GameStatus			\Default Work Unit\GameStatus	
+	1350496757	PlayerMovement			\Default Work Unit\PlayerMovement	
 	3800848640	PlayerStatus			\Default Work Unit\PlayerStatus	
 
 State	ID	Name	State Group			Notes
-	608898761	Dungeon	RoomState			
-	748895195	None	RoomState			
-	1562068129	Overworld	RoomState			
 	748895195	None	GameStatus			
 	984691642	InGame	GameStatus			
 	3374585465	InMenu	GameStatus			
+	748895195	None	PlayerMovement			
+	1409504247	Static	PlayerMovement			
+	2649703675	Moving	PlayerMovement			
 	655265632	Alive	PlayerStatus			
 	748895195	None	PlayerStatus			
-	2909291642	Stealth	PlayerStatus			
+	2044049779	Dead	PlayerStatus			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	393239870	sfx			\Default Work Unit\VolumeMenu\sfx	

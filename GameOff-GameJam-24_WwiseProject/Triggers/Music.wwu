@@ -4,8 +4,8 @@
 		<WorkUnit Name="Music" ID="{59BAE8C6-1CD7-4950-A4DD-91206C28DA7E}" PersistMode="Standalone">
 			<ChildrenList>
 				<Trigger Name="checkpoint" ID="{75664D4B-E16F-46E7-9774-BC40987622FA}"/>
-				<Trigger Name="path_correct" ID="{0934FE18-29E2-4ABB-AE39-B0D763E38B4B}"/>
 				<Trigger Name="path_wrong" ID="{5AC29C57-1521-4811-9E04-6A6C157A3DB2}"/>
+				<Trigger Name="path_correct" ID="{3B7D6D15-75D2-4D62-B2AF-1594CB5A9528}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Triggers>

@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{EFB38A36-F8AA-0CAD-B3FF-2E94C29612FB}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{6FEE9703-E992-86A4-9986-227D8A641D95}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -44,18 +44,12 @@
 				<AuxBus Id="3545700988" Name="Reverbs"/>
 			</AuxBusses>
 			<GameParameters>
+				<GameParameter Id="215992295" Name="player_health"/>
 				<GameParameter Id="393239870" Name="sfx"/>
 				<GameParameter Id="3991942870" Name="music"/>
 				<GameParameter Id="4056684167" Name="master"/>
 			</GameParameters>
 			<StateGroups>
-				<StateGroup Id="185713839" Name="RoomState">
-					<States>
-						<State Id="608898761" Name="Dungeon"/>
-						<State Id="748895195" Name="None"/>
-						<State Id="1562068129" Name="Overworld"/>
-					</States>
-				</StateGroup>
 				<StateGroup Id="1045871717" Name="GameStatus">
 					<States>
 						<State Id="748895195" Name="None"/>
@@ -63,11 +57,18 @@
 						<State Id="3374585465" Name="InMenu"/>
 					</States>
 				</StateGroup>
+				<StateGroup Id="1350496757" Name="PlayerMovement">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="1409504247" Name="Static"/>
+						<State Id="2649703675" Name="Moving"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="3800848640" Name="PlayerStatus">
 					<States>
 						<State Id="655265632" Name="Alive"/>
 						<State Id="748895195" Name="None"/>
-						<State Id="2909291642" Name="Stealth"/>
+						<State Id="2044049779" Name="Dead"/>
 					</States>
 				</StateGroup>
 			</StateGroups>
@@ -77,8 +78,13 @@
 						<Switch Id="1216965916" Name="stone"/>
 						<Switch Id="2195636714" Name="dirt"/>
 						<Switch Id="2637588553" Name="tile"/>
-						<Switch Id="2654748154" Name="water"/>
 						<Switch Id="4248645337" Name="grass"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="541470702" Name="Player_movement">
+					<Switches>
+						<Switch Id="1409504247" Name="static"/>
+						<Switch Id="2649703675" Name="moving"/>
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
@@ -100,7 +106,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{CE46865A-5F7D-3D8F-F400-DFEB75D4783C}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{9A9F80F1-7F49-1CAE-3939-3520CA762F85}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -118,7 +124,7 @@
 				</File>
 				<File Id="221138627" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_obj_rock_pushing.wav</ShortName>
-					<CachePath>SFX/sfx_obj_rock_pushing_8EC3C7C0.wem</CachePath>
+					<CachePath>SFX/sfx_obj_rock_pushing_CC7DE850.wem</CachePath>
 				</File>
 				<File Id="305096193" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_obj_plate_on.wav</ShortName>
@@ -197,7 +203,7 @@
 						<MediaRef Id="672148358"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2385628198" Name="footsteps" DurationType="OneShot" DurationMin="0.061020833" DurationMax="0.13360417">
+				<Event Id="2385628198" Name="footsteps" DurationType="OneShot" DurationMin="0.037780326" DurationMax="0.13360417">
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="478119480" Id="2195636714"/>
@@ -270,7 +276,6 @@
 						<Switch Id="1216965916" Name="stone"/>
 						<Switch Id="2195636714" Name="dirt"/>
 						<Switch Id="2637588553" Name="tile"/>
-						<Switch Id="2654748154" Name="water"/>
 						<Switch Id="4248645337" Name="grass"/>
 					</Switches>
 				</SwitchGroup>
@@ -280,20 +285,10 @@
 			<ShortName>Title</ShortName>
 			<Path>Title.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{46E856FC-DCCD-366C-838D-F4C085D911AD}">
+		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{8075EEFB-2136-8445-22D7-93138A5F3A36}">
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
-			<Events>
-				<Event Id="612075679" Name="Checkpoint" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
-					<ActionTrigger>
-						<ActionTriggerEntry Id="612075679" Name="checkpoint"/>
-					</ActionTrigger>
-				</Event>
-			</Events>
-			<Triggers>
-				<Trigger Id="612075679" Name="checkpoint"/>
-			</Triggers>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{143ACDD6-9BC5-7FE6-8FFB-80C4420B9B42}</FileHash>
+	<FileHash>{F8FC8F48-7CC3-12DA-B793-D8989C8CB8BD}</FileHash>
 </SoundBanksInfo>

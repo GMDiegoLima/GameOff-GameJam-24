@@ -24,16 +24,23 @@ Switch	ID	Name	Switch Group			Notes
 	1216965916	stone	GroundTextures			
 	2195636714	dirt	GroundTextures			
 	2637588553	tile	GroundTextures			
-	2654748154	water	GroundTextures			
 	4248645337	grass	GroundTextures			
+
+State Group	ID	Name			Wwise Object Path	Notes
+	1350496757	PlayerMovement			\Default Work Unit\PlayerMovement	
+
+State	ID	Name	State Group			Notes
+	748895195	None	PlayerMovement			
+	1409504247	Static	PlayerMovement			
+	2649703675	Moving	PlayerMovement			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	21760791	sfx_dig	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Windows\SFX\sfx_dig_F06BAF76.wem		\Actor-Mixer Hierarchy\SFX\WORLD\sfx_dig		3481
 	57660160	sfx_footsteps_grass_var_03	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Windows\SFX\sfx_footsteps_grass_var_03_F06BAF76.wem		\Actor-Mixer Hierarchy\SFX\WORLD\player_footsteps\footsteps_grass\sfx_footsteps_grass_var_03		1817
 	138217890	sfx_footsteps_parquet_var_02	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Windows\SFX\sfx_footsteps_parquet_var_02_F06BAF76.wem		\Actor-Mixer Hierarchy\SFX\WORLD\player_footsteps\footsteps_parquet\sfx_footsteps_parquet_var_02		2328
-	221138627	sfx_obj_rock_pushing	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Windows\SFX\sfx_obj_rock_pushing_8EC3C7C0.wem		\Actor-Mixer Hierarchy\SFX\WORLD\sfx_obj_rock_pushing		58416
+	221138627	sfx_obj_rock_pushing	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Windows\SFX\sfx_obj_rock_pushing_CC7DE850.wem		\Actor-Mixer Hierarchy\SFX\WORLD\sfx_obj_rock_pushing		58416
 	305096193	sfx_obj_plate_on	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Windows\SFX\sfx_obj_plate_on_F06BAF76.wem		\Actor-Mixer Hierarchy\SFX\WORLD\plate_on_off\sfx_obj_plate_on		9207
-	376194961	sfx_footsteps_grass_var_01	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Windows\SFX\sfx_footsteps_grass_var_01_F06BAF76.wem		\Actor-Mixer Hierarchy\SFX\WORLD\player_footsteps\footsteps_grass\sfx_footsteps_grass_var_01		2065
+	376194961	sfx_footsteps_grass_var_01	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Windows\SFX\sfx_footsteps_grass_var_01_F06BAF76.wem		\Actor-Mixer Hierarchy\SFX\WORLD\player_footsteps\footsteps_dirt\sfx_footsteps_grass_var_01		2065
 	377805870	sfx_footsteps_parquet_var_01	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Windows\SFX\sfx_footsteps_parquet_var_01_F06BAF76.wem		\Actor-Mixer Hierarchy\SFX\WORLD\player_footsteps\footsteps_parquet\sfx_footsteps_parquet_var_01		2639
 	411483413	sfx_obj_coffin	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Windows\SFX\sfx_obj_coffin_F06BAF76.wem		\Actor-Mixer Hierarchy\SFX\WORLD\sfx_obj_coffin		26518
 	424907451	sfx_footsteps_stone_var_02	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Windows\SFX\sfx_footsteps_stone_var_02_F06BAF76.wem		\Actor-Mixer Hierarchy\SFX\WORLD\player_footsteps\footsteps_stone\sfx_footsteps_stone_var_02		3119

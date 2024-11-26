@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: f059ccdab8a9cb488fc779e69f905b3e
     GuidInternal: 
-    m_lastTime: -8584711299244560549
+    m_lastTime: -8584711280198698041
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -495,7 +495,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 46994d34afb99c44984a3a8203e4fc13
     GuidInternal: 
-    m_lastTime: -8584706101947744565
+    m_lastTime: -8584690351997752727
     List: []
   - PhysicalPath: Events\Environment.wwu
     PathAndIcons:
@@ -521,8 +521,88 @@ MonoBehaviour:
     ParentPath: Events\Music
     guid: a50adb88e400464ab0c341653fd3f383
     GuidInternal: 
-    m_lastTime: -8584690655826894712
+    m_lastTime: -8584690277615904615
     List:
+    - name: path_correct_01
+      guid: 7591deda15df98408c925ca87f590424
+      id: 4076456351
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music
+        ObjectType: 12
+        guid: a50adb88e400464ab0c341653fd3f383
+      - ElementName: Stingers
+        ObjectType: 4
+        guid: e7e0c7e2718b654caa7fae8e50e44211
+      - ElementName: path_correct_01
+        ObjectType: 3
+        guid: 7591deda15df98408c925ca87f590424
+      Path: Events\Music\Stingers\path_correct_01
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: path_correct_02
+      guid: 615ef3b906713d4baa6b38f1f280bb4d
+      id: 4076456348
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music
+        ObjectType: 12
+        guid: a50adb88e400464ab0c341653fd3f383
+      - ElementName: Stingers
+        ObjectType: 4
+        guid: e7e0c7e2718b654caa7fae8e50e44211
+      - ElementName: path_correct_02
+        ObjectType: 3
+        guid: 615ef3b906713d4baa6b38f1f280bb4d
+      Path: Events\Music\Stingers\path_correct_02
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: path_correct_03
+      guid: 77950b29bb3a4543b5382e82b0b3d50d
+      id: 4076456349
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music
+        ObjectType: 12
+        guid: a50adb88e400464ab0c341653fd3f383
+      - ElementName: Stingers
+        ObjectType: 4
+        guid: e7e0c7e2718b654caa7fae8e50e44211
+      - ElementName: path_correct_03
+        ObjectType: 3
+        guid: 77950b29bb3a4543b5382e82b0b3d50d
+      Path: Events\Music\Stingers\path_correct_03
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: path_correct_04
+      guid: 56366c1f9233ed499080cf06da1e420d
+      id: 4076456346
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music
+        ObjectType: 12
+        guid: a50adb88e400464ab0c341653fd3f383
+      - ElementName: Stingers
+        ObjectType: 4
+        guid: e7e0c7e2718b654caa7fae8e50e44211
+      - ElementName: path_correct_04
+        ObjectType: 3
+        guid: 56366c1f9233ed499080cf06da1e420d
+      Path: Events\Music\Stingers\path_correct_04
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Stingers
       guid: e7e0c7e2718b654caa7fae8e50e44211
       id: 2940432316
@@ -554,7 +634,7 @@ MonoBehaviour:
     ParentPath: Events\Sfx\Objects
     guid: 95d724611b757e49a6d0bffaed670749
     GuidInternal: 
-    m_lastTime: -8584690655826864777
+    m_lastTime: -8584690295452376163
     List:
     - name: coffin
       guid: af6ce51c1ef7ad43a644dccfac2ca173
@@ -751,7 +831,7 @@ MonoBehaviour:
       Path: Events\Sfx\Player\footsteps
       maxAttenuation: 0
       maxDuration: 0.13360417
-      minDuration: 0.061020833
+      minDuration: 0.037780326
     - name: hurt
       guid: b77c17e7cbde5d4aa01fbac3b9357430
       id: 3193947170
@@ -965,7 +1045,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 0533b2126855c3498ab62c34ebefeb20
     GuidInternal: 
-    m_lastTime: -8584690655826814807
+    m_lastTime: -8584690281479019107
     List:
     - name: master
       guid: 5ce02454ecf19a41a405e6bf68b07111
@@ -1001,6 +1081,20 @@ MonoBehaviour:
         ObjectType: 13
         guid: 03732186720d684ab18cd085e47b5e21
       Path: Game Parameters\Default Work Unit\VolumeMenu\music
+    - name: path_pitch
+      guid: 2d8e878b482b6047a634022676cf8bd6
+      id: 1446300075
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 0533b2126855c3498ab62c34ebefeb20
+      - ElementName: path_pitch
+        ObjectType: 13
+        guid: 2d8e878b482b6047a634022676cf8bd6
+      Path: Game Parameters\Default Work Unit\path_pitch
     - name: player_health
       guid: 50231260926db544938f57df204eeef3
       id: 215992295
@@ -1058,7 +1152,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: d06fee2ae060f44f867e61f7a80294fb
     GuidInternal: 
-    m_lastTime: -8584690655795984397
+    m_lastTime: -8584690295968072971
     List:
     - name: GameStatus
       guid: 472ddbf40fc83a4a999091bff40cd847
@@ -1123,6 +1217,72 @@ MonoBehaviour:
         - ElementName: None
           ObjectType: 8
           guid: f130a255d16f4f4b8da674c26866603d
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: PlayerMovement
+      guid: c3c8e98ec91f994cb0416a494f87b178
+      id: 1350496757
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d06fee2ae060f44f867e61f7a80294fb
+      - ElementName: PlayerMovement
+        ObjectType: 9
+        guid: c3c8e98ec91f994cb0416a494f87b178
+      Path: States\Default Work Unit\PlayerMovement
+      values:
+      - name: Moving
+        guid: 6811205b09f98c48987006f8e6955eea
+        id: 2649703675
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d06fee2ae060f44f867e61f7a80294fb
+        - ElementName: PlayerMovement
+          ObjectType: 9
+          guid: c3c8e98ec91f994cb0416a494f87b178
+        - ElementName: Moving
+          ObjectType: 8
+          guid: 6811205b09f98c48987006f8e6955eea
+      - name: None
+        guid: ac933039947b694e9ec181c378ef5ff5
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d06fee2ae060f44f867e61f7a80294fb
+        - ElementName: PlayerMovement
+          ObjectType: 9
+          guid: c3c8e98ec91f994cb0416a494f87b178
+        - ElementName: None
+          ObjectType: 8
+          guid: ac933039947b694e9ec181c378ef5ff5
+      - name: Static
+        guid: cdeeb0b5f283cc4cbf5e31c4644c7085
+        id: 1409504247
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d06fee2ae060f44f867e61f7a80294fb
+        - ElementName: PlayerMovement
+          ObjectType: 9
+          guid: c3c8e98ec91f994cb0416a494f87b178
+        - ElementName: Static
+          ObjectType: 8
+          guid: cdeeb0b5f283cc4cbf5e31c4644c7085
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
@@ -1217,7 +1377,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 5cc297846a0efe469836302b9e9b2cb5
     GuidInternal: 
-    m_lastTime: -8584690655793924460
+    m_lastTime: -8584690297700892820
     List:
     - name: GroundTextures
       guid: b569fc3fed9d2243a28296f56107e31b
@@ -1298,22 +1458,6 @@ MonoBehaviour:
         - ElementName: tile
           ObjectType: 10
           guid: 6509d8a84e19eb4bb2ebbd5f8e0931f2
-      - name: water
-        guid: 14056ee44d676a4e910f904e86ac3e38
-        id: 2654748154
-        PathAndIcons:
-        - ElementName: Switches
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 5cc297846a0efe469836302b9e9b2cb5
-        - ElementName: GroundTextures
-          ObjectType: 11
-          guid: b569fc3fed9d2243a28296f56107e31b
-        - ElementName: water
-          ObjectType: 10
-          guid: 14056ee44d676a4e910f904e86ac3e38
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
@@ -1392,7 +1536,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: e7f4d602c8fed14aa82827ae83c24654
     GuidInternal: 
-    m_lastTime: -8584711299244580735
+    m_lastTime: -8584693369636297366
     List: []
   - PhysicalPath: Triggers\Music.wwu
     PathAndIcons:
@@ -1405,7 +1549,7 @@ MonoBehaviour:
     ParentPath: Triggers\Music
     guid: c6e8ba59d71c5049a4dd91206c28da7e
     GuidInternal: 
-    m_lastTime: -8584690655793884470
+    m_lastTime: -8584690278433404364
     List:
     - name: checkpoint
       guid: 4b4d66756fe1e7469774bc40987622fa
@@ -1422,7 +1566,7 @@ MonoBehaviour:
         guid: 4b4d66756fe1e7469774bc40987622fa
       Path: Triggers\Music\checkpoint
     - name: path_correct
-      guid: 18fe3409e229bb4aae39b0d763e38b4b
+      guid: 156d7d3bd275624db2af1594cb5a9528
       id: 4156519531
       PathAndIcons:
       - ElementName: Triggers
@@ -1433,7 +1577,7 @@ MonoBehaviour:
         guid: c6e8ba59d71c5049a4dd91206c28da7e
       - ElementName: path_correct
         ObjectType: 14
-        guid: 18fe3409e229bb4aae39b0d763e38b4b
+        guid: 156d7d3bd275624db2af1594cb5a9528
       Path: Triggers\Music\path_correct
     - name: path_wrong
       guid: 579cc25a211511489e046a6c157a3db2

@@ -273,7 +273,7 @@ public class PlayerController : MonoBehaviour
         if (direction != Vector2.zero)
         {
             stepTimer -= Time.deltaTime;
-            AkSoundEngine.SetSwitch("Player_movement", "moving", gameObject);
+            AkSoundEngine.SetState("PlayerMovement", "Moving");
             if (stepTimer <= 0)
             {
                 footstepsEvent.Post(gameObject);
@@ -283,7 +283,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             stepTimer = 0;
-            AkSoundEngine.SetSwitch("Player_movement", "static", gameObject);
+            AkSoundEngine.SetState("PlayerMovement", "Static");
         }
         Vector2 newPosition = characterBody.position + delta;
         characterBody.MovePosition(newPosition);

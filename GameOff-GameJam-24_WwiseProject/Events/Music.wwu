@@ -7,7 +7,98 @@
 				<Property Name="OverrideColor" Type="bool" Value="True"/>
 			</PropertyList>
 			<ChildrenList>
-				<Folder Name="Stingers" ID="{E2C7E0E7-8B71-4C65-AA7F-AE8E50E44211}" ShortID="912149915"/>
+				<Folder Name="Stingers" ID="{E2C7E0E7-8B71-4C65-AA7F-AE8E50E44211}" ShortID="912149915">
+					<ChildrenList>
+						<Event Name="path_correct_01" ID="{DADE9175-DF15-4098-8C92-5CA87F590424}">
+							<ChildrenList>
+								<Action Name="" ID="{F751F3BA-2227-4595-8AEE-2BA1B2E46029}" ShortID="101312039">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="25"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="path_pitch" ID="{8B878E2D-2B48-4760-A634-022676CF8BD6}" WorkUnitID="{12B23305-5568-49C3-8AB6-2C34EBEFEB20}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{BF2BEFC4-B6BE-4793-8ABD-5532C8BE0302}" ShortID="114906311">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="stg_path_correct" ID="{62F8B0DB-AD45-4276-ABA6-C057770244D6}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="path_correct_02" ID="{B9F35E61-7106-4B3D-AA6B-38F1F280BB4D}">
+							<ChildrenList>
+								<Action Name="" ID="{8BAE8946-A7E2-4925-842A-BBE7A55DC0D8}" ShortID="504492720">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="50"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="path_pitch" ID="{8B878E2D-2B48-4760-A634-022676CF8BD6}" WorkUnitID="{12B23305-5568-49C3-8AB6-2C34EBEFEB20}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{827161FC-BA4D-4AB3-9B38-10D0AB395ACE}" ShortID="809641610">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="stg_path_correct" ID="{62F8B0DB-AD45-4276-ABA6-C057770244D6}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="path_correct_03" ID="{290B9577-3ABB-4345-B538-2E82B0B3D50D}">
+							<ChildrenList>
+								<Action Name="" ID="{6357352B-BD05-4C56-866F-44EEBEBAC5BF}" ShortID="154323679">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="75"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="path_pitch" ID="{8B878E2D-2B48-4760-A634-022676CF8BD6}" WorkUnitID="{12B23305-5568-49C3-8AB6-2C34EBEFEB20}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{D3F77FEC-D2B9-4267-A3C7-E584EC08F625}" ShortID="173998532">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="stg_path_correct" ID="{62F8B0DB-AD45-4276-ABA6-C057770244D6}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="path_correct_04" ID="{1F6C3656-3392-49ED-9080-CF06DA1E420D}">
+							<ChildrenList>
+								<Action Name="" ID="{55460E8F-F36F-491E-9751-C0BB65E3E0E8}" ShortID="64429568">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="path_pitch" ID="{8B878E2D-2B48-4760-A634-022676CF8BD6}" WorkUnitID="{12B23305-5568-49C3-8AB6-2C34EBEFEB20}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{7AF07969-270E-4971-B119-3877665B1942}" ShortID="152314976">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="stg_path_correct" ID="{62F8B0DB-AD45-4276-ABA6-C057770244D6}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

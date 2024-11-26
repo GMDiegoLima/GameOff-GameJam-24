@@ -14,7 +14,6 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID BAT_ATTACK = 3423338245U;
-        static const AkUniqueID CHECKPOINT = 612075679U;
         static const AkUniqueID COFFIN = 2274969374U;
         static const AkUniqueID DIG = 445985471U;
         static const AkUniqueID DISEMBODY = 1029929321U;
@@ -48,6 +47,18 @@ namespace AK
             } // namespace STATE
         } // namespace GAMESTATUS
 
+        namespace PLAYERMOVEMENT
+        {
+            static const AkUniqueID GROUP = 1350496757U;
+
+            namespace STATE
+            {
+                static const AkUniqueID MOVING = 2649703675U;
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID STATIC = 1409504247U;
+            } // namespace STATE
+        } // namespace PLAYERMOVEMENT
+
         namespace PLAYERSTATUS
         {
             static const AkUniqueID GROUP = 3800848640U;
@@ -55,22 +66,10 @@ namespace AK
             namespace STATE
             {
                 static const AkUniqueID ALIVE = 655265632U;
+                static const AkUniqueID DEAD = 2044049779U;
                 static const AkUniqueID NONE = 748895195U;
-                static const AkUniqueID STEALTH = 2909291642U;
             } // namespace STATE
         } // namespace PLAYERSTATUS
-
-        namespace ROOMSTATE
-        {
-            static const AkUniqueID GROUP = 185713839U;
-
-            namespace STATE
-            {
-                static const AkUniqueID DUNGEON = 608898761U;
-                static const AkUniqueID NONE = 748895195U;
-                static const AkUniqueID OVERWORLD = 1562068129U;
-            } // namespace STATE
-        } // namespace ROOMSTATE
 
     } // namespace STATES
 
@@ -86,9 +85,19 @@ namespace AK
                 static const AkUniqueID GRASS = 4248645337U;
                 static const AkUniqueID STONE = 1216965916U;
                 static const AkUniqueID TILE = 2637588553U;
-                static const AkUniqueID WATER = 2654748154U;
             } // namespace SWITCH
         } // namespace GROUNDTEXTURES
+
+        namespace PLAYER_MOVEMENT
+        {
+            static const AkUniqueID GROUP = 541470702U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID MOVING = 2649703675U;
+                static const AkUniqueID STATIC = 1409504247U;
+            } // namespace SWITCH
+        } // namespace PLAYER_MOVEMENT
 
     } // namespace SWITCHES
 
@@ -96,6 +105,7 @@ namespace AK
     {
         static const AkUniqueID MASTER = 4056684167U;
         static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID PLAYER_HEALTH = 215992295U;
         static const AkUniqueID SFX = 393239870U;
     } // namespace GAME_PARAMETERS
 

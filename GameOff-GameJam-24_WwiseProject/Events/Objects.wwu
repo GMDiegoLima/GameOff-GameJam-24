@@ -30,7 +30,7 @@
 						<Action Name="" ID="{A108D801-F8FC-439C-9EDD-34F852657F37}" ShortID="855579076">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="sfx_obj_rock_pushing" ID="{080AB722-8DB3-42D7-930B-6798E5701BDB}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+									<ObjectRef Name="sfx_obj_rock_pushing" ID="{72CD6533-A0EC-4FC2-A1A1-4FC4F1F40F65}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

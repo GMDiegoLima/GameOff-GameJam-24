@@ -22,7 +22,13 @@
 						</GameParameter>
 					</ChildrenList>
 				</Folder>
-				<GameParameter Name="player_health" ID="{60122350-6D92-44B5-938F-57DF204EEEF3}"/>
+				<GameParameter Name="player_health" ID="{60122350-6D92-44B5-938F-57DF204EEEF3}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="3"/>
+						<Property Name="Max" Type="Real64" Value="3"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="path_pitch" ID="{8B878E2D-2B48-4760-A634-022676CF8BD6}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

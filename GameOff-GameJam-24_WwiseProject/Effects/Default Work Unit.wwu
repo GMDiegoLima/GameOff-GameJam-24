@@ -1,6 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{326E419B-BD8D-46B3-9A7A-90C31153EEB8}" SchemaVersion="119">
 	<Effects>
-		<WorkUnit Name="Default Work Unit" ID="{326E419B-BD8D-46B3-9A7A-90C31153EEB8}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{326E419B-BD8D-46B3-9A7A-90C31153EEB8}" PersistMode="Standalone">
+			<ChildrenList>
+				<Effect Name="New_Time_Stretch" ID="{33106307-A0FE-4563-931C-CF5570F4595E}" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+					<PropertyList>
+						<Property Name="PitchShift" Type="Real32" Value="100"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="New_Pitch_Shifter" ID="{2C49700D-2E2C-4BB7-AEAD-3E726E5A03FA}" PluginName="Wwise Pitch Shifter" CompanyID="0" PluginID="136" PluginType="3">
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{63EF72F2-A8D0-4C83-BACB-F7C3F91B78C5}" ShortID="591231317">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Pitch"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="path_pitch" ID="{8B878E2D-2B48-4760-A634-022676CF8BD6}" WorkUnitID="{12B23305-5568-49C3-8AB6-2C34EBEFEB20}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{C41FD5CC-F90F-4BEE-AD54-81B89C7772E1}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="1"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>0</YPos>
+																<Flags>5</Flags>
+																<SegmentShape>Constant</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>25.2045</XPos>
+																<YPos>200</YPos>
+																<Flags>0</Flags>
+																<SegmentShape>Constant</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>50.2045</XPos>
+																<YPos>300</YPos>
+																<Flags>0</Flags>
+																<SegmentShape>Constant</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>75</XPos>
+																<YPos>700</YPos>
+																<Flags>0</Flags>
+																<SegmentShape>Constant</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>50.26178</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+				</Effect>
+			</ChildrenList>
+		</WorkUnit>
 	</Effects>
 </WwiseDocument>
