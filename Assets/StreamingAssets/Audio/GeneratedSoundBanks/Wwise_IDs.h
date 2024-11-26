@@ -20,6 +20,7 @@ namespace AK
         static const AkUniqueID DOOR_OPENS = 3875653779U;
         static const AkUniqueID EMBODY = 3989366099U;
         static const AkUniqueID ENEMY_ALERT = 493036092U;
+        static const AkUniqueID EVIL_DIALOGUE = 1316490268U;
         static const AkUniqueID FOOTSTEPS = 2385628198U;
         static const AkUniqueID GOBLIN_ATTACK = 2534371823U;
         static const AkUniqueID HURT = 3193947170U;
@@ -27,6 +28,10 @@ namespace AK
         static const AkUniqueID ITEM_DROP = 2177967876U;
         static const AkUniqueID ITEM_PICK = 4159556712U;
         static const AkUniqueID LEVER = 2782712987U;
+        static const AkUniqueID MENU_CURSOR_BACK = 2485905105U;
+        static const AkUniqueID MENU_CURSOR_MOVE = 1306883239U;
+        static const AkUniqueID MENU_CURSOR_SELECT = 3200708208U;
+        static const AkUniqueID NORMAL_DIALOGUE = 365141489U;
         static const AkUniqueID PATH_CORRECT_01 = 4076456351U;
         static const AkUniqueID PATH_CORRECT_02 = 4076456348U;
         static const AkUniqueID PATH_CORRECT_03 = 4076456349U;

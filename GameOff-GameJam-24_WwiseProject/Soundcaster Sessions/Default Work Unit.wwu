@@ -47,9 +47,9 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Boss" ID="{DFCEDA1B-747B-4DF9-B420-E009B2585F1D}"/>
+						<CurrentStateRef Name="None" ID="{B42BC888-C4F5-4750-89B0-0886BDFCA55C}"/>
 						<CurrentStateRef Name="Alive" ID="{B1696563-4FE0-470C-9098-472520DAD3C2}"/>
-						<CurrentStateRef Name="InGame" ID="{CF648247-C9ED-4CAF-9FD9-E80F63C6FEC3}"/>
+						<CurrentStateRef Name="None" ID="{55A230F1-6FD1-4B4F-8DA6-74C26866603D}"/>
 						<CurrentStateRef Name="Static" ID="{B5B0EECD-83F2-4CCC-BF5E-31C4644C7085}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">

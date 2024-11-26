@@ -14,10 +14,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="wolf_attack" ID="{5C3F56A1-B401-40AE-B90C-AE71CBD8E0C1}"/>
-				<Event Name="bat_attack" ID="{555B771C-159E-47B6-BB14-5D411BAB00F3}"/>
-				<Event Name="skeleton_attack" ID="{DEB1C334-3506-4C7B-87D4-00BD4FF6D19C}"/>
-				<Event Name="goblin_attack" ID="{E6ED7FC6-89C5-444D-BFF4-8AC7D760FFA4}"/>
 				<Event Name="hurt_enemy" ID="{3158A4F6-1472-4E29-9D2D-88B3404F58A2}">
 					<ChildrenList>
 						<Action Name="" ID="{15800553-416E-4F85-AD12-4CAFC972AE9B}" ShortID="942077916">
@@ -40,6 +36,26 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Folder Name="bat" ID="{D9CC9006-B2D7-4397-A4B3-BC5A32E1E5DD}" ShortID="510588488">
+					<ChildrenList>
+						<Event Name="bat_attack" ID="{555B771C-159E-47B6-BB14-5D411BAB00F3}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="goblin" ID="{82719FFE-EF7F-420B-9F08-CD7C341F6627}" ShortID="395456914">
+					<ChildrenList>
+						<Event Name="goblin_attack" ID="{E6ED7FC6-89C5-444D-BFF4-8AC7D760FFA4}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="skeleton" ID="{3F300DEA-F5AB-4B8B-9DA6-36966EA6624C}" ShortID="958724393">
+					<ChildrenList>
+						<Event Name="skeleton_attack" ID="{DEB1C334-3506-4C7B-87D4-00BD4FF6D19C}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="wolf" ID="{DD92AB2D-27B9-4F40-8579-29765794AD8E}" ShortID="723052166">
+					<ChildrenList>
+						<Event Name="wolf_attack" ID="{5C3F56A1-B401-40AE-B90C-AE71CBD8E0C1}"/>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

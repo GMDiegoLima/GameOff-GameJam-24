@@ -52,7 +52,7 @@
 						<Action Name="" ID="{1AFFB53A-B125-4E8D-884C-355C35EE3887}" ShortID="681088272">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="door_opening" ID="{D32DB3CA-0779-4982-A335-1DD73CFE712E}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+									<ObjectRef Name="sfx_door_open" ID="{5E7C38BD-F1EC-4CFC-8C2B-90AEC99B4987}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

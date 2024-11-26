@@ -115,13 +115,21 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{97F7826F-7D00-4944-DDC4-D9C795561D66}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{1C21A4A1-C5A4-F402-AEE9-395BBBACFEAA}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
+				<File Id="7661146" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ui_dialogue_var_02.wav</ShortName>
+					<CachePath>SFX/ui_dialogue_var_02_F06BAF76.wem</CachePath>
+				</File>
 				<File Id="21760791" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_dig.wav</ShortName>
 					<CachePath>SFX/sfx_dig_F06BAF76.wem</CachePath>
+				</File>
+				<File Id="54325868" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ui_move_var_02.wav</ShortName>
+					<CachePath>SFX/ui_move_var_02_F06BAF76.wem</CachePath>
 				</File>
 				<File Id="57660160" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_footsteps_grass_var_03.wav</ShortName>
@@ -142,6 +150,14 @@
 				<File Id="221138627" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_obj_rock_pushing.wav</ShortName>
 					<CachePath>SFX/sfx_obj_rock_pushing_CC7DE850.wem</CachePath>
+				</File>
+				<File Id="225222591" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ui_move_var_01.wav</ShortName>
+					<CachePath>SFX/ui_move_var_01_F06BAF76.wem</CachePath>
+				</File>
+				<File Id="232811396" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ui_dialogue_var_01.wav</ShortName>
+					<CachePath>SFX/ui_dialogue_var_01_F06BAF76.wem</CachePath>
 				</File>
 				<File Id="305096193" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_obj_plate_on.wav</ShortName>
@@ -183,6 +199,10 @@
 					<ShortName>sfx_obj_plate_off.wav</ShortName>
 					<CachePath>SFX/sfx_obj_plate_off_95749A7B.wem</CachePath>
 				</File>
+				<File Id="865284003" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ui_select.wav</ShortName>
+					<CachePath>SFX/ui_select_F06BAF76.wem</CachePath>
+				</File>
 				<File Id="905515257" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_footsteps_grass_var_02.wav</ShortName>
 					<CachePath>SFX/sfx_footsteps_grass_var_02_F06BAF76.wem</CachePath>
@@ -221,7 +241,7 @@
 						<MediaRef Id="159766235"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3875653779" Name="door_opens" MaxAttenuation="70" DurationType="Infinite">
+				<Event Id="3875653779" Name="door_opens" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<MediaRefs>
 						<MediaRef Id="221138627"/>
 					</MediaRefs>
@@ -234,6 +254,11 @@
 				<Event Id="493036092" Name="enemy_alert" DurationType="OneShot" DurationMin="0.5535625" DurationMax="0.5535625">
 					<MediaRefs>
 						<MediaRef Id="672148358"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1316490268" Name="evil_dialogue" DurationType="OneShot" DurationMin="0.11425" DurationMax="0.11425">
+					<MediaRefs>
+						<MediaRef Id="7661146"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2385628198" Name="footsteps" DurationType="OneShot" DurationMin="0.037780326" DurationMax="0.13360417">
@@ -298,6 +323,26 @@
 						<MediaRef Id="477432091"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2485905105" Name="menu_cursor_back" DurationType="OneShot" DurationMin="0.79733336" DurationMax="0.79733336">
+					<MediaRefs>
+						<MediaRef Id="225222591"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1306883239" Name="menu_cursor_move" DurationType="OneShot" DurationMin="0.7389375" DurationMax="0.7389375">
+					<MediaRefs>
+						<MediaRef Id="54325868"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3200708208" Name="menu_cursor_select" DurationType="OneShot" DurationMin="0.792" DurationMax="0.792">
+					<MediaRefs>
+						<MediaRef Id="865284003"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="365141489" Name="normal_dialogue" DurationType="OneShot" DurationMin="0.11385417" DurationMax="0.11385417">
+					<MediaRefs>
+						<MediaRef Id="232811396"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="282449107" Name="plate" DurationType="OneShot" DurationMin="0.6513125" DurationMax="0.7966875">
 					<MediaRefs>
 						<MediaRef Id="305096193"/>
@@ -326,9 +371,58 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3705726509" Type="User" Language="SFX" Hash="{67C5050C-D012-A060-C8CF-0B80AF561B0F}">
+		<SoundBank Id="3705726509" Type="User" Language="SFX" Hash="{0C01F156-884F-54E0-3A7A-08D2787C1A7D}">
 			<ShortName>Title</ShortName>
 			<Path>Title.bnk</Path>
+			<Media>
+				<File Id="7661146" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ui_dialogue_var_02.wav</ShortName>
+					<CachePath>SFX/ui_dialogue_var_02_F06BAF76.wem</CachePath>
+				</File>
+				<File Id="54325868" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ui_move_var_02.wav</ShortName>
+					<CachePath>SFX/ui_move_var_02_F06BAF76.wem</CachePath>
+				</File>
+				<File Id="225222591" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ui_move_var_01.wav</ShortName>
+					<CachePath>SFX/ui_move_var_01_F06BAF76.wem</CachePath>
+				</File>
+				<File Id="232811396" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ui_dialogue_var_01.wav</ShortName>
+					<CachePath>SFX/ui_dialogue_var_01_F06BAF76.wem</CachePath>
+				</File>
+				<File Id="865284003" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ui_select.wav</ShortName>
+					<CachePath>SFX/ui_select_F06BAF76.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1316490268" Name="evil_dialogue" DurationType="OneShot" DurationMin="0.11425" DurationMax="0.11425">
+					<MediaRefs>
+						<MediaRef Id="7661146"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2485905105" Name="menu_cursor_back" DurationType="OneShot" DurationMin="0.79733336" DurationMax="0.79733336">
+					<MediaRefs>
+						<MediaRef Id="225222591"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1306883239" Name="menu_cursor_move" DurationType="OneShot" DurationMin="0.7389375" DurationMax="0.7389375">
+					<MediaRefs>
+						<MediaRef Id="54325868"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3200708208" Name="menu_cursor_select" DurationType="OneShot" DurationMin="0.792" DurationMax="0.792">
+					<MediaRefs>
+						<MediaRef Id="865284003"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="365141489" Name="normal_dialogue" DurationType="OneShot" DurationMin="0.11385417" DurationMax="0.11385417">
+					<MediaRefs>
+						<MediaRef Id="232811396"/>
+					</MediaRefs>
+				</Event>
+			</Events>
 		</SoundBank>
 		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{0994E7D8-D263-1736-8951-90F2EDE3A1BB}">
 			<ShortName>Music</ShortName>
@@ -366,5 +460,5 @@
 			</Triggers>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{7966D941-410C-E3EF-F972-ED91508492A3}</FileHash>
+	<FileHash>{7B3B885B-4D58-9DB2-2137-AB0A85CD5B2F}</FileHash>
 </SoundBanksInfo>

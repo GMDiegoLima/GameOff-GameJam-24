@@ -1,0 +1,14 @@
+Event	ID	Name			Wwise Object Path	Notes
+	365141489	normal_dialogue			\UI\normal_dialogue	
+	1306883239	menu_cursor_move			\UI\menu_cursor_move	
+	1316490268	evil_dialogue			\UI\evil_dialogue	
+	2485905105	menu_cursor_back			\UI\menu_cursor_back	
+	3200708208	menu_cursor_select			\UI\menu_cursor_select	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	7661146	ui_dialogue_var_02	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Windows\SFX\ui_dialogue_var_02_F06BAF76.wem		\Actor-Mixer Hierarchy\UI\ui_dialogue_var_02		2135
+	54325868	ui_menu_move	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Windows\SFX\ui_move_var_02_F06BAF76.wem		\Actor-Mixer Hierarchy\UI\ui_menu_move		10401
+	225222591	ui_menu_back	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Windows\SFX\ui_move_var_01_F06BAF76.wem		\Actor-Mixer Hierarchy\UI\ui_menu_back		10549
+	232811396	ui_dialogue_var_01	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Windows\SFX\ui_dialogue_var_01_F06BAF76.wem		\Actor-Mixer Hierarchy\UI\ui_dialogue_var_01		2057
+	865284003	ui_menu_select	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\Windows\SFX\ui_select_F06BAF76.wem		\Actor-Mixer Hierarchy\UI\ui_menu_select		11412
+
