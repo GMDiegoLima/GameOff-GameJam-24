@@ -41,6 +41,7 @@ public class PlayerController : MonoBehaviour
     bool isMovingToTarget = false;
     Vector3 targetPosition;
 
+    public bool isControllable = true;
     public bool alive = true;
     public bool fell = false;
     public bool flying = false;
@@ -70,98 +71,102 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (fell)
+        if (isControllable)
         {
-            AkSoundEngine.SetState("PlayerStatus", "Dead");
-            gameOver.SetActive(true);
-            _animator.Play("Falling");
-            direction = new Vector2(0, 0);
-        }
-        if (alive & !fell)
-        {
-            direction = new Vector2(
-                Input.GetAxisRaw("Horizontal"),
-                Input.GetAxisRaw("Vertical")
-                ).normalized;
-            _animator.SetFloat("Horizontal", direction.x);
-            _animator.SetFloat("Vertical", direction.y);
-
-            if (direction != Vector2.zero)
+            if (fell)
             {
-                _animator.SetFloat("LastHorizontal", direction.x);
-                _animator.SetFloat("LastVertical", direction.y);
+                AkSoundEngine.SetState("PlayerStatus", "Dead");
+                gameOver.SetActive(true);
+                _animator.Play("Falling");
+                direction = new Vector2(0, 0);
             }
-
-            if (isMovingToTarget)
+            if (alive & !fell)
             {
-                MoveToTarget();
-                return;
-            }
+                direction = new Vector2(
+                    Input.GetAxisRaw("Horizontal"),
+                    Input.GetAxisRaw("Vertical")
+                    ).normalized;
+                _animator.SetFloat("Horizontal", direction.x);
+                _animator.SetFloat("Vertical", direction.y);
 
-            if (Input.GetKeyDown(embodyKey)) {
-                if (canEmbody && currentBody == Bodies.Ghost)
+                if (direction != Vector2.zero)
                 {
-                    currentBody = availableBody;
-                    targetPosition = enemyBodyPrefab.transform.position;
-                    isMovingToTarget = true;
-                    AkSoundEngine.PostEvent("embody", gameObject);
-                    _animator.Play("Embody");
-                    Debug.Log("Possessed " + availableBody);
+                    _animator.SetFloat("LastHorizontal", direction.x);
+                    _animator.SetFloat("LastVertical", direction.y);
                 }
-                else if (currentBody != Bodies.Ghost && enemyBodyPrefab == null)
+
+                if (isMovingToTarget)
                 {
-                    enemyBodyPrefab = new GameObject(currentBody + " body");
-                    enemyBodyPrefab.tag = "DeadBody";
-
-                    enemyBodyPrefab.transform.position = transform.position;
-                    enemyBodyPrefab.transform.localScale = transform.localScale;
-
-                    SpriteRenderer shellSpriteRenderer = enemyBodyPrefab.AddComponent<SpriteRenderer>();
-                    shellSpriteRenderer.sprite = _spriteRenderer.sprite;
-                    shellSpriteRenderer.sortingOrder = _spriteRenderer.sortingOrder - 1;
-                    
-                    Animator shellAnimator = enemyBodyPrefab.AddComponent<Animator>();
-                    shellAnimator.runtimeAnimatorController = _animator.runtimeAnimatorController;
-                    shellAnimator.SetBool("Dead", true);
-                    _animator.Play("Disembody");
-                    AkSoundEngine.PostEvent("disembody", gameObject);
-                    flying = true;
-                    Invoke("Disembody", 0.5f);
-                    Debug.Log("Left the body");
+                    MoveToTarget();
+                    return;
                 }
-            }
-            if (Input.GetKeyDown(pickKey) && nearbyItems.Count > 0)
-            {
-                GameObject closestItem = GetClosestItem();
-                if (heldItem)
+
+                if (Input.GetKeyDown(embodyKey))
+                {
+                    if (canEmbody && currentBody == Bodies.Ghost)
+                    {
+                        currentBody = availableBody;
+                        targetPosition = enemyBodyPrefab.transform.position;
+                        isMovingToTarget = true;
+                        AkSoundEngine.PostEvent("embody", gameObject);
+                        _animator.Play("Embody");
+                        Debug.Log("Possessed " + availableBody);
+                    }
+                    else if (currentBody != Bodies.Ghost && enemyBodyPrefab == null)
+                    {
+                        enemyBodyPrefab = new GameObject(currentBody + " body");
+                        enemyBodyPrefab.tag = "DeadBody";
+
+                        enemyBodyPrefab.transform.position = transform.position;
+                        enemyBodyPrefab.transform.localScale = transform.localScale;
+
+                        SpriteRenderer shellSpriteRenderer = enemyBodyPrefab.AddComponent<SpriteRenderer>();
+                        shellSpriteRenderer.sprite = _spriteRenderer.sprite;
+                        shellSpriteRenderer.sortingOrder = _spriteRenderer.sortingOrder - 1;
+
+                        Animator shellAnimator = enemyBodyPrefab.AddComponent<Animator>();
+                        shellAnimator.runtimeAnimatorController = _animator.runtimeAnimatorController;
+                        shellAnimator.SetBool("Dead", true);
+                        _animator.Play("Disembody");
+                        AkSoundEngine.PostEvent("disembody", gameObject);
+                        flying = true;
+                        Invoke("Disembody", 0.5f);
+                        Debug.Log("Left the body");
+                    }
+                }
+                if (Input.GetKeyDown(pickKey) && nearbyItems.Count > 0)
+                {
+                    GameObject closestItem = GetClosestItem();
+                    if (heldItem)
+                    {
+                        DropItem();
+                        PickUpItem(closestItem);
+                    }
+                    else
+                    {
+                        PickUpItem(closestItem);
+                    }
+
+                }
+                if (Input.GetKeyDown(dropKey) && heldItem != null)
                 {
                     DropItem();
-                    PickUpItem(closestItem);
                 }
-                else
+                if (heldItem != null)
                 {
-                    PickUpItem(closestItem);
+                    heldItem.transform.position = itemHoldPosition.position;
                 }
-
+                AkSoundEngine.SetState("PlayerStatus", "Alive");
+                _animator.SetBool("Dead", false);
+                gameOver.SetActive(false);
             }
-            if (Input.GetKeyDown(dropKey) && heldItem != null)
+            if (!alive && !fell)
             {
-                DropItem();
+                AkSoundEngine.SetState("PlayerStatus", "Dead");
+                gameOver.SetActive(true);
+                _animator.SetBool("Dead", true);
+                direction = new Vector2(0, 0);
             }
-            if (heldItem != null)
-            {
-                heldItem.transform.position = itemHoldPosition.position;
-            }
-            AkSoundEngine.SetState("PlayerStatus", "Alive");
-            _animator.SetBool("Dead", false);
-            gameOver.SetActive(false);
-        }
-        if (!alive && !fell)
-        {
-            AkSoundEngine.SetState("PlayerStatus", "Dead");
-            gameOver.SetActive(true);
-            _animator.SetBool("Dead", true);
-            direction = new Vector2(0, 0);
         }
     }
     void MoveToTarget()
@@ -343,5 +348,12 @@ public class PlayerController : MonoBehaviour
         {
             nearbyItems.Remove(other.gameObject);
         }
+    }
+
+    public void StopMove()
+    {
+        direction = new Vector2(0, 0);
+        _animator.SetFloat("Horizontal", 0f);
+        _animator.SetFloat("Vertical", 0f);
     }
 }
