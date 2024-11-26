@@ -14,9 +14,9 @@ public class BossRoomController : MonoBehaviour
     [SerializeField] EnemyGenerator portal;
 
     // Set true by other class
-    public bool playerEnteredTrigger; // Set true in DoorH::Close()
-    public bool portalOpenTrigger;
-    public bool gameStartTrigger;
+    [HideInInspector] public bool playerEnteredTrigger; // Set true in DoorH::Close()
+    [HideInInspector] public bool portalOpenTrigger;
+    [HideInInspector] public bool gameStartTrigger;
     public bool isGameStart;
 
     private void Awake()
@@ -50,8 +50,6 @@ public class BossRoomController : MonoBehaviour
 
         if (playerEnteredTrigger)
         {
-            // Damp to bossCam
-            // Trigger conversation and make the boss open the portal
             StartCoroutine(PlayerEnterRoutine());
 		}
         if (portalOpenTrigger)
@@ -61,14 +59,13 @@ public class BossRoomController : MonoBehaviour
         if (gameStartTrigger)
         {
             StartCoroutine(GameStartRoutine());
-            //portal.gameObject.SetActive(true);
 		}
     }
 
     // Add some coroutines for chaseMark, open portal
     private IEnumerator PlayerEnterRoutine()
     {
-        // Damp to bossCam and have conversation
+        // Damp to bossCam and start conversation
         Debug.Log("Trigger PlayerEnterRoutine");
         playerEnteredTrigger = false; // call this routine once
         playerController.StopMove();
@@ -99,6 +96,7 @@ public class BossRoomController : MonoBehaviour
             portal.transform.localScale = new Vector2(portalScaleX, portalScaleY);
             yield return new WaitForSeconds(0.2f);
         }
+        yield return new WaitForSeconds(1f);
         boss.ChangeOutfit();
     }
 
