@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{4C95BC3F-F372-75A9-8476-62C520E970D8}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{4F2A611C-3D0E-F04A-AB04-6296F4E6FEDB}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -46,10 +46,19 @@
 			<GameParameters>
 				<GameParameter Id="215992295" Name="player_health"/>
 				<GameParameter Id="393239870" Name="sfx"/>
+				<GameParameter Id="1446300075" Name="path_pitch"/>
 				<GameParameter Id="3991942870" Name="music"/>
 				<GameParameter Id="4056684167" Name="master"/>
 			</GameParameters>
 			<StateGroups>
+				<StateGroup Id="1021618141" Name="MusicState">
+					<States>
+						<State Id="608898761" Name="Dungeon"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="1560169506" Name="Boss"/>
+						<State Id="3945572659" Name="Village"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="1045871717" Name="GameStatus">
 					<States>
 						<State Id="748895195" Name="None"/>
@@ -106,7 +115,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{9A9F80F1-7F49-1CAE-3939-3520CA762F85}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{97F7826F-7D00-4944-DDC4-D9C795561D66}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -118,9 +127,17 @@
 					<ShortName>sfx_footsteps_grass_var_03.wav</ShortName>
 					<CachePath>SFX/sfx_footsteps_grass_var_03_F06BAF76.wem</CachePath>
 				</File>
+				<File Id="89604698" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_hurt.wav</ShortName>
+					<CachePath>SFX/sfx_hurt_F06BAF76.wem</CachePath>
+				</File>
 				<File Id="138217890" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_footsteps_parquet_var_02.wav</ShortName>
 					<CachePath>SFX/sfx_footsteps_parquet_var_02_F06BAF76.wem</CachePath>
+				</File>
+				<File Id="159766235" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_play_embody.wav</ShortName>
+					<CachePath>SFX/sfx_play_embody_F06BAF76.wem</CachePath>
 				</File>
 				<File Id="221138627" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_obj_rock_pushing.wav</ShortName>
@@ -178,6 +195,10 @@
 					<ShortName>sfx_footsteps_stone_var_01.wav</ShortName>
 					<CachePath>SFX/sfx_footsteps_stone_var_01_F06BAF76.wem</CachePath>
 				</File>
+				<File Id="992276899" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_play_disembody.wav</ShortName>
+					<CachePath>SFX/sfx_play_disembody_F06BAF76.wem</CachePath>
+				</File>
 				<File Id="996341417" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_footsteps_stone_var_03.wav</ShortName>
 					<CachePath>SFX/sfx_footsteps_stone_var_03_F06BAF76.wem</CachePath>
@@ -195,9 +216,21 @@
 						<MediaRef Id="21760791"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1029929321" Name="disembody" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="3875653779" Name="door_opens" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="3989366099" Name="embody" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1029929321" Name="disembody" DurationType="OneShot" DurationMin="4.4832706" DurationMax="4.4832706">
+					<MediaRefs>
+						<MediaRef Id="159766235"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3875653779" Name="door_opens" MaxAttenuation="70" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="221138627"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3989366099" Name="embody" DurationType="OneShot" DurationMin="3.9131875" DurationMax="3.9131875">
+					<MediaRefs>
+						<MediaRef Id="992276899"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="493036092" Name="enemy_alert" DurationType="OneShot" DurationMin="0.5535625" DurationMax="0.5535625">
 					<MediaRefs>
 						<MediaRef Id="672148358"/>
@@ -240,7 +273,16 @@
 					</SwitchContainers>
 				</Event>
 				<Event Id="2534371823" Name="goblin_attack" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="3193947170" Name="hurt" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3193947170" Name="hurt" DurationType="OneShot" DurationMin="0.155" DurationMax="0.155">
+					<MediaRefs>
+						<MediaRef Id="89604698"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2758806427" Name="hurt_enemy" DurationType="OneShot" DurationMin="0.155" DurationMax="0.155">
+					<MediaRefs>
+						<MediaRef Id="89604698"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2177967876" Name="item_drop" DurationType="OneShot" DurationMin="1.0758958" DurationMax="1.0758958">
 					<MediaRefs>
 						<MediaRef Id="526766253"/>
@@ -262,12 +304,15 @@
 						<MediaRef Id="858639589"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3456241342" Name="projectile_arrow" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3920484766" Name="projectile_skeleton" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2827948781" Name="rock_push" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="221138627"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2888548111" Name="skeleton_attack" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2855283372" Name="wire_turn" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1571748476" Name="wolf_attack" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 			<SwitchGroups>
@@ -285,10 +330,41 @@
 			<ShortName>Title</ShortName>
 			<Path>Title.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{8075EEFB-2136-8445-22D7-93138A5F3A36}">
+		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{0994E7D8-D263-1736-8951-90F2EDE3A1BB}">
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
+			<Events>
+				<Event Id="4076456351" Name="path_correct_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionTrigger>
+						<ActionTriggerEntry Id="4156519531" Name="path_correct"/>
+					</ActionTrigger>
+				</Event>
+				<Event Id="4076456348" Name="path_correct_02" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionTrigger>
+						<ActionTriggerEntry Id="4156519531" Name="path_correct"/>
+					</ActionTrigger>
+				</Event>
+				<Event Id="4076456349" Name="path_correct_03" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionTrigger>
+						<ActionTriggerEntry Id="4156519531" Name="path_correct"/>
+					</ActionTrigger>
+				</Event>
+				<Event Id="4076456346" Name="path_correct_04" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionTrigger>
+						<ActionTriggerEntry Id="4156519531" Name="path_correct"/>
+					</ActionTrigger>
+				</Event>
+				<Event Id="14018523" Name="puzzle_completed" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionTrigger>
+						<ActionTriggerEntry Id="2687737065" Name="puzzle_success"/>
+					</ActionTrigger>
+				</Event>
+			</Events>
+			<Triggers>
+				<Trigger Id="2687737065" Name="puzzle_success"/>
+				<Trigger Id="4156519531" Name="path_correct"/>
+			</Triggers>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{93CD13B4-2B1A-73C6-634D-79576E99183C}</FileHash>
+	<FileHash>{7966D941-410C-E3EF-F972-ED91508492A3}</FileHash>
 </SoundBanksInfo>

@@ -67,9 +67,50 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="embody" ID="{6F49FA94-5DB1-46AF-8E27-991FDE2A4F51}"/>
-				<Event Name="disembody" ID="{09B61C89-4E83-4493-8338-F7B198ECE2B8}"/>
-				<Event Name="hurt" ID="{E7177CB7-DECB-4A5D-A01F-BAC3B9357430}"/>
+				<Event Name="embody" ID="{6F49FA94-5DB1-46AF-8E27-991FDE2A4F51}">
+					<ChildrenList>
+						<Action Name="" ID="{FC1823F6-030D-43E6-BDDF-208D8FBB4403}" ShortID="368840266">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_play_embody" ID="{0CBA72C3-7C39-46ED-87D5-397524752082}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="disembody" ID="{09B61C89-4E83-4493-8338-F7B198ECE2B8}">
+					<ChildrenList>
+						<Action Name="" ID="{DCA3D269-AF5E-4B59-B745-6D5A025B7E3D}" ShortID="758182767">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_play_disembody" ID="{B4C62302-1ED6-4468-B892-6EC05B891E5B}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="hurt" ID="{E7177CB7-DECB-4A5D-A01F-BAC3B9357430}">
+					<ChildrenList>
+						<Action Name="" ID="{F1AC218B-4EBE-453E-8250-4391D023DC7E}" ShortID="822299226">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="13"/>
+								<Property Name="Pitch" Type="int32" Value="610"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_hurt" ID="{CD424C14-6CB7-4018-96BD-233A7F9DEA70}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8EC4DD21-D589-4A7A-A672-25C6F60D9117}" ShortID="257918150">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_hurt" ID="{CD424C14-6CB7-4018-96BD-233A7F9DEA70}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

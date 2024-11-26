@@ -23,13 +23,22 @@ namespace AK
         static const AkUniqueID FOOTSTEPS = 2385628198U;
         static const AkUniqueID GOBLIN_ATTACK = 2534371823U;
         static const AkUniqueID HURT = 3193947170U;
+        static const AkUniqueID HURT_ENEMY = 2758806427U;
         static const AkUniqueID ITEM_DROP = 2177967876U;
         static const AkUniqueID ITEM_PICK = 4159556712U;
         static const AkUniqueID LEVER = 2782712987U;
+        static const AkUniqueID PATH_CORRECT_01 = 4076456351U;
+        static const AkUniqueID PATH_CORRECT_02 = 4076456348U;
+        static const AkUniqueID PATH_CORRECT_03 = 4076456349U;
+        static const AkUniqueID PATH_CORRECT_04 = 4076456346U;
         static const AkUniqueID PLATE = 282449107U;
+        static const AkUniqueID PROJECTILE_ARROW = 3456241342U;
+        static const AkUniqueID PROJECTILE_SKELETON = 3920484766U;
+        static const AkUniqueID PUZZLE_COMPLETED = 14018523U;
         static const AkUniqueID ROCK_PUSH = 2827948781U;
         static const AkUniqueID SKELETON_ATTACK = 2888548111U;
         static const AkUniqueID TESTINGEVENT = 946158365U;
+        static const AkUniqueID WIRE_TURN = 2855283372U;
         static const AkUniqueID WOLF_ATTACK = 1571748476U;
     } // namespace EVENTS
 
@@ -46,6 +55,19 @@ namespace AK
                 static const AkUniqueID NONE = 748895195U;
             } // namespace STATE
         } // namespace GAMESTATUS
+
+        namespace MUSICSTATE
+        {
+            static const AkUniqueID GROUP = 1021618141U;
+
+            namespace STATE
+            {
+                static const AkUniqueID BOSS = 1560169506U;
+                static const AkUniqueID DUNGEON = 608898761U;
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID VILLAGE = 3945572659U;
+            } // namespace STATE
+        } // namespace MUSICSTATE
 
         namespace PLAYERMOVEMENT
         {
@@ -105,6 +127,7 @@ namespace AK
     {
         static const AkUniqueID MASTER = 4056684167U;
         static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID PATH_PITCH = 1446300075U;
         static const AkUniqueID PLAYER_HEALTH = 215992295U;
         static const AkUniqueID SFX = 393239870U;
     } // namespace GAME_PARAMETERS
@@ -114,6 +137,7 @@ namespace AK
         static const AkUniqueID CHECKPOINT = 612075679U;
         static const AkUniqueID PATH_CORRECT = 4156519531U;
         static const AkUniqueID PATH_WRONG = 3587245554U;
+        static const AkUniqueID PUZZLE_SUCCESS = 2687737065U;
     } // namespace TRIGGERS
 
     namespace BANKS

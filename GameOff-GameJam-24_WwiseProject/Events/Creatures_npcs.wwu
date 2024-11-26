@@ -18,6 +18,28 @@
 				<Event Name="bat_attack" ID="{555B771C-159E-47B6-BB14-5D411BAB00F3}"/>
 				<Event Name="skeleton_attack" ID="{DEB1C334-3506-4C7B-87D4-00BD4FF6D19C}"/>
 				<Event Name="goblin_attack" ID="{E6ED7FC6-89C5-444D-BFF4-8AC7D760FFA4}"/>
+				<Event Name="hurt_enemy" ID="{3158A4F6-1472-4E29-9D2D-88B3404F58A2}">
+					<ChildrenList>
+						<Action Name="" ID="{15800553-416E-4F85-AD12-4CAFC972AE9B}" ShortID="942077916">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="13"/>
+								<Property Name="Pitch" Type="int32" Value="-810"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_hurt" ID="{CD424C14-6CB7-4018-96BD-233A7F9DEA70}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D59EED52-550F-4022-8629-6E61757799CA}" ShortID="471004754">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_hurt" ID="{CD424C14-6CB7-4018-96BD-233A7F9DEA70}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

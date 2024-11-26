@@ -382,7 +382,7 @@ MonoBehaviour:
     ParentPath: Events\Sfx\Creatures_npcs
     guid: cd4c5501e793cf4a8b393f9662af8af0
     GuidInternal: 
-    m_lastTime: -8584690655826914561
+    m_lastTime: -8584690236240356335
     List:
     - name: bat_attack
       guid: 1c775b559e15b647bb145d411bab00f3
@@ -444,6 +444,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: hurt_enemy
+      guid: f6a458317214294e9d2d88b3404f58a2
+      id: 2758806427
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Sfx
+        ObjectType: 12
+        guid: a9a08c566b9bba4c93c7fb9940d85a50
+      - ElementName: Creatures_npcs
+        ObjectType: 12
+        guid: cd4c5501e793cf4a8b393f9662af8af0
+      - ElementName: hurt_enemy
+        ObjectType: 3
+        guid: f6a458317214294e9d2d88b3404f58a2
+      Path: Events\Sfx\Creatures_npcs\hurt_enemy
+      maxAttenuation: 0
+      maxDuration: 0.155
+      minDuration: 0.155
     - name: skeleton_attack
       guid: 34c3b1de06357b4c87d400bd4ff6d19c
       id: 2888548111
@@ -521,7 +541,7 @@ MonoBehaviour:
     ParentPath: Events\Music
     guid: a50adb88e400464ab0c341653fd3f383
     GuidInternal: 
-    m_lastTime: -8584690277615904615
+    m_lastTime: -8584690208938668287
     List:
     - name: path_correct_01
       guid: 7591deda15df98408c925ca87f590424
@@ -600,6 +620,26 @@ MonoBehaviour:
         ObjectType: 3
         guid: 56366c1f9233ed499080cf06da1e420d
       Path: Events\Music\Stingers\path_correct_04
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: puzzle_completed
+      guid: f812cbef650fbf45a8c0e1fa5af35d01
+      id: 14018523
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music
+        ObjectType: 12
+        guid: a50adb88e400464ab0c341653fd3f383
+      - ElementName: Stingers
+        ObjectType: 4
+        guid: e7e0c7e2718b654caa7fae8e50e44211
+      - ElementName: puzzle_completed
+        ObjectType: 3
+        guid: f812cbef650fbf45a8c0e1fa5af35d01
+      Path: Events\Music\Stingers\puzzle_completed
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -750,7 +790,7 @@ MonoBehaviour:
     ParentPath: Events\Sfx\Player
     guid: 91e911cd66578b43a479c4169178acad
     GuidInternal: 
-    m_lastTime: -8584690655826834778
+    m_lastTime: -8584690225310983818
     List:
     - name: dig
       guid: bdad8911e0e46840b9db12d531af1d17
@@ -790,8 +830,8 @@ MonoBehaviour:
         guid: 891cb609834e93448338f7b198ece2b8
       Path: Events\Sfx\Player\disembody
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 4.4832706
+      minDuration: 4.4832706
     - name: embody
       guid: 94fa496fb15daf468e27991fde2a4f51
       id: 3989366099
@@ -810,8 +850,8 @@ MonoBehaviour:
         guid: 94fa496fb15daf468e27991fde2a4f51
       Path: Events\Sfx\Player\embody
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 3.9131875
+      minDuration: 3.9131875
     - name: footsteps
       guid: d31eeb442c97244ca5212e103fe21f9a
       id: 2385628198
@@ -850,8 +890,8 @@ MonoBehaviour:
         guid: b77c17e7cbde5d4aa01fbac3b9357430
       Path: Events\Sfx\Player\hurt
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 0.155
+      minDuration: 0.155
     - name: item_drop
       guid: 5ace7cd023b77b4eaf16bf9d07071b63
       id: 2177967876
@@ -1045,7 +1085,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 0533b2126855c3498ab62c34ebefeb20
     GuidInternal: 
-    m_lastTime: -8584690281479019107
+    m_lastTime: -8584690199791575766
     List:
     - name: master
       guid: 5ce02454ecf19a41a405e6bf68b07111
@@ -1363,8 +1403,90 @@ MonoBehaviour:
     ParentPath: States\Music
     guid: 3fb5948c18f45e4ca1df0ce27cec860d
     GuidInternal: 
-    m_lastTime: -8584690655795974256
-    List: []
+    m_lastTime: -8584690205669074108
+    List:
+    - name: MusicState
+      guid: a170bf9a4b2765459838e84465b41a9e
+      id: 1021618141
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music
+        ObjectType: 12
+        guid: 3fb5948c18f45e4ca1df0ce27cec860d
+      - ElementName: MusicState
+        ObjectType: 9
+        guid: a170bf9a4b2765459838e84465b41a9e
+      Path: States\Music\MusicState
+      values:
+      - name: Boss
+        guid: 1bdacedf7b74f94db420e009b2585f1d
+        id: 1560169506
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music
+          ObjectType: 12
+          guid: 3fb5948c18f45e4ca1df0ce27cec860d
+        - ElementName: MusicState
+          ObjectType: 9
+          guid: a170bf9a4b2765459838e84465b41a9e
+        - ElementName: Boss
+          ObjectType: 8
+          guid: 1bdacedf7b74f94db420e009b2585f1d
+      - name: Dungeon
+        guid: 1885f0e2e97a4a42aed6175926138ec0
+        id: 608898761
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music
+          ObjectType: 12
+          guid: 3fb5948c18f45e4ca1df0ce27cec860d
+        - ElementName: MusicState
+          ObjectType: 9
+          guid: a170bf9a4b2765459838e84465b41a9e
+        - ElementName: Dungeon
+          ObjectType: 8
+          guid: 1885f0e2e97a4a42aed6175926138ec0
+      - name: None
+        guid: 88c82bb4f5c4504789b00886bdfca55c
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music
+          ObjectType: 12
+          guid: 3fb5948c18f45e4ca1df0ce27cec860d
+        - ElementName: MusicState
+          ObjectType: 9
+          guid: a170bf9a4b2765459838e84465b41a9e
+        - ElementName: None
+          ObjectType: 8
+          guid: 88c82bb4f5c4504789b00886bdfca55c
+      - name: Village
+        guid: e7709db18bfbb24c9ef813305456a991
+        id: 3945572659
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music
+          ObjectType: 12
+          guid: 3fb5948c18f45e4ca1df0ce27cec860d
+        - ElementName: MusicState
+          ObjectType: 9
+          guid: a170bf9a4b2765459838e84465b41a9e
+        - ElementName: Village
+          ObjectType: 8
+          guid: e7709db18bfbb24c9ef813305456a991
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -1549,7 +1671,7 @@ MonoBehaviour:
     ParentPath: Triggers\Music
     guid: c6e8ba59d71c5049a4dd91206c28da7e
     GuidInternal: 
-    m_lastTime: -8584690278433404364
+    m_lastTime: -8584690208938555468
     List:
     - name: checkpoint
       guid: 4b4d66756fe1e7469774bc40987622fa
@@ -1561,10 +1683,13 @@ MonoBehaviour:
       - ElementName: Music
         ObjectType: 12
         guid: c6e8ba59d71c5049a4dd91206c28da7e
+      - ElementName: Stingers
+        ObjectType: 4
+        guid: ae63703f34bf834a9577c45be0cbd32d
       - ElementName: checkpoint
         ObjectType: 14
         guid: 4b4d66756fe1e7469774bc40987622fa
-      Path: Triggers\Music\checkpoint
+      Path: Triggers\Music\Stingers\checkpoint
     - name: path_correct
       guid: 156d7d3bd275624db2af1594cb5a9528
       id: 4156519531
@@ -1575,10 +1700,13 @@ MonoBehaviour:
       - ElementName: Music
         ObjectType: 12
         guid: c6e8ba59d71c5049a4dd91206c28da7e
+      - ElementName: Stingers
+        ObjectType: 4
+        guid: ae63703f34bf834a9577c45be0cbd32d
       - ElementName: path_correct
         ObjectType: 14
         guid: 156d7d3bd275624db2af1594cb5a9528
-      Path: Triggers\Music\path_correct
+      Path: Triggers\Music\Stingers\path_correct
     - name: path_wrong
       guid: 579cc25a211511489e046a6c157a3db2
       id: 3587245554
@@ -1589,10 +1717,44 @@ MonoBehaviour:
       - ElementName: Music
         ObjectType: 12
         guid: c6e8ba59d71c5049a4dd91206c28da7e
+      - ElementName: Stingers
+        ObjectType: 4
+        guid: ae63703f34bf834a9577c45be0cbd32d
       - ElementName: path_wrong
         ObjectType: 14
         guid: 579cc25a211511489e046a6c157a3db2
-      Path: Triggers\Music\path_wrong
+      Path: Triggers\Music\Stingers\path_wrong
+    - name: puzzle_success
+      guid: f5421aa72aa012499db12cc32e6e37f5
+      id: 2687737065
+      PathAndIcons:
+      - ElementName: Triggers
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music
+        ObjectType: 12
+        guid: c6e8ba59d71c5049a4dd91206c28da7e
+      - ElementName: Stingers
+        ObjectType: 4
+        guid: ae63703f34bf834a9577c45be0cbd32d
+      - ElementName: puzzle_success
+        ObjectType: 14
+        guid: f5421aa72aa012499db12cc32e6e37f5
+      Path: Triggers\Music\Stingers\puzzle_success
+    - name: Stingers
+      guid: ae63703f34bf834a9577c45be0cbd32d
+      id: 2940432316
+      PathAndIcons:
+      - ElementName: Triggers
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music
+        ObjectType: 12
+        guid: c6e8ba59d71c5049a4dd91206c28da7e
+      - ElementName: Stingers
+        ObjectType: 4
+        guid: ae63703f34bf834a9577c45be0cbd32d
+      Path: Triggers\Music\Stingers
   ExpandedFileSystemItemIds: 0200000003000000080000001400000016000000170000002400000025000000260000002c0000003000000031000000390000004200000043000000
   ExpandedWaapiItemIds: 020000000300000008000000
   AutoSyncSelection: 0

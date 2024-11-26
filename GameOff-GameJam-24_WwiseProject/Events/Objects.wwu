@@ -47,7 +47,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="door_opens" ID="{05BCEF4A-FE78-4DAD-A9FB-2D37C59F0227}"/>
+				<Event Name="door_opens" ID="{05BCEF4A-FE78-4DAD-A9FB-2D37C59F0227}">
+					<ChildrenList>
+						<Action Name="" ID="{1AFFB53A-B125-4E8D-884C-355C35EE3887}" ShortID="681088272">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="door_opening" ID="{D32DB3CA-0779-4982-A335-1DD73CFE712E}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="projectile_skeleton" ID="{A238FB62-545B-4EA0-97BD-76A7157F1965}"/>
+				<Event Name="projectile_arrow" ID="{F2D5F11F-D8A1-4BE1-AADC-885F2815851E}"/>
+				<Event Name="wire_turn" ID="{FE660AA5-16FB-4498-9CD1-A71CFD3865D5}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

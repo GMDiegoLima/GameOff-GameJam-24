@@ -31,20 +31,29 @@
 							<ObjectRef Name="rock_push" ID="{5631B497-E4E9-48B5-AB5E-7F17CFB8C54F}" WorkUnitID="{6124D795-751B-497E-A6D0-BFFAED670749}"/>
 							<Position X="0" Y="0"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="puzzle_completed" ID="{EFCB12F8-0F65-45BF-A8C0-E1FA5AF35D01}" WorkUnitID="{88DB0AA5-00E4-4A46-B0C3-41653FD3F383}"/>
+							<Position X="1" Y="0"/>
+						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
+							<GameParameterRef Name="player_health" ID="{60122350-6D92-44B5-938F-57DF204EEEF3}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="path_pitch" ID="{8B878E2D-2B48-4760-A634-022676CF8BD6}"/>
-							<Value>83.2310838445808</Value>
+							<Value>16.2576687116564</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Boss" ID="{DFCEDA1B-747B-4DF9-B420-E009B2585F1D}"/>
 						<CurrentStateRef Name="Alive" ID="{B1696563-4FE0-470C-9098-472520DAD3C2}"/>
-						<CurrentStateRef Name="None" ID="{55A230F1-6FD1-4B4F-8DA6-74C26866603D}"/>
+						<CurrentStateRef Name="InGame" ID="{CF648247-C9ED-4CAF-9FD9-E80F63C6FEC3}"/>
 						<CurrentStateRef Name="Static" ID="{B5B0EECD-83F2-4CCC-BF5E-31C4644C7085}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="tile" ID="{A8D80965-194E-4BEB-B2EB-BD5F8E0931F2}"/>
+						<CurrentSwitchRef Name="dirt" ID="{1224AF38-3A90-483F-9CAD-880A912F7490}"/>
 						<CurrentSwitchRef Name="moving" ID="{13E928FF-C584-4C6B-B40A-A69FAA416F4B}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>

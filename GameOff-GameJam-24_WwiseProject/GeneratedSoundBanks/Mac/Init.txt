@@ -1,9 +1,14 @@
 State Group	ID	Name			Wwise Object Path	Notes
+	1021618141	MusicState			\Music\MusicState	
 	1045871717	GameStatus			\Default Work Unit\GameStatus	
 	1350496757	PlayerMovement			\Default Work Unit\PlayerMovement	
 	3800848640	PlayerStatus			\Default Work Unit\PlayerStatus	
 
 State	ID	Name	State Group			Notes
+	608898761	Dungeon	MusicState			
+	748895195	None	MusicState			
+	1560169506	Boss	MusicState			
+	3945572659	Village	MusicState			
 	748895195	None	GameStatus			
 	984691642	InGame	GameStatus			
 	3374585465	InMenu	GameStatus			
