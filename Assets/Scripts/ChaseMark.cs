@@ -3,6 +3,7 @@ using UnityEngine;
 public class ChaseMark : MonoBehaviour
 {
     private SpriteRenderer sprite;
+    [HideInInspector] public bool isTurnedOn;
 
     private void Awake()
     {
@@ -13,10 +14,12 @@ public class ChaseMark : MonoBehaviour
     public void TurnOn()
     {
         sprite.enabled = true;
+        isTurnedOn = true;
 	}
     
     public void TurnOff()
     {
         sprite.enabled = false;
+        isTurnedOn = false;
 	}
 }

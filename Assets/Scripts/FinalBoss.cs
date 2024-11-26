@@ -52,7 +52,7 @@ public class FinalBoss : MonoBehaviour
 
     private void Update()
     {
-        if (isAlive)
+        if (BossRoomController.Instance.isGameStart && isAlive)
         {
             Patrol();
             changeOutfitCDTimer += Time.deltaTime;
@@ -108,7 +108,7 @@ public class FinalBoss : MonoBehaviour
         }
     }
 
-    private void ChangeOutfit()
+    public void ChangeOutfit()
     {
         Debug.Log("Change Outfit");
         int idx = Random.Range(0, animControllers.Count);
