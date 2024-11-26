@@ -21,7 +21,11 @@ public class ChaseState : IState
         Debug.Log(controller.actor.actorTag + " Enter Chase State");
         controller.targetFootprints.Clear();
         controller.ChangeToChaseView();
-        controller.chaseMark.TurnOn();
+        if (!controller.chaseMark.isTurnedOn)
+        {
+            controller.chaseMark.TurnOn();
+            AkSoundEngine.PostEvent("enemy_alert", controller.gameObject);
+        }
     }
 
     public void Update()
