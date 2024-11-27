@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 4252190085009577126}
   - component: {fileID: 429869822885628120}
   - component: {fileID: 5996799899590919896}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -351,7 +351,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4141589904391348546, guid: 90057cb2e19c140649a70d2e12d8909e, type: 3}
       propertyPath: m_Name
-      value: ChaseMark
+      value: BossChaseMark
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
