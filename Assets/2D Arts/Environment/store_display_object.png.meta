@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b432c2a23338346bd969ee466a28caff
+guid: 5dbd065e016844a48a8b9f704125d052
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6861669837926294925
-    second: menu_titlescreen_gamefox_0
+      213: -3007293695972881150
+    second: store_display_object_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: menu_titlescreen_gamefox_0
+      name: store_display_object_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 320
-        height: 180
+        x: 16
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 37a146813a376c0a0800000000000000
-      internalID: -6861669837926294925
+      spriteID: 20dc34c1152f346d0800000000000000
+      internalID: -3007293695972881150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: store_display_object_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e118cf3381ec224f9b2ebb6c1931b77
+      internalID: 562510215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: store_display_object_2
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 911f429c21a34ef4cb998898afe3881b
+      internalID: -2099797359
       vertices: []
       indices: 
       edges: []
@@ -138,7 +182,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f96efbc326d402446a961c7d031da50f
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +192,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      menu_titlescreen_gamefox_0: -6861669837926294925
+      store_display_object_0: -3007293695972881150
+      store_display_object_1: 562510215
+      store_display_object_2: -2099797359
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

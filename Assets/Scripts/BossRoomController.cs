@@ -12,6 +12,8 @@ public class BossRoomController : MonoBehaviour
     [SerializeField] PlayerController playerController;
     [SerializeField] FinalBoss boss;
     [SerializeField] EnemyGenerator portal;
+    [SerializeField] GameObject dialogue;
+    [SerializeField] Collider2D entranceTrigger;
 
     // Set true by other class
     [HideInInspector] public bool playerEnteredTrigger; // Set true in DoorH::Close()
@@ -39,15 +41,6 @@ public class BossRoomController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            portalOpenTrigger = true;
-		}
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            gameStartTrigger = true; // start spawn enemies
-		}    
-
         if (playerEnteredTrigger)
         {
             StartCoroutine(PlayerEnterRoutine());
@@ -60,6 +53,19 @@ public class BossRoomController : MonoBehaviour
         {
             StartCoroutine(GameStartRoutine());
 		}
+    }
+
+    public void StartCinematic()
+    {
+        BossRoomController.Instance.playerEnteredTrigger = true;
+    }
+
+    public void OpenPortal()
+    {
+        BossRoomController.Instance.portalOpenTrigger = true;
+        gameStartTrigger = true;
+        dialogue.SetActive(false);
+        entranceTrigger.enabled = false;
     }
 
     // Add some coroutines for chaseMark, open portal
@@ -80,6 +86,7 @@ public class BossRoomController : MonoBehaviour
         bossChaseMark.TurnOff();
         // Start conversation
         Debug.Log("Start converstaion");
+        dialogue.SetActive(true);
     }
 
     private IEnumerator OpenPortalRoutine()
