@@ -111,6 +111,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="destroy" ID="{35B718BD-9F2F-4911-A762-E45CF4F058F8}">
+					<ChildrenList>
+						<Action Name="" ID="{E75BF510-81C1-460B-B7A2-F50D7B40B537}" ShortID="1070240074">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_obj_destroy" ID="{980344A7-A438-4EDE-BEB3-8F395E7C07E1}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

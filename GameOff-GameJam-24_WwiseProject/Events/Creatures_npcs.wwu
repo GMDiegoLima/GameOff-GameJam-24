@@ -38,22 +38,159 @@
 				</Event>
 				<Folder Name="bat" ID="{D9CC9006-B2D7-4397-A4B3-BC5A32E1E5DD}" ShortID="510588488">
 					<ChildrenList>
-						<Event Name="bat_attack" ID="{555B771C-159E-47B6-BB14-5D411BAB00F3}"/>
+						<Event Name="bat_attack" ID="{555B771C-159E-47B6-BB14-5D411BAB00F3}">
+							<ChildrenList>
+								<Action Name="" ID="{5088B049-3F55-487E-BE3A-DF17BE5AAFEF}" ShortID="844875040">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="bat_attack" ID="{CE1C9A5F-2758-4A9E-A433-DA6CA382B7D1}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{A617C6A8-D4A0-4D71-9CC2-3905BDB76605}" ShortID="457838558">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="bat_whoosh" ID="{1B98CD31-317A-43E6-BD5C-127441F039FD}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="bat_movement" ID="{1F0BCBD6-70DE-439C-A004-9D2C7FDD142E}">
+							<ChildrenList>
+								<Action Name="" ID="{77D57B25-0DEB-4F9D-BFDF-050AB117C9F2}" ShortID="439909385">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_creature_bat_movement" ID="{22402EE6-AD90-49E2-A6B0-76C3898FDF8A}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="goblin" ID="{82719FFE-EF7F-420B-9F08-CD7C341F6627}" ShortID="395456914">
 					<ChildrenList>
-						<Event Name="goblin_attack" ID="{E6ED7FC6-89C5-444D-BFF4-8AC7D760FFA4}"/>
+						<Event Name="goblin_attack" ID="{E6ED7FC6-89C5-444D-BFF4-8AC7D760FFA4}">
+							<ChildrenList>
+								<Action Name="" ID="{07CDA778-4B18-4042-B642-8A4123A5A764}" ShortID="880047885">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="18"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="goblin_whoosh" ID="{BA9DD217-C778-4535-8B88-DCE534D8FB4C}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{6FBEE2A9-3828-43E6-86BD-7544D6AE5094}" ShortID="297806751">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="goblin_whoosh" ID="{BA9DD217-C778-4535-8B88-DCE534D8FB4C}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B3AE4F26-ABD4-465B-ACE2-C7D84CF0709F}" ShortID="907630254">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_obj_spike_trap" ID="{6EADD1D7-99C8-423F-BB0A-D1CBACF5FF6A}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="skeleton" ID="{3F300DEA-F5AB-4B8B-9DA6-36966EA6624C}" ShortID="958724393">
 					<ChildrenList>
-						<Event Name="skeleton_attack" ID="{DEB1C334-3506-4C7B-87D4-00BD4FF6D19C}"/>
+						<Event Name="skeleton_attack" ID="{DEB1C334-3506-4C7B-87D4-00BD4FF6D19C}">
+							<ChildrenList>
+								<Action Name="" ID="{02829231-3CEB-470C-BC59-C7D504F5335A}" ShortID="904485167">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="13"/>
+										<Property Name="Pitch" Type="int32" Value="-860"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="goblin_whoosh" ID="{BA9DD217-C778-4535-8B88-DCE534D8FB4C}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{59ADEA84-9E04-4A4C-B6DA-78066CB6712B}" ShortID="179809253">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="goblin_whoosh" ID="{BA9DD217-C778-4535-8B88-DCE534D8FB4C}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="wolf" ID="{DD92AB2D-27B9-4F40-8579-29765794AD8E}" ShortID="723052166">
 					<ChildrenList>
-						<Event Name="wolf_attack" ID="{5C3F56A1-B401-40AE-B90C-AE71CBD8E0C1}"/>
+						<Event Name="wolf_attack" ID="{5C3F56A1-B401-40AE-B90C-AE71CBD8E0C1}">
+							<ChildrenList>
+								<Action Name="" ID="{220E9994-366E-44DB-87A6-76823A38BBD7}" ShortID="724752378">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="13"/>
+										<Property Name="Pitch" Type="int32" Value="-2580"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="goblin_whoosh" ID="{BA9DD217-C778-4535-8B88-DCE534D8FB4C}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{922CD81B-069B-4CB9-AF00-782AAF6D7B5A}" ShortID="958247435">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="goblin_whoosh" ID="{BA9DD217-C778-4535-8B88-DCE534D8FB4C}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{65393C30-46AE-44C2-9FBE-22264BE93C5E}" ShortID="234890306">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="13"/>
+										<Property Name="Pitch" Type="int32" Value="720"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_obj_spike_trap" ID="{6EADD1D7-99C8-423F-BB0A-D1CBACF5FF6A}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{9172E473-BFAB-4659-9F32-EB0BD99D9965}" ShortID="623549275">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_obj_spike_trap" ID="{6EADD1D7-99C8-423F-BB0A-D1CBACF5FF6A}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{3CDD854B-B83F-42B6-880E-E667EDA539BC}" ShortID="66046116">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="18"/>
+										<Property Name="Delay" Type="Real64" Value="1.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_obj_spike_trap" ID="{6EADD1D7-99C8-423F-BB0A-D1CBACF5FF6A}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{4099E44C-EACA-427E-B62A-FFF3D3C5E057}" ShortID="218048143">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="18"/>
+										<Property Name="Delay" Type="Real64" Value="2.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="goblin_whoosh" ID="{BA9DD217-C778-4535-8B88-DCE534D8FB4C}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

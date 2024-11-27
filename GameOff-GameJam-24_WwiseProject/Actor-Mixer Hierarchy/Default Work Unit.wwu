@@ -1,31 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{3B6D6122-CC4B-4031-90CB-8C49388F36AD}" SchemaVersion="119">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{3B6D6122-CC4B-4031-90CB-8C49388F36AD}" PersistMode="Standalone">
-			<ChildrenList>
-				<Sound Name="sfx_play_embody" ID="{983C7DB0-8AFD-4DA0-84DC-70ED4E5DE070}" ShortID="490180640">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="sfx_play_embody" ID="{B5FABCF3-B376-42DA-9CB9-192C4EDE7B76}">
-							<Language>SFX</Language>
-							<AudioFile>sfx_play_embody.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="159766235"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="sfx_play_embody" ID="{B5FABCF3-B376-42DA-9CB9-192C4EDE7B76}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-			</ChildrenList>
-		</WorkUnit>
+		<WorkUnit Name="Default Work Unit" ID="{3B6D6122-CC4B-4031-90CB-8C49388F36AD}" PersistMode="Standalone"/>
 	</AudioObjects>
 </WwiseDocument>

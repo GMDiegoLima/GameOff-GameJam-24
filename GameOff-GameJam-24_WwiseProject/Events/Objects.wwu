@@ -58,9 +58,102 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="projectile_skeleton" ID="{A238FB62-545B-4EA0-97BD-76A7157F1965}"/>
-				<Event Name="projectile_arrow" ID="{F2D5F11F-D8A1-4BE1-AADC-885F2815851E}"/>
-				<Event Name="wire_turn" ID="{FE660AA5-16FB-4498-9CD1-A71CFD3865D5}"/>
+				<Event Name="projectile_skeleton" ID="{A238FB62-545B-4EA0-97BD-76A7157F1965}">
+					<ChildrenList>
+						<Action Name="" ID="{BEC46DDA-50C7-4E81-8999-2C8D85699646}" ShortID="208493560">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_npc_projectile_skeleton" ID="{388075BE-8C88-46F1-A41B-FE835BB64618}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="projectile_arrow" ID="{F2D5F11F-D8A1-4BE1-AADC-885F2815851E}">
+					<ChildrenList>
+						<Action Name="" ID="{0E3DDEF0-E052-40C2-A701-37DB2AE20FE4}" ShortID="318103342">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_obj_projectile_arrow" ID="{C7FF9695-63B6-4AD3-A814-6F2AB66713C7}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="wire_turn" ID="{FE660AA5-16FB-4498-9CD1-A71CFD3865D5}">
+					<ChildrenList>
+						<Action Name="" ID="{F9BF3152-89D4-42F3-8888-E60989F655E9}" ShortID="685664954">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wire_turn" ID="{7220687B-FB2C-4EC0-A3DF-87D0CC9EDB73}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="chest_opens" ID="{C1C527BE-BE1E-48C5-AB69-8A042BA8B1E0}">
+					<ChildrenList>
+						<Action Name="" ID="{85A90B5A-570D-417E-80BE-F696B0C7CAE8}" ShortID="301736659">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_obj_chest" ID="{33A25CB7-344A-4C05-BA15-95C9FBE5BC82}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="projectile_fire" ID="{00FA0510-9500-4429-ABEB-1465A568B46C}">
+					<ChildrenList>
+						<Action Name="" ID="{EBCA0223-655E-4578-8B2D-2DEE3925E29B}" ShortID="921566980">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_obj_trigger" ID="{2894295E-A738-4585-84D4-6A355418AAB5}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{A36D5080-3CCB-49A1-A28B-86217FDA6AF1}" ShortID="747986823">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_obj_flame_rumble" ID="{7DCC5C93-80D5-4C39-8807-BA09066BD936}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="spike_trap" ID="{D7C7B38D-52B0-4E3E-A97F-F8E50CE47A99}">
+					<ChildrenList>
+						<Action Name="" ID="{6F66CE9F-FD2D-4545-B6C0-9ACCB36BFAC5}" ShortID="1019237079">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_obj_trigger" ID="{1816545C-FD5A-410D-B02F-F4B40EED2E7D}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{1C751BAE-C9D5-4BA5-B0CB-342AC6C2B34D}" ShortID="560576733">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_obj_spike_trap" ID="{6EADD1D7-99C8-423F-BB0A-D1CBACF5FF6A}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{FDB10CD4-FE9A-4EBF-9CFB-9AA8959A9D6A}" ShortID="308427711">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.6"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_obj_spike_trap" ID="{6EADD1D7-99C8-423F-BB0A-D1CBACF5FF6A}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
