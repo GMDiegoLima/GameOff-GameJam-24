@@ -14,7 +14,6 @@
 								<Action Name="" ID="{F751F3BA-2227-4595-8AEE-2BA1B2E46029}" ShortID="101312039">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="38"/>
-										<Property Name="GameParameterValue" Type="Real64" Value="25"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -22,10 +21,13 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
-								<Action Name="" ID="{BF2BEFC4-B6BE-4793-8ABD-5532C8BE0302}" ShortID="114906311">
+								<Action Name="" ID="{7EC15A9D-0DA3-4EC6-AA43-B7403C51E9C8}" ShortID="788598685">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="35"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="stg_path_correct" ID="{62F8B0DB-AD45-4276-ABA6-C057770244D6}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+											<ObjectRef Name="path_correct" ID="{3B7D6D15-75D2-4D62-B2AF-1594CB5A9528}" WorkUnitID="{59BAE8C6-1CD7-4950-A4DD-91206C28DA7E}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -36,7 +38,7 @@
 								<Action Name="" ID="{8BAE8946-A7E2-4925-842A-BBE7A55DC0D8}" ShortID="504492720">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="38"/>
-										<Property Name="GameParameterValue" Type="Real64" Value="50"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="27"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -44,10 +46,13 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
-								<Action Name="" ID="{827161FC-BA4D-4AB3-9B38-10D0AB395ACE}" ShortID="809641610">
+								<Action Name="" ID="{B5977FBE-8461-4952-9518-B7D066485990}" ShortID="425586799">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="35"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="stg_path_correct" ID="{62F8B0DB-AD45-4276-ABA6-C057770244D6}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+											<ObjectRef Name="path_correct" ID="{3B7D6D15-75D2-4D62-B2AF-1594CB5A9528}" WorkUnitID="{59BAE8C6-1CD7-4950-A4DD-91206C28DA7E}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -58,7 +63,7 @@
 								<Action Name="" ID="{6357352B-BD05-4C56-866F-44EEBEBAC5BF}" ShortID="154323679">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="38"/>
-										<Property Name="GameParameterValue" Type="Real64" Value="75"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="56"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -66,10 +71,13 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
-								<Action Name="" ID="{D3F77FEC-D2B9-4267-A3C7-E584EC08F625}" ShortID="173998532">
+								<Action Name="" ID="{959BD33B-521E-4F9C-867C-7B091C143C1C}" ShortID="853513650">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="35"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="stg_path_correct" ID="{62F8B0DB-AD45-4276-ABA6-C057770244D6}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+											<ObjectRef Name="path_correct" ID="{3B7D6D15-75D2-4D62-B2AF-1594CB5A9528}" WorkUnitID="{59BAE8C6-1CD7-4950-A4DD-91206C28DA7E}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -80,7 +88,7 @@
 								<Action Name="" ID="{55460E8F-F36F-491E-9751-C0BB65E3E0E8}" ShortID="64429568">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="38"/>
-										<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="78"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -88,10 +96,27 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
-								<Action Name="" ID="{7AF07969-270E-4971-B119-3877665B1942}" ShortID="152314976">
+								<Action Name="" ID="{D47C1A56-0C28-49C7-862B-D20D3D97D50B}" ShortID="491206800">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="35"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="stg_path_correct" ID="{62F8B0DB-AD45-4276-ABA6-C057770244D6}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+											<ObjectRef Name="path_correct" ID="{3B7D6D15-75D2-4D62-B2AF-1594CB5A9528}" WorkUnitID="{59BAE8C6-1CD7-4950-A4DD-91206C28DA7E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="puzzle_completed" ID="{EFCB12F8-0F65-45BF-A8C0-E1FA5AF35D01}">
+							<ChildrenList>
+								<Action Name="" ID="{61D5A74A-F34A-4113-8492-62DBC64C832F}" ShortID="741727597">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="35"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="puzzle_success" ID="{A71A42F5-A02A-4912-9DB1-2CC32E6E37F5}" WorkUnitID="{59BAE8C6-1CD7-4950-A4DD-91206C28DA7E}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

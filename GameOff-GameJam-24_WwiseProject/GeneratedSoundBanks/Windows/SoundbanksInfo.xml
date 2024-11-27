@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{4C95BC3F-F372-75A9-8476-62C520E970D8}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{4F2A611C-3D0E-F04A-AB04-6296F4E6FEDB}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -46,10 +46,19 @@
 			<GameParameters>
 				<GameParameter Id="215992295" Name="player_health"/>
 				<GameParameter Id="393239870" Name="sfx"/>
+				<GameParameter Id="1446300075" Name="path_pitch"/>
 				<GameParameter Id="3991942870" Name="music"/>
 				<GameParameter Id="4056684167" Name="master"/>
 			</GameParameters>
 			<StateGroups>
+				<StateGroup Id="1021618141" Name="MusicState">
+					<States>
+						<State Id="608898761" Name="Dungeon"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="1560169506" Name="Boss"/>
+						<State Id="3945572659" Name="Village"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="1045871717" Name="GameStatus">
 					<States>
 						<State Id="748895195" Name="None"/>
@@ -106,29 +115,85 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{9A9F80F1-7F49-1CAE-3939-3520CA762F85}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{9407FE61-C1F9-A546-DCE4-91BE7F60B07C}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
+				<File Id="7661146" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ui_dialogue_var_02.wav</ShortName>
+					<CachePath>SFX/ui_dialogue_var_02_F06BAF76.wem</CachePath>
+				</File>
 				<File Id="21760791" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_dig.wav</ShortName>
 					<CachePath>SFX/sfx_dig_F06BAF76.wem</CachePath>
+				</File>
+				<File Id="26040308" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_attack_bat_var_02.wav</ShortName>
+					<CachePath>SFX/sfx_attack_bat_var_02_F06BAF76.wem</CachePath>
+				</File>
+				<File Id="54325868" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ui_move_var_02.wav</ShortName>
+					<CachePath>SFX/ui_move_var_02_F06BAF76.wem</CachePath>
 				</File>
 				<File Id="57660160" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_footsteps_grass_var_03.wav</ShortName>
 					<CachePath>SFX/sfx_footsteps_grass_var_03_F06BAF76.wem</CachePath>
 				</File>
+				<File Id="63383016" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_attack_whoosh_var_02.wav</ShortName>
+					<CachePath>SFX/sfx_attack_whoosh_var_02_F06BAF76.wem</CachePath>
+				</File>
+				<File Id="89604698" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_hurt.wav</ShortName>
+					<CachePath>SFX/sfx_hurt_F06BAF76.wem</CachePath>
+				</File>
+				<File Id="96997681" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_obj_chest.wav</ShortName>
+					<CachePath>SFX/sfx_obj_chest_F06BAF76.wem</CachePath>
+				</File>
+				<File Id="103319374" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_creature_bat_movement.wav</ShortName>
+					<CachePath>SFX/sfx_creature_bat_movement_F06BAF76.wem</CachePath>
+				</File>
 				<File Id="138217890" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_footsteps_parquet_var_02.wav</ShortName>
 					<CachePath>SFX/sfx_footsteps_parquet_var_02_F06BAF76.wem</CachePath>
+				</File>
+				<File Id="144289834" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_obj_flame_rumble.wav</ShortName>
+					<CachePath>SFX/sfx_obj_flame_rumble_F06BAF76.wem</CachePath>
+				</File>
+				<File Id="159766235" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_play_embody.wav</ShortName>
+					<CachePath>SFX/sfx_play_embody_F06BAF76.wem</CachePath>
 				</File>
 				<File Id="221138627" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_obj_rock_pushing.wav</ShortName>
 					<CachePath>SFX/sfx_obj_rock_pushing_CC7DE850.wem</CachePath>
 				</File>
+				<File Id="225222591" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ui_move_var_01.wav</ShortName>
+					<CachePath>SFX/ui_move_var_01_F06BAF76.wem</CachePath>
+				</File>
+				<File Id="232811396" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ui_dialogue_var_01.wav</ShortName>
+					<CachePath>SFX/ui_dialogue_var_01_F06BAF76.wem</CachePath>
+				</File>
 				<File Id="305096193" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_obj_plate_on.wav</ShortName>
 					<CachePath>SFX/sfx_obj_plate_on_F06BAF76.wem</CachePath>
+				</File>
+				<File Id="325638342" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_obj_trigger.wav</ShortName>
+					<CachePath>SFX/sfx_obj_trigger_F06BAF76.wem</CachePath>
+				</File>
+				<File Id="338213362" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_attack_whoosh_var_03.wav</ShortName>
+					<CachePath>SFX/sfx_attack_whoosh_var_03_F06BAF76.wem</CachePath>
+				</File>
+				<File Id="374064659" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_attack_bat_var_01.wav</ShortName>
+					<CachePath>SFX/sfx_attack_bat_var_01_F06BAF76.wem</CachePath>
 				</File>
 				<File Id="376194961" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_footsteps_grass_var_01.wav</ShortName>
@@ -158,13 +223,37 @@
 					<ShortName>sfx_item_drop.wav</ShortName>
 					<CachePath>SFX/sfx_item_drop_F06BAF76.wem</CachePath>
 				</File>
+				<File Id="609355816" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_npc_projectile_skeleton.wav</ShortName>
+					<CachePath>SFX/sfx_npc_projectile_skeleton_F06BAF76.wem</CachePath>
+				</File>
 				<File Id="672148358" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_creatures_alert.wav</ShortName>
 					<CachePath>SFX/sfx_creatures_alert_F06BAF76.wem</CachePath>
 				</File>
+				<File Id="755825440" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_obj_wire_var_02.wav</ShortName>
+					<CachePath>SFX/sfx_obj_wire_var_02_F06BAF76.wem</CachePath>
+				</File>
+				<File Id="760430262" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_obj_destroy.wav</ShortName>
+					<CachePath>SFX/sfx_obj_destroy_F06BAF76.wem</CachePath>
+				</File>
+				<File Id="761077480" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_obj_wire_var_01.wav</ShortName>
+					<CachePath>SFX/sfx_obj_wire_var_01_F06BAF76.wem</CachePath>
+				</File>
 				<File Id="858639589" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_obj_plate_off.wav</ShortName>
 					<CachePath>SFX/sfx_obj_plate_off_95749A7B.wem</CachePath>
+				</File>
+				<File Id="865284003" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ui_select.wav</ShortName>
+					<CachePath>SFX/ui_select_F06BAF76.wem</CachePath>
+				</File>
+				<File Id="893462657" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_obj_spike_trap.wav</ShortName>
+					<CachePath>SFX/sfx_obj_spike_trap_F06BAF76.wem</CachePath>
 				</File>
 				<File Id="905515257" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_footsteps_grass_var_02.wav</ShortName>
@@ -178,16 +267,55 @@
 					<ShortName>sfx_footsteps_stone_var_01.wav</ShortName>
 					<CachePath>SFX/sfx_footsteps_stone_var_01_F06BAF76.wem</CachePath>
 				</File>
+				<File Id="982405650" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_attack_whoosh_01.wav</ShortName>
+					<CachePath>SFX/sfx_attack_whoosh_01_F06BAF76.wem</CachePath>
+				</File>
+				<File Id="989730768" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_obj_projectile_arrow.wav</ShortName>
+					<CachePath>SFX/sfx_obj_projectile_arrow_F06BAF76.wem</CachePath>
+				</File>
+				<File Id="990578849" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_attack_bat_var_03.wav</ShortName>
+					<CachePath>SFX/sfx_attack_bat_var_03_F06BAF76.wem</CachePath>
+				</File>
+				<File Id="992276899" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_play_disembody.wav</ShortName>
+					<CachePath>SFX/sfx_play_disembody_F06BAF76.wem</CachePath>
+				</File>
 				<File Id="996341417" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_footsteps_stone_var_03.wav</ShortName>
 					<CachePath>SFX/sfx_footsteps_stone_var_03_F06BAF76.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
-				<Event Id="3423338245" Name="bat_attack" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3423338245" Name="bat_attack" DurationType="OneShot" DurationMin="1.040625" DurationMax="1.2953125">
+					<MediaRefs>
+						<MediaRef Id="26040308"/>
+						<MediaRef Id="63383016"/>
+						<MediaRef Id="338213362"/>
+						<MediaRef Id="374064659"/>
+						<MediaRef Id="990578849"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2757895098" Name="bat_movement" DurationType="OneShot" DurationMin="1.2536875" DurationMax="1.2536875">
+					<MediaRefs>
+						<MediaRef Id="103319374"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2787926982" Name="chest_opens" DurationType="OneShot" DurationMin="3.6053333" DurationMax="3.6053333">
+					<MediaRefs>
+						<MediaRef Id="96997681"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2274969374" Name="coffin" DurationType="OneShot" DurationMin="1.9962916" DurationMax="1.9962916">
 					<MediaRefs>
 						<MediaRef Id="411483413"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3936390293" Name="destroy" DurationType="OneShot" DurationMin="0.43304166" DurationMax="0.43304166">
+					<MediaRefs>
+						<MediaRef Id="760430262"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="445985471" Name="dig" DurationType="OneShot" DurationMin="0.23660417" DurationMax="0.23660417">
@@ -195,12 +323,30 @@
 						<MediaRef Id="21760791"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1029929321" Name="disembody" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="3875653779" Name="door_opens" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="3989366099" Name="embody" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1029929321" Name="disembody" DurationType="OneShot" DurationMin="4.4832706" DurationMax="4.4832706">
+					<MediaRefs>
+						<MediaRef Id="159766235"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3875653779" Name="door_opens" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="221138627"/>
+						<MediaRef Id="325638342"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3989366099" Name="embody" DurationType="OneShot" DurationMin="3.9131875" DurationMax="3.9131875">
+					<MediaRefs>
+						<MediaRef Id="992276899"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="493036092" Name="enemy_alert" DurationType="OneShot" DurationMin="0.5535625" DurationMax="0.5535625">
 					<MediaRefs>
 						<MediaRef Id="672148358"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1316490268" Name="evil_dialogue" DurationType="OneShot" DurationMin="0.11425" DurationMax="0.11425">
+					<MediaRefs>
+						<MediaRef Id="7661146"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2385628198" Name="footsteps" DurationType="OneShot" DurationMin="0.037780326" DurationMax="0.13360417">
@@ -239,8 +385,22 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="2534371823" Name="goblin_attack" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="3193947170" Name="hurt" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2534371823" Name="goblin_attack" DurationType="OneShot" DurationMin="0.3526875" DurationMax="0.3526875">
+					<MediaRefs>
+						<MediaRef Id="893462657"/>
+						<MediaRef Id="982405650"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3193947170" Name="hurt" DurationType="OneShot" DurationMin="0.155" DurationMax="0.155">
+					<MediaRefs>
+						<MediaRef Id="89604698"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2758806427" Name="hurt_enemy" DurationType="OneShot" DurationMin="0.155" DurationMax="0.155">
+					<MediaRefs>
+						<MediaRef Id="89604698"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2177967876" Name="item_drop" DurationType="OneShot" DurationMin="1.0758958" DurationMax="1.0758958">
 					<MediaRefs>
 						<MediaRef Id="526766253"/>
@@ -256,10 +416,46 @@
 						<MediaRef Id="477432091"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2485905105" Name="menu_cursor_back" DurationType="OneShot" DurationMin="0.79733336" DurationMax="0.79733336">
+					<MediaRefs>
+						<MediaRef Id="225222591"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1306883239" Name="menu_cursor_move" DurationType="OneShot" DurationMin="0.7389375" DurationMax="0.7389375">
+					<MediaRefs>
+						<MediaRef Id="54325868"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3200708208" Name="menu_cursor_select" DurationType="OneShot" DurationMin="0.792" DurationMax="0.792">
+					<MediaRefs>
+						<MediaRef Id="865284003"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="365141489" Name="normal_dialogue" DurationType="OneShot" DurationMin="0.11385417" DurationMax="0.11385417">
+					<MediaRefs>
+						<MediaRef Id="232811396"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="282449107" Name="plate" DurationType="OneShot" DurationMin="0.6513125" DurationMax="0.7966875">
 					<MediaRefs>
 						<MediaRef Id="305096193"/>
 						<MediaRef Id="858639589"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3456241342" Name="projectile_arrow" DurationType="OneShot" DurationMin="0.5905833" DurationMax="0.5905833">
+					<MediaRefs>
+						<MediaRef Id="989730768"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3777725015" Name="projectile_fire" DurationType="OneShot" DurationMin="8.5" DurationMax="8.5">
+					<MediaRefs>
+						<MediaRef Id="144289834"/>
+						<MediaRef Id="325638342"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3920484766" Name="projectile_skeleton" DurationType="OneShot" DurationMin="1.6533333" DurationMax="1.6533333">
+					<MediaRefs>
+						<MediaRef Id="609355816"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2827948781" Name="rock_push" DurationType="Infinite">
@@ -267,8 +463,29 @@
 						<MediaRef Id="221138627"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2888548111" Name="skeleton_attack" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="1571748476" Name="wolf_attack" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2888548111" Name="skeleton_attack" DurationType="OneShot" DurationMin="0.24310416" DurationMax="0.24310416">
+					<MediaRefs>
+						<MediaRef Id="982405650"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="17253085" Name="spike_trap" DurationType="OneShot" DurationMin="0.9526875" DurationMax="0.9526875">
+					<MediaRefs>
+						<MediaRef Id="325638342"/>
+						<MediaRef Id="893462657"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2855283372" Name="wire_turn" DurationType="OneShot" DurationMin="0.32589585" DurationMax="0.32589585">
+					<MediaRefs>
+						<MediaRef Id="755825440"/>
+						<MediaRef Id="761077480"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1571748476" Name="wolf_attack" DurationType="OneShot" DurationMin="0.3526875" DurationMax="0.3526875">
+					<MediaRefs>
+						<MediaRef Id="893462657"/>
+						<MediaRef Id="982405650"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 			<SwitchGroups>
 				<SwitchGroup Id="478119480" Name="GroundTextures">
@@ -281,14 +498,94 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3705726509" Type="User" Language="SFX" Hash="{67C5050C-D012-A060-C8CF-0B80AF561B0F}">
+		<SoundBank Id="3705726509" Type="User" Language="SFX" Hash="{0C01F156-884F-54E0-3A7A-08D2787C1A7D}">
 			<ShortName>Title</ShortName>
 			<Path>Title.bnk</Path>
+			<Media>
+				<File Id="7661146" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ui_dialogue_var_02.wav</ShortName>
+					<CachePath>SFX/ui_dialogue_var_02_F06BAF76.wem</CachePath>
+				</File>
+				<File Id="54325868" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ui_move_var_02.wav</ShortName>
+					<CachePath>SFX/ui_move_var_02_F06BAF76.wem</CachePath>
+				</File>
+				<File Id="225222591" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ui_move_var_01.wav</ShortName>
+					<CachePath>SFX/ui_move_var_01_F06BAF76.wem</CachePath>
+				</File>
+				<File Id="232811396" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ui_dialogue_var_01.wav</ShortName>
+					<CachePath>SFX/ui_dialogue_var_01_F06BAF76.wem</CachePath>
+				</File>
+				<File Id="865284003" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ui_select.wav</ShortName>
+					<CachePath>SFX/ui_select_F06BAF76.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1316490268" Name="evil_dialogue" DurationType="OneShot" DurationMin="0.11425" DurationMax="0.11425">
+					<MediaRefs>
+						<MediaRef Id="7661146"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2485905105" Name="menu_cursor_back" DurationType="OneShot" DurationMin="0.79733336" DurationMax="0.79733336">
+					<MediaRefs>
+						<MediaRef Id="225222591"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1306883239" Name="menu_cursor_move" DurationType="OneShot" DurationMin="0.7389375" DurationMax="0.7389375">
+					<MediaRefs>
+						<MediaRef Id="54325868"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3200708208" Name="menu_cursor_select" DurationType="OneShot" DurationMin="0.792" DurationMax="0.792">
+					<MediaRefs>
+						<MediaRef Id="865284003"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="365141489" Name="normal_dialogue" DurationType="OneShot" DurationMin="0.11385417" DurationMax="0.11385417">
+					<MediaRefs>
+						<MediaRef Id="232811396"/>
+					</MediaRefs>
+				</Event>
+			</Events>
 		</SoundBank>
-		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{8075EEFB-2136-8445-22D7-93138A5F3A36}">
+		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{0994E7D8-D263-1736-8951-90F2EDE3A1BB}">
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
+			<Events>
+				<Event Id="4076456351" Name="path_correct_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionTrigger>
+						<ActionTriggerEntry Id="4156519531" Name="path_correct"/>
+					</ActionTrigger>
+				</Event>
+				<Event Id="4076456348" Name="path_correct_02" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionTrigger>
+						<ActionTriggerEntry Id="4156519531" Name="path_correct"/>
+					</ActionTrigger>
+				</Event>
+				<Event Id="4076456349" Name="path_correct_03" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionTrigger>
+						<ActionTriggerEntry Id="4156519531" Name="path_correct"/>
+					</ActionTrigger>
+				</Event>
+				<Event Id="4076456346" Name="path_correct_04" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionTrigger>
+						<ActionTriggerEntry Id="4156519531" Name="path_correct"/>
+					</ActionTrigger>
+				</Event>
+				<Event Id="14018523" Name="puzzle_completed" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionTrigger>
+						<ActionTriggerEntry Id="2687737065" Name="puzzle_success"/>
+					</ActionTrigger>
+				</Event>
+			</Events>
+			<Triggers>
+				<Trigger Id="2687737065" Name="puzzle_success"/>
+				<Trigger Id="4156519531" Name="path_correct"/>
+			</Triggers>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{93CD13B4-2B1A-73C6-634D-79576E99183C}</FileHash>
+	<FileHash>{B12A124A-174A-B991-2255-306F1BDA7C76}</FileHash>
 </SoundBanksInfo>

@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: f059ccdab8a9cb488fc779e69f905b3e
     GuidInternal: 
-    m_lastTime: -8584711299244560549
+    m_lastTime: -8584711280198698041
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -309,7 +309,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 147542aa1fa9a344bad32b33b1da2794
     GuidInternal: 
-    m_lastTime: -8584690655801794631
+    m_lastTime: -8584690042804242811
     List:
     - name: Main
       guid: 516653935762234ab927cec7323273dd
@@ -382,8 +382,28 @@ MonoBehaviour:
     ParentPath: Events\Sfx\Creatures_npcs
     guid: cd4c5501e793cf4a8b393f9662af8af0
     GuidInternal: 
-    m_lastTime: -8584690655826914561
+    m_lastTime: -8584690058972008546
     List:
+    - name: bat
+      guid: 0690ccd9d7b29743a4b3bc5a32e1e5dd
+      id: 513390118
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Sfx
+        ObjectType: 12
+        guid: a9a08c566b9bba4c93c7fb9940d85a50
+      - ElementName: Creatures_npcs
+        ObjectType: 12
+        guid: cd4c5501e793cf4a8b393f9662af8af0
+      - ElementName: bat
+        ObjectType: 4
+        guid: 0690ccd9d7b29743a4b3bc5a32e1e5dd
+      Path: Events\Sfx\Creatures_npcs\bat
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: bat_attack
       guid: 1c775b559e15b647bb145d411bab00f3
       id: 3423338245
@@ -397,10 +417,13 @@ MonoBehaviour:
       - ElementName: Creatures_npcs
         ObjectType: 12
         guid: cd4c5501e793cf4a8b393f9662af8af0
+      - ElementName: bat
+        ObjectType: 4
+        guid: 0690ccd9d7b29743a4b3bc5a32e1e5dd
       - ElementName: bat_attack
         ObjectType: 3
         guid: 1c775b559e15b647bb145d411bab00f3
-      Path: Events\Sfx\Creatures_npcs\bat_attack
+      Path: Events\Sfx\Creatures_npcs\bat\bat_attack
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -424,6 +447,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.5535625
       minDuration: 0.5535625
+    - name: goblin
+      guid: fe9f71827fef0b429f08cd7c341f6627
+      id: 2995046728
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Sfx
+        ObjectType: 12
+        guid: a9a08c566b9bba4c93c7fb9940d85a50
+      - ElementName: Creatures_npcs
+        ObjectType: 12
+        guid: cd4c5501e793cf4a8b393f9662af8af0
+      - ElementName: goblin
+        ObjectType: 4
+        guid: fe9f71827fef0b429f08cd7c341f6627
+      Path: Events\Sfx\Creatures_npcs\goblin
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: goblin_attack
       guid: c67fede6c5894d44bff48ac7d760ffa4
       id: 2534371823
@@ -437,13 +480,56 @@ MonoBehaviour:
       - ElementName: Creatures_npcs
         ObjectType: 12
         guid: cd4c5501e793cf4a8b393f9662af8af0
+      - ElementName: goblin
+        ObjectType: 4
+        guid: fe9f71827fef0b429f08cd7c341f6627
       - ElementName: goblin_attack
         ObjectType: 3
         guid: c67fede6c5894d44bff48ac7d760ffa4
-      Path: Events\Sfx\Creatures_npcs\goblin_attack
+      Path: Events\Sfx\Creatures_npcs\goblin\goblin_attack
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: hurt_enemy
+      guid: f6a458317214294e9d2d88b3404f58a2
+      id: 2758806427
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Sfx
+        ObjectType: 12
+        guid: a9a08c566b9bba4c93c7fb9940d85a50
+      - ElementName: Creatures_npcs
+        ObjectType: 12
+        guid: cd4c5501e793cf4a8b393f9662af8af0
+      - ElementName: hurt_enemy
+        ObjectType: 3
+        guid: f6a458317214294e9d2d88b3404f58a2
+      Path: Events\Sfx\Creatures_npcs\hurt_enemy
+      maxAttenuation: 0
+      maxDuration: 0.155
+      minDuration: 0.155
+    - name: skeleton
+      guid: ea0d303fabf58b4b9da636966ea6624c
+      id: 3478279848
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Sfx
+        ObjectType: 12
+        guid: a9a08c566b9bba4c93c7fb9940d85a50
+      - ElementName: Creatures_npcs
+        ObjectType: 12
+        guid: cd4c5501e793cf4a8b393f9662af8af0
+      - ElementName: skeleton
+        ObjectType: 4
+        guid: ea0d303fabf58b4b9da636966ea6624c
+      Path: Events\Sfx\Creatures_npcs\skeleton
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: skeleton_attack
       guid: 34c3b1de06357b4c87d400bd4ff6d19c
       id: 2888548111
@@ -457,13 +543,36 @@ MonoBehaviour:
       - ElementName: Creatures_npcs
         ObjectType: 12
         guid: cd4c5501e793cf4a8b393f9662af8af0
+      - ElementName: skeleton
+        ObjectType: 4
+        guid: ea0d303fabf58b4b9da636966ea6624c
       - ElementName: skeleton_attack
         ObjectType: 3
         guid: 34c3b1de06357b4c87d400bd4ff6d19c
-      Path: Events\Sfx\Creatures_npcs\skeleton_attack
+      Path: Events\Sfx\Creatures_npcs\skeleton\skeleton_attack
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: wolf
+      guid: 2dab92ddb927404f857929765794ad8e
+      id: 2041272125
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Sfx
+        ObjectType: 12
+        guid: a9a08c566b9bba4c93c7fb9940d85a50
+      - ElementName: Creatures_npcs
+        ObjectType: 12
+        guid: cd4c5501e793cf4a8b393f9662af8af0
+      - ElementName: wolf
+        ObjectType: 4
+        guid: 2dab92ddb927404f857929765794ad8e
+      Path: Events\Sfx\Creatures_npcs\wolf
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: wolf_attack
       guid: a1563f5c01b4ae40b90cae71cbd8e0c1
       id: 1571748476
@@ -477,10 +586,13 @@ MonoBehaviour:
       - ElementName: Creatures_npcs
         ObjectType: 12
         guid: cd4c5501e793cf4a8b393f9662af8af0
+      - ElementName: wolf
+        ObjectType: 4
+        guid: 2dab92ddb927404f857929765794ad8e
       - ElementName: wolf_attack
         ObjectType: 3
         guid: a1563f5c01b4ae40b90cae71cbd8e0c1
-      Path: Events\Sfx\Creatures_npcs\wolf_attack
+      Path: Events\Sfx\Creatures_npcs\wolf\wolf_attack
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -495,7 +607,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 46994d34afb99c44984a3a8203e4fc13
     GuidInternal: 
-    m_lastTime: -8584706101947744565
+    m_lastTime: -8584690351997752727
     List: []
   - PhysicalPath: Events\Environment.wwu
     PathAndIcons:
@@ -521,7 +633,7 @@ MonoBehaviour:
     ParentPath: Events\Music
     guid: a50adb88e400464ab0c341653fd3f383
     GuidInternal: 
-    m_lastTime: -8584689745080921440
+    m_lastTime: -8584690208938668287
     List:
     - name: path_correct_01
       guid: 7591deda15df98408c925ca87f590424
@@ -541,8 +653,8 @@ MonoBehaviour:
         guid: 7591deda15df98408c925ca87f590424
       Path: Events\Music\Stingers\path_correct_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: path_correct_02
       guid: 615ef3b906713d4baa6b38f1f280bb4d
       id: 4076456348
@@ -561,8 +673,8 @@ MonoBehaviour:
         guid: 615ef3b906713d4baa6b38f1f280bb4d
       Path: Events\Music\Stingers\path_correct_02
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: path_correct_03
       guid: 77950b29bb3a4543b5382e82b0b3d50d
       id: 4076456349
@@ -581,8 +693,8 @@ MonoBehaviour:
         guid: 77950b29bb3a4543b5382e82b0b3d50d
       Path: Events\Music\Stingers\path_correct_03
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: path_correct_04
       guid: 56366c1f9233ed499080cf06da1e420d
       id: 4076456346
@@ -601,8 +713,28 @@ MonoBehaviour:
         guid: 56366c1f9233ed499080cf06da1e420d
       Path: Events\Music\Stingers\path_correct_04
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
+    - name: puzzle_completed
+      guid: f812cbef650fbf45a8c0e1fa5af35d01
+      id: 14018523
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music
+        ObjectType: 12
+        guid: a50adb88e400464ab0c341653fd3f383
+      - ElementName: Stingers
+        ObjectType: 4
+        guid: e7e0c7e2718b654caa7fae8e50e44211
+      - ElementName: puzzle_completed
+        ObjectType: 3
+        guid: f812cbef650fbf45a8c0e1fa5af35d01
+      Path: Events\Music\Stingers\puzzle_completed
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Stingers
       guid: e7e0c7e2718b654caa7fae8e50e44211
       id: 2940432316
@@ -634,7 +766,7 @@ MonoBehaviour:
     ParentPath: Events\Sfx\Objects
     guid: 95d724611b757e49a6d0bffaed670749
     GuidInternal: 
-    m_lastTime: -8584689745080761490
+    m_lastTime: -8584690055333541364
     List:
     - name: coffin
       guid: af6ce51c1ef7ad43a644dccfac2ca173
@@ -716,6 +848,46 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.7966875
       minDuration: 0.6513125
+    - name: projectile_arrow
+      guid: 1ff1d5f2a1d8e14baadc885f2815851e
+      id: 3456241342
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Sfx
+        ObjectType: 12
+        guid: a9a08c566b9bba4c93c7fb9940d85a50
+      - ElementName: Objects
+        ObjectType: 12
+        guid: 95d724611b757e49a6d0bffaed670749
+      - ElementName: projectile_arrow
+        ObjectType: 3
+        guid: 1ff1d5f2a1d8e14baadc885f2815851e
+      Path: Events\Sfx\Objects\projectile_arrow
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: projectile_skeleton
+      guid: 62fb38a25b54a04e97bd76a7157f1965
+      id: 3920484766
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Sfx
+        ObjectType: 12
+        guid: a9a08c566b9bba4c93c7fb9940d85a50
+      - ElementName: Objects
+        ObjectType: 12
+        guid: 95d724611b757e49a6d0bffaed670749
+      - ElementName: projectile_skeleton
+        ObjectType: 3
+        guid: 62fb38a25b54a04e97bd76a7157f1965
+      Path: Events\Sfx\Objects\projectile_skeleton
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: rock_push
       guid: 97b43156e9e4b548ab5e7f17cfb8c54f
       id: 2827948781
@@ -736,6 +908,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: wire_turn
+      guid: a50a66fefb1698449cd1a71cfd3865d5
+      id: 2855283372
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Sfx
+        ObjectType: 12
+        guid: a9a08c566b9bba4c93c7fb9940d85a50
+      - ElementName: Objects
+        ObjectType: 12
+        guid: 95d724611b757e49a6d0bffaed670749
+      - ElementName: wire_turn
+        ObjectType: 3
+        guid: a50a66fefb1698449cd1a71cfd3865d5
+      Path: Events\Sfx\Objects\wire_turn
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   - PhysicalPath: Events\Player.wwu
     PathAndIcons:
     - ElementName: Events
@@ -750,7 +942,7 @@ MonoBehaviour:
     ParentPath: Events\Sfx\Player
     guid: 91e911cd66578b43a479c4169178acad
     GuidInternal: 
-    m_lastTime: -8584690655826834778
+    m_lastTime: -8584690182832800854
     List:
     - name: dig
       guid: bdad8911e0e46840b9db12d531af1d17
@@ -790,8 +982,8 @@ MonoBehaviour:
         guid: 891cb609834e93448338f7b198ece2b8
       Path: Events\Sfx\Player\disembody
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 4.4832706
+      minDuration: 4.4832706
     - name: embody
       guid: 94fa496fb15daf468e27991fde2a4f51
       id: 3989366099
@@ -810,8 +1002,8 @@ MonoBehaviour:
         guid: 94fa496fb15daf468e27991fde2a4f51
       Path: Events\Sfx\Player\embody
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 3.9131875
+      minDuration: 3.9131875
     - name: footsteps
       guid: d31eeb442c97244ca5212e103fe21f9a
       id: 2385628198
@@ -850,8 +1042,8 @@ MonoBehaviour:
         guid: b77c17e7cbde5d4aa01fbac3b9357430
       Path: Events\Sfx\Player\hurt
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 0.155
+      minDuration: 0.155
     - name: item_drop
       guid: 5ace7cd023b77b4eaf16bf9d07071b63
       id: 2177967876
@@ -963,8 +1155,8 @@ MonoBehaviour:
         guid: cc32d3bb2ab4ae458915727ad712fc97
       Path: Events\UI\evil_dialogue
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.11425
+      minDuration: 0.11425
     - name: menu_cursor_back
       guid: 3bcf4fbf83844945adfec09859851c3c
       id: 2485905105
@@ -980,8 +1172,8 @@ MonoBehaviour:
         guid: 3bcf4fbf83844945adfec09859851c3c
       Path: Events\UI\menu_cursor_back
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.79733336
+      minDuration: 0.79733336
     - name: menu_cursor_move
       guid: 596ce4619790234ab2650000d087e02f
       id: 1306883239
@@ -997,8 +1189,8 @@ MonoBehaviour:
         guid: 596ce4619790234ab2650000d087e02f
       Path: Events\UI\menu_cursor_move
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.7389375
+      minDuration: 0.7389375
     - name: menu_cursor_select
       guid: 12f90d306b8830409e13967bd9251991
       id: 3200708208
@@ -1014,8 +1206,8 @@ MonoBehaviour:
         guid: 12f90d306b8830409e13967bd9251991
       Path: Events\UI\menu_cursor_select
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.792
+      minDuration: 0.792
     - name: normal_dialogue
       guid: b5d85ed19014ac49b725db2c61b4040f
       id: 365141489
@@ -1031,8 +1223,8 @@ MonoBehaviour:
         guid: b5d85ed19014ac49b725db2c61b4040f
       Path: Events\UI\normal_dialogue
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.11385417
+      minDuration: 0.11385417
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -1045,7 +1237,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 0533b2126855c3498ab62c34ebefeb20
     GuidInternal: 
-    m_lastTime: -8584689745080741519
+    m_lastTime: -8584690199791575766
     List:
     - name: master
       guid: 5ce02454ecf19a41a405e6bf68b07111
@@ -1152,7 +1344,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: d06fee2ae060f44f867e61f7a80294fb
     GuidInternal: 
-    m_lastTime: -8584689745079555777
+    m_lastTime: -8584690295968072971
     List:
     - name: GameStatus
       guid: 472ddbf40fc83a4a999091bff40cd847
@@ -1363,8 +1555,90 @@ MonoBehaviour:
     ParentPath: States\Music
     guid: 3fb5948c18f45e4ca1df0ce27cec860d
     GuidInternal: 
-    m_lastTime: -8584690655795974256
-    List: []
+    m_lastTime: -8584690205669074108
+    List:
+    - name: MusicState
+      guid: a170bf9a4b2765459838e84465b41a9e
+      id: 1021618141
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music
+        ObjectType: 12
+        guid: 3fb5948c18f45e4ca1df0ce27cec860d
+      - ElementName: MusicState
+        ObjectType: 9
+        guid: a170bf9a4b2765459838e84465b41a9e
+      Path: States\Music\MusicState
+      values:
+      - name: Boss
+        guid: 1bdacedf7b74f94db420e009b2585f1d
+        id: 1560169506
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music
+          ObjectType: 12
+          guid: 3fb5948c18f45e4ca1df0ce27cec860d
+        - ElementName: MusicState
+          ObjectType: 9
+          guid: a170bf9a4b2765459838e84465b41a9e
+        - ElementName: Boss
+          ObjectType: 8
+          guid: 1bdacedf7b74f94db420e009b2585f1d
+      - name: Dungeon
+        guid: 1885f0e2e97a4a42aed6175926138ec0
+        id: 608898761
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music
+          ObjectType: 12
+          guid: 3fb5948c18f45e4ca1df0ce27cec860d
+        - ElementName: MusicState
+          ObjectType: 9
+          guid: a170bf9a4b2765459838e84465b41a9e
+        - ElementName: Dungeon
+          ObjectType: 8
+          guid: 1885f0e2e97a4a42aed6175926138ec0
+      - name: None
+        guid: 88c82bb4f5c4504789b00886bdfca55c
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music
+          ObjectType: 12
+          guid: 3fb5948c18f45e4ca1df0ce27cec860d
+        - ElementName: MusicState
+          ObjectType: 9
+          guid: a170bf9a4b2765459838e84465b41a9e
+        - ElementName: None
+          ObjectType: 8
+          guid: 88c82bb4f5c4504789b00886bdfca55c
+      - name: Village
+        guid: e7709db18bfbb24c9ef813305456a991
+        id: 3945572659
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music
+          ObjectType: 12
+          guid: 3fb5948c18f45e4ca1df0ce27cec860d
+        - ElementName: MusicState
+          ObjectType: 9
+          guid: a170bf9a4b2765459838e84465b41a9e
+        - ElementName: Village
+          ObjectType: 8
+          guid: e7709db18bfbb24c9ef813305456a991
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -1377,7 +1651,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 5cc297846a0efe469836302b9e9b2cb5
     GuidInternal: 
-    m_lastTime: -8584689745079545761
+    m_lastTime: -8584690009792130257
     List:
     - name: GroundTextures
       guid: b569fc3fed9d2243a28296f56107e31b
@@ -1536,7 +1810,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: e7f4d602c8fed14aa82827ae83c24654
     GuidInternal: 
-    m_lastTime: -8584711299244580735
+    m_lastTime: -8584693369636297366
     List: []
   - PhysicalPath: Triggers\Music.wwu
     PathAndIcons:
@@ -1549,7 +1823,7 @@ MonoBehaviour:
     ParentPath: Triggers\Music
     guid: c6e8ba59d71c5049a4dd91206c28da7e
     GuidInternal: 
-    m_lastTime: -8584689745079525721
+    m_lastTime: -8584690208938555468
     List:
     - name: checkpoint
       guid: 4b4d66756fe1e7469774bc40987622fa
@@ -1561,10 +1835,13 @@ MonoBehaviour:
       - ElementName: Music
         ObjectType: 12
         guid: c6e8ba59d71c5049a4dd91206c28da7e
+      - ElementName: Stingers
+        ObjectType: 4
+        guid: ae63703f34bf834a9577c45be0cbd32d
       - ElementName: checkpoint
         ObjectType: 14
         guid: 4b4d66756fe1e7469774bc40987622fa
-      Path: Triggers\Music\checkpoint
+      Path: Triggers\Music\Stingers\checkpoint
     - name: path_correct
       guid: 156d7d3bd275624db2af1594cb5a9528
       id: 4156519531
@@ -1575,10 +1852,13 @@ MonoBehaviour:
       - ElementName: Music
         ObjectType: 12
         guid: c6e8ba59d71c5049a4dd91206c28da7e
+      - ElementName: Stingers
+        ObjectType: 4
+        guid: ae63703f34bf834a9577c45be0cbd32d
       - ElementName: path_correct
         ObjectType: 14
         guid: 156d7d3bd275624db2af1594cb5a9528
-      Path: Triggers\Music\path_correct
+      Path: Triggers\Music\Stingers\path_correct
     - name: path_wrong
       guid: 579cc25a211511489e046a6c157a3db2
       id: 3587245554
@@ -1589,11 +1869,45 @@ MonoBehaviour:
       - ElementName: Music
         ObjectType: 12
         guid: c6e8ba59d71c5049a4dd91206c28da7e
+      - ElementName: Stingers
+        ObjectType: 4
+        guid: ae63703f34bf834a9577c45be0cbd32d
       - ElementName: path_wrong
         ObjectType: 14
         guid: 579cc25a211511489e046a6c157a3db2
-      Path: Triggers\Music\path_wrong
-  ExpandedFileSystemItemIds: 020000000300000004000000080000001400000016000000170000002400000025000000260000002c0000003000000031000000390000004200000043000000
+      Path: Triggers\Music\Stingers\path_wrong
+    - name: puzzle_success
+      guid: f5421aa72aa012499db12cc32e6e37f5
+      id: 2687737065
+      PathAndIcons:
+      - ElementName: Triggers
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music
+        ObjectType: 12
+        guid: c6e8ba59d71c5049a4dd91206c28da7e
+      - ElementName: Stingers
+        ObjectType: 4
+        guid: ae63703f34bf834a9577c45be0cbd32d
+      - ElementName: puzzle_success
+        ObjectType: 14
+        guid: f5421aa72aa012499db12cc32e6e37f5
+      Path: Triggers\Music\Stingers\puzzle_success
+    - name: Stingers
+      guid: ae63703f34bf834a9577c45be0cbd32d
+      id: 2940432316
+      PathAndIcons:
+      - ElementName: Triggers
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music
+        ObjectType: 12
+        guid: c6e8ba59d71c5049a4dd91206c28da7e
+      - ElementName: Stingers
+        ObjectType: 4
+        guid: ae63703f34bf834a9577c45be0cbd32d
+      Path: Triggers\Music\Stingers
+  ExpandedFileSystemItemIds: 020000000300000008000000140000001600000017000000210000002400000025000000260000002c0000002d0000002e0000002f00000030000000310000003200000033000000390000004200000043000000
   ExpandedWaapiItemIds: 020000000300000008000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1

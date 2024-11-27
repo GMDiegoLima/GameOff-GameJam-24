@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{E53740C4-A4FF-4EE0-BB94-F3EB420FA78C}" SchemaVersion="119">
 	<Modulators>
-		<WorkUnit Name="Default Work Unit" ID="{E53740C4-A4FF-4EE0-BB94-F3EB420FA78C}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{E53740C4-A4FF-4EE0-BB94-F3EB420FA78C}" PersistMode="Standalone">
+			<ChildrenList>
+				<ModulatorEnvelope Name="env_lp_door_open" ID="{EF8B4A0D-2DDE-427E-BF92-339F181D915C}" ShortID="481655504">
+					<PropertyList>
+						<Property Name="EnvelopeAttackCurve" Type="Real64" Value="12">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{0046343E-031C-4176-B255-9D4759EDAA0A}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="EnvelopeAttackTime" Type="Real64" Value="0.158"/>
+						<Property Name="EnvelopeDecayTime" Type="Real64" Value="1"/>
+						<Property Name="EnvelopeReleaseTime" Type="Real64" Value="0.584"/>
+					</PropertyList>
+				</ModulatorEnvelope>
+			</ChildrenList>
+		</WorkUnit>
 	</Modulators>
 </WwiseDocument>
