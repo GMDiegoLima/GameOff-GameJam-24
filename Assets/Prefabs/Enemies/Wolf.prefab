@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 5640444739511689665}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1161623, y: -0.4338077, z: 0.033329744}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -214,12 +214,12 @@ MonoBehaviour:
     m_Bits: 256
   bonePrefab: {fileID: 7183489080040951203, guid: c6db8df0db03745dfa7a6dabffe753d5, type: 3}
   minMovePeriod: 1
-  maxMovePeriod: 1
-  minStopPeriod: 3
-  maxStopPeriod: 5
-  minVelocity: -1
-  maxVelocity: 1
-  chaseSpeed: 3
+  maxMovePeriod: 3
+  minStopPeriod: 2
+  maxStopPeriod: 3
+  minVelocity: -3
+  maxVelocity: 3
+  chaseSpeed: 3.5
   attackCD: 3
   isMoving: 0
   movePeriodTimer: 0
