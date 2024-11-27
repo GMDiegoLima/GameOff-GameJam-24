@@ -7,8 +7,9 @@ public class PressurePlateSequence : MonoBehaviour
     public PuzzleSequenceManager puzzleSeqManager;
     public PuzzleActivations puzzleActManager;
     public string plateName;
+    public AK.Wwise.Event stingerEvent;
     Animator animator;
-    private HashSet<Collider2D> collidingObjects = new HashSet<Collider2D>();
+    HashSet<Collider2D> collidingObjects = new HashSet<Collider2D>();
 
     void Start()
     {
@@ -38,9 +39,13 @@ public class PressurePlateSequence : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (IsValidCollider(other))
+        if (other.GetComponent<PlayerController>() != null || other.CompareTag("PressureTrigger"))
         {
-            collidingObjects.Add(other);
+            playerScript = other.GetComponent<PlayerController>();
+            if (other.CompareTag("PressureTrigger") || (other.CompareTag("Player") && !playerScript.flying))
+            {
+                collidingObjects.Add(other);
+            }
         }
     }
 
@@ -50,16 +55,6 @@ public class PressurePlateSequence : MonoBehaviour
         {
             collidingObjects.Remove(other);
         }
-    }
-
-    bool IsValidCollider(Collider2D collider)
-    {
-        if (collider.GetComponent<PlayerController>() != null || collider.CompareTag("PressureTrigger"))
-        {
-            playerScript = collider.GetComponent<PlayerController>();
-            return collider.CompareTag("PressureTrigger") || (collider.CompareTag("Player") && !playerScript.flying);
-        }
-        return false;
     }
 
     void HandleActivation()
@@ -94,5 +89,10 @@ public class PressurePlateSequence : MonoBehaviour
         {
             puzzleActManager.RemoveActivation(plateName);
         }
+    }
+
+    public void TriggerSfx()
+    {
+        stingerEvent.Post(gameObject);
     }
 }

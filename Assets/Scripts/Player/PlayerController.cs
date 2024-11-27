@@ -9,10 +9,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private KeyCode pickKey;
     [SerializeField] private KeyCode dropKey;
 
-    private PlayerStateController playerStateController;
-    private GameActorSOHolder gameActorSOHolder;
-    private int ghostLayerInt;
-    private int enemyViewLayerInt;
+    PlayerStateController playerStateController;
+    GameActorSOHolder gameActorSOHolder;
+    int ghostLayerInt;
+    int enemyViewLayerInt;
 
     //public float speed;
     Rigidbody2D characterBody;

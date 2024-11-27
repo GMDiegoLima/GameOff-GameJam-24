@@ -23,6 +23,7 @@ public class Checkpoint : MonoBehaviour
                 AkSoundEngine.PostEvent("checkpoint", gameObject);
                 animator.SetBool("Enabled", true);
                 light.enabled = true;
+                spawnPosition.position = new Vector3(spawnPosition.position.x, spawnPosition.position.y, 0);
                 player.SetCheckpoint(spawnPosition.position);
                 triggerCollider.enabled = false;
                 Debug.Log("Checkpoint saved!");

@@ -31,10 +31,10 @@ public class SurfaceType : MonoBehaviour
     // }
     void OnTriggerEnter2D(Collider2D other)
     {
-        AkSoundEngine.SetSwitch("GroundTextures", "grass", gameObject);
+        AkSoundEngine.SetSwitch("GroundTextures", "grass", other.gameObject);
     }
     void OnTriggerExit2D(Collider2D other)
     {
-        AkSoundEngine.SetSwitch("GroundTextures", "stone", gameObject);
+        AkSoundEngine.SetSwitch("GroundTextures", "stone", other.gameObject);
     }
 }

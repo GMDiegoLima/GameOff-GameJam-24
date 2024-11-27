@@ -44,6 +44,5 @@ public class DoorH : MonoBehaviour
     {
         open = false;
         close = true;
-        BossRoomController.Instance.playerEnteredTrigger = true;
     }
 }
