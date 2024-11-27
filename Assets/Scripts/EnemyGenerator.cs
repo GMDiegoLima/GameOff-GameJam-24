@@ -17,7 +17,7 @@ public class EnemyGenerator : MonoBehaviour
 		}
     }
 
-    private void GenerateRandomEnemy()
+    public void GenerateRandomEnemy()
     {
         int idx = Random.Range(0, enemyPrefabs.Length);
         Instantiate(enemyPrefabs[idx], generatePoint.position, Quaternion.identity);

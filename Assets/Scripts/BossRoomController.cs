@@ -57,14 +57,12 @@ public class BossRoomController : MonoBehaviour
 
     public void StartCinematic()
     {
-        BossRoomController.Instance.playerEnteredTrigger = true;
+        playerEnteredTrigger = true;
     }
 
     public void OpenPortal()
     {
-        BossRoomController.Instance.portalOpenTrigger = true;
-        gameStartTrigger = true;
-        dialogue.SetActive(false);
+        portalOpenTrigger = true;
         entranceTrigger.enabled = false;
     }
 
@@ -104,7 +102,12 @@ public class BossRoomController : MonoBehaviour
             yield return new WaitForSeconds(0.2f);
         }
         yield return new WaitForSeconds(1f);
+        portal.GenerateRandomEnemy();
+        yield return new WaitForSeconds(1f);
+        portal.GenerateRandomEnemy();
         boss.ChangeOutfit();
+        yield return new WaitForSeconds(3f);
+        gameStartTrigger = true;
     }
 
     private IEnumerator GameStartRoutine()
@@ -117,4 +120,9 @@ public class BossRoomController : MonoBehaviour
         yield return new WaitForSeconds(2f);
         playerController.isControllable = true;
     }
+
+    public void CloseDialog()
+    { 
+        dialogue.SetActive(false);
+	}
 }
