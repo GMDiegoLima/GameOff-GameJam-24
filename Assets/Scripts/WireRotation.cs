@@ -20,6 +20,7 @@ public class WireRotation : MonoBehaviour
         if (Input.GetKeyDown("e") && canRotate)
         {
             transform.Rotate(0, 0, 90f);
+            AkSoundEngine.PostEvent("wire_turn", gameObject);
             UpdateCableState();
             WireManager.Instance.CheckPuzzleStatus();
         }

@@ -8411,6 +8411,7 @@ MonoBehaviour:
   dropKey: 103
   currentBody: 0
   embodyText: {fileID: 428538844500421307}
+  isControllable: 1
   alive: 1
   fell: 0
   flying: 0
@@ -8418,6 +8419,7 @@ MonoBehaviour:
   heldItem: {fileID: 0}
   itemHoldPosition: {fileID: 8366464045760755937}
   stepInterval: 0.3
+  ground: {fileID: 0}
 --- !u!114 &5228655556956484796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8541,7 +8543,12 @@ MonoBehaviour:
   glassesPosition: {fileID: 6635667433717572709}
   allHats:
   - {fileID: 574396718760465388, guid: 0ac2c0c49aff26146be04a498c264900, type: 3}
-  allGlasses: []
+  - {fileID: 1904458322371883480, guid: 202d202120ecf584d895e78090ebe916, type: 3}
+  - {fileID: 6285349756598121311, guid: c38886f4d6a4ebc4f8d8df259b6eae44, type: 3}
+  - {fileID: 3056456377252061851, guid: 59396ee7e4154a140a550c6c251d7ec9, type: 3}
+  allGlasses:
+  - {fileID: 6285349756598121311, guid: c38886f4d6a4ebc4f8d8df259b6eae44, type: 3}
+  - {fileID: 3056456377252061851, guid: 59396ee7e4154a140a550c6c251d7ec9, type: 3}
 --- !u!1 &8461029784987146223
 GameObject:
   m_ObjectHideFlags: 0

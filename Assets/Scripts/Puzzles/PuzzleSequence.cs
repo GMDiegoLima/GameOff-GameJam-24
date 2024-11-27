@@ -38,6 +38,7 @@ public class PuzzleSequence : MonoBehaviour
         {
             puzzleSolved = true;
             Debug.Log("Puzzle Solved!");
+            AkSoundEngine.PostEvent("puzzle_completed", gameObject);
             onPuzzleSolved.Invoke();
         }
     }

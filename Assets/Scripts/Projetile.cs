@@ -5,6 +5,10 @@ public class Projetile : MonoBehaviour
 {
     public float damage = 1f;
     int collisionCount = 0;
+    void Start()
+    {
+        AkSoundEngine.PostEvent("projectile_arrow", gameObject);
+    }
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))

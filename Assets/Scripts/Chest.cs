@@ -17,6 +17,7 @@ public class Chest : MonoBehaviour
         if (canOpen && Input.GetKeyDown("e") && !opened)
         {
             Debug.Log("Chest open");
+            AkSoundEngine.PostEvent("chest_opens", gameObject);
             opened = true;
             animator.SetBool("Open", true);
             Instantiate(itemToDrop, transform.position, Quaternion.identity);

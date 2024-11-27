@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine.Tilemaps;
 using System.Linq;
 using UnityEngine;
 using TMPro;
@@ -52,7 +53,7 @@ public class PlayerController : MonoBehaviour
     List<GameObject> nearbyItems = new List<GameObject>();
 
     public float stepInterval = 0.3f;
-    public AK.Wwise.Event footstepsEvent;
+    public Tilemap ground;
     float stepTimer;
 
     void Start()
@@ -157,6 +158,29 @@ public class PlayerController : MonoBehaviour
                     heldItem.transform.position = itemHoldPosition.position;
                 }
                 AkSoundEngine.SetState("PlayerStatus", "Alive");
+                Vector3Int gridPosition = ground.WorldToCell(transform.position);
+                TileBase currentTile = ground.GetTile(gridPosition);
+                Debug.Log(currentTile.name);
+                if (currentTile.name.ToLower().Contains("cobblestone"))
+                {
+                    AkSoundEngine.SetSwitch("GroundTextures", "dirt", gameObject);
+                    return;
+                }
+                switch (currentTile.name)
+                {
+                    case "abyss_0":
+                        AkSoundEngine.SetSwitch("GroundTextures", "water", gameObject);
+                        break;
+                    case "GrassRuleTIle":
+                        AkSoundEngine.SetSwitch("GroundTextures", "grass", gameObject);
+                        break;
+                    case "CemeteryRuleTile":
+                        AkSoundEngine.SetSwitch("GroundTextures", "grass", gameObject);
+                        break;
+                    default:
+                        AkSoundEngine.SetSwitch("GroundTextures", "stone", gameObject);
+                        break;
+                }
                 _animator.SetBool("Dead", false);
                 gameOver.SetActive(false);
             }
@@ -281,7 +305,7 @@ public class PlayerController : MonoBehaviour
             AkSoundEngine.SetState("PlayerMovement", "Moving");
             if (stepTimer <= 0)
             {
-                footstepsEvent.Post(gameObject);
+                AkSoundEngine.PostEvent("footsteps", gameObject);
                 stepTimer = stepInterval;
             }
         }

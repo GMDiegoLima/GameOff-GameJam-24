@@ -27,14 +27,14 @@ public class FinalBoss : MonoBehaviour
     [SerializeField] private float stopPeriodTimer;
     [SerializeField] private float attackCDTimer;
 
-    private float movePeriod = 2f;
-    private float stopPeriod = 2f;
-    private bool isVelocityUpdated;
-    private bool isMovePeriodUpdated;
-    private bool isStopPeriodUpdated;
-    private bool isAlive;
+    float movePeriod = 2f;
+    float stopPeriod = 2f;
+    bool isVelocityUpdated;
+    bool isMovePeriodUpdated;
+    bool isStopPeriodUpdated;
+    bool isAlive;
 
-    private void Awake()
+    void Awake()
     {
         anim = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
@@ -43,14 +43,14 @@ public class FinalBoss : MonoBehaviour
         isAlive = true;
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
         Vector2 delta = velocity * Time.deltaTime;
         Vector2 newPosition = body.position + delta;
         body.MovePosition(newPosition);
     }
 
-    private void Update()
+    void Update()
     {
         if (BossRoomController.Instance.isGameStart && isAlive)
         {
@@ -115,7 +115,7 @@ public class FinalBoss : MonoBehaviour
         anim.runtimeAnimatorController = animControllers[idx];
 	}
 
-    private void SetRandomVelocity()
+    void SetRandomVelocity()
     {
         float x = Random.Range(minVelocity, maxVelocity);
         float y = Random.Range(minVelocity, maxVelocity);
@@ -123,17 +123,17 @@ public class FinalBoss : MonoBehaviour
         velocity = new Vector2(x, y);
     }
 
-    private void SetRandomMovePeriod()
+    void SetRandomMovePeriod()
     {
         movePeriod = Random.Range(minMovePeriod, maxMovePeriod);
     }
 
-    private void SetRandomStopPeriod()
+    void SetRandomStopPeriod()
     {
         stopPeriod = Random.Range(minStopPeriod, maxStopPeriod);
     }
 
-    private void HandleAnim()
+    void HandleAnim()
     { 
         Vector2 dir = velocity.normalized;
         anim.SetFloat("Horizontal", dir.x);
@@ -145,7 +145,7 @@ public class FinalBoss : MonoBehaviour
         }
 	}
 
-    private void CheckHealth()
+    void CheckHealth()
     {
         if (health.isDead)
         {

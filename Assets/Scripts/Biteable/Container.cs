@@ -8,6 +8,7 @@ public class Container : MonoBehaviour, IBiteable
     {
         Debug.Log("Conainer get bite");
         GameObject spawnedItem = Instantiate(itemInside, transform.position, Quaternion.identity);
+        AkSoundEngine.PostEvent("destroy", gameObject);
         switch (itemInside.name)
         {
             case "bone":

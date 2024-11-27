@@ -39,6 +39,7 @@ public class Spike : MonoBehaviour
     {
         collider.enabled = true;
         animator.SetBool("Enabled", true);
+        AkSoundEngine.PostEvent("spike_trap", gameObject);
     }
 
     void DeactivateAction()

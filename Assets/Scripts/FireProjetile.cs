@@ -9,6 +9,7 @@ public class FireProjetile : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         animator.Play("Cast");
+        AkSoundEngine.PostEvent("projectile_fire", gameObject);
     }
 
     void OnTriggerEnter2D(Collider2D other)
