@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 5f4f5e7b82a37845af9cc9a493363df5
     GuidInternal: 
-    m_lastTime: -8584688870468858271
+    m_lastTime: -8584688704378014915
     List:
     - name: AmbianceMaster
       guid: 82382bb52095ac47bea0336993ea3ab1
@@ -309,7 +309,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 147542aa1fa9a344bad32b33b1da2794
     GuidInternal: 
-    m_lastTime: -8584688729307480838
+    m_lastTime: -8584688704377649644
     List:
     - name: Main
       guid: 516653935762234ab927cec7323273dd
@@ -656,8 +656,28 @@ MonoBehaviour:
     ParentPath: Events\Music
     guid: a50adb88e400464ab0c341653fd3f383
     GuidInternal: 
-    m_lastTime: -8584688729307599957
+    m_lastTime: -8584688704383427007
     List:
+    - name: checkpoint
+      guid: c4ff0bd4c262554dbd5056d102502ad7
+      id: 612075679
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music
+        ObjectType: 12
+        guid: a50adb88e400464ab0c341653fd3f383
+      - ElementName: Stingers
+        ObjectType: 4
+        guid: e7e0c7e2718b654caa7fae8e50e44211
+      - ElementName: checkpoint
+        ObjectType: 3
+        guid: c4ff0bd4c262554dbd5056d102502ad7
+      Path: Events\Music\Stingers\checkpoint
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: path_correct_01
       guid: 7591deda15df98408c925ca87f590424
       id: 4076456351
@@ -738,9 +758,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: puzzle_completed
-      guid: f812cbef650fbf45a8c0e1fa5af35d01
-      id: 14018523
+    - name: path_wrong
+      guid: 8e28b7785f9f2f48ba885413badef404
+      id: 3587245554
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -751,10 +771,30 @@ MonoBehaviour:
       - ElementName: Stingers
         ObjectType: 4
         guid: e7e0c7e2718b654caa7fae8e50e44211
-      - ElementName: puzzle_completed
+      - ElementName: path_wrong
+        ObjectType: 3
+        guid: 8e28b7785f9f2f48ba885413badef404
+      Path: Events\Music\Stingers\path_wrong
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: puzzle_success
+      guid: f812cbef650fbf45a8c0e1fa5af35d01
+      id: 2687737065
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music
+        ObjectType: 12
+        guid: a50adb88e400464ab0c341653fd3f383
+      - ElementName: Stingers
+        ObjectType: 4
+        guid: e7e0c7e2718b654caa7fae8e50e44211
+      - ElementName: puzzle_success
         ObjectType: 3
         guid: f812cbef650fbf45a8c0e1fa5af35d01
-      Path: Events\Music\Stingers\puzzle_completed
+      Path: Events\Music\Stingers\puzzle_success
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -789,7 +829,7 @@ MonoBehaviour:
     ParentPath: Events\Sfx\Objects
     guid: 95d724611b757e49a6d0bffaed670749
     GuidInternal: 
-    m_lastTime: -8584688725281693226
+    m_lastTime: -8584688704383168696
     List:
     - name: chest_opens
       guid: be27c5c11ebec548ab698a042ba8b1e0
@@ -1231,7 +1271,7 @@ MonoBehaviour:
     ParentPath: Events\TestingEvents
     guid: abf3418ae276074fb0244b23c326e276
     GuidInternal: 
-    m_lastTime: -8584688832866485439
+    m_lastTime: -8584688704382748849
     List:
     - name: TestingEvent
       guid: d0a20c4f0d69fb4382c1e87487d2e1cd
@@ -1377,8 +1417,22 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 0533b2126855c3498ab62c34ebefeb20
     GuidInternal: 
-    m_lastTime: -8584688861721875233
+    m_lastTime: -8584688704381458438
     List:
+    - name: flames_volume
+      guid: d4ab29fc408fe342a2ec9e2d3fcee3b8
+      id: 3035815762
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 0533b2126855c3498ab62c34ebefeb20
+      - ElementName: flames_volume
+        ObjectType: 13
+        guid: d4ab29fc408fe342a2ec9e2d3fcee3b8
+      Path: Game Parameters\Default Work Unit\flames_volume
     - name: master
       guid: 5ce02454ecf19a41a405e6bf68b07111
       id: 4056684167
@@ -1695,7 +1749,7 @@ MonoBehaviour:
     ParentPath: States\Music
     guid: 3fb5948c18f45e4ca1df0ce27cec860d
     GuidInternal: 
-    m_lastTime: -8584688861688689152
+    m_lastTime: -8584688704377208882
     List:
     - name: MusicState
       guid: a170bf9a4b2765459838e84465b41a9e
@@ -1760,6 +1814,22 @@ MonoBehaviour:
         - ElementName: None
           ObjectType: 8
           guid: 88c82bb4f5c4504789b00886bdfca55c
+      - name: Tutorial
+        guid: d84cdc9d860e7049a1a490649b7f50a6
+        id: 3762955427
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music
+          ObjectType: 12
+          guid: 3fb5948c18f45e4ca1df0ce27cec860d
+        - ElementName: MusicState
+          ObjectType: 9
+          guid: a170bf9a4b2765459838e84465b41a9e
+        - ElementName: Tutorial
+          ObjectType: 8
+          guid: d84cdc9d860e7049a1a490649b7f50a6
       - name: Village
         guid: e7709db18bfbb24c9ef813305456a991
         id: 3945572659
@@ -1791,7 +1861,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 5cc297846a0efe469836302b9e9b2cb5
     GuidInternal: 
-    m_lastTime: -8584688725281607201
+    m_lastTime: -8584688704377117900
     List:
     - name: footsteps_status
       guid: cb5c1b34571f874dbc394034b111f4d3
@@ -2029,7 +2099,7 @@ MonoBehaviour:
     ParentPath: Triggers\Music
     guid: c6e8ba59d71c5049a4dd91206c28da7e
     GuidInternal: 
-    m_lastTime: -8584688858725028598
+    m_lastTime: -8584688704377038800
     List:
     - name: checkpoint
       guid: 4b4d66756fe1e7469774bc40987622fa
