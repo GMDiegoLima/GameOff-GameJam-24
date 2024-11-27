@@ -160,7 +160,6 @@ public class PlayerController : MonoBehaviour
                 AkSoundEngine.SetState("PlayerStatus", "Alive");
                 Vector3Int gridPosition = ground.WorldToCell(transform.position);
                 TileBase currentTile = ground.GetTile(gridPosition);
-                Debug.Log(currentTile.name);
                 if (currentTile.name.ToLower().Contains("cobblestone"))
                 {
                     AkSoundEngine.SetSwitch("GroundTextures", "dirt", gameObject);
