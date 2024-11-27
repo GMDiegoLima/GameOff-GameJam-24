@@ -19,5 +19,5 @@ MonoBehaviour:
   damage: 1
   attackRange: 2
   health: 1
-  isControlledByAI: 1
+  isControlledByAI: 0
   controller: {fileID: 0}

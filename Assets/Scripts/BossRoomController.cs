@@ -106,6 +106,7 @@ public class BossRoomController : MonoBehaviour
         portal.GenerateRandomEnemy();
         yield return new WaitForSeconds(1f);
         portal.GenerateRandomEnemy();
+        yield return new WaitForSeconds(2f);
         boss.ChangeOutfit();
         yield return new WaitForSeconds(3f);
         gameStartTrigger = true;
@@ -119,12 +120,8 @@ public class BossRoomController : MonoBehaviour
         isGameStart = true;
         playerCam.SetActive(true);
         yield return new WaitForSeconds(2f);
-        playerController.isControllable = true;
-    }
-
-    public void CloseDialog()
-    { 
         dialogue.SetActive(false);
         bossHealthUI.SetActive(true);
-	}
+        playerController.isControllable = true;
+    }
 }
