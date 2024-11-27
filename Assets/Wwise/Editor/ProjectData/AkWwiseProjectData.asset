@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: f059ccdab8a9cb488fc779e69f905b3e
     GuidInternal: 
-    m_lastTime: -8584711299244560549
+    m_lastTime: -8584711280198698041
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 5f4f5e7b82a37845af9cc9a493363df5
     GuidInternal: 
-    m_lastTime: -8584690655805414321
+    m_lastTime: -8584688870468858271
     List:
     - name: AmbianceMaster
       guid: 82382bb52095ac47bea0336993ea3ab1
@@ -154,9 +154,9 @@ MonoBehaviour:
         ObjectType: 2
         guid: 4ad81061ccf04047b891d5e868681fc1
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MusicMaster
-    - name: NpcMaster
+    - name: NpcCreaturesMaster
       guid: e81578f8e22dc8429916e488ec4512cf
-      id: 2033911932
+      id: 3097786830
       PathAndIcons:
       - ElementName: Master-Mixer Hierarchy
         ObjectType: 5
@@ -173,10 +173,10 @@ MonoBehaviour:
       - ElementName: Characters
         ObjectType: 2
         guid: b80f7cc7378251458cdfe03d11b926f3
-      - ElementName: NpcMaster
+      - ElementName: NpcCreaturesMaster
         ObjectType: 2
         guid: e81578f8e22dc8429916e488ec4512cf
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\sfxMaster\Characters\NpcMaster
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\sfxMaster\Characters\NpcCreaturesMaster
     - name: ObjectsMaster
       guid: c90a888689a84e41baba0bce2dc658c8
       id: 3123271961
@@ -309,7 +309,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 147542aa1fa9a344bad32b33b1da2794
     GuidInternal: 
-    m_lastTime: -8584688861690784522
+    m_lastTime: -8584688729307480838
     List:
     - name: Main
       guid: 516653935762234ab927cec7323273dd
@@ -382,7 +382,7 @@ MonoBehaviour:
     ParentPath: Events\Sfx\Creatures_npcs
     guid: cd4c5501e793cf4a8b393f9662af8af0
     GuidInternal: 
-    m_lastTime: -8584688861722489960
+    m_lastTime: -8584688855360075124
     List:
     - name: bat
       guid: 0690ccd9d7b29743a4b3bc5a32e1e5dd
@@ -630,7 +630,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 46994d34afb99c44984a3a8203e4fc13
     GuidInternal: 
-    m_lastTime: -8584706101947744565
+    m_lastTime: -8584690351997752727
     List: []
   - PhysicalPath: Events\Environment.wwu
     PathAndIcons:
@@ -656,7 +656,7 @@ MonoBehaviour:
     ParentPath: Events\Music
     guid: a50adb88e400464ab0c341653fd3f383
     GuidInternal: 
-    m_lastTime: -8584688861722469723
+    m_lastTime: -8584688729307599957
     List:
     - name: path_correct_01
       guid: 7591deda15df98408c925ca87f590424
@@ -789,7 +789,7 @@ MonoBehaviour:
     ParentPath: Events\Sfx\Objects
     guid: 95d724611b757e49a6d0bffaed670749
     GuidInternal: 
-    m_lastTime: -8584688861722439977
+    m_lastTime: -8584688725281693226
     List:
     - name: chest_opens
       guid: be27c5c11ebec548ab698a042ba8b1e0
@@ -848,6 +848,26 @@ MonoBehaviour:
         ObjectType: 3
         guid: 4aefbc0578fead4da9fb2d37c59f0227
       Path: Events\Sfx\Objects\door_opens
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: door_opens_stop
+      guid: 30109cb451fedb44b4b13d510f8aeed5
+      id: 2824641886
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Sfx
+        ObjectType: 12
+        guid: a9a08c566b9bba4c93c7fb9940d85a50
+      - ElementName: Objects
+        ObjectType: 12
+        guid: 95d724611b757e49a6d0bffaed670749
+      - ElementName: door_opens_stop
+        ObjectType: 3
+        guid: 30109cb451fedb44b4b13d510f8aeed5
+      Path: Events\Sfx\Objects\door_opens_stop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -929,8 +949,8 @@ MonoBehaviour:
         guid: 1005fa0000952944abeb1465a568b46c
       Path: Events\Sfx\Objects\projectile_fire
       maxAttenuation: 0
-      maxDuration: 8.5
-      minDuration: 8.5
+      maxDuration: 1.9780362
+      minDuration: 1.9780362
     - name: projectile_skeleton
       guid: 62fb38a25b54a04e97bd76a7157f1965
       id: 3920484766
@@ -989,8 +1009,8 @@ MonoBehaviour:
         guid: 8db3c7d7b0523e4ea97ff8e50ce47a99
       Path: Events\Sfx\Objects\spike_trap
       maxAttenuation: 0
-      maxDuration: 0.9526875
-      minDuration: 0.9526875
+      maxDuration: 0.4526875
+      minDuration: 0.4526875
     - name: wire_turn
       guid: a50a66fefb1698449cd1a71cfd3865d5
       id: 2855283372
@@ -1025,7 +1045,7 @@ MonoBehaviour:
     ParentPath: Events\Sfx\Player
     guid: 91e911cd66578b43a479c4169178acad
     GuidInternal: 
-    m_lastTime: -8584688861721885089
+    m_lastTime: -8584688855360265849
     List:
     - name: destroy
       guid: bd18b7352f9f1149a762e45cf4f058f8
@@ -1211,7 +1231,7 @@ MonoBehaviour:
     ParentPath: Events\TestingEvents
     guid: abf3418ae276074fb0244b23c326e276
     GuidInternal: 
-    m_lastTime: -8584706101947353388
+    m_lastTime: -8584688832866485439
     List:
     - name: TestingEvent
       guid: d0a20c4f0d69fb4382c1e87487d2e1cd
@@ -1227,6 +1247,23 @@ MonoBehaviour:
         ObjectType: 3
         guid: d0a20c4f0d69fb4382c1e87487d2e1cd
       Path: Events\TestingEvents\TestingEvent
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: TestingStingers
+      guid: 253a2f635176f943be5cdd721b3c005e
+      id: 2550066322
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: TestingEvents
+        ObjectType: 12
+        guid: abf3418ae276074fb0244b23c326e276
+      - ElementName: TestingStingers
+        ObjectType: 3
+        guid: 253a2f635176f943be5cdd721b3c005e
+      Path: Events\TestingEvents\TestingStingers
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -1754,11 +1791,11 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 5cc297846a0efe469836302b9e9b2cb5
     GuidInternal: 
-    m_lastTime: -8584689745079545761
+    m_lastTime: -8584688725281607201
     List:
-    - name: GroundTextures
-      guid: b569fc3fed9d2243a28296f56107e31b
-      id: 478119480
+    - name: footsteps_status
+      guid: cb5c1b34571f874dbc394034b111f4d3
+      id: 2332653019
       PathAndIcons:
       - ElementName: Switches
         ObjectType: 5
@@ -1766,14 +1803,14 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 5cc297846a0efe469836302b9e9b2cb5
-      - ElementName: GroundTextures
+      - ElementName: footsteps_status
         ObjectType: 11
-        guid: b569fc3fed9d2243a28296f56107e31b
-      Path: Switches\Default Work Unit\GroundTextures
+        guid: cb5c1b34571f874dbc394034b111f4d3
+      Path: Switches\Default Work Unit\footsteps_status
       values:
-      - name: dirt
-        guid: 38af2412903a3f489cad880a912f7490
-        id: 2195636714
+      - name: flying
+        guid: a7da5783aab1244fb0bd94e0d9544faa
+        id: 3827174396
         PathAndIcons:
         - ElementName: Switches
           ObjectType: 5
@@ -1781,15 +1818,15 @@ MonoBehaviour:
         - ElementName: Default Work Unit
           ObjectType: 12
           guid: 5cc297846a0efe469836302b9e9b2cb5
-        - ElementName: GroundTextures
+        - ElementName: footsteps_status
           ObjectType: 11
-          guid: b569fc3fed9d2243a28296f56107e31b
-        - ElementName: dirt
+          guid: cb5c1b34571f874dbc394034b111f4d3
+        - ElementName: flying
           ObjectType: 10
-          guid: 38af2412903a3f489cad880a912f7490
-      - name: grass
-        guid: 77781d29d7e978458536336fbb798704
-        id: 4248645337
+          guid: a7da5783aab1244fb0bd94e0d9544faa
+      - name: walking
+        guid: eb151e615f3c3d4e9ee331bb260b7b86
+        id: 340271938
         PathAndIcons:
         - ElementName: Switches
           ObjectType: 5
@@ -1797,44 +1834,12 @@ MonoBehaviour:
         - ElementName: Default Work Unit
           ObjectType: 12
           guid: 5cc297846a0efe469836302b9e9b2cb5
-        - ElementName: GroundTextures
+        - ElementName: footsteps_status
           ObjectType: 11
-          guid: b569fc3fed9d2243a28296f56107e31b
-        - ElementName: grass
+          guid: cb5c1b34571f874dbc394034b111f4d3
+        - ElementName: walking
           ObjectType: 10
-          guid: 77781d29d7e978458536336fbb798704
-      - name: stone
-        guid: 8c5c85c2a3294344a070303bdd153154
-        id: 1216965916
-        PathAndIcons:
-        - ElementName: Switches
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 5cc297846a0efe469836302b9e9b2cb5
-        - ElementName: GroundTextures
-          ObjectType: 11
-          guid: b569fc3fed9d2243a28296f56107e31b
-        - ElementName: stone
-          ObjectType: 10
-          guid: 8c5c85c2a3294344a070303bdd153154
-      - name: tile
-        guid: 6509d8a84e19eb4bb2ebbd5f8e0931f2
-        id: 2637588553
-        PathAndIcons:
-        - ElementName: Switches
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 5cc297846a0efe469836302b9e9b2cb5
-        - ElementName: GroundTextures
-          ObjectType: 11
-          guid: b569fc3fed9d2243a28296f56107e31b
-        - ElementName: tile
-          ObjectType: 10
-          guid: 6509d8a84e19eb4bb2ebbd5f8e0931f2
+          guid: eb151e615f3c3d4e9ee331bb260b7b86
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
@@ -1888,6 +1893,104 @@ MonoBehaviour:
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
+    - name: Terrain
+      guid: 0520f366c9fb9548898597efa38e9044
+      id: 354267144
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5cc297846a0efe469836302b9e9b2cb5
+      - ElementName: Terrain
+        ObjectType: 11
+        guid: 0520f366c9fb9548898597efa38e9044
+      Path: Switches\Default Work Unit\Terrain
+      values:
+      - name: dirt
+        guid: fb5b0036b885db4daa8056f288257e57
+        id: 2195636714
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 5cc297846a0efe469836302b9e9b2cb5
+        - ElementName: Terrain
+          ObjectType: 11
+          guid: 0520f366c9fb9548898597efa38e9044
+        - ElementName: dirt
+          ObjectType: 10
+          guid: fb5b0036b885db4daa8056f288257e57
+      - name: dungeon
+        guid: 3c5533aa2c225d4baa8a7c9dcd747a85
+        id: 608898761
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 5cc297846a0efe469836302b9e9b2cb5
+        - ElementName: Terrain
+          ObjectType: 11
+          guid: 0520f366c9fb9548898597efa38e9044
+        - ElementName: dungeon
+          ObjectType: 10
+          guid: 3c5533aa2c225d4baa8a7c9dcd747a85
+      - name: flying
+        guid: 42cf7820885031469d06590ef8f549e7
+        id: 3827174396
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 5cc297846a0efe469836302b9e9b2cb5
+        - ElementName: Terrain
+          ObjectType: 11
+          guid: 0520f366c9fb9548898597efa38e9044
+        - ElementName: flying
+          ObjectType: 10
+          guid: 42cf7820885031469d06590ef8f549e7
+      - name: grass
+        guid: 8485030692bf7448a92205cdf9f0556d
+        id: 4248645337
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 5cc297846a0efe469836302b9e9b2cb5
+        - ElementName: Terrain
+          ObjectType: 11
+          guid: 0520f366c9fb9548898597efa38e9044
+        - ElementName: grass
+          ObjectType: 10
+          guid: 8485030692bf7448a92205cdf9f0556d
+      - name: stone
+        guid: 45083f8e3316f44e94a6826edccc0016
+        id: 1216965916
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 5cc297846a0efe469836302b9e9b2cb5
+        - ElementName: Terrain
+          ObjectType: 11
+          guid: 0520f366c9fb9548898597efa38e9044
+        - ElementName: stone
+          ObjectType: 10
+          guid: 45083f8e3316f44e94a6826edccc0016
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   - PhysicalPath: Switches\Music.wwu
     PathAndIcons:
     - ElementName: Switches
@@ -1913,7 +2016,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: e7f4d602c8fed14aa82827ae83c24654
     GuidInternal: 
-    m_lastTime: -8584711299244580735
+    m_lastTime: -8584693369636297366
     List: []
   - PhysicalPath: Triggers\Music.wwu
     PathAndIcons:
@@ -1926,7 +2029,7 @@ MonoBehaviour:
     ParentPath: Triggers\Music
     guid: c6e8ba59d71c5049a4dd91206c28da7e
     GuidInternal: 
-    m_lastTime: -8584688861688659031
+    m_lastTime: -8584688858725028598
     List:
     - name: checkpoint
       guid: 4b4d66756fe1e7469774bc40987622fa
@@ -1945,6 +2048,20 @@ MonoBehaviour:
         ObjectType: 14
         guid: 4b4d66756fe1e7469774bc40987622fa
       Path: Triggers\Music\Stingers\checkpoint
+    - name: MusicTriggers
+      guid: ef321b9310069c439cd47e0c9a8fa850
+      id: 2029750097
+      PathAndIcons:
+      - ElementName: Triggers
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music
+        ObjectType: 12
+        guid: c6e8ba59d71c5049a4dd91206c28da7e
+      - ElementName: MusicTriggers
+        ObjectType: 4
+        guid: ef321b9310069c439cd47e0c9a8fa850
+      Path: Triggers\Music\MusicTriggers
     - name: path_correct
       guid: 156d7d3bd275624db2af1594cb5a9528
       id: 4156519531
@@ -1996,6 +2113,23 @@ MonoBehaviour:
         ObjectType: 14
         guid: f5421aa72aa012499db12cc32e6e37f5
       Path: Triggers\Music\Stingers\puzzle_success
+    - name: resumeMusic
+      guid: 80d58e21ead35741b08189f980d59c3b
+      id: 2170724709
+      PathAndIcons:
+      - ElementName: Triggers
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music
+        ObjectType: 12
+        guid: c6e8ba59d71c5049a4dd91206c28da7e
+      - ElementName: MusicTriggers
+        ObjectType: 4
+        guid: ef321b9310069c439cd47e0c9a8fa850
+      - ElementName: resumeMusic
+        ObjectType: 14
+        guid: 80d58e21ead35741b08189f980d59c3b
+      Path: Triggers\Music\MusicTriggers\resumeMusic
     - name: Stingers
       guid: ae63703f34bf834a9577c45be0cbd32d
       id: 2940432316
@@ -2010,7 +2144,24 @@ MonoBehaviour:
         ObjectType: 4
         guid: ae63703f34bf834a9577c45be0cbd32d
       Path: Triggers\Music\Stingers
-  ExpandedFileSystemItemIds: 02000000030000000800000012000000130000001400000016000000170000002100000024000000260000002c0000002d0000002f00000031000000320000003300000036000000370000003800000039000000420000005500000056000000
+    - name: stopMusic
+      guid: 0e6ab5df11fdfb4980973d23390775f9
+      id: 1917263390
+      PathAndIcons:
+      - ElementName: Triggers
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music
+        ObjectType: 12
+        guid: c6e8ba59d71c5049a4dd91206c28da7e
+      - ElementName: MusicTriggers
+        ObjectType: 4
+        guid: ef321b9310069c439cd47e0c9a8fa850
+      - ElementName: stopMusic
+        ObjectType: 14
+        guid: 0e6ab5df11fdfb4980973d23390775f9
+      Path: Triggers\Music\MusicTriggers\stopMusic
+  ExpandedFileSystemItemIds: 020000000300000008000000120000001300000014000000160000001700000021000000240000002c0000002d0000002f000000310000003200000033000000360000003700000038000000390000004200000055000000560000005700000058000000
   ExpandedWaapiItemIds: 020000000300000008000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1

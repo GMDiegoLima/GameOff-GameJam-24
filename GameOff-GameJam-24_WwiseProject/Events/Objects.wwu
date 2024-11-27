@@ -104,13 +104,6 @@
 				</Event>
 				<Event Name="projectile_fire" ID="{00FA0510-9500-4429-ABEB-1465A568B46C}">
 					<ChildrenList>
-						<Action Name="" ID="{EBCA0223-655E-4578-8B2D-2DEE3925E29B}" ShortID="921566980">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="sfx_obj_trigger" ID="{2894295E-A738-4585-84D4-6A355418AAB5}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 						<Action Name="" ID="{A36D5080-3CCB-49A1-A28B-86217FDA6AF1}" ShortID="747986823">
 							<PropertyList>
 								<Property Name="Delay" Type="Real64" Value="0.5"/>
@@ -125,17 +118,7 @@
 				</Event>
 				<Event Name="spike_trap" ID="{D7C7B38D-52B0-4E3E-A97F-F8E50CE47A99}">
 					<ChildrenList>
-						<Action Name="" ID="{6F66CE9F-FD2D-4545-B6C0-9ACCB36BFAC5}" ShortID="1019237079">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="sfx_obj_trigger" ID="{1816545C-FD5A-410D-B02F-F4B40EED2E7D}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 						<Action Name="" ID="{1C751BAE-C9D5-4BA5-B0CB-342AC6C2B34D}" ShortID="560576733">
-							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="0.5"/>
-							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="sfx_obj_spike_trap" ID="{6EADD1D7-99C8-423F-BB0A-D1CBACF5FF6A}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
@@ -144,11 +127,25 @@
 						</Action>
 						<Action Name="" ID="{FDB10CD4-FE9A-4EBF-9CFB-9AA8959A9D6A}" ShortID="308427711">
 							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="0.6"/>
+								<Property Name="Delay" Type="Real64" Value="0.1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="sfx_obj_spike_trap" ID="{6EADD1D7-99C8-423F-BB0A-D1CBACF5FF6A}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="door_opens_stop" ID="{B49C1030-FE51-44DB-B4B1-3D510F8AEED5}">
+					<ChildrenList>
+						<Action Name="" ID="{D64ED885-D119-4DCA-B7A1-3F91AB870689}" ShortID="458590451">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_door_open" ID="{5E7C38BD-F1EC-4CFC-8C2B-90AEC99B4987}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

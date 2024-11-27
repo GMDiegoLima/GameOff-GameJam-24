@@ -12,6 +12,7 @@
 						<ObjectRef Name="EnvironmentMaster" ID="{62B62982-297F-4972-A18C-953007655576}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
 						<ObjectRef Name="ObjectsMaster" ID="{86880AC9-A889-414E-BABA-0BCE2DC658C8}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
 						<ObjectRef Name="AmbianceMaster" ID="{B52B3882-9520-47AC-BEA0-336993EA3AB1}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+						<ObjectRef Name="UiMaster" ID="{4B933C55-C410-437B-BCC9-A94593E5E356}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
 					</ObjectList>
 				</MixingSession>
 			</ChildrenList>

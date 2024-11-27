@@ -28,6 +28,7 @@
 					</PropertyList>
 				</GameParameter>
 				<GameParameter Name="path_pitch" ID="{8B878E2D-2B48-4760-A634-022676CF8BD6}"/>
+				<GameParameter Name="flames_volume" ID="{FC29ABD4-8F40-42E3-A2EC-9E2D3FCEE3B8}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

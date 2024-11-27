@@ -9,6 +9,7 @@
 						<State Name="Boss" ID="{DFCEDA1B-747B-4DF9-B420-E009B2585F1D}"/>
 						<State Name="Dungeon" ID="{E2F08518-7AE9-424A-AED6-175926138EC0}"/>
 						<State Name="Village" ID="{B19D70E7-FB8B-4CB2-9EF8-13305456A991}"/>
+						<State Name="Tutorial" ID="{9DDC4CD8-0E86-4970-A1A4-90649B7F50A6}"/>
 					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>

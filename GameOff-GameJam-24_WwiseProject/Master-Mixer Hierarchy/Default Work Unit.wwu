@@ -89,7 +89,7 @@
 							<ChildrenList>
 								<Bus Name="Characters" ID="{C77C0FB8-8237-4551-8CDF-E03D11B926F3}">
 									<ChildrenList>
-										<Bus Name="NpcMaster" ID="{F87815E8-2DE2-42C8-9916-E488EC4512CF}"/>
+										<Bus Name="NpcCreaturesMaster" ID="{F87815E8-2DE2-42C8-9916-E488EC4512CF}"/>
 										<Bus Name="PlayerMaster" ID="{D01A8093-2A83-4A28-B6F4-9ACBE895E3E2}"/>
 									</ChildrenList>
 								</Bus>

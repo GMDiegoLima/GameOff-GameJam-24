@@ -8,6 +8,7 @@ State	ID	Name	State Group			Notes
 	608898761	Dungeon	MusicState			
 	748895195	None	MusicState			
 	1560169506	Boss	MusicState			
+	3762955427	Tutorial	MusicState			
 	3945572659	Village	MusicState			
 	748895195	None	GameStatus			
 	984691642	InGame	GameStatus			
@@ -29,7 +30,7 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	1557941045	Characters			\Default Work Unit\Master Audio Bus\sfxMaster\Characters	
 	1681633080	sfxMaster			\Default Work Unit\Master Audio Bus\sfxMaster	
 	1992125169	UiMaster			\Default Work Unit\Master Audio Bus\sfxMaster\UiMaster	
-	2033911932	NpcMaster			\Default Work Unit\Master Audio Bus\sfxMaster\Characters\NpcMaster	
+	3097786830	NpcCreaturesMaster			\Default Work Unit\Master Audio Bus\sfxMaster\Characters\NpcCreaturesMaster	
 	3123271961	ObjectsMaster			\Default Work Unit\Master Audio Bus\sfxMaster\EnvironmentMaster\ObjectsMaster	
 	3199789248	MusicMaster			\Default Work Unit\Master Audio Bus\MusicMaster	
 	3538689948	PlayerMaster			\Default Work Unit\Master Audio Bus\sfxMaster\Characters\PlayerMaster	

@@ -8,7 +8,18 @@
 						<Action Name="" ID="{7F41C570-FD8A-4B68-8CD8-988CE5A19C8E}" ShortID="635271344">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="TestingSound" ID="{18E2A6DE-FE34-4C77-9033-2E44A99BF2FE}" WorkUnitID="{C2BC7785-C659-43AD-84B4-5AEF0E322394}"/>
+									<ObjectRef Name="Music_All" ID="{DECC1BD1-048B-41E1-9A82-15FADFE2AB08}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="TestingStingers" ID="{632F3A25-7651-43F9-BE5C-DD721B3C005E}">
+					<ChildrenList>
+						<Action Name="" ID="{63410EF4-3591-4548-9195-BB93A9E09434}" ShortID="541455654">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="StingerTesting" ID="{4FEA146A-F1AB-48BB-895E-F51F739687FD}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{4F2A611C-3D0E-F04A-AB04-6296F4E6FEDB}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{AA577CE2-36FD-0E23-80D8-1D43535D03FA}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -23,7 +23,7 @@
 				<Bus Id="1557941045" Name="Characters"/>
 				<Bus Id="1681633080" Name="sfxMaster"/>
 				<Bus Id="1992125169" Name="UiMaster"/>
-				<Bus Id="2033911932" Name="NpcMaster"/>
+				<Bus Id="3097786830" Name="NpcCreaturesMaster"/>
 				<Bus Id="3123271961" Name="ObjectsMaster"/>
 				<Bus Id="3199789248" Name="MusicMaster"/>
 				<Bus Id="3538689948" Name="PlayerMaster"/>
@@ -47,6 +47,7 @@
 				<GameParameter Id="215992295" Name="player_health"/>
 				<GameParameter Id="393239870" Name="sfx"/>
 				<GameParameter Id="1446300075" Name="path_pitch"/>
+				<GameParameter Id="3035815762" Name="flames_volume"/>
 				<GameParameter Id="3991942870" Name="music"/>
 				<GameParameter Id="4056684167" Name="master"/>
 			</GameParameters>
@@ -56,6 +57,7 @@
 						<State Id="608898761" Name="Dungeon"/>
 						<State Id="748895195" Name="None"/>
 						<State Id="1560169506" Name="Boss"/>
+						<State Id="3762955427" Name="Tutorial"/>
 						<State Id="3945572659" Name="Village"/>
 					</States>
 				</StateGroup>
@@ -82,11 +84,12 @@
 				</StateGroup>
 			</StateGroups>
 			<SwitchGroups>
-				<SwitchGroup Id="478119480" Name="GroundTextures">
+				<SwitchGroup Id="354267144" Name="Terrain">
 					<Switches>
+						<Switch Id="608898761" Name="dungeon"/>
 						<Switch Id="1216965916" Name="stone"/>
 						<Switch Id="2195636714" Name="dirt"/>
-						<Switch Id="2637588553" Name="tile"/>
+						<Switch Id="3827174396" Name="flying"/>
 						<Switch Id="4248645337" Name="grass"/>
 					</Switches>
 				</SwitchGroup>
@@ -96,26 +99,90 @@
 						<Switch Id="2649703675" Name="moving"/>
 					</Switches>
 				</SwitchGroup>
+				<SwitchGroup Id="2332653019" Name="footsteps_status">
+					<Switches>
+						<Switch Id="340271938" Name="walking"/>
+						<Switch Id="3827174396" Name="flying"/>
+					</Switches>
+				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1512859615" Type="User" Language="SFX" Hash="{D882BCD6-B7DE-EDF8-D9F6-E251B6696CC3}">
+		<SoundBank Id="1512859615" Type="User" Language="SFX" Hash="{2C265409-92C5-DCEB-73FE-E53C785D838F}">
 			<ShortName>Testing</ShortName>
 			<Path>Testing.bnk</Path>
 			<Media>
-				<File Id="812529937" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Words Like Weapons Guitar.wav</ShortName>
-					<CachePath>SFX/Words Like Weapons Guitar_8EC3C7C0.wem</CachePath>
+				<File Id="219868458" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>stg_puzzle_completed_G.wav</ShortName>
+					<CachePath>SFX/stg_puzzle_completed_G_8EC3C7C0.wem</CachePath>
+				</File>
+				<File Id="252760376" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>stg_path_wrong.wav</ShortName>
+					<CachePath>SFX/stg_path_wrong_8EC3C7C0.wem</CachePath>
+				</File>
+				<File Id="397626789" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>stg_checkpoint_G.wav</ShortName>
+					<CachePath>SFX/stg_checkpoint_G_8EC3C7C0.wem</CachePath>
+				</File>
+				<File Id="462531175" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>stinger_test.mid</ShortName>
+					<CachePath>SFX/stinger_test_47D6C938.wem</CachePath>
+				</File>
+				<File Id="811745906" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>stg_path_correct.wav</ShortName>
+					<CachePath>SFX/stg_path_correct_8EC3C7C0.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="642532550" Name="New_Pitch_Shifter" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
-				<Event Id="946158365" Name="TestingEvent" DurationType="Infinite">
+				<Event Id="946158365" Name="TestingEvent" DurationType="Infinite"/>
+				<Event Id="2550066322" Name="TestingStingers" DurationType="Infinite">
 					<MediaRefs>
-						<MediaRef Id="812529937"/>
+						<MediaRef Id="219868458"/>
+						<MediaRef Id="252760376"/>
+						<MediaRef Id="397626789"/>
+						<MediaRef Id="462531175"/>
+						<MediaRef Id="811745906"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="642532550"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="1446300075" Name="path_pitch"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="1021618141" Name="MusicState">
+					<States>
+						<State Id="608898761" Name="Dungeon"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="1560169506" Name="Boss"/>
+						<State Id="3762955427" Name="Tutorial"/>
+						<State Id="3945572659" Name="Village"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="1045871717" Name="GameStatus">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="984691642" Name="InGame"/>
+						<State Id="3374585465" Name="InMenu"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+			<Triggers>
+				<Trigger Id="612075679" Name="checkpoint"/>
+				<Trigger Id="2687737065" Name="puzzle_success"/>
+				<Trigger Id="3587245554" Name="path_wrong"/>
+				<Trigger Id="4156519531" Name="path_correct"/>
+			</Triggers>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{9407FE61-C1F9-A546-DCE4-91BE7F60B07C}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{717A7FD2-E396-6B83-7F3D-CDD04FB18B9F}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -161,7 +228,7 @@
 				</File>
 				<File Id="144289834" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_obj_flame_rumble.wav</ShortName>
-					<CachePath>SFX/sfx_obj_flame_rumble_F06BAF76.wem</CachePath>
+					<CachePath>SFX/sfx_obj_flame_rumble_57EF29B0.wem</CachePath>
 				</File>
 				<File Id="159766235" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_play_embody.wav</ShortName>
@@ -334,6 +401,7 @@
 						<MediaRef Id="325638342"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2824641886" Name="door_opens_stop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3989366099" Name="embody" DurationType="OneShot" DurationMin="3.9131875" DurationMax="3.9131875">
 					<MediaRefs>
 						<MediaRef Id="992276899"/>
@@ -352,15 +420,7 @@
 				<Event Id="2385628198" Name="footsteps" DurationType="OneShot" DurationMin="0.037780326" DurationMax="0.13360417">
 					<SwitchContainers>
 						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="478119480" Id="2195636714"/>
-							<MediaRefs>
-								<MediaRef Id="57660160"/>
-								<MediaRef Id="376194961"/>
-								<MediaRef Id="905515257"/>
-							</MediaRefs>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="478119480" Id="2637588553" Default="true"/>
+							<SwitchValue GroupType="Switch" GroupId="354267144" Id="608898761"/>
 							<MediaRefs>
 								<MediaRef Id="138217890"/>
 								<MediaRef Id="377805870"/>
@@ -368,7 +428,23 @@
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="478119480" Id="4248645337"/>
+							<SwitchValue GroupType="Switch" GroupId="354267144" Id="3827174396" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="424907451"/>
+								<MediaRef Id="932597001"/>
+								<MediaRef Id="996341417"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="354267144" Id="1216965916"/>
+							<MediaRefs>
+								<MediaRef Id="424907451"/>
+								<MediaRef Id="932597001"/>
+								<MediaRef Id="996341417"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="354267144" Id="4248645337"/>
 							<MediaRefs>
 								<MediaRef Id="57660160"/>
 								<MediaRef Id="376194961"/>
@@ -376,11 +452,11 @@
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="478119480" Id="1216965916"/>
+							<SwitchValue GroupType="Switch" GroupId="354267144" Id="2195636714"/>
 							<MediaRefs>
-								<MediaRef Id="424907451"/>
-								<MediaRef Id="932597001"/>
-								<MediaRef Id="996341417"/>
+								<MediaRef Id="57660160"/>
+								<MediaRef Id="376194961"/>
+								<MediaRef Id="905515257"/>
 							</MediaRefs>
 						</SwitchContainer>
 					</SwitchContainers>
@@ -447,10 +523,9 @@
 						<MediaRef Id="989730768"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3777725015" Name="projectile_fire" DurationType="OneShot" DurationMin="8.5" DurationMax="8.5">
+				<Event Id="3777725015" Name="projectile_fire" DurationType="OneShot" DurationMin="1.9780362" DurationMax="1.9780362">
 					<MediaRefs>
 						<MediaRef Id="144289834"/>
-						<MediaRef Id="325638342"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3920484766" Name="projectile_skeleton" DurationType="OneShot" DurationMin="1.6533333" DurationMax="1.6533333">
@@ -468,9 +543,8 @@
 						<MediaRef Id="982405650"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="17253085" Name="spike_trap" DurationType="OneShot" DurationMin="0.9526875" DurationMax="0.9526875">
+				<Event Id="17253085" Name="spike_trap" DurationType="OneShot" DurationMin="0.4526875" DurationMax="0.4526875">
 					<MediaRefs>
-						<MediaRef Id="325638342"/>
 						<MediaRef Id="893462657"/>
 					</MediaRefs>
 				</Event>
@@ -488,73 +562,30 @@
 				</Event>
 			</Events>
 			<SwitchGroups>
-				<SwitchGroup Id="478119480" Name="GroundTextures">
+				<SwitchGroup Id="354267144" Name="Terrain">
 					<Switches>
+						<Switch Id="608898761" Name="dungeon"/>
 						<Switch Id="1216965916" Name="stone"/>
 						<Switch Id="2195636714" Name="dirt"/>
-						<Switch Id="2637588553" Name="tile"/>
+						<Switch Id="3827174396" Name="flying"/>
 						<Switch Id="4248645337" Name="grass"/>
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3705726509" Type="User" Language="SFX" Hash="{0C01F156-884F-54E0-3A7A-08D2787C1A7D}">
+		<SoundBank Id="3705726509" Type="User" Language="SFX" Hash="{67C5050C-D012-A060-C8CF-0B80AF561B0F}">
 			<ShortName>Title</ShortName>
 			<Path>Title.bnk</Path>
-			<Media>
-				<File Id="7661146" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>ui_dialogue_var_02.wav</ShortName>
-					<CachePath>SFX/ui_dialogue_var_02_F06BAF76.wem</CachePath>
-				</File>
-				<File Id="54325868" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>ui_move_var_02.wav</ShortName>
-					<CachePath>SFX/ui_move_var_02_F06BAF76.wem</CachePath>
-				</File>
-				<File Id="225222591" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>ui_move_var_01.wav</ShortName>
-					<CachePath>SFX/ui_move_var_01_F06BAF76.wem</CachePath>
-				</File>
-				<File Id="232811396" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>ui_dialogue_var_01.wav</ShortName>
-					<CachePath>SFX/ui_dialogue_var_01_F06BAF76.wem</CachePath>
-				</File>
-				<File Id="865284003" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>ui_select.wav</ShortName>
-					<CachePath>SFX/ui_select_F06BAF76.wem</CachePath>
-				</File>
-			</Media>
-			<Events>
-				<Event Id="1316490268" Name="evil_dialogue" DurationType="OneShot" DurationMin="0.11425" DurationMax="0.11425">
-					<MediaRefs>
-						<MediaRef Id="7661146"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="2485905105" Name="menu_cursor_back" DurationType="OneShot" DurationMin="0.79733336" DurationMax="0.79733336">
-					<MediaRefs>
-						<MediaRef Id="225222591"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="1306883239" Name="menu_cursor_move" DurationType="OneShot" DurationMin="0.7389375" DurationMax="0.7389375">
-					<MediaRefs>
-						<MediaRef Id="54325868"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="3200708208" Name="menu_cursor_select" DurationType="OneShot" DurationMin="0.792" DurationMax="0.792">
-					<MediaRefs>
-						<MediaRef Id="865284003"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="365141489" Name="normal_dialogue" DurationType="OneShot" DurationMin="0.11385417" DurationMax="0.11385417">
-					<MediaRefs>
-						<MediaRef Id="232811396"/>
-					</MediaRefs>
-				</Event>
-			</Events>
 		</SoundBank>
-		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{0994E7D8-D263-1736-8951-90F2EDE3A1BB}">
+		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{A0C043F1-86AD-3B1A-287A-98AE61B77C17}">
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
 			<Events>
+				<Event Id="612075679" Name="checkpoint" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionTrigger>
+						<ActionTriggerEntry Id="612075679" Name="checkpoint"/>
+					</ActionTrigger>
+				</Event>
 				<Event Id="4076456351" Name="path_correct_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<ActionTrigger>
 						<ActionTriggerEntry Id="4156519531" Name="path_correct"/>
@@ -575,17 +606,24 @@
 						<ActionTriggerEntry Id="4156519531" Name="path_correct"/>
 					</ActionTrigger>
 				</Event>
-				<Event Id="14018523" Name="puzzle_completed" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+				<Event Id="3587245554" Name="path_wrong" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionTrigger>
+						<ActionTriggerEntry Id="3587245554" Name="path_wrong"/>
+					</ActionTrigger>
+				</Event>
+				<Event Id="2687737065" Name="puzzle_success" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<ActionTrigger>
 						<ActionTriggerEntry Id="2687737065" Name="puzzle_success"/>
 					</ActionTrigger>
 				</Event>
 			</Events>
 			<Triggers>
+				<Trigger Id="612075679" Name="checkpoint"/>
 				<Trigger Id="2687737065" Name="puzzle_success"/>
+				<Trigger Id="3587245554" Name="path_wrong"/>
 				<Trigger Id="4156519531" Name="path_correct"/>
 			</Triggers>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{B12A124A-174A-B991-2255-306F1BDA7C76}</FileHash>
+	<FileHash>{768BF4A8-36B8-12BE-F233-0CD7DCFF5337}</FileHash>
 </SoundBanksInfo>

@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae5cac42ce892a04bb0b4023476025f0, type: 3}
-  m_Name: 3FFC69B5-9DED-4322-A282-96F56107E31B
+  m_Script: {fileID: 11500000, guid: 4bb235164e44d134bbef3fe252e163cb, type: 3}
+  m_Name: 632F3A25-7651-43F9-BE5C-DD721B3C005E
   m_EditorClassIdentifier: 
-  objectName: GroundTextures
-  id: 478119480
-  guid: 3FFC69B5-9DED-4322-A282-96F56107E31B
+  objectName: TestingStingers
+  id: 2550066322
+  guid: 632F3A25-7651-43F9-BE5C-DD721B3C005E

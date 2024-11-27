@@ -11,6 +11,12 @@
 						<Trigger Name="puzzle_success" ID="{A71A42F5-A02A-4912-9DB1-2CC32E6E37F5}"/>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="MusicTriggers" ID="{931B32EF-0610-439C-9CD4-7E0C9A8FA850}" ShortID="620424738">
+					<ChildrenList>
+						<Trigger Name="stopMusic" ID="{DFB56A0E-FD11-49FB-8097-3D23390775F9}"/>
+						<Trigger Name="resumeMusic" ID="{218ED580-D3EA-4157-B081-89F980D59C3B}"/>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Triggers>

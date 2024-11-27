@@ -3,18 +3,25 @@
 	<Switches>
 		<WorkUnit Name="Default Work Unit" ID="{8497C25C-0E6A-46FE-9836-302B9E9B2CB5}" PersistMode="Standalone">
 			<ChildrenList>
-				<SwitchGroup Name="GroundTextures" ID="{3FFC69B5-9DED-4322-A282-96F56107E31B}">
-					<ChildrenList>
-						<Switch Name="grass" ID="{291D7877-E9D7-4578-8536-336FBB798704}"/>
-						<Switch Name="dirt" ID="{1224AF38-3A90-483F-9CAD-880A912F7490}"/>
-						<Switch Name="stone" ID="{C2855C8C-29A3-4443-A070-303BDD153154}"/>
-						<Switch Name="tile" ID="{A8D80965-194E-4BEB-B2EB-BD5F8E0931F2}"/>
-					</ChildrenList>
-				</SwitchGroup>
 				<SwitchGroup Name="Player_movement" ID="{82E73AEB-ECFB-43BF-B090-ABD91711D0F9}">
 					<ChildrenList>
 						<Switch Name="moving" ID="{13E928FF-C584-4C6B-B40A-A69FAA416F4B}"/>
 						<Switch Name="static" ID="{C2A68CFF-E448-4F06-86F5-D20591617293}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="Terrain" ID="{66F32005-FBC9-4895-8985-97EFA38E9044}">
+					<ChildrenList>
+						<Switch Name="stone" ID="{8E3F0845-1633-4EF4-94A6-826EDCCC0016}"/>
+						<Switch Name="dungeon" ID="{AA33553C-222C-4B5D-AA8A-7C9DCD747A85}"/>
+						<Switch Name="grass" ID="{06038584-BF92-4874-A922-05CDF9F0556D}"/>
+						<Switch Name="dirt" ID="{36005BFB-85B8-4DDB-AA80-56F288257E57}"/>
+						<Switch Name="flying" ID="{2078CF42-5088-4631-9D06-590EF8F549E7}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="footsteps_status" ID="{341B5CCB-1F57-4D87-BC39-4034B111F4D3}">
+					<ChildrenList>
+						<Switch Name="flying" ID="{8357DAA7-B1AA-4F24-B0BD-94E0D9544FAA}"/>
+						<Switch Name="walking" ID="{611E15EB-3C5F-4E3D-9EE3-31BB260B7B86}"/>
 					</ChildrenList>
 				</SwitchGroup>
 			</ChildrenList>

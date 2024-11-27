@@ -162,22 +162,22 @@ public class PlayerController : MonoBehaviour
                 TileBase currentTile = ground.GetTile(gridPosition);
                 if (currentTile.name.ToLower().Contains("cobblestone"))
                 {
-                    AkSoundEngine.SetSwitch("GroundTextures", "dirt", gameObject);
+                    AkSoundEngine.SetSwitch("Terrain", "stone", gameObject);
                     return;
                 }
                 switch (currentTile.name)
                 {
                     case "abyss_0":
-                        AkSoundEngine.SetSwitch("GroundTextures", "water", gameObject);
+                        AkSoundEngine.SetSwitch("Terrain", "flying", gameObject);
                         break;
                     case "GrassRuleTIle":
-                        AkSoundEngine.SetSwitch("GroundTextures", "grass", gameObject);
+                        AkSoundEngine.SetSwitch("Terrain", "grass", gameObject);
                         break;
                     case "CemeteryRuleTile":
-                        AkSoundEngine.SetSwitch("GroundTextures", "grass", gameObject);
+                        AkSoundEngine.SetSwitch("Terrain", "grass", gameObject);
                         break;
                     default:
-                        AkSoundEngine.SetSwitch("GroundTextures", "stone", gameObject);
+                        AkSoundEngine.SetSwitch("Terrain", "dungeon", gameObject);
                         break;
                 }
                 _animator.SetBool("Dead", false);

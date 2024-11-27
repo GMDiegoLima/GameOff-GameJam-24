@@ -21,9 +21,7 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true"/>
-					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="dirt" ID="{1224AF38-3A90-483F-9CAD-880A912F7490}"/>
-					</CurrentSwitchList>
+					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
 				<SoundcasterSession Name="rockPushTest" ID="{D6621547-662B-4646-8F91-9369D11A0CC4}">
 					<ModuleList>
@@ -32,11 +30,15 @@
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="puzzle_completed" ID="{EFCB12F8-0F65-45BF-A8C0-E1FA5AF35D01}" WorkUnitID="{88DB0AA5-00E4-4A46-B0C3-41653FD3F383}"/>
+							<ObjectRef Name="puzzle_success" ID="{EFCB12F8-0F65-45BF-A8C0-E1FA5AF35D01}" WorkUnitID="{88DB0AA5-00E4-4A46-B0C3-41653FD3F383}"/>
 							<Position X="1" Y="0"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="flames_volume" ID="{FC29ABD4-8F40-42E3-A2EC-9E2D3FCEE3B8}"/>
+							<Value>50</Value>
+						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="player_health" ID="{60122350-6D92-44B5-938F-57DF204EEEF3}"/>
 							<Value>0</Value>
@@ -53,8 +55,44 @@
 						<CurrentStateRef Name="Static" ID="{B5B0EECD-83F2-4CCC-BF5E-31C4644C7085}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="dirt" ID="{1224AF38-3A90-483F-9CAD-880A912F7490}"/>
 						<CurrentSwitchRef Name="moving" ID="{13E928FF-C584-4C6B-B40A-A69FAA416F4B}"/>
+						<CurrentSwitchRef Name="dirt" ID="{36005BFB-85B8-4DDB-AA80-56F288257E57}"/>
+						<CurrentSwitchRef Name="flying" ID="{8357DAA7-B1AA-4F24-B0BD-94E0D9544FAA}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+				<SoundcasterSession Name="StingerTesting" ID="{B3E6565F-401E-4A80-9135-008F901E8266}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="TestingStingers" ID="{632F3A25-7651-43F9-BE5C-DD721B3C005E}" WorkUnitID="{8A41F3AB-76E2-4F07-B024-4B23C326E276}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="puzzle_success" ID="{EFCB12F8-0F65-45BF-A8C0-E1FA5AF35D01}" WorkUnitID="{88DB0AA5-00E4-4A46-B0C3-41653FD3F383}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="path_correct_01" ID="{DADE9175-DF15-4098-8C92-5CA87F590424}" WorkUnitID="{88DB0AA5-00E4-4A46-B0C3-41653FD3F383}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="path_correct_02" ID="{B9F35E61-7106-4B3D-AA6B-38F1F280BB4D}" WorkUnitID="{88DB0AA5-00E4-4A46-B0C3-41653FD3F383}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="path_correct_03" ID="{290B9577-3ABB-4345-B538-2E82B0B3D50D}" WorkUnitID="{88DB0AA5-00E4-4A46-B0C3-41653FD3F383}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="path_correct_04" ID="{1F6C3656-3392-49ED-9080-CF06DA1E420D}" WorkUnitID="{88DB0AA5-00E4-4A46-B0C3-41653FD3F383}"/>
+							<Position X="4" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="moving" ID="{13E928FF-C584-4C6B-B40A-A69FAA416F4B}"/>
+						<CurrentSwitchRef Name="dirt" ID="{36005BFB-85B8-4DDB-AA80-56F288257E57}"/>
+						<CurrentSwitchRef Name="flying" ID="{8357DAA7-B1AA-4F24-B0BD-94E0D9544FAA}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>
