@@ -6,7 +6,7 @@ public class BossRoomController : MonoBehaviour
     public static BossRoomController Instance { get; private set; }
 
     [SerializeField] GameObject playerCam;
-    [SerializeField] GameObject BossCam;
+    [SerializeField] GameObject bossHealthUI;
     [SerializeField] ChaseMark playerChaseMark;
     [SerializeField] ChaseMark bossChaseMark;
     [SerializeField] PlayerController playerController;
@@ -37,6 +37,7 @@ public class BossRoomController : MonoBehaviour
     private void Start()
     {
         portal.gameObject.SetActive(false);
+        bossHealthUI.SetActive(false);
     }
 
     private void Update()
@@ -124,5 +125,6 @@ public class BossRoomController : MonoBehaviour
     public void CloseDialog()
     { 
         dialogue.SetActive(false);
+        bossHealthUI.SetActive(true);
 	}
 }
