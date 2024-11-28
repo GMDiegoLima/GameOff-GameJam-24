@@ -134,7 +134,7 @@
 								<Action Name="" ID="{220E9994-366E-44DB-87A6-76823A38BBD7}" ShortID="724752378">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="13"/>
-										<Property Name="Pitch" Type="int32" Value="-2580"/>
+										<Property Name="Pitch" Type="int32" Value="-2230"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">

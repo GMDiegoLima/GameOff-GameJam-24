@@ -5,6 +5,7 @@ public class DoorNoWired : MonoBehaviour
     public WireConnection connectedWire;
     Vector3 openPosition;
     bool open;
+    private bool soundPlayed;
 
     void Start()
     {

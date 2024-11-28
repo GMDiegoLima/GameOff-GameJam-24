@@ -28,7 +28,11 @@
 					</PropertyList>
 				</GameParameter>
 				<GameParameter Name="path_pitch" ID="{8B878E2D-2B48-4760-A634-022676CF8BD6}"/>
-				<GameParameter Name="flames_volume" ID="{FC29ABD4-8F40-42E3-A2EC-9E2D3FCEE3B8}"/>
+				<GameParameter Name="walking_flying" ID="{DF061EA7-1FB5-4297-A596-69CBA804BDDE}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

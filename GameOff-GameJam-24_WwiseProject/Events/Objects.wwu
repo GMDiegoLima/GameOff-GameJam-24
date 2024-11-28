@@ -30,7 +30,7 @@
 						<Action Name="" ID="{A108D801-F8FC-439C-9EDD-34F852657F37}" ShortID="855579076">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="sfx_obj_rock_pushing" ID="{72CD6533-A0EC-4FC2-A1A1-4FC4F1F40F65}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+									<ObjectRef Name="sfx_obj_rock_pushing" ID="{A48DC228-736E-4E6C-AC23-58B7AB5B941A}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -42,17 +42,6 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="sfx_obj_coffin" ID="{825C5AE2-6565-44E5-BECD-9110207AC615}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="door_opens" ID="{05BCEF4A-FE78-4DAD-A9FB-2D37C59F0227}">
-					<ChildrenList>
-						<Action Name="" ID="{1AFFB53A-B125-4E8D-884C-355C35EE3887}" ShortID="681088272">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="sfx_door_open" ID="{5E7C38BD-F1EC-4CFC-8C2B-90AEC99B4987}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -137,15 +126,26 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="door_opens_stop" ID="{B49C1030-FE51-44DB-B4B1-3D510F8AEED5}">
+				<Event Name="door_opens_stop" ID="{E6ED082C-EEF8-4CF1-BBB0-A45A95742D4D}">
 					<ChildrenList>
-						<Action Name="" ID="{D64ED885-D119-4DCA-B7A1-3F91AB870689}" ShortID="458590451">
+						<Action Name="" ID="{E15CF3D3-777D-438C-B80B-7F7B71B7C7C9}" ShortID="238831488">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="sfx_door_open" ID="{5E7C38BD-F1EC-4CFC-8C2B-90AEC99B4987}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+									<ObjectRef Name="sfx_obj_door" ID="{72CD6533-A0EC-4FC2-A1A1-4FC4F1F40F65}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="door_opens" ID="{C8387D7A-6B6F-4ADA-A4CD-3B80D3DAC471}">
+					<ChildrenList>
+						<Action Name="" ID="{2F541E17-AB78-47FE-92F2-AD4AE5EE497F}" ShortID="25258005">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_obj_door" ID="{72CD6533-A0EC-4FC2-A1A1-4FC4F1F40F65}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

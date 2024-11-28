@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{A8401033-A851-BE5F-D52A-5DFC0DC2B84A}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{9C32B161-7604-F559-F34B-49D355833D5B}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -47,7 +47,7 @@
 				<GameParameter Id="215992295" Name="player_health"/>
 				<GameParameter Id="393239870" Name="sfx"/>
 				<GameParameter Id="1446300075" Name="path_pitch"/>
-				<GameParameter Id="3035815762" Name="flames_volume"/>
+				<GameParameter Id="2945611440" Name="walking_flying"/>
 				<GameParameter Id="3991942870" Name="music"/>
 				<GameParameter Id="4056684167" Name="master"/>
 			</GameParameters>
@@ -107,7 +107,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1512859615" Type="User" Language="SFX" Hash="{2C265409-92C5-DCEB-73FE-E53C785D838F}">
+		<SoundBank Id="1512859615" Type="User" Language="SFX" Hash="{725247A5-6773-CF67-8B36-84A84DC5EEB4}">
 			<ShortName>Testing</ShortName>
 			<Path>Testing.bnk</Path>
 			<Media>
@@ -138,7 +138,19 @@
 				</ShareSets>
 			</Plugins>
 			<Events>
-				<Event Id="946158365" Name="TestingEvent" DurationType="Infinite"/>
+				<Event Id="946158365" Name="TestingEvent" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="219868458"/>
+						<MediaRef Id="252760376"/>
+						<MediaRef Id="397626789"/>
+						<MediaRef Id="811745906"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="642532550"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
 				<Event Id="2550066322" Name="TestingStingers" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="219868458"/>
@@ -182,7 +194,7 @@
 				<Trigger Id="4156519531" Name="path_correct"/>
 			</Triggers>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{717A7FD2-E396-6B83-7F3D-CDD04FB18B9F}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{1EF4613A-FE7E-AA78-85AF-CC514D000F21}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -197,6 +209,10 @@
 				<File Id="26040308" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_attack_bat_var_02.wav</ShortName>
 					<CachePath>SFX/sfx_attack_bat_var_02_F06BAF76.wem</CachePath>
+				</File>
+				<File Id="30262527" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_footsteps_stone_var_01.wav</ShortName>
+					<CachePath>SFX/sfx_footsteps_stone_var_01_1F5B47B4.wem</CachePath>
 				</File>
 				<File Id="54325868" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ui_move_var_02.wav</ShortName>
@@ -220,7 +236,7 @@
 				</File>
 				<File Id="103319374" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_creature_bat_movement.wav</ShortName>
-					<CachePath>SFX/sfx_creature_bat_movement_F06BAF76.wem</CachePath>
+					<CachePath>SFX/sfx_creature_bat_movement_5920CFC6.wem</CachePath>
 				</File>
 				<File Id="138217890" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_footsteps_parquet_var_02.wav</ShortName>
@@ -250,10 +266,6 @@
 					<ShortName>sfx_obj_plate_on.wav</ShortName>
 					<CachePath>SFX/sfx_obj_plate_on_F06BAF76.wem</CachePath>
 				</File>
-				<File Id="325638342" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>sfx_obj_trigger.wav</ShortName>
-					<CachePath>SFX/sfx_obj_trigger_F06BAF76.wem</CachePath>
-				</File>
 				<File Id="338213362" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_attack_whoosh_var_03.wav</ShortName>
 					<CachePath>SFX/sfx_attack_whoosh_var_03_F06BAF76.wem</CachePath>
@@ -272,7 +284,7 @@
 				</File>
 				<File Id="411483413" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_obj_coffin.wav</ShortName>
-					<CachePath>SFX/sfx_obj_coffin_F06BAF76.wem</CachePath>
+					<CachePath>SFX/sfx_obj_coffin_7544BAAF.wem</CachePath>
 				</File>
 				<File Id="424907451" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_footsteps_stone_var_02.wav</ShortName>
@@ -280,7 +292,7 @@
 				</File>
 				<File Id="477432091" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_obj_lever.wav</ShortName>
-					<CachePath>SFX/sfx_obj_lever_F06BAF76.wem</CachePath>
+					<CachePath>SFX/sfx_obj_lever_98F0AF65.wem</CachePath>
 				</File>
 				<File Id="493842783" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_footsteps_parquet_var_03.wav</ShortName>
@@ -293,6 +305,10 @@
 				<File Id="609355816" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_npc_projectile_skeleton.wav</ShortName>
 					<CachePath>SFX/sfx_npc_projectile_skeleton_F06BAF76.wem</CachePath>
+				</File>
+				<File Id="616145652" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_footsteps_stone_var_03.wav</ShortName>
+					<CachePath>SFX/sfx_footsteps_stone_var_03_F6D1FC02.wem</CachePath>
 				</File>
 				<File Id="672148358" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_creatures_alert.wav</ShortName>
@@ -322,13 +338,17 @@
 					<ShortName>sfx_obj_spike_trap.wav</ShortName>
 					<CachePath>SFX/sfx_obj_spike_trap_F06BAF76.wem</CachePath>
 				</File>
+				<File Id="899269629" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_footsteps_stone_var_02.wav</ShortName>
+					<CachePath>SFX/sfx_footsteps_stone_var_02_DB3A1DF3.wem</CachePath>
+				</File>
 				<File Id="905515257" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_footsteps_grass_var_02.wav</ShortName>
 					<CachePath>SFX/sfx_footsteps_grass_var_02_F06BAF76.wem</CachePath>
 				</File>
 				<File Id="932525853" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_item_pick.wav</ShortName>
-					<CachePath>SFX/sfx_item_pick_F06BAF76.wem</CachePath>
+					<CachePath>SFX/sfx_item_pick_CA3C7E4F.wem</CachePath>
 				</File>
 				<File Id="932597001" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_footsteps_stone_var_01.wav</ShortName>
@@ -340,7 +360,7 @@
 				</File>
 				<File Id="989730768" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_obj_projectile_arrow.wav</ShortName>
-					<CachePath>SFX/sfx_obj_projectile_arrow_F06BAF76.wem</CachePath>
+					<CachePath>SFX/sfx_obj_projectile_arrow_DA75AA80.wem</CachePath>
 				</File>
 				<File Id="990578849" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_attack_bat_var_03.wav</ShortName>
@@ -356,7 +376,7 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="3423338245" Name="bat_attack" DurationType="OneShot" DurationMin="1.040625" DurationMax="1.2953125">
+				<Event Id="3423338245" Name="bat_attack" DurationType="OneShot" DurationMin="1.040625" DurationMax="1.6123149">
 					<MediaRefs>
 						<MediaRef Id="26040308"/>
 						<MediaRef Id="63383016"/>
@@ -375,7 +395,7 @@
 						<MediaRef Id="96997681"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2274969374" Name="coffin" DurationType="OneShot" DurationMin="1.9962916" DurationMax="1.9962916">
+				<Event Id="2274969374" Name="coffin" DurationType="OneShot" DurationMin="1.1038926" DurationMax="1.1038926">
 					<MediaRefs>
 						<MediaRef Id="411483413"/>
 					</MediaRefs>
@@ -395,10 +415,9 @@
 						<MediaRef Id="159766235"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3875653779" Name="door_opens" DurationType="OneShot" DurationMin="0" DurationMax="0">
+				<Event Id="3875653779" Name="door_opens" MaxAttenuation="70" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="221138627"/>
-						<MediaRef Id="325638342"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2824641886" Name="door_opens_stop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
@@ -417,7 +436,7 @@
 						<MediaRef Id="7661146"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2385628198" Name="footsteps" DurationType="OneShot" DurationMin="0.037780326" DurationMax="0.13360417">
+				<Event Id="2385628198" Name="footsteps" DurationType="OneShot" DurationMin="0.023002679" DurationMax="0.15687676">
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="354267144" Id="608898761"/>
@@ -438,9 +457,9 @@
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="354267144" Id="1216965916"/>
 							<MediaRefs>
-								<MediaRef Id="424907451"/>
-								<MediaRef Id="932597001"/>
-								<MediaRef Id="996341417"/>
+								<MediaRef Id="30262527"/>
+								<MediaRef Id="616145652"/>
+								<MediaRef Id="899269629"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -487,7 +506,7 @@
 						<MediaRef Id="932525853"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2782712987" Name="lever" DurationType="OneShot" DurationMin="2.000625" DurationMax="2.000625">
+				<Event Id="2782712987" Name="lever" DurationType="OneShot" DurationMin="1.7085441" DurationMax="1.7085441">
 					<MediaRefs>
 						<MediaRef Id="477432091"/>
 					</MediaRefs>
@@ -543,7 +562,7 @@
 						<MediaRef Id="982405650"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="17253085" Name="spike_trap" DurationType="OneShot" DurationMin="0.4526875" DurationMax="0.4526875">
+				<Event Id="17253085" Name="spike_trap" MaxAttenuation="46" DurationType="OneShot" DurationMin="0.4526875" DurationMax="0.4526875">
 					<MediaRefs>
 						<MediaRef Id="893462657"/>
 					</MediaRefs>
@@ -625,5 +644,5 @@
 			</Triggers>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{A83B3104-997A-51F3-72F9-0F92EA986C62}</FileHash>
+	<FileHash>{41EB5140-3460-9443-BEA9-777BABD2E392}</FileHash>
 </SoundBanksInfo>

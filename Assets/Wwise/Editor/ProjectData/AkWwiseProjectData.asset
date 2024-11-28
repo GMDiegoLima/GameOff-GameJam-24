@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: f059ccdab8a9cb488fc779e69f905b3e
     GuidInternal: 
-    m_lastTime: -8584711299244560549
+    m_lastTime: -8584711280198698041
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 5f4f5e7b82a37845af9cc9a493363df5
     GuidInternal: 
-    m_lastTime: -8584688704378014915
+    m_lastTime: -8584688531149504561
     List:
     - name: AmbianceMaster
       guid: 82382bb52095ac47bea0336993ea3ab1
@@ -309,7 +309,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 147542aa1fa9a344bad32b33b1da2794
     GuidInternal: 
-    m_lastTime: -8584688704377649644
+    m_lastTime: -8584688712914545023
     List:
     - name: Main
       guid: 516653935762234ab927cec7323273dd
@@ -382,7 +382,7 @@ MonoBehaviour:
     ParentPath: Events\Sfx\Creatures_npcs
     guid: cd4c5501e793cf4a8b393f9662af8af0
     GuidInternal: 
-    m_lastTime: -8584688861722489960
+    m_lastTime: -8584688855360075124
     List:
     - name: bat
       guid: 0690ccd9d7b29743a4b3bc5a32e1e5dd
@@ -425,8 +425,8 @@ MonoBehaviour:
         guid: 1c775b559e15b647bb145d411bab00f3
       Path: Events\Sfx\Creatures_npcs\bat\bat_attack
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.2953125
+      minDuration: 1.040625
     - name: bat_movement
       guid: d6cb0b1fde709c43a0049d2c7fdd142e
       id: 2757895098
@@ -448,8 +448,8 @@ MonoBehaviour:
         guid: d6cb0b1fde709c43a0049d2c7fdd142e
       Path: Events\Sfx\Creatures_npcs\bat\bat_movement
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.2536875
+      minDuration: 1.2536875
     - name: enemy_alert
       guid: 263cd9cc2eaf2a4cb008b19274bef66f
       id: 493036092
@@ -468,8 +468,8 @@ MonoBehaviour:
         guid: 263cd9cc2eaf2a4cb008b19274bef66f
       Path: Events\Sfx\Creatures_npcs\enemy_alert
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.5535625
+      minDuration: 0.5535625
     - name: goblin
       guid: fe9f71827fef0b429f08cd7c341f6627
       id: 2995046728
@@ -511,8 +511,8 @@ MonoBehaviour:
         guid: c67fede6c5894d44bff48ac7d760ffa4
       Path: Events\Sfx\Creatures_npcs\goblin\goblin_attack
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.3526875
+      minDuration: 0.3526875
     - name: hurt_enemy
       guid: f6a458317214294e9d2d88b3404f58a2
       id: 2758806427
@@ -531,8 +531,8 @@ MonoBehaviour:
         guid: f6a458317214294e9d2d88b3404f58a2
       Path: Events\Sfx\Creatures_npcs\hurt_enemy
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.155
+      minDuration: 0.155
     - name: skeleton
       guid: ea0d303fabf58b4b9da636966ea6624c
       id: 3478279848
@@ -574,8 +574,8 @@ MonoBehaviour:
         guid: 34c3b1de06357b4c87d400bd4ff6d19c
       Path: Events\Sfx\Creatures_npcs\skeleton\skeleton_attack
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.24310416
+      minDuration: 0.24310416
     - name: wolf
       guid: 2dab92ddb927404f857929765794ad8e
       id: 2041272125
@@ -617,8 +617,8 @@ MonoBehaviour:
         guid: a1563f5c01b4ae40b90cae71cbd8e0c1
       Path: Events\Sfx\Creatures_npcs\wolf\wolf_attack
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.3526875
+      minDuration: 0.3526875
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Events
@@ -630,7 +630,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 46994d34afb99c44984a3a8203e4fc13
     GuidInternal: 
-    m_lastTime: -8584706101947744565
+    m_lastTime: -8584690351997752727
     List: []
   - PhysicalPath: Events\Environment.wwu
     PathAndIcons:
@@ -643,7 +643,7 @@ MonoBehaviour:
     ParentPath: Events\Environment
     guid: bd5c8ad0654b084cbe27a2ff65b9eac7
     GuidInternal: 
-    m_lastTime: -8584706101947634432
+    m_lastTime: -8584706680909271284
     List: []
   - PhysicalPath: Events\Music.wwu
     PathAndIcons:
@@ -656,7 +656,7 @@ MonoBehaviour:
     ParentPath: Events\Music
     guid: a50adb88e400464ab0c341653fd3f383
     GuidInternal: 
-    m_lastTime: -8584688704383427007
+    m_lastTime: -8584688574944279940
     List:
     - name: checkpoint
       guid: c4ff0bd4c262554dbd5056d102502ad7
@@ -676,8 +676,8 @@ MonoBehaviour:
         guid: c4ff0bd4c262554dbd5056d102502ad7
       Path: Events\Music\Stingers\checkpoint
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: path_correct_01
       guid: 7591deda15df98408c925ca87f590424
       id: 4076456351
@@ -696,8 +696,8 @@ MonoBehaviour:
         guid: 7591deda15df98408c925ca87f590424
       Path: Events\Music\Stingers\path_correct_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: path_correct_02
       guid: 615ef3b906713d4baa6b38f1f280bb4d
       id: 4076456348
@@ -716,8 +716,8 @@ MonoBehaviour:
         guid: 615ef3b906713d4baa6b38f1f280bb4d
       Path: Events\Music\Stingers\path_correct_02
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: path_correct_03
       guid: 77950b29bb3a4543b5382e82b0b3d50d
       id: 4076456349
@@ -736,8 +736,8 @@ MonoBehaviour:
         guid: 77950b29bb3a4543b5382e82b0b3d50d
       Path: Events\Music\Stingers\path_correct_03
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: path_correct_04
       guid: 56366c1f9233ed499080cf06da1e420d
       id: 4076456346
@@ -756,8 +756,8 @@ MonoBehaviour:
         guid: 56366c1f9233ed499080cf06da1e420d
       Path: Events\Music\Stingers\path_correct_04
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: path_wrong
       guid: 8e28b7785f9f2f48ba885413badef404
       id: 3587245554
@@ -776,8 +776,8 @@ MonoBehaviour:
         guid: 8e28b7785f9f2f48ba885413badef404
       Path: Events\Music\Stingers\path_wrong
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: puzzle_success
       guid: f812cbef650fbf45a8c0e1fa5af35d01
       id: 2687737065
@@ -796,8 +796,8 @@ MonoBehaviour:
         guid: f812cbef650fbf45a8c0e1fa5af35d01
       Path: Events\Music\Stingers\puzzle_success
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stingers
       guid: e7e0c7e2718b654caa7fae8e50e44211
       id: 2940432316
@@ -829,7 +829,7 @@ MonoBehaviour:
     ParentPath: Events\Sfx\Objects
     guid: 95d724611b757e49a6d0bffaed670749
     GuidInternal: 
-    m_lastTime: -8584688704383168696
+    m_lastTime: -8584688496303038084
     List:
     - name: chest_opens
       guid: be27c5c11ebec548ab698a042ba8b1e0
@@ -849,8 +849,8 @@ MonoBehaviour:
         guid: be27c5c11ebec548ab698a042ba8b1e0
       Path: Events\Sfx\Objects\chest_opens
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 3.6053333
+      minDuration: 3.6053333
     - name: coffin
       guid: af6ce51c1ef7ad43a644dccfac2ca173
       id: 2274969374
@@ -869,10 +869,10 @@ MonoBehaviour:
         guid: af6ce51c1ef7ad43a644dccfac2ca173
       Path: Events\Sfx\Objects\coffin
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.9962916
+      minDuration: 1.9962916
     - name: door_opens
-      guid: 4aefbc0578fead4da9fb2d37c59f0227
+      guid: 7a7d38c86f6bda4aa4cd3b80d3dac471
       id: 3875653779
       PathAndIcons:
       - ElementName: Events
@@ -886,13 +886,13 @@ MonoBehaviour:
         guid: 95d724611b757e49a6d0bffaed670749
       - ElementName: door_opens
         ObjectType: 3
-        guid: 4aefbc0578fead4da9fb2d37c59f0227
+        guid: 7a7d38c86f6bda4aa4cd3b80d3dac471
       Path: Events\Sfx\Objects\door_opens
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
     - name: door_opens_stop
-      guid: 30109cb451fedb44b4b13d510f8aeed5
+      guid: 2c08ede6f8eef14cbbb0a45a95742d4d
       id: 2824641886
       PathAndIcons:
       - ElementName: Events
@@ -906,11 +906,11 @@ MonoBehaviour:
         guid: 95d724611b757e49a6d0bffaed670749
       - ElementName: door_opens_stop
         ObjectType: 3
-        guid: 30109cb451fedb44b4b13d510f8aeed5
+        guid: 2c08ede6f8eef14cbbb0a45a95742d4d
       Path: Events\Sfx\Objects\door_opens_stop
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: lever
       guid: 5eca40fcb05b5d4f85a7e821bfe318b2
       id: 2782712987
@@ -929,8 +929,8 @@ MonoBehaviour:
         guid: 5eca40fcb05b5d4f85a7e821bfe318b2
       Path: Events\Sfx\Objects\lever
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 2.000625
+      minDuration: 2.000625
     - name: plate
       guid: 676453e608b1f842be633f089aa63950
       id: 282449107
@@ -949,8 +949,8 @@ MonoBehaviour:
         guid: 676453e608b1f842be633f089aa63950
       Path: Events\Sfx\Objects\plate
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.7966875
+      minDuration: 0.6513125
     - name: projectile_arrow
       guid: 1ff1d5f2a1d8e14baadc885f2815851e
       id: 3456241342
@@ -969,8 +969,8 @@ MonoBehaviour:
         guid: 1ff1d5f2a1d8e14baadc885f2815851e
       Path: Events\Sfx\Objects\projectile_arrow
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.5905833
+      minDuration: 0.5905833
     - name: projectile_fire
       guid: 1005fa0000952944abeb1465a568b46c
       id: 3777725015
@@ -989,8 +989,8 @@ MonoBehaviour:
         guid: 1005fa0000952944abeb1465a568b46c
       Path: Events\Sfx\Objects\projectile_fire
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.9780362
+      minDuration: 1.9780362
     - name: projectile_skeleton
       guid: 62fb38a25b54a04e97bd76a7157f1965
       id: 3920484766
@@ -1009,8 +1009,8 @@ MonoBehaviour:
         guid: 62fb38a25b54a04e97bd76a7157f1965
       Path: Events\Sfx\Objects\projectile_skeleton
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.6533333
+      minDuration: 1.6533333
     - name: rock_push
       guid: 97b43156e9e4b548ab5e7f17cfb8c54f
       id: 2827948781
@@ -1049,8 +1049,8 @@ MonoBehaviour:
         guid: 8db3c7d7b0523e4ea97ff8e50ce47a99
       Path: Events\Sfx\Objects\spike_trap
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.4526875
+      minDuration: 0.4526875
     - name: wire_turn
       guid: a50a66fefb1698449cd1a71cfd3865d5
       id: 2855283372
@@ -1069,8 +1069,8 @@ MonoBehaviour:
         guid: a50a66fefb1698449cd1a71cfd3865d5
       Path: Events\Sfx\Objects\wire_turn
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.32589585
+      minDuration: 0.32589585
   - PhysicalPath: Events\Player.wwu
     PathAndIcons:
     - ElementName: Events
@@ -1085,7 +1085,7 @@ MonoBehaviour:
     ParentPath: Events\Sfx\Player
     guid: 91e911cd66578b43a479c4169178acad
     GuidInternal: 
-    m_lastTime: -8584688861721885089
+    m_lastTime: -8584688855360265849
     List:
     - name: destroy
       guid: bd18b7352f9f1149a762e45cf4f058f8
@@ -1105,8 +1105,8 @@ MonoBehaviour:
         guid: bd18b7352f9f1149a762e45cf4f058f8
       Path: Events\Sfx\Player\destroy
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.43304166
+      minDuration: 0.43304166
     - name: dig
       guid: bdad8911e0e46840b9db12d531af1d17
       id: 445985471
@@ -1125,8 +1125,8 @@ MonoBehaviour:
         guid: bdad8911e0e46840b9db12d531af1d17
       Path: Events\Sfx\Player\dig
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.23660417
+      minDuration: 0.23660417
     - name: disembody
       guid: 891cb609834e93448338f7b198ece2b8
       id: 1029929321
@@ -1145,8 +1145,8 @@ MonoBehaviour:
         guid: 891cb609834e93448338f7b198ece2b8
       Path: Events\Sfx\Player\disembody
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 4.4832706
+      minDuration: 4.4832706
     - name: embody
       guid: 94fa496fb15daf468e27991fde2a4f51
       id: 3989366099
@@ -1165,8 +1165,8 @@ MonoBehaviour:
         guid: 94fa496fb15daf468e27991fde2a4f51
       Path: Events\Sfx\Player\embody
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 3.9131875
+      minDuration: 3.9131875
     - name: footsteps
       guid: d31eeb442c97244ca5212e103fe21f9a
       id: 2385628198
@@ -1185,8 +1185,8 @@ MonoBehaviour:
         guid: d31eeb442c97244ca5212e103fe21f9a
       Path: Events\Sfx\Player\footsteps
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.13360417
+      minDuration: 0.037780326
     - name: hurt
       guid: b77c17e7cbde5d4aa01fbac3b9357430
       id: 3193947170
@@ -1205,8 +1205,8 @@ MonoBehaviour:
         guid: b77c17e7cbde5d4aa01fbac3b9357430
       Path: Events\Sfx\Player\hurt
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.155
+      minDuration: 0.155
     - name: item_drop
       guid: 5ace7cd023b77b4eaf16bf9d07071b63
       id: 2177967876
@@ -1225,8 +1225,8 @@ MonoBehaviour:
         guid: 5ace7cd023b77b4eaf16bf9d07071b63
       Path: Events\Sfx\Player\item_drop
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.0758958
+      minDuration: 1.0758958
     - name: item_pick
       guid: eee1303175f6e54196ef23c1fc4d4546
       id: 4159556712
@@ -1245,8 +1245,8 @@ MonoBehaviour:
         guid: eee1303175f6e54196ef23c1fc4d4546
       Path: Events\Sfx\Player\item_pick
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.86160415
+      minDuration: 0.86160415
   - PhysicalPath: Events\Sfx.wwu
     PathAndIcons:
     - ElementName: Events
@@ -1258,7 +1258,7 @@ MonoBehaviour:
     ParentPath: Events\Sfx
     guid: a9a08c566b9bba4c93c7fb9940d85a50
     GuidInternal: 
-    m_lastTime: -8584706101947421378
+    m_lastTime: -8584706680909218807
     List: []
   - PhysicalPath: Events\TestingEvents.wwu
     PathAndIcons:
@@ -1271,7 +1271,7 @@ MonoBehaviour:
     ParentPath: Events\TestingEvents
     guid: abf3418ae276074fb0244b23c326e276
     GuidInternal: 
-    m_lastTime: -8584688704382748849
+    m_lastTime: -8584688832866485439
     List:
     - name: TestingEvent
       guid: d0a20c4f0d69fb4382c1e87487d2e1cd
@@ -1318,7 +1318,7 @@ MonoBehaviour:
     ParentPath: Events\UI
     guid: e17c3b6f572bab48a6af326f7e59cebc
     GuidInternal: 
-    m_lastTime: -8584702507101999158
+    m_lastTime: -8584702511696952052
     List:
     - name: evil_dialogue
       guid: cc32d3bb2ab4ae458915727ad712fc97
@@ -1335,8 +1335,8 @@ MonoBehaviour:
         guid: cc32d3bb2ab4ae458915727ad712fc97
       Path: Events\UI\evil_dialogue
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.11425
+      minDuration: 0.11425
     - name: menu_cursor_back
       guid: 3bcf4fbf83844945adfec09859851c3c
       id: 2485905105
@@ -1352,8 +1352,8 @@ MonoBehaviour:
         guid: 3bcf4fbf83844945adfec09859851c3c
       Path: Events\UI\menu_cursor_back
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.79733336
+      minDuration: 0.79733336
     - name: menu_cursor_move
       guid: 596ce4619790234ab2650000d087e02f
       id: 1306883239
@@ -1369,8 +1369,8 @@ MonoBehaviour:
         guid: 596ce4619790234ab2650000d087e02f
       Path: Events\UI\menu_cursor_move
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.7389375
+      minDuration: 0.7389375
     - name: menu_cursor_select
       guid: 12f90d306b8830409e13967bd9251991
       id: 3200708208
@@ -1386,8 +1386,8 @@ MonoBehaviour:
         guid: 12f90d306b8830409e13967bd9251991
       Path: Events\UI\menu_cursor_select
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.792
+      minDuration: 0.792
     - name: normal_dialogue
       guid: b5d85ed19014ac49b725db2c61b4040f
       id: 365141489
@@ -1403,8 +1403,8 @@ MonoBehaviour:
         guid: b5d85ed19014ac49b725db2c61b4040f
       Path: Events\UI\normal_dialogue
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.11385417
+      minDuration: 0.11385417
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -1417,22 +1417,8 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 0533b2126855c3498ab62c34ebefeb20
     GuidInternal: 
-    m_lastTime: -8584688704381458438
+    m_lastTime: -8584688531626269363
     List:
-    - name: flames_volume
-      guid: d4ab29fc408fe342a2ec9e2d3fcee3b8
-      id: 3035815762
-      PathAndIcons:
-      - ElementName: Game Parameters
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 0533b2126855c3498ab62c34ebefeb20
-      - ElementName: flames_volume
-        ObjectType: 13
-        guid: d4ab29fc408fe342a2ec9e2d3fcee3b8
-      Path: Game Parameters\Default Work Unit\flames_volume
     - name: master
       guid: 5ce02454ecf19a41a405e6bf68b07111
       id: 4056684167
@@ -1538,7 +1524,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: d06fee2ae060f44f867e61f7a80294fb
     GuidInternal: 
-    m_lastTime: -8584689745079555777
+    m_lastTime: -8584690295968072971
     List:
     - name: GameStatus
       guid: 472ddbf40fc83a4a999091bff40cd847
@@ -1749,7 +1735,7 @@ MonoBehaviour:
     ParentPath: States\Music
     guid: 3fb5948c18f45e4ca1df0ce27cec860d
     GuidInternal: 
-    m_lastTime: -8584688704377208882
+    m_lastTime: -8584688870468924785
     List:
     - name: MusicState
       guid: a170bf9a4b2765459838e84465b41a9e
@@ -1861,7 +1847,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 5cc297846a0efe469836302b9e9b2cb5
     GuidInternal: 
-    m_lastTime: -8584688704377117900
+    m_lastTime: -8584688725281607201
     List:
     - name: footsteps_status
       guid: cb5c1b34571f874dbc394034b111f4d3
@@ -2072,7 +2058,7 @@ MonoBehaviour:
     ParentPath: Switches\Music
     guid: cb8ad3eca0d62041ace5f2c68c5049e4
     GuidInternal: 
-    m_lastTime: -8584690655793904616
+    m_lastTime: -8584691219925892495
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -2086,7 +2072,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: e7f4d602c8fed14aa82827ae83c24654
     GuidInternal: 
-    m_lastTime: -8584711299244580735
+    m_lastTime: -8584693369636297366
     List: []
   - PhysicalPath: Triggers\Music.wwu
     PathAndIcons:
@@ -2099,7 +2085,7 @@ MonoBehaviour:
     ParentPath: Triggers\Music
     guid: c6e8ba59d71c5049a4dd91206c28da7e
     GuidInternal: 
-    m_lastTime: -8584688704377038800
+    m_lastTime: -8584688858725028598
     List:
     - name: checkpoint
       guid: 4b4d66756fe1e7469774bc40987622fa
@@ -2231,9 +2217,9 @@ MonoBehaviour:
         ObjectType: 14
         guid: 0e6ab5df11fdfb4980973d23390775f9
       Path: Triggers\Music\MusicTriggers\stopMusic
-  ExpandedFileSystemItemIds: 020000000300000008000000120000001300000014000000160000001700000021000000240000002c0000002d0000002f000000310000003200000033000000360000003700000038000000390000004200000055000000560000005700000058000000
-  ExpandedWaapiItemIds: 020000000300000008000000
+  ExpandedFileSystemItemIds: 01000000020000000300000008000000120000001300000014000000160000001700000021000000240000002c0000002d0000002f000000310000003200000033000000360000003700000038000000390000004200000055000000560000005700000058000000
+  ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
-  currentDataSource: 1
+  currentDataSource: 0
   CurrentPluginConfig: 

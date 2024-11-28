@@ -36,10 +36,6 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
-							<GameParameterRef Name="flames_volume" ID="{FC29ABD4-8F40-42E3-A2EC-9E2D3FCEE3B8}"/>
-							<Value>50</Value>
-						</RTPCValue>
-						<RTPCValue>
 							<GameParameterRef Name="player_health" ID="{60122350-6D92-44B5-938F-57DF204EEEF3}"/>
 							<Value>0</Value>
 						</RTPCValue>
@@ -52,7 +48,7 @@
 						<CurrentStateRef Name="None" ID="{B42BC888-C4F5-4750-89B0-0886BDFCA55C}"/>
 						<CurrentStateRef Name="Alive" ID="{B1696563-4FE0-470C-9098-472520DAD3C2}"/>
 						<CurrentStateRef Name="None" ID="{55A230F1-6FD1-4B4F-8DA6-74C26866603D}"/>
-						<CurrentStateRef Name="Static" ID="{B5B0EECD-83F2-4CCC-BF5E-31C4644C7085}"/>
+						<CurrentStateRef Name="Moving" ID="{5B201168-F909-488C-9870-06F8E6955EEA}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="moving" ID="{13E928FF-C584-4C6B-B40A-A69FAA416F4B}"/>
@@ -75,6 +71,10 @@
 							<Position X="1" Y="0"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="checkpoint" ID="{D40BFFC4-62C2-4D55-BD50-56D102502AD7}" WorkUnitID="{88DB0AA5-00E4-4A46-B0C3-41653FD3F383}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="path_correct_02" ID="{B9F35E61-7106-4B3D-AA6B-38F1F280BB4D}" WorkUnitID="{88DB0AA5-00E4-4A46-B0C3-41653FD3F383}"/>
 							<Position X="2" Y="0"/>
 						</Module>
@@ -87,8 +87,18 @@
 							<Position X="4" Y="0"/>
 						</Module>
 					</ModuleList>
-					<RTPCValueList ShowAll="true"/>
-					<CurrentStateList ShowAll="true"/>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="walking_flying" ID="{DF061EA7-1FB5-4297-A596-69CBA804BDDE}"/>
+							<Value>0</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="None" ID="{B42BC888-C4F5-4750-89B0-0886BDFCA55C}"/>
+						<CurrentStateRef Name="Alive" ID="{B1696563-4FE0-470C-9098-472520DAD3C2}"/>
+						<CurrentStateRef Name="None" ID="{55A230F1-6FD1-4B4F-8DA6-74C26866603D}"/>
+						<CurrentStateRef Name="Static" ID="{B5B0EECD-83F2-4CCC-BF5E-31C4644C7085}"/>
+					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="moving" ID="{13E928FF-C584-4C6B-B40A-A69FAA416F4B}"/>
 						<CurrentSwitchRef Name="dirt" ID="{36005BFB-85B8-4DDB-AA80-56F288257E57}"/>

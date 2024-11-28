@@ -152,12 +152,12 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
-        static const AkUniqueID FLAMES_VOLUME = 3035815762U;
         static const AkUniqueID MASTER = 4056684167U;
         static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID PATH_PITCH = 1446300075U;
         static const AkUniqueID PLAYER_HEALTH = 215992295U;
         static const AkUniqueID SFX = 393239870U;
+        static const AkUniqueID WALKING_FLYING = 2945611440U;
     } // namespace GAME_PARAMETERS
 
     namespace TRIGGERS

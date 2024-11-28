@@ -9,60 +9,6 @@
 			<ChildrenList>
 				<Folder Name="player" ID="{826AC19C-6AF5-405F-9361-CB53F0948979}" ShortID="484442988">
 					<ChildrenList>
-						<Sound Name="sfx_obj_rock_pushing" ID="{72CD6533-A0EC-4FC2-A1A1-4FC4F1F40F65}" ShortID="867480429">
-							<PropertyList>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>5</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="PlayerMaster" ID="{D01A8093-2A83-4A28-B6F4-9ACBE895E3E2}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="sfx_obj_rock_pushing" ID="{11FA54A4-B92C-4DDA-A812-CBA03EC69F57}">
-									<PropertyList>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>sfx_obj_rock_pushing.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="221138627"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<StateInfo>
-								<StateGroupList>
-									<StateGroupInfo>
-										<StateGroupRef Name="PlayerMovement" ID="{8EE9C8C3-1FC9-4C99-B041-6A494F87B178}"/>
-									</StateGroupInfo>
-								</StateGroupList>
-								<CustomStateList>
-									<CustomState>
-										<StateRef Name="Moving" ID="{5B201168-F909-488C-9870-06F8E6955EEA}"/>
-										<CustomState Name="" ID="{BE60F4FB-A9BA-4F27-B267-973F042C546F}" ShortID="170395458"/>
-									</CustomState>
-									<CustomState>
-										<StateRef Name="Static" ID="{B5B0EECD-83F2-4CCC-BF5E-31C4644C7085}"/>
-										<CustomState Name="" ID="{8CE371F8-0675-4829-BABF-786324F762AB}" ShortID="91304157">
-											<PropertyList>
-												<Property Name="Volume" Type="Real64" Value="-108"/>
-											</PropertyList>
-										</CustomState>
-									</CustomState>
-								</CustomStateList>
-							</StateInfo>
-							<ActiveSourceList>
-								<ActiveSource Name="sfx_obj_rock_pushing" ID="{11FA54A4-B92C-4DDA-A812-CBA03EC69F57}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 						<Sound Name="sfx_play_disembody" ID="{B4C62302-1ED6-4468-B892-6EC05B891E5B}" ShortID="652569100">
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -158,6 +104,21 @@
 							</ReferenceList>
 							<ChildrenList>
 								<RandomSequenceContainer Name="footsteps_grass" ID="{47100995-8D00-4174-96EA-9DA0B7EBDC2F}" ShortID="539928181">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{2B8BA909-9A44-40DE-AE69-A37268BC425E}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="278"/>
+															<Property Name="Min" Type="Real64" Value="-126"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
@@ -236,6 +197,21 @@
 									</ChildrenList>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="footsteps_parquet" ID="{0EB0F40E-B5A8-4016-A796-BFBD7C37D247}" ShortID="334450091">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{175133AA-6F69-43A9-87FE-E66E7168EE69}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="252"/>
+															<Property Name="Min" Type="Real64" Value="-278"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
@@ -314,6 +290,21 @@
 									</ChildrenList>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="footsteps_stone" ID="{CA4403CE-449D-4C94-9DE3-7DC7D3C8B757}" ShortID="643349166">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{EE54AD91-7E50-4A6C-8750-03A55D673629}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="404"/>
+															<Property Name="Min" Type="Real64" Value="-303"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
@@ -324,6 +315,13 @@
 									</ReferenceList>
 									<ChildrenList>
 										<Sound Name="sfx_footsteps_stone_var_03" ID="{71729B36-54D3-4D04-AF19-015CAEB36B20}" ShortID="639424539">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>480</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
@@ -334,10 +332,15 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="sfx_footsteps_stone_var_03" ID="{28B281C1-6454-4629-A777-0B051FF83536}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0270390019379845"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.0432130167958657"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>sfx_footsteps_stone_var_03.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="996341417"/>
+														<MediaID ID="616145652"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
@@ -356,10 +359,16 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="sfx_footsteps_stone_var_01" ID="{6F03974E-562D-4DC7-B8D7-46444DC1211A}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0153127691645133"/>
+														<Property Name="LoopEnd" Type="Real64" Value="0.0467039459517657"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.05160403208441"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>sfx_footsteps_stone_var_01.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="932597001"/>
+														<MediaID ID="30262527"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
@@ -378,10 +387,15 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="sfx_footsteps_stone_var_02" ID="{5EA97FF1-898F-4E26-A25C-284480DBD14D}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0257056686046512"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.0476264534883719"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>sfx_footsteps_stone_var_02.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="424907451"/>
+														<MediaID ID="899269629"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
@@ -397,6 +411,17 @@
 											<ValueList>
 												<Value>830</Value>
 											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{3E16C69E-CF5E-4639-853A-D616A7521598}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="859"/>
+															<Property Name="Min" Type="Real64" Value="-707"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
 										</Property>
 									</PropertyList>
 									<ReferenceList>
@@ -478,6 +503,17 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="footsteps_abyss" ID="{144966AE-DC8F-4067-8A4C-B38D64093007}" ShortID="15881462">
 									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{C060DF71-D570-42EB-BD6D-2B64C7DF68A5}">
+														<PropertyList>
+															<Property Name="Max" Type="Real64" Value="3890"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-96</Value>
@@ -618,7 +654,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-5</Value>
+										<Value>-6</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -644,6 +680,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="sfx_item_pick" ID="{38ED6F7C-1895-402E-890C-2B686F70A8E3}" ShortID="877114782">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
@@ -654,6 +697,11 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="sfx_item_pick" ID="{892AF313-D3D5-4FDD-A852-1DD34540A753}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0244900409130061"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>sfx_item_pick.wav</AudioFile>
 									<MediaIDList>
@@ -666,6 +714,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="sfx_item_drop" ID="{3D70F3D8-81BB-454A-9290-4AFB9FC7EEE6}" ShortID="524071556">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
@@ -709,6 +764,71 @@
 								<ActiveSource Name="sfx_dig" ID="{10033125-CF2D-40F6-9B79-9CE49116AE10}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="sfx_obj_rock_pushing" ID="{A48DC228-736E-4E6C-AC23-58B7AB5B941A}" ShortID="423588245">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="PlayerMaster" ID="{D01A8093-2A83-4A28-B6F4-9ACBE895E3E2}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_obj_rock_pushing" ID="{F1474C1A-1C87-48BD-9976-4193202CC2BA}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>sfx_obj_rock_pushing.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="221138627"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="PlayerMovement" ID="{8EE9C8C3-1FC9-4C99-B041-6A494F87B178}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Moving" ID="{5B201168-F909-488C-9870-06F8E6955EEA}"/>
+										<CustomState Name="" ID="{48C9453E-ACA8-49CF-AE89-B2A6DC16F35B}" ShortID="551997276"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Static" ID="{B5B0EECD-83F2-4CCC-BF5E-31C4644C7085}"/>
+										<CustomState Name="" ID="{22F7A15E-EB15-4C99-869A-4A6DCF64278A}" ShortID="808149668">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-108"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_obj_rock_pushing" ID="{F1474C1A-1C87-48BD-9976-4193202CC2BA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="creatures_npcs" ID="{4792096A-1C29-408A-A66B-BF8022EA8746}" ShortID="398023252">
@@ -736,6 +856,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="sfx_npc_projectile_skeleton" ID="{388075BE-8C88-46F1-A41B-FE835BB64618}" ShortID="469961043">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
@@ -768,6 +895,11 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="sfx_creature_bat_movement" ID="{06CDDBC6-DD68-4990-A45F-402ED2529843}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0178172642118863"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0161975129198966"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>sfx_creature_bat_movement.wav</AudioFile>
 									<MediaIDList>
@@ -780,6 +912,20 @@
 							</ActiveSourceList>
 						</Sound>
 						<RandomSequenceContainer Name="bat_attack" ID="{CE1C9A5F-2758-4A9E-A433-DA6CA382B7D1}" ShortID="604246318">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{14D96AAA-BB5B-4660-94D2-C3D7C2567871}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Min" Type="Real64" Value="-379"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
@@ -882,6 +1028,19 @@
 									</ActiveSourceList>
 								</Sound>
 								<RandomSequenceContainer Name="bat_whoosh" ID="{1B98CD31-317A-43E6-BD5C-127441F039FD}" ShortID="606807818">
+									<PropertyList>
+										<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
@@ -966,6 +1125,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="sfx_obj_coffin" ID="{825C5AE2-6565-44E5-BECD-9110207AC615}" ShortID="59777384">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-11</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
@@ -976,6 +1142,11 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="sfx_obj_coffin" ID="{9CFFD624-C2FC-4A95-90F3-694AFCE57D30}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.520996016365203"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.10389254952627"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>sfx_obj_coffin.wav</AudioFile>
 									<MediaIDList>
@@ -1038,6 +1209,18 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="sfx_obj_lever" ID="{BBF2E0A1-A4DA-4189-BBDB-9AC04AB254BA}" ShortID="490003124">
+							<PropertyList>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
@@ -1049,7 +1232,9 @@
 							<ChildrenList>
 								<AudioFileSource Name="sfx_obj_lever" ID="{E6129688-B964-4AEA-85B4-30AD62FCCF1E}">
 									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.460092054263566"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.70854408914729"/>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>sfx_obj_lever.wav</AudioFile>
@@ -1063,6 +1248,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="sfx_obj_projectile_arrow" ID="{C7FF9695-63B6-4AD3-A814-6F2AB66713C7}" ShortID="967809351">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
@@ -1073,6 +1265,11 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="sfx_obj_projectile_arrow" ID="{12A227F4-1CA3-495A-9940-AF1F7D54D7D2}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0366253229974161"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>sfx_obj_projectile_arrow.wav</AudioFile>
 									<MediaIDList>
@@ -1086,6 +1283,9 @@
 						</Sound>
 						<Sound Name="sfx_obj_spike_trap" ID="{6EADD1D7-99C8-423F-BB0A-D1CBACF5FF6A}" ShortID="150377596">
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="traps" ID="{CEAA53AA-4969-4B57-BC15-B42445CB9C37}" WorkUnitID="{0E4421BD-92FF-48EE-AA81-677D0239E88B}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
 								</Reference>
@@ -1110,7 +1310,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-6</Value>
+										<Value>-9</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1135,126 +1335,6 @@
 								<ActiveSource Name="sfx_obj_trigger" ID="{8C4D72C0-595A-4BE7-A501-05D3C1DEDB52}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<RandomSequenceContainer Name="sfx_door_open" ID="{5E7C38BD-F1EC-4CFC-8C2B-90AEC99B4987}" ShortID="274187438">
-							<PropertyList>
-								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="ObjectsMaster" ID="{86880AC9-A889-414E-BABA-0BCE2DC658C8}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<Sound Name="sfx_obj_rock_pushing" ID="{6FFE168E-FA00-4D37-B70E-7585DE1D6BA7}" ShortID="720490301">
-									<PropertyList>
-										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-										<Property Name="IsLoopingInfinite" Type="bool" Value="False"/>
-										<Property Name="Lowpass" Type="int16">
-											<ValueList>
-												<Value>44</Value>
-											</ValueList>
-										</Property>
-										<Property Name="Pitch" Type="int32">
-											<ValueList>
-												<Value>760</Value>
-											</ValueList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>7</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="sfx_obj_rock_pushing" ID="{FC5AC5B4-C762-4851-826F-9D4A1AC8656F}">
-											<PropertyList>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>sfx_obj_rock_pushing.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="221138627"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="RTPC">
-											<Reference>
-												<Local>
-													<RTPC Name="" ID="{CD1C20CB-4B49-4DA9-BAAB-1A9B9ACA02C1}" ShortID="460384470">
-														<PropertyList>
-															<Property Name="PropertyName" Type="string" Value="Lowpass"/>
-														</PropertyList>
-														<ReferenceList>
-															<Reference Name="ControlInput">
-																<ObjectRef Name="env_lp_door_open" ID="{EF8B4A0D-2DDE-427E-BF92-339F181D915C}" WorkUnitID="{E53740C4-A4FF-4EE0-BB94-F3EB420FA78C}"/>
-															</Reference>
-															<Reference Name="Curve">
-																<Custom>
-																	<Curve Name="" ID="{7EE9D02B-B2A5-44E2-A979-26D1D094708A}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="65537"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>0</XPos>
-																				<YPos>45</YPos>
-																				<Flags>21</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>1</XPos>
-																				<YPos>-2</YPos>
-																				<Flags>53</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</Custom>
-															</Reference>
-														</ReferenceList>
-													</RTPC>
-												</Local>
-											</Reference>
-										</ObjectList>
-									</ObjectLists>
-									<ActiveSourceList>
-										<ActiveSource Name="sfx_obj_rock_pushing" ID="{FC5AC5B4-C762-4851-826F-9D4A1AC8656F}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="sfx_obj_trigger" ID="{1816545C-FD5A-410D-B02F-F4B40EED2E7D}" ShortID="998062000">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="sfx_obj_trigger" ID="{288CC3CA-5F1C-4E81-B08A-E45FAD878B34}">
-											<Language>SFX</Language>
-											<AudioFile>sfx_obj_trigger.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="325638342"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="sfx_obj_trigger" ID="{288CC3CA-5F1C-4E81-B08A-E45FAD878B34}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-							</ChildrenList>
-						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="plate_on_off" ID="{B86C7ECB-FC4C-49E1-B5C6-01E69D141B33}" ShortID="603743518">
 							<PropertyList>
 								<Property Name="OutputBusVolume" Type="Real64">
@@ -1337,7 +1417,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-10</Value>
+										<Value>-11</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1396,6 +1476,53 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
+						<Sound Name="sfx_obj_door" ID="{72CD6533-A0EC-4FC2-A1A1-4FC4F1F40F65}" ShortID="867480429">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Door" ID="{D1DAFBDE-3984-4FC2-8B86-F6A999C08B7C}" WorkUnitID="{0E4421BD-92FF-48EE-AA81-677D0239E88B}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="PlayerMaster" ID="{D01A8093-2A83-4A28-B6F4-9ACBE895E3E2}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_obj_rock_pushing" ID="{11FA54A4-B92C-4DDA-A812-CBA03EC69F57}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>sfx_obj_rock_pushing.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="221138627"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_obj_rock_pushing" ID="{11FA54A4-B92C-4DDA-A812-CBA03EC69F57}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

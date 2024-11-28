@@ -31,6 +31,7 @@ public class PuzzleSequence : MonoBehaviour
         if (!IsCorrectSoFar())
         {
             ResetPuzzle();
+            AkSoundEngine.PostEvent("path_wrong", gameObject);
             return;
         }
 
@@ -38,7 +39,7 @@ public class PuzzleSequence : MonoBehaviour
         {
             puzzleSolved = true;
             Debug.Log("Puzzle Solved!");
-            AkSoundEngine.PostEvent("puzzle_completed", gameObject);
+            AkSoundEngine.PostEvent("puzzle_success", gameObject);
             onPuzzleSolved.Invoke();
         }
     }
@@ -100,6 +101,7 @@ public class PuzzleSequence : MonoBehaviour
             if (i < soundEvents.Count)
             {
                 AK.Wwise.Event soundEvent = soundEvents[i].soundEvent;
+                Debug.Log(soundEvent);
                 soundEvent.Post(gameObject);
                 yield return new WaitForSeconds(1f);
             }

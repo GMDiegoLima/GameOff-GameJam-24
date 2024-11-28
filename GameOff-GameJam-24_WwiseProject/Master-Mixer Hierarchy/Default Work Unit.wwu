@@ -96,7 +96,15 @@
 								<Bus Name="EnvironmentMaster" ID="{62B62982-297F-4972-A18C-953007655576}">
 									<ChildrenList>
 										<Bus Name="ObjectsMaster" ID="{86880AC9-A889-414E-BABA-0BCE2DC658C8}"/>
-										<Bus Name="AmbianceMaster" ID="{B52B3882-9520-47AC-BEA0-336993EA3AB1}"/>
+										<Bus Name="AmbianceMaster" ID="{B52B3882-9520-47AC-BEA0-336993EA3AB1}">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-10</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+										</Bus>
 									</ChildrenList>
 								</Bus>
 								<Bus Name="UiMaster" ID="{4B933C55-C410-437B-BCC9-A94593E5E356}"/>

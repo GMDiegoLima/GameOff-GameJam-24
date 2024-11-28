@@ -260,6 +260,13 @@
 							</ObjectLists>
 						</MusicSegment>
 						<MusicSegment Name="stg_path_wrong" ID="{D6F892D7-241D-4C37-87E7-3C7F3ED8064F}" ShortID="419176442">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
@@ -345,6 +352,11 @@
 						<MusicSegment Name="stg_puzzle_completed_G" ID="{7A6C7594-9F34-44AE-A00E-826E3552904B}" ShortID="828809937">
 							<PropertyList>
 								<Property Name="EndPosition" Type="Real64" Value="8559.28027681661"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -817,61 +829,6 @@
 									</ObjectLists>
 								</MusicSegment>
 							</ChildrenList>
-							<ObjectLists>
-								<ObjectList Name="Stingers">
-									<Reference>
-										<Local>
-											<MusicStinger Name="" ID="{F16BE662-3A30-4934-AF16-9BE05B49E549}">
-												<PropertyList>
-													<Property Name="PlaySegmentAt" Type="int16" Value="3"/>
-												</PropertyList>
-												<ReferenceList>
-													<Reference Name="Segment">
-														<ObjectRef Name="stg_checkpoint_G" ID="{39C03479-19C0-442A-86F2-8B7DABFB4032}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
-													</Reference>
-													<Reference Name="Trigger">
-														<ObjectRef Name="checkpoint" ID="{75664D4B-E16F-46E7-9774-BC40987622FA}" WorkUnitID="{59BAE8C6-1CD7-4950-A4DD-91206C28DA7E}"/>
-													</Reference>
-												</ReferenceList>
-											</MusicStinger>
-										</Local>
-									</Reference>
-									<Reference>
-										<Local>
-											<MusicStinger Name="" ID="{4434A923-42DC-4E9C-BA59-D670133EC6AA}">
-												<PropertyList>
-													<Property Name="PlaySegmentAt" Type="int16" Value="3"/>
-												</PropertyList>
-												<ReferenceList>
-													<Reference Name="Segment">
-														<ObjectRef Name="stg_path_correct" ID="{62F8B0DB-AD45-4276-ABA6-C057770244D6}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
-													</Reference>
-													<Reference Name="Trigger">
-														<ObjectRef Name="path_correct" ID="{3B7D6D15-75D2-4D62-B2AF-1594CB5A9528}" WorkUnitID="{59BAE8C6-1CD7-4950-A4DD-91206C28DA7E}"/>
-													</Reference>
-												</ReferenceList>
-											</MusicStinger>
-										</Local>
-									</Reference>
-									<Reference>
-										<Local>
-											<MusicStinger Name="" ID="{A442C054-ABDF-45D6-9C69-FCEBD4121628}">
-												<PropertyList>
-													<Property Name="PlaySegmentAt" Type="int16" Value="3"/>
-												</PropertyList>
-												<ReferenceList>
-													<Reference Name="Segment">
-														<ObjectRef Name="stg_path_wrong" ID="{D6F892D7-241D-4C37-87E7-3C7F3ED8064F}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
-													</Reference>
-													<Reference Name="Trigger">
-														<ObjectRef Name="path_wrong" ID="{5AC29C57-1521-4811-9E04-6A6C157A3DB2}" WorkUnitID="{59BAE8C6-1CD7-4950-A4DD-91206C28DA7E}"/>
-													</Reference>
-												</ReferenceList>
-											</MusicStinger>
-										</Local>
-									</Reference>
-								</ObjectList>
-							</ObjectLists>
 						</MusicPlaylistContainer>
 						<MusicPlaylistContainer Name="Tutorial" ID="{FE0A856D-6A17-4CF2-91ED-A865C9441524}" ShortID="40637255">
 							<ReferenceList>
@@ -1125,78 +1082,6 @@
 									</ObjectLists>
 								</MusicSegment>
 							</ChildrenList>
-							<ObjectLists>
-								<ObjectList Name="Stingers">
-									<Reference>
-										<Local>
-											<MusicStinger Name="" ID="{8F50E231-F4B3-485B-A24C-F3CFF3CDE8DF}">
-												<PropertyList>
-													<Property Name="PlaySegmentAt" Type="int16" Value="3"/>
-												</PropertyList>
-												<ReferenceList>
-													<Reference Name="Segment">
-														<ObjectRef Name="stg_path_correct" ID="{62F8B0DB-AD45-4276-ABA6-C057770244D6}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
-													</Reference>
-													<Reference Name="Trigger">
-														<ObjectRef Name="path_correct" ID="{3B7D6D15-75D2-4D62-B2AF-1594CB5A9528}" WorkUnitID="{59BAE8C6-1CD7-4950-A4DD-91206C28DA7E}"/>
-													</Reference>
-												</ReferenceList>
-											</MusicStinger>
-										</Local>
-									</Reference>
-									<Reference>
-										<Local>
-											<MusicStinger Name="" ID="{66FABF75-CB7C-4566-8B4E-29BE5CE737B4}">
-												<PropertyList>
-													<Property Name="PlaySegmentAt" Type="int16" Value="3"/>
-												</PropertyList>
-												<ReferenceList>
-													<Reference Name="Segment">
-														<ObjectRef Name="stg_path_wrong" ID="{D6F892D7-241D-4C37-87E7-3C7F3ED8064F}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
-													</Reference>
-													<Reference Name="Trigger">
-														<ObjectRef Name="path_wrong" ID="{5AC29C57-1521-4811-9E04-6A6C157A3DB2}" WorkUnitID="{59BAE8C6-1CD7-4950-A4DD-91206C28DA7E}"/>
-													</Reference>
-												</ReferenceList>
-											</MusicStinger>
-										</Local>
-									</Reference>
-									<Reference>
-										<Local>
-											<MusicStinger Name="" ID="{13DE6634-7788-44F7-882D-A87C94C1BBB4}">
-												<PropertyList>
-													<Property Name="PlaySegmentAt" Type="int16" Value="3"/>
-												</PropertyList>
-												<ReferenceList>
-													<Reference Name="Segment">
-														<ObjectRef Name="stg_checkpoint_G" ID="{39C03479-19C0-442A-86F2-8B7DABFB4032}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
-													</Reference>
-													<Reference Name="Trigger">
-														<ObjectRef Name="checkpoint" ID="{75664D4B-E16F-46E7-9774-BC40987622FA}" WorkUnitID="{59BAE8C6-1CD7-4950-A4DD-91206C28DA7E}"/>
-													</Reference>
-												</ReferenceList>
-											</MusicStinger>
-										</Local>
-									</Reference>
-									<Reference>
-										<Local>
-											<MusicStinger Name="" ID="{08FD684A-227C-4FB4-84B4-6B04AA86B1AC}">
-												<PropertyList>
-													<Property Name="PlaySegmentAt" Type="int16" Value="3"/>
-												</PropertyList>
-												<ReferenceList>
-													<Reference Name="Segment">
-														<ObjectRef Name="stg_puzzle_completed_G" ID="{7A6C7594-9F34-44AE-A00E-826E3552904B}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
-													</Reference>
-													<Reference Name="Trigger">
-														<ObjectRef Name="puzzle_success" ID="{A71A42F5-A02A-4912-9DB1-2CC32E6E37F5}" WorkUnitID="{59BAE8C6-1CD7-4950-A4DD-91206C28DA7E}"/>
-													</Reference>
-												</ReferenceList>
-											</MusicStinger>
-										</Local>
-									</Reference>
-								</ObjectList>
-							</ObjectLists>
 						</MusicPlaylistContainer>
 					</ChildrenList>
 					<ObjectLists>
@@ -1223,6 +1108,76 @@
 											</ObjectList>
 										</ObjectLists>
 									</MultiSwitchEntry>
+								</Local>
+							</Reference>
+						</ObjectList>
+						<ObjectList Name="Stingers">
+							<Reference>
+								<Local>
+									<MusicStinger Name="" ID="{5057D165-22AC-41E3-9106-375EC906DDC4}">
+										<PropertyList>
+											<Property Name="PlaySegmentAt" Type="int16" Value="3"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="Segment">
+												<ObjectRef Name="stg_checkpoint_G" ID="{39C03479-19C0-442A-86F2-8B7DABFB4032}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+											</Reference>
+											<Reference Name="Trigger">
+												<ObjectRef Name="checkpoint" ID="{75664D4B-E16F-46E7-9774-BC40987622FA}" WorkUnitID="{59BAE8C6-1CD7-4950-A4DD-91206C28DA7E}"/>
+											</Reference>
+										</ReferenceList>
+									</MusicStinger>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MusicStinger Name="" ID="{01255CF1-4AD3-47B9-94FA-09CB20454E82}">
+										<PropertyList>
+											<Property Name="PlaySegmentAt" Type="int16" Value="3"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="Segment">
+												<ObjectRef Name="stg_path_correct" ID="{62F8B0DB-AD45-4276-ABA6-C057770244D6}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+											</Reference>
+											<Reference Name="Trigger">
+												<ObjectRef Name="path_correct" ID="{3B7D6D15-75D2-4D62-B2AF-1594CB5A9528}" WorkUnitID="{59BAE8C6-1CD7-4950-A4DD-91206C28DA7E}"/>
+											</Reference>
+										</ReferenceList>
+									</MusicStinger>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MusicStinger Name="" ID="{7570A42D-0AB2-4815-93E4-96F2056492A5}">
+										<PropertyList>
+											<Property Name="PlaySegmentAt" Type="int16" Value="3"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="Segment">
+												<ObjectRef Name="stg_path_wrong" ID="{D6F892D7-241D-4C37-87E7-3C7F3ED8064F}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+											</Reference>
+											<Reference Name="Trigger">
+												<ObjectRef Name="path_wrong" ID="{5AC29C57-1521-4811-9E04-6A6C157A3DB2}" WorkUnitID="{59BAE8C6-1CD7-4950-A4DD-91206C28DA7E}"/>
+											</Reference>
+										</ReferenceList>
+									</MusicStinger>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MusicStinger Name="" ID="{BBC0196B-868B-4228-8F95-7FD8EE068F32}">
+										<PropertyList>
+											<Property Name="PlaySegmentAt" Type="int16" Value="3"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="Segment">
+												<ObjectRef Name="stg_puzzle_completed_G" ID="{7A6C7594-9F34-44AE-A00E-826E3552904B}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+											</Reference>
+											<Reference Name="Trigger">
+												<ObjectRef Name="puzzle_success" ID="{A71A42F5-A02A-4912-9DB1-2CC32E6E37F5}" WorkUnitID="{59BAE8C6-1CD7-4950-A4DD-91206C28DA7E}"/>
+											</Reference>
+										</ReferenceList>
+									</MusicStinger>
 								</Local>
 							</Reference>
 						</ObjectList>
