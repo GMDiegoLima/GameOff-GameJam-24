@@ -50,22 +50,24 @@ public class Spike : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && other.GetComponent<PlayerController>() != null && !other.GetComponent<PlayerController>().flying)
+        if (other is BoxCollider2D)
         {
-            Health playerHealth;
-            if (other.TryGetComponent<Health>(out playerHealth))
+            if (other.CompareTag("Player") && other.GetComponent<PlayerController>() != null && !other.GetComponent<PlayerController>().flying)
             {
-                playerHealth.TakeDamage(10f);
+                Health playerHealth;
+                if (other.TryGetComponent<Health>(out playerHealth))
+                {
+                    playerHealth.TakeDamage(10f);
+                }
+            }
+            if (other.CompareTag("Enemy"))
+            {
+                Health enemyHealth;
+                if (other.TryGetComponent<Health>(out enemyHealth))
+                {
+                    enemyHealth.TakeDamage(10f);
+                }
             }
         }
-        if (other.CompareTag("Enemy"))
-        {
-            Health enemyHealth;
-            if (other.TryGetComponent<Health>(out enemyHealth))
-            {
-                enemyHealth.TakeDamage(10f);
-            }
-        }
-
     }
 }

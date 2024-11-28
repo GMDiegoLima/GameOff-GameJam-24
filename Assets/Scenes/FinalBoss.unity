@@ -81330,7 +81330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4252190085009577126, guid: 735940e836b3d42a5843901a10b93d03, type: 3}
       propertyPath: maxHealth
-      value: 1
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4252190085009577126, guid: 735940e836b3d42a5843901a10b93d03, type: 3}
       propertyPath: healthBarUI
