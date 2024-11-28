@@ -213,13 +213,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   bonePrefab: {fileID: 7183489080040951203, guid: c6db8df0db03745dfa7a6dabffe753d5, type: 3}
-  minMovePeriod: 1
+  minMovePeriod: 1.5
   maxMovePeriod: 3
   minStopPeriod: 2
   maxStopPeriod: 3
   minVelocity: -2
   maxVelocity: 2
-  chaseSpeed: 2.8
+  chaseSpeed: 3
   attackCD: 3
   isMoving: 0
   movePeriodTimer: 0

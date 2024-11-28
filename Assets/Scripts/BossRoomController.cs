@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class BossRoomController : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class BossRoomController : MonoBehaviour
     [SerializeField] EnemyGenerator portal;
     [SerializeField] GameObject dialogue;
     [SerializeField] Collider2D entranceTrigger;
+    [SerializeField] List<GameObject> lights;
 
     // Set true by other class
     [HideInInspector] public bool playerEnteredTrigger; // Set true in DoorH::Close()
@@ -38,6 +40,10 @@ public class BossRoomController : MonoBehaviour
     {
         portal.gameObject.SetActive(false);
         bossHealthUI.SetActive(false);
+        foreach (var l in lights)
+        {
+            l.SetActive(false);
+        }
     }
 
     private void Update()
@@ -75,11 +81,18 @@ public class BossRoomController : MonoBehaviour
         playerEnteredTrigger = false; // call this routine once
         playerController.StopMove();
         playerController.isControllable = false;
+        foreach (var l in lights)
+        {
+            l.SetActive(true);
+            yield return new WaitForSeconds(0.3f);
+        }
         playerChaseMark.TurnOn();
+        AkSoundEngine.PostEvent("enemy_alert", gameObject);
         yield return new WaitForSeconds(1f);
         playerCam.SetActive(false);
         yield return new WaitForSeconds(2f);
         bossChaseMark.TurnOn();
+        AkSoundEngine.PostEvent("enemy_alert", gameObject);
         playerChaseMark.TurnOff();
         yield return new WaitForSeconds(2f);
         bossChaseMark.TurnOff();
@@ -106,7 +119,7 @@ public class BossRoomController : MonoBehaviour
         portal.GenerateRandomEnemy();
         yield return new WaitForSeconds(1f);
         portal.GenerateRandomEnemy();
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.2f);
         boss.ChangeOutfit();
         yield return new WaitForSeconds(3f);
         gameStartTrigger = true;
