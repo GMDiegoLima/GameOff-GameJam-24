@@ -6,6 +6,7 @@ public class DoorHinverted : MonoBehaviour
     Vector3 closePosition;
     bool open = false;
     bool close = false;
+    bool soundPlayed;
 
     void Start()
     {
@@ -17,7 +18,6 @@ public class DoorHinverted : MonoBehaviour
     {
         if (open && !close)
         {
-            AkSoundEngine.PostEvent("door_opens", gameObject);
             transform.position = Vector3.MoveTowards(transform.position, openPosition, 0.2f * Time.deltaTime);
             if (transform.position == openPosition)
             {
@@ -26,7 +26,6 @@ public class DoorHinverted : MonoBehaviour
         }
         if (!open && close)
         {
-            AkSoundEngine.PostEvent("door_opens", gameObject);
             transform.position = Vector3.MoveTowards(transform.position, closePosition, 0.4f * Time.deltaTime);
             if (transform.position == closePosition)
             {
@@ -38,6 +37,7 @@ public class DoorHinverted : MonoBehaviour
     public void OpenDoor()
     {
         open = true;
+        AkSoundEngine.PostEvent("door_opens", gameObject);
         close = false;
     }
     public void CloseDoor()

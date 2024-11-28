@@ -14,13 +14,17 @@ public class DoorNoWired : MonoBehaviour
     {
         if (connectedWire != null && !connectedWire.enabled)
         {
+            if (!soundPlayed)
+            {
+                AkSoundEngine.PostEvent("door_opens", gameObject);
+                soundPlayed = true;
+            }
             if (transform.position == openPosition)
             {
                 return;
             }
             else
             {
-                AkSoundEngine.PostEvent("door_opens", gameObject);
                 transform.position = Vector3.MoveTowards(transform.position, openPosition, 0.2f * Time.deltaTime);
             }
         }
