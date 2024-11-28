@@ -21,6 +21,7 @@ public class PuzzleActivations : MonoBehaviour
         {
             puzzleSolved = true;
             Debug.Log("Puzzle Solved!");
+            AkSoundEngine.PostEvent("puzzle_success", gameObject);
             onPuzzleSolved.Invoke();
         }
         else
@@ -42,6 +43,7 @@ public class PuzzleActivations : MonoBehaviour
         {
             puzzleSolved = true;
             Debug.Log("Puzzle Solved!");
+            AkSoundEngine.PostEvent("puzzle_success", gameObject);
             onPuzzleSolved.Invoke();
         }
         else
@@ -53,5 +55,9 @@ public class PuzzleActivations : MonoBehaviour
     public bool IsPuzzleSolved()
     {
         return activatedLevers.SetEquals(requiredActivations);
+    }
+    public bool IsNextInSequence(string leverName)
+    {
+        return requiredActivations.Contains(leverName);
     }
 }

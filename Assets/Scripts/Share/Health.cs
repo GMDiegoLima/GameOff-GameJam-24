@@ -14,8 +14,11 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(float anAmount)
     {
-        AkSoundEngine.PostEvent("hurt", gameObject);
-        currentHealth = Mathf.Clamp(currentHealth - anAmount, 0, maxHealth);
+        if (currentHealth > 0)
+        {
+            AkSoundEngine.PostEvent("hurt", gameObject);
+            currentHealth = Mathf.Clamp(currentHealth - anAmount, 0, maxHealth);
+        }
 	}
 
     public void TakeHeal(float anAmount)

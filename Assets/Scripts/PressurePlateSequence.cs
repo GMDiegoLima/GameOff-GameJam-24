@@ -64,6 +64,7 @@ public class PressurePlateSequence : MonoBehaviour
             PuzzleSequence activePuzzle = puzzleSeqManager.GetActivePuzzle();
             if (activePuzzle != null)
             {
+                stingerEvent.Post(gameObject);
                 activePuzzle.RegisterActivation(plateName);
             }
 
@@ -89,10 +90,5 @@ public class PressurePlateSequence : MonoBehaviour
         {
             puzzleActManager.RemoveActivation(plateName);
         }
-    }
-
-    public void TriggerSfx()
-    {
-        stingerEvent.Post(gameObject);
     }
 }
