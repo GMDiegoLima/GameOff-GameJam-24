@@ -5,6 +5,7 @@ public class WireManager : MonoBehaviour
 {
     public static WireManager Instance;
     public WireRotation[] cables;
+    bool puzzleSolved = false;
     public UnityEvent onPuzzleSuccess;
     public UnityEvent onPuzzleFail;
 
@@ -20,8 +21,15 @@ public class WireManager : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        CheckPuzzleStatus();
+    }
+
     public void CheckPuzzleStatus()
     {
+        if (puzzleSolved) return;
+
         foreach (WireRotation cable in cables)
         {
             if (!cable.enabled)
@@ -30,6 +38,7 @@ public class WireManager : MonoBehaviour
                 return;
             }
         }
+        puzzleSolved = true;
         onPuzzleSuccess?.Invoke();
     }
 }

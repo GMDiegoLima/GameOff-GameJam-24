@@ -260,19 +260,19 @@ MonoBehaviour:
 
     Environment Artist- Mago
 
-    
+
 
     Ui
     Artist- Tyler Dias
 
-    
+
 
     Programmer - Ying-Jieh Xia (Chris)
 
     Programmer
     - Diego Lima
 
-    
+
 
     Composer - Santiago Barragan'
   m_isRightToLeft: 0
@@ -7162,7 +7162,7 @@ PrefabInstance:
     - target: {fileID: 8557568673631317014, guid: a0dbeffc84669e24f994d387893a803d, type: 3}
       propertyPath: sentences.Array.data[1].dialogueCharacter
       value: 
-      objectReference: {fileID: 11400000, guid: 105058c875ba41b4fbbe295439037d01, type: 2}
+      objectReference: {fileID: 11400000, guid: b8e500cf0a0157644beb37a7e2f676f5, type: 2}
     - target: {fileID: 8557568673631317014, guid: a0dbeffc84669e24f994d387893a803d, type: 3}
       propertyPath: sentences.Array.data[2].dialogueCharacter
       value: 
@@ -7170,7 +7170,7 @@ PrefabInstance:
     - target: {fileID: 8557568673631317014, guid: a0dbeffc84669e24f994d387893a803d, type: 3}
       propertyPath: sentences.Array.data[3].dialogueCharacter
       value: 
-      objectReference: {fileID: 11400000, guid: 105058c875ba41b4fbbe295439037d01, type: 2}
+      objectReference: {fileID: 11400000, guid: af829942ba9a211498654c4790c744f5, type: 2}
     - target: {fileID: 8557568673631317014, guid: a0dbeffc84669e24f994d387893a803d, type: 3}
       propertyPath: sentences.Array.data[4].dialogueCharacter
       value: 
@@ -52914,7 +52914,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7027632970052796844, guid: 98ace3a7e2f7d894fbd09d390e488fb9, type: 3}
       propertyPath: orthographic size
-      value: 3.375
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7772584563165250645, guid: 98ace3a7e2f7d894fbd09d390e488fb9, type: 3}
       propertyPath: m_Name

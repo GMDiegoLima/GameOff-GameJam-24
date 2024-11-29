@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
     public TextMeshProUGUI embodyText;
     Bodies availableBody = Bodies.Ghost;
     bool canEmbody = false;
+    bool pushing = false;
 
     GameObject enemyBodyPrefab;
     SpriteRenderer _spriteRenderer;
@@ -160,25 +161,32 @@ public class PlayerController : MonoBehaviour
                 AkSoundEngine.SetState("PlayerStatus", "Alive");
                 Vector3Int gridPosition = ground.WorldToCell(transform.position);
                 TileBase currentTile = ground.GetTile(gridPosition);
-                if (currentTile.name.ToLower().Contains("cobblestone"))
+                if (currentBody != Bodies.Ghost && currentBody != Bodies.FatBat && !pushing)
                 {
-                    AkSoundEngine.SetSwitch("Terrain", "stone", gameObject);
-                    return;
+                    if (currentTile.name.ToLower().Contains("cobblestone"))
+                    {
+                        AkSoundEngine.SetSwitch("Terrain", "stone", gameObject);
+                        return;
+                    }
+                    switch (currentTile.name)
+                    {
+                        case "abyss_0":
+                            AkSoundEngine.SetSwitch("Terrain", "flying", gameObject);
+                            break;
+                        case "GrassRuleTIle":
+                            AkSoundEngine.SetSwitch("Terrain", "grass", gameObject);
+                            break;
+                        case "CemeteryRuleTile":
+                            AkSoundEngine.SetSwitch("Terrain", "grass", gameObject);
+                            break;
+                        default:
+                            AkSoundEngine.SetSwitch("Terrain", "dungeon", gameObject);
+                            break;
+                    }
                 }
-                switch (currentTile.name)
+                else
                 {
-                    case "abyss_0":
-                        AkSoundEngine.SetSwitch("Terrain", "flying", gameObject);
-                        break;
-                    case "GrassRuleTIle":
-                        AkSoundEngine.SetSwitch("Terrain", "grass", gameObject);
-                        break;
-                    case "CemeteryRuleTile":
-                        AkSoundEngine.SetSwitch("Terrain", "grass", gameObject);
-                        break;
-                    default:
-                        AkSoundEngine.SetSwitch("Terrain", "dungeon", gameObject);
-                        break;
+                   AkSoundEngine.SetSwitch("Terrain", "flying", gameObject); 
                 }
                 _animator.SetBool("Dead", false);
                 gameOver.SetActive(false);
@@ -319,16 +327,17 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("PressureTrigger") && flying)
-        {
-            _animator.SetBool("Pushing", false);
-            AkSoundEngine.ExecuteActionOnEvent("rock_push", AkActionOnEventType.AkActionOnEventType_Stop, gameObject);
-            Rigidbody2D rb_rock = other.gameObject.GetComponent<Rigidbody2D>();
-            rb_rock.simulated = false;
-        }
+        // if (other.CompareTag("PressureTrigger") && flying)
+        // {
+        //     _animator.SetBool("Pushing", false);
+        //     AkSoundEngine.ExecuteActionOnEvent("rock_push", AkActionOnEventType.AkActionOnEventType_Stop, gameObject);
+        //     Rigidbody2D rb_rock = other.gameObject.GetComponent<Rigidbody2D>();
+        //     rb_rock.simulated = false;
+        // }
         if (other.CompareTag("PressureTrigger") && !flying)
         {
             Debug.Log("Pushing");
+            pushing = true;
             _animator.SetBool("Pushing", true);
             AkSoundEngine.PostEvent("rock_push", gameObject);
             Rigidbody2D rb_rock = other.gameObject.GetComponent<Rigidbody2D>();
@@ -364,6 +373,7 @@ public class PlayerController : MonoBehaviour
         }
         if (other.CompareTag("PressureTrigger") && !flying)
         {
+            pushing = false;
             _animator.SetBool("Pushing", false);
             AkSoundEngine.ExecuteActionOnEvent("rock_push", AkActionOnEventType.AkActionOnEventType_Stop, gameObject);
         }

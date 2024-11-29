@@ -30,7 +30,7 @@ public class Container : MonoBehaviour, IBiteable
                 spawnedItem.transform.localScale = new Vector3(1f, 1f, 1f);
                 break;
         }
-        
-        Destroy(gameObject);
+        gameObject.SetActive(false);
+        // Destroy(gameObject);
 	}
 }

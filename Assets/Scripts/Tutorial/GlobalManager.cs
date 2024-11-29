@@ -63,12 +63,12 @@ public class GlobalManager : MonoBehaviour
     public void AddGold()
     {
         goldCoins++;
-        Debug.Log($"Gold colected: {keyCount}");
+        Debug.Log($"Gold colected: {goldCoins}");
     }
     public void RemoveGold(int quantity)
     {
         goldCoins -= quantity;
-        Debug.Log($"Gold colected: {keyCount}");
+        Debug.Log($"Gold colected: {goldCoins}");
     }
     public void AddOwnedItem(string itemName, ItemShop.ItemType itemType)
     {

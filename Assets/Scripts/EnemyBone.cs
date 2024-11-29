@@ -21,7 +21,7 @@ public class EnemyBone : MonoBehaviour
                 }
             }
         }
-        else if (collision.gameObject.CompareTag("Wall"))
+        if (other.CompareTag("Wall"))
         {
             Destroy(gameObject);
 		}

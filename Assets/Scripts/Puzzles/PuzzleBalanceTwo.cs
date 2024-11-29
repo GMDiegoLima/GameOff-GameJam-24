@@ -11,6 +11,7 @@ public class PuzzleBalanceTwo : MonoBehaviour
     public TextMeshProUGUI addWeightText;
     public int maxItems;
     public List<Transform> weightsPositions;
+    public List<GameObject> boxes;
     Vector3 leftPlateOrigin;
     Vector3 rightPlateOrigin;
     int holdingWeight;
@@ -82,6 +83,10 @@ public class PuzzleBalanceTwo : MonoBehaviour
             {
                 Destroy(child.gameObject);
             }
+        }
+        foreach (GameObject box in boxes)
+        {
+            box.SetActive(true);
         }
     }
 

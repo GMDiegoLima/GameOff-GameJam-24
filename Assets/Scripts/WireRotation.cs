@@ -25,9 +25,18 @@ public class WireRotation : MonoBehaviour
             WireManager.Instance.CheckPuzzleStatus();
         }
     }
+    float NormalizeAngle(float angle)
+    {
+        while (angle < 0) angle += 360;
+        while (angle >= 360) angle -= 360;
+        return angle;
+    }
+
     void UpdateCableState()
     {
-        if (Mathf.Approximately(transform.eulerAngles.z, correctRotation) &&
+        float currentAngle = NormalizeAngle(transform.eulerAngles.z);
+        float targetAngle = NormalizeAngle(correctRotation);
+        if (Mathf.Approximately(currentAngle, targetAngle) &&
             (straightWire != null && straightWire.enabled || straightWire == null))
         {
             enabled = true;
