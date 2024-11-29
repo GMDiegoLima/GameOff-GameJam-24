@@ -31,7 +31,6 @@ public class PuzzleSequence : MonoBehaviour
         if (!IsCorrectSoFar())
         {
             ResetPuzzle();
-            AkSoundEngine.PostEvent("path_wrong", gameObject);
             return;
         }
 
@@ -74,6 +73,7 @@ public class PuzzleSequence : MonoBehaviour
     void ResetPuzzle()
     {
         Debug.Log("Wrong sequence! Puzzle Reseted.");
+        AkSoundEngine.PostEvent("path_wrong", gameObject);
         playerSequence.Clear();
         onPuzzleReset.Invoke();
     }
@@ -101,12 +101,12 @@ public class PuzzleSequence : MonoBehaviour
             if (i < platforms.Count)
             {
                 PressurePlateSequence plateSequence = platforms[i].GetComponent<PressurePlateSequence>();
+                plateSequence.stingerEvent.Post(gameObject);
                 platforms[i].SetActive(true);
                 yield return new WaitForSeconds(0.25f);
                 platforms[i].SetActive(false);
                 yield return new WaitForSeconds(0.25f);
                 platforms[i].SetActive(true);
-                plateSequence.stingerEvent.Post(gameObject);
             }
             yield return new WaitForSeconds(0.25f);
         }

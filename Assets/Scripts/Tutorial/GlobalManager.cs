@@ -1,5 +1,7 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 using System.Collections.Generic;
 
 // Used to disable dialogue and collider border on the village when the player finish the tutorial
@@ -11,7 +13,11 @@ public class GlobalManager : MonoBehaviour
     public GameObject dialogueTutorial;
     public GameObject borderTutorial;
 
+    GameObject keyUI;
+    TextMeshProUGUI keyUIText;
     public int keyCount = 0;
+    GameObject goldUI;
+    TextMeshProUGUI goldUIText;
     public int goldCoins = 0;
 
     public List<string> ownedHats = new List<string>();
@@ -37,6 +43,13 @@ public class GlobalManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        keyUI = GameObject.Find("KeyUI");
+        goldUI = GameObject.Find("GoldUI");
+        if (keyUI != null && goldUI != null)
+        {
+            keyUIText = keyUI.GetComponentInChildren<TextMeshProUGUI>();
+            goldUIText = goldUI.GetComponentInChildren<TextMeshProUGUI>();
+        }
         if (scene.name == "Village")
         {
             if (tutorialFinished)
@@ -58,12 +71,28 @@ public class GlobalManager : MonoBehaviour
     public void AddKey()
     {
         keyCount++;
+        StartCoroutine(BlinkUI(keyUI, keyUIText, "key"));
         Debug.Log($"Keys colected: {keyCount}");
     }
     public void AddGold()
     {
         goldCoins++;
+        StartCoroutine(BlinkUI(goldUI, goldUIText, "gold"));
         Debug.Log($"Gold colected: {goldCoins}");
+    }
+    IEnumerator BlinkUI(GameObject obj, TextMeshProUGUI objText, string item)
+    {
+        if (item == "gold")
+        {
+            objText.text = goldCoins.ToString();
+        }
+        if (item == "key")
+        {
+            objText.text = keyCount.ToString();
+        }
+        obj.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        obj.SetActive(false);
     }
     public void RemoveGold(int quantity)
     {

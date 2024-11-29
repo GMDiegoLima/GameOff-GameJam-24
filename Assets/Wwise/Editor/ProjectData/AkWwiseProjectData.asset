@@ -309,7 +309,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 147542aa1fa9a344bad32b33b1da2794
     GuidInternal: 
-    m_lastTime: -8584687042699226482
+    m_lastTime: -8584687004932985151
     List:
     - name: Main
       guid: 516653935762234ab927cec7323273dd
@@ -382,7 +382,7 @@ MonoBehaviour:
     ParentPath: Events\Sfx\Creatures_npcs
     guid: cd4c5501e793cf4a8b393f9662af8af0
     GuidInternal: 
-    m_lastTime: -8584687068222341741
+    m_lastTime: -8584687005035276553
     List:
     - name: bat
       guid: 0690ccd9d7b29743a4b3bc5a32e1e5dd
@@ -768,7 +768,7 @@ MonoBehaviour:
     ParentPath: Events\Music
     guid: a50adb88e400464ab0c341653fd3f383
     GuidInternal: 
-    m_lastTime: -8584687019683375289
+    m_lastTime: -8584686836524905565
     List:
     - name: checkpoint
       guid: c4ff0bd4c262554dbd5056d102502ad7
@@ -1400,7 +1400,7 @@ MonoBehaviour:
     ParentPath: Events\Testing
     guid: abf3418ae276074fb0244b23c326e276
     GuidInternal: 
-    m_lastTime: -8584687045715712380
+    m_lastTime: -8584687005032964193
     List:
     - name: TestingEvent
       guid: d0a20c4f0d69fb4382c1e87487d2e1cd
@@ -2343,9 +2343,9 @@ MonoBehaviour:
         ObjectType: 14
         guid: 0e6ab5df11fdfb4980973d23390775f9
       Path: Triggers\Music\MusicTriggers\stopMusic
-  ExpandedFileSystemItemIds: 010000000200000003000000120000001300000017000000180000005e0000005f000000
+  ExpandedFileSystemItemIds: 0100000002000000030000000400000008000000120000001300000017000000180000005e0000005f000000
   ExpandedWaapiItemIds: 010000000200000003000000120000001300000017000000180000005e0000005f000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
-  currentDataSource: 0
+  currentDataSource: 1
   CurrentPluginConfig: 

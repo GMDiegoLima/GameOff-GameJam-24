@@ -50,6 +50,7 @@ public class PlayerController : MonoBehaviour
     public GameObject gameOver;
 
     public GameObject heldItem = null;
+    public Transform glassesPosition;
     public Transform itemHoldPosition;
     List<GameObject> nearbyItems = new List<GameObject>();
 
@@ -306,6 +307,8 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         Vector2 delta = direction * velocity * Time.deltaTime;
+        bool isWalkingUp = direction.y > 0;
+        glassesPosition.gameObject.SetActive(!isWalkingUp);
         if (direction != Vector2.zero)
         {
             stepTimer -= Time.deltaTime;
