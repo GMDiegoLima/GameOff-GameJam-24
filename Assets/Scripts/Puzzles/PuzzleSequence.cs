@@ -13,7 +13,7 @@ public class SoundEvent
 public class PuzzleSequence : MonoBehaviour
 {
     public List<string> correctSequence;
-    public List<SoundEvent> soundEvents = new List<SoundEvent>();
+    public List<GameObject> platforms;
 
     public UnityEvent onPuzzleSolved;
     public UnityEvent onPuzzleReset;
@@ -91,20 +91,24 @@ public class PuzzleSequence : MonoBehaviour
 
     public void PlaySfxsSequence()
     {
-        StartCoroutine(PlayCorrectSequence()); 
+        StartCoroutine(DisplaySequence()); 
     }
 
-    IEnumerator PlayCorrectSequence()
+    IEnumerator DisplaySequence()
     {
         for (int i = 0; i < correctSequence.Count; i++)
         {
-            if (i < soundEvents.Count)
+            if (i < platforms.Count)
             {
-                AK.Wwise.Event soundEvent = soundEvents[i].soundEvent;
-                Debug.Log(soundEvent);
-                soundEvent.Post(gameObject);
-                yield return new WaitForSeconds(1f);
+                PressurePlateSequence plateSequence = platforms[i].GetComponent<PressurePlateSequence>();
+                platforms[i].SetActive(true);
+                yield return new WaitForSeconds(0.25f);
+                platforms[i].SetActive(false);
+                yield return new WaitForSeconds(0.25f);
+                platforms[i].SetActive(true);
+                plateSequence.stingerEvent.Post(gameObject);
             }
+            yield return new WaitForSeconds(0.25f);
         }
     }
 }

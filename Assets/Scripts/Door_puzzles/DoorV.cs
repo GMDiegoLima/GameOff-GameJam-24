@@ -21,6 +21,7 @@ public class DoorV : MonoBehaviour
             if (transform.position == openPosition)
             {
                 open = false;
+                AkSoundEngine.PostEvent("door_opens_stop", gameObject);
             }
         }
         if (!open && close)
@@ -29,6 +30,7 @@ public class DoorV : MonoBehaviour
             if (transform.position == closePosition)
             {
                 close = false;
+                AkSoundEngine.PostEvent("door_opens_stop", gameObject);
             }
         }
     }

@@ -5,7 +5,7 @@ public class DoorNoWired : MonoBehaviour
     public WireConnection connectedWire;
     Vector3 openPosition;
     bool open;
-    private bool soundPlayed;
+    bool soundPlayed = false;
 
     void Start()
     {
@@ -17,11 +17,12 @@ public class DoorNoWired : MonoBehaviour
         {
             if (!soundPlayed)
             {
-                AkSoundEngine.PostEvent("door_opens", gameObject);
                 soundPlayed = true;
+                AkSoundEngine.PostEvent("door_opens", gameObject);
             }
             if (transform.position == openPosition)
             {
+                AkSoundEngine.PostEvent("door_opens_stop", gameObject);
                 return;
             }
             else

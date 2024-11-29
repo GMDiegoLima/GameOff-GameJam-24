@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class FinalBoss : MonoBehaviour
 {
@@ -7,6 +8,8 @@ public class FinalBoss : MonoBehaviour
     private Animator anim;
     private Rigidbody2D body;
     private Health health;
+    [SerializeField] GameObject finalDialogue;
+    [SerializeField] GameObject healthBarUI;
     [SerializeField] List<RuntimeAnimatorController> animControllers;
 
     [SerializeField] float changeOutfitCD;
@@ -41,6 +44,7 @@ public class FinalBoss : MonoBehaviour
         health = GetComponent<Health>();
         health.maxHealth = maxHealth;
         isAlive = true;
+        finalDialogue.SetActive(false);
     }
 
     void FixedUpdate()
@@ -151,8 +155,15 @@ public class FinalBoss : MonoBehaviour
         {
             Debug.Log("Boss Died");
             isAlive = false;
+            finalDialogue.SetActive(true);
+            healthBarUI.SetActive(false);
             velocity = Vector2.zero;
             anim.SetBool("Dead", true);
         }
 	}
+    
+    public void LoadCreditsScene()
+    {
+        SceneManager.LoadSceneAsync(7);
+    }
 }
