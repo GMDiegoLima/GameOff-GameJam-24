@@ -27,6 +27,7 @@ public class EnemyAIController : StateController
     private FieldOfView view;
     private CapsuleCollider2D bodyCollider;
     [HideInInspector] public ChaseMark chaseMark;
+    [HideInInspector] public QuestionMark questionMark;
 
     private float movePeriod = 2f;
     private float stopPeriod = 2f;
@@ -42,7 +43,8 @@ public class EnemyAIController : StateController
         base.Awake();
         view = GetComponentInChildren<FieldOfView>(); // Get from Eye
         bodyCollider = GetComponentInChildren<CapsuleCollider2D>(); // Get from BodyCollider
-        chaseMark = GetComponentInChildren<ChaseMark>(); // Get from BodyCollider
+        chaseMark = GetComponentInChildren<ChaseMark>();
+        questionMark = GetComponentInChildren<QuestionMark>();
         actor.isControlledByAI = true;
         currentState = new PatrolState(this);
         currentState.Enter();
@@ -169,6 +171,7 @@ public class EnemyAIController : StateController
     public override void Dead()
     {
         chaseMark.TurnOff();
+        questionMark.TurnOff();
         anim.SetBool("Dead", true);
         gameObject.tag = "DeadBody";
         velocity = Vector2.zero;

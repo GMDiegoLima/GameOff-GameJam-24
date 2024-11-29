@@ -36,7 +36,6 @@ public class ChaseState : IState
 
     public void Exit()
     {
-        //controller.targetFootprints.Clear();
         Debug.Log(controller.actor.actorTag + " Exit Chase State");
     }
 

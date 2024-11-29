@@ -15,6 +15,7 @@ public class SeekState : IState
     {
         controller = anEnemyAIController;
         controller.chaseMark.TurnOff();
+        controller.questionMark.TurnOn();
     }
 
     public void Enter()
@@ -32,6 +33,7 @@ public class SeekState : IState
     public void Exit()
     {
         Debug.Log(controller.actor.actorTag + " Exit Seek State");
+        controller.questionMark.TurnOff();
     }
 
 
