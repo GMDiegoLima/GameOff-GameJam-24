@@ -56,22 +56,24 @@ public class PlayerStateController : StateController
 
     public override void Attack()
     {
+        ActorType currentActorType = actor.actorType;
+        if (currentActorType == ActorType.MainCharactor || currentActorType == ActorType.Ghost) return;
+
         Debug.Log(actor.actorTag + "::Attack()");
         anim.Play("Attack");
-        Vector2 dir = new Vector2(anim.GetFloat("LastHorizontal"), anim.GetFloat("LastVertical")).normalized;
+        // Play SFX
+        if (actor.actorType == ActorType.Wolf) AkSoundEngine.PostEvent("wolf_attack", gameObject);
+        else if (actor.actorType == ActorType.Fatbat) AkSoundEngine.PostEvent("bat_attack", gameObject);
+        else if (actor.actorType == ActorType.Goblin) AkSoundEngine.PostEvent("goblin_attack", gameObject);
 
         // Attack based on current actor type
+        Vector2 dir = new Vector2(anim.GetFloat("LastHorizontal"), anim.GetFloat("LastVertical")).normalized;
         if (actor.actorType == ActorType.Skeleton)
         {
             ThrowBone(dir);
             AkSoundEngine.PostEvent("skeleton_attack", gameObject);
             return;
 		}
-
-        // Play SFX
-        if (actor.actorType == ActorType.Wolf) AkSoundEngine.PostEvent("wolf_attack", gameObject);
-        else if (actor.actorType == ActorType.Fatbat) AkSoundEngine.PostEvent("bat_attack", gameObject);
-        else if (actor.actorType == ActorType.Goblin) AkSoundEngine.PostEvent("goblin_attack", gameObject);
 
         RaycastHit2D hit = Physics2D.BoxCast(transform.position, new Vector2(1, 1), 0,
                                             dir, actor.attackRange, attackTargetLayer);
