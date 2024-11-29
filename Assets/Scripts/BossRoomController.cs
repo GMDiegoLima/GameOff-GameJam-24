@@ -84,7 +84,7 @@ public class BossRoomController : MonoBehaviour
         foreach (var l in lights)
         {
             l.SetActive(true);
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(0.2f);
         }
         playerChaseMark.TurnOn();
         AkSoundEngine.PostEvent("enemy_alert", gameObject);
@@ -117,7 +117,7 @@ public class BossRoomController : MonoBehaviour
         }
         yield return new WaitForSeconds(1f);
         portal.GenerateRandomEnemy();
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         portal.GenerateRandomEnemy();
         yield return new WaitForSeconds(0.2f);
         boss.ChangeOutfit();
