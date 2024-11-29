@@ -10,12 +10,20 @@ public class EnemyBone : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Health playerHealth;
-            if (other.TryGetComponent<Health>(out playerHealth))
+            // Ghost won't be hit
+            if (other.GetComponent<PlayerStateController>().actor.actorType != ActorType.Ghost)
             {
-                playerHealth.TakeDamage(1f);
-                Destroy(gameObject);
+                Health playerHealth;
+                if (other.TryGetComponent<Health>(out playerHealth))
+                {
+                    playerHealth.TakeDamage(1f);
+                    Destroy(gameObject);
+                }
             }
         }
+        else if (collision.gameObject.CompareTag("Wall"))
+        {
+            Destroy(gameObject);
+		}
     }
 }

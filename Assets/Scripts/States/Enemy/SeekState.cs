@@ -15,6 +15,7 @@ public class SeekState : IState
     {
         controller = anEnemyAIController;
         controller.chaseMark.TurnOff();
+        controller.questionMark.TurnOn();
     }
 
     public void Enter()
@@ -32,6 +33,7 @@ public class SeekState : IState
     public void Exit()
     {
         Debug.Log(controller.actor.actorTag + " Exit Seek State");
+        controller.questionMark.TurnOff();
     }
 
 
@@ -41,14 +43,12 @@ public class SeekState : IState
         {
             controller.TransitionToState(new ChaseState(controller, controller.GetTargetTransform()));
         }
-        else if (controller.targetFootprints.Count == 0)
+
+        if (seekTimer >= seekTime)
         {
-            controller.velocity = Vector2.zero;
-            if (seekTimer >= seekTime)
-            {
-                controller.TransitionToState(new PatrolState(controller));
-            }
+            controller.TransitionToState(new PatrolState(controller));
         }
+
         if (controller.IsActorDead())
         {
             controller.TransitionToState(new DeadState(controller));
