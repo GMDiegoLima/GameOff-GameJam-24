@@ -9,6 +9,8 @@ public class ChaseState : IState
 
     private EnemyAIController controller;
     public Transform target;
+    private float chaseTime = 6f;
+    private float chaseTimer;
 
     public ChaseState(EnemyAIController anEnemyAIController, Transform aTarget)
     {
@@ -31,6 +33,7 @@ public class ChaseState : IState
     public void Update()
     {
         controller.Chase(target);
+        chaseTimer += Time.deltaTime;
         CheckTransition();
     }
 
@@ -42,6 +45,10 @@ public class ChaseState : IState
 
     public void CheckTransition()
     {
+        if (chaseTimer >= chaseTime) // If stuck to wall
+        { 
+            controller.TransitionToState(new PatrolState(controller));
+		}
         if (!controller.IsTargetInSight())
         {
             controller.TransitionToState(new SeekState(controller));

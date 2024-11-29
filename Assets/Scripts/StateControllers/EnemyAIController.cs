@@ -166,6 +166,10 @@ public class EnemyAIController : StateController
                 targetFootprints.RemoveFirst();
             }
         }
+        else
+        {
+            velocity = Vector2.zero;
+        }
     }
 
     public override void Dead()

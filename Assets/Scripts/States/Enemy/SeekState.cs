@@ -43,14 +43,12 @@ public class SeekState : IState
         {
             controller.TransitionToState(new ChaseState(controller, controller.GetTargetTransform()));
         }
-        else if (controller.targetFootprints.Count == 0)
+
+        if (seekTimer >= seekTime)
         {
-            controller.velocity = Vector2.zero;
-            if (seekTimer >= seekTime)
-            {
-                controller.TransitionToState(new PatrolState(controller));
-            }
+            controller.TransitionToState(new PatrolState(controller));
         }
+
         if (controller.IsActorDead())
         {
             controller.TransitionToState(new DeadState(controller));
