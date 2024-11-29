@@ -193,6 +193,97 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="boss" ID="{816A1F43-4CC3-4652-A0F7-C138893712ED}" ShortID="194408540">
+					<ChildrenList>
+						<Event Name="boss_puzzle_01" ID="{F806EA95-5BA9-4606-B65C-67887C2868DD}">
+							<ChildrenList>
+								<Action Name="" ID="{AD6F162D-C29E-4D13-98AE-8D319A8F4433}" ShortID="660390558">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="path_pitch" ID="{8B878E2D-2B48-4760-A634-022676CF8BD6}" WorkUnitID="{12B23305-5568-49C3-8AB6-2C34EBEFEB20}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{210AC3A4-711B-418A-8468-CE45EC3650A9}" ShortID="171876239">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="stg_path_correct" ID="{62F8B0DB-AD45-4276-ABA6-C057770244D6}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="boss_puzzle_02" ID="{E85C5916-5DD6-46B0-A0C3-C52A7880D5D1}">
+							<ChildrenList>
+								<Action Name="" ID="{105D0757-4CD4-425E-B87D-44BA6023AAEF}" ShortID="341584778">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="32"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="path_pitch" ID="{8B878E2D-2B48-4760-A634-022676CF8BD6}" WorkUnitID="{12B23305-5568-49C3-8AB6-2C34EBEFEB20}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{26935B11-F233-42DB-8735-42F5AB26E773}" ShortID="1050052209">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="stg_path_correct" ID="{62F8B0DB-AD45-4276-ABA6-C057770244D6}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="boss_puzzle_03" ID="{52424101-6B0D-4BE1-8C08-39064C24A821}">
+							<ChildrenList>
+								<Action Name="" ID="{F83D6F96-E459-4D57-92F8-8609D883257B}" ShortID="897369145">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="52"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="path_pitch" ID="{8B878E2D-2B48-4760-A634-022676CF8BD6}" WorkUnitID="{12B23305-5568-49C3-8AB6-2C34EBEFEB20}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{3FD21751-3598-44E5-8E06-60CA8FC21CD6}" ShortID="864940963">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="stg_path_correct" ID="{62F8B0DB-AD45-4276-ABA6-C057770244D6}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="boss_puzzle_04" ID="{BC8B5936-DC3D-4EBB-B31E-65B7677283BE}">
+							<ChildrenList>
+								<Action Name="" ID="{EF2DE6D6-5675-4919-895C-F71E9BFCC123}" ShortID="923583524">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="77"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="path_pitch" ID="{8B878E2D-2B48-4760-A634-022676CF8BD6}" WorkUnitID="{12B23305-5568-49C3-8AB6-2C34EBEFEB20}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{5B521036-0EF0-463C-9B15-4C9B69EEE264}" ShortID="863566113">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="stg_path_correct" ID="{62F8B0DB-AD45-4276-ABA6-C057770244D6}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -352,6 +352,17 @@
 						<MusicSegment Name="stg_puzzle_completed_G" ID="{7A6C7594-9F34-44AE-A00E-826E3552904B}" ShortID="828809937">
 							<PropertyList>
 								<Property Name="EndPosition" Type="Real64" Value="8559.28027681661"/>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-3</Value>
@@ -411,7 +422,7 @@
 																		<MusicClip Name="stg_puzzle_completed_G" ID="{752D9B96-6897-4D9A-AC1B-5F0E1DA9A5FC}">
 																			<PropertyList>
 																				<Property Name="BeginTrimOffset" Type="Real64" Value="517.951557093425"/>
-																				<Property Name="EndTrimOffset" Type="Real64" Value="5514.35294117645"/>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="5488.19377162627"/>
 																				<Property Name="FadeInMode" Type="int16" Value="0"/>
 																				<Property Name="PlayAt" Type="Real64" Value="-517.951557093425"/>
 																			</PropertyList>
@@ -429,7 +440,7 @@
 																								<Flags>5</Flags>
 																							</Point>
 																							<Point>
-																								<XPos>5.51435</XPos>
+																								<XPos>5.48819</XPos>
 																								<YPos>0</YPos>
 																								<Flags>37</Flags>
 																							</Point>
@@ -448,7 +459,7 @@
 																								<Flags>5</Flags>
 																							</Point>
 																							<Point>
-																								<XPos>5.51435</XPos>
+																								<XPos>5.48819</XPos>
 																								<YPos>0</YPos>
 																								<Flags>37</Flags>
 																							</Point>
@@ -467,8 +478,8 @@
 																								<Flags>5</Flags>
 																							</Point>
 																							<Point>
-																								<XPos>5.51435</XPos>
-																								<YPos>0</YPos>
+																								<XPos>5.48819</XPos>
+																								<YPos>-0</YPos>
 																								<Flags>37</Flags>
 																							</Point>
 																						</PointList>
@@ -499,7 +510,6 @@
 											<MusicCue Name="Exit Cue" ID="{610D7DA7-B9BA-4EA0-85E5-7D6778A043A1}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="1"/>
-													<Property Name="TimeMs" Type="Real64" Value="5509.12110726644"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -952,6 +962,9 @@
 						<MusicPlaylistContainer Name="StingerTesting" ID="{4FEA146A-F1AB-48BB-895E-F51F739687FD}" ShortID="906475028">
 							<PropertyList>
 								<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+								<Property Name="Tempo" Type="Real64" Value="180"/>
+								<Property Name="TimeSignatureLower" Type="int16" Value="8"/>
+								<Property Name="TimeSignatureUpper" Type="int16" Value="12"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -998,7 +1011,18 @@
 							<ChildrenList>
 								<MusicSegment Name="StingerTesting" ID="{A992BB30-39A7-4C0A-8423-6639A23FFE57}" ShortID="414561935">
 									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="5927.33564013841"/>
+										<Property Name="EndPosition" Type="Real64" Value="16000"/>
+										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -1009,14 +1033,22 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<MusicTrack Name="TestingStingers" ID="{52A8B61E-A463-45D5-805D-35E247E5F47B}" ShortID="669401793">
+										<MusicTrack Name="testing_stingers_music" ID="{503F3849-B8C4-4ABF-A658-5487529F8642}" ShortID="379981107">
+											<PropertyList>
+												<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
 												</Reference>
 												<Reference Name="TransitionRoot">
 													<Custom>
-														<MusicTransition Name="Root" ID="{A48574C9-3707-404A-A0D7-422FF2CA0CBE}">
+														<MusicTransition Name="Root" ID="{7F78CDDA-FA24-44BE-B2E6-06902EC836AF}">
 															<PropertyList>
 																<Property Name="IsFolder" Type="bool" Value="True"/>
 															</PropertyList>
@@ -1026,30 +1058,31 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<MidiFileSource Name="stinger_test" ID="{56AEDF6E-803D-4D80-A5D2-B8FA9C23C3E7}" ShortID="462531175">
+												<AudioFileSource Name="testing_stingers_music" ID="{01B28FE8-C81B-4A6A-BD93-23CA00B0354A}">
 													<Language>SFX</Language>
-													<MidiFile>stinger_test.mid</MidiFile>
+													<AudioFile>testing_stingers_music.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="462531175"/>
+														<MediaID ID="957390315"/>
 													</MediaIDList>
-												</MidiFileSource>
+												</AudioFileSource>
 											</ChildrenList>
 											<ObjectLists>
 												<ObjectList Name="Sequences">
 													<Reference>
 														<Local>
-															<MusicTrackSequence Name="" ID="{9EA98272-DB03-4D49-9715-AFCB7A0B4D21}">
+															<MusicTrackSequence Name="" ID="{24749FB7-ECEC-4A43-BE5C-1DAD8F806873}">
 																<ObjectLists>
 																	<ObjectList Name="Clips">
 																		<Reference>
 																			<Local>
-																				<MusicClipMidi Name="stinger_test" ID="{F684B1CA-703E-44D5-A270-C80A0F91368A}">
+																				<MusicClip Name="testing_stingers_music" ID="{92C1E5AF-AF82-4363-80A2-94F8A914E4D2}">
 																					<PropertyList>
-																						<Property Name="BeginTrimOffset" Type="Real64" Value="1.83408843668076E-13"/>
-																						<Property Name="EndTrimOffset" Type="Real64" Value="4000"/>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="16000"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																					</PropertyList>
-																					<MidiSourceRef Name="stinger_test" ID="{56AEDF6E-803D-4D80-A5D2-B8FA9C23C3E7}"/>
-																				</MusicClipMidi>
+																					<AudioSourceRef Name="testing_stingers_music" ID="{01B28FE8-C81B-4A6A-BD93-23CA00B0354A}"/>
+																				</MusicClip>
 																			</Local>
 																		</Reference>
 																	</ObjectList>
@@ -1073,7 +1106,7 @@
 													<MusicCue Name="Exit Cue" ID="{E2B878DA-0781-46F1-BFA6-8440FAA95204}">
 														<PropertyList>
 															<Property Name="CueType" Type="int16" Value="1"/>
-															<Property Name="TimeMs" Type="Real64" Value="4000"/>
+															<Property Name="TimeMs" Type="Real64" Value="16000"/>
 														</PropertyList>
 													</MusicCue>
 												</Local>
@@ -1097,6 +1130,11 @@
 							<Reference>
 								<Local>
 									<MultiSwitchEntry Name="" ID="{B83B8AB8-51A8-4F28-9BB6-235762A525B6}">
+										<ReferenceList>
+											<Reference Name="AudioNode">
+												<ObjectRef Name="StingerTesting" ID="{4FEA146A-F1AB-48BB-895E-F51F739687FD}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+											</Reference>
+										</ReferenceList>
 										<ObjectLists>
 											<ObjectList Name="EntryPath">
 												<Reference>
@@ -1110,14 +1148,32 @@
 									</MultiSwitchEntry>
 								</Local>
 							</Reference>
+							<Reference>
+								<Local>
+									<MultiSwitchEntry Name="" ID="{8EAA1575-C3EF-4412-9B41-AC8A93C0FD7D}">
+										<ReferenceList>
+											<Reference Name="AudioNode">
+												<ObjectRef Name="StingerTesting" ID="{4FEA146A-F1AB-48BB-895E-F51F739687FD}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+											</Reference>
+										</ReferenceList>
+										<ObjectLists>
+											<ObjectList Name="EntryPath">
+												<Reference>
+													<ObjectRef Name="InGame" ID="{CF648247-C9ED-4CAF-9FD9-E80F63C6FEC3}" WorkUnitID="{2AEE6FD0-60E0-4FF4-867E-61F7A80294FB}"/>
+												</Reference>
+												<Reference>
+													<ObjectRef Name="None" ID="{B42BC888-C4F5-4750-89B0-0886BDFCA55C}" WorkUnitID="{8C94B53F-F418-4C5E-A1DF-0CE27CEC860D}"/>
+												</Reference>
+											</ObjectList>
+										</ObjectLists>
+									</MultiSwitchEntry>
+								</Local>
+							</Reference>
 						</ObjectList>
 						<ObjectList Name="Stingers">
 							<Reference>
 								<Local>
-									<MusicStinger Name="" ID="{5057D165-22AC-41E3-9106-375EC906DDC4}">
-										<PropertyList>
-											<Property Name="PlaySegmentAt" Type="int16" Value="3"/>
-										</PropertyList>
+									<MusicStinger Name="" ID="{A5947E26-60B1-428E-B71B-763E630395D0}">
 										<ReferenceList>
 											<Reference Name="Segment">
 												<ObjectRef Name="stg_checkpoint_G" ID="{39C03479-19C0-442A-86F2-8B7DABFB4032}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
@@ -1131,10 +1187,7 @@
 							</Reference>
 							<Reference>
 								<Local>
-									<MusicStinger Name="" ID="{01255CF1-4AD3-47B9-94FA-09CB20454E82}">
-										<PropertyList>
-											<Property Name="PlaySegmentAt" Type="int16" Value="3"/>
-										</PropertyList>
+									<MusicStinger Name="" ID="{023763F2-6725-4153-8D92-B21B6C648968}">
 										<ReferenceList>
 											<Reference Name="Segment">
 												<ObjectRef Name="stg_path_correct" ID="{62F8B0DB-AD45-4276-ABA6-C057770244D6}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
@@ -1148,10 +1201,7 @@
 							</Reference>
 							<Reference>
 								<Local>
-									<MusicStinger Name="" ID="{7570A42D-0AB2-4815-93E4-96F2056492A5}">
-										<PropertyList>
-											<Property Name="PlaySegmentAt" Type="int16" Value="3"/>
-										</PropertyList>
+									<MusicStinger Name="" ID="{DECB20E8-EB41-4D2C-BAFA-DD02F6CB41D3}">
 										<ReferenceList>
 											<Reference Name="Segment">
 												<ObjectRef Name="stg_path_wrong" ID="{D6F892D7-241D-4C37-87E7-3C7F3ED8064F}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
@@ -1165,10 +1215,7 @@
 							</Reference>
 							<Reference>
 								<Local>
-									<MusicStinger Name="" ID="{BBC0196B-868B-4228-8F95-7FD8EE068F32}">
-										<PropertyList>
-											<Property Name="PlaySegmentAt" Type="int16" Value="3"/>
-										</PropertyList>
+									<MusicStinger Name="" ID="{10C19F18-99DA-4130-97C4-077EE9827655}">
 										<ReferenceList>
 											<Reference Name="Segment">
 												<ObjectRef Name="stg_puzzle_completed_G" ID="{7A6C7594-9F34-44AE-A00E-826E3552904B}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>

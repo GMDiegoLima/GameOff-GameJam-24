@@ -1,9 +1,0 @@
-Event	ID	Name			Wwise Object Path	Notes
-	612075679	checkpoint			\Music\Stingers\checkpoint	
-	2687737065	puzzle_success			\Music\Stingers\puzzle_success	
-	3587245554	path_wrong			\Music\Stingers\path_wrong	
-	4076456346	path_correct_04			\Music\Stingers\path_correct_04	
-	4076456348	path_correct_02			\Music\Stingers\path_correct_02	
-	4076456349	path_correct_03			\Music\Stingers\path_correct_03	
-	4076456351	path_correct_01			\Music\Stingers\path_correct_01	
-

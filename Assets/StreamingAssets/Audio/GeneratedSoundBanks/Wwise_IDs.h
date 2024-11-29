@@ -15,6 +15,10 @@ namespace AK
     {
         static const AkUniqueID BAT_ATTACK = 3423338245U;
         static const AkUniqueID BAT_MOVEMENT = 2757895098U;
+        static const AkUniqueID BOSS_PUZZLE_01 = 2764760917U;
+        static const AkUniqueID BOSS_PUZZLE_02 = 2764760918U;
+        static const AkUniqueID BOSS_PUZZLE_03 = 2764760919U;
+        static const AkUniqueID BOSS_PUZZLE_04 = 2764760912U;
         static const AkUniqueID CHECKPOINT = 612075679U;
         static const AkUniqueID CHEST_OPENS = 2787926982U;
         static const AkUniqueID COFFIN = 2274969374U;
@@ -43,6 +47,7 @@ namespace AK
         static const AkUniqueID PATH_CORRECT_04 = 4076456346U;
         static const AkUniqueID PATH_WRONG = 3587245554U;
         static const AkUniqueID PLATE = 282449107U;
+        static const AkUniqueID PLAY_MUSIC = 2932040671U;
         static const AkUniqueID PROJECTILE_ARROW = 3456241342U;
         static const AkUniqueID PROJECTILE_FIRE = 3777725015U;
         static const AkUniqueID PROJECTILE_SKELETON = 3920484766U;
@@ -51,7 +56,6 @@ namespace AK
         static const AkUniqueID SKELETON_ATTACK = 2888548111U;
         static const AkUniqueID SPIKE_TRAP = 17253085U;
         static const AkUniqueID TESTINGEVENT = 946158365U;
-        static const AkUniqueID TESTINGSTINGERS = 2550066322U;
         static const AkUniqueID WIRE_TURN = 2855283372U;
         static const AkUniqueID WOLF_ATTACK = 1571748476U;
     } // namespace EVENTS
