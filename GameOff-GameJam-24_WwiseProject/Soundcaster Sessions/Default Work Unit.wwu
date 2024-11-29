@@ -57,10 +57,20 @@
 					</CurrentSwitchList>
 				</SoundcasterSession>
 				<SoundcasterSession Name="StingerTesting" ID="{B3E6565F-401E-4A80-9135-008F901E8266}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="play_music" ID="{425FC2D8-06B7-46FC-A0CD-E3075D3B99A7}" WorkUnitID="{88DB0AA5-00E4-4A46-B0C3-41653FD3F383}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="walking_flying" ID="{DF061EA7-1FB5-4297-A596-69CBA804BDDE}"/>
 							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="path_pitch" ID="{8B878E2D-2B48-4760-A634-022676CF8BD6}"/>
+							<Value>14.6047761496729</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">

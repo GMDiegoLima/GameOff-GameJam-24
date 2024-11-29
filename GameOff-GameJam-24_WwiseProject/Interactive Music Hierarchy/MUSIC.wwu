@@ -238,7 +238,6 @@
 											<MusicCue Name="Exit Cue" ID="{EB4600A3-48FB-4F69-BC25-27FF80D77543}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="1"/>
-													<Property Name="TimeMs" Type="Real64" Value="4499.54166666667"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -479,7 +478,7 @@
 																							</Point>
 																							<Point>
 																								<XPos>5.48819</XPos>
-																								<YPos>-0</YPos>
+																								<YPos>0</YPos>
 																								<Flags>37</Flags>
 																							</Point>
 																						</PointList>

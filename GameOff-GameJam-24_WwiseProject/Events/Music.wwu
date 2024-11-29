@@ -11,6 +11,16 @@
 					<ChildrenList>
 						<Event Name="path_correct_01" ID="{DADE9175-DF15-4098-8C92-5CA87F590424}">
 							<ChildrenList>
+								<Action Name="" ID="{894998CE-E416-4A19-99BE-1E5B5B194D3D}" ShortID="910486516">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="39"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="path_pitch" ID="{8B878E2D-2B48-4760-A634-022676CF8BD6}" WorkUnitID="{12B23305-5568-49C3-8AB6-2C34EBEFEB20}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 								<Action Name="" ID="{F751F3BA-2227-4595-8AEE-2BA1B2E46029}" ShortID="101312039">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="38"/>
