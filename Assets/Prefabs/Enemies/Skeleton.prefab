@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8132735316152579534}
   - component: {fileID: 2350636821554187055}
   - component: {fileID: -801861151991503601}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: Skeleton
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -228,6 +228,7 @@ MonoBehaviour:
   stopPeriodTimer: 0
   attackCDTimer: 0
   chaseMark: {fileID: 0}
+  questionMark: {fileID: 0}
 --- !u!114 &2350636821554187055
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3055231633068254372}
   - component: {fileID: 2476882757876158681}
   - component: {fileID: 5875732642804135389}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: FatBat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -227,6 +227,7 @@ MonoBehaviour:
   stopPeriodTimer: 0
   attackCDTimer: 0
   chaseMark: {fileID: 0}
+  questionMark: {fileID: 0}
 --- !u!114 &5875732642804135389
 MonoBehaviour:
   m_ObjectHideFlags: 0

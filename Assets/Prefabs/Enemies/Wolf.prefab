@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4587860536581880562}
   - component: {fileID: 3052135606880161706}
   - component: {fileID: 3093141061861664081}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: Wolf
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -227,6 +227,7 @@ MonoBehaviour:
   stopPeriodTimer: 0
   attackCDTimer: 0
   chaseMark: {fileID: 0}
+  questionMark: {fileID: 0}
 --- !u!114 &3093141061861664081
 MonoBehaviour:
   m_ObjectHideFlags: 0
