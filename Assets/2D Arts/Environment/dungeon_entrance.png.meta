@@ -1,19 +1,22 @@
 fileFormatVersion: 2
-guid: 0daa823c879f66e4fb4d91bebc3693c0
+guid: b76d98a4c412d4641887bc88e7fa7228
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3997525216071136350
-    second: portal_withtrim_spritesheet_0
+      213: -5991300227377833138
+    second: dungeon_entrance_0
   - first:
-      213: -272819867810110100
-    second: portal_withtrim_spritesheet_1
+      213: 3363198884100640543
+    second: dungeon_entrance_1
   - first:
-      213: 933984027637934591
-    second: portal_withtrim_spritesheet_2
+      213: 7854300736204485013
+    second: dungeon_entrance_2
   - first:
-      213: 5579506530200922956
-    second: portal_withtrim_spritesheet_3
+      213: 3828711596913135972
+    second: dungeon_entrance_3
+  - first:
+      213: -5724378438564339710
+    second: dungeon_entrance_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,13 +125,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: portal_withtrim_spritesheet_0
+      name: dungeon_entrance_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 39
-        height: 43
+        x: 15
+        y: 31
+        width: 34
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2abc96beeffe588c0800000000000000
-      internalID: -3997525216071136350
+      spriteID: e4b5d6cbf20aadca0800000000000000
+      internalID: -5991300227377833138
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_withtrim_spritesheet_1
+      name: dungeon_entrance_1
       rect:
         serializedVersion: 2
-        x: 37
-        y: 0
-        width: 40
-        height: 43
+        x: 57
+        y: 47
+        width: 20
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,20 +162,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c65628396cfb63cf0800000000000000
-      internalID: -272819867810110100
+      spriteID: f1f0fcbe09b7cae20800000000000000
+      internalID: 3363198884100640543
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_withtrim_spritesheet_2
+      name: dungeon_entrance_2
       rect:
         serializedVersion: 2
-        x: 75
-        y: 0
-        width: 40
-        height: 43
+        x: 57
+        y: 29
+        width: 20
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +184,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ff96f31568d26fc00800000000000000
-      internalID: 933984027637934591
+      spriteID: 591be8cd7e4100d60800000000000000
+      internalID: 7854300736204485013
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: portal_withtrim_spritesheet_3
+      name: dungeon_entrance_3
       rect:
         serializedVersion: 2
-        x: 113
-        y: 0
-        width: 39
-        height: 43
+        x: 77
+        y: 47
+        width: 20
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,8 +206,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c4b2992b0a36e6d40800000000000000
-      internalID: 5579506530200922956
+      spriteID: 4611d6979e0522530800000000000000
+      internalID: 3828711596913135972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dungeon_entrance_4
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 29
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 200a771a32cee80b0800000000000000
+      internalID: -5724378438564339710
       vertices: []
       indices: 
       edges: []
@@ -222,11 +247,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      portal_withtrim_spritesheet_0: -3997525216071136350
-      portal_withtrim_spritesheet_1: -272819867810110100
-      portal_withtrim_spritesheet_2: 933984027637934591
-      portal_withtrim_spritesheet_3: 5579506530200922956
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
