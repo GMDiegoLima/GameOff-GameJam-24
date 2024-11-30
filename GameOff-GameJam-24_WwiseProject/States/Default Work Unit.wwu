@@ -31,6 +31,13 @@
 						<State Name="Yes" ID="{25D82889-7F0D-4ADD-B81A-0FFA6D0FA6C3}"/>
 					</ChildrenList>
 				</StateGroup>
+				<StateGroup Name="GameplayStatus" ID="{34FB17A7-5FD3-49AE-A6D9-0FCBA3B2D518}">
+					<ChildrenList>
+						<State Name="None" ID="{02374B2D-9DDA-4DCE-94AA-D5FC0AD37D7E}"/>
+						<State Name="Combat" ID="{FBFB5449-185B-4490-A187-B1C989052DC5}"/>
+						<State Name="Explore" ID="{CB187DF8-138A-4101-A61B-72F1E3A403E7}"/>
+					</ChildrenList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>
