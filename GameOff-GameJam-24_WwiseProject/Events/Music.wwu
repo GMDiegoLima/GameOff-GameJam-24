@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{88DB0AA5-00E4-4A46-B0C3-41653FD3F383}" SchemaVersion="119">
+<WwiseDocument Type="WorkUnit" ID="{88DB0AA5-00E4-4A46-B0C3-41653FD3F383}" SchemaVersion="123">
 	<Events>
 		<WorkUnit Name="Music" ID="{88DB0AA5-00E4-4A46-B0C3-41653FD3F383}" PersistMode="Standalone">
 			<PropertyList>

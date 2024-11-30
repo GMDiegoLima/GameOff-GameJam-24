@@ -15,3 +15,5 @@ MonoBehaviour:
   objectName: path_correct_03
   id: 4076456349
   guid: 290B9577-3ABB-4345-B538-2E82B0B3D50D
+  IsInUserDefinedSoundBank: 1
+  IsAutoBankLoaded: 0

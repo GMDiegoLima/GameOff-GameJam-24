@@ -15,3 +15,5 @@ MonoBehaviour:
   objectName: play_music
   id: 2932040671
   guid: 425FC2D8-06B7-46FC-A0CD-E3075D3B99A7
+  IsInUserDefinedSoundBank: 1
+  IsAutoBankLoaded: 0

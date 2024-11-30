@@ -15,3 +15,5 @@ MonoBehaviour:
   objectName: lever
   id: 2782712987
   guid: FC40CA5E-5BB0-4F5D-85A7-E821BFE318B2
+  IsInUserDefinedSoundBank: 1
+  IsAutoBankLoaded: 0

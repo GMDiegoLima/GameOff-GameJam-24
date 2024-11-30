@@ -55,6 +55,7 @@ namespace AK
         static const AkUniqueID ROCK_PUSH = 2827948781U;
         static const AkUniqueID SKELETON_ATTACK = 2888548111U;
         static const AkUniqueID SPIKE_TRAP = 17253085U;
+        static const AkUniqueID STOP_MUSIC = 2837384057U;
         static const AkUniqueID TESTINGEVENT = 946158365U;
         static const AkUniqueID WIRE_TURN = 2855283372U;
         static const AkUniqueID WOLF_ATTACK = 1571748476U;
@@ -62,6 +63,18 @@ namespace AK
 
     namespace STATES
     {
+        namespace GAMEPLAYSTATUS
+        {
+            static const AkUniqueID GROUP = 843029863U;
+
+            namespace STATE
+            {
+                static const AkUniqueID COMBAT = 2764240573U;
+                static const AkUniqueID EXPLORE = 579523862U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace GAMEPLAYSTATUS
+
         namespace GAMESTATUS
         {
             static const AkUniqueID GROUP = 1045871717U;
@@ -74,6 +87,18 @@ namespace AK
             } // namespace STATE
         } // namespace GAMESTATUS
 
+        namespace GHOSTMODE
+        {
+            static const AkUniqueID GROUP = 149758843U;
+
+            namespace STATE
+            {
+                static const AkUniqueID NO = 1668749452U;
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID YES = 979470758U;
+            } // namespace STATE
+        } // namespace GHOSTMODE
+
         namespace MUSICSTATE
         {
             static const AkUniqueID GROUP = 1021618141U;
@@ -81,7 +106,9 @@ namespace AK
             namespace STATE
             {
                 static const AkUniqueID BOSS = 1560169506U;
-                static const AkUniqueID DUNGEON = 608898761U;
+                static const AkUniqueID DUNGEON1 = 3945285210U;
+                static const AkUniqueID DUNGEON2 = 3945285209U;
+                static const AkUniqueID DUNGEON3 = 3945285208U;
                 static const AkUniqueID NONE = 748895195U;
                 static const AkUniqueID TUTORIAL = 3762955427U;
                 static const AkUniqueID VILLAGE = 3945572659U;
@@ -159,7 +186,6 @@ namespace AK
         static const AkUniqueID MASTER = 4056684167U;
         static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID PATH_PITCH = 1446300075U;
-        static const AkUniqueID PLAYER_HEALTH = 215992295U;
         static const AkUniqueID SFX = 393239870U;
         static const AkUniqueID WALKING_FLYING = 2945611440U;
     } // namespace GAME_PARAMETERS
@@ -167,6 +193,7 @@ namespace AK
     namespace TRIGGERS
     {
         static const AkUniqueID CHECKPOINT = 612075679U;
+        static const AkUniqueID DEAD = 2044049779U;
         static const AkUniqueID PATH_CORRECT = 4156519531U;
         static const AkUniqueID PATH_WRONG = 3587245554U;
         static const AkUniqueID PUZZLE_SUCCESS = 2687737065U;

@@ -15,6 +15,7 @@ public enum AkAudioSessionCategoryOptions {
   AkAudioSessionCategoryOptionDuckOthers = 2,
   AkAudioSessionCategoryOptionAllowBluetooth = 4,
   AkAudioSessionCategoryOptionDefaultToSpeaker = 8,
-  AkAudioSessionCategoryOptionAllowBluetoothA2DP = 0x20
+  AkAudioSessionCategoryOptionAllowBluetoothA2DP = 0x20,
+  AkAudioSessionCategoryOptions_Last
 }
 #endif // #if UNITY_IOS && ! UNITY_EDITOR

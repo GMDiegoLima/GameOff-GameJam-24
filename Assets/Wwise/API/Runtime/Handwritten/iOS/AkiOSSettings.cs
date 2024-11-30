@@ -85,6 +85,7 @@ public class AkiOSSettings : AkWwiseInitializationSettings.PlatformSettings
 			DuckOthers = 2,
 			AllowBluetooth = 4,
 			DefaultToSpeaker = 8,
+			AllowBluetoothA2DP = 0x20
 		}
 
 		[UnityEngine.Tooltip("The IDs of the iOS audio session category options, used for customizing the audio session category features. These IDs are functionally equivalent to the corresponding constants defined by the iOS audio session service back-end (AVAudioSession). Refer to Xcode documentation for details on the audio session category options.")]
@@ -105,6 +106,16 @@ public class AkiOSSettings : AkWwiseInitializationSettings.PlatformSettings
 		[UnityEngine.Tooltip("The IDs of the iOS audio session modes, used for customizing the audio session for typical app types. These IDs are functionally equivalent to the corresponding constants defined by the iOS audio session service back-end (AVAudioSession). Refer to Xcode documentation for details on the audio session category options.")]
 		public Mode m_AudioSessionMode = Mode.Default;
 		
+		public enum RouteSharingPolicy
+		{
+			Default = 0,
+			LongFormAudio = 1,
+			LongFormVideo = 3,
+		}
+
+		[UnityEngine.Tooltip("Determines which audio routes are permitted for the audio session controlled by Wwise. These policies only apply for the \"Playback\" audio session category. These IDs are funtionally equivalent to the corresponding constants defined by the iOS audio session service backend (AVAudioSession). Refer to Xcode documentation for details on the audio session route-sharing policies.")]
+		public RouteSharingPolicy m_AudioSessionRouteSharingPolicy = RouteSharingPolicy.Default;
+		
 		[UnityEngine.Tooltip("Number of Apple Spatial Audio point sources to allocate for 3D audio use (each point source is a system audio object).")]
 		public uint NumSpatialAudioPointSources = 128;
 		
@@ -117,6 +128,7 @@ public class AkiOSSettings : AkWwiseInitializationSettings.PlatformSettings
 			settings.audioSession.eCategory = (AkAudioSessionCategory)m_AudioSessionCategory;
 			settings.audioSession.eCategoryOptions = (AkAudioSessionCategoryOptions)m_AudioSessionCategoryOptions;
 			settings.audioSession.eMode = (AkAudioSessionMode)m_AudioSessionMode;
+			settings.audioSession.eRouteSharingPolicy = (AkAudioSessionRouteSharingPolicy)m_AudioSessionRouteSharingPolicy;
 			settings.uNumSpatialAudioPointSources = NumSpatialAudioPointSources;
 			settings.bVerboseSystemOutput = VerboseSystemOutput;
 #endif

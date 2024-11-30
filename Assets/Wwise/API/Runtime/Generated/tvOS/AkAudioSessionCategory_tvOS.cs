@@ -14,6 +14,7 @@ public enum AkAudioSessionCategory {
   AkAudioSessionCategoryAmbient,
   AkAudioSessionCategorySoloAmbient,
   AkAudioSessionCategoryPlayAndRecord,
-  AkAudioSessionCategoryPlayback
+  AkAudioSessionCategoryPlayback,
+  AkAudioSessionCategory_Last
 }
 #endif // #if UNITY_TVOS && ! UNITY_EDITOR

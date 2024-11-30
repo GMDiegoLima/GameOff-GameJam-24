@@ -42,7 +42,7 @@ public class AkAudioSessionProperties : global::System.IDisposable {
       if (swigCPtr != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          AkSoundEnginePINVOKE.CSharp_delete_AkAudioSessionProperties(swigCPtr);
+          AkUnitySoundEnginePINVOKE.CSharp_delete_AkAudioSessionProperties(swigCPtr);
         }
         swigCPtr = global::System.IntPtr.Zero;
       }
@@ -50,22 +50,25 @@ public class AkAudioSessionProperties : global::System.IDisposable {
     }
   }
 
-  public AkAudioSessionCategory eCategory { set { AkSoundEnginePINVOKE.CSharp_AkAudioSessionProperties_eCategory_set(swigCPtr, (int)value); }  get { return (AkAudioSessionCategory)AkSoundEnginePINVOKE.CSharp_AkAudioSessionProperties_eCategory_get(swigCPtr); } 
+  public AkAudioSessionCategory eCategory { set { AkUnitySoundEnginePINVOKE.CSharp_AkAudioSessionProperties_eCategory_set(swigCPtr, (int)value); }  get { return (AkAudioSessionCategory)AkUnitySoundEnginePINVOKE.CSharp_AkAudioSessionProperties_eCategory_get(swigCPtr); } 
   }
 
-  public AkAudioSessionCategoryOptions eCategoryOptions { set { AkSoundEnginePINVOKE.CSharp_AkAudioSessionProperties_eCategoryOptions_set(swigCPtr, (int)value); }  get { return (AkAudioSessionCategoryOptions)AkSoundEnginePINVOKE.CSharp_AkAudioSessionProperties_eCategoryOptions_get(swigCPtr); } 
+  public AkAudioSessionCategoryOptions eCategoryOptions { set { AkUnitySoundEnginePINVOKE.CSharp_AkAudioSessionProperties_eCategoryOptions_set(swigCPtr, (int)value); }  get { return (AkAudioSessionCategoryOptions)AkUnitySoundEnginePINVOKE.CSharp_AkAudioSessionProperties_eCategoryOptions_get(swigCPtr); } 
   }
 
-  public AkAudioSessionMode eMode { set { AkSoundEnginePINVOKE.CSharp_AkAudioSessionProperties_eMode_set(swigCPtr, (int)value); }  get { return (AkAudioSessionMode)AkSoundEnginePINVOKE.CSharp_AkAudioSessionProperties_eMode_get(swigCPtr); } 
+  public AkAudioSessionMode eMode { set { AkUnitySoundEnginePINVOKE.CSharp_AkAudioSessionProperties_eMode_set(swigCPtr, (int)value); }  get { return (AkAudioSessionMode)AkUnitySoundEnginePINVOKE.CSharp_AkAudioSessionProperties_eMode_get(swigCPtr); } 
   }
 
-  public AkAudioSessionSetActiveOptions eSetActivateOptions { set { AkSoundEnginePINVOKE.CSharp_AkAudioSessionProperties_eSetActivateOptions_set(swigCPtr, (int)value); }  get { return (AkAudioSessionSetActiveOptions)AkSoundEnginePINVOKE.CSharp_AkAudioSessionProperties_eSetActivateOptions_get(swigCPtr); } 
+  public AkAudioSessionRouteSharingPolicy eRouteSharingPolicy { set { AkUnitySoundEnginePINVOKE.CSharp_AkAudioSessionProperties_eRouteSharingPolicy_set(swigCPtr, (int)value); }  get { return (AkAudioSessionRouteSharingPolicy)AkUnitySoundEnginePINVOKE.CSharp_AkAudioSessionProperties_eRouteSharingPolicy_get(swigCPtr); } 
   }
 
-  public AkAudioSessionBehaviorOptions eAudioSessionBehavior { set { AkSoundEnginePINVOKE.CSharp_AkAudioSessionProperties_eAudioSessionBehavior_set(swigCPtr, (int)value); }  get { return (AkAudioSessionBehaviorOptions)AkSoundEnginePINVOKE.CSharp_AkAudioSessionProperties_eAudioSessionBehavior_get(swigCPtr); } 
+  public AkAudioSessionSetActiveOptions eSetActivateOptions { set { AkUnitySoundEnginePINVOKE.CSharp_AkAudioSessionProperties_eSetActivateOptions_set(swigCPtr, (int)value); }  get { return (AkAudioSessionSetActiveOptions)AkUnitySoundEnginePINVOKE.CSharp_AkAudioSessionProperties_eSetActivateOptions_get(swigCPtr); } 
   }
 
-  public AkAudioSessionProperties() : this(AkSoundEnginePINVOKE.CSharp_new_AkAudioSessionProperties(), true) {
+  public AkAudioSessionBehaviorOptions eAudioSessionBehavior { set { AkUnitySoundEnginePINVOKE.CSharp_AkAudioSessionProperties_eAudioSessionBehavior_set(swigCPtr, (int)value); }  get { return (AkAudioSessionBehaviorOptions)AkUnitySoundEnginePINVOKE.CSharp_AkAudioSessionProperties_eAudioSessionBehavior_get(swigCPtr); } 
+  }
+
+  public AkAudioSessionProperties() : this(AkUnitySoundEnginePINVOKE.CSharp_new_AkAudioSessionProperties(), true) {
   }
 
 }

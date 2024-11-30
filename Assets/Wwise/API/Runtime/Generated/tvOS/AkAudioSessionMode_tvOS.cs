@@ -17,6 +17,7 @@ public enum AkAudioSessionMode {
   AkAudioSessionModeVideoRecording,
   AkAudioSessionModeMeasurement,
   AkAudioSessionModeMoviePlayback,
-  AkAudioSessionModeVideoChat
+  AkAudioSessionModeVideoChat,
+  AkAudioSessionMode_Last
 }
 #endif // #if UNITY_TVOS && ! UNITY_EDITOR
