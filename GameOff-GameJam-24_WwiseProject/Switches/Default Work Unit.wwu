@@ -18,7 +18,7 @@
 						<Switch Name="flying" ID="{2078CF42-5088-4631-9D06-590EF8F549E7}"/>
 					</ChildrenList>
 				</SwitchGroup>
-				<SwitchGroup Name="footsteps_status" ID="{341B5CCB-1F57-4D87-BC39-4034B111F4D3}">
+				<SwitchGroup Name="Footsteps_status" ID="{341B5CCB-1F57-4D87-BC39-4034B111F4D3}">
 					<ChildrenList>
 						<Switch Name="flying" ID="{8357DAA7-B1AA-4F24-B0BD-94E0D9544FAA}"/>
 						<Switch Name="walking" ID="{611E15EB-3C5F-4E3D-9EE3-31BB260B7B86}"/>

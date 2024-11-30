@@ -7,9 +7,11 @@
 					<ChildrenList>
 						<State Name="None" ID="{B42BC888-C4F5-4750-89B0-0886BDFCA55C}"/>
 						<State Name="Boss" ID="{DFCEDA1B-747B-4DF9-B420-E009B2585F1D}"/>
-						<State Name="Dungeon" ID="{E2F08518-7AE9-424A-AED6-175926138EC0}"/>
+						<State Name="Dungeon1" ID="{E2F08518-7AE9-424A-AED6-175926138EC0}"/>
 						<State Name="Village" ID="{B19D70E7-FB8B-4CB2-9EF8-13305456A991}"/>
 						<State Name="Tutorial" ID="{9DDC4CD8-0E86-4970-A1A4-90649B7F50A6}"/>
+						<State Name="Dungeon2" ID="{6C0E0F62-C1BC-4F2C-B585-F610877EC128}"/>
+						<State Name="Dungeon3" ID="{523897CB-966A-41DE-9196-B9049F544951}"/>
 					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>

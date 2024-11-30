@@ -36,10 +36,6 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
-							<GameParameterRef Name="player_health" ID="{60122350-6D92-44B5-938F-57DF204EEEF3}"/>
-							<Value>0</Value>
-						</RTPCValue>
-						<RTPCValue>
 							<GameParameterRef Name="path_pitch" ID="{8B878E2D-2B48-4760-A634-022676CF8BD6}"/>
 							<Value>16.2576687116564</Value>
 						</RTPCValue>
@@ -78,6 +74,7 @@
 						<CurrentStateRef Name="Alive" ID="{B1696563-4FE0-470C-9098-472520DAD3C2}"/>
 						<CurrentStateRef Name="None" ID="{55A230F1-6FD1-4B4F-8DA6-74C26866603D}"/>
 						<CurrentStateRef Name="Static" ID="{B5B0EECD-83F2-4CCC-BF5E-31C4644C7085}"/>
+						<CurrentStateRef Name="None" ID="{05B7DB27-590B-46C2-8DD8-16036EC13C86}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="moving" ID="{13E928FF-C584-4C6B-B40A-A69FAA416F4B}"/>

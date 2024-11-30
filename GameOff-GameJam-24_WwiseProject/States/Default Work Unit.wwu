@@ -24,6 +24,13 @@
 						<State Name="Static" ID="{B5B0EECD-83F2-4CCC-BF5E-31C4644C7085}"/>
 					</ChildrenList>
 				</StateGroup>
+				<StateGroup Name="GhostMode" ID="{5CAA70C5-CC81-4EA4-A778-1922171AADEF}">
+					<ChildrenList>
+						<State Name="None" ID="{05B7DB27-590B-46C2-8DD8-16036EC13C86}"/>
+						<State Name="No" ID="{FAAFB071-92CC-413C-AF75-3648AE43364B}"/>
+						<State Name="Yes" ID="{25D82889-7F0D-4ADD-B81A-0FFA6D0FA6C3}"/>
+					</ChildrenList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>

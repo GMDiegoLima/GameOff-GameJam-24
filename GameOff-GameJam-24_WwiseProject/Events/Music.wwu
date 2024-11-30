@@ -181,6 +181,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="stop_music" ID="{2AA4F265-F10F-4923-8B37-4EB49F1E682F}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
