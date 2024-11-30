@@ -124,7 +124,7 @@ namespace HeneGames.DialogueSystem
             currentDialogueManager.StartDialogue();
         }
 
-        public void ShowSentence(DialogueCharacter _dialogueCharacter, string _message)
+        public void ShowSentence(DialogueCharacter _dialogueCharacter, string _message, AK.Wwise.Event sentenceSFX)
         {
             StopAllCoroutines();
 
@@ -136,7 +136,7 @@ namespace HeneGames.DialogueSystem
 
             if (animateText)
             {
-                StartCoroutine(WriteTextToTextmesh(_message, messageText));
+                StartCoroutine(WriteTextToTextmesh(_message, messageText, sentenceSFX));
             }
             else
             {
@@ -177,7 +177,7 @@ namespace HeneGames.DialogueSystem
             return currentDialogueManager.CurrentSentenceLenght();
         }
 
-        IEnumerator WriteTextToTextmesh(string _text, TextMeshProUGUI _textMeshObject)
+        IEnumerator WriteTextToTextmesh(string _text, TextMeshProUGUI _textMeshObject, AK.Wwise.Event sentenceSFX)
         {
             typing = true;
 
@@ -189,6 +189,7 @@ namespace HeneGames.DialogueSystem
             foreach(char _letter in _letters)
             {
                 _textMeshObject.text += _letter;
+                sentenceSFX.Post(gameObject);
 
                 if(_textMeshObject.text.Length == _letters.Length)
                 {

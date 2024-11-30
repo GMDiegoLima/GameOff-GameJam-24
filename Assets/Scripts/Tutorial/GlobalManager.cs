@@ -54,6 +54,7 @@ public class GlobalManager : MonoBehaviour
         {
             if (tutorialFinished)
             {
+                AkSoundEngine.SetState("MusicState", "Village");
                 dialogueTutorial = GameObject.Find("DialogueTutorial");
                 borderTutorial = GameObject.Find("BorderTutorial");
                 dialogueTutorial.SetActive(false);
@@ -61,11 +62,30 @@ public class GlobalManager : MonoBehaviour
             }
             else
             {
+                AkSoundEngine.SetState("MusicState", "Tutorial");
                 dialogueTutorial = GameObject.Find("DialogueTutorial");
                 borderTutorial = GameObject.Find("BorderTutorial");
                 dialogueTutorial.SetActive(true);
                 borderTutorial.SetActive(true);
             }
+        }
+        switch (scene.name)
+        {
+            case "Graveyard":
+                AkSoundEngine.SetState("MusicState", "Tutorial");
+                break;
+            case "Dungeon1":
+                AkSoundEngine.SetState("MusicState", "Dungeon1");
+                break;
+            case "Dungeon2":
+                AkSoundEngine.SetState("MusicState", "Dungeon2");
+                break;
+            case "Dungeon3":
+                AkSoundEngine.SetState("MusicState", "Dungeon3");
+                break;
+            case "FinalBoss":
+                AkSoundEngine.SetState("MusicState", "Boss");
+                break;
         }
     }
     public void AddKey()

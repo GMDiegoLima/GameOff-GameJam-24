@@ -273,7 +273,7 @@ namespace HeneGames.DialogueSystem
             if (sentences[currentSentence].dialogueCharacter != null)
             {
                 //Show sentence on the screen
-                DialogueUI.instance.ShowSentence(sentences[currentSentence].dialogueCharacter, sentences[currentSentence].sentence);
+                DialogueUI.instance.ShowSentence(sentences[currentSentence].dialogueCharacter, sentences[currentSentence].sentence, sentences[currentSentence].sentenceSFX);
 
                 //Invoke sentence event
                 sentences[currentSentence].sentenceEvent.Invoke();
@@ -284,7 +284,7 @@ namespace HeneGames.DialogueSystem
                 _dialogueCharacter.characterName = "";
                 _dialogueCharacter.characterPhoto = null;
 
-                DialogueUI.instance.ShowSentence(_dialogueCharacter, sentences[currentSentence].sentence);
+                DialogueUI.instance.ShowSentence(_dialogueCharacter, sentences[currentSentence].sentence, sentences[currentSentence].sentenceSFX);
 
                 //Invoke sentence event
                 sentences[currentSentence].sentenceEvent.Invoke();
@@ -313,6 +313,7 @@ namespace HeneGames.DialogueSystem
         public float skipDelayTime = 0.5f;
 
         public AudioClip sentenceSound;
+        public AK.Wwise.Event sentenceSFX;
 
         public UnityEvent sentenceEvent;
     }

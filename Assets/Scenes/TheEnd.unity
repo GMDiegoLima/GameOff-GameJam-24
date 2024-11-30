@@ -258,7 +258,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Character Artist - Tyler Dias
 
-    Environment Artist- Mago
+    Environment Artist- Mago.pixelart
 
 
 
@@ -7175,6 +7175,26 @@ PrefabInstance:
       propertyPath: sentences.Array.data[4].dialogueCharacter
       value: 
       objectReference: {fileID: 11400000, guid: 105058c875ba41b4fbbe295439037d01, type: 2}
+    - target: {fileID: 8557568673631317014, guid: a0dbeffc84669e24f994d387893a803d, type: 3}
+      propertyPath: sentences.Array.data[0].sentenceSFX.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 5c45e4f52d8712d4a8d41116e61aaea8, type: 2}
+    - target: {fileID: 8557568673631317014, guid: a0dbeffc84669e24f994d387893a803d, type: 3}
+      propertyPath: sentences.Array.data[1].sentenceSFX.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 5c45e4f52d8712d4a8d41116e61aaea8, type: 2}
+    - target: {fileID: 8557568673631317014, guid: a0dbeffc84669e24f994d387893a803d, type: 3}
+      propertyPath: sentences.Array.data[2].sentenceSFX.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 5c45e4f52d8712d4a8d41116e61aaea8, type: 2}
+    - target: {fileID: 8557568673631317014, guid: a0dbeffc84669e24f994d387893a803d, type: 3}
+      propertyPath: sentences.Array.data[3].sentenceSFX.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 5c45e4f52d8712d4a8d41116e61aaea8, type: 2}
+    - target: {fileID: 8557568673631317014, guid: a0dbeffc84669e24f994d387893a803d, type: 3}
+      propertyPath: sentences.Array.data[4].sentenceSFX.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 5c45e4f52d8712d4a8d41116e61aaea8, type: 2}
     - target: {fileID: 8557568673631317014, guid: a0dbeffc84669e24f994d387893a803d, type: 3}
       propertyPath: sentences.Array.data[1].sentenceEvent.m_PersistentCalls.m_Calls.Array.size
       value: 0
@@ -52914,7 +52934,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7027632970052796844, guid: 98ace3a7e2f7d894fbd09d390e488fb9, type: 3}
       propertyPath: orthographic size
-      value: 3
+      value: 3.375
       objectReference: {fileID: 0}
     - target: {fileID: 7772584563165250645, guid: 98ace3a7e2f7d894fbd09d390e488fb9, type: 3}
       propertyPath: m_Name
@@ -52927,10 +52947,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 2925548312380714605, guid: 98ace3a7e2f7d894fbd09d390e488fb9, type: 3}
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 5139532317743366531, guid: 98ace3a7e2f7d894fbd09d390e488fb9, type: 3}
-      insertIndex: 4
-      addedObject: {fileID: 877183697}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7772584563165250645, guid: 98ace3a7e2f7d894fbd09d390e488fb9, type: 3}
       insertIndex: -1
@@ -53058,19 +53075,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 877183693}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.16666666, y: 0.16666666, z: 0.16666666}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 27718236}
-  m_Father: {fileID: 1732495873}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 159.99994, y: 90}
-  m_SizeDelta: {x: 1920, y: 1080}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &877353030
 GameObject:
   m_ObjectHideFlags: 0
@@ -53557,11 +53574,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4410804149942135475, guid: b850ee40a102f594cbe79e2b978d37bb, type: 3}
   m_PrefabInstance: {fileID: 1594671053}
   m_PrefabAsset: {fileID: 0}
---- !u!224 &1732495873 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5139532317743366531, guid: 98ace3a7e2f7d894fbd09d390e488fb9, type: 3}
-  m_PrefabInstance: {fileID: 837537684}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1752019872 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7772584563165250645, guid: 98ace3a7e2f7d894fbd09d390e488fb9, type: 3}
@@ -53877,4 +53889,5 @@ SceneRoots:
   - {fileID: 1847661043}
   - {fileID: 195292340}
   - {fileID: 873245702}
+  - {fileID: 877183697}
   - {fileID: 6929914}

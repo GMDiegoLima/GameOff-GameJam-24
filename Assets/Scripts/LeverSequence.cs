@@ -45,7 +45,7 @@ public class LeverSequence : MonoBehaviour
                     if (puzzleActManager.IsNextInSequence(leverName))
                     {
                         Debug.Log("Correct lever");
-                        AkSoundEngine.PostEvent("path_correct_01", gameObject);
+                        AkSoundEngine.PostEvent("boss_correct_01", gameObject);
                     }
                     puzzleActManager.RegisterActivation(leverName);
                 }
