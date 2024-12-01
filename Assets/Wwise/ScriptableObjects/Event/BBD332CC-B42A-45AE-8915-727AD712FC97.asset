@@ -15,3 +15,5 @@ MonoBehaviour:
   objectName: evil_dialogue
   id: 1316490268
   guid: BBD332CC-B42A-45AE-8915-727AD712FC97
+  IsInUserDefinedSoundBank: 1
+  IsAutoBankLoaded: 0
