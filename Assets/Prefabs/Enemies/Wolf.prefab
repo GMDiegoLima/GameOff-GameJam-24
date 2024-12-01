@@ -220,7 +220,7 @@ MonoBehaviour:
   maxStopPeriod: 3
   minVelocity: -3
   maxVelocity: 3
-  chaseSpeed: 3.5
+  chaseSpeed: 2.5
   attackCD: 3
   isMoving: 0
   movePeriodTimer: 0

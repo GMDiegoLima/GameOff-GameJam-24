@@ -3275,7 +3275,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: DeadBody
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -801861151991503601, guid: e927855a21151b84b91c7e9583679c23, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -3638,8 +3639,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 795429502}
-  speed: 5
-  minDistance: 1.5
+  speed: 3
+  minDistance: 2
 --- !u!1 &1969992818
 GameObject:
   m_ObjectHideFlags: 0
