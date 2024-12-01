@@ -4,7 +4,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	365141489	normal_dialogue			\UI\normal_dialogue	
 	445985471	dig			\Sfx\Player\dig	
 	493036092	enemy_alert			\Sfx\Creatures_npcs\enemy_alert	
-	612075679	checkpoint			\Music\Stingers\checkpoint	
 	946158365	TestingEvent			\Testing\TestingEvent	
 	1029929321	disembody			\Sfx\Player\disembody	
 	1306883239	menu_cursor_move			\UI\menu_cursor_move	
@@ -15,7 +14,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	2385628198	footsteps			\Sfx\Player\footsteps	
 	2485905105	menu_cursor_back			\UI\menu_cursor_back	
 	2534371823	goblin_attack			\Sfx\Creatures_npcs\goblin\goblin_attack	
-	2687737065	puzzle_success			\Music\Stingers\puzzle_success	
 	2757895098	bat_movement			\Sfx\Creatures_npcs\bat\bat_movement	
 	2758806427	hurt_enemy			\Sfx\Creatures_npcs\hurt_enemy	
 	2764760912	boss_puzzle_04			\Sfx\Creatures_npcs\boss\boss_puzzle_04	
@@ -26,24 +24,17 @@ Event	ID	Name			Wwise Object Path	Notes
 	2787926982	chest_opens			\Sfx\Objects\chest_opens	
 	2824641886	door_opens_stop			\Sfx\Objects\door_opens_stop	
 	2827948781	rock_push			\Sfx\Objects\rock_push	
-	2837384057	stop_music			\Music\stop_music	
 	2855283372	wire_turn			\Sfx\Objects\wire_turn	
 	2888548111	skeleton_attack			\Sfx\Creatures_npcs\skeleton\skeleton_attack	
-	2932040671	play_music			\Music\play_music	
 	3193947170	hurt			\Sfx\Player\hurt	
 	3200708208	menu_cursor_select			\UI\menu_cursor_select	
 	3423338245	bat_attack			\Sfx\Creatures_npcs\bat\bat_attack	
 	3456241342	projectile_arrow			\Sfx\Objects\projectile_arrow	
-	3587245554	path_wrong			\Music\Stingers\path_wrong	
 	3777725015	projectile_fire			\Sfx\Objects\projectile_fire	
 	3875653779	door_opens			\Sfx\Objects\door_opens	
 	3920484766	projectile_skeleton			\Sfx\Objects\projectile_skeleton	
 	3936390293	destroy			\Sfx\Player\destroy	
 	3989366099	embody			\Sfx\Player\embody	
-	4076456346	path_correct_04			\Music\Stingers\path_correct_04	
-	4076456348	path_correct_02			\Music\Stingers\path_correct_02	
-	4076456349	path_correct_03			\Music\Stingers\path_correct_03	
-	4076456351	path_correct_01			\Music\Stingers\path_correct_01	
 	4159556712	item_pick			\Sfx\Player\item_pick	
 
 Switch Group	ID	Name			Wwise Object Path	Notes

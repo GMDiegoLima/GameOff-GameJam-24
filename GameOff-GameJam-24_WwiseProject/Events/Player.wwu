@@ -12,6 +12,17 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{FAB1508C-3D24-425D-BD2E-400EC797ABAF}" ShortID="1007561520">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Delay" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="player_footsteps" ID="{EDCAB433-4A6F-4EF2-ADFF-DAE616C87168}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="dig" ID="{1189ADBD-E4E0-4068-B9DB-12D531AF1D17}">

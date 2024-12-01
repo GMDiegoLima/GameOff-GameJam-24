@@ -639,6 +639,7 @@
 										<MusicTransition Name="Transition" ID="{F068FCFB-A2CC-48E6-8096-CC8710A7A67E}">
 											<PropertyList>
 												<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+												<Property Name="ExitSourceAt" Type="int16" Value="0"/>
 											</PropertyList>
 											<TransitionInfo>
 												<SourceFadeOut>
@@ -737,7 +738,18 @@
 											</PropertyList>
 											<ChildrenList>
 												<MusicTransition Name="Transition" ID="{669F0531-C30E-4F49-BAFC-A7DAE35AC37C}">
-													<TransitionInfo/>
+													<PropertyList>
+														<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo>
+														<SourceFadeOut>
+															<MusicFade Name="Source Fade-out" ID="{54CF5E75-26BD-4890-8A37-907B519D2E0F}">
+																<PropertyList>
+																	<Property Name="FadeType" Type="int16" Value="1"/>
+																</PropertyList>
+															</MusicFade>
+														</SourceFadeOut>
+													</TransitionInfo>
 												</MusicTransition>
 											</ChildrenList>
 											<TransitionInfo/>
@@ -2792,7 +2804,7 @@
 																								</PropertyList>
 																								<PointList>
 																									<Point>
-																										<XPos>-0</XPos>
+																										<XPos>0</XPos>
 																										<YPos>0</YPos>
 																										<Flags>5</Flags>
 																									</Point>
@@ -2811,7 +2823,7 @@
 																								</PropertyList>
 																								<PointList>
 																									<Point>
-																										<XPos>-0</XPos>
+																										<XPos>0</XPos>
 																										<YPos>0</YPos>
 																										<Flags>5</Flags>
 																									</Point>
@@ -2830,7 +2842,7 @@
 																								</PropertyList>
 																								<PointList>
 																									<Point>
-																										<XPos>-0</XPos>
+																										<XPos>0</XPos>
 																										<YPos>0</YPos>
 																										<Flags>5</Flags>
 																									</Point>
@@ -4978,7 +4990,7 @@
 									<MultiSwitchEntry Name="" ID="{A8727513-94D8-46FB-AF69-B36EFD786581}">
 										<ReferenceList>
 											<Reference Name="AudioNode">
-												<ObjectRef Name="Village" ID="{7A13AF6A-DCF4-4A34-8E34-5D4DF6C1825F}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+												<ObjectRef Name="Dungeons" ID="{42671B7E-710B-4C57-820E-23A847C57C70}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
 											</Reference>
 										</ReferenceList>
 										<ObjectLists>
