@@ -18,7 +18,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{F0E8CC61-391F-E77D-E6FC-52A39637F28D}",
+    "Hash": "{B326C722-2C9D-7DF9-CAF4-69FCF2ED4B02}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -450,7 +450,7 @@
     "Type": "User",
     "GUID": "{93536651-6257-4A23-B927-CEC7323273DD}",
     "Language": "SFX",
-    "Hash": "{32B40CFF-FBB3-A343-0F81-3400DE982FD7}",
+    "Hash": "{4F169BD8-F46D-1EDF-DE51-A3CD966AD32F}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -485,7 +485,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "sfx_footsteps_stone_var_01.wav",
-      "CachePath": "D7/{D71CFE7C-30E3-AB0C-375C-F61F78615353}.wem"
+      "CachePath": "B7/{B7CEB8A6-A7A6-1C25-697D-CC7943AD7181}.wem"
      },
      {
       "Id": "46494471",
@@ -493,7 +493,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_drums_dnb_intro02_bpm_165_4-4_16M.wav",
-      "CachePath": "66/{660C9E10-7715-EC87-92B3-AFAF5DF8DB94}.wem"
+      "CachePath": "C5/{C56D6E40-78AC-765F-BCEA-4A231C30D210}.wem"
      },
      {
       "Id": "54325868",
@@ -509,7 +509,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "sfx_footsteps_grass_var_03.wav",
-      "CachePath": "6F/{6FAD093E-9E53-D630-F0B4-8C77786F9245}.wem"
+      "CachePath": "4E/{4EE09799-FCF2-638F-4C0F-5C5014D5C04B}.wem"
      },
      {
       "Id": "63383016",
@@ -517,7 +517,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "sfx_attack_whoosh_var_02.wav",
-      "CachePath": "05/{05A5FA8B-8055-F876-341A-3917A3BB9CCD}.wem"
+      "CachePath": "76/{767420AC-6C78-917C-06A3-78BC79812DE0}.wem"
      },
      {
       "Id": "89604698",
@@ -549,7 +549,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_drums_dnb_intro01_bpm_165_4-4_16M.wav",
-      "CachePath": "C0/{C0FEE6C7-751F-FE0A-ABB7-48CAA8E2CA7D}.wem"
+      "CachePath": "B0/{B06A00C0-AE99-96AC-8210-0E5F8D3013F4}.wem"
      },
      {
       "Id": "138217890",
@@ -557,7 +557,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "sfx_footsteps_parquet_var_02.wav",
-      "CachePath": "A1/{A19467B1-0B54-2EEE-C9ED-B330B4DB0DAD}.wem"
+      "CachePath": "24/{24DEA7F3-BE4F-DE59-EE54-F66DED325397}.wem"
      },
      {
       "Id": "144289834",
@@ -581,7 +581,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_drums_dnb_intro04_bpm_165_4-4_16M.wav",
-      "CachePath": "E8/{E8D10BD3-60D6-2766-48D6-9873A48649ED}.wem"
+      "CachePath": "29/{29EF1BB8-44A8-07AF-FEC5-603AC7D1BADD}.wem"
      },
      {
       "Id": "219868458",
@@ -613,7 +613,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "ui_dialogue_var_01.wav",
-      "CachePath": "B2/{B22D3DC5-8B77-6B86-CD11-2F8DEA917FF1}.wem"
+      "CachePath": "D6/{D67CF680-301F-EA21-282E-5A6F2CABF7A2}.wem"
      },
      {
       "Id": "251830584",
@@ -621,7 +621,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_guitar_lead_theme_bpm_165_4-4_16M.wav.wav",
-      "CachePath": "8D/{8D33F8CB-737C-295B-50CB-B887A26AAF49}.wem"
+      "CachePath": "D9/{D99C440C-C0F0-988E-8AF0-9A68F1ACDA71}.wem"
      },
      {
       "Id": "252760376",
@@ -637,7 +637,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_boss_bridge.wav",
-      "CachePath": "13/{13D78296-7671-37DD-1B69-3F199288EEAF}.wem"
+      "CachePath": "71/{71FCEABE-A73E-1A3D-A46F-48B0745C9FCE}.wem"
      },
      {
       "Id": "302677022",
@@ -645,7 +645,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_village\\Theme02\\mus_village_themeArp_180_12-8_8M.wav",
-      "CachePath": "AC/{AC586BDA-9668-760B-9DF5-315A885CC940}.wem"
+      "CachePath": "CD/{CD72F3D5-54A0-26E2-8A7E-62D7368A350C}.wem"
      },
      {
       "Id": "305096193",
@@ -653,7 +653,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "sfx_obj_plate_on.wav",
-      "CachePath": "AD/{AD004FF8-7E15-8361-70B4-FE4B390F826C}.wem"
+      "CachePath": "67/{67B62E03-D502-0134-5917-A7A699E54C5F}.wem"
      },
      {
       "Id": "317211741",
@@ -661,7 +661,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_pads_chords_bpm_165_4-4_16M.wav",
-      "CachePath": "C6/{C65B9559-D0DC-EF32-52E7-49928E737A88}.wem"
+      "CachePath": "0E/{0E2C2413-7D1D-6219-8736-4824C8D3641C}.wem"
      },
      {
       "Id": "320105167",
@@ -669,7 +669,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_village\\Theme01\\mus_village_theme_180_12-8_8M.wav",
-      "CachePath": "C5/{C5DA2401-EEE3-DE6C-9657-B64B8DE7482D}.wem"
+      "CachePath": "DE/{DE432413-33DA-977F-C7F3-B6B162E9C0CD}.wem"
      },
      {
       "Id": "324848001",
@@ -677,7 +677,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_guitar_rhythm_mute_palm_bpm_165_4-4_16M.wav",
-      "CachePath": "AB/{ABA9C5CE-9AFF-CACC-2FE1-0615976BEE34}.wem"
+      "CachePath": "51/{517F434E-F19B-5FF9-CADF-466EF6EE86DE}.wem"
      },
      {
       "Id": "338213362",
@@ -685,7 +685,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "sfx_attack_whoosh_var_03.wav",
-      "CachePath": "12/{12DC4B8A-6211-8F1F-BE1A-9863F7029CC9}.wem"
+      "CachePath": "9C/{9C0D4459-6A2D-F404-7019-99264B267DDB}.wem"
      },
      {
       "Id": "351445031",
@@ -693,7 +693,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_boss_intro_bpm-120_4-4-001.wav",
-      "CachePath": "9C/{9CB35564-ECF9-3BD4-80D4-8971314DB9C2}.wem"
+      "CachePath": "BD/{BDEA4D6F-4863-413A-4A09-5CE77F0D52B4}.wem"
      },
      {
       "Id": "360602114",
@@ -701,7 +701,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_guitar_rhythm_chords__bpm_165_4-4_16M.wav.wav",
-      "CachePath": "84/{84A448B9-8B6A-A25F-5C47-828D1AC15598}.wem"
+      "CachePath": "8A/{8A19615D-5B5A-BF9F-234E-1257D166F8F2}.wem"
      },
      {
       "Id": "374064659",
@@ -717,7 +717,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "sfx_footsteps_grass_var_01.wav",
-      "CachePath": "70/{703B3EAD-ED18-0BE6-E799-F5CA83DF9170}.wem"
+      "CachePath": "6B/{6BB0FF3A-7EF9-6E37-A6B6-ED837CF8FF8A}.wem"
      },
      {
       "Id": "377805870",
@@ -725,7 +725,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "sfx_footsteps_parquet_var_01.wav",
-      "CachePath": "6C/{6C9CAD73-E1E2-6055-0637-D2F4CCD5B83E}.wem"
+      "CachePath": "C9/{C9324EE4-4834-BF72-8C1D-E4668620EB1E}.wem"
      },
      {
       "Id": "397626789",
@@ -733,7 +733,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "stg_checkpoint_G.wav",
-      "CachePath": "33/{331C528F-59EC-7D16-17E7-9E2E76FC0926}.wem"
+      "CachePath": "0F/{0F7194E8-2597-2A9C-6211-2CD252C8EA79}.wem"
      },
      {
       "Id": "399496196",
@@ -741,7 +741,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_village\\mus_village_Bsection_180_12-8_15M.wav",
-      "CachePath": "66/{660B10F4-ACB3-A4CF-21BA-6D3CCE5B0FB3}.wem"
+      "CachePath": "A8/{A81FE53E-BF8C-F4B9-2CA3-FCE35A653921}.wem"
      },
      {
       "Id": "404866134",
@@ -749,7 +749,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_village\\Theme02\\mus_village_themeArp_synthlead_180_12-8_8M.wav",
-      "CachePath": "71/{71F58C97-1BAE-C638-B019-5CBFD222780A}.wem"
+      "CachePath": "35/{3528213A-71A0-C81E-E3F3-438DEB5CC195}.wem"
      },
      {
       "Id": "411483413",
@@ -765,7 +765,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "sfx_footsteps_stone_var_02.wav",
-      "CachePath": "57/{5705EFD3-6C3F-361A-5C6A-D61B72113EEA}.wem"
+      "CachePath": "B2/{B2708495-3224-4725-AD90-469D363863BE}.wem"
      },
      {
       "Id": "439184684",
@@ -773,7 +773,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_drums_dnb_main_bpm_165_4-4_4M.wav",
-      "CachePath": "68/{681DC052-B2E1-5630-E403-40D6BB8338EC}.wem"
+      "CachePath": "F1/{F12ECCEF-E67A-06DA-E5ED-048E4173A427}.wem"
      },
      {
       "Id": "456743017",
@@ -781,7 +781,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "muss_boss_intro_perc.wav",
-      "CachePath": "F5/{F59A1C1A-FDC9-B4C4-5338-F7CC353EB741}.wem"
+      "CachePath": "E2/{E2B2BA54-6D1D-3D29-C714-9ACFBF95A6C6}.wem"
      },
      {
       "Id": "457177102",
@@ -789,7 +789,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_synth_lead_solo02_bpm_165_4-4_16M.wav",
-      "CachePath": "E4/{E4DB49BC-168B-7C34-892B-05B6DE11B9E9}.wem"
+      "CachePath": "10/{10DC171B-AB39-46BB-024A-D92BCD43B3F1}.wem"
      },
      {
       "Id": "477432091",
@@ -805,7 +805,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_guitar_lead_solo_bpm_165_4-4_16M.wav.wav",
-      "CachePath": "BE/{BE43F8C8-E642-7B1E-9530-057504182C23}.wem"
+      "CachePath": "E3/{E317808B-1D79-AF8B-0ACC-99FBF8BB3634}.wem"
      },
      {
       "Id": "492715098",
@@ -813,7 +813,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_village\\Theme01\\mus_village_theme_synthlead_180_12-8_8M.wav.wav",
-      "CachePath": "5E/{5E54CAA1-433A-A71A-D47B-FFDF1B57AC5D}.wem"
+      "CachePath": "DE/{DE9D72FF-BB57-7766-8D5B-429E87E19B0C}.wem"
      },
      {
       "Id": "493842783",
@@ -821,7 +821,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "sfx_footsteps_parquet_var_03.wav",
-      "CachePath": "6C/{6C31C08D-2DE7-4C9E-BF62-7F4007493920}.wem"
+      "CachePath": "91/{91E4EDE3-BAC5-B98B-1C7E-96E24B727C6E}.wem"
      },
      {
       "Id": "496225530",
@@ -829,7 +829,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_guitar_rhythm_chords_long_bpm_165_4-4_16M.wav.wav",
-      "CachePath": "7B/{7B18EBC6-C221-466D-5F45-018539C988EF}.wem"
+      "CachePath": "75/{75E5FFB1-97E8-E9EC-B6BD-79D025764976}.wem"
      },
      {
       "Id": "508362603",
@@ -837,7 +837,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_bass_bpm_165_4-4_16M.wav",
-      "CachePath": "45/{456031D7-2237-CED9-C4CF-844383B5D8B9}.wem"
+      "CachePath": "5D/{5DF0A45E-7DAF-B2EE-EB79-6D85AFE9BAF2}.wem"
      },
      {
       "Id": "526766253",
@@ -853,7 +853,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_village\\mus_village_bridge_180_12-8_8M.wav",
-      "CachePath": "F9/{F92EAE24-C13A-341E-03E5-CFB77A6B47A0}.wem"
+      "CachePath": "83/{83B3AD60-FC5A-0BA4-C12D-62A400F2388C}.wem"
      },
      {
       "Id": "589154420",
@@ -861,7 +861,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_synth_lead_arp_bpm_165_4-4_16M.wav",
-      "CachePath": "C9/{C9C507F7-A402-8F95-4577-FA2021EFE805}.wem"
+      "CachePath": "11/{11E8E0D9-636E-C1C1-DB44-4A0232B1F0C3}.wem"
      },
      {
       "Id": "601459188",
@@ -869,7 +869,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_guitar_lead_arp_bpm_165_4-4_16M.wav.wav",
-      "CachePath": "F8/{F83DCD2A-06B7-B6CB-49D5-37A1EF749FF9}.wem"
+      "CachePath": "AD/{AD9A4BB7-8F10-9081-D184-4AEA02B026E8}.wem"
      },
      {
       "Id": "609355816",
@@ -885,7 +885,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "sfx_footsteps_stone_var_03.wav",
-      "CachePath": "77/{775FE81F-A157-8841-DCD5-449D805D188F}.wem"
+      "CachePath": "00/{00C91C58-762F-9D1A-D232-6E93BBCD9BF1}.wem"
      },
      {
       "Id": "617499719",
@@ -893,7 +893,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_guitar_rhythm_mute_funk_bpm_165_4-4_16M.wav.wav",
-      "CachePath": "94/{9458F149-853F-1177-1F14-722F3C8DE221}.wem"
+      "CachePath": "4C/{4C7FEE07-D5B9-49D3-580C-A508BED81886}.wem"
      },
      {
       "Id": "649571480",
@@ -901,7 +901,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_boss_ab.wav",
-      "CachePath": "90/{90667D91-C098-DF41-CC50-7BC1BE5EB5EE}.wem"
+      "CachePath": "37/{3788B0AA-BACB-5727-6757-B3A0BB7239FE}.wem"
      },
      {
       "Id": "672148358",
@@ -917,7 +917,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_pads_intro_bpm_165_4-4_16M.wav",
-      "CachePath": "D0/{D008082D-EB59-41D4-BCEA-2D5AC8ABC741}.wem"
+      "CachePath": "7C/{7CBD0361-3B93-4BBC-3E95-4FFB224C8494}.wem"
      },
      {
       "Id": "720525476",
@@ -925,7 +925,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_drums_dnb_main01_bpm_165_4-4_4M.wav",
-      "CachePath": "84/{84430AFA-B664-B2FB-247F-B7082A8DD92D}.wem"
+      "CachePath": "A8/{A89B3D47-AF56-787F-EB8C-901BD8185147}.wem"
      },
      {
       "Id": "723779961",
@@ -933,7 +933,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_synth_lead_solo01_bpm_165_4-4_16M.wav",
-      "CachePath": "2D/{2D86C044-2A55-57B8-139A-EE5BF3E7BBF2}.wem"
+      "CachePath": "55/{55D0BDDC-FD9B-5A98-5ABC-2B334CF60781}.wem"
      },
      {
       "Id": "737413990",
@@ -941,7 +941,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_subOctUp_bpm_165_4-4_16M.wav",
-      "CachePath": "0F/{0F0CF6FC-EAC3-FE01-BAE7-1D0F2DA36AD0}.wem"
+      "CachePath": "31/{31C34FF6-2601-D091-3BDC-05A41C21158C}.wem"
      },
      {
       "Id": "755825440",
@@ -981,7 +981,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_arpg_bpm_165_4-4_16M.wav",
-      "CachePath": "80/{8040B42C-238C-FB40-7A4C-F413A4C50363}.wem"
+      "CachePath": "D7/{D7D0BDF6-5083-9CCB-0C32-B175020BFD85}.wem"
      },
      {
       "Id": "855646870",
@@ -989,7 +989,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_guitar_lead_bends_bpm_165_4-4_16M.wav",
-      "CachePath": "EC/{ECEA6752-DC9A-1493-1328-CE1ED60EB456}.wem"
+      "CachePath": "B5/{B583F003-1754-E47E-8C01-6DA7F419FA14}.wem"
      },
      {
       "Id": "858639589",
@@ -997,7 +997,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "sfx_obj_plate_off.wav",
-      "CachePath": "EC/{ECE8B401-B11E-A7DB-C269-2BA494E0184B}.wem"
+      "CachePath": "AD/{AD5D8268-5890-574A-2D29-549CB9955D36}.wem"
      },
      {
       "Id": "863443156",
@@ -1005,7 +1005,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_boss_intro_bpm-120_4-4-002.wav",
-      "CachePath": "7E/{7E2E32F0-5019-0D13-EE39-5CFD44FBF0C8}.wem"
+      "CachePath": "D9/{D9FF8A3F-87F6-EA4C-4FCF-8AA501623E63}.wem"
      },
      {
       "Id": "863615306",
@@ -1013,7 +1013,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_guitar_rhythm_power_rhythm_bpm_165_4-4_16M.wav",
-      "CachePath": "18/{18E1EB3D-F4E1-C975-0A7D-3D4BEB1ABECB}.wem"
+      "CachePath": "00/{00CBC3DC-24F8-B69D-49E4-2F3A2740094E}.wem"
      },
      {
       "Id": "865284003",
@@ -1029,7 +1029,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_guitar_lead_longNotes_bpm_165_4-4_16M.wav.wav",
-      "CachePath": "A8/{A84AE5AB-8ABC-286A-0F1F-A33CBB469CF0}.wem"
+      "CachePath": "DD/{DDF0EC98-390E-7873-49ED-6FF5D133F5C9}.wem"
      },
      {
       "Id": "885739261",
@@ -1037,7 +1037,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_guitar_lead_ambStrokes_bpm_165_4-4_16M.wav.wav",
-      "CachePath": "C3/{C35F5594-6728-964F-B0ED-C6BCF77620D4}.wem"
+      "CachePath": "C7/{C7C9CA64-8DF3-C81E-A7D9-04DA595286E8}.wem"
      },
      {
       "Id": "893462657",
@@ -1053,7 +1053,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "sfx_footsteps_stone_var_02.wav",
-      "CachePath": "89/{89565F92-F6C5-1731-08FE-B26F52EEDD3B}.wem"
+      "CachePath": "FD/{FD2DD581-456E-E7D9-C90A-FE70EB41D73A}.wem"
      },
      {
       "Id": "905515257",
@@ -1061,7 +1061,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "sfx_footsteps_grass_var_02.wav",
-      "CachePath": "19/{19CCF2ED-EE64-2D73-6F1A-86B5FAD65D0F}.wem"
+      "CachePath": "71/{71BA5C12-444C-021B-B54B-50D98E7A623B}.wem"
      },
      {
       "Id": "927962153",
@@ -1085,7 +1085,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "sfx_footsteps_stone_var_01.wav",
-      "CachePath": "64/{64EC87ED-5BE3-2656-BCA9-A75F5D524AA3}.wem"
+      "CachePath": "0D/{0D7020A5-1DAA-1B9C-AB69-11E15EEF6A52}.wem"
      },
      {
       "Id": "937514559",
@@ -1093,7 +1093,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_village\\mus_village_introPads_180_12-8_8M.wav",
-      "CachePath": "F0/{F04F39ED-B1B1-64A4-08AE-BBE2246B09EE}.wem"
+      "CachePath": "2E/{2E1F8A0E-DF95-E3C1-E7A6-08FCBE198A98}.wem"
      },
      {
       "Id": "979020422",
@@ -1101,7 +1101,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_guitar_rhythm_chords_power_bpm_165_4-4_16M.wav.wav",
-      "CachePath": "70/{70850AAF-F6B4-71BC-1C89-91481BB8679D}.wem"
+      "CachePath": "DD/{DDEBB544-B567-A1FD-3C47-5FCC67E26009}.wem"
      },
      {
       "Id": "982405650",
@@ -1141,7 +1141,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "sfx_footsteps_stone_var_03.wav",
-      "CachePath": "4D/{4D2F3D74-88CA-0F4A-6DC5-20C4358B414C}.wem"
+      "CachePath": "E8/{E856ED97-B8A1-8228-B8CA-7E28C5B6FDA2}.wem"
      },
      {
       "Id": "1059597540",
@@ -1149,7 +1149,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_village\\mus_village_introStrings_180_12-8_8M.wav",
-      "CachePath": "B7/{B78C22DC-98F5-6069-137D-4A8CAA4C3C09}.wem"
+      "CachePath": "6F/{6F334A66-5715-ADFE-21BB-EDA5AF213241}.wem"
      },
      {
       "Id": "1063085927",
@@ -1157,7 +1157,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_drums_dnb_intro03_bpm_165_4-4_16M.wav",
-      "CachePath": "86/{86082C04-1615-A9E1-EA1E-C56D57FED899}.wem"
+      "CachePath": "AF/{AFC76DC2-CD34-A9E2-2C3F-CCD22A983430}.wem"
      },
      {
       "Id": "1070101142",
@@ -1165,7 +1165,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_drums_dnb_mainSpaced_bpm_165_4-4_4M.wav",
-      "CachePath": "77/{771EBAFD-A93B-231C-0D47-A5F3F0AFA02A}.wem"
+      "CachePath": "18/{180E1A5F-CA49-A6DD-22FE-939F4ADB75C4}.wem"
      }
     ],
     "Plugins": {
@@ -2405,7 +2405,7 @@
     "Type": "User",
     "GUID": "{2CFA879A-4959-4282-8FB2-95883D127C77}",
     "Language": "SFX",
-    "Hash": "{EA14BBD0-940E-91B1-6C2A-CF55BE368421}",
+    "Hash": "{A7CA46F2-114C-C167-DD80-2B7ED1A67A3D}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Music",
     "ShortName": "Music",
     "Path": "Music.bnk",
@@ -2416,7 +2416,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_drums_dnb_intro02_bpm_165_4-4_16M.wav",
-      "CachePath": "66/{660C9E10-7715-EC87-92B3-AFAF5DF8DB94}.wem"
+      "CachePath": "C5/{C56D6E40-78AC-765F-BCEA-4A231C30D210}.wem"
      },
      {
       "Id": "125256673",
@@ -2424,7 +2424,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_drums_dnb_intro01_bpm_165_4-4_16M.wav",
-      "CachePath": "C0/{C0FEE6C7-751F-FE0A-ABB7-48CAA8E2CA7D}.wem"
+      "CachePath": "B0/{B06A00C0-AE99-96AC-8210-0E5F8D3013F4}.wem"
      },
      {
       "Id": "178733378",
@@ -2432,7 +2432,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_drums_dnb_intro04_bpm_165_4-4_16M.wav",
-      "CachePath": "E8/{E8D10BD3-60D6-2766-48D6-9873A48649ED}.wem"
+      "CachePath": "29/{29EF1BB8-44A8-07AF-FEC5-603AC7D1BADD}.wem"
      },
      {
       "Id": "219868458",
@@ -2448,7 +2448,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_guitar_lead_theme_bpm_165_4-4_16M.wav.wav",
-      "CachePath": "8D/{8D33F8CB-737C-295B-50CB-B887A26AAF49}.wem"
+      "CachePath": "D9/{D99C440C-C0F0-988E-8AF0-9A68F1ACDA71}.wem"
      },
      {
       "Id": "252760376",
@@ -2464,7 +2464,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_boss_bridge.wav",
-      "CachePath": "13/{13D78296-7671-37DD-1B69-3F199288EEAF}.wem"
+      "CachePath": "71/{71FCEABE-A73E-1A3D-A46F-48B0745C9FCE}.wem"
      },
      {
       "Id": "302677022",
@@ -2472,7 +2472,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_village\\Theme02\\mus_village_themeArp_180_12-8_8M.wav",
-      "CachePath": "AC/{AC586BDA-9668-760B-9DF5-315A885CC940}.wem"
+      "CachePath": "CD/{CD72F3D5-54A0-26E2-8A7E-62D7368A350C}.wem"
      },
      {
       "Id": "317211741",
@@ -2480,7 +2480,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_pads_chords_bpm_165_4-4_16M.wav",
-      "CachePath": "C6/{C65B9559-D0DC-EF32-52E7-49928E737A88}.wem"
+      "CachePath": "0E/{0E2C2413-7D1D-6219-8736-4824C8D3641C}.wem"
      },
      {
       "Id": "320105167",
@@ -2488,7 +2488,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_village\\Theme01\\mus_village_theme_180_12-8_8M.wav",
-      "CachePath": "C5/{C5DA2401-EEE3-DE6C-9657-B64B8DE7482D}.wem"
+      "CachePath": "DE/{DE432413-33DA-977F-C7F3-B6B162E9C0CD}.wem"
      },
      {
       "Id": "324848001",
@@ -2496,7 +2496,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_guitar_rhythm_mute_palm_bpm_165_4-4_16M.wav",
-      "CachePath": "AB/{ABA9C5CE-9AFF-CACC-2FE1-0615976BEE34}.wem"
+      "CachePath": "51/{517F434E-F19B-5FF9-CADF-466EF6EE86DE}.wem"
      },
      {
       "Id": "351445031",
@@ -2504,7 +2504,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_boss_intro_bpm-120_4-4-001.wav",
-      "CachePath": "9C/{9CB35564-ECF9-3BD4-80D4-8971314DB9C2}.wem"
+      "CachePath": "BD/{BDEA4D6F-4863-413A-4A09-5CE77F0D52B4}.wem"
      },
      {
       "Id": "360602114",
@@ -2512,7 +2512,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_guitar_rhythm_chords__bpm_165_4-4_16M.wav.wav",
-      "CachePath": "84/{84A448B9-8B6A-A25F-5C47-828D1AC15598}.wem"
+      "CachePath": "8A/{8A19615D-5B5A-BF9F-234E-1257D166F8F2}.wem"
      },
      {
       "Id": "397626789",
@@ -2520,7 +2520,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "stg_checkpoint_G.wav",
-      "CachePath": "33/{331C528F-59EC-7D16-17E7-9E2E76FC0926}.wem"
+      "CachePath": "0F/{0F7194E8-2597-2A9C-6211-2CD252C8EA79}.wem"
      },
      {
       "Id": "399496196",
@@ -2528,7 +2528,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_village\\mus_village_Bsection_180_12-8_15M.wav",
-      "CachePath": "66/{660B10F4-ACB3-A4CF-21BA-6D3CCE5B0FB3}.wem"
+      "CachePath": "A8/{A81FE53E-BF8C-F4B9-2CA3-FCE35A653921}.wem"
      },
      {
       "Id": "404866134",
@@ -2536,7 +2536,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_village\\Theme02\\mus_village_themeArp_synthlead_180_12-8_8M.wav",
-      "CachePath": "71/{71F58C97-1BAE-C638-B019-5CBFD222780A}.wem"
+      "CachePath": "35/{3528213A-71A0-C81E-E3F3-438DEB5CC195}.wem"
      },
      {
       "Id": "439184684",
@@ -2544,7 +2544,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_drums_dnb_main_bpm_165_4-4_4M.wav",
-      "CachePath": "68/{681DC052-B2E1-5630-E403-40D6BB8338EC}.wem"
+      "CachePath": "F1/{F12ECCEF-E67A-06DA-E5ED-048E4173A427}.wem"
      },
      {
       "Id": "456743017",
@@ -2552,7 +2552,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "muss_boss_intro_perc.wav",
-      "CachePath": "F5/{F59A1C1A-FDC9-B4C4-5338-F7CC353EB741}.wem"
+      "CachePath": "E2/{E2B2BA54-6D1D-3D29-C714-9ACFBF95A6C6}.wem"
      },
      {
       "Id": "457177102",
@@ -2560,7 +2560,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_synth_lead_solo02_bpm_165_4-4_16M.wav",
-      "CachePath": "E4/{E4DB49BC-168B-7C34-892B-05B6DE11B9E9}.wem"
+      "CachePath": "10/{10DC171B-AB39-46BB-024A-D92BCD43B3F1}.wem"
      },
      {
       "Id": "490430872",
@@ -2568,7 +2568,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_guitar_lead_solo_bpm_165_4-4_16M.wav.wav",
-      "CachePath": "BE/{BE43F8C8-E642-7B1E-9530-057504182C23}.wem"
+      "CachePath": "E3/{E317808B-1D79-AF8B-0ACC-99FBF8BB3634}.wem"
      },
      {
       "Id": "492715098",
@@ -2576,7 +2576,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_village\\Theme01\\mus_village_theme_synthlead_180_12-8_8M.wav.wav",
-      "CachePath": "5E/{5E54CAA1-433A-A71A-D47B-FFDF1B57AC5D}.wem"
+      "CachePath": "DE/{DE9D72FF-BB57-7766-8D5B-429E87E19B0C}.wem"
      },
      {
       "Id": "496225530",
@@ -2584,7 +2584,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_guitar_rhythm_chords_long_bpm_165_4-4_16M.wav.wav",
-      "CachePath": "7B/{7B18EBC6-C221-466D-5F45-018539C988EF}.wem"
+      "CachePath": "75/{75E5FFB1-97E8-E9EC-B6BD-79D025764976}.wem"
      },
      {
       "Id": "508362603",
@@ -2592,7 +2592,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_bass_bpm_165_4-4_16M.wav",
-      "CachePath": "45/{456031D7-2237-CED9-C4CF-844383B5D8B9}.wem"
+      "CachePath": "5D/{5DF0A45E-7DAF-B2EE-EB79-6D85AFE9BAF2}.wem"
      },
      {
       "Id": "580625412",
@@ -2600,7 +2600,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_village\\mus_village_bridge_180_12-8_8M.wav",
-      "CachePath": "F9/{F92EAE24-C13A-341E-03E5-CFB77A6B47A0}.wem"
+      "CachePath": "83/{83B3AD60-FC5A-0BA4-C12D-62A400F2388C}.wem"
      },
      {
       "Id": "589154420",
@@ -2608,7 +2608,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_synth_lead_arp_bpm_165_4-4_16M.wav",
-      "CachePath": "C9/{C9C507F7-A402-8F95-4577-FA2021EFE805}.wem"
+      "CachePath": "11/{11E8E0D9-636E-C1C1-DB44-4A0232B1F0C3}.wem"
      },
      {
       "Id": "601459188",
@@ -2616,7 +2616,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_guitar_lead_arp_bpm_165_4-4_16M.wav.wav",
-      "CachePath": "F8/{F83DCD2A-06B7-B6CB-49D5-37A1EF749FF9}.wem"
+      "CachePath": "AD/{AD9A4BB7-8F10-9081-D184-4AEA02B026E8}.wem"
      },
      {
       "Id": "617499719",
@@ -2624,7 +2624,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_guitar_rhythm_mute_funk_bpm_165_4-4_16M.wav.wav",
-      "CachePath": "94/{9458F149-853F-1177-1F14-722F3C8DE221}.wem"
+      "CachePath": "4C/{4C7FEE07-D5B9-49D3-580C-A508BED81886}.wem"
      },
      {
       "Id": "649571480",
@@ -2632,7 +2632,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_boss_ab.wav",
-      "CachePath": "90/{90667D91-C098-DF41-CC50-7BC1BE5EB5EE}.wem"
+      "CachePath": "37/{3788B0AA-BACB-5727-6757-B3A0BB7239FE}.wem"
      },
      {
       "Id": "720062416",
@@ -2640,7 +2640,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_pads_intro_bpm_165_4-4_16M.wav",
-      "CachePath": "D0/{D008082D-EB59-41D4-BCEA-2D5AC8ABC741}.wem"
+      "CachePath": "7C/{7CBD0361-3B93-4BBC-3E95-4FFB224C8494}.wem"
      },
      {
       "Id": "720525476",
@@ -2648,7 +2648,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_drums_dnb_main01_bpm_165_4-4_4M.wav",
-      "CachePath": "84/{84430AFA-B664-B2FB-247F-B7082A8DD92D}.wem"
+      "CachePath": "A8/{A89B3D47-AF56-787F-EB8C-901BD8185147}.wem"
      },
      {
       "Id": "723779961",
@@ -2656,7 +2656,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_synth_lead_solo01_bpm_165_4-4_16M.wav",
-      "CachePath": "2D/{2D86C044-2A55-57B8-139A-EE5BF3E7BBF2}.wem"
+      "CachePath": "55/{55D0BDDC-FD9B-5A98-5ABC-2B334CF60781}.wem"
      },
      {
       "Id": "737413990",
@@ -2664,7 +2664,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_subOctUp_bpm_165_4-4_16M.wav",
-      "CachePath": "0F/{0F0CF6FC-EAC3-FE01-BAE7-1D0F2DA36AD0}.wem"
+      "CachePath": "31/{31C34FF6-2601-D091-3BDC-05A41C21158C}.wem"
      },
      {
       "Id": "811745906",
@@ -2680,7 +2680,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_arpg_bpm_165_4-4_16M.wav",
-      "CachePath": "80/{8040B42C-238C-FB40-7A4C-F413A4C50363}.wem"
+      "CachePath": "D7/{D7D0BDF6-5083-9CCB-0C32-B175020BFD85}.wem"
      },
      {
       "Id": "855646870",
@@ -2688,7 +2688,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_guitar_lead_bends_bpm_165_4-4_16M.wav",
-      "CachePath": "EC/{ECEA6752-DC9A-1493-1328-CE1ED60EB456}.wem"
+      "CachePath": "B5/{B583F003-1754-E47E-8C01-6DA7F419FA14}.wem"
      },
      {
       "Id": "863443156",
@@ -2696,7 +2696,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_boss_intro_bpm-120_4-4-002.wav",
-      "CachePath": "7E/{7E2E32F0-5019-0D13-EE39-5CFD44FBF0C8}.wem"
+      "CachePath": "D9/{D9FF8A3F-87F6-EA4C-4FCF-8AA501623E63}.wem"
      },
      {
       "Id": "863615306",
@@ -2704,7 +2704,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_guitar_rhythm_power_rhythm_bpm_165_4-4_16M.wav",
-      "CachePath": "18/{18E1EB3D-F4E1-C975-0A7D-3D4BEB1ABECB}.wem"
+      "CachePath": "00/{00CBC3DC-24F8-B69D-49E4-2F3A2740094E}.wem"
      },
      {
       "Id": "880331828",
@@ -2712,7 +2712,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_guitar_lead_longNotes_bpm_165_4-4_16M.wav.wav",
-      "CachePath": "A8/{A84AE5AB-8ABC-286A-0F1F-A33CBB469CF0}.wem"
+      "CachePath": "DD/{DDF0EC98-390E-7873-49ED-6FF5D133F5C9}.wem"
      },
      {
       "Id": "885739261",
@@ -2720,7 +2720,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_guitar_lead_ambStrokes_bpm_165_4-4_16M.wav.wav",
-      "CachePath": "C3/{C35F5594-6728-964F-B0ED-C6BCF77620D4}.wem"
+      "CachePath": "C7/{C7C9CA64-8DF3-C81E-A7D9-04DA595286E8}.wem"
      },
      {
       "Id": "927962153",
@@ -2736,7 +2736,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_village\\mus_village_introPads_180_12-8_8M.wav",
-      "CachePath": "F0/{F04F39ED-B1B1-64A4-08AE-BBE2246B09EE}.wem"
+      "CachePath": "2E/{2E1F8A0E-DF95-E3C1-E7A6-08FCBE198A98}.wem"
      },
      {
       "Id": "979020422",
@@ -2744,7 +2744,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_guitar_rhythm_chords_power_bpm_165_4-4_16M.wav.wav",
-      "CachePath": "70/{70850AAF-F6B4-71BC-1C89-91481BB8679D}.wem"
+      "CachePath": "DD/{DDEBB544-B567-A1FD-3C47-5FCC67E26009}.wem"
      },
      {
       "Id": "1059597540",
@@ -2752,7 +2752,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_village\\mus_village_introStrings_180_12-8_8M.wav",
-      "CachePath": "B7/{B78C22DC-98F5-6069-137D-4A8CAA4C3C09}.wem"
+      "CachePath": "6F/{6F334A66-5715-ADFE-21BB-EDA5AF213241}.wem"
      },
      {
       "Id": "1063085927",
@@ -2760,7 +2760,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_drums_dnb_intro03_bpm_165_4-4_16M.wav",
-      "CachePath": "86/{86082C04-1615-A9E1-EA1E-C56D57FED899}.wem"
+      "CachePath": "AF/{AFC76DC2-CD34-A9E2-2C3F-CCD22A983430}.wem"
      },
      {
       "Id": "1070101142",
@@ -2768,7 +2768,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mus_dungeons_drums_dnb_mainSpaced_bpm_165_4-4_4M.wav",
-      "CachePath": "77/{771EBAFD-A93B-231C-0D47-A5F3F0AFA02A}.wem"
+      "CachePath": "18/{180E1A5F-CA49-A6DD-22FE-939F4ADB75C4}.wem"
      }
     ],
     "Plugins": {
@@ -3825,6 +3825,6 @@
     ]
    }
   ],
-  "FileHash": "{74611707-F198-5A60-84C7-2E3E13C4545D}"
+  "FileHash": "{8EE2FCDD-60B7-CE2A-7D49-C3343359C0FB}"
  }
 }

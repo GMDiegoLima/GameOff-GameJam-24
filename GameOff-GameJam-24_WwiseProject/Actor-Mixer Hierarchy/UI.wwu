@@ -10,7 +10,7 @@
 				<Sound Name="ui_dialogue_var_01" ID="{53C61CF4-44AA-4963-BBE4-F4B92DE95F96}" ShortID="356647656">
 					<ReferenceList>
 						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+							<ObjectRef Name="sfxWebGl" ID="{988A238F-D1B9-4484-9407-6A61E0CDC169}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="UiMaster" ID="{4B933C55-C410-437B-BCC9-A94593E5E356}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>

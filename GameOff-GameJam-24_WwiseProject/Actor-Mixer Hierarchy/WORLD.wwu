@@ -90,7 +90,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+									<ObjectRef Name="sfxWebGl" ID="{988A238F-D1B9-4484-9407-6A61E0CDC169}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 								</Reference>
 								<Reference Name="DefaultSwitchOrState">
 									<ObjectRef Name="flying" ID="{2078CF42-5088-4631-9D06-590EF8F549E7}" WorkUnitID="{8497C25C-0E6A-46FE-9836-302B9E9B2CB5}"/>
@@ -1053,7 +1053,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+											<ObjectRef Name="sfxWebGl" ID="{988A238F-D1B9-4484-9407-6A61E0CDC169}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="NpcCreaturesMaster" ID="{F87815E8-2DE2-42C8-9916-E488EC4512CF}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
@@ -1356,7 +1356,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+									<ObjectRef Name="sfxWebGl" ID="{988A238F-D1B9-4484-9407-6A61E0CDC169}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="ObjectsMaster" ID="{86880AC9-A889-414E-BABA-0BCE2DC658C8}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
