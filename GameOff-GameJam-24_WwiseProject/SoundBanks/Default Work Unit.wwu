@@ -11,16 +11,16 @@
 				<SoundBank Name="Main" ID="{93536651-6257-4A23-B927-CEC7323273DD}">
 					<ObjectInclusionList>
 						<ObjectRef Name="UI" ID="{6F3B7CE1-2B57-48AB-A6AF-326F7E59CEBC}" WorkUnitID="{6F3B7CE1-2B57-48AB-A6AF-326F7E59CEBC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Music" ID="{88DB0AA5-00E4-4A46-B0C3-41653FD3F383}" WorkUnitID="{88DB0AA5-00E4-4A46-B0C3-41653FD3F383}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Environment" ID="{D08A5CBD-4B65-4C08-BE27-A2FF65B9EAC7}" WorkUnitID="{D08A5CBD-4B65-4C08-BE27-A2FF65B9EAC7}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Sfx" ID="{568CA0A9-9B6B-4CBA-93C7-FB9940D85A50}" WorkUnitID="{568CA0A9-9B6B-4CBA-93C7-FB9940D85A50}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Testing" ID="{8A41F3AB-76E2-4F07-B024-4B23C326E276}" WorkUnitID="{8A41F3AB-76E2-4F07-B024-4B23C326E276}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
 				<SoundBank Name="Music" ID="{2CFA879A-4959-4282-8FB2-95883D127C77}">
-					<ObjectInclusionList>
-						<ObjectRef Name="MUSIC" ID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}" Origin="Manual" Filter="7"/>
-					</ObjectInclusionList>
+					<ObjectInclusionList/>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>

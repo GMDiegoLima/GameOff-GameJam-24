@@ -70,9 +70,8 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Dungeon1" ID="{E2F08518-7AE9-424A-AED6-175926138EC0}"/>
+						<CurrentStateRef Name="Dungeon3" ID="{523897CB-966A-41DE-9196-B9049F544951}"/>
 						<CurrentStateRef Name="Alive" ID="{B1696563-4FE0-470C-9098-472520DAD3C2}"/>
-						<CurrentStateRef Name="None" ID="{02374B2D-9DDA-4DCE-94AA-D5FC0AD37D7E}"/>
 						<CurrentStateRef Name="InGame" ID="{CF648247-C9ED-4CAF-9FD9-E80F63C6FEC3}"/>
 						<CurrentStateRef Name="Static" ID="{B5B0EECD-83F2-4CCC-BF5E-31C4644C7085}"/>
 						<CurrentStateRef Name="None" ID="{05B7DB27-590B-46C2-8DD8-16036EC13C86}"/>

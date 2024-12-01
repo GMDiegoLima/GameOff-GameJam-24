@@ -34,7 +34,7 @@ public class GlobalManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-   //     AkSoundEngine.PostEvent("play_music", gameObject); 
+        AkSoundEngine.PostEvent("play_music", gameObject);
     }
 
     void OnEnable()
