@@ -18,7 +18,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{2EB375E1-1CCF-207F-0DAB-23B3FD82ACA8}",
+    "Hash": "{7DACFDEC-00AB-8350-5767-22F460D58B06}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -450,7 +450,7 @@
     "Type": "User",
     "GUID": "{93536651-6257-4A23-B927-CEC7323273DD}",
     "Language": "SFX",
-    "Hash": "{4563366C-57D1-5D79-D9C3-4747E9D97BDB}",
+    "Hash": "{9E1ECF1D-BBDB-B97A-0F0C-9E98AA1B0A97}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -486,6 +486,14 @@
       "Location": "Memory",
       "ShortName": "sfx_footsteps_stone_var_01.wav",
       "CachePath": "D7/{D71CFE7C-30E3-AB0C-375C-F61F78615353}.wem"
+     },
+     {
+      "Id": "46494471",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_dungeons_drums_dnb_intro02_bpm_165_4-4_16M.wav",
+      "CachePath": "66/{660C9E10-7715-EC87-92B3-AFAF5DF8DB94}.wem"
      },
      {
       "Id": "54325868",
@@ -536,6 +544,14 @@
       "CachePath": "96/{96A828B5-2581-A39F-108B-C315AE9354C6}.wem"
      },
      {
+      "Id": "125256673",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_dungeons_drums_dnb_intro01_bpm_165_4-4_16M.wav",
+      "CachePath": "C0/{C0FEE6C7-751F-FE0A-ABB7-48CAA8E2CA7D}.wem"
+     },
+     {
       "Id": "138217890",
       "Language": "SFX",
       "Streaming": "false",
@@ -558,6 +574,14 @@
       "Location": "Memory",
       "ShortName": "sfx_play_embody.wav",
       "CachePath": "7A/{7A1BF8D9-3E90-6EB0-4F52-43FFCE6B7F1C}.wem"
+     },
+     {
+      "Id": "178733378",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_dungeons_drums_dnb_intro04_bpm_165_4-4_16M.wav",
+      "CachePath": "E8/{E8D10BD3-60D6-2766-48D6-9873A48649ED}.wem"
      },
      {
       "Id": "219868458",
@@ -592,12 +616,36 @@
       "CachePath": "B2/{B22D3DC5-8B77-6B86-CD11-2F8DEA917FF1}.wem"
      },
      {
+      "Id": "251830584",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_dungeons_guitar_lead_theme_bpm_165_4-4_16M.wav.wav",
+      "CachePath": "8D/{8D33F8CB-737C-295B-50CB-B887A26AAF49}.wem"
+     },
+     {
       "Id": "252760376",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "stg_path_wrong.wav",
       "CachePath": "82/{82B4E0D0-CB31-186D-5F99-A4E5D7014ED4}.wem"
+     },
+     {
+      "Id": "264555730",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_boss_bridge.wav",
+      "CachePath": "13/{13D78296-7671-37DD-1B69-3F199288EEAF}.wem"
+     },
+     {
+      "Id": "302677022",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_village\\Theme02\\mus_village_themeArp_180_12-8_8M.wav",
+      "CachePath": "AC/{AC586BDA-9668-760B-9DF5-315A885CC940}.wem"
      },
      {
       "Id": "305096193",
@@ -608,12 +656,52 @@
       "CachePath": "AD/{AD004FF8-7E15-8361-70B4-FE4B390F826C}.wem"
      },
      {
+      "Id": "317211741",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_dungeons_pads_chords_bpm_165_4-4_16M.wav",
+      "CachePath": "C6/{C65B9559-D0DC-EF32-52E7-49928E737A88}.wem"
+     },
+     {
+      "Id": "320105167",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_village\\Theme01\\mus_village_theme_180_12-8_8M.wav",
+      "CachePath": "C5/{C5DA2401-EEE3-DE6C-9657-B64B8DE7482D}.wem"
+     },
+     {
+      "Id": "324848001",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_dungeons_guitar_rhythm_mute_palm_bpm_165_4-4_16M.wav",
+      "CachePath": "AB/{ABA9C5CE-9AFF-CACC-2FE1-0615976BEE34}.wem"
+     },
+     {
       "Id": "338213362",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "sfx_attack_whoosh_var_03.wav",
       "CachePath": "12/{12DC4B8A-6211-8F1F-BE1A-9863F7029CC9}.wem"
+     },
+     {
+      "Id": "351445031",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_boss_intro_bpm-120_4-4-001.wav",
+      "CachePath": "9C/{9CB35564-ECF9-3BD4-80D4-8971314DB9C2}.wem"
+     },
+     {
+      "Id": "360602114",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_dungeons_guitar_rhythm_chords__bpm_165_4-4_16M.wav.wav",
+      "CachePath": "84/{84A448B9-8B6A-A25F-5C47-828D1AC15598}.wem"
      },
      {
       "Id": "374064659",
@@ -648,6 +736,22 @@
       "CachePath": "33/{331C528F-59EC-7D16-17E7-9E2E76FC0926}.wem"
      },
      {
+      "Id": "399496196",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_village\\mus_village_Bsection_180_12-8_15M.wav",
+      "CachePath": "66/{660B10F4-ACB3-A4CF-21BA-6D3CCE5B0FB3}.wem"
+     },
+     {
+      "Id": "404866134",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_village\\Theme02\\mus_village_themeArp_synthlead_180_12-8_8M.wav",
+      "CachePath": "71/{71F58C97-1BAE-C638-B019-5CBFD222780A}.wem"
+     },
+     {
       "Id": "411483413",
       "Language": "SFX",
       "Streaming": "false",
@@ -664,12 +768,52 @@
       "CachePath": "57/{5705EFD3-6C3F-361A-5C6A-D61B72113EEA}.wem"
      },
      {
+      "Id": "439184684",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_dungeons_drums_dnb_main_bpm_165_4-4_4M.wav",
+      "CachePath": "68/{681DC052-B2E1-5630-E403-40D6BB8338EC}.wem"
+     },
+     {
+      "Id": "456743017",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "muss_boss_intro_perc.wav",
+      "CachePath": "F5/{F59A1C1A-FDC9-B4C4-5338-F7CC353EB741}.wem"
+     },
+     {
+      "Id": "457177102",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_dungeons_synth_lead_solo02_bpm_165_4-4_16M.wav",
+      "CachePath": "E4/{E4DB49BC-168B-7C34-892B-05B6DE11B9E9}.wem"
+     },
+     {
       "Id": "477432091",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "sfx_obj_lever.wav",
       "CachePath": "42/{42DE7F28-02B1-569F-C0B6-36E3078539F5}.wem"
+     },
+     {
+      "Id": "490430872",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_dungeons_guitar_lead_solo_bpm_165_4-4_16M.wav.wav",
+      "CachePath": "BE/{BE43F8C8-E642-7B1E-9530-057504182C23}.wem"
+     },
+     {
+      "Id": "492715098",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_village\\Theme01\\mus_village_theme_synthlead_180_12-8_8M.wav.wav",
+      "CachePath": "5E/{5E54CAA1-433A-A71A-D47B-FFDF1B57AC5D}.wem"
      },
      {
       "Id": "493842783",
@@ -680,12 +824,52 @@
       "CachePath": "6C/{6C31C08D-2DE7-4C9E-BF62-7F4007493920}.wem"
      },
      {
+      "Id": "496225530",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_dungeons_guitar_rhythm_chords_long_bpm_165_4-4_16M.wav.wav",
+      "CachePath": "7B/{7B18EBC6-C221-466D-5F45-018539C988EF}.wem"
+     },
+     {
+      "Id": "508362603",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_dungeons_bass_bpm_165_4-4_16M.wav",
+      "CachePath": "45/{456031D7-2237-CED9-C4CF-844383B5D8B9}.wem"
+     },
+     {
       "Id": "526766253",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "sfx_item_drop.wav",
       "CachePath": "04/{0445CE66-8A26-79F9-9CB0-97EB1B07D037}.wem"
+     },
+     {
+      "Id": "580625412",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_village\\mus_village_bridge_180_12-8_8M.wav",
+      "CachePath": "F9/{F92EAE24-C13A-341E-03E5-CFB77A6B47A0}.wem"
+     },
+     {
+      "Id": "589154420",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_dungeons_synth_lead_arp_bpm_165_4-4_16M.wav",
+      "CachePath": "C9/{C9C507F7-A402-8F95-4577-FA2021EFE805}.wem"
+     },
+     {
+      "Id": "601459188",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_dungeons_guitar_lead_arp_bpm_165_4-4_16M.wav.wav",
+      "CachePath": "F8/{F83DCD2A-06B7-B6CB-49D5-37A1EF749FF9}.wem"
      },
      {
       "Id": "609355816",
@@ -704,12 +888,60 @@
       "CachePath": "77/{775FE81F-A157-8841-DCD5-449D805D188F}.wem"
      },
      {
+      "Id": "617499719",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_dungeons_guitar_rhythm_mute_funk_bpm_165_4-4_16M.wav.wav",
+      "CachePath": "94/{9458F149-853F-1177-1F14-722F3C8DE221}.wem"
+     },
+     {
+      "Id": "649571480",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_boss_ab.wav",
+      "CachePath": "90/{90667D91-C098-DF41-CC50-7BC1BE5EB5EE}.wem"
+     },
+     {
       "Id": "672148358",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "sfx_creatures_alert.wav",
       "CachePath": "16/{16DC5F88-BD6B-00CB-131C-E94B323549A8}.wem"
+     },
+     {
+      "Id": "720062416",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_dungeons_pads_intro_bpm_165_4-4_16M.wav",
+      "CachePath": "D0/{D008082D-EB59-41D4-BCEA-2D5AC8ABC741}.wem"
+     },
+     {
+      "Id": "720525476",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_dungeons_drums_dnb_main01_bpm_165_4-4_4M.wav",
+      "CachePath": "84/{84430AFA-B664-B2FB-247F-B7082A8DD92D}.wem"
+     },
+     {
+      "Id": "723779961",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_dungeons_synth_lead_solo01_bpm_165_4-4_16M.wav",
+      "CachePath": "2D/{2D86C044-2A55-57B8-139A-EE5BF3E7BBF2}.wem"
+     },
+     {
+      "Id": "737413990",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_dungeons_subOctUp_bpm_165_4-4_16M.wav",
+      "CachePath": "0F/{0F0CF6FC-EAC3-FE01-BAE7-1D0F2DA36AD0}.wem"
      },
      {
       "Id": "755825440",
@@ -744,6 +976,22 @@
       "CachePath": "F2/{F2E7785F-B130-1FD2-06EF-F357314BEE24}.wem"
      },
      {
+      "Id": "829294106",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_dungeons_arpg_bpm_165_4-4_16M.wav",
+      "CachePath": "80/{8040B42C-238C-FB40-7A4C-F413A4C50363}.wem"
+     },
+     {
+      "Id": "855646870",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_dungeons_guitar_lead_bends_bpm_165_4-4_16M.wav",
+      "CachePath": "EC/{ECEA6752-DC9A-1493-1328-CE1ED60EB456}.wem"
+     },
+     {
       "Id": "858639589",
       "Language": "SFX",
       "Streaming": "false",
@@ -752,12 +1000,44 @@
       "CachePath": "EC/{ECE8B401-B11E-A7DB-C269-2BA494E0184B}.wem"
      },
      {
+      "Id": "863443156",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_boss_intro_bpm-120_4-4-002.wav",
+      "CachePath": "7E/{7E2E32F0-5019-0D13-EE39-5CFD44FBF0C8}.wem"
+     },
+     {
+      "Id": "863615306",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_dungeons_guitar_rhythm_power_rhythm_bpm_165_4-4_16M.wav",
+      "CachePath": "18/{18E1EB3D-F4E1-C975-0A7D-3D4BEB1ABECB}.wem"
+     },
+     {
       "Id": "865284003",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "ui_select.wav",
       "CachePath": "1A/{1A3F3E55-FB7F-67B9-6A7E-AE1F0449A533}.wem"
+     },
+     {
+      "Id": "880331828",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_dungeons_guitar_lead_longNotes_bpm_165_4-4_16M.wav.wav",
+      "CachePath": "A8/{A84AE5AB-8ABC-286A-0F1F-A33CBB469CF0}.wem"
+     },
+     {
+      "Id": "885739261",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_dungeons_guitar_lead_ambStrokes_bpm_165_4-4_16M.wav.wav",
+      "CachePath": "C3/{C35F5594-6728-964F-B0ED-C6BCF77620D4}.wem"
      },
      {
       "Id": "893462657",
@@ -784,6 +1064,14 @@
       "CachePath": "19/{19CCF2ED-EE64-2D73-6F1A-86B5FAD65D0F}.wem"
      },
      {
+      "Id": "927962153",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "stng_dead_cymball.wav",
+      "CachePath": "16/{16219C4D-5049-B204-1236-34F7048E7DBA}.wem"
+     },
+     {
       "Id": "932525853",
       "Language": "SFX",
       "Streaming": "false",
@@ -800,12 +1088,20 @@
       "CachePath": "64/{64EC87ED-5BE3-2656-BCA9-A75F5D524AA3}.wem"
      },
      {
-      "Id": "957390315",
+      "Id": "937514559",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "testing_stingers_music.wav",
-      "CachePath": "B7/{B7EE2D86-8339-AAC1-17C1-5E64D1F3931F}.wem"
+      "ShortName": "mus_village\\mus_village_introPads_180_12-8_8M.wav",
+      "CachePath": "F0/{F04F39ED-B1B1-64A4-08AE-BBE2246B09EE}.wem"
+     },
+     {
+      "Id": "979020422",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_dungeons_guitar_rhythm_chords_power_bpm_165_4-4_16M.wav.wav",
+      "CachePath": "70/{70850AAF-F6B4-71BC-1C89-91481BB8679D}.wem"
      },
      {
       "Id": "982405650",
@@ -846,6 +1142,30 @@
       "Location": "Memory",
       "ShortName": "sfx_footsteps_stone_var_03.wav",
       "CachePath": "4D/{4D2F3D74-88CA-0F4A-6DC5-20C4358B414C}.wem"
+     },
+     {
+      "Id": "1059597540",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_village\\mus_village_introStrings_180_12-8_8M.wav",
+      "CachePath": "B7/{B78C22DC-98F5-6069-137D-4A8CAA4C3C09}.wem"
+     },
+     {
+      "Id": "1063085927",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_dungeons_drums_dnb_intro03_bpm_165_4-4_16M.wav",
+      "CachePath": "86/{86082C04-1615-A9E1-EA1E-C56D57FED899}.wem"
+     },
+     {
+      "Id": "1070101142",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_dungeons_drums_dnb_mainSpaced_bpm_165_4-4_4M.wav",
+      "CachePath": "77/{771EBAFD-A93B-231C-0D47-A5F3F0AFA02A}.wem"
      }
     ],
     "Plugins": {
@@ -857,6 +1177,14 @@
        "GUID": "{2C49700D-2E2C-4BB7-AEAD-3E726E5A03FA}",
        "LibName": "Wwise Pitch Shifter",
        "LibId": "8912899"
+      },
+      {
+       "Id": "2849147824",
+       "Name": "Medium",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Cathedrals\\Medium",
+       "GUID": "{AEB3F175-958B-45F2-A4C2-3FBD4F456568}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
       }
      ]
     },
@@ -1512,13 +1840,13 @@
         "Id": "397626789"
        },
        {
-        "Id": "811745906"
+        "Id": "927962153"
        }
       ],
       "PluginRefs": {
        "ShareSets": [
         {
-         "Id": "642532550"
+         "Id": "2849147824"
         }
        ]
       },
@@ -1526,46 +1854,343 @@
        {
         "SwitchValue": {
          "GroupType": "State",
-         "GroupId": "1045871717",
+         "GroupId": "1021618141",
          "Id": "0",
-         "GUID": "{F4DB2D47-C80F-4A3A-9990-91BFF40CD847}"
+         "GUID": "{9ABF70A1-274B-4565-9838-E84465B41A9E}"
         },
-        "Children": [
+        "MediaRefs": [
          {
-          "SwitchValue": {
-           "GroupType": "State",
-           "GroupId": "1021618141",
-           "Id": "0",
-           "GUID": "{9ABF70A1-274B-4565-9838-E84465B41A9E}"
-          },
-          "MediaRefs": [
-           {
-            "Id": "957390315"
-           }
-          ]
+          "Id": "302677022"
+         },
+         {
+          "Id": "320105167"
+         },
+         {
+          "Id": "399496196"
+         },
+         {
+          "Id": "404866134"
+         },
+         {
+          "Id": "492715098"
+         },
+         {
+          "Id": "580625412"
+         },
+         {
+          "Id": "937514559"
+         },
+         {
+          "Id": "1059597540"
          }
         ]
        },
        {
         "SwitchValue": {
          "GroupType": "State",
-         "GroupId": "1045871717",
-         "Id": "984691642",
-         "GUID": "{CF648247-C9ED-4CAF-9FD9-E80F63C6FEC3}"
+         "GroupId": "1021618141",
+         "Id": "3945285210",
+         "GUID": "{E2F08518-7AE9-424A-AED6-175926138EC0}"
         },
-        "Children": [
+        "MediaRefs": [
          {
-          "SwitchValue": {
-           "GroupType": "State",
-           "GroupId": "1021618141",
-           "Id": "748895195",
-           "GUID": "{B42BC888-C4F5-4750-89B0-0886BDFCA55C}"
-          },
-          "MediaRefs": [
-           {
-            "Id": "957390315"
-           }
-          ]
+          "Id": "46494471"
+         },
+         {
+          "Id": "125256673"
+         },
+         {
+          "Id": "178733378"
+         },
+         {
+          "Id": "251830584"
+         },
+         {
+          "Id": "317211741"
+         },
+         {
+          "Id": "324848001"
+         },
+         {
+          "Id": "360602114"
+         },
+         {
+          "Id": "439184684"
+         },
+         {
+          "Id": "457177102"
+         },
+         {
+          "Id": "490430872"
+         },
+         {
+          "Id": "496225530"
+         },
+         {
+          "Id": "508362603"
+         },
+         {
+          "Id": "589154420"
+         },
+         {
+          "Id": "601459188"
+         },
+         {
+          "Id": "617499719"
+         },
+         {
+          "Id": "720062416"
+         },
+         {
+          "Id": "720525476"
+         },
+         {
+          "Id": "723779961"
+         },
+         {
+          "Id": "737413990"
+         },
+         {
+          "Id": "829294106"
+         },
+         {
+          "Id": "855646870"
+         },
+         {
+          "Id": "863615306"
+         },
+         {
+          "Id": "880331828"
+         },
+         {
+          "Id": "885739261"
+         },
+         {
+          "Id": "979020422"
+         },
+         {
+          "Id": "1063085927"
+         },
+         {
+          "Id": "1070101142"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "1021618141",
+         "Id": "3945285209",
+         "GUID": "{6C0E0F62-C1BC-4F2C-B585-F610877EC128}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "46494471"
+         },
+         {
+          "Id": "125256673"
+         },
+         {
+          "Id": "178733378"
+         },
+         {
+          "Id": "251830584"
+         },
+         {
+          "Id": "317211741"
+         },
+         {
+          "Id": "324848001"
+         },
+         {
+          "Id": "360602114"
+         },
+         {
+          "Id": "439184684"
+         },
+         {
+          "Id": "457177102"
+         },
+         {
+          "Id": "490430872"
+         },
+         {
+          "Id": "496225530"
+         },
+         {
+          "Id": "508362603"
+         },
+         {
+          "Id": "589154420"
+         },
+         {
+          "Id": "601459188"
+         },
+         {
+          "Id": "617499719"
+         },
+         {
+          "Id": "720062416"
+         },
+         {
+          "Id": "720525476"
+         },
+         {
+          "Id": "723779961"
+         },
+         {
+          "Id": "737413990"
+         },
+         {
+          "Id": "829294106"
+         },
+         {
+          "Id": "855646870"
+         },
+         {
+          "Id": "863615306"
+         },
+         {
+          "Id": "880331828"
+         },
+         {
+          "Id": "885739261"
+         },
+         {
+          "Id": "979020422"
+         },
+         {
+          "Id": "1063085927"
+         },
+         {
+          "Id": "1070101142"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "1021618141",
+         "Id": "3945285208",
+         "GUID": "{523897CB-966A-41DE-9196-B9049F544951}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "264555730"
+         },
+         {
+          "Id": "351445031"
+         },
+         {
+          "Id": "456743017"
+         },
+         {
+          "Id": "649571480"
+         },
+         {
+          "Id": "863443156"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "1021618141",
+         "Id": "3762955427",
+         "GUID": "{9DDC4CD8-0E86-4970-A1A4-90649B7F50A6}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "302677022"
+         },
+         {
+          "Id": "320105167"
+         },
+         {
+          "Id": "399496196"
+         },
+         {
+          "Id": "404866134"
+         },
+         {
+          "Id": "492715098"
+         },
+         {
+          "Id": "580625412"
+         },
+         {
+          "Id": "937514559"
+         },
+         {
+          "Id": "1059597540"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "1021618141",
+         "Id": "748895195",
+         "GUID": "{B42BC888-C4F5-4750-89B0-0886BDFCA55C}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "302677022"
+         },
+         {
+          "Id": "320105167"
+         },
+         {
+          "Id": "399496196"
+         },
+         {
+          "Id": "404866134"
+         },
+         {
+          "Id": "492715098"
+         },
+         {
+          "Id": "580625412"
+         },
+         {
+          "Id": "937514559"
+         },
+         {
+          "Id": "1059597540"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "1021618141",
+         "Id": "3945572659",
+         "GUID": "{B19D70E7-FB8B-4CB2-9EF8-13305456A991}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "302677022"
+         },
+         {
+          "Id": "320105167"
+         },
+         {
+          "Id": "399496196"
+         },
+         {
+          "Id": "404866134"
+         },
+         {
+          "Id": "492715098"
+         },
+         {
+          "Id": "580625412"
+         },
+         {
+          "Id": "937514559"
+         },
+         {
+          "Id": "1059597540"
          }
         ]
        }
@@ -1699,13 +2324,13 @@
         "Id": "397626789"
        },
        {
-        "Id": "811745906"
+        "Id": "927962153"
        }
       ],
       "PluginRefs": {
        "ShareSets": [
         {
-         "Id": "642532550"
+         "Id": "2849147824"
         }
        ]
       },
@@ -1713,46 +2338,343 @@
        {
         "SwitchValue": {
          "GroupType": "State",
-         "GroupId": "1045871717",
+         "GroupId": "1021618141",
          "Id": "0",
-         "GUID": "{F4DB2D47-C80F-4A3A-9990-91BFF40CD847}"
+         "GUID": "{9ABF70A1-274B-4565-9838-E84465B41A9E}"
         },
-        "Children": [
+        "MediaRefs": [
          {
-          "SwitchValue": {
-           "GroupType": "State",
-           "GroupId": "1021618141",
-           "Id": "0",
-           "GUID": "{9ABF70A1-274B-4565-9838-E84465B41A9E}"
-          },
-          "MediaRefs": [
-           {
-            "Id": "957390315"
-           }
-          ]
+          "Id": "302677022"
+         },
+         {
+          "Id": "320105167"
+         },
+         {
+          "Id": "399496196"
+         },
+         {
+          "Id": "404866134"
+         },
+         {
+          "Id": "492715098"
+         },
+         {
+          "Id": "580625412"
+         },
+         {
+          "Id": "937514559"
+         },
+         {
+          "Id": "1059597540"
          }
         ]
        },
        {
         "SwitchValue": {
          "GroupType": "State",
-         "GroupId": "1045871717",
-         "Id": "984691642",
-         "GUID": "{CF648247-C9ED-4CAF-9FD9-E80F63C6FEC3}"
+         "GroupId": "1021618141",
+         "Id": "3945285210",
+         "GUID": "{E2F08518-7AE9-424A-AED6-175926138EC0}"
         },
-        "Children": [
+        "MediaRefs": [
          {
-          "SwitchValue": {
-           "GroupType": "State",
-           "GroupId": "1021618141",
-           "Id": "748895195",
-           "GUID": "{B42BC888-C4F5-4750-89B0-0886BDFCA55C}"
-          },
-          "MediaRefs": [
-           {
-            "Id": "957390315"
-           }
-          ]
+          "Id": "46494471"
+         },
+         {
+          "Id": "125256673"
+         },
+         {
+          "Id": "178733378"
+         },
+         {
+          "Id": "251830584"
+         },
+         {
+          "Id": "317211741"
+         },
+         {
+          "Id": "324848001"
+         },
+         {
+          "Id": "360602114"
+         },
+         {
+          "Id": "439184684"
+         },
+         {
+          "Id": "457177102"
+         },
+         {
+          "Id": "490430872"
+         },
+         {
+          "Id": "496225530"
+         },
+         {
+          "Id": "508362603"
+         },
+         {
+          "Id": "589154420"
+         },
+         {
+          "Id": "601459188"
+         },
+         {
+          "Id": "617499719"
+         },
+         {
+          "Id": "720062416"
+         },
+         {
+          "Id": "720525476"
+         },
+         {
+          "Id": "723779961"
+         },
+         {
+          "Id": "737413990"
+         },
+         {
+          "Id": "829294106"
+         },
+         {
+          "Id": "855646870"
+         },
+         {
+          "Id": "863615306"
+         },
+         {
+          "Id": "880331828"
+         },
+         {
+          "Id": "885739261"
+         },
+         {
+          "Id": "979020422"
+         },
+         {
+          "Id": "1063085927"
+         },
+         {
+          "Id": "1070101142"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "1021618141",
+         "Id": "3945285209",
+         "GUID": "{6C0E0F62-C1BC-4F2C-B585-F610877EC128}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "46494471"
+         },
+         {
+          "Id": "125256673"
+         },
+         {
+          "Id": "178733378"
+         },
+         {
+          "Id": "251830584"
+         },
+         {
+          "Id": "317211741"
+         },
+         {
+          "Id": "324848001"
+         },
+         {
+          "Id": "360602114"
+         },
+         {
+          "Id": "439184684"
+         },
+         {
+          "Id": "457177102"
+         },
+         {
+          "Id": "490430872"
+         },
+         {
+          "Id": "496225530"
+         },
+         {
+          "Id": "508362603"
+         },
+         {
+          "Id": "589154420"
+         },
+         {
+          "Id": "601459188"
+         },
+         {
+          "Id": "617499719"
+         },
+         {
+          "Id": "720062416"
+         },
+         {
+          "Id": "720525476"
+         },
+         {
+          "Id": "723779961"
+         },
+         {
+          "Id": "737413990"
+         },
+         {
+          "Id": "829294106"
+         },
+         {
+          "Id": "855646870"
+         },
+         {
+          "Id": "863615306"
+         },
+         {
+          "Id": "880331828"
+         },
+         {
+          "Id": "885739261"
+         },
+         {
+          "Id": "979020422"
+         },
+         {
+          "Id": "1063085927"
+         },
+         {
+          "Id": "1070101142"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "1021618141",
+         "Id": "3945285208",
+         "GUID": "{523897CB-966A-41DE-9196-B9049F544951}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "264555730"
+         },
+         {
+          "Id": "351445031"
+         },
+         {
+          "Id": "456743017"
+         },
+         {
+          "Id": "649571480"
+         },
+         {
+          "Id": "863443156"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "1021618141",
+         "Id": "3762955427",
+         "GUID": "{9DDC4CD8-0E86-4970-A1A4-90649B7F50A6}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "302677022"
+         },
+         {
+          "Id": "320105167"
+         },
+         {
+          "Id": "399496196"
+         },
+         {
+          "Id": "404866134"
+         },
+         {
+          "Id": "492715098"
+         },
+         {
+          "Id": "580625412"
+         },
+         {
+          "Id": "937514559"
+         },
+         {
+          "Id": "1059597540"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "1021618141",
+         "Id": "748895195",
+         "GUID": "{B42BC888-C4F5-4750-89B0-0886BDFCA55C}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "302677022"
+         },
+         {
+          "Id": "320105167"
+         },
+         {
+          "Id": "399496196"
+         },
+         {
+          "Id": "404866134"
+         },
+         {
+          "Id": "492715098"
+         },
+         {
+          "Id": "580625412"
+         },
+         {
+          "Id": "937514559"
+         },
+         {
+          "Id": "1059597540"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "1021618141",
+         "Id": "3945572659",
+         "GUID": "{B19D70E7-FB8B-4CB2-9EF8-13305456A991}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "302677022"
+         },
+         {
+          "Id": "320105167"
+         },
+         {
+          "Id": "399496196"
+         },
+         {
+          "Id": "404866134"
+         },
+         {
+          "Id": "492715098"
+         },
+         {
+          "Id": "580625412"
+         },
+         {
+          "Id": "937514559"
+         },
+         {
+          "Id": "1059597540"
          }
         ]
        }
@@ -1851,32 +2773,6 @@
         "GUID": "{B19D70E7-FB8B-4CB2-9EF8-13305456A991}"
        }
       ]
-     },
-     {
-      "Id": "1045871717",
-      "Name": "GameStatus",
-      "ObjectPath": "\\States\\Default Work Unit\\GameStatus",
-      "GUID": "{F4DB2D47-C80F-4A3A-9990-91BFF40CD847}",
-      "States": [
-       {
-        "Id": "748895195",
-        "Name": "None",
-        "ObjectPath": "\\States\\Default Work Unit\\GameStatus\\None",
-        "GUID": "{55A230F1-6FD1-4B4F-8DA6-74C26866603D}"
-       },
-       {
-        "Id": "984691642",
-        "Name": "InGame",
-        "ObjectPath": "\\States\\Default Work Unit\\GameStatus\\InGame",
-        "GUID": "{CF648247-C9ED-4CAF-9FD9-E80F63C6FEC3}"
-       },
-       {
-        "Id": "3374585465",
-        "Name": "InMenu",
-        "ObjectPath": "\\States\\Default Work Unit\\GameStatus\\InMenu",
-        "GUID": "{7BEFC686-0C0A-4567-A1C5-1DFF432F1365}"
-       }
-      ]
      }
     ],
     "SwitchGroups": [
@@ -1927,6 +2823,12 @@
       "GUID": "{75664D4B-E16F-46E7-9774-BC40987622FA}"
      },
      {
+      "Id": "2044049779",
+      "Name": "dead",
+      "ObjectPath": "\\Triggers\\Music\\Stingers\\dead",
+      "GUID": "{7F28F82F-9980-4F7C-9463-409983875986}"
+     },
+     {
       "Id": "2687737065",
       "Name": "puzzle_success",
       "ObjectPath": "\\Triggers\\Music\\Stingers\\puzzle_success",
@@ -1967,6 +2869,6 @@
     "Path": "Music.bnk"
    }
   ],
-  "FileHash": "{22EC6FED-2E0F-5A8B-D122-F9271B4DB899}"
+  "FileHash": "{EB891553-0B4C-2885-54C5-5DD765AB42C4}"
  }
 }

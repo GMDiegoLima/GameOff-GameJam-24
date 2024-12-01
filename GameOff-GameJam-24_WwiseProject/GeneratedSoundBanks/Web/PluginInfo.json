@@ -4,6 +4,13 @@
   "BasePlatform": "Web",
   "PluginLibs": [
    {
+    "LibName": "Wwise RoomVerb",
+    "LibId": "7733251",
+    "Type": "Effect",
+    "DLL": "AkRoomVerb",
+    "StaticLib": "AkRoomVerbFX"
+   },
+   {
     "LibName": "Wwise Pitch Shifter",
     "LibId": "8912899",
     "Type": "Effect",
@@ -21,6 +28,6 @@
     "Type": "AudioDevice"
    }
   ],
-  "FileHash": "{7661983F-99A0-B60D-5200-41F888AF08A9}"
+  "FileHash": "{193B92F0-AC0A-27A4-CCBD-E88C99567C02}"
  }
 }
