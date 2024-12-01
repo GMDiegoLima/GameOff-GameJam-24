@@ -9,6 +9,9 @@ public class Item : MonoBehaviour
     void Start()
     {
         collider = GetComponent<Collider2D>();
-        collider.enabled = true;
+        if (collider != null)
+        {
+            collider.enabled = true;
+        }
     }
 }

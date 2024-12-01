@@ -2619,7 +2619,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7027632970052796844, guid: 98ace3a7e2f7d894fbd09d390e488fb9, type: 3}
       propertyPath: orthographic size
-      value: 3.25
+      value: 3.59375
       objectReference: {fileID: 0}
     - target: {fileID: 7155231759311967505, guid: 98ace3a7e2f7d894fbd09d390e488fb9, type: 3}
       propertyPath: m_IsActive
@@ -2639,7 +2639,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8465604308000546617, guid: 98ace3a7e2f7d894fbd09d390e488fb9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3184,8 +3184,16 @@ PrefabInstance:
       value: Skeleton
       objectReference: {fileID: 0}
     - target: {fileID: 4928228534917901041, guid: e927855a21151b84b91c7e9583679c23, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928228534917901041, guid: e927855a21151b84b91c7e9583679c23, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928228534917901041, guid: e927855a21151b84b91c7e9583679c23, type: 3}
+      propertyPath: m_TagString
+      value: DeadBody
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
