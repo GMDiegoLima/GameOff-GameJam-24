@@ -543,7 +543,10 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<MusicPlaylistContainer Name="Combat" ID="{FAEE64E4-22F0-4070-B3C0-23CCDF17CA88}" ShortID="411101874">
+						<MusicPlaylistContainer Name="Boss" ID="{FAEE64E4-22F0-4070-B3C0-23CCDF17CA88}" ShortID="411101874">
+							<PropertyList>
+								<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
@@ -691,7 +694,10 @@
 								</MusicSegment>
 							</ChildrenList>
 						</MusicPlaylistContainer>
-						<MusicPlaylistContainer Name="Explore" ID="{42671B7E-710B-4C57-820E-23A847C57C70}" ShortID="890334801">
+						<MusicPlaylistContainer Name="Dungeons" ID="{42671B7E-710B-4C57-820E-23A847C57C70}" ShortID="890334801">
+							<PropertyList>
+								<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
@@ -721,7 +727,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<MusicSegment Name="New Music Segment" ID="{3B636F27-5F7B-4F0F-903F-76A5E181CBA9}" ShortID="985019330">
+								<MusicSegment Name="Slow" ID="{CC34D007-20B9-4D88-B578-F9C404ECC87E}" ShortID="228160953">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
@@ -734,12 +740,12 @@
 										<ObjectList Name="Cues">
 											<Reference>
 												<Local>
-													<MusicCue Name="Entry Cue" ID="{D34999F6-C35E-4B80-9BAD-5E24585D49E7}"/>
+													<MusicCue Name="Entry Cue" ID="{1F7DF573-0BB1-4309-B494-9679B63D091C}"/>
 												</Local>
 											</Reference>
 											<Reference>
 												<Local>
-													<MusicCue Name="Exit Cue" ID="{5B75F44C-5610-41FE-BF1D-F33BBF49752A}">
+													<MusicCue Name="Exit Cue" ID="{4B62894B-5066-48F2-B9D9-2E14446824CB}">
 														<PropertyList>
 															<Property Name="CueType" Type="int16" Value="1"/>
 															<Property Name="TimeMs" Type="Real64" Value="1000"/>
@@ -750,7 +756,7 @@
 										</ObjectList>
 									</ObjectLists>
 								</MusicSegment>
-								<MusicSegment Name="New Music Segment_01" ID="{7157ED04-1331-40EC-A5E8-9059BA5F5950}" ShortID="64214114">
+								<MusicSegment Name="Fast" ID="{B8A7DD0E-E06E-4EED-B77C-3FE0837EEC87}" ShortID="608359295">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
@@ -763,70 +769,12 @@
 										<ObjectList Name="Cues">
 											<Reference>
 												<Local>
-													<MusicCue Name="Entry Cue" ID="{BC3AB241-2FC1-4115-BDC8-A0C41E151A9D}"/>
+													<MusicCue Name="Entry Cue" ID="{EC3A125A-A962-43DC-9667-AD3010D21BDC}"/>
 												</Local>
 											</Reference>
 											<Reference>
 												<Local>
-													<MusicCue Name="Exit Cue" ID="{0D171B3C-7790-44BA-A341-6DFCC7A25FBA}">
-														<PropertyList>
-															<Property Name="CueType" Type="int16" Value="1"/>
-															<Property Name="TimeMs" Type="Real64" Value="1000"/>
-														</PropertyList>
-													</MusicCue>
-												</Local>
-											</Reference>
-										</ObjectList>
-									</ObjectLists>
-								</MusicSegment>
-								<MusicSegment Name="New Music Segment_02" ID="{CB64C835-9DE3-4177-B7AF-1675D57BE5F2}" ShortID="292636106">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
-										</Reference>
-									</ReferenceList>
-									<ObjectLists>
-										<ObjectList Name="Cues">
-											<Reference>
-												<Local>
-													<MusicCue Name="Entry Cue" ID="{328E8FBB-F8F1-4F95-8AF9-1BE889FAE3B2}"/>
-												</Local>
-											</Reference>
-											<Reference>
-												<Local>
-													<MusicCue Name="Exit Cue" ID="{214C482D-52C3-4294-A823-7D1EE1BB5F23}">
-														<PropertyList>
-															<Property Name="CueType" Type="int16" Value="1"/>
-															<Property Name="TimeMs" Type="Real64" Value="1000"/>
-														</PropertyList>
-													</MusicCue>
-												</Local>
-											</Reference>
-										</ObjectList>
-									</ObjectLists>
-								</MusicSegment>
-								<MusicSegment Name="New Music Segment_03" ID="{A210DAAB-E37C-4001-9963-5030E5D9D405}" ShortID="971687541">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
-										</Reference>
-									</ReferenceList>
-									<ObjectLists>
-										<ObjectList Name="Cues">
-											<Reference>
-												<Local>
-													<MusicCue Name="Entry Cue" ID="{F4BC3107-FC48-4261-8163-EA1858463A20}"/>
-												</Local>
-											</Reference>
-											<Reference>
-												<Local>
-													<MusicCue Name="Exit Cue" ID="{07D256BA-E585-49EE-9392-BA51A63CA2A0}">
+													<MusicCue Name="Exit Cue" ID="{C5BC8F82-167A-4946-BBB8-BE647EE927E0}">
 														<PropertyList>
 															<Property Name="CueType" Type="int16" Value="1"/>
 															<Property Name="TimeMs" Type="Real64" Value="1000"/>
@@ -840,6 +788,12 @@
 							</ChildrenList>
 						</MusicPlaylistContainer>
 						<MusicPlaylistContainer Name="Village" ID="{7A13AF6A-DCF4-4A34-8E34-5D4DF6C1825F}" ShortID="703314618">
+							<PropertyList>
+								<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+								<Property Name="Tempo" Type="Real64" Value="180"/>
+								<Property Name="TimeSignatureLower" Type="int16" Value="8"/>
+								<Property Name="TimeSignatureUpper" Type="int16" Value="12"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
@@ -1262,6 +1216,65 @@
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																					</PropertyList>
 																					<AudioSourceRef Name="mus_village_bridge_180_12-8_8M" ID="{5B06C674-3D47-4896-AE25-147EA6C34B77}"/>
+																					<PropertyCurveList>
+																						<PropertyCurve PropertyName="Highpass">
+																							<Curve Name="" ID="{9064384B-9D77-451D-A824-C0C3DA236349}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>16</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Lowpass">
+																							<Curve Name="" ID="{B5B9B664-C637-4C36-81F9-6ABD420760AF}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>16</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Volume">
+																							<Curve Name="" ID="{022F3AD7-E3B5-4D22-AB50-C118240522AE}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="3"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>16</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																					</PropertyCurveList>
 																				</MusicClip>
 																			</Local>
 																		</Reference>
@@ -1554,6 +1567,2934 @@
 								</MusicSegment>
 							</ChildrenList>
 						</MusicPlaylistContainer>
+						<Folder Name="DungeonsTracks" ID="{67BA558F-9508-467A-A176-3889CD5085A1}" ShortID="554945178">
+							<ChildrenList>
+								<MusicSegment Name="mus_dungeons_synth_lead_solo02_bpm_165_4-4_16M" ID="{B692E497-ADA6-4112-A25F-41A6ABF8595F}" ShortID="286558066">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="26181.8333333333"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="mus_dungeons_synth_lead_solo02_bpm_165_4-4_16M" ID="{E9BBF280-0007-4AB8-991E-FBCA1B5CE227}" ShortID="599713634">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{49937F90-DF55-48AE-B68C-841B5998A25B}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_dungeons_synth_lead_solo02_bpm_165_4-4_16M" ID="{6D10E3C5-A2E8-4338-BA15-88BF9F4BA5B3}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons\mus_dungeons_synth_lead_solo02_bpm_165_4-4_16M.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="479226719"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{CFA4D99A-653E-47F7-AA62-9788425FF0A1}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_synth_lead_solo02_bpm_165_4-4_16M" ID="{5FD561C5-5544-4F76-9286-D2734AA9B848}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_synth_lead_solo02_bpm_165_4-4_16M" ID="{6D10E3C5-A2E8-4338-BA15-88BF9F4BA5B3}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{6EB7C266-8BB8-479D-A55E-8ED361E465A8}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{2414297D-DC9A-44E6-9D82-535BA39F8B83}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="26181.8333333333"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="mus_dungeons_subLong_bpm_165_4-4_16M" ID="{EDA8D083-EA3D-4C3E-B934-53762467A27C}" ShortID="299908382">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="23272.7291666667"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="mus_dungeons_subLong_bpm_165_4-4_16M" ID="{2686FB5C-B28E-48D0-AD8B-760F1093383A}" ShortID="75990434">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{907B4B8D-9F8A-4D43-A0CE-C5C43BA2CDA8}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_dungeons_subLong_bpm_165_4-4_16M" ID="{BD93E4BE-11EA-48BF-BA13-EA7DA1F16DFD}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons\mus_dungeons_subLong_bpm_165_4-4_16M.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="103728645"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{DF341F00-1F35-4295-B9F5-C3A97ABF0817}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_subLong_bpm_165_4-4_16M" ID="{63BE796B-EE37-4E75-8D6D-DE8F2FAA0391}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="23272.7291666667"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_subLong_bpm_165_4-4_16M" ID="{BD93E4BE-11EA-48BF-BA13-EA7DA1F16DFD}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{470EB90A-3260-4E53-8074-68C52BE8D504}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{0DFD7DBB-ADBD-487B-98E1-E6DDF8EF2B7F}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="23272.7291666667"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="mus_dungeons_pads_chords_bpm_165_4-4_16M" ID="{B94348D0-6233-43A7-8568-B92736AEAE89}" ShortID="1040382746">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="26181.8333333333"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="mus_dungeons_pads_chords_bpm_165_4-4_16M" ID="{C73F206C-8580-44C3-9457-D4963A75DD52}" ShortID="75550311">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{C6E76CFC-A727-4583-8FBC-276C2579F6A7}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_dungeons_pads_chords_bpm_165_4-4_16M" ID="{22906183-B20B-413D-96C6-D99ACDA71D32}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons\mus_dungeons_pads_chords_bpm_165_4-4_16M.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1063900109"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{48B7AF05-03EF-4FE0-A2AA-FCD156568402}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_pads_chords_bpm_165_4-4_16M" ID="{664D228D-072E-4E84-AD24-3724EA83A564}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_pads_chords_bpm_165_4-4_16M" ID="{22906183-B20B-413D-96C6-D99ACDA71D32}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{2CB859C0-B9A3-4306-9291-F1E8DB6112DA}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{6F1B77FB-93C1-42F9-A325-CC64B82BBDB3}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="26181.8333333333"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="mus_dungeons_subOctUp_bpm_165_4-4_16M" ID="{33E46C9D-8BC3-4271-AAA7-0233651A24BA}" ShortID="749805218">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="26181.8333333333"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="mus_dungeons_subOctUp_bpm_165_4-4_16M" ID="{E989CD96-BEC5-4E0C-BC95-33771DB994D8}" ShortID="707462184">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{5A70BB34-CA8D-4BA4-BE0F-9CFDA8350461}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_dungeons_subOctUp_bpm_165_4-4_16M" ID="{8FAFBFA6-4177-4550-ADBC-2A91DFED46E1}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons\mus_dungeons_subOctUp_bpm_165_4-4_16M.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="111290430"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{C7151088-76B9-431F-AB00-46D5E3D5690E}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_subOctUp_bpm_165_4-4_16M" ID="{C08390DC-0240-4AE5-842E-FCED374796C3}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_subOctUp_bpm_165_4-4_16M" ID="{8FAFBFA6-4177-4550-ADBC-2A91DFED46E1}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{A3F5D0F4-53DD-48D2-97AC-8E1CC0FEE34C}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{030AE815-8FF8-4166-9FE4-112E8231F37A}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="26181.8333333333"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="mus_dungeons_subGlide_bpm_165_4-4_16M" ID="{02491D6D-8BB0-4127-BB76-5D5B57BFB062}" ShortID="152422519">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="26181.8333333333"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="mus_dungeons_subGlide_bpm_165_4-4_16M" ID="{B5C10219-52D4-4CE2-9358-D4CF86B49136}" ShortID="394045977">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{22F05B49-FE62-48D7-B759-B1CB9A7FF860}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_dungeons_subGlide_bpm_165_4-4_16M" ID="{9100FDC7-222F-4F6B-9E4B-E58417700FDA}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons\mus_dungeons_subGlide_bpm_165_4-4_16M.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="214161784"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{83AED40E-FE72-4C75-9D01-DC047578FDD4}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_subGlide_bpm_165_4-4_16M" ID="{CBA976B9-8F25-48D0-8623-56EE13F2EC76}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_subGlide_bpm_165_4-4_16M" ID="{9100FDC7-222F-4F6B-9E4B-E58417700FDA}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{EC123D54-63AE-4783-A14D-E80A359D82D6}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{C794514E-928B-434F-84D0-BB789D25417C}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="26181.8333333333"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="mus_dungeons_synth_lead_arp_bpm_165_4-4_16M" ID="{FE64057F-AE13-4125-A2BA-F274156F1172}" ShortID="116423837">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="26181.8333333333"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="mus_dungeons_synth_lead_arp_bpm_165_4-4_16M" ID="{FE7F6FE3-464E-48A9-AC73-F11AE38696F2}" ShortID="422793936">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{F3EF597D-7FBA-410D-8AC6-FEF3ABA7769F}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_dungeons_synth_lead_arp_bpm_165_4-4_16M" ID="{B6896113-73CF-45B6-8A35-5581F7B534EB}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons\mus_dungeons_synth_lead_arp_bpm_165_4-4_16M.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="385425257"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{1A490EC7-7931-4467-9303-2ACE995E902F}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_synth_lead_arp_bpm_165_4-4_16M" ID="{5AD299DC-CC75-49CF-90C0-C7AC2C2DB593}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_synth_lead_arp_bpm_165_4-4_16M" ID="{B6896113-73CF-45B6-8A35-5581F7B534EB}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{18B0C59D-850A-4E37-8D84-BBEA2278346A}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{4E3BB64F-321E-4B23-BC73-06547B8DFF53}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="26181.8333333333"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="mus_dungeons_pads_intro_bpm_165_4-4_16M" ID="{75EB65C3-B639-45AE-859D-98C74D6C0D5A}" ShortID="1044866226">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="26181.8333333333"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="mus_dungeons_pads_intro_bpm_165_4-4_16M" ID="{2728C29D-E576-49D5-BDAF-B5137FFBC406}" ShortID="609944626">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{6119A6FF-DCB7-4717-8EE2-101E1298B6D0}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_dungeons_pads_intro_bpm_165_4-4_16M" ID="{651D1F76-4E80-471C-BF0E-E50631720FAD}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons\mus_dungeons_pads_intro_bpm_165_4-4_16M.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="411035157"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{0E2169CD-94C8-4BCE-8922-8C3514EB5A04}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_pads_intro_bpm_165_4-4_16M" ID="{BCFC4D4B-92C4-49A9-AD35-CA26EA38626E}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_pads_intro_bpm_165_4-4_16M" ID="{651D1F76-4E80-471C-BF0E-E50631720FAD}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{B984004C-2ECD-4418-8FE6-1C3C06AB8D20}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{B0220E47-6FA4-4963-945E-00CE3FA59961}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="26181.8333333333"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="mus_dungeons_guitar_lead_theme_bpm_165_4-4_16M_wav" ID="{610575C8-9524-4F8B-850E-0428E4C8AD70}" ShortID="263309983">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="26181.8333333333"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="mus_dungeons_guitar_lead_theme_bpm_165_4-4_16M_wav" ID="{F920E555-3DE2-4153-9711-4D656D8BF1A1}" ShortID="773486653">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{7A28A877-8CD9-440B-9911-2EBF3FE9009E}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_dungeons_guitar_lead_theme_bpm_165_4-4_16M_wav" ID="{836BEC9E-0A4D-44B0-A65D-44C20369025E}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons\mus_dungeons_guitar_lead_theme_bpm_165_4-4_16M.wav.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="924766069"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{9CC92811-BAA5-48D1-AF9E-E11904133A15}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_guitar_lead_theme_bpm_165_4-4_16M_wav" ID="{5B95346E-9114-4F72-9A1D-D96289807B33}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_guitar_lead_theme_bpm_165_4-4_16M_wav" ID="{836BEC9E-0A4D-44B0-A65D-44C20369025E}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{6D706C81-EC50-45BA-B5CA-0AF20FB995CB}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{297508EA-F970-4C5B-B96B-74DC912A5ABB}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="26181.8333333333"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="mus_dungeons_guitar_rhythm_chords_long_bpm_165_4-4_16M_wav" ID="{33001D7A-EB44-4975-9B75-5B142792347C}" ShortID="366578832">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="26181.8333333333"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="mus_dungeons_guitar_rhythm_chords_long_bpm_165_4-4_16M_wav" ID="{032FA1CC-5A3D-4A72-BAF2-9F0FE9DF327B}" ShortID="162509131">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{56F0DD17-E13D-4356-92E6-6675C8BBE44B}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_dungeons_guitar_rhythm_chords_long_bpm_165_4-4_16M_wav" ID="{5746E305-12A1-4BCF-A34A-021E068D08C9}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons\mus_dungeons_guitar_rhythm_chords_long_bpm_165_4-4_16M.wav.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="741984724"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{5B03B03D-15C2-42BF-8407-3CF3943B3882}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_guitar_rhythm_chords_long_bpm_165_4-4_16M_wav" ID="{C46C4ED9-0E63-474B-9803-15F26E484087}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_guitar_rhythm_chords_long_bpm_165_4-4_16M_wav" ID="{5746E305-12A1-4BCF-A34A-021E068D08C9}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{A77536C4-FB46-4C2D-8F76-34DE533CFEBE}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{FCB11462-8A75-4D70-A904-95BD9A552034}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="26181.8333333333"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="mus_dungeons_drums_dnb_intro01_bpm_165_4-4_16M" ID="{CBAAA202-1EA7-4603-90D4-8A89955A0B4B}" ShortID="360935327">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="26181.8333333333"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="mus_dungeons_drums_dnb_intro01_bpm_165_4-4_16M" ID="{6D6B3120-BE45-418E-B28A-FE377B471A3B}" ShortID="219240012">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{D8DBB8C4-6021-46E3-89D5-0B7C99A62A57}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_dungeons_drums_dnb_intro01_bpm_165_4-4_16M" ID="{F9504C31-A071-455F-A69B-84AB0E38844A}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons\mus_dungeons_drums_dnb_intro01_bpm_165_4-4_16M.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1065464564"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{3A64B3EB-4C7F-42F7-9A47-7D714AD2706C}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_drums_dnb_intro01_bpm_165_4-4_16M" ID="{05B87F97-F129-45B7-A682-680714F17D12}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_drums_dnb_intro01_bpm_165_4-4_16M" ID="{F9504C31-A071-455F-A69B-84AB0E38844A}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{418B8746-FBEE-45F8-98D6-D6619D0CE6F5}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{9CAE395C-FF9D-43C3-9972-C02D930EBE2E}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="26181.8333333333"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="mus_dungeons_guitar_lead_ambStrokes_bpm_165_4-4_16M_wav" ID="{E5E04C5C-FDFD-4E1D-A9B7-05BF7429E276}" ShortID="302016207">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="26181.8333333333"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="mus_dungeons_guitar_lead_ambStrokes_bpm_165_4-4_16M_wav" ID="{17672284-9D7E-4160-9135-676C4C6EFC14}" ShortID="227233291">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{4509D635-A8FE-4F4A-8F77-727261C4CDF6}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_dungeons_guitar_lead_ambStrokes_bpm_165_4-4_16M_wav" ID="{D1ACD5FB-A50F-4C03-BBB0-090E296C5515}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons\mus_dungeons_guitar_lead_ambStrokes_bpm_165_4-4_16M.wav.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1040352072"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{3F62863C-DAE9-445D-9E2D-023B5059A5D6}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_guitar_lead_ambStrokes_bpm_165_4-4_16M_wav" ID="{C7CD0C98-8C2E-401C-86A9-35A4F53FB32B}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_guitar_lead_ambStrokes_bpm_165_4-4_16M_wav" ID="{D1ACD5FB-A50F-4C03-BBB0-090E296C5515}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{C3010B7E-18DD-48E9-8692-19B8B650A125}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{C1AC6195-4583-4CDF-A369-B3993D86B5AB}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="26181.8333333333"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="mus_dungeons_drums_dnb_main_bpm_165_4-4_4M" ID="{6787C2BB-4536-4CA2-AAD4-00D6DF683B51}" ShortID="908621892">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="26181.8333333333"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="mus_dungeons_drums_dnb_main_bpm_165_4-4_4M" ID="{2ED7E32A-8C13-4E85-B09B-7A47353F3AF4}" ShortID="724875659">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{E68AEBD7-C28C-4B01-B5CD-00F2C8BA3DEA}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_dungeons_drums_dnb_main_bpm_165_4-4_4M" ID="{6C31301A-1006-43FE-BD60-6CD44105A807}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons\mus_dungeons_drums_dnb_main_bpm_165_4-4_4M.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1042353546"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{32DF02CA-CB89-474D-9D2B-C919190DE9C0}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_drums_dnb_main_bpm_165_4-4_4M" ID="{DDF5ED17-B68E-45F2-BC15-B1C486C8FBC0}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_drums_dnb_main_bpm_165_4-4_4M" ID="{6C31301A-1006-43FE-BD60-6CD44105A807}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{DC7D6780-1F39-4B98-AD66-75620E27E79F}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{8B076583-27D5-41D9-AF73-BAB3A8B2591C}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="26181.8333333333"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="mus_dungeons_guitar_lead_longNotes_bpm_165_4-4_16M_wav" ID="{627A6EF7-E50B-4FE8-8E84-66AC1BF7AE08}" ShortID="428173532">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="26181.8333333333"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="mus_dungeons_guitar_lead_longNotes_bpm_165_4-4_16M_wav" ID="{3F33A18B-5AD8-40F1-B65B-885335B99BAD}" ShortID="846087281">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{74CF322C-6A15-4614-9E01-F6210962B693}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_dungeons_guitar_lead_longNotes_bpm_165_4-4_16M_wav" ID="{28DFB3D7-E6F6-43EA-BA8E-56AA4433AA08}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons\mus_dungeons_guitar_lead_longNotes_bpm_165_4-4_16M.wav.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1069468423"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{C83CB073-3AC2-43DF-A7A6-CB82EC4EBFCF}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_guitar_lead_longNotes_bpm_165_4-4_16M_wav" ID="{01C9D0E9-FDC1-46F1-B442-1AF8B429EFB7}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_guitar_lead_longNotes_bpm_165_4-4_16M_wav" ID="{28DFB3D7-E6F6-43EA-BA8E-56AA4433AA08}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{7391A495-D9B2-49EB-9671-294A24D187A9}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{259DF5A0-5A5A-4FD7-92E0-FECD127ACC51}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="26181.8333333333"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="mus_dungeons_guitar_lead_solo_bpm_165_4-4_16M_wav" ID="{3F821B3B-506E-47DF-90A3-3F5EF7BD49CD}" ShortID="790377637">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="26181.8333333333"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="mus_dungeons_guitar_lead_solo_bpm_165_4-4_16M_wav" ID="{6F6644B3-E106-4C59-B980-19670BDD3318}" ShortID="844485123">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{5BBC8438-AF21-4531-BFDC-D0DC360E92B6}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_dungeons_guitar_lead_solo_bpm_165_4-4_16M_wav" ID="{47C05544-63A0-447E-9E94-E47AD1F8CE4E}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons\mus_dungeons_guitar_lead_solo_bpm_165_4-4_16M.wav.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="798591987"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{042BB2D2-1628-4E9F-BC73-ACEEF21D83C4}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_guitar_lead_solo_bpm_165_4-4_16M_wav" ID="{A9E27EEE-38CC-4472-A4B2-837EA849EEC8}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_guitar_lead_solo_bpm_165_4-4_16M_wav" ID="{47C05544-63A0-447E-9E94-E47AD1F8CE4E}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{280673ED-FFE7-4F2E-AD7E-43D6C4669DD2}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{993CF07D-3733-4AD1-A6FA-5AE8C1A76016}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="26181.8333333333"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="mus_dungeons_guitar_lead_bends_bpm_165_4-4_16M" ID="{27CE005E-D68A-49DF-B981-E65BB9F1DBAF}" ShortID="747658322">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="26181.8333333333"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="mus_dungeons_guitar_lead_bends_bpm_165_4-4_16M" ID="{B496DBFF-D488-4E72-913F-7B1451C48571}" ShortID="444186527">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{86FF34E4-346F-45F8-B689-6A3BC7ECB0EE}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_dungeons_guitar_lead_bends_bpm_165_4-4_16M" ID="{109EC461-621A-43F4-AA2C-C20BBD31E15D}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons\mus_dungeons_guitar_lead_bends_bpm_165_4-4_16M.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="751618023"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{B48F5CFA-8A07-41C6-80D8-119664DDB9AE}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_guitar_lead_bends_bpm_165_4-4_16M" ID="{6C11E3D3-7F79-4559-BC4F-DF46118892CE}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_guitar_lead_bends_bpm_165_4-4_16M" ID="{109EC461-621A-43F4-AA2C-C20BBD31E15D}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{5C6816AA-25ED-4C0E-8621-88BF2181673B}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{9C30AD6E-4DB5-4A4F-83EF-8393A8502963}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="26181.8333333333"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="mus_dungeons_guitar_lead_arp_bpm_165_4-4_16M_wav" ID="{4CEA04CD-1BD5-461B-B778-2D56037087B0}" ShortID="830736392">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="26181.8333333333"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="mus_dungeons_guitar_lead_arp_bpm_165_4-4_16M_wav" ID="{33DF4EA9-A735-498F-8A45-3CC4D183AD8A}" ShortID="189774923">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{F527E754-4D03-4EF3-B6C3-939D61CFD335}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_dungeons_guitar_lead_arp_bpm_165_4-4_16M_wav" ID="{542266E0-FEEB-41B8-BEAE-32F7449C1AE0}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons\mus_dungeons_guitar_lead_arp_bpm_165_4-4_16M.wav.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="946274436"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{C87874FD-C8C1-4C95-ADE7-F187A730357F}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_guitar_lead_arp_bpm_165_4-4_16M_wav" ID="{1F11FA8E-D721-4946-91A8-D11EC1E0B768}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_guitar_lead_arp_bpm_165_4-4_16M_wav" ID="{542266E0-FEEB-41B8-BEAE-32F7449C1AE0}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{8DFD70F2-0F88-4186-AF77-67ECD9017B83}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{905188E0-0E10-40D7-A500-0D45E5F4BEAD}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="26181.8333333333"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="mus_dungeons_drums_dnb_intro04_bpm_165_4-4_16M" ID="{39D0C9A3-2195-4005-8337-6980A8C2F22D}" ShortID="145339215">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="26181.8333333333"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="mus_dungeons_drums_dnb_intro04_bpm_165_4-4_16M" ID="{5EF4E225-4910-4B16-B302-9CC082E61D8A}" ShortID="36328285">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{78191077-39B9-4A28-AE38-253B59E9B48C}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_dungeons_drums_dnb_intro04_bpm_165_4-4_16M" ID="{D7F6CB2E-EA83-4109-A572-420AC94D6E52}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons\mus_dungeons_drums_dnb_intro04_bpm_165_4-4_16M.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="8407220"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{0F06BDDD-E53A-40F1-84A2-D64119C5D566}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_drums_dnb_intro04_bpm_165_4-4_16M" ID="{302350EE-3AA5-4BE3-87BA-D4C34EFEF368}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_drums_dnb_intro04_bpm_165_4-4_16M" ID="{D7F6CB2E-EA83-4109-A572-420AC94D6E52}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{92B7F11A-4426-4D9F-94A7-EB99F8DA1B3B}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{72D89D4F-1252-4FCE-9E8C-EAC74F998DC5}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="26181.8333333333"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="mus_dungeons_drums_dnb_intro03_bpm_165_4-4_16M" ID="{2ABD75CA-362F-4BA1-A638-4F97B12C65C5}" ShortID="823242901">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="26181.8333333333"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="mus_dungeons_drums_dnb_intro03_bpm_165_4-4_16M" ID="{F950AC45-281A-444E-9FA9-8DF9B4C72B1C}" ShortID="501824516">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{DAB23B97-7250-457C-99C0-01B0ADA871C6}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_dungeons_drums_dnb_intro03_bpm_165_4-4_16M" ID="{7CE22369-9150-4784-BFD8-F09C441DB7DB}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons\mus_dungeons_drums_dnb_intro03_bpm_165_4-4_16M.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="574801118"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{918FE691-CAC9-442D-BA0D-915F1C02CBC9}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_drums_dnb_intro03_bpm_165_4-4_16M" ID="{34CB59F0-BBC9-48A7-9D00-CB493D19E117}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_drums_dnb_intro03_bpm_165_4-4_16M" ID="{7CE22369-9150-4784-BFD8-F09C441DB7DB}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{3583D50A-69F2-4FAB-B047-FD5E513CAB84}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{5A7DCFA4-8308-452B-806D-5E24DE28B92A}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="26181.8333333333"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="mus_dungeons_drums_dnb_intro02_bpm_165_4-4_16M" ID="{B06C3A69-E7FD-43A8-A456-E675BFB91F5F}" ShortID="500655129">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="26181.8333333333"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="mus_dungeons_drums_dnb_intro02_bpm_165_4-4_16M" ID="{B0AA5969-4E71-4AF1-BC0A-8AE515173397}" ShortID="101338399">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{90C4A3A4-D027-4890-B1A3-F4ECA0B9E624}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_dungeons_drums_dnb_intro02_bpm_165_4-4_16M" ID="{0516053B-A26D-48B2-B8D8-9A94024EE1E6}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons\mus_dungeons_drums_dnb_intro02_bpm_165_4-4_16M.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="314269788"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{5C99A85F-B5F7-4BE8-B9EF-4A4D5251B7E2}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_drums_dnb_intro02_bpm_165_4-4_16M" ID="{3AFB868A-7559-45DA-B6B0-565E0D2CD87E}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_drums_dnb_intro02_bpm_165_4-4_16M" ID="{0516053B-A26D-48B2-B8D8-9A94024EE1E6}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{9C98E019-481B-4B10-B867-70A6E764506D}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{D8097F05-4BB1-442B-B903-C121CF40F3D5}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="26181.8333333333"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="mus_dungeons_drums_break02_bpm_165_4-4_1M" ID="{1F90A28D-C3A9-4793-9326-E2D8C9933381}" ShortID="24066248">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="26181.8333333333"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="mus_dungeons_drums_break02_bpm_165_4-4_1M" ID="{2E43EEC1-FADD-4539-BEDE-CBE9D30B7679}" ShortID="770715144">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{6EBD2B38-AB47-4A9D-842A-F7146B936EA0}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_dungeons_drums_break02_bpm_165_4-4_1M" ID="{9589DE47-0F5B-4E85-BF8D-19CEA63C09BE}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons\mus_dungeons_drums_break02_bpm_165_4-4_1M.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="706517064"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{86AA43DA-402F-4E51-9930-60D9EA99DC63}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_drums_break02_bpm_165_4-4_1M" ID="{DA9C7312-8500-4FF7-BB8E-119A0FD37CBB}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_drums_break02_bpm_165_4-4_1M" ID="{9589DE47-0F5B-4E85-BF8D-19CEA63C09BE}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{4AF4375D-F382-4C2D-AA64-E40BE2A36F3B}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{91F3CBB0-F939-4557-BCF8-D4F4C5BC3CBF}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="26181.8333333333"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="mus_dungeons_arpg_bpm_165_4-4_16M" ID="{170D3A06-2BE8-48E6-A679-4027CF550B90}" ShortID="973246177">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="26181.8333333333"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="mus_dungeons_arpg_bpm_165_4-4_16M" ID="{2BC54751-8628-429F-97EC-7859CA019F24}" ShortID="201531288">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{06C485C9-088B-4EBC-8F97-6E23EA202F12}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_dungeons_arpg_bpm_165_4-4_16M" ID="{33E17286-4C44-43C1-AB46-625F1038D073}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons\mus_dungeons_arpg_bpm_165_4-4_16M.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="809141704"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{B2550C72-01B0-4361-8DD8-A764E5C3E75D}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_arpg_bpm_165_4-4_16M" ID="{761F8787-893A-414F-821A-CA76B130C118}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_arpg_bpm_165_4-4_16M" ID="{33E17286-4C44-43C1-AB46-625F1038D073}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{3E371E96-1BC3-4FF9-987C-86010EF9B225}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{1DA861AD-CC2A-4E0D-AB70-E2783AF55D36}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="26181.8333333333"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="mus_dungeons_bass_bpm_165_4-4_16M" ID="{B54101EF-D5A3-41C4-AB88-5DD250D29B8A}" ShortID="451866542">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="23727.2916666667"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="mus_dungeons_bass_bpm_165_4-4_16M" ID="{DBF4F933-DD7F-4A22-81AA-90FFFD17E541}" ShortID="99445949">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{C15A75DC-64B4-45A7-BD81-4285CE5D9845}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_dungeons_bass_bpm_165_4-4_16M" ID="{54A842EB-E3E7-4B5B-B7C4-6077B319E0CD}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons\mus_dungeons_bass_bpm_165_4-4_16M.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1022055089"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{944EEB82-3634-415E-9F60-5C540242AF7A}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_bass_bpm_165_4-4_16M" ID="{E6035CC7-AB90-477B-90BC-E314C316B8D2}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="23727.2916666667"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_bass_bpm_165_4-4_16M" ID="{54A842EB-E3E7-4B5B-B7C4-6077B319E0CD}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{9A762825-3044-4AAB-B5C8-31A2DFB8B660}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{99C81E25-5198-4083-B524-7D4CE65C535B}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="23727.2916666667"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="mus_dungeons_drums_break01_bpm_165_4-4_2M" ID="{EE7C1010-899C-43A3-A82A-55003B030329}" ShortID="645361043">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="26181.8333333333"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="mus_dungeons_drums_break01_bpm_165_4-4_2M" ID="{245B3445-0D3D-4CD1-B4AD-82161CFF6D9C}" ShortID="1000557654">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{CD7CB890-E42B-4EFC-A2EE-386BD217D054}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_dungeons_drums_break01_bpm_165_4-4_2M" ID="{3F59A946-63BD-4B54-875B-8E11943567EB}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons\mus_dungeons_drums_break01_bpm_165_4-4_2M.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="175985124"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{D28E0DE9-961A-40E3-9D35-D99CE6AD44D8}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_drums_break01_bpm_165_4-4_2M" ID="{262C1F72-D472-4CAB-B1B7-2EC5E44775CC}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_drums_break01_bpm_165_4-4_2M" ID="{3F59A946-63BD-4B54-875B-8E11943567EB}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{19E0BB84-8BE0-463C-87B2-4AF9A0901CD9}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{1F408575-15FB-4D07-A15A-E66B11539B20}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="26181.8333333333"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="mus_dungeons_drums_dnb_main01_bpm_165_4-4_4M" ID="{176FACF4-8C04-4A7A-9628-83C143C066E5}" ShortID="696044037">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="26181.8333333333"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="mus_dungeons_drums_dnb_main01_bpm_165_4-4_4M" ID="{7BB0391B-4BE6-4604-B447-4ED506917757}" ShortID="535674624">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{9B818960-DABA-49FA-A480-80DEDE3641F3}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_dungeons_drums_dnb_main01_bpm_165_4-4_4M" ID="{47D65A1E-7A45-4D36-A2F0-54FE38A80290}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons\mus_dungeons_drums_dnb_main01_bpm_165_4-4_4M.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1051775727"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{97D366D4-EB7E-4A21-A12B-3104462C3356}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_drums_dnb_main01_bpm_165_4-4_4M" ID="{ACE668C9-E439-4D9D-9EDE-B03B44330ABD}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_drums_dnb_main01_bpm_165_4-4_4M" ID="{47D65A1E-7A45-4D36-A2F0-54FE38A80290}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{5DE1BB76-43C1-47EF-AAA8-B16F6D1DD463}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{F8EB30DD-B49D-423B-936D-DDFED7B0BA30}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="26181.8333333333"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="mus_dungeons_drums_dnb_mainSpaced_bpm_165_4-4_4M" ID="{A4354560-67D4-4B31-B9AA-D1A1372B60CE}" ShortID="235594752">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="26181.8333333333"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="mus_dungeons_drums_dnb_mainSpaced_bpm_165_4-4_4M" ID="{E7BA44D8-192B-4150-A0DB-2ECF75C0BB92}" ShortID="830929710">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{E3B7DD90-0E1E-476A-8C1E-5EBF9BC20EF9}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_dungeons_drums_dnb_mainSpaced_bpm_165_4-4_4M" ID="{70164992-4906-47EA-B71E-F4FB29974609}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons\mus_dungeons_drums_dnb_mainSpaced_bpm_165_4-4_4M.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="950569714"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{7B71F28C-59F2-4876-A70A-BAD730376506}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_drums_dnb_mainSpaced_bpm_165_4-4_4M" ID="{B6B34FEE-7709-405A-BCAE-0C9D7E45ED7D}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_drums_dnb_mainSpaced_bpm_165_4-4_4M" ID="{70164992-4906-47EA-B71E-F4FB29974609}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{F57551A6-3D1B-4866-A832-624F12D380BF}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{187584E2-A275-4C12-8A4F-690E3846470F}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="26181.8333333333"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="mus_dungeons_guitar_rhythm_power_rhythm_bpm_165_4-4_16M" ID="{4DF308F0-18FA-4264-A28D-AE5FED63AF6E}" ShortID="520823751">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="26181.8333333333"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="mus_dungeons_guitar_rhythm_power_rhythm_bpm_165_4-4_16M" ID="{25CFE1D5-0AB3-4989-9F1C-101DBFCCE308}" ShortID="511663302">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{FDD2CADC-DF65-4CBE-B285-1F882D26376C}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_dungeons_guitar_rhythm_power_rhythm_bpm_165_4-4_16M" ID="{2C0891CF-DB2E-408C-BFBC-6B8B717E4501}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons\mus_dungeons_guitar_rhythm_power_rhythm_bpm_165_4-4_16M.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1045114246"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{CD805AB6-A5CA-435B-B4F2-031B2BA75561}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_guitar_rhythm_power_rhythm_bpm_165_4-4_16M" ID="{685B7F11-95F8-400D-A94E-0561696F7BBB}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_guitar_rhythm_power_rhythm_bpm_165_4-4_16M" ID="{2C0891CF-DB2E-408C-BFBC-6B8B717E4501}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{498C0825-C3E1-4716-AE5E-063571D9D7A0}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{A10A35F8-9AF7-4749-B926-D23255F80A0A}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="26181.8333333333"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="mus_dungeons_guitar_synth_lead-solo01_bpm_165_4-4_16M" ID="{29E74C40-BF98-4EF5-B225-AEF4F90DD94F}" ShortID="1033937098">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="26181.8333333333"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="mus_dungeons_guitar_synth_lead-solo01_bpm_165_4-4_16M" ID="{027657A6-EA29-49E8-94DD-E546A8F4BA2E}" ShortID="934954231">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{25BDD3C3-B3FC-4778-9991-B01ED253EF18}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_dungeons_guitar_synth_lead-solo01_bpm_165_4-4_16M" ID="{10F7DD43-D8BE-4C47-90B5-0F223CEA56CE}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons\mus_dungeons_guitar_synth_lead-solo01_bpm_165_4-4_16M.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="858558160"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{F6F2828F-68BE-417B-8891-79E662FEBD5B}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_guitar_synth_lead-solo01_bpm_165_4-4_16M" ID="{B56B4A0C-3BC4-4220-A116-31C866D730BE}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_guitar_synth_lead-solo01_bpm_165_4-4_16M" ID="{10F7DD43-D8BE-4C47-90B5-0F223CEA56CE}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{251E07C9-0B9E-4BEC-8303-22E9256665C0}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{942AA27B-2278-40D3-99B7-835DEE6D7CBD}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="26181.8333333333"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="mus_dungeons_pads_arp02_bpm_165_4-4_16M" ID="{2E70A5EE-3B91-439A-814B-063E25A73FF9}" ShortID="460870353">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="26181.8333333333"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="mus_dungeons_pads_arp02_bpm_165_4-4_16M" ID="{586F0F7E-C269-424A-9B06-ED28F31B2F65}" ShortID="34761679">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{EF70EF4E-D22A-48B0-BF88-4694037EAD73}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_dungeons_pads_arp02_bpm_165_4-4_16M" ID="{046BCC94-3211-454C-BE6D-DFEE2B2303B3}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons\mus_dungeons_pads_arp02_bpm_165_4-4_16M.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="874628999"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{A9266217-2D2C-45B1-B4C3-30D0043F0BBD}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_pads_arp02_bpm_165_4-4_16M" ID="{D11F7AD5-751F-459D-8889-B2979F4767FC}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_pads_arp02_bpm_165_4-4_16M" ID="{046BCC94-3211-454C-BE6D-DFEE2B2303B3}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{22B50AF5-FFF1-4FE1-A5B1-BA324D7E7B78}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{E9DEF681-3217-4E27-9E58-E18202901369}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="26181.8333333333"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="mus_dungeons_pads_arp03_bpm_165_4-4_16M" ID="{4453886B-9FD9-4AC5-92A8-4F92AC5F290D}" ShortID="485011430">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="26181.8333333333"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="mus_dungeons_pads_arp03_bpm_165_4-4_16M" ID="{A2240FB9-4363-44F1-9E2A-7246C75E0C37}" ShortID="47009305">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{58D81001-44D3-4C60-9C0D-6F1568AA56C6}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_dungeons_pads_arp03_bpm_165_4-4_16M" ID="{3E7ECD0B-2D74-4D1E-8EC4-5A392A6E53BB}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons\mus_dungeons_pads_arp03_bpm_165_4-4_16M.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="656835995"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{638A9E81-4FF8-4936-AA9C-7EC296EC3D34}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_pads_arp03_bpm_165_4-4_16M" ID="{A3369360-4416-4834-9130-8A21DCD2ECCE}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_pads_arp03_bpm_165_4-4_16M" ID="{3E7ECD0B-2D74-4D1E-8EC4-5A392A6E53BB}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{58B9B885-CDB9-49C7-8133-6AF8E3284F29}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{59E3467E-48AE-4869-83CC-4132EB7D6FB5}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="26181.8333333333"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="mus_dungeons_pads_arp01_bpm_165_4-4_16M" ID="{4E9DF4CA-F8E9-4DB7-9F00-721B4629C07E}" ShortID="1069068799">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="26181.8333333333"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="mus_dungeons_pads_arp01_bpm_165_4-4_16M" ID="{7039E783-4CC9-4ACB-ABEC-76A85E695E09}" ShortID="340900495">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{7A76E92E-9CE6-4EFA-8B8D-DB2CA47FAC23}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_dungeons_pads_arp01_bpm_165_4-4_16M" ID="{B2B13E69-7B86-4D1E-B171-686ECD5A83E7}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons\mus_dungeons_pads_arp01_bpm_165_4-4_16M.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1057670056"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{B46CA92A-87BE-40D6-8ABD-E1B4F64E864D}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_pads_arp01_bpm_165_4-4_16M" ID="{92D55EC7-EA09-4ABA-BC27-8A148D3C2E3E}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_pads_arp01_bpm_165_4-4_16M" ID="{B2B13E69-7B86-4D1E-B171-686ECD5A83E7}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{8871066B-D54B-4E84-94FC-24ED34AD1F25}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{0C45E328-59A2-4985-B404-C5609697AE60}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="26181.8333333333"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="mus_dungeons_guitar_rhythm_mute_palm_bpm_165_4-4_16M" ID="{D77F3A2B-68C6-4DF3-8E21-D75AD6BC4389}" ShortID="28854051">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="26181.8333333333"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="mus_dungeons_guitar_rhythm_mute_palm_bpm_165_4-4_16M" ID="{51686751-A1D2-4F9C-B5D2-5D758EF64B64}" ShortID="611122153">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{E69F67AE-15CD-4A6C-8785-1039356645CC}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_dungeons_guitar_rhythm_mute_palm_bpm_165_4-4_16M" ID="{AF442C5A-0EDE-4517-8B34-8AD142098BCB}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons\mus_dungeons_guitar_rhythm_mute_palm_bpm_165_4-4_16M.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="630171860"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{4CF42C4C-DC57-4538-B3F4-A55BE266DC51}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_guitar_rhythm_mute_palm_bpm_165_4-4_16M" ID="{E0CB5272-F487-4FD5-B830-6A9247AE6DD5}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_guitar_rhythm_mute_palm_bpm_165_4-4_16M" ID="{AF442C5A-0EDE-4517-8B34-8AD142098BCB}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{D829BA06-55C1-4956-A6D3-B3820FD9F70D}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{CC566ADE-E3D2-4B2C-8319-31B90B4917B8}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="26181.8333333333"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="mus_dungeons_guitar_rhythm_chords__bpm_165_4-4_16M_wav" ID="{949C688E-0F31-4818-A3E0-934B849163F8}" ShortID="372827723">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="26181.8333333333"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="mus_dungeons_guitar_rhythm_chords__bpm_165_4-4_16M_wav" ID="{0EFA7BC7-D220-4227-9E2F-A310FBB778C5}" ShortID="261971405">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{BB88B21D-517E-4187-9626-DE0712DF3B6F}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_dungeons_guitar_rhythm_chords__bpm_165_4-4_16M_wav" ID="{73F330A7-A76A-4DB1-B4E1-9612676C52D3}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons\mus_dungeons_guitar_rhythm_chords__bpm_165_4-4_16M.wav.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="415595819"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{BCAC5358-B12A-46ED-B811-9F8A9522EBE4}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_guitar_rhythm_chords__bpm_165_4-4_16M_wav" ID="{4F65BC99-E8ED-480F-AB28-83DCAAEB1FA1}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_guitar_rhythm_chords__bpm_165_4-4_16M_wav" ID="{73F330A7-A76A-4DB1-B4E1-9612676C52D3}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{5DAE54FD-DE8D-4383-9659-5F8B0495FCD8}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{A6249A88-DBFF-4A94-A9AB-AEFFF1A45909}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="26181.8333333333"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="mus_dungeons_guitar_rhythm_chords_power_bpm_165_4-4_16M_wav" ID="{2EB265D1-913C-4D12-89E4-0B06AB897608}" ShortID="232252874">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="26181.8333333333"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="mus_dungeons_guitar_rhythm_chords_power_bpm_165_4-4_16M_wav" ID="{7D3F5F8F-B4E0-4B4A-A1BE-803B11A683AE}" ShortID="582540540">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{9C96AE54-B429-4CF4-AE58-48E5C0C36D52}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_dungeons_guitar_rhythm_chords_power_bpm_165_4-4_16M_wav" ID="{01C06878-814C-4F17-8692-22203AF3422C}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons\mus_dungeons_guitar_rhythm_chords_power_bpm_165_4-4_16M.wav.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="25552355"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{F26D0084-42C8-4A71-AC1F-2A6EF0E60094}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_guitar_rhythm_chords_power_bpm_165_4-4_16M_wav" ID="{AD94336A-06A0-47EF-B67D-19191C0930BB}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_guitar_rhythm_chords_power_bpm_165_4-4_16M_wav" ID="{01C06878-814C-4F17-8692-22203AF3422C}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{14E12604-409B-4791-A14E-50CD29818FBC}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{21711DBC-7DB6-41BE-8D88-8D6A28611E04}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="26181.8333333333"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="mus_dungeons_guitar_rhythm_mute_funk_bpm_165_4-4_16M_wav" ID="{B62D28C7-DB80-49B5-8E9A-B50648ED5972}" ShortID="91105070">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="26181.8333333333"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="mus_dungeons_guitar_rhythm_mute_funk_bpm_165_4-4_16M_wav" ID="{BDE887FC-7D22-4AD2-BE58-517626FF9751}" ShortID="826440417">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{FA7BC078-2C34-43AB-B70A-087877FF8DC8}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_dungeons_guitar_rhythm_mute_funk_bpm_165_4-4_16M_wav" ID="{EE932ABE-F5DF-4A2E-BD32-BEEE912745D5}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons\mus_dungeons_guitar_rhythm_mute_funk_bpm_165_4-4_16M.wav.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="139109442"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{74FF4EE0-F869-489C-8F38-339559904380}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_guitar_rhythm_mute_funk_bpm_165_4-4_16M_wav" ID="{89416C9C-556B-4503-BEDD-864437DB543A}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_guitar_rhythm_mute_funk_bpm_165_4-4_16M_wav" ID="{EE932ABE-F5DF-4A2E-BD32-BEEE912745D5}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{8B07028B-143D-4CBE-9369-86A20EBA8E49}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{4C3E1728-90A5-404B-9CC4-E50DFDCBB243}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="26181.8333333333"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 					<ObjectLists>
 						<ObjectList Name="Arguments">
@@ -1568,7 +4509,6 @@
 							<Reference>
 								<Local>
 									<MultiSwitchEntry Name="" ID="{B83B8AB8-51A8-4F28-9BB6-235762A525B6}">
-										<ReferenceList/>
 										<ObjectLists>
 											<ObjectList Name="EntryPath">
 												<Reference>
@@ -1585,7 +4525,6 @@
 							<Reference>
 								<Local>
 									<MultiSwitchEntry Name="" ID="{8EAA1575-C3EF-4412-9B41-AC8A93C0FD7D}">
-										<ReferenceList/>
 										<ObjectLists>
 											<ObjectList Name="EntryPath">
 												<Reference>
