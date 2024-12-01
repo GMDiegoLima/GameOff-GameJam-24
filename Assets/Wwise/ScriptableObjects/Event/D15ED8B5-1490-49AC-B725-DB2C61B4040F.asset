@@ -15,3 +15,5 @@ MonoBehaviour:
   objectName: normal_dialogue
   id: 365141489
   guid: D15ED8B5-1490-49AC-B725-DB2C61B4040F
+  IsInUserDefinedSoundBank: 1
+  IsAutoBankLoaded: 0

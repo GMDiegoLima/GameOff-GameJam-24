@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="Project" SchemaVersion="119" WwiseVersion="v2023.1.8" WwiseBuild="8601">
+<WwiseDocument Type="Project" SchemaVersion="123" WwiseVersion="v2024.1.0" WwiseBuild="8669">
 	<ProjectInfo>
 		<Project Name="GameOff-GameJam-24_WwiseProject" ID="{704EC4EB-E3A4-4004-87AE-6A1D4792A52A}">
 			<Platforms>
 				<Platform Name="Mac" ReferencePlatform="Mac" ID="{314BE535-C17F-4EF4-9675-211D6FB063E5}"/>
+				<Platform Name="Web" ReferencePlatform="Web" ID="{2DE7DF70-E8A1-4CBF-BE99-972DCBCB3655}"/>
 				<Platform Name="Windows" ReferencePlatform="Windows" ID="{B8778FCE-E4BA-4A43-99D1-934992993B38}"/>
 			</Platforms>
 			<LanguageList>
@@ -16,47 +17,72 @@
 				<Property Name="ExternalSourcesInputPath" Type="string">
 					<ValueList>
 						<Value Platform="Windows"></Value>
+						<Value Platform="Web"></Value>
 						<Value Platform="Mac"></Value>
 					</ValueList>
 				</Property>
 				<Property Name="ExternalSourcesOutputPath" Type="string">
 					<ValueList>
 						<Value Platform="Windows">GeneratedSoundBanks\Windows\</Value>
+						<Value Platform="Web">GeneratedSoundBanks\Web\</Value>
 						<Value Platform="Mac">GeneratedSoundBanks\Mac\</Value>
+					</ValueList>
+				</Property>
+				<Property Name="GenerateSoundBankJSON" Type="bool" Value="True"/>
+				<Property Name="GenerateSoundBankXML" Type="bool" Value="False"/>
+				<Property Name="GlobalVoiceInstancesLimit" Type="int16">
+					<ValueList>
+						<Value Platform="Windows">256</Value>
+						<Value Platform="Web">256</Value>
+						<Value Platform="Mac">256</Value>
 					</ValueList>
 				</Property>
 				<Property Name="SoundBankGenerateEstimatedDuration" Type="bool" Value="True"/>
 				<Property Name="SoundBankGenerateHeaderFile" Type="bool" Value="True"/>
 				<Property Name="SoundBankGenerateMaxAttenuationInfo" Type="bool" Value="True"/>
-				<Property Name="SoundBankHeaderFilePath" Type="string" Value="../../GameOff-GameJam-24/Assets/StreamingAssets/Audio/GeneratedSoundBanks"/>
+				<Property Name="SoundBankGeneratePrintGUID" Type="bool" Value="True"/>
+				<Property Name="SoundBankGeneratePrintPath" Type="bool" Value="True"/>
+				<Property Name="SoundBankHeaderFilePath" Type="string" Value="../Assets/StreamingAssets/Audio/GeneratedSoundBanks"/>
 				<Property Name="SoundBankPaths" Type="string">
 					<ValueList>
 						<Value Platform="Windows">GeneratedSoundBanks\Windows\</Value>
+						<Value Platform="Web">GeneratedSoundBanks\Web\</Value>
 						<Value Platform="Mac">GeneratedSoundBanks\Mac\</Value>
 					</ValueList>
 				</Property>
 				<Property Name="SoundBankPostGenerateCustomCmdDescription" Type="string">
 					<ValueList>
 						<Value Platform="Windows"></Value>
+						<Value Platform="Web"></Value>
 						<Value Platform="Mac"></Value>
 					</ValueList>
 				</Property>
 				<Property Name="SoundBankPostGenerateCustomCmdLines" Type="string">
 					<ValueList>
 						<Value Platform="Windows"></Value>
+						<Value Platform="Web"></Value>
 						<Value Platform="Mac"></Value>
 					</ValueList>
 				</Property>
 				<Property Name="SoundBankPreGenerateCustomCmdDescription" Type="string">
 					<ValueList>
 						<Value Platform="Windows"></Value>
+						<Value Platform="Web"></Value>
 						<Value Platform="Mac"></Value>
 					</ValueList>
 				</Property>
 				<Property Name="SoundBankPreGenerateCustomCmdLines" Type="string">
 					<ValueList>
 						<Value Platform="Windows"></Value>
+						<Value Platform="Web"></Value>
 						<Value Platform="Mac"></Value>
+					</ValueList>
+				</Property>
+				<Property Name="VolumeThreshold" Type="Real64">
+					<ValueList>
+						<Value Platform="Windows">-80</Value>
+						<Value Platform="Web">-80</Value>
+						<Value Platform="Mac">-80</Value>
 					</ValueList>
 				</Property>
 				<Property Name="WwiseVersionWhenCreated" Type="string" Value="Branch=wwise_v2023.1.8|Build=8601|VersionName=v2023.1.8|Config=Release"/>
@@ -161,7 +187,15 @@
 						</Property>
 					</PropertyList>
 				</SharedPropertyList>
-				<SharedPropertyList ClassName="PCM" PluginType="1" CompanyID="0" PluginID="1"/>
+				<SharedPropertyList ClassName="PCM" PluginType="1" CompanyID="0" PluginID="1">
+					<PropertyList>
+						<Property Name="MaxBitDepth" Type="int32">
+							<ValueList>
+								<Value>16</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+				</SharedPropertyList>
 				<SharedPropertyList ClassName="Sound" PluginType="0" CompanyID="1" PluginID="1">
 					<PropertyList>
 						<Property Name="3DPosition" Type="int16">
@@ -172,6 +206,11 @@
 						<Property Name="3DSpatialization" Type="int16">
 							<ValueList>
 								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="AttenuationDistanceScaling" Type="Real32">
+							<ValueList>
+								<Value>1</Value>
 							</ValueList>
 						</Property>
 						<Property Name="BelowThresholdBehavior" Type="int16">
@@ -621,15 +660,7 @@
 						</Property>
 					</PropertyList>
 				</SharedPropertyList>
-				<SharedPropertyList ClassName="ADPCM" PluginType="1" CompanyID="0" PluginID="2">
-					<PropertyList>
-						<Property Name="FixLoopMethod" Type="int32">
-							<ValueList>
-								<Value>1</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
-				</SharedPropertyList>
+				<SharedPropertyList ClassName="ADPCM" PluginType="1" CompanyID="0" PluginID="2"/>
 				<SharedPropertyList ClassName="Folder" PluginType="0" CompanyID="1" PluginID="2">
 					<PropertyList>
 						<Property Name="Color" Type="int16">
@@ -843,6 +874,11 @@
 						<Property Name="FilterBehavior" Type="int16">
 							<ValueList>
 								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="GarbageCollectWaveAnalysis" Type="bool">
+							<ValueList>
+								<Value>True</Value>
 							</ValueList>
 						</Property>
 						<Property Name="GenerateMainSoundBank" Type="bool">
@@ -1166,11 +1202,6 @@
 						<Property Name="QualityFactor" Type="Real32">
 							<ValueList>
 								<Value>4</Value>
-							</ValueList>
-						</Property>
-						<Property Name="RenderLineAlgo" Type="int32">
-							<ValueList>
-								<Value>0</Value>
 							</ValueList>
 						</Property>
 						<Property Name="ReservoirBiasFactor" Type="Real32">
@@ -1774,6 +1805,11 @@
 								<Value>0</Value>
 							</ValueList>
 						</Property>
+						<Property Name="AttenuationDistanceScaling" Type="Real32">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
 						<Property Name="BelowThresholdBehavior" Type="int16">
 							<ValueList>
 								<Value>0</Value>
@@ -2181,6 +2217,11 @@
 						<Property Name="3DSpatialization" Type="int16">
 							<ValueList>
 								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="AttenuationDistanceScaling" Type="Real32">
+							<ValueList>
+								<Value>1</Value>
 							</ValueList>
 						</Property>
 						<Property Name="BelowThresholdBehavior" Type="int16">
@@ -2881,6 +2922,11 @@
 								<Value>0</Value>
 							</ValueList>
 						</Property>
+						<Property Name="AttenuationDistanceScaling" Type="Real32">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
 						<Property Name="BelowThresholdBehavior" Type="int16">
 							<ValueList>
 								<Value>0</Value>
@@ -3520,6 +3566,11 @@
 								<Value>0</Value>
 							</ValueList>
 						</Property>
+						<Property Name="AttenuationDistanceScaling" Type="Real32">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
 						<Property Name="BusChannelConfig" Type="int32">
 							<ValueList>
 								<Value>0</Value>
@@ -3892,11 +3943,6 @@
 								<Value>False</Value>
 							</ValueList>
 						</Property>
-						<Property Name="OnSwitchChange" Type="int16">
-							<ValueList>
-								<Value>0</Value>
-							</ValueList>
-						</Property>
 					</PropertyList>
 				</SharedPropertyList>
 				<SharedPropertyList ClassName="WorkUnit" PluginType="0" CompanyID="1" PluginID="25">
@@ -3942,6 +3988,11 @@
 						<Property Name="3DSpatialization" Type="int16">
 							<ValueList>
 								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="AttenuationDistanceScaling" Type="Real32">
+							<ValueList>
+								<Value>1</Value>
 							</ValueList>
 						</Property>
 						<Property Name="BelowThresholdBehavior" Type="int16">
@@ -4343,6 +4394,11 @@
 								<Value>0</Value>
 							</ValueList>
 						</Property>
+						<Property Name="AttenuationDistanceScaling" Type="Real32">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
 						<Property Name="BelowThresholdBehavior" Type="int16">
 							<ValueList>
 								<Value>0</Value>
@@ -4725,6 +4781,11 @@
 						<Property Name="3DSpatialization" Type="int16">
 							<ValueList>
 								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="AttenuationDistanceScaling" Type="Real32">
+							<ValueList>
+								<Value>1</Value>
 							</ValueList>
 						</Property>
 						<Property Name="BelowThresholdBehavior" Type="int16">
@@ -5463,6 +5524,11 @@
 								<Value>0</Value>
 							</ValueList>
 						</Property>
+						<Property Name="AttenuationDistanceScaling" Type="Real32">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
 						<Property Name="BelowThresholdBehavior" Type="int16">
 							<ValueList>
 								<Value>0</Value>
@@ -5855,6 +5921,11 @@
 						<Property Name="3DSpatialization" Type="int16">
 							<ValueList>
 								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="AttenuationDistanceScaling" Type="Real32">
+							<ValueList>
+								<Value>1</Value>
 							</ValueList>
 						</Property>
 						<Property Name="BelowThresholdBehavior" Type="int16">
@@ -6832,7 +6903,7 @@
 						</Property>
 						<Property Name="MaxSampleRate" Type="int32">
 							<ValueList>
-								<Value>0</Value>
+								<Value>48000</Value>
 							</ValueList>
 						</Property>
 						<Property Name="MinSampleRate" Type="int32">
@@ -7019,6 +7090,11 @@
 						<Property Name="3DSpatialization" Type="int16">
 							<ValueList>
 								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="AttenuationDistanceScaling" Type="Real32">
+							<ValueList>
+								<Value>1</Value>
 							</ValueList>
 						</Property>
 						<Property Name="BusChannelConfig" Type="int32">
@@ -10284,6 +10360,11 @@
 								<Value>-96</Value>
 							</ValueList>
 						</Property>
+						<Property Name="FadeTime" Type="Real32">
+							<ValueList>
+								<Value>500</Value>
+							</ValueList>
+						</Property>
 						<Property Name="FusingTime" Type="Real32">
 							<ValueList>
 								<Value>20</Value>
@@ -10292,6 +10373,11 @@
 						<Property Name="Inclusion" Type="bool">
 							<ValueList>
 								<Value>True</Value>
+							</ValueList>
+						</Property>
+						<Property Name="MaterialFilteringSelect" Type="Uint32">
+							<ValueList>
+								<Value>0</Value>
 							</ValueList>
 						</Property>
 						<Property Name="MaxDistance" Type="Real32">
@@ -11405,6 +11491,132 @@
 					<ObsOccCurve CurveXType="Occlusion" CurveYType="HPF">
 						<PlatformCurve Platform="Linked" EnableCurve="false">
 							<Curve Name="" ID="{341AEAF6-8D63-473B-AC8A-BA2F53D5AB9F}">
+								<PropertyList>
+									<Property Name="Flags" Type="int32" Value="1"/>
+								</PropertyList>
+								<PointList>
+									<Point>
+										<XPos>0</XPos>
+										<YPos>0</YPos>
+										<Flags>5</Flags>
+									</Point>
+									<Point>
+										<XPos>100</XPos>
+										<YPos>100</YPos>
+										<Flags>37</Flags>
+									</Point>
+								</PointList>
+							</Curve>
+						</PlatformCurve>
+					</ObsOccCurve>
+					<ObsOccCurve CurveXType="Diffraction" CurveYType="Volume">
+						<PlatformCurve Platform="Linked" EnableCurve="true">
+							<Curve Name="" ID="{FAE28B45-A0E6-40D2-81EF-DBE0F03E89F8}">
+								<PropertyList>
+									<Property Name="Flags" Type="int32" Value="3"/>
+								</PropertyList>
+								<PointList>
+									<Point>
+										<XPos>0</XPos>
+										<YPos>0</YPos>
+										<Flags>5</Flags>
+									</Point>
+									<Point>
+										<XPos>100</XPos>
+										<YPos>-200</YPos>
+										<Flags>37</Flags>
+									</Point>
+								</PointList>
+							</Curve>
+						</PlatformCurve>
+					</ObsOccCurve>
+					<ObsOccCurve CurveXType="Diffraction" CurveYType="LPF">
+						<PlatformCurve Platform="Linked" EnableCurve="true">
+							<Curve Name="" ID="{0DC1A517-D8CB-4238-AFB4-680A0B3F400C}">
+								<PropertyList>
+									<Property Name="Flags" Type="int32" Value="1"/>
+								</PropertyList>
+								<PointList>
+									<Point>
+										<XPos>0</XPos>
+										<YPos>0</YPos>
+										<Flags>5</Flags>
+									</Point>
+									<Point>
+										<XPos>100</XPos>
+										<YPos>100</YPos>
+										<Flags>37</Flags>
+									</Point>
+								</PointList>
+							</Curve>
+						</PlatformCurve>
+					</ObsOccCurve>
+					<ObsOccCurve CurveXType="Diffraction" CurveYType="HPF">
+						<PlatformCurve Platform="Linked" EnableCurve="false">
+							<Curve Name="" ID="{1F6A2CD8-5065-4D30-83A0-3C5EC252D15D}">
+								<PropertyList>
+									<Property Name="Flags" Type="int32" Value="1"/>
+								</PropertyList>
+								<PointList>
+									<Point>
+										<XPos>0</XPos>
+										<YPos>0</YPos>
+										<Flags>5</Flags>
+									</Point>
+									<Point>
+										<XPos>100</XPos>
+										<YPos>100</YPos>
+										<Flags>37</Flags>
+									</Point>
+								</PointList>
+							</Curve>
+						</PlatformCurve>
+					</ObsOccCurve>
+					<ObsOccCurve CurveXType="Transmission" CurveYType="Volume">
+						<PlatformCurve Platform="Linked" EnableCurve="true">
+							<Curve Name="" ID="{1E493A87-E0C6-464D-9CC6-4F4E767CD51A}">
+								<PropertyList>
+									<Property Name="Flags" Type="int32" Value="3"/>
+								</PropertyList>
+								<PointList>
+									<Point>
+										<XPos>0</XPos>
+										<YPos>0</YPos>
+										<Flags>5</Flags>
+									</Point>
+									<Point>
+										<XPos>100</XPos>
+										<YPos>-200</YPos>
+										<Flags>37</Flags>
+									</Point>
+								</PointList>
+							</Curve>
+						</PlatformCurve>
+					</ObsOccCurve>
+					<ObsOccCurve CurveXType="Transmission" CurveYType="LPF">
+						<PlatformCurve Platform="Linked" EnableCurve="true">
+							<Curve Name="" ID="{E69772C1-8411-4188-B864-9975BFBA927E}">
+								<PropertyList>
+									<Property Name="Flags" Type="int32" Value="1"/>
+								</PropertyList>
+								<PointList>
+									<Point>
+										<XPos>0</XPos>
+										<YPos>0</YPos>
+										<Flags>5</Flags>
+									</Point>
+									<Point>
+										<XPos>100</XPos>
+										<YPos>100</YPos>
+										<Flags>37</Flags>
+									</Point>
+								</PointList>
+							</Curve>
+						</PlatformCurve>
+					</ObsOccCurve>
+					<ObsOccCurve CurveXType="Transmission" CurveYType="HPF">
+						<PlatformCurve Platform="Linked" EnableCurve="false">
+							<Curve Name="" ID="{FB907E9F-32AF-4DF5-A534-04ADB22F58BD}">
 								<PropertyList>
 									<Property Name="Flags" Type="int32" Value="1"/>
 								</PropertyList>

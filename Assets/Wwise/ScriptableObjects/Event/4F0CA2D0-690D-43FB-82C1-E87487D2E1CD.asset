@@ -15,3 +15,5 @@ MonoBehaviour:
   objectName: TestingEvent
   id: 946158365
   guid: 4F0CA2D0-690D-43FB-82C1-E87487D2E1CD
+  IsInUserDefinedSoundBank: 1
+  IsAutoBankLoaded: 0

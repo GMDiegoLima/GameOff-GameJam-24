@@ -15,3 +15,5 @@ MonoBehaviour:
   objectName: boss_puzzle_04
   id: 2764760912
   guid: BC8B5936-DC3D-4EBB-B31E-65B7677283BE
+  IsInUserDefinedSoundBank: 1
+  IsAutoBankLoaded: 0

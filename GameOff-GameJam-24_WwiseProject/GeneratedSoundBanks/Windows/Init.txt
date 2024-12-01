@@ -1,14 +1,24 @@
 State Group	ID	Name			Wwise Object Path	Notes
+	149758843	GhostMode			\Default Work Unit\GhostMode	
+	843029863	GameplayStatus			\Default Work Unit\GameplayStatus	
 	1021618141	MusicState			\Music\MusicState	
 	1045871717	GameStatus			\Default Work Unit\GameStatus	
 	1350496757	PlayerMovement			\Default Work Unit\PlayerMovement	
 	3800848640	PlayerStatus			\Default Work Unit\PlayerStatus	
 
 State	ID	Name	State Group			Notes
-	608898761	Dungeon	MusicState			
+	748895195	None	GhostMode			
+	979470758	Yes	GhostMode			
+	1668749452	No	GhostMode			
+	579523862	Explore	GameplayStatus			
+	748895195	None	GameplayStatus			
+	2764240573	Combat	GameplayStatus			
 	748895195	None	MusicState			
 	1560169506	Boss	MusicState			
 	3762955427	Tutorial	MusicState			
+	3945285208	Dungeon3	MusicState			
+	3945285209	Dungeon2	MusicState			
+	3945285210	Dungeon1	MusicState			
 	3945572659	Village	MusicState			
 	748895195	None	GameStatus			
 	984691642	InGame	GameStatus			

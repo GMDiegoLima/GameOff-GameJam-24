@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{59BAE8C6-1CD7-4950-A4DD-91206C28DA7E}" SchemaVersion="119">
+<WwiseDocument Type="WorkUnit" ID="{59BAE8C6-1CD7-4950-A4DD-91206C28DA7E}" SchemaVersion="123">
 	<Triggers>
 		<WorkUnit Name="Music" ID="{59BAE8C6-1CD7-4950-A4DD-91206C28DA7E}" PersistMode="Standalone">
 			<ChildrenList>

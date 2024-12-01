@@ -15,3 +15,5 @@ MonoBehaviour:
   objectName: footsteps
   id: 2385628198
   guid: 44EB1ED3-972C-4C24-A521-2E103FE21F9A
+  IsInUserDefinedSoundBank: 1
+  IsAutoBankLoaded: 0
