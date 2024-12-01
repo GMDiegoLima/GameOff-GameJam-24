@@ -8,7 +8,6 @@ Event	ID	Name			Wwise Object Path	Notes
 
 State Group	ID	Name			Wwise Object Path	Notes
 	1021618141	MusicState			\Music\MusicState	
-	3800848640	PlayerStatus			\Default Work Unit\PlayerStatus	
 
 State	ID	Name	State Group			Notes
 	748895195	None	MusicState			
@@ -18,9 +17,6 @@ State	ID	Name	State Group			Notes
 	3945285209	Dungeon2	MusicState			
 	3945285210	Dungeon1	MusicState			
 	3945572659	Village	MusicState			
-	655265632	Alive	PlayerStatus			
-	748895195	None	PlayerStatus			
-	2044049779	Dead	PlayerStatus			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	1446300075	path_pitch			\Default Work Unit\path_pitch	
@@ -63,7 +59,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	589154420	GuitarLead LeadSynth	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\C9\{C9C507F7-A402-8F95-4577-FA2021EFE805}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbCrazy\GuitarLead LeadSynth		602510
 	601459188	Guitar Lead	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\F8\{F83DCD2A-06B7-B6CB-49D5-37A1EF749FF9}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbIntro\Guitar Lead		533239
 	617499719	Guitar Rhythm	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\94\{9458F149-853F-1177-1F14-722F3C8DE221}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbCrazy\Guitar Rhythm		572589
-	649571480	mus_boss_ab	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\90\{90667D91-C098-DF41-CC50-7BC1BE5EB5EE}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Boss\mus_boss_bridge\mus_boss_ab		1703239
+	649571480	mus_boss_ab	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\90\{90667D91-C098-DF41-CC50-7BC1BE5EB5EE}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Boss\mus_boss_ab\mus_boss_ab		1703239
 	720062416	Pads	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\D0\{D008082D-EB59-41D4-BCEA-2D5AC8ABC741}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbCrazy\Pads		633853
 	720525476	Drums	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\84\{84430AFA-B664-B2FB-247F-B7082A8DD92D}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbCrazy\Drums		137687
 	723779961	GuitarLead LeadSynth	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\2D\{2D86C044-2A55-57B8-139A-EE5BF3E7BBF2}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbCrazy\GuitarLead LeadSynth		529693

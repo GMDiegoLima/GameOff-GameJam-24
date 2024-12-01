@@ -309,7 +309,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 147542aa1fa9a344bad32b33b1da2794
     GuidInternal: 
-    m_lastTime: -8584685284667949407
+    m_lastTime: -8584685303936480557
     List:
     - name: Main
       guid: 516653935762234ab927cec7323273dd
@@ -2378,7 +2378,7 @@ MonoBehaviour:
     ParentPath: Triggers\Music
     guid: c6e8ba59d71c5049a4dd91206c28da7e
     GuidInternal: 
-    m_lastTime: -8584685284667919279
+    m_lastTime: -8584685437649484379
     List:
     - name: checkpoint
       guid: 4b4d66756fe1e7469774bc40987622fa

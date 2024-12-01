@@ -18,7 +18,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{3F50E199-8B39-3669-5477-A235FB6042BD}",
+    "Hash": "{325106C5-3B27-83F7-255E-B190A1E67A4A}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -450,7 +450,7 @@
     "Type": "User",
     "GUID": "{93536651-6257-4A23-B927-CEC7323273DD}",
     "Language": "SFX",
-    "Hash": "{0A6BB803-F016-E7DC-791F-50430DE56EFA}",
+    "Hash": "{32B40CFF-FBB3-A343-0F81-3400DE982FD7}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -485,7 +485,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "sfx_footsteps_stone_var_01.wav",
-      "CachePath": "DB/{DB07FF49-07D5-2733-7C3E-D42A27BAC676}.wem"
+      "CachePath": "D7/{D71CFE7C-30E3-AB0C-375C-F61F78615353}.wem"
      },
      {
       "Id": "46494471",
@@ -509,7 +509,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "sfx_footsteps_grass_var_03.wav",
-      "CachePath": "45/{458E393F-87C3-893A-4A30-174946401CF4}.wem"
+      "CachePath": "6F/{6FAD093E-9E53-D630-F0B4-8C77786F9245}.wem"
      },
      {
       "Id": "63383016",
@@ -517,7 +517,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "sfx_attack_whoosh_var_02.wav",
-      "CachePath": "72/{72C3547D-DE6C-56C4-9E9C-C056919FA09C}.wem"
+      "CachePath": "05/{05A5FA8B-8055-F876-341A-3917A3BB9CCD}.wem"
      },
      {
       "Id": "89604698",
@@ -557,7 +557,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "sfx_footsteps_parquet_var_02.wav",
-      "CachePath": "F8/{F867EBB0-4888-CBE2-6153-DF90EB12D738}.wem"
+      "CachePath": "A1/{A19467B1-0B54-2EEE-C9ED-B330B4DB0DAD}.wem"
      },
      {
       "Id": "144289834",
@@ -613,7 +613,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "ui_dialogue_var_01.wav",
-      "CachePath": "1F/{1F60F5F9-5534-2E6E-D3C3-727438B58B9A}.wem"
+      "CachePath": "B2/{B22D3DC5-8B77-6B86-CD11-2F8DEA917FF1}.wem"
      },
      {
       "Id": "251830584",
@@ -653,7 +653,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "sfx_obj_plate_on.wav",
-      "CachePath": "C9/{C97AC175-38C3-08D1-AB0E-68597A42CE2F}.wem"
+      "CachePath": "AD/{AD004FF8-7E15-8361-70B4-FE4B390F826C}.wem"
      },
      {
       "Id": "317211741",
@@ -685,7 +685,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "sfx_attack_whoosh_var_03.wav",
-      "CachePath": "8C/{8C1D38C8-7CE8-32CA-B38A-CD0172C8C22B}.wem"
+      "CachePath": "12/{12DC4B8A-6211-8F1F-BE1A-9863F7029CC9}.wem"
      },
      {
       "Id": "351445031",
@@ -717,7 +717,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "sfx_footsteps_grass_var_01.wav",
-      "CachePath": "81/{815D47D9-B9A4-46AF-910E-50D69DE1B90E}.wem"
+      "CachePath": "70/{703B3EAD-ED18-0BE6-E799-F5CA83DF9170}.wem"
      },
      {
       "Id": "377805870",
@@ -725,7 +725,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "sfx_footsteps_parquet_var_01.wav",
-      "CachePath": "98/{980B0109-D6DC-8E55-E273-462B9DE111BB}.wem"
+      "CachePath": "6C/{6C9CAD73-E1E2-6055-0637-D2F4CCD5B83E}.wem"
      },
      {
       "Id": "397626789",
@@ -765,7 +765,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "sfx_footsteps_stone_var_02.wav",
-      "CachePath": "3A/{3A30BEAE-0E0A-5E37-1619-7794B82E2B63}.wem"
+      "CachePath": "57/{5705EFD3-6C3F-361A-5C6A-D61B72113EEA}.wem"
      },
      {
       "Id": "439184684",
@@ -821,7 +821,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "sfx_footsteps_parquet_var_03.wav",
-      "CachePath": "18/{18502471-50E8-C54B-4E81-13AD8864AA84}.wem"
+      "CachePath": "6C/{6C31C08D-2DE7-4C9E-BF62-7F4007493920}.wem"
      },
      {
       "Id": "496225530",
@@ -885,7 +885,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "sfx_footsteps_stone_var_03.wav",
-      "CachePath": "E4/{E4E9F77A-BBFD-07DE-B380-EDCE2D6BE48A}.wem"
+      "CachePath": "77/{775FE81F-A157-8841-DCD5-449D805D188F}.wem"
      },
      {
       "Id": "617499719",
@@ -997,7 +997,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "sfx_obj_plate_off.wav",
-      "CachePath": "B0/{B06B0C1A-197E-F7CD-5AEF-39DBFE6EADAD}.wem"
+      "CachePath": "EC/{ECE8B401-B11E-A7DB-C269-2BA494E0184B}.wem"
      },
      {
       "Id": "863443156",
@@ -1053,7 +1053,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "sfx_footsteps_stone_var_02.wav",
-      "CachePath": "0F/{0FE022ED-2F30-0FCB-5B2D-8F8110731615}.wem"
+      "CachePath": "89/{89565F92-F6C5-1731-08FE-B26F52EEDD3B}.wem"
      },
      {
       "Id": "905515257",
@@ -1061,7 +1061,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "sfx_footsteps_grass_var_02.wav",
-      "CachePath": "8E/{8EC82029-041E-FECE-1B85-639D25758AAE}.wem"
+      "CachePath": "19/{19CCF2ED-EE64-2D73-6F1A-86B5FAD65D0F}.wem"
      },
      {
       "Id": "927962153",
@@ -1085,7 +1085,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "sfx_footsteps_stone_var_01.wav",
-      "CachePath": "C7/{C7633ABB-5072-8AE2-96CE-E624DF5D400E}.wem"
+      "CachePath": "64/{64EC87ED-5BE3-2656-BCA9-A75F5D524AA3}.wem"
      },
      {
       "Id": "937514559",
@@ -1141,7 +1141,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "sfx_footsteps_stone_var_03.wav",
-      "CachePath": "22/{22674CA1-E3DE-8861-1DF0-DEBBB80510E5}.wem"
+      "CachePath": "4D/{4D2F3D74-88CA-0F4A-6DC5-20C4358B414C}.wem"
      },
      {
       "Id": "1059597540",
@@ -2405,7 +2405,7 @@
     "Type": "User",
     "GUID": "{2CFA879A-4959-4282-8FB2-95883D127C77}",
     "Language": "SFX",
-    "Hash": "{549F05A0-0F16-2D95-07B6-81EC2D3D2A81}",
+    "Hash": "{EA14BBD0-940E-91B1-6C2A-CF55BE368421}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Music",
     "ShortName": "Music",
     "Path": "Music.bnk",
@@ -3825,6 +3825,6 @@
     ]
    }
   ],
-  "FileHash": "{954F70E1-8BA3-6C5C-2CEE-418615A64151}"
+  "FileHash": "{98F56050-DDB8-5CED-D148-3D3FB5105A8B}"
  }
 }
