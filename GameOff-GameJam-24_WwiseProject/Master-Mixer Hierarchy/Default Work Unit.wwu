@@ -11,6 +11,13 @@
 					</ReferenceList>
 					<ChildrenList>
 						<Bus Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<StateInfo>
 								<StateGroupList>
 									<StateGroupInfo>
@@ -107,7 +114,15 @@
 										</Bus>
 									</ChildrenList>
 								</Bus>
-								<Bus Name="UiMaster" ID="{4B933C55-C410-437B-BCC9-A94593E5E356}"/>
+								<Bus Name="UiMaster" ID="{4B933C55-C410-437B-BCC9-A94593E5E356}">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+								</Bus>
 							</ChildrenList>
 							<ObjectLists>
 								<ObjectList Name="RTPC">

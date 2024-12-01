@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 5f4f5e7b82a37845af9cc9a493363df5
     GuidInternal: 
-    m_lastTime: -8584685437872200235
+    m_lastTime: -8584685329515060937
     List:
     - name: AmbianceMaster
       guid: 82382bb52095ac47bea0336993ea3ab1
@@ -309,7 +309,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 147542aa1fa9a344bad32b33b1da2794
     GuidInternal: 
-    m_lastTime: -8584685437652908750
+    m_lastTime: -8584685339901058003
     List:
     - name: Main
       guid: 516653935762234ab927cec7323273dd
@@ -2527,8 +2527,8 @@ MonoBehaviour:
         ObjectType: 14
         guid: 0e6ab5df11fdfb4980973d23390775f9
       Path: Triggers\Music\MusicTriggers\stopMusic
-  ExpandedFileSystemItemIds: 4f0000006500000066000000
-  ExpandedWaapiItemIds: 0200000017000000
+  ExpandedFileSystemItemIds: 02000000170000004f00000065000000660000006e0000006f000000
+  ExpandedWaapiItemIds: 0200000017000000180000001f000000200000004f00000065000000660000006e0000006f000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 1
