@@ -16,6 +16,14 @@
 						<State Name="Alive" ID="{B1696563-4FE0-470C-9098-472520DAD3C2}"/>
 						<State Name="Dead" ID="{049C9A16-C3E8-4215-B257-9430833D0F0A}"/>
 					</ChildrenList>
+					<TransitionList>
+						<Transition>
+							<StartState Name="Alive" ID="{B1696563-4FE0-470C-9098-472520DAD3C2}"/>
+							<EndState Name="Dead" ID="{049C9A16-C3E8-4215-B257-9430833D0F0A}"/>
+							<Time>0.5</Time>
+							<IsShared>true</IsShared>
+						</Transition>
+					</TransitionList>
 				</StateGroup>
 				<StateGroup Name="PlayerMovement" ID="{8EE9C8C3-1FC9-4C99-B041-6A494F87B178}">
 					<ChildrenList>

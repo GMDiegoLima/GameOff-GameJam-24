@@ -7,9 +7,14 @@ Event	ID	Name			Wwise Object Path	Notes
 	2932040671	play_music			\Music\play_music	
 
 State Group	ID	Name			Wwise Object Path	Notes
+	843029863	GameplayStatus			\Default Work Unit\GameplayStatus	
 	1021618141	MusicState			\Music\MusicState	
+	3800848640	PlayerStatus			\Default Work Unit\PlayerStatus	
 
 State	ID	Name	State Group			Notes
+	579523862	Explore	GameplayStatus			
+	748895195	None	GameplayStatus			
+	2764240573	Combat	GameplayStatus			
 	748895195	None	MusicState			
 	1560169506	Boss	MusicState			
 	3762955427	Tutorial	MusicState			
@@ -17,6 +22,9 @@ State	ID	Name	State Group			Notes
 	3945285209	Dungeon2	MusicState			
 	3945285210	Dungeon1	MusicState			
 	3945572659	Village	MusicState			
+	655265632	Alive	PlayerStatus			
+	748895195	None	PlayerStatus			
+	2044049779	Dead	PlayerStatus			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	1446300075	path_pitch			\Default Work Unit\path_pitch	
@@ -40,7 +48,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	252760376	stg_path_wrong	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\82\{82B4E0D0-CB31-186D-5F99-A4E5D7014ED4}.wem		\Interactive Music Hierarchy\MUSIC\Stingers\stg_path_wrong\stg_path_wrong		52128
 	264555730	mus_boss_bridge	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\13\{13D78296-7671-37DD-1B69-3F199288EEAF}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Boss\mus_boss_bridge\mus_boss_bridge		809141
 	302677022	theme2	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\AC\{AC586BDA-9668-760B-9DF5-315A885CC940}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Village\theme02\theme2		395839
-	317211741	Pads	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\C6\{C65B9559-D0DC-EF32-52E7-49928E737A88}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbCrazy\Pads		663170
+	317211741	Pads	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\C6\{C65B9559-D0DC-EF32-52E7-49928E737A88}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\DungeonsCombat\DnbCrazy\Pads		663170
 	320105167	theme1	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\C5\{C5DA2401-EEE3-DE6C-9657-B64B8DE7482D}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Village\theme01\theme1		417981
 	324848001	Guitar Rhythm	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\AB\{ABA9C5CE-9AFF-CACC-2FE1-0615976BEE34}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbCrazy\Guitar Rhythm		507048
 	351445031	mus_boss_intro_bpm-120_4-4-001	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\9C\{9CB35564-ECF9-3BD4-80D4-8971314DB9C2}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Boss\mus_boss_intro_bpm-120_4-4-001\mus_boss_intro_bpm-120_4-4-001		744077
@@ -48,28 +56,28 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	397626789	stg_checkpoint_G	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\33\{331C528F-59EC-7D16-17E7-9E2E76FC0926}.wem		\Interactive Music Hierarchy\MUSIC\Stingers\stg_checkpoint_G\stg_checkpoint_G		168438
 	399496196	mus_village_Bsection_180_12-8_15M	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\66\{660B10F4-ACB3-A4CF-21BA-6D3CCE5B0FB3}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Village\bSection\mus_village_Bsection_180_12-8_15M		806070
 	404866134	theme2	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\71\{71F58C97-1BAE-C638-B019-5CBFD222780A}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Village\theme02\theme2		399644
-	439184684	Drums	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\68\{681DC052-B2E1-5630-E403-40D6BB8338EC}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbCrazy\Drums		145113
+	439184684	Drums	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\68\{681DC052-B2E1-5630-E403-40D6BB8338EC}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\DungeonsCombat\DnbCrazy\Drums		145113
 	456743017	muss_boss_intro_perc	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\F5\{F59A1C1A-FDC9-B4C4-5338-F7CC353EB741}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Boss\muss_boss_intro_perc\muss_boss_intro_perc		1690439
-	457177102	GuitarLead LeadSynth	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\E4\{E4DB49BC-168B-7C34-892B-05B6DE11B9E9}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbCrazy\GuitarLead LeadSynth		580900
-	490430872	GuitarLead LeadSynth	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\BE\{BE43F8C8-E642-7B1E-9530-057504182C23}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbCrazy\GuitarLead LeadSynth		560481
+	457177102	GuitarLead LeadSynth	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\E4\{E4DB49BC-168B-7C34-892B-05B6DE11B9E9}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\DungeonsCombat\DnbCrazy\GuitarLead LeadSynth		580900
+	490430872	GuitarLead LeadSynth	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\BE\{BE43F8C8-E642-7B1E-9530-057504182C23}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\DungeonsCombat\DnbCrazy\GuitarLead LeadSynth		560481
 	492715098	theme1	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\5E\{5E54CAA1-433A-A71A-D47B-FFDF1B57AC5D}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Village\theme01\theme1		412888
 	496225530	Guitar Rhythm	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\7B\{7B18EBC6-C221-466D-5F45-018539C988EF}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbCrazy\Guitar Rhythm		446453
 	508362603	mus_dungeons_bass_bpm_165_4-4_16M	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\45\{456031D7-2237-CED9-C4CF-844383B5D8B9}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbCrazy\mus_dungeons_bass_bpm_165_4-4_16M		232343
 	580625412	mus_village_bridge_180_12-8_8M	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\F9\{F92EAE24-C13A-341E-03E5-CFB77A6B47A0}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Village\bridge\mus_village_bridge_180_12-8_8M		390702
 	589154420	GuitarLead LeadSynth	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\C9\{C9C507F7-A402-8F95-4577-FA2021EFE805}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbCrazy\GuitarLead LeadSynth		602510
 	601459188	Guitar Lead	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\F8\{F83DCD2A-06B7-B6CB-49D5-37A1EF749FF9}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbIntro\Guitar Lead		533239
-	617499719	Guitar Rhythm	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\94\{9458F149-853F-1177-1F14-722F3C8DE221}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbCrazy\Guitar Rhythm		572589
+	617499719	Guitar Rhythm	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\94\{9458F149-853F-1177-1F14-722F3C8DE221}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\DungeonsCombat\DnbCrazy\Guitar Rhythm		572589
 	649571480	mus_boss_ab	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\90\{90667D91-C098-DF41-CC50-7BC1BE5EB5EE}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Boss\mus_boss_ab\mus_boss_ab		1703239
-	720062416	Pads	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\D0\{D008082D-EB59-41D4-BCEA-2D5AC8ABC741}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbCrazy\Pads		633853
-	720525476	Drums	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\84\{84430AFA-B664-B2FB-247F-B7082A8DD92D}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbCrazy\Drums		137687
+	720062416	Pads	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\D0\{D008082D-EB59-41D4-BCEA-2D5AC8ABC741}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\DungeonsCombat\DnbCrazy\Pads		633853
+	720525476	Drums	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\84\{84430AFA-B664-B2FB-247F-B7082A8DD92D}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\DungeonsCombat\DnbCrazy\Drums		137687
 	723779961	GuitarLead LeadSynth	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\2D\{2D86C044-2A55-57B8-139A-EE5BF3E7BBF2}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbCrazy\GuitarLead LeadSynth		529693
 	737413990	Sub	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\0F\{0F0CF6FC-EAC3-FE01-BAE7-1D0F2DA36AD0}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbIntroAll\Sub		709454
 	811745906	stg_path_correct	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\F2\{F2E7785F-B130-1FD2-06EF-F357314BEE24}.wem		\Interactive Music Hierarchy\MUSIC\Stingers\stg_path_correct\stg_path_correct		112036
 	829294106	mus_dungeons_arpg_bpm_165_4-4_16M	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\80\{8040B42C-238C-FB40-7A4C-F413A4C50363}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbCrazy\mus_dungeons_arpg_bpm_165_4-4_16M		580069
 	855646870	Guitar Lead	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\EC\{ECEA6752-DC9A-1493-1328-CE1ED60EB456}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbIntroAll\Guitar Lead		542923
 	863443156	mus_boss_intro_bpm-120_4-4-002	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\7E\{7E2E32F0-5019-0D13-EE39-5CFD44FBF0C8}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Boss\mus_boss_intro_bpm-120_4-4-002\mus_boss_intro_bpm-120_4-4-002		790072
-	863615306	Guitar Rhythm	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\18\{18E1EB3D-F4E1-C975-0A7D-3D4BEB1ABECB}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbCrazy\Guitar Rhythm		506964
-	880331828	GuitarLead LeadSynth	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\A8\{A84AE5AB-8ABC-286A-0F1F-A33CBB469CF0}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbCrazy\GuitarLead LeadSynth		543764
+	863615306	Guitar Rhythm	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\18\{18E1EB3D-F4E1-C975-0A7D-3D4BEB1ABECB}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\DungeonsCombat\DnbCrazy\Guitar Rhythm		506964
+	880331828	GuitarLead LeadSynth	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\A8\{A84AE5AB-8ABC-286A-0F1F-A33CBB469CF0}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\DungeonsCombat\DnbCrazy\GuitarLead LeadSynth		543764
 	885739261	Guitar Lead	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\C3\{C35F5594-6728-964F-B0ED-C6BCF77620D4}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbIntro\Guitar Lead		633222
 	927962153	stng_dead_cymball	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\16\{16219C4D-5049-B204-1236-34F7048E7DBA}.wem		\Interactive Music Hierarchy\MUSIC\Stingers\stg_dead_cymball\stng_dead_cymball		81233
 	937514559	mus_village_introPads_180_12-8_8M	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\F0\{F04F39ED-B1B1-64A4-08AE-BBE2246B09EE}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Village\introPads\mus_village_introPads_180_12-8_8M		510313

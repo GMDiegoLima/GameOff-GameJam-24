@@ -105,21 +105,10 @@
 					<ChildrenList>
 						<Event Name="skeleton_attack" ID="{DEB1C334-3506-4C7B-87D4-00BD4FF6D19C}">
 							<ChildrenList>
-								<Action Name="" ID="{02829231-3CEB-470C-BC59-C7D504F5335A}" ShortID="904485167">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="13"/>
-										<Property Name="Pitch" Type="int32" Value="-860"/>
-									</PropertyList>
+								<Action Name="" ID="{C8F53BEC-588E-461F-89F1-613BAAA901CC}" ShortID="217279035">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="goblin_whoosh" ID="{BA9DD217-C778-4535-8B88-DCE534D8FB4C}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{59ADEA84-9E04-4A4C-B6DA-78066CB6712B}" ShortID="179809253">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="goblin_whoosh" ID="{BA9DD217-C778-4535-8B88-DCE534D8FB4C}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
+											<ObjectRef Name="sfx_npc_projectile_skeleton" ID="{388075BE-8C88-46F1-A41B-FE835BB64618}" WorkUnitID="{6AFCE730-A089-4666-8CFD-85D5C2728702}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

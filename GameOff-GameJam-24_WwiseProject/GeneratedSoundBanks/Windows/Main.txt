@@ -48,10 +48,15 @@ Switch	ID	Name	Switch Group			Notes
 	4248645337	grass	Terrain			
 
 State Group	ID	Name			Wwise Object Path	Notes
+	843029863	GameplayStatus			\Default Work Unit\GameplayStatus	
 	1021618141	MusicState			\Music\MusicState	
 	1350496757	PlayerMovement			\Default Work Unit\PlayerMovement	
+	3800848640	PlayerStatus			\Default Work Unit\PlayerStatus	
 
 State	ID	Name	State Group			Notes
+	579523862	Explore	GameplayStatus			
+	748895195	None	GameplayStatus			
+	2764240573	Combat	GameplayStatus			
 	748895195	None	MusicState			
 	1560169506	Boss	MusicState			
 	3762955427	Tutorial	MusicState			
@@ -62,6 +67,9 @@ State	ID	Name	State Group			Notes
 	748895195	None	PlayerMovement			
 	1409504247	Static	PlayerMovement			
 	2649703675	Moving	PlayerMovement			
+	655265632	Alive	PlayerStatus			
+	748895195	None	PlayerStatus			
+	2044049779	Dead	PlayerStatus			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	1446300075	path_pitch			\Default Work Unit\path_pitch	
@@ -102,7 +110,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	264555730	mus_boss_bridge	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\13\{13D78296-7671-37DD-1B69-3F199288EEAF}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Boss\mus_boss_bridge\mus_boss_bridge		809141
 	302677022	theme2	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\AC\{AC586BDA-9668-760B-9DF5-315A885CC940}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Village\theme02\theme2		395839
 	305096193	sfx_obj_plate_on	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\AD\{AD004FF8-7E15-8361-70B4-FE4B390F826C}.wem		\Actor-Mixer Hierarchy\SFX\WORLD\objects\plate_on_off\sfx_obj_plate_on		9207
-	317211741	Pads	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\C6\{C65B9559-D0DC-EF32-52E7-49928E737A88}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbCrazy\Pads		663170
+	317211741	Pads	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\C6\{C65B9559-D0DC-EF32-52E7-49928E737A88}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\DungeonsCombat\DnbCrazy\Pads		663170
 	320105167	theme1	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\C5\{C5DA2401-EEE3-DE6C-9657-B64B8DE7482D}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Village\theme01\theme1		417981
 	324848001	Guitar Rhythm	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\AB\{ABA9C5CE-9AFF-CACC-2FE1-0615976BEE34}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbCrazy\Guitar Rhythm		507048
 	338213362	sfx_attack_whoosh_var_03	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\12\{12DC4B8A-6211-8F1F-BE1A-9863F7029CC9}.wem		\Actor-Mixer Hierarchy\SFX\WORLD\creatures_npcs\whooshes\bat_whoosh\sfx_attack_whoosh_var_03		11596
@@ -116,11 +124,11 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	404866134	theme2	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\71\{71F58C97-1BAE-C638-B019-5CBFD222780A}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Village\theme02\theme2		399644
 	411483413	sfx_obj_coffin	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\CD\{CDD20C5E-3C1A-05A5-6FA1-F2F15ABE9FD8}.wem		\Actor-Mixer Hierarchy\SFX\WORLD\objects\sfx_obj_coffin		17873
 	424907451	sfx_footsteps_stone_var_02	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\57\{5705EFD3-6C3F-361A-5C6A-D61B72113EEA}.wem		\Actor-Mixer Hierarchy\SFX\WORLD\player\player_footsteps\footsteps_abyss\sfx_footsteps_stone_var_02		3119
-	439184684	Drums	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\68\{681DC052-B2E1-5630-E403-40D6BB8338EC}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbCrazy\Drums		145113
+	439184684	Drums	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\68\{681DC052-B2E1-5630-E403-40D6BB8338EC}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\DungeonsCombat\DnbCrazy\Drums		145113
 	456743017	muss_boss_intro_perc	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\F5\{F59A1C1A-FDC9-B4C4-5338-F7CC353EB741}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Boss\muss_boss_intro_perc\muss_boss_intro_perc		1690439
-	457177102	GuitarLead LeadSynth	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\E4\{E4DB49BC-168B-7C34-892B-05B6DE11B9E9}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbCrazy\GuitarLead LeadSynth		580900
+	457177102	GuitarLead LeadSynth	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\E4\{E4DB49BC-168B-7C34-892B-05B6DE11B9E9}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\DungeonsCombat\DnbCrazy\GuitarLead LeadSynth		580900
 	477432091	sfx_obj_lever	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\42\{42DE7F28-02B1-569F-C0B6-36E3078539F5}.wem		\Actor-Mixer Hierarchy\SFX\WORLD\objects\sfx_obj_lever		22380
-	490430872	GuitarLead LeadSynth	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\BE\{BE43F8C8-E642-7B1E-9530-057504182C23}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbCrazy\GuitarLead LeadSynth		560481
+	490430872	GuitarLead LeadSynth	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\BE\{BE43F8C8-E642-7B1E-9530-057504182C23}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\DungeonsCombat\DnbCrazy\GuitarLead LeadSynth		560481
 	492715098	theme1	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\5E\{5E54CAA1-433A-A71A-D47B-FFDF1B57AC5D}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Village\theme01\theme1		412888
 	493842783	sfx_footsteps_parquet_var_03	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\6C\{6C31C08D-2DE7-4C9E-BF62-7F4007493920}.wem		\Actor-Mixer Hierarchy\SFX\WORLD\player\player_footsteps\footsteps_parquet\sfx_footsteps_parquet_var_03		2442
 	496225530	Guitar Rhythm	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\7B\{7B18EBC6-C221-466D-5F45-018539C988EF}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbCrazy\Guitar Rhythm		446453
@@ -131,11 +139,11 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	601459188	Guitar Lead	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\F8\{F83DCD2A-06B7-B6CB-49D5-37A1EF749FF9}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbIntro\Guitar Lead		533239
 	609355816	sfx_npc_projectile_skeleton	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\95\{95D89FB9-4766-E13F-B9CD-37B22718F63B}.wem		\Actor-Mixer Hierarchy\SFX\WORLD\creatures_npcs\sfx_npc_projectile_skeleton		19730
 	616145652	sfx_footsteps_stone_var_03	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\77\{775FE81F-A157-8841-DCD5-449D805D188F}.wem		\Actor-Mixer Hierarchy\SFX\WORLD\player\player_footsteps\footsteps_stone\sfx_footsteps_stone_var_03		1481
-	617499719	Guitar Rhythm	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\94\{9458F149-853F-1177-1F14-722F3C8DE221}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbCrazy\Guitar Rhythm		572589
+	617499719	Guitar Rhythm	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\94\{9458F149-853F-1177-1F14-722F3C8DE221}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\DungeonsCombat\DnbCrazy\Guitar Rhythm		572589
 	649571480	mus_boss_ab	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\90\{90667D91-C098-DF41-CC50-7BC1BE5EB5EE}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Boss\mus_boss_ab\mus_boss_ab		1703239
 	672148358	sfx_creatures_alert	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\16\{16DC5F88-BD6B-00CB-131C-E94B323549A8}.wem		\Actor-Mixer Hierarchy\SFX\WORLD\creatures_npcs\sfx_creatures_alert		8775
-	720062416	Pads	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\D0\{D008082D-EB59-41D4-BCEA-2D5AC8ABC741}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbCrazy\Pads		633853
-	720525476	Drums	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\84\{84430AFA-B664-B2FB-247F-B7082A8DD92D}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbCrazy\Drums		137687
+	720062416	Pads	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\D0\{D008082D-EB59-41D4-BCEA-2D5AC8ABC741}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\DungeonsCombat\DnbCrazy\Pads		633853
+	720525476	Drums	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\84\{84430AFA-B664-B2FB-247F-B7082A8DD92D}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\DungeonsCombat\DnbCrazy\Drums		137687
 	723779961	GuitarLead LeadSynth	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\2D\{2D86C044-2A55-57B8-139A-EE5BF3E7BBF2}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbCrazy\GuitarLead LeadSynth		529693
 	737413990	Sub	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\0F\{0F0CF6FC-EAC3-FE01-BAE7-1D0F2DA36AD0}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbIntroAll\Sub		709454
 	755825440	sfx_obj_wire_var_02	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\EA\{EA760BBA-6A73-243E-81B1-6F5AC3C9265C}.wem		\Actor-Mixer Hierarchy\SFX\WORLD\objects\wire_turn\sfx_obj_wire_var_02		4853
@@ -146,9 +154,9 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	855646870	Guitar Lead	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\EC\{ECEA6752-DC9A-1493-1328-CE1ED60EB456}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbIntroAll\Guitar Lead		542923
 	858639589	sfx_obj_plate_off	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\EC\{ECE8B401-B11E-A7DB-C269-2BA494E0184B}.wem		\Actor-Mixer Hierarchy\SFX\WORLD\objects\plate_on_off\sfx_obj_plate_off		11445
 	863443156	mus_boss_intro_bpm-120_4-4-002	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\7E\{7E2E32F0-5019-0D13-EE39-5CFD44FBF0C8}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Boss\mus_boss_intro_bpm-120_4-4-002\mus_boss_intro_bpm-120_4-4-002		790072
-	863615306	Guitar Rhythm	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\18\{18E1EB3D-F4E1-C975-0A7D-3D4BEB1ABECB}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbCrazy\Guitar Rhythm		506964
+	863615306	Guitar Rhythm	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\18\{18E1EB3D-F4E1-C975-0A7D-3D4BEB1ABECB}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\DungeonsCombat\DnbCrazy\Guitar Rhythm		506964
 	865284003	ui_menu_select	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\1A\{1A3F3E55-FB7F-67B9-6A7E-AE1F0449A533}.wem		\Actor-Mixer Hierarchy\UI\ui_menu_select		11412
-	880331828	GuitarLead LeadSynth	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\A8\{A84AE5AB-8ABC-286A-0F1F-A33CBB469CF0}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbCrazy\GuitarLead LeadSynth		543764
+	880331828	GuitarLead LeadSynth	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\A8\{A84AE5AB-8ABC-286A-0F1F-A33CBB469CF0}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\DungeonsCombat\DnbCrazy\GuitarLead LeadSynth		543764
 	885739261	Guitar Lead	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\C3\{C35F5594-6728-964F-B0ED-C6BCF77620D4}.wem		\Interactive Music Hierarchy\MUSIC\Music_All\Dungeons\DnbIntro\Guitar Lead		633222
 	893462657	sfx_obj_spike_trap	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\62\{62688BF8-0D9F-0CF9-92E2-7DEC5182FCC8}.wem		\Actor-Mixer Hierarchy\SFX\WORLD\objects\sfx_obj_spike_trap		5032
 	899269629	sfx_footsteps_stone_var_02	C:\Users\joseb\Documents\GitHub\GameOff-GameJam-24\GameOff-GameJam-24_WwiseProject\.cache\89\{89565F92-F6C5-1731-08FE-B26F52EEDD3B}.wem		\Actor-Mixer Hierarchy\SFX\WORLD\player\player_footsteps\footsteps_stone\sfx_footsteps_stone_var_02		1513

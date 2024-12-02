@@ -163,6 +163,21 @@
 						<MusicSegment Name="stg_path_correct" ID="{62F8B0DB-AD45-4276-ABA6-C057770244D6}" ShortID="136762837">
 							<PropertyList>
 								<Property Name="EndPosition" Type="Real64" Value="4499.54166666667"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -651,6 +666,39 @@
 												</SourceFadeOut>
 											</TransitionInfo>
 										</MusicTransition>
+										<MusicTransition Name="Transition" ID="{4E675EDA-D27D-42B6-B15E-45D9CF78F94B}">
+											<PropertyList>
+												<Property Name="DestinationContextType" Type="int16" Value="2"/>
+												<Property Name="ExitSourceAt" Type="int16" Value="2"/>
+												<Property Name="PlaySourcePostExit" Type="bool" Value="False"/>
+												<Property Name="SourceContextType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="DestinationContextObject">
+													<ObjectRef Name="DungeonsCombat" ID="{F53264AA-B42A-40D1-930D-8574F2EEB005}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+												</Reference>
+												<Reference Name="SourceContextObject">
+													<ObjectRef Name="Dungeons" ID="{42671B7E-710B-4C57-820E-23A847C57C70}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+												</Reference>
+											</ReferenceList>
+											<TransitionInfo/>
+										</MusicTransition>
+										<MusicTransition Name="Transition" ID="{3B76F275-5DE4-455E-8877-B200069604F8}">
+											<PropertyList>
+												<Property Name="DestinationContextType" Type="int16" Value="2"/>
+												<Property Name="ExitSourceAt" Type="int16" Value="2"/>
+												<Property Name="SourceContextType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="DestinationContextObject">
+													<ObjectRef Name="Dungeons" ID="{42671B7E-710B-4C57-820E-23A847C57C70}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+												</Reference>
+												<Reference Name="SourceContextObject">
+													<ObjectRef Name="DungeonsCombat" ID="{F53264AA-B42A-40D1-930D-8574F2EEB005}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+												</Reference>
+											</ReferenceList>
+											<TransitionInfo/>
+										</MusicTransition>
 									</ChildrenList>
 									<TransitionInfo/>
 								</MusicTransition>
@@ -698,6 +746,7 @@
 												</MusicPlaylistItem>
 												<MusicPlaylistItem Name="" ID="{CE93F643-30E5-45E9-B31D-89298AF5D7BE}" ShortID="833805446">
 													<PropertyList>
+														<Property Name="LoopCount" Type="int16" Value="2"/>
 														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 													</PropertyList>
 													<ReferenceList>
@@ -1231,14 +1280,14 @@
 														</Reference>
 													</ReferenceList>
 												</MusicPlaylistItem>
-												<MusicPlaylistItem Name="" ID="{EA99CAD9-D35D-4393-B7E3-5F32FE79A201}" ShortID="185518772">
+												<MusicPlaylistItem Name="" ID="{8D3CBB85-1424-4F89-BEED-02B39C1F754A}" ShortID="145048399">
 													<PropertyList>
-														<Property Name="LoopCount" Type="int16" Value="4"/>
+														<Property Name="LoopCount" Type="int16" Value="3"/>
 														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Segment">
-															<ObjectRef Name="DnbCrazy" ID="{3FE41158-ABBF-4ECB-9B22-4BCFBDD4B924}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+															<ObjectRef Name="DnbCrazy" ID="{E0D39987-CC79-434C-8D55-375481AEB8AB}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
 														</Reference>
 													</ReferenceList>
 												</MusicPlaylistItem>
@@ -3053,7 +3102,7 @@
 										</ObjectList>
 									</ObjectLists>
 								</MusicSegment>
-								<MusicSegment Name="DnbCrazy" ID="{3FE41158-ABBF-4ECB-9B22-4BCFBDD4B924}" ShortID="921159380">
+								<MusicSegment Name="DnbCrazy" ID="{E0D39987-CC79-434C-8D55-375481AEB8AB}" ShortID="482437672">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="104727.333333333"/>
 									</PropertyList>
@@ -3062,11 +3111,11 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+											<ObjectRef Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<MusicTrack Name="Pads" ID="{F42EF6E8-F0A1-4951-AEEA-BDF677098319}" ShortID="152420879">
+										<MusicTrack Name="Pads" ID="{FC99DF3A-6F10-4BF9-AD07-39680CD1E372}" ShortID="262486584">
 											<PropertyList>
 												<Property Name="MusicTrackType" Type="int16" Value="1"/>
 											</PropertyList>
@@ -3076,7 +3125,7 @@
 												</Reference>
 												<Reference Name="TransitionRoot">
 													<Custom>
-														<MusicTransition Name="Root" ID="{C1D096A7-C301-4DFC-92FA-2BC9BF14CBC9}">
+														<MusicTransition Name="Root" ID="{E66FEDC0-29F8-4535-A2D0-B6AB4B2D03DA}">
 															<PropertyList>
 																<Property Name="IsFolder" Type="bool" Value="True"/>
 															</PropertyList>
@@ -3086,14 +3135,14 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="mus_dungeons_pads_chords_bpm_165_4-4_16M" ID="{A41D81D1-2CEF-4021-A401-FB166453BD84}">
+												<AudioFileSource Name="mus_dungeons_pads_chords_bpm_165_4-4_16M" ID="{D39AA653-705C-4337-B300-E187C6D49FCB}">
 													<Language>SFX</Language>
 													<AudioFile>mus_dungeons_pads_chords_bpm_165_4-4_16M.wav</AudioFile>
 													<MediaIDList>
 														<MediaID ID="317211741"/>
 													</MediaIDList>
 												</AudioFileSource>
-												<AudioFileSource Name="mus_dungeons_pads_intro_bpm_165_4-4_16M" ID="{0E721170-60EA-48CB-A643-3A5A6359F409}">
+												<AudioFileSource Name="mus_dungeons_pads_intro_bpm_165_4-4_16M" ID="{406CF75E-FD35-48EC-AAA2-3FBA58A55EA7}">
 													<Language>SFX</Language>
 													<AudioFile>mus_dungeons_pads_intro_bpm_165_4-4_16M.wav</AudioFile>
 													<MediaIDList>
@@ -3105,12 +3154,12 @@
 												<ObjectList Name="Sequences">
 													<Reference>
 														<Local>
-															<MusicTrackSequence Name="" ID="{311A2D22-C1D9-41DD-B4D6-F9C0A102418D}">
+															<MusicTrackSequence Name="" ID="{C7E4D49F-DDBE-48B8-A484-8476F41DD397}">
 																<ObjectLists>
 																	<ObjectList Name="Clips">
 																		<Reference>
 																			<Local>
-																				<MusicClip Name="mus_dungeons_pads_intro_bpm_165_4-4_16M" ID="{DD1A57BC-0CF5-475B-B331-3CBB6EA9535B}">
+																				<MusicClip Name="mus_dungeons_pads_intro_bpm_165_4-4_16M" ID="{418509A7-CC2D-4833-B97E-9B66E9A9EC12}">
 																					<PropertyList>
 																						<Property Name="BeginTrimOffset" Type="Real64" Value="1.45716771982052E-13"/>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="23662.6058782308"/>
@@ -3118,10 +3167,10 @@
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																						<Property Name="PlayAt" Type="Real64" Value="-1.44911860289199E-13"/>
 																					</PropertyList>
-																					<AudioSourceRef Name="mus_dungeons_pads_intro_bpm_165_4-4_16M" ID="{0E721170-60EA-48CB-A643-3A5A6359F409}"/>
+																					<AudioSourceRef Name="mus_dungeons_pads_intro_bpm_165_4-4_16M" ID="{406CF75E-FD35-48EC-AAA2-3FBA58A55EA7}"/>
 																					<PropertyCurveList>
 																						<PropertyCurve PropertyName="Highpass">
-																							<Curve Name="" ID="{F8D0B637-E137-4E11-AF56-1298CF566FF0}">
+																							<Curve Name="" ID="{84CA6E85-0C80-458E-9DCD-C9FB1B60200D}">
 																								<PropertyList>
 																									<Property Name="Flags" Type="int32" Value="1"/>
 																								</PropertyList>
@@ -3140,7 +3189,7 @@
 																							</Curve>
 																						</PropertyCurve>
 																						<PropertyCurve PropertyName="Lowpass">
-																							<Curve Name="" ID="{E5B8D767-ACC3-4C3D-9914-5EA07410C8E2}">
+																							<Curve Name="" ID="{4C1B0FAB-CB30-4D57-9F60-BAA53BE06D7D}">
 																								<PropertyList>
 																									<Property Name="Flags" Type="int32" Value="1"/>
 																								</PropertyList>
@@ -3159,7 +3208,7 @@
 																							</Curve>
 																						</PropertyCurve>
 																						<PropertyCurve PropertyName="Volume">
-																							<Curve Name="" ID="{C856D383-6841-4E03-A175-467B1B8F3E41}">
+																							<Curve Name="" ID="{4A283940-4654-4569-A3E8-84AFDC70678B}">
 																								<PropertyList>
 																									<Property Name="Flags" Type="int32" Value="3"/>
 																								</PropertyList>
@@ -3188,21 +3237,21 @@
 													</Reference>
 													<Reference>
 														<Local>
-															<MusicTrackSequence Name="" ID="{4CE9AB90-447E-4ACB-AE37-79831CBEFF4F}">
+															<MusicTrackSequence Name="" ID="{5C802512-FDB2-4CB3-A420-AB0CB7A1DB7A}">
 																<ObjectLists>
 																	<ObjectList Name="Clips">
 																		<Reference>
 																			<Local>
-																				<MusicClip Name="mus_dungeons_pads_chords_bpm_165_4-4_16M" ID="{888A109B-1D40-47E0-B791-A2352BA0E748}">
+																				<MusicClip Name="mus_dungeons_pads_chords_bpm_165_4-4_16M" ID="{903326CA-27A7-4BE7-9D7C-8DFB6B691A28}">
 																					<PropertyList>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="23662.6058782308"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																					</PropertyList>
-																					<AudioSourceRef Name="mus_dungeons_pads_chords_bpm_165_4-4_16M" ID="{A41D81D1-2CEF-4021-A401-FB166453BD84}"/>
+																					<AudioSourceRef Name="mus_dungeons_pads_chords_bpm_165_4-4_16M" ID="{D39AA653-705C-4337-B300-E187C6D49FCB}"/>
 																					<PropertyCurveList>
 																						<PropertyCurve PropertyName="Highpass">
-																							<Curve Name="" ID="{B7C4FC55-4624-4F77-A909-F9B3D26B6E6F}">
+																							<Curve Name="" ID="{E660DB17-1D56-44AE-A95F-638EF2331D31}">
 																								<PropertyList>
 																									<Property Name="Flags" Type="int32" Value="1"/>
 																								</PropertyList>
@@ -3221,7 +3270,7 @@
 																							</Curve>
 																						</PropertyCurve>
 																						<PropertyCurve PropertyName="Lowpass">
-																							<Curve Name="" ID="{FA061426-1328-4494-A687-5C1A22C8C8D5}">
+																							<Curve Name="" ID="{AC94A19C-9A04-426C-A272-D0D7B0E0C0C7}">
 																								<PropertyList>
 																									<Property Name="Flags" Type="int32" Value="1"/>
 																								</PropertyList>
@@ -3240,7 +3289,7 @@
 																							</Curve>
 																						</PropertyCurve>
 																						<PropertyCurve PropertyName="Volume">
-																							<Curve Name="" ID="{ECF483ED-FC81-44FD-8272-C85A47C2CB99}">
+																							<Curve Name="" ID="{45377A54-984A-4D63-826E-32DD68EA1BB7}">
 																								<PropertyList>
 																									<Property Name="Flags" Type="int32" Value="3"/>
 																								</PropertyList>
@@ -3269,13 +3318,13 @@
 													</Reference>
 													<Reference>
 														<Local>
-															<MusicTrackSequence Name="" ID="{564451D4-0C35-4312-95CF-CD71B88DBF0F}"/>
+															<MusicTrackSequence Name="" ID="{08EA2614-9DD9-4DE6-99F7-6025E054BA29}"/>
 														</Local>
 													</Reference>
 												</ObjectList>
 											</ObjectLists>
 										</MusicTrack>
-										<MusicTrack Name="Drums" ID="{F8195F1C-6784-4E22-8101-F8242FC0545B}" ShortID="835490947">
+										<MusicTrack Name="Drums" ID="{4A31D9C4-A930-40F9-A62F-8781A1FF21A1}" ShortID="437714308">
 											<PropertyList>
 												<Property Name="MusicTrackType" Type="int16" Value="1"/>
 											</PropertyList>
@@ -3285,7 +3334,7 @@
 												</Reference>
 												<Reference Name="TransitionRoot">
 													<Custom>
-														<MusicTransition Name="Root" ID="{29B5B3C9-BBF1-47DC-BDDA-67171FB65DCC}">
+														<MusicTransition Name="Root" ID="{5FE86743-0E42-4F27-B3E0-1B7AFB23BE7B}">
 															<PropertyList>
 																<Property Name="IsFolder" Type="bool" Value="True"/>
 															</PropertyList>
@@ -3295,21 +3344,21 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="mus_dungeons_drums_dnb_main01_bpm_165_4-4_4M" ID="{A6D71239-857D-49C8-82CD-383DD0F6181F}">
+												<AudioFileSource Name="mus_dungeons_drums_dnb_main01_bpm_165_4-4_4M" ID="{0E264EB7-4960-4B1E-851E-A8AD5D60E72C}">
 													<Language>SFX</Language>
 													<AudioFile>mus_dungeons_drums_dnb_main01_bpm_165_4-4_4M.wav</AudioFile>
 													<MediaIDList>
 														<MediaID ID="720525476"/>
 													</MediaIDList>
 												</AudioFileSource>
-												<AudioFileSource Name="mus_dungeons_drums_dnb_main_bpm_165_4-4_4M" ID="{F2E9815E-7400-4100-87ED-4E57279CFC6F}">
+												<AudioFileSource Name="mus_dungeons_drums_dnb_main_bpm_165_4-4_4M" ID="{11C5DF2D-7AC7-4600-824A-CD7189029D19}">
 													<Language>SFX</Language>
 													<AudioFile>mus_dungeons_drums_dnb_main_bpm_165_4-4_4M.wav</AudioFile>
 													<MediaIDList>
 														<MediaID ID="439184684"/>
 													</MediaIDList>
 												</AudioFileSource>
-												<AudioFileSource Name="mus_dungeons_drums_dnb_mainSpaced_bpm_165_4-4_4M" ID="{63F0383F-1847-4494-ADD6-DD8A44814CBD}">
+												<AudioFileSource Name="mus_dungeons_drums_dnb_mainSpaced_bpm_165_4-4_4M" ID="{50E7CE27-33B9-42A7-8B96-B7EA6A0C008B}">
 													<Language>SFX</Language>
 													<AudioFile>mus_dungeons_drums_dnb_mainSpaced_bpm_165_4-4_4M.wav</AudioFile>
 													<MediaIDList>
@@ -3321,57 +3370,57 @@
 												<ObjectList Name="Sequences">
 													<Reference>
 														<Local>
-															<MusicTrackSequence Name="" ID="{77D621EC-196A-445F-B104-9E5E3AE88D7B}">
+															<MusicTrackSequence Name="" ID="{339FC190-A6A5-45A9-B77C-6C8156A565B0}">
 																<ObjectLists>
 																	<ObjectList Name="Clips">
 																		<Reference>
 																			<Local>
-																				<MusicClip Name="mus_dungeons_drums_dnb_main_bpm_165_4-4_4M" ID="{9CC3BB53-560A-44D6-9BEB-7F7764CA0C22}">
+																				<MusicClip Name="mus_dungeons_drums_dnb_main_bpm_165_4-4_4M" ID="{1601E65C-9F94-4E36-9B71-DC678834B7BE}">
 																					<PropertyList>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="5818.1875"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																					</PropertyList>
-																					<AudioSourceRef Name="mus_dungeons_drums_dnb_main_bpm_165_4-4_4M" ID="{F2E9815E-7400-4100-87ED-4E57279CFC6F}"/>
+																					<AudioSourceRef Name="mus_dungeons_drums_dnb_main_bpm_165_4-4_4M" ID="{11C5DF2D-7AC7-4600-824A-CD7189029D19}"/>
 																				</MusicClip>
 																			</Local>
 																		</Reference>
 																		<Reference>
 																			<Local>
-																				<MusicClip Name="mus_dungeons_drums_dnb_main_bpm_165_4-4_4M" ID="{4109C26E-C665-4E33-931D-7FD0F361A675}">
+																				<MusicClip Name="mus_dungeons_drums_dnb_main_bpm_165_4-4_4M" ID="{FD9C9019-0E2D-4778-A907-1630DD865314}">
 																					<PropertyList>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="5818.1875"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																						<Property Name="PlayAt" Type="Real64" Value="5818.1875"/>
 																					</PropertyList>
-																					<AudioSourceRef Name="mus_dungeons_drums_dnb_main_bpm_165_4-4_4M" ID="{F2E9815E-7400-4100-87ED-4E57279CFC6F}"/>
+																					<AudioSourceRef Name="mus_dungeons_drums_dnb_main_bpm_165_4-4_4M" ID="{11C5DF2D-7AC7-4600-824A-CD7189029D19}"/>
 																				</MusicClip>
 																			</Local>
 																		</Reference>
 																		<Reference>
 																			<Local>
-																				<MusicClip Name="mus_dungeons_drums_dnb_main_bpm_165_4-4_4M" ID="{AB71255A-C524-4A2B-B792-DD1CA8B7222E}">
+																				<MusicClip Name="mus_dungeons_drums_dnb_main_bpm_165_4-4_4M" ID="{EAE2D892-E522-40E5-AA2C-1D950FC2E8DA}">
 																					<PropertyList>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="5818.1875"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																						<Property Name="PlayAt" Type="Real64" Value="11636.375"/>
 																					</PropertyList>
-																					<AudioSourceRef Name="mus_dungeons_drums_dnb_main_bpm_165_4-4_4M" ID="{F2E9815E-7400-4100-87ED-4E57279CFC6F}"/>
+																					<AudioSourceRef Name="mus_dungeons_drums_dnb_main_bpm_165_4-4_4M" ID="{11C5DF2D-7AC7-4600-824A-CD7189029D19}"/>
 																				</MusicClip>
 																			</Local>
 																		</Reference>
 																		<Reference>
 																			<Local>
-																				<MusicClip Name="mus_dungeons_drums_dnb_main_bpm_165_4-4_4M" ID="{0D5B3539-25DC-4356-A661-78EFD24FC8F3}">
+																				<MusicClip Name="mus_dungeons_drums_dnb_main_bpm_165_4-4_4M" ID="{4DE3E1E2-4473-4ECC-BFCA-FC484C9D096E}">
 																					<PropertyList>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="5818.1875"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																						<Property Name="PlayAt" Type="Real64" Value="17454.5625"/>
 																					</PropertyList>
-																					<AudioSourceRef Name="mus_dungeons_drums_dnb_main_bpm_165_4-4_4M" ID="{F2E9815E-7400-4100-87ED-4E57279CFC6F}"/>
+																					<AudioSourceRef Name="mus_dungeons_drums_dnb_main_bpm_165_4-4_4M" ID="{11C5DF2D-7AC7-4600-824A-CD7189029D19}"/>
 																				</MusicClip>
 																			</Local>
 																		</Reference>
@@ -3382,118 +3431,57 @@
 													</Reference>
 													<Reference>
 														<Local>
-															<MusicTrackSequence Name="" ID="{F9E55ED5-48B3-4F03-A907-DDF102276F75}">
+															<MusicTrackSequence Name="" ID="{F69E5FEF-F891-4878-818C-7410EDE8211F}">
 																<ObjectLists>
 																	<ObjectList Name="Clips">
 																		<Reference>
 																			<Local>
-																				<MusicClip Name="mus_dungeons_drums_dnb_main01_bpm_165_4-4_4M" ID="{FDF171AB-6AF8-4383-ADDF-F1866FB315D5}">
+																				<MusicClip Name="mus_dungeons_drums_dnb_main01_bpm_165_4-4_4M" ID="{E9D009A7-78C7-418C-8574-40439270CF9F}">
 																					<PropertyList>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="5818.1875"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																					</PropertyList>
-																					<AudioSourceRef Name="mus_dungeons_drums_dnb_main01_bpm_165_4-4_4M" ID="{A6D71239-857D-49C8-82CD-383DD0F6181F}"/>
+																					<AudioSourceRef Name="mus_dungeons_drums_dnb_main01_bpm_165_4-4_4M" ID="{0E264EB7-4960-4B1E-851E-A8AD5D60E72C}"/>
 																				</MusicClip>
 																			</Local>
 																		</Reference>
 																		<Reference>
 																			<Local>
-																				<MusicClip Name="mus_dungeons_drums_dnb_main01_bpm_165_4-4_4M" ID="{43223C16-91FF-4EDC-9FAA-7E09FBF40CA6}">
+																				<MusicClip Name="mus_dungeons_drums_dnb_main01_bpm_165_4-4_4M" ID="{9501215B-8A63-439E-AC68-8F18069F1BB8}">
 																					<PropertyList>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="5818.1875"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																						<Property Name="PlayAt" Type="Real64" Value="5818.1875"/>
 																					</PropertyList>
-																					<AudioSourceRef Name="mus_dungeons_drums_dnb_main01_bpm_165_4-4_4M" ID="{A6D71239-857D-49C8-82CD-383DD0F6181F}"/>
+																					<AudioSourceRef Name="mus_dungeons_drums_dnb_main01_bpm_165_4-4_4M" ID="{0E264EB7-4960-4B1E-851E-A8AD5D60E72C}"/>
 																				</MusicClip>
 																			</Local>
 																		</Reference>
 																		<Reference>
 																			<Local>
-																				<MusicClip Name="mus_dungeons_drums_dnb_main01_bpm_165_4-4_4M" ID="{3F3A4DE3-BBA9-439F-94B0-1A42030AD4D2}">
+																				<MusicClip Name="mus_dungeons_drums_dnb_main01_bpm_165_4-4_4M" ID="{529077DF-5E6E-4F1B-832E-69B489010121}">
 																					<PropertyList>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="5818.1875"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																						<Property Name="PlayAt" Type="Real64" Value="11636.375"/>
 																					</PropertyList>
-																					<AudioSourceRef Name="mus_dungeons_drums_dnb_main01_bpm_165_4-4_4M" ID="{A6D71239-857D-49C8-82CD-383DD0F6181F}"/>
+																					<AudioSourceRef Name="mus_dungeons_drums_dnb_main01_bpm_165_4-4_4M" ID="{0E264EB7-4960-4B1E-851E-A8AD5D60E72C}"/>
 																				</MusicClip>
 																			</Local>
 																		</Reference>
 																		<Reference>
 																			<Local>
-																				<MusicClip Name="mus_dungeons_drums_dnb_main01_bpm_165_4-4_4M" ID="{65981F44-6934-4EC8-9BBB-41B174F35292}">
+																				<MusicClip Name="mus_dungeons_drums_dnb_main01_bpm_165_4-4_4M" ID="{F6BFE4CF-E648-4AF4-8D92-A0065F6C85A1}">
 																					<PropertyList>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="5818.1875"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																						<Property Name="PlayAt" Type="Real64" Value="17454.5625"/>
 																					</PropertyList>
-																					<AudioSourceRef Name="mus_dungeons_drums_dnb_main01_bpm_165_4-4_4M" ID="{A6D71239-857D-49C8-82CD-383DD0F6181F}"/>
-																				</MusicClip>
-																			</Local>
-																		</Reference>
-																	</ObjectList>
-																</ObjectLists>
-															</MusicTrackSequence>
-														</Local>
-													</Reference>
-													<Reference>
-														<Local>
-															<MusicTrackSequence Name="" ID="{BCE49F1E-2653-4F57-978B-B9B9920AD475}">
-																<ObjectLists>
-																	<ObjectList Name="Clips">
-																		<Reference>
-																			<Local>
-																				<MusicClip Name="mus_dungeons_drums_dnb_mainSpaced_bpm_165_4-4_4M" ID="{BD6AA610-F96B-438A-B505-B37BF852F04F}">
-																					<PropertyList>
-																						<Property Name="EndTrimOffset" Type="Real64" Value="5818.1875"/>
-																						<Property Name="FadeInMode" Type="int16" Value="0"/>
-																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																					</PropertyList>
-																					<AudioSourceRef Name="mus_dungeons_drums_dnb_mainSpaced_bpm_165_4-4_4M" ID="{63F0383F-1847-4494-ADD6-DD8A44814CBD}"/>
-																				</MusicClip>
-																			</Local>
-																		</Reference>
-																		<Reference>
-																			<Local>
-																				<MusicClip Name="mus_dungeons_drums_dnb_mainSpaced_bpm_165_4-4_4M" ID="{3D070845-348D-4854-B824-59791245A6DE}">
-																					<PropertyList>
-																						<Property Name="EndTrimOffset" Type="Real64" Value="5818.1875"/>
-																						<Property Name="FadeInMode" Type="int16" Value="0"/>
-																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																						<Property Name="PlayAt" Type="Real64" Value="5818.1875"/>
-																					</PropertyList>
-																					<AudioSourceRef Name="mus_dungeons_drums_dnb_mainSpaced_bpm_165_4-4_4M" ID="{63F0383F-1847-4494-ADD6-DD8A44814CBD}"/>
-																				</MusicClip>
-																			</Local>
-																		</Reference>
-																		<Reference>
-																			<Local>
-																				<MusicClip Name="mus_dungeons_drums_dnb_mainSpaced_bpm_165_4-4_4M" ID="{7FEE7050-1A81-4E8C-A558-FB01ED367A21}">
-																					<PropertyList>
-																						<Property Name="EndTrimOffset" Type="Real64" Value="5818.1875"/>
-																						<Property Name="FadeInMode" Type="int16" Value="0"/>
-																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																						<Property Name="PlayAt" Type="Real64" Value="11636.375"/>
-																					</PropertyList>
-																					<AudioSourceRef Name="mus_dungeons_drums_dnb_mainSpaced_bpm_165_4-4_4M" ID="{63F0383F-1847-4494-ADD6-DD8A44814CBD}"/>
-																				</MusicClip>
-																			</Local>
-																		</Reference>
-																		<Reference>
-																			<Local>
-																				<MusicClip Name="mus_dungeons_drums_dnb_mainSpaced_bpm_165_4-4_4M" ID="{1B881578-83DD-4921-8B30-B5F37F43549A}">
-																					<PropertyList>
-																						<Property Name="EndTrimOffset" Type="Real64" Value="5818.1875"/>
-																						<Property Name="FadeInMode" Type="int16" Value="0"/>
-																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																						<Property Name="PlayAt" Type="Real64" Value="17454.5625"/>
-																					</PropertyList>
-																					<AudioSourceRef Name="mus_dungeons_drums_dnb_mainSpaced_bpm_165_4-4_4M" ID="{63F0383F-1847-4494-ADD6-DD8A44814CBD}"/>
+																					<AudioSourceRef Name="mus_dungeons_drums_dnb_main01_bpm_165_4-4_4M" ID="{0E264EB7-4960-4B1E-851E-A8AD5D60E72C}"/>
 																				</MusicClip>
 																			</Local>
 																		</Reference>
@@ -3505,7 +3493,7 @@
 												</ObjectList>
 											</ObjectLists>
 										</MusicTrack>
-										<MusicTrack Name="mus_dungeons_arpg_bpm_165_4-4_16M" ID="{F42BD8E2-7215-4C18-9722-9AA9C6387AB7}" ShortID="527480348">
+										<MusicTrack Name="mus_dungeons_arpg_bpm_165_4-4_16M" ID="{54431CF4-1BE8-4FD5-8354-2A026631D14A}" ShortID="912588657">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -3519,7 +3507,7 @@
 												</Reference>
 												<Reference Name="TransitionRoot">
 													<Custom>
-														<MusicTransition Name="Root" ID="{47D89395-16AB-47CF-B4D6-48A01D708117}">
+														<MusicTransition Name="Root" ID="{038CD1B1-B26D-46D2-B087-DC35784DC8C5}">
 															<PropertyList>
 																<Property Name="IsFolder" Type="bool" Value="True"/>
 															</PropertyList>
@@ -3529,7 +3517,7 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="mus_dungeons_arpg_bpm_165_4-4_16M" ID="{73E8590C-DF34-4D63-A392-31EC46848D6D}">
+												<AudioFileSource Name="mus_dungeons_arpg_bpm_165_4-4_16M" ID="{45DC89EC-6CA5-4D21-972F-17935F6A5D49}">
 													<Language>SFX</Language>
 													<AudioFile>mus_dungeons_arpg_bpm_165_4-4_16M.wav</AudioFile>
 													<MediaIDList>
@@ -3541,18 +3529,18 @@
 												<ObjectList Name="Sequences">
 													<Reference>
 														<Local>
-															<MusicTrackSequence Name="" ID="{50F5C21B-88CA-43F5-818F-28B46F36C62F}">
+															<MusicTrackSequence Name="" ID="{AB3CACAF-EAC8-4551-A92A-E344C5776679}">
 																<ObjectLists>
 																	<ObjectList Name="Clips">
 																		<Reference>
 																			<Local>
-																				<MusicClip Name="mus_dungeons_arpg_bpm_165_4-4_16M" ID="{E28ACC8B-D98E-43F3-A89A-B09263136CA9}">
+																				<MusicClip Name="mus_dungeons_arpg_bpm_165_4-4_16M" ID="{EA061E35-6BCD-4CE4-A8BF-BA960CF40647}">
 																					<PropertyList>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																					</PropertyList>
-																					<AudioSourceRef Name="mus_dungeons_arpg_bpm_165_4-4_16M" ID="{73E8590C-DF34-4D63-A392-31EC46848D6D}"/>
+																					<AudioSourceRef Name="mus_dungeons_arpg_bpm_165_4-4_16M" ID="{45DC89EC-6CA5-4D21-972F-17935F6A5D49}"/>
 																				</MusicClip>
 																			</Local>
 																		</Reference>
@@ -3564,14 +3552,14 @@
 												</ObjectList>
 											</ObjectLists>
 										</MusicTrack>
-										<MusicTrack Name="mus_dungeons_bass_bpm_165_4-4_16M" ID="{FA059E96-1483-4761-B332-97399321F10D}" ShortID="338960220">
+										<MusicTrack Name="mus_dungeons_bass_bpm_165_4-4_16M" ID="{A9C988B8-5921-42B7-B311-2F9D6D198B97}" ShortID="992988233">
 											<ReferenceList>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
 												</Reference>
 												<Reference Name="TransitionRoot">
 													<Custom>
-														<MusicTransition Name="Root" ID="{761DE50F-546A-4FE1-93B9-D685BFEC95BC}">
+														<MusicTransition Name="Root" ID="{F6033C1F-EA07-4F1E-A1BE-820141865E10}">
 															<PropertyList>
 																<Property Name="IsFolder" Type="bool" Value="True"/>
 															</PropertyList>
@@ -3581,7 +3569,7 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="mus_dungeons_bass_bpm_165_4-4_16M" ID="{06FD9116-6F98-4CE7-A478-4571E091927B}">
+												<AudioFileSource Name="mus_dungeons_bass_bpm_165_4-4_16M" ID="{D74554C5-63DE-453C-8FA5-54F6CC2036A8}">
 													<Language>SFX</Language>
 													<AudioFile>mus_dungeons_bass_bpm_165_4-4_16M.wav</AudioFile>
 													<MediaIDList>
@@ -3593,18 +3581,18 @@
 												<ObjectList Name="Sequences">
 													<Reference>
 														<Local>
-															<MusicTrackSequence Name="" ID="{62BEB331-401E-4423-BFD0-984630742AF8}">
+															<MusicTrackSequence Name="" ID="{BE59B32A-FCDE-4C3A-8BA5-4F80071266B5}">
 																<ObjectLists>
 																	<ObjectList Name="Clips">
 																		<Reference>
 																			<Local>
-																				<MusicClip Name="mus_dungeons_bass_bpm_165_4-4_16M" ID="{42860015-971C-4E49-A846-06F4726A6911}">
+																				<MusicClip Name="mus_dungeons_bass_bpm_165_4-4_16M" ID="{06906A65-CA65-4DD9-8B10-10FEDE7B8FE1}">
 																					<PropertyList>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="23727.2916666667"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																					</PropertyList>
-																					<AudioSourceRef Name="mus_dungeons_bass_bpm_165_4-4_16M" ID="{06FD9116-6F98-4CE7-A478-4571E091927B}"/>
+																					<AudioSourceRef Name="mus_dungeons_bass_bpm_165_4-4_16M" ID="{D74554C5-63DE-453C-8FA5-54F6CC2036A8}"/>
 																				</MusicClip>
 																			</Local>
 																		</Reference>
@@ -3616,7 +3604,7 @@
 												</ObjectList>
 											</ObjectLists>
 										</MusicTrack>
-										<MusicTrack Name="GuitarLead LeadSynth" ID="{8B569E9A-3C76-4DEA-AF79-02CC557147F7}" ShortID="216093188">
+										<MusicTrack Name="GuitarLead LeadSynth" ID="{14C98E5A-7171-42BE-A04C-3C2681E91D14}" ShortID="370386396">
 											<PropertyList>
 												<Property Name="MusicTrackType" Type="int16" Value="2"/>
 											</PropertyList>
@@ -3626,7 +3614,7 @@
 												</Reference>
 												<Reference Name="TransitionRoot">
 													<Custom>
-														<MusicTransition Name="Root" ID="{D34261B0-587A-4F25-BDFE-8BB51A46C79B}">
+														<MusicTransition Name="Root" ID="{26F873FE-8C67-4DB5-8126-2F74FD79DE49}">
 															<PropertyList>
 																<Property Name="IsFolder" Type="bool" Value="True"/>
 															</PropertyList>
@@ -3636,42 +3624,42 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="mus_dungeons_guitar_lead_longNotes_bpm_165_4-4_16M_wav" ID="{7871681B-0BD0-4490-A1FE-661FF480A304}">
+												<AudioFileSource Name="mus_dungeons_guitar_lead_longNotes_bpm_165_4-4_16M_wav" ID="{37641AD9-6361-4E94-A77B-297825F0B984}">
 													<Language>SFX</Language>
 													<AudioFile>mus_dungeons_guitar_lead_longNotes_bpm_165_4-4_16M.wav.wav</AudioFile>
 													<MediaIDList>
 														<MediaID ID="880331828"/>
 													</MediaIDList>
 												</AudioFileSource>
-												<AudioFileSource Name="mus_dungeons_guitar_lead_solo_bpm_165_4-4_16M_wav" ID="{FCCB3F99-5EF4-41F1-87A0-D7D7F1DA6739}">
+												<AudioFileSource Name="mus_dungeons_guitar_lead_solo_bpm_165_4-4_16M_wav" ID="{98167C99-BAAB-4D76-8696-406A7C12B520}">
 													<Language>SFX</Language>
 													<AudioFile>mus_dungeons_guitar_lead_solo_bpm_165_4-4_16M.wav.wav</AudioFile>
 													<MediaIDList>
 														<MediaID ID="490430872"/>
 													</MediaIDList>
 												</AudioFileSource>
-												<AudioFileSource Name="mus_dungeons_guitar_lead_theme_bpm_165_4-4_16M_wav" ID="{1EB8FD6A-1D67-4EF7-9125-F41474527246}">
+												<AudioFileSource Name="mus_dungeons_guitar_lead_theme_bpm_165_4-4_16M_wav" ID="{C58EFC47-F4AE-46CA-B0E0-987727902CFE}">
 													<Language>SFX</Language>
 													<AudioFile>mus_dungeons_guitar_lead_theme_bpm_165_4-4_16M.wav.wav</AudioFile>
 													<MediaIDList>
 														<MediaID ID="251830584"/>
 													</MediaIDList>
 												</AudioFileSource>
-												<AudioFileSource Name="mus_dungeons_synth_lead_arp_bpm_165_4-4_16M" ID="{1FFA58EC-AFD3-4C77-97BD-441BFB7240D1}">
+												<AudioFileSource Name="mus_dungeons_synth_lead_arp_bpm_165_4-4_16M" ID="{CCD890B5-AC90-4B77-97FB-FDF868BF35E9}">
 													<Language>SFX</Language>
 													<AudioFile>mus_dungeons_synth_lead_arp_bpm_165_4-4_16M.wav</AudioFile>
 													<MediaIDList>
 														<MediaID ID="589154420"/>
 													</MediaIDList>
 												</AudioFileSource>
-												<AudioFileSource Name="mus_dungeons_synth_lead_solo01_bpm_165_4-4_16M" ID="{A4DFE695-2DFB-4F0E-B5CE-6BA01DA20C05}">
+												<AudioFileSource Name="mus_dungeons_synth_lead_solo01_bpm_165_4-4_16M" ID="{2A612681-604F-482F-A926-D0D769C62C31}">
 													<Language>SFX</Language>
 													<AudioFile>mus_dungeons_synth_lead_solo01_bpm_165_4-4_16M.wav</AudioFile>
 													<MediaIDList>
 														<MediaID ID="723779961"/>
 													</MediaIDList>
 												</AudioFileSource>
-												<AudioFileSource Name="mus_dungeons_synth_lead_solo02_bpm_165_4-4_16M" ID="{DDDBDA0C-F774-41B0-BDBC-2C15EBDF5114}">
+												<AudioFileSource Name="mus_dungeons_synth_lead_solo02_bpm_165_4-4_16M" ID="{F4DC7747-3FAD-4E5A-8C75-414E119A7D5C}">
 													<Language>SFX</Language>
 													<AudioFile>mus_dungeons_synth_lead_solo02_bpm_165_4-4_16M.wav</AudioFile>
 													<MediaIDList>
@@ -3683,18 +3671,18 @@
 												<ObjectList Name="Sequences">
 													<Reference>
 														<Local>
-															<MusicTrackSequence Name="" ID="{D65DAB10-2E2B-4B0A-84F0-7BB836010C0E}">
+															<MusicTrackSequence Name="" ID="{C9C8DB46-1987-4668-8E27-2FF1300A966A}">
 																<ObjectLists>
 																	<ObjectList Name="Clips">
 																		<Reference>
 																			<Local>
-																				<MusicClip Name="mus_dungeons_guitar_lead_longNotes_bpm_165_4-4_16M_wav" ID="{AAC58F91-1B08-4AEF-8766-C25FBA333BA4}">
+																				<MusicClip Name="mus_dungeons_guitar_lead_longNotes_bpm_165_4-4_16M_wav" ID="{81C51B42-AE74-43B4-9AE4-C8E8981DD428}">
 																					<PropertyList>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																					</PropertyList>
-																					<AudioSourceRef Name="mus_dungeons_guitar_lead_longNotes_bpm_165_4-4_16M_wav" ID="{7871681B-0BD0-4490-A1FE-661FF480A304}"/>
+																					<AudioSourceRef Name="mus_dungeons_guitar_lead_longNotes_bpm_165_4-4_16M_wav" ID="{37641AD9-6361-4E94-A77B-297825F0B984}"/>
 																				</MusicClip>
 																			</Local>
 																		</Reference>
@@ -3705,18 +3693,18 @@
 													</Reference>
 													<Reference>
 														<Local>
-															<MusicTrackSequence Name="" ID="{8CA7BBAA-86A5-419E-A6F1-4127DBD2BD75}">
+															<MusicTrackSequence Name="" ID="{200AF896-7E8D-4E65-9B3E-F1D9BDA1EE39}">
 																<ObjectLists>
 																	<ObjectList Name="Clips">
 																		<Reference>
 																			<Local>
-																				<MusicClip Name="mus_dungeons_synth_lead_arp_bpm_165_4-4_16M" ID="{1693F48D-D307-4F85-8C38-08DBB49D420C}">
+																				<MusicClip Name="mus_dungeons_synth_lead_arp_bpm_165_4-4_16M" ID="{D8D1A4F6-D22E-4B75-B0D7-4C96CEB4C3E6}">
 																					<PropertyList>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																					</PropertyList>
-																					<AudioSourceRef Name="mus_dungeons_synth_lead_arp_bpm_165_4-4_16M" ID="{1FFA58EC-AFD3-4C77-97BD-441BFB7240D1}"/>
+																					<AudioSourceRef Name="mus_dungeons_synth_lead_arp_bpm_165_4-4_16M" ID="{CCD890B5-AC90-4B77-97FB-FDF868BF35E9}"/>
 																				</MusicClip>
 																			</Local>
 																		</Reference>
@@ -3727,18 +3715,18 @@
 													</Reference>
 													<Reference>
 														<Local>
-															<MusicTrackSequence Name="" ID="{CC9F497E-D8B0-48A4-A340-3337FD28D1CC}">
+															<MusicTrackSequence Name="" ID="{65A790DB-E8A6-4A6C-A34A-ACF4D0188F05}">
 																<ObjectLists>
 																	<ObjectList Name="Clips">
 																		<Reference>
 																			<Local>
-																				<MusicClip Name="mus_dungeons_guitar_lead_theme_bpm_165_4-4_16M_wav" ID="{3E5370F8-A64C-4070-B5B6-4DAA94EDF342}">
+																				<MusicClip Name="mus_dungeons_guitar_lead_theme_bpm_165_4-4_16M_wav" ID="{2CE4A53C-A70F-44FB-9732-AF67DE17A262}">
 																					<PropertyList>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																					</PropertyList>
-																					<AudioSourceRef Name="mus_dungeons_guitar_lead_theme_bpm_165_4-4_16M_wav" ID="{1EB8FD6A-1D67-4EF7-9125-F41474527246}"/>
+																					<AudioSourceRef Name="mus_dungeons_guitar_lead_theme_bpm_165_4-4_16M_wav" ID="{C58EFC47-F4AE-46CA-B0E0-987727902CFE}"/>
 																				</MusicClip>
 																			</Local>
 																		</Reference>
@@ -3749,18 +3737,18 @@
 													</Reference>
 													<Reference>
 														<Local>
-															<MusicTrackSequence Name="" ID="{3DD376BE-6964-4B1F-BBC8-8A9D75A3B445}">
+															<MusicTrackSequence Name="" ID="{CB9073B8-7E18-44C4-BF57-7A1DD3D59EA2}">
 																<ObjectLists>
 																	<ObjectList Name="Clips">
 																		<Reference>
 																			<Local>
-																				<MusicClip Name="mus_dungeons_synth_lead_solo01_bpm_165_4-4_16M" ID="{AEAC3318-F71D-46A5-8EC1-84D33F1F83D2}">
+																				<MusicClip Name="mus_dungeons_synth_lead_solo01_bpm_165_4-4_16M" ID="{C8631BC3-0C2E-472A-9233-65131C87F5AD}">
 																					<PropertyList>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																					</PropertyList>
-																					<AudioSourceRef Name="mus_dungeons_synth_lead_solo01_bpm_165_4-4_16M" ID="{A4DFE695-2DFB-4F0E-B5CE-6BA01DA20C05}"/>
+																					<AudioSourceRef Name="mus_dungeons_synth_lead_solo01_bpm_165_4-4_16M" ID="{2A612681-604F-482F-A926-D0D769C62C31}"/>
 																				</MusicClip>
 																			</Local>
 																		</Reference>
@@ -3771,18 +3759,18 @@
 													</Reference>
 													<Reference>
 														<Local>
-															<MusicTrackSequence Name="" ID="{8D06B794-B703-45EC-B19A-B34278A702A9}">
+															<MusicTrackSequence Name="" ID="{A5563164-57DA-4535-B4CA-34618998BF88}">
 																<ObjectLists>
 																	<ObjectList Name="Clips">
 																		<Reference>
 																			<Local>
-																				<MusicClip Name="mus_dungeons_guitar_lead_solo_bpm_165_4-4_16M_wav" ID="{B8703D88-D56B-46C2-A753-141C8EDA3B89}">
+																				<MusicClip Name="mus_dungeons_guitar_lead_solo_bpm_165_4-4_16M_wav" ID="{8F7B53C6-C9FB-4A00-9C22-ECBF5B35E206}">
 																					<PropertyList>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																					</PropertyList>
-																					<AudioSourceRef Name="mus_dungeons_guitar_lead_solo_bpm_165_4-4_16M_wav" ID="{FCCB3F99-5EF4-41F1-87A0-D7D7F1DA6739}"/>
+																					<AudioSourceRef Name="mus_dungeons_guitar_lead_solo_bpm_165_4-4_16M_wav" ID="{98167C99-BAAB-4D76-8696-406A7C12B520}"/>
 																				</MusicClip>
 																			</Local>
 																		</Reference>
@@ -3793,18 +3781,18 @@
 													</Reference>
 													<Reference>
 														<Local>
-															<MusicTrackSequence Name="" ID="{2F89FAA2-58BE-4C58-BE56-3F5DA4EF3B1B}">
+															<MusicTrackSequence Name="" ID="{BE436993-2B43-420E-8315-10C0229738B7}">
 																<ObjectLists>
 																	<ObjectList Name="Clips">
 																		<Reference>
 																			<Local>
-																				<MusicClip Name="mus_dungeons_synth_lead_solo02_bpm_165_4-4_16M" ID="{0D239EAC-2A47-4C80-BBBD-DCFD1EC5C104}">
+																				<MusicClip Name="mus_dungeons_synth_lead_solo02_bpm_165_4-4_16M" ID="{22550CD9-35D1-4D60-B0B5-D258D856A784}">
 																					<PropertyList>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																					</PropertyList>
-																					<AudioSourceRef Name="mus_dungeons_synth_lead_solo02_bpm_165_4-4_16M" ID="{DDDBDA0C-F774-41B0-BDBC-2C15EBDF5114}"/>
+																					<AudioSourceRef Name="mus_dungeons_synth_lead_solo02_bpm_165_4-4_16M" ID="{F4DC7747-3FAD-4E5A-8C75-414E119A7D5C}"/>
 																				</MusicClip>
 																			</Local>
 																		</Reference>
@@ -3815,33 +3803,33 @@
 													</Reference>
 													<Reference>
 														<Local>
-															<MusicTrackSequence Name="" ID="{CC259C3C-AACF-4ACC-8DC9-8F6C446D13C1}"/>
+															<MusicTrackSequence Name="" ID="{D830DB76-8263-4107-B661-6571B1C50B69}"/>
 														</Local>
 													</Reference>
 													<Reference>
 														<Local>
-															<MusicTrackSequence Name="" ID="{EE2F6E43-AA02-4E6D-807D-6D2E7DA9D075}"/>
+															<MusicTrackSequence Name="" ID="{C79D2AED-A206-4B0D-8D74-EA9CC0C8499D}"/>
 														</Local>
 													</Reference>
 													<Reference>
 														<Local>
-															<MusicTrackSequence Name="" ID="{ED3E9C4D-058F-46F0-B4C6-AD21A6C5BF0E}"/>
+															<MusicTrackSequence Name="" ID="{11863502-A65F-484A-960D-5E6048A77E09}"/>
 														</Local>
 													</Reference>
 													<Reference>
 														<Local>
-															<MusicTrackSequence Name="" ID="{11DC78E6-CF93-47FC-91BA-986A75E02827}"/>
+															<MusicTrackSequence Name="" ID="{7CC2296A-B403-410C-87C6-F76F5B989688}"/>
 														</Local>
 													</Reference>
 													<Reference>
 														<Local>
-															<MusicTrackSequence Name="" ID="{0AB6F206-7C28-44A8-81D9-4B4B81A0630D}"/>
+															<MusicTrackSequence Name="" ID="{F8A014E9-A9DD-47A5-8AE6-AD2CD3DDFB89}"/>
 														</Local>
 													</Reference>
 												</ObjectList>
 											</ObjectLists>
 										</MusicTrack>
-										<MusicTrack Name="Guitar Rhythm" ID="{2030409F-9DB5-45E5-8F53-4ABEC3731574}" ShortID="660473404">
+										<MusicTrack Name="Guitar Rhythm" ID="{59DB0145-4342-4842-ADE8-DA9D1635FC9C}" ShortID="540598507">
 											<PropertyList>
 												<Property Name="MusicTrackType" Type="int16" Value="1"/>
 												<Property Name="Volume" Type="Real64">
@@ -3856,7 +3844,7 @@
 												</Reference>
 												<Reference Name="TransitionRoot">
 													<Custom>
-														<MusicTransition Name="Root" ID="{68E499CA-15D5-4C61-AC79-FCAAC7EE28D6}">
+														<MusicTransition Name="Root" ID="{59990FBA-249F-4D30-9DDA-C5A0F2686E87}">
 															<PropertyList>
 																<Property Name="IsFolder" Type="bool" Value="True"/>
 															</PropertyList>
@@ -3866,42 +3854,42 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="mus_dungeons_guitar_rhythm_chords__bpm_165_4-4_16M_wav" ID="{C21882D4-30A7-4980-AE9C-05FF3A1281E4}">
+												<AudioFileSource Name="mus_dungeons_guitar_rhythm_chords__bpm_165_4-4_16M_wav" ID="{66AF1D63-92D2-42D9-8758-CB108C2F7C19}">
 													<Language>SFX</Language>
 													<AudioFile>mus_dungeons_guitar_rhythm_chords__bpm_165_4-4_16M.wav.wav</AudioFile>
 													<MediaIDList>
 														<MediaID ID="360602114"/>
 													</MediaIDList>
 												</AudioFileSource>
-												<AudioFileSource Name="mus_dungeons_guitar_rhythm_chords_long_bpm_165_4-4_16M_wav" ID="{7DF779CF-54E0-4D61-B59D-A6586E8FB18D}">
+												<AudioFileSource Name="mus_dungeons_guitar_rhythm_chords_long_bpm_165_4-4_16M_wav" ID="{9D476A73-9FAB-47C4-8A27-444D0D4C2182}">
 													<Language>SFX</Language>
 													<AudioFile>mus_dungeons_guitar_rhythm_chords_long_bpm_165_4-4_16M.wav.wav</AudioFile>
 													<MediaIDList>
 														<MediaID ID="496225530"/>
 													</MediaIDList>
 												</AudioFileSource>
-												<AudioFileSource Name="mus_dungeons_guitar_rhythm_chords_power_bpm_165_4-4_16M_wav" ID="{FB54A26D-8B00-4A68-8797-DE8BF32B6951}">
+												<AudioFileSource Name="mus_dungeons_guitar_rhythm_chords_power_bpm_165_4-4_16M_wav" ID="{88353E94-4AD6-4137-9FB5-3E2C515351B9}">
 													<Language>SFX</Language>
 													<AudioFile>mus_dungeons_guitar_rhythm_chords_power_bpm_165_4-4_16M.wav.wav</AudioFile>
 													<MediaIDList>
 														<MediaID ID="979020422"/>
 													</MediaIDList>
 												</AudioFileSource>
-												<AudioFileSource Name="mus_dungeons_guitar_rhythm_mute_funk_bpm_165_4-4_16M_wav" ID="{22E59ECF-D11B-4151-9364-70A0B81329B3}">
+												<AudioFileSource Name="mus_dungeons_guitar_rhythm_mute_funk_bpm_165_4-4_16M_wav" ID="{660EDCDF-FF75-4CF7-B9D7-F16A0E168B64}">
 													<Language>SFX</Language>
 													<AudioFile>mus_dungeons_guitar_rhythm_mute_funk_bpm_165_4-4_16M.wav.wav</AudioFile>
 													<MediaIDList>
 														<MediaID ID="617499719"/>
 													</MediaIDList>
 												</AudioFileSource>
-												<AudioFileSource Name="mus_dungeons_guitar_rhythm_mute_palm_bpm_165_4-4_16M" ID="{9EC4B095-9356-4BAB-BFC8-707F8E64060D}">
+												<AudioFileSource Name="mus_dungeons_guitar_rhythm_mute_palm_bpm_165_4-4_16M" ID="{2CBF5CC8-6338-409D-9BEE-FFBC82EA795F}">
 													<Language>SFX</Language>
 													<AudioFile>mus_dungeons_guitar_rhythm_mute_palm_bpm_165_4-4_16M.wav</AudioFile>
 													<MediaIDList>
 														<MediaID ID="324848001"/>
 													</MediaIDList>
 												</AudioFileSource>
-												<AudioFileSource Name="mus_dungeons_guitar_rhythm_power_rhythm_bpm_165_4-4_16M" ID="{6EEAB4F6-9C0B-4197-A0F0-A23810F9FD95}">
+												<AudioFileSource Name="mus_dungeons_guitar_rhythm_power_rhythm_bpm_165_4-4_16M" ID="{4EA74642-8155-44F9-A22E-F780C89A898C}">
 													<Language>SFX</Language>
 													<AudioFile>mus_dungeons_guitar_rhythm_power_rhythm_bpm_165_4-4_16M.wav</AudioFile>
 													<MediaIDList>
@@ -3913,18 +3901,18 @@
 												<ObjectList Name="Sequences">
 													<Reference>
 														<Local>
-															<MusicTrackSequence Name="" ID="{65B0B092-FFD2-4B6E-92D0-976B5776FAC5}">
+															<MusicTrackSequence Name="" ID="{6307E7E4-DDD5-41B4-8BEC-3EE70DA6F5C9}">
 																<ObjectLists>
 																	<ObjectList Name="Clips">
 																		<Reference>
 																			<Local>
-																				<MusicClip Name="mus_dungeons_guitar_rhythm_chords__bpm_165_4-4_16M_wav" ID="{2721A921-A64F-4694-BEB5-EAE2E12437BE}">
+																				<MusicClip Name="mus_dungeons_guitar_rhythm_chords__bpm_165_4-4_16M_wav" ID="{FF08FD53-C48E-427A-8A80-B1CCEA8545A8}">
 																					<PropertyList>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																					</PropertyList>
-																					<AudioSourceRef Name="mus_dungeons_guitar_rhythm_chords__bpm_165_4-4_16M_wav" ID="{C21882D4-30A7-4980-AE9C-05FF3A1281E4}"/>
+																					<AudioSourceRef Name="mus_dungeons_guitar_rhythm_chords__bpm_165_4-4_16M_wav" ID="{66AF1D63-92D2-42D9-8758-CB108C2F7C19}"/>
 																				</MusicClip>
 																			</Local>
 																		</Reference>
@@ -3935,18 +3923,18 @@
 													</Reference>
 													<Reference>
 														<Local>
-															<MusicTrackSequence Name="" ID="{F4989B82-3D79-49A4-A962-480EAB1A1F59}">
+															<MusicTrackSequence Name="" ID="{140AAA25-6347-4984-A371-9AE285146147}">
 																<ObjectLists>
 																	<ObjectList Name="Clips">
 																		<Reference>
 																			<Local>
-																				<MusicClip Name="mus_dungeons_guitar_rhythm_chords_long_bpm_165_4-4_16M_wav" ID="{F4F0F4E4-DDCD-4B05-BE34-09BEA61BFC9B}">
+																				<MusicClip Name="mus_dungeons_guitar_rhythm_chords_long_bpm_165_4-4_16M_wav" ID="{CDDD6FD6-9CE5-4A35-BE59-096902407093}">
 																					<PropertyList>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																					</PropertyList>
-																					<AudioSourceRef Name="mus_dungeons_guitar_rhythm_chords_long_bpm_165_4-4_16M_wav" ID="{7DF779CF-54E0-4D61-B59D-A6586E8FB18D}"/>
+																					<AudioSourceRef Name="mus_dungeons_guitar_rhythm_chords_long_bpm_165_4-4_16M_wav" ID="{9D476A73-9FAB-47C4-8A27-444D0D4C2182}"/>
 																				</MusicClip>
 																			</Local>
 																		</Reference>
@@ -3957,18 +3945,18 @@
 													</Reference>
 													<Reference>
 														<Local>
-															<MusicTrackSequence Name="" ID="{17789F01-66EF-4354-A1A8-C38FA3F609CA}">
+															<MusicTrackSequence Name="" ID="{11D2DC98-3AE1-4B8B-8EB2-628090111BF0}">
 																<ObjectLists>
 																	<ObjectList Name="Clips">
 																		<Reference>
 																			<Local>
-																				<MusicClip Name="mus_dungeons_guitar_rhythm_chords_power_bpm_165_4-4_16M_wav" ID="{554FF675-7619-4B26-B898-8FF591E317DE}">
+																				<MusicClip Name="mus_dungeons_guitar_rhythm_chords_power_bpm_165_4-4_16M_wav" ID="{2F4E166F-4665-4C66-A3A2-35AB281ABEFF}">
 																					<PropertyList>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																					</PropertyList>
-																					<AudioSourceRef Name="mus_dungeons_guitar_rhythm_chords_power_bpm_165_4-4_16M_wav" ID="{FB54A26D-8B00-4A68-8797-DE8BF32B6951}"/>
+																					<AudioSourceRef Name="mus_dungeons_guitar_rhythm_chords_power_bpm_165_4-4_16M_wav" ID="{88353E94-4AD6-4137-9FB5-3E2C515351B9}"/>
 																				</MusicClip>
 																			</Local>
 																		</Reference>
@@ -3979,18 +3967,18 @@
 													</Reference>
 													<Reference>
 														<Local>
-															<MusicTrackSequence Name="" ID="{9FCFE292-4826-45CF-AA87-22C98DF7AB3C}">
+															<MusicTrackSequence Name="" ID="{9085EFE2-F11A-4D7D-93FC-6865B8BE439E}">
 																<ObjectLists>
 																	<ObjectList Name="Clips">
 																		<Reference>
 																			<Local>
-																				<MusicClip Name="mus_dungeons_guitar_rhythm_mute_funk_bpm_165_4-4_16M_wav" ID="{E617138D-6E8C-4CEF-8158-87FBEB4F7C72}">
+																				<MusicClip Name="mus_dungeons_guitar_rhythm_mute_funk_bpm_165_4-4_16M_wav" ID="{580D90F1-10AA-49D0-A0F1-59E2F33D588F}">
 																					<PropertyList>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																					</PropertyList>
-																					<AudioSourceRef Name="mus_dungeons_guitar_rhythm_mute_funk_bpm_165_4-4_16M_wav" ID="{22E59ECF-D11B-4151-9364-70A0B81329B3}"/>
+																					<AudioSourceRef Name="mus_dungeons_guitar_rhythm_mute_funk_bpm_165_4-4_16M_wav" ID="{660EDCDF-FF75-4CF7-B9D7-F16A0E168B64}"/>
 																				</MusicClip>
 																			</Local>
 																		</Reference>
@@ -4001,18 +3989,18 @@
 													</Reference>
 													<Reference>
 														<Local>
-															<MusicTrackSequence Name="" ID="{53EFE26E-D590-41BF-ACF8-449457E2159B}">
+															<MusicTrackSequence Name="" ID="{914F7B2A-6D54-4DA1-B64E-871D9C897DA0}">
 																<ObjectLists>
 																	<ObjectList Name="Clips">
 																		<Reference>
 																			<Local>
-																				<MusicClip Name="mus_dungeons_guitar_rhythm_mute_palm_bpm_165_4-4_16M" ID="{DD4B8BAE-857B-4E1F-85B0-354E635B2AA4}">
+																				<MusicClip Name="mus_dungeons_guitar_rhythm_mute_palm_bpm_165_4-4_16M" ID="{57AFCA90-1C93-471F-AE45-397C824173E6}">
 																					<PropertyList>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																					</PropertyList>
-																					<AudioSourceRef Name="mus_dungeons_guitar_rhythm_mute_palm_bpm_165_4-4_16M" ID="{9EC4B095-9356-4BAB-BFC8-707F8E64060D}"/>
+																					<AudioSourceRef Name="mus_dungeons_guitar_rhythm_mute_palm_bpm_165_4-4_16M" ID="{2CBF5CC8-6338-409D-9BEE-FFBC82EA795F}"/>
 																				</MusicClip>
 																			</Local>
 																		</Reference>
@@ -4023,18 +4011,18 @@
 													</Reference>
 													<Reference>
 														<Local>
-															<MusicTrackSequence Name="" ID="{12250B8E-67E4-4C1A-AFF0-CB4331EA5CC9}">
+															<MusicTrackSequence Name="" ID="{3F07921C-5BD1-4F88-84DC-939694531E59}">
 																<ObjectLists>
 																	<ObjectList Name="Clips">
 																		<Reference>
 																			<Local>
-																				<MusicClip Name="mus_dungeons_guitar_rhythm_power_rhythm_bpm_165_4-4_16M" ID="{E9240AFB-ED38-48B3-B323-FF7816020B7B}">
+																				<MusicClip Name="mus_dungeons_guitar_rhythm_power_rhythm_bpm_165_4-4_16M" ID="{E4BAE5B7-E666-4E01-8EF8-AC68EE107990}">
 																					<PropertyList>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																					</PropertyList>
-																					<AudioSourceRef Name="mus_dungeons_guitar_rhythm_power_rhythm_bpm_165_4-4_16M" ID="{6EEAB4F6-9C0B-4197-A0F0-A23810F9FD95}"/>
+																					<AudioSourceRef Name="mus_dungeons_guitar_rhythm_power_rhythm_bpm_165_4-4_16M" ID="{4EA74642-8155-44F9-A22E-F780C89A898C}"/>
 																				</MusicClip>
 																			</Local>
 																		</Reference>
@@ -4051,12 +4039,12 @@
 										<ObjectList Name="Cues">
 											<Reference>
 												<Local>
-													<MusicCue Name="Entry Cue" ID="{F099F21D-95CB-4A84-B2DD-581DA8DBCA5E}"/>
+													<MusicCue Name="Entry Cue" ID="{B9753CA4-025E-44AC-9829-32A8C971500E}"/>
 												</Local>
 											</Reference>
 											<Reference>
 												<Local>
-													<MusicCue Name="Exit Cue" ID="{B974FF2F-8758-448D-9769-7080A90C099A}">
+													<MusicCue Name="Exit Cue" ID="{D2D5900F-D6BA-429F-95E3-61E6E735E114}">
 														<PropertyList>
 															<Property Name="CueType" Type="int16" Value="1"/>
 															<Property Name="TimeMs" Type="Real64" Value="23272.7272727273"/>
@@ -4905,11 +4893,1033 @@
 								</MusicSegment>
 							</ChildrenList>
 						</MusicPlaylistContainer>
+						<MusicPlaylistContainer Name="DungeonsCombat" ID="{F53264AA-B42A-40D1-930D-8574F2EEB005}" ShortID="573395207">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+								</Reference>
+								<Reference Name="PlaylistRoot">
+									<Custom>
+										<MusicPlaylistItem Name="" ID="{21B96FCA-80CF-4EC7-A05D-0F9967E1164B}" ShortID="342487502">
+											<PropertyList>
+												<Property Name="LoopCount" Type="int16" Value="0"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicPlaylistItem Name="" ID="{19F3666F-1C94-4D03-A39A-BCF1CFEBFFBD}" ShortID="61602721">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Segment">
+															<ObjectRef Name="DnbCrazy" ID="{3FE41158-ABBF-4ECB-9B22-4BCFBDD4B924}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicPlaylistItem>
+											</ChildrenList>
+										</MusicPlaylistItem>
+									</Custom>
+								</Reference>
+								<Reference Name="TransitionRoot">
+									<Custom>
+										<MusicTransition Name="Root" ID="{252FFCE3-8508-4AE8-9D17-F7A237F2B122}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicTransition Name="Transition" ID="{063F17B9-3FEF-44D1-BA2C-F63FA17CB843}">
+													<TransitionInfo/>
+												</MusicTransition>
+											</ChildrenList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</Custom>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="DnbCrazy" ID="{3FE41158-ABBF-4ECB-9B22-4BCFBDD4B924}" ShortID="921159380">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="104727.333333333"/>
+										<Property Name="Tempo" Type="Real64" Value="165"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{19DCBFA9-2B79-4843-B372-0E4D60C239A1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MusicMaster" ID="{6110D84A-F0CC-4740-B891-D5E868681FC1}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="Pads" ID="{F42EF6E8-F0A1-4951-AEEA-BDF677098319}" ShortID="152420879">
+											<PropertyList>
+												<Property Name="MusicTrackType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{C1D096A7-C301-4DFC-92FA-2BC9BF14CBC9}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_dungeons_pads_chords_bpm_165_4-4_16M" ID="{A41D81D1-2CEF-4021-A401-FB166453BD84}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons_pads_chords_bpm_165_4-4_16M.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="317211741"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="mus_dungeons_pads_intro_bpm_165_4-4_16M" ID="{0E721170-60EA-48CB-A643-3A5A6359F409}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons_pads_intro_bpm_165_4-4_16M.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="720062416"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{311A2D22-C1D9-41DD-B4D6-F9C0A102418D}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_pads_intro_bpm_165_4-4_16M" ID="{DD1A57BC-0CF5-475B-B331-3CBB6EA9535B}">
+																					<PropertyList>
+																						<Property Name="BeginTrimOffset" Type="Real64" Value="1.45716771982052E-13"/>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="23662.6058782308"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																						<Property Name="PlayAt" Type="Real64" Value="-1.44911860289199E-13"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_pads_intro_bpm_165_4-4_16M" ID="{0E721170-60EA-48CB-A643-3A5A6359F409}"/>
+																					<PropertyCurveList>
+																						<PropertyCurve PropertyName="Highpass">
+																							<Curve Name="" ID="{F8D0B637-E137-4E11-AF56-1298CF566FF0}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>23.66261</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Lowpass">
+																							<Curve Name="" ID="{E5B8D767-ACC3-4C3D-9914-5EA07410C8E2}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>23.66261</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Volume">
+																							<Curve Name="" ID="{C856D383-6841-4E03-A175-467B1B8F3E41}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="3"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>23.66261</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																					</PropertyCurveList>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{4CE9AB90-447E-4ACB-AE37-79831CBEFF4F}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_pads_chords_bpm_165_4-4_16M" ID="{888A109B-1D40-47E0-B791-A2352BA0E748}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="23662.6058782308"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_pads_chords_bpm_165_4-4_16M" ID="{A41D81D1-2CEF-4021-A401-FB166453BD84}"/>
+																					<PropertyCurveList>
+																						<PropertyCurve PropertyName="Highpass">
+																							<Curve Name="" ID="{B7C4FC55-4624-4F77-A909-F9B3D26B6E6F}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>23.66261</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Lowpass">
+																							<Curve Name="" ID="{FA061426-1328-4494-A687-5C1A22C8C8D5}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>23.66261</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Volume">
+																							<Curve Name="" ID="{ECF483ED-FC81-44FD-8272-C85A47C2CB99}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="3"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>23.66261</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																					</PropertyCurveList>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{564451D4-0C35-4312-95CF-CD71B88DBF0F}"/>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="Drums" ID="{F8195F1C-6784-4E22-8101-F8242FC0545B}" ShortID="835490947">
+											<PropertyList>
+												<Property Name="MusicTrackType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{29B5B3C9-BBF1-47DC-BDDA-67171FB65DCC}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_dungeons_drums_dnb_main01_bpm_165_4-4_4M" ID="{A6D71239-857D-49C8-82CD-383DD0F6181F}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons_drums_dnb_main01_bpm_165_4-4_4M.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="720525476"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="mus_dungeons_drums_dnb_main_bpm_165_4-4_4M" ID="{F2E9815E-7400-4100-87ED-4E57279CFC6F}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons_drums_dnb_main_bpm_165_4-4_4M.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="439184684"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="mus_dungeons_drums_dnb_mainSpaced_bpm_165_4-4_4M" ID="{63F0383F-1847-4494-ADD6-DD8A44814CBD}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons_drums_dnb_mainSpaced_bpm_165_4-4_4M.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1070101142"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{77D621EC-196A-445F-B104-9E5E3AE88D7B}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_drums_dnb_main_bpm_165_4-4_4M" ID="{9CC3BB53-560A-44D6-9BEB-7F7764CA0C22}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="5818.1875"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_drums_dnb_main_bpm_165_4-4_4M" ID="{F2E9815E-7400-4100-87ED-4E57279CFC6F}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_drums_dnb_main_bpm_165_4-4_4M" ID="{4109C26E-C665-4E33-931D-7FD0F361A675}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="5818.1875"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																						<Property Name="PlayAt" Type="Real64" Value="5818.1875"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_drums_dnb_main_bpm_165_4-4_4M" ID="{F2E9815E-7400-4100-87ED-4E57279CFC6F}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_drums_dnb_main_bpm_165_4-4_4M" ID="{AB71255A-C524-4A2B-B792-DD1CA8B7222E}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="5818.1875"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																						<Property Name="PlayAt" Type="Real64" Value="11636.375"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_drums_dnb_main_bpm_165_4-4_4M" ID="{F2E9815E-7400-4100-87ED-4E57279CFC6F}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_drums_dnb_main_bpm_165_4-4_4M" ID="{0D5B3539-25DC-4356-A661-78EFD24FC8F3}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="5818.1875"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																						<Property Name="PlayAt" Type="Real64" Value="17454.5625"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_drums_dnb_main_bpm_165_4-4_4M" ID="{F2E9815E-7400-4100-87ED-4E57279CFC6F}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{F9E55ED5-48B3-4F03-A907-DDF102276F75}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_drums_dnb_main01_bpm_165_4-4_4M" ID="{FDF171AB-6AF8-4383-ADDF-F1866FB315D5}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="5818.1875"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_drums_dnb_main01_bpm_165_4-4_4M" ID="{A6D71239-857D-49C8-82CD-383DD0F6181F}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_drums_dnb_main01_bpm_165_4-4_4M" ID="{43223C16-91FF-4EDC-9FAA-7E09FBF40CA6}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="5818.1875"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																						<Property Name="PlayAt" Type="Real64" Value="5818.1875"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_drums_dnb_main01_bpm_165_4-4_4M" ID="{A6D71239-857D-49C8-82CD-383DD0F6181F}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_drums_dnb_main01_bpm_165_4-4_4M" ID="{3F3A4DE3-BBA9-439F-94B0-1A42030AD4D2}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="5818.1875"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																						<Property Name="PlayAt" Type="Real64" Value="11636.375"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_drums_dnb_main01_bpm_165_4-4_4M" ID="{A6D71239-857D-49C8-82CD-383DD0F6181F}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_drums_dnb_main01_bpm_165_4-4_4M" ID="{65981F44-6934-4EC8-9BBB-41B174F35292}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="5818.1875"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																						<Property Name="PlayAt" Type="Real64" Value="17454.5625"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_drums_dnb_main01_bpm_165_4-4_4M" ID="{A6D71239-857D-49C8-82CD-383DD0F6181F}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="mus_dungeons_arpg_bpm_165_4-4_16M" ID="{F42BD8E2-7215-4C18-9722-9AA9C6387AB7}" ShortID="527480348">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-5</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{47D89395-16AB-47CF-B4D6-48A01D708117}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_dungeons_arpg_bpm_165_4-4_16M" ID="{73E8590C-DF34-4D63-A392-31EC46848D6D}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons_arpg_bpm_165_4-4_16M.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="829294106"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{50F5C21B-88CA-43F5-818F-28B46F36C62F}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_arpg_bpm_165_4-4_16M" ID="{E28ACC8B-D98E-43F3-A89A-B09263136CA9}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_arpg_bpm_165_4-4_16M" ID="{73E8590C-DF34-4D63-A392-31EC46848D6D}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="mus_dungeons_bass_bpm_165_4-4_16M" ID="{FA059E96-1483-4761-B332-97399321F10D}" ShortID="338960220">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{761DE50F-546A-4FE1-93B9-D685BFEC95BC}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_dungeons_bass_bpm_165_4-4_16M" ID="{06FD9116-6F98-4CE7-A478-4571E091927B}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons_bass_bpm_165_4-4_16M.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="508362603"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{62BEB331-401E-4423-BFD0-984630742AF8}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_bass_bpm_165_4-4_16M" ID="{42860015-971C-4E49-A846-06F4726A6911}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="23727.2916666667"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_bass_bpm_165_4-4_16M" ID="{06FD9116-6F98-4CE7-A478-4571E091927B}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="GuitarLead LeadSynth" ID="{8B569E9A-3C76-4DEA-AF79-02CC557147F7}" ShortID="216093188">
+											<PropertyList>
+												<Property Name="MusicTrackType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{D34261B0-587A-4F25-BDFE-8BB51A46C79B}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_dungeons_guitar_lead_longNotes_bpm_165_4-4_16M_wav" ID="{7871681B-0BD0-4490-A1FE-661FF480A304}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons_guitar_lead_longNotes_bpm_165_4-4_16M.wav.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="880331828"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="mus_dungeons_guitar_lead_solo_bpm_165_4-4_16M_wav" ID="{FCCB3F99-5EF4-41F1-87A0-D7D7F1DA6739}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons_guitar_lead_solo_bpm_165_4-4_16M.wav.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="490430872"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="mus_dungeons_guitar_lead_theme_bpm_165_4-4_16M_wav" ID="{1EB8FD6A-1D67-4EF7-9125-F41474527246}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons_guitar_lead_theme_bpm_165_4-4_16M.wav.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="251830584"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="mus_dungeons_synth_lead_arp_bpm_165_4-4_16M" ID="{1FFA58EC-AFD3-4C77-97BD-441BFB7240D1}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons_synth_lead_arp_bpm_165_4-4_16M.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="589154420"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="mus_dungeons_synth_lead_solo01_bpm_165_4-4_16M" ID="{A4DFE695-2DFB-4F0E-B5CE-6BA01DA20C05}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons_synth_lead_solo01_bpm_165_4-4_16M.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="723779961"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="mus_dungeons_synth_lead_solo02_bpm_165_4-4_16M" ID="{DDDBDA0C-F774-41B0-BDBC-2C15EBDF5114}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons_synth_lead_solo02_bpm_165_4-4_16M.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="457177102"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{D65DAB10-2E2B-4B0A-84F0-7BB836010C0E}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_guitar_lead_longNotes_bpm_165_4-4_16M_wav" ID="{AAC58F91-1B08-4AEF-8766-C25FBA333BA4}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_guitar_lead_longNotes_bpm_165_4-4_16M_wav" ID="{7871681B-0BD0-4490-A1FE-661FF480A304}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{8CA7BBAA-86A5-419E-A6F1-4127DBD2BD75}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_synth_lead_arp_bpm_165_4-4_16M" ID="{1693F48D-D307-4F85-8C38-08DBB49D420C}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_synth_lead_arp_bpm_165_4-4_16M" ID="{1FFA58EC-AFD3-4C77-97BD-441BFB7240D1}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{CC9F497E-D8B0-48A4-A340-3337FD28D1CC}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_guitar_lead_theme_bpm_165_4-4_16M_wav" ID="{3E5370F8-A64C-4070-B5B6-4DAA94EDF342}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_guitar_lead_theme_bpm_165_4-4_16M_wav" ID="{1EB8FD6A-1D67-4EF7-9125-F41474527246}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{3DD376BE-6964-4B1F-BBC8-8A9D75A3B445}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_synth_lead_solo01_bpm_165_4-4_16M" ID="{AEAC3318-F71D-46A5-8EC1-84D33F1F83D2}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_synth_lead_solo01_bpm_165_4-4_16M" ID="{A4DFE695-2DFB-4F0E-B5CE-6BA01DA20C05}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{8D06B794-B703-45EC-B19A-B34278A702A9}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_guitar_lead_solo_bpm_165_4-4_16M_wav" ID="{B8703D88-D56B-46C2-A753-141C8EDA3B89}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_guitar_lead_solo_bpm_165_4-4_16M_wav" ID="{FCCB3F99-5EF4-41F1-87A0-D7D7F1DA6739}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{2F89FAA2-58BE-4C58-BE56-3F5DA4EF3B1B}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_synth_lead_solo02_bpm_165_4-4_16M" ID="{0D239EAC-2A47-4C80-BBBD-DCFD1EC5C104}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_synth_lead_solo02_bpm_165_4-4_16M" ID="{DDDBDA0C-F774-41B0-BDBC-2C15EBDF5114}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{CC259C3C-AACF-4ACC-8DC9-8F6C446D13C1}"/>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{EE2F6E43-AA02-4E6D-807D-6D2E7DA9D075}"/>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{ED3E9C4D-058F-46F0-B4C6-AD21A6C5BF0E}"/>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{11DC78E6-CF93-47FC-91BA-986A75E02827}"/>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{0AB6F206-7C28-44A8-81D9-4B4B81A0630D}"/>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="Guitar Rhythm" ID="{2030409F-9DB5-45E5-8F53-4ABEC3731574}" ShortID="660473404">
+											<PropertyList>
+												<Property Name="MusicTrackType" Type="int16" Value="1"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-8</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7B5E4F5F-A382-4578-AF9C-C9A493363DF5}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{68E499CA-15D5-4C61-AC79-FCAAC7EE28D6}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_dungeons_guitar_rhythm_chords__bpm_165_4-4_16M_wav" ID="{C21882D4-30A7-4980-AE9C-05FF3A1281E4}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons_guitar_rhythm_chords__bpm_165_4-4_16M.wav.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="360602114"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="mus_dungeons_guitar_rhythm_chords_long_bpm_165_4-4_16M_wav" ID="{7DF779CF-54E0-4D61-B59D-A6586E8FB18D}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons_guitar_rhythm_chords_long_bpm_165_4-4_16M.wav.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="496225530"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="mus_dungeons_guitar_rhythm_chords_power_bpm_165_4-4_16M_wav" ID="{FB54A26D-8B00-4A68-8797-DE8BF32B6951}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons_guitar_rhythm_chords_power_bpm_165_4-4_16M.wav.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="979020422"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="mus_dungeons_guitar_rhythm_mute_funk_bpm_165_4-4_16M_wav" ID="{22E59ECF-D11B-4151-9364-70A0B81329B3}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons_guitar_rhythm_mute_funk_bpm_165_4-4_16M.wav.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="617499719"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="mus_dungeons_guitar_rhythm_mute_palm_bpm_165_4-4_16M" ID="{9EC4B095-9356-4BAB-BFC8-707F8E64060D}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons_guitar_rhythm_mute_palm_bpm_165_4-4_16M.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="324848001"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="mus_dungeons_guitar_rhythm_power_rhythm_bpm_165_4-4_16M" ID="{6EEAB4F6-9C0B-4197-A0F0-A23810F9FD95}">
+													<Language>SFX</Language>
+													<AudioFile>mus_dungeons_guitar_rhythm_power_rhythm_bpm_165_4-4_16M.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="863615306"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{65B0B092-FFD2-4B6E-92D0-976B5776FAC5}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_guitar_rhythm_chords__bpm_165_4-4_16M_wav" ID="{2721A921-A64F-4694-BEB5-EAE2E12437BE}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_guitar_rhythm_chords__bpm_165_4-4_16M_wav" ID="{C21882D4-30A7-4980-AE9C-05FF3A1281E4}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{F4989B82-3D79-49A4-A962-480EAB1A1F59}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_guitar_rhythm_chords_long_bpm_165_4-4_16M_wav" ID="{F4F0F4E4-DDCD-4B05-BE34-09BEA61BFC9B}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_guitar_rhythm_chords_long_bpm_165_4-4_16M_wav" ID="{7DF779CF-54E0-4D61-B59D-A6586E8FB18D}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{17789F01-66EF-4354-A1A8-C38FA3F609CA}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_guitar_rhythm_chords_power_bpm_165_4-4_16M_wav" ID="{554FF675-7619-4B26-B898-8FF591E317DE}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_guitar_rhythm_chords_power_bpm_165_4-4_16M_wav" ID="{FB54A26D-8B00-4A68-8797-DE8BF32B6951}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{9FCFE292-4826-45CF-AA87-22C98DF7AB3C}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_guitar_rhythm_mute_funk_bpm_165_4-4_16M_wav" ID="{E617138D-6E8C-4CEF-8158-87FBEB4F7C72}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_guitar_rhythm_mute_funk_bpm_165_4-4_16M_wav" ID="{22E59ECF-D11B-4151-9364-70A0B81329B3}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{53EFE26E-D590-41BF-ACF8-449457E2159B}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_guitar_rhythm_mute_palm_bpm_165_4-4_16M" ID="{DD4B8BAE-857B-4E1F-85B0-354E635B2AA4}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_guitar_rhythm_mute_palm_bpm_165_4-4_16M" ID="{9EC4B095-9356-4BAB-BFC8-707F8E64060D}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{12250B8E-67E4-4C1A-AFF0-CB4331EA5CC9}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_dungeons_guitar_rhythm_power_rhythm_bpm_165_4-4_16M" ID="{E9240AFB-ED38-48B3-B323-FF7816020B7B}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="26181.8333333333"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_dungeons_guitar_rhythm_power_rhythm_bpm_165_4-4_16M" ID="{6EEAB4F6-9C0B-4197-A0F0-A23810F9FD95}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{F099F21D-95CB-4A84-B2DD-581DA8DBCA5E}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{B974FF2F-8758-448D-9769-7080A90C099A}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="23272.7272727273"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+							</ChildrenList>
+						</MusicPlaylistContainer>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="PlayerStatus" ID="{306AABD8-E55E-47B1-A676-ECD02DA6A13E}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Dead" ID="{049C9A16-C3E8-4215-B257-9430833D0F0A}"/>
+								<CustomState Name="" ID="{7007C1DA-B7A9-4279-B0EC-E4BC9F1E7A15}" ShortID="740090468"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Alive" ID="{B1696563-4FE0-470C-9098-472520DAD3C2}"/>
+								<CustomState Name="" ID="{749A2B50-F996-42C2-9A5C-10752077A5CD}" ShortID="257553787"/>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 					<ObjectLists>
 						<ObjectList Name="Arguments">
 							<Reference>
 								<ObjectRef Name="MusicState" ID="{9ABF70A1-274B-4565-9838-E84465B41A9E}" WorkUnitID="{8C94B53F-F418-4C5E-A1DF-0CE27CEC860D}"/>
+							</Reference>
+							<Reference>
+								<ObjectRef Name="GameplayStatus" ID="{34FB17A7-5FD3-49AE-A6D9-0FCBA3B2D518}" WorkUnitID="{2AEE6FD0-60E0-4FF4-867E-61F7A80294FB}"/>
 							</Reference>
 						</ObjectList>
 						<ObjectList Name="Entries">
@@ -4926,41 +5936,8 @@
 												<Reference>
 													<ObjectRef Name="MusicState" ID="{9ABF70A1-274B-4565-9838-E84465B41A9E}" WorkUnitID="{8C94B53F-F418-4C5E-A1DF-0CE27CEC860D}"/>
 												</Reference>
-											</ObjectList>
-										</ObjectLists>
-									</MultiSwitchEntry>
-								</Local>
-							</Reference>
-							<Reference>
-								<Local>
-									<MultiSwitchEntry Name="" ID="{5651888F-935F-4F2D-A98D-2CD22F953F98}">
-										<ReferenceList>
-											<Reference Name="AudioNode">
-												<ObjectRef Name="Dungeons" ID="{42671B7E-710B-4C57-820E-23A847C57C70}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
-											</Reference>
-										</ReferenceList>
-										<ObjectLists>
-											<ObjectList Name="EntryPath">
 												<Reference>
-													<ObjectRef Name="Dungeon1" ID="{E2F08518-7AE9-424A-AED6-175926138EC0}" WorkUnitID="{8C94B53F-F418-4C5E-A1DF-0CE27CEC860D}"/>
-												</Reference>
-											</ObjectList>
-										</ObjectLists>
-									</MultiSwitchEntry>
-								</Local>
-							</Reference>
-							<Reference>
-								<Local>
-									<MultiSwitchEntry Name="" ID="{3E30C956-1D51-4E86-9A51-A8862E1063D5}">
-										<ReferenceList>
-											<Reference Name="AudioNode">
-												<ObjectRef Name="Dungeons" ID="{42671B7E-710B-4C57-820E-23A847C57C70}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
-											</Reference>
-										</ReferenceList>
-										<ObjectLists>
-											<ObjectList Name="EntryPath">
-												<Reference>
-													<ObjectRef Name="Dungeon2" ID="{6C0E0F62-C1BC-4F2C-B585-F610877EC128}" WorkUnitID="{8C94B53F-F418-4C5E-A1DF-0CE27CEC860D}"/>
+													<ObjectRef Name="GameplayStatus" ID="{34FB17A7-5FD3-49AE-A6D9-0FCBA3B2D518}" WorkUnitID="{2AEE6FD0-60E0-4FF4-867E-61F7A80294FB}"/>
 												</Reference>
 											</ObjectList>
 										</ObjectLists>
@@ -4980,6 +5957,9 @@
 												<Reference>
 													<ObjectRef Name="Dungeon3" ID="{523897CB-966A-41DE-9196-B9049F544951}" WorkUnitID="{8C94B53F-F418-4C5E-A1DF-0CE27CEC860D}"/>
 												</Reference>
+												<Reference>
+													<ObjectRef Name="GameplayStatus" ID="{34FB17A7-5FD3-49AE-A6D9-0FCBA3B2D518}" WorkUnitID="{2AEE6FD0-60E0-4FF4-867E-61F7A80294FB}"/>
+												</Reference>
 											</ObjectList>
 										</ObjectLists>
 									</MultiSwitchEntry>
@@ -4997,6 +5977,9 @@
 											<ObjectList Name="EntryPath">
 												<Reference>
 													<ObjectRef Name="Tutorial" ID="{9DDC4CD8-0E86-4970-A1A4-90649B7F50A6}" WorkUnitID="{8C94B53F-F418-4C5E-A1DF-0CE27CEC860D}"/>
+												</Reference>
+												<Reference>
+													<ObjectRef Name="GameplayStatus" ID="{34FB17A7-5FD3-49AE-A6D9-0FCBA3B2D518}" WorkUnitID="{2AEE6FD0-60E0-4FF4-867E-61F7A80294FB}"/>
 												</Reference>
 											</ObjectList>
 										</ObjectLists>
@@ -5016,6 +5999,9 @@
 												<Reference>
 													<ObjectRef Name="None" ID="{B42BC888-C4F5-4750-89B0-0886BDFCA55C}" WorkUnitID="{8C94B53F-F418-4C5E-A1DF-0CE27CEC860D}"/>
 												</Reference>
+												<Reference>
+													<ObjectRef Name="GameplayStatus" ID="{34FB17A7-5FD3-49AE-A6D9-0FCBA3B2D518}" WorkUnitID="{2AEE6FD0-60E0-4FF4-867E-61F7A80294FB}"/>
+												</Reference>
 											</ObjectList>
 										</ObjectLists>
 									</MultiSwitchEntry>
@@ -5033,6 +6019,513 @@
 											<ObjectList Name="EntryPath">
 												<Reference>
 													<ObjectRef Name="Village" ID="{B19D70E7-FB8B-4CB2-9EF8-13305456A991}" WorkUnitID="{8C94B53F-F418-4C5E-A1DF-0CE27CEC860D}"/>
+												</Reference>
+												<Reference>
+													<ObjectRef Name="GameplayStatus" ID="{34FB17A7-5FD3-49AE-A6D9-0FCBA3B2D518}" WorkUnitID="{2AEE6FD0-60E0-4FF4-867E-61F7A80294FB}"/>
+												</Reference>
+											</ObjectList>
+										</ObjectLists>
+									</MultiSwitchEntry>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MultiSwitchEntry Name="" ID="{B96A03BB-8A43-4EED-B292-81B03508E6A8}">
+										<ReferenceList>
+											<Reference Name="AudioNode">
+												<ObjectRef Name="DungeonsCombat" ID="{F53264AA-B42A-40D1-930D-8574F2EEB005}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+											</Reference>
+										</ReferenceList>
+										<ObjectLists>
+											<ObjectList Name="EntryPath">
+												<Reference>
+													<ObjectRef Name="Dungeon2" ID="{6C0E0F62-C1BC-4F2C-B585-F610877EC128}" WorkUnitID="{8C94B53F-F418-4C5E-A1DF-0CE27CEC860D}"/>
+												</Reference>
+												<Reference>
+													<ObjectRef Name="Combat" ID="{FBFB5449-185B-4490-A187-B1C989052DC5}" WorkUnitID="{2AEE6FD0-60E0-4FF4-867E-61F7A80294FB}"/>
+												</Reference>
+											</ObjectList>
+										</ObjectLists>
+									</MultiSwitchEntry>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MultiSwitchEntry Name="" ID="{9ED241AE-24EC-4896-A3C0-8BCCA0C98A75}">
+										<ReferenceList>
+											<Reference Name="AudioNode">
+												<ObjectRef Name="DnbCrazy" ID="{3FE41158-ABBF-4ECB-9B22-4BCFBDD4B924}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+											</Reference>
+										</ReferenceList>
+										<ObjectLists>
+											<ObjectList Name="EntryPath">
+												<Reference>
+													<ObjectRef Name="Dungeon1" ID="{E2F08518-7AE9-424A-AED6-175926138EC0}" WorkUnitID="{8C94B53F-F418-4C5E-A1DF-0CE27CEC860D}"/>
+												</Reference>
+												<Reference>
+													<ObjectRef Name="Combat" ID="{FBFB5449-185B-4490-A187-B1C989052DC5}" WorkUnitID="{2AEE6FD0-60E0-4FF4-867E-61F7A80294FB}"/>
+												</Reference>
+											</ObjectList>
+										</ObjectLists>
+									</MultiSwitchEntry>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MultiSwitchEntry Name="" ID="{8BB4C588-68D8-482B-8EB5-B94FC8AB0368}">
+										<ReferenceList>
+											<Reference Name="AudioNode">
+												<ObjectRef Name="Dungeons" ID="{42671B7E-710B-4C57-820E-23A847C57C70}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+											</Reference>
+										</ReferenceList>
+										<ObjectLists>
+											<ObjectList Name="EntryPath">
+												<Reference>
+													<ObjectRef Name="Dungeon1" ID="{E2F08518-7AE9-424A-AED6-175926138EC0}" WorkUnitID="{8C94B53F-F418-4C5E-A1DF-0CE27CEC860D}"/>
+												</Reference>
+												<Reference>
+													<ObjectRef Name="Explore" ID="{CB187DF8-138A-4101-A61B-72F1E3A403E7}" WorkUnitID="{2AEE6FD0-60E0-4FF4-867E-61F7A80294FB}"/>
+												</Reference>
+											</ObjectList>
+										</ObjectLists>
+									</MultiSwitchEntry>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MultiSwitchEntry Name="" ID="{C6ED2014-549B-4F76-88C7-D35955DF8B6A}">
+										<ReferenceList>
+											<Reference Name="AudioNode">
+												<ObjectRef Name="Dungeons" ID="{42671B7E-710B-4C57-820E-23A847C57C70}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+											</Reference>
+										</ReferenceList>
+										<ObjectLists>
+											<ObjectList Name="EntryPath">
+												<Reference>
+													<ObjectRef Name="Dungeon2" ID="{6C0E0F62-C1BC-4F2C-B585-F610877EC128}" WorkUnitID="{8C94B53F-F418-4C5E-A1DF-0CE27CEC860D}"/>
+												</Reference>
+												<Reference>
+													<ObjectRef Name="Explore" ID="{CB187DF8-138A-4101-A61B-72F1E3A403E7}" WorkUnitID="{2AEE6FD0-60E0-4FF4-867E-61F7A80294FB}"/>
+												</Reference>
+											</ObjectList>
+										</ObjectLists>
+									</MultiSwitchEntry>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MultiSwitchEntry Name="" ID="{7FCF8135-53F6-4E99-9371-E8F59A9265B7}">
+										<ReferenceList>
+											<Reference Name="AudioNode">
+												<ObjectRef Name="Dungeons" ID="{42671B7E-710B-4C57-820E-23A847C57C70}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+											</Reference>
+										</ReferenceList>
+										<ObjectLists>
+											<ObjectList Name="EntryPath">
+												<Reference>
+													<ObjectRef Name="Dungeon1" ID="{E2F08518-7AE9-424A-AED6-175926138EC0}" WorkUnitID="{8C94B53F-F418-4C5E-A1DF-0CE27CEC860D}"/>
+												</Reference>
+												<Reference>
+													<ObjectRef Name="None" ID="{02374B2D-9DDA-4DCE-94AA-D5FC0AD37D7E}" WorkUnitID="{2AEE6FD0-60E0-4FF4-867E-61F7A80294FB}"/>
+												</Reference>
+											</ObjectList>
+										</ObjectLists>
+									</MultiSwitchEntry>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MultiSwitchEntry Name="" ID="{10CE6B1F-A8A5-4C0B-BD28-4D05C590A2C8}">
+										<ReferenceList>
+											<Reference Name="AudioNode">
+												<ObjectRef Name="Dungeons" ID="{42671B7E-710B-4C57-820E-23A847C57C70}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+											</Reference>
+										</ReferenceList>
+										<ObjectLists>
+											<ObjectList Name="EntryPath">
+												<Reference>
+													<ObjectRef Name="Dungeon2" ID="{6C0E0F62-C1BC-4F2C-B585-F610877EC128}" WorkUnitID="{8C94B53F-F418-4C5E-A1DF-0CE27CEC860D}"/>
+												</Reference>
+												<Reference>
+													<ObjectRef Name="None" ID="{02374B2D-9DDA-4DCE-94AA-D5FC0AD37D7E}" WorkUnitID="{2AEE6FD0-60E0-4FF4-867E-61F7A80294FB}"/>
+												</Reference>
+											</ObjectList>
+										</ObjectLists>
+									</MultiSwitchEntry>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MultiSwitchEntry Name="" ID="{CCF04B31-6540-4AA5-A965-032AB1565E23}">
+										<ReferenceList>
+											<Reference Name="AudioNode">
+												<ObjectRef Name="Village" ID="{7A13AF6A-DCF4-4A34-8E34-5D4DF6C1825F}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+											</Reference>
+										</ReferenceList>
+										<ObjectLists>
+											<ObjectList Name="EntryPath">
+												<Reference>
+													<ObjectRef Name="Village" ID="{B19D70E7-FB8B-4CB2-9EF8-13305456A991}" WorkUnitID="{8C94B53F-F418-4C5E-A1DF-0CE27CEC860D}"/>
+												</Reference>
+												<Reference>
+													<ObjectRef Name="Explore" ID="{CB187DF8-138A-4101-A61B-72F1E3A403E7}" WorkUnitID="{2AEE6FD0-60E0-4FF4-867E-61F7A80294FB}"/>
+												</Reference>
+											</ObjectList>
+										</ObjectLists>
+									</MultiSwitchEntry>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MultiSwitchEntry Name="" ID="{A22712E6-CE9C-42C4-804D-4679939B4229}">
+										<ReferenceList>
+											<Reference Name="AudioNode">
+												<ObjectRef Name="Village" ID="{7A13AF6A-DCF4-4A34-8E34-5D4DF6C1825F}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+											</Reference>
+										</ReferenceList>
+										<ObjectLists>
+											<ObjectList Name="EntryPath">
+												<Reference>
+													<ObjectRef Name="Village" ID="{B19D70E7-FB8B-4CB2-9EF8-13305456A991}" WorkUnitID="{8C94B53F-F418-4C5E-A1DF-0CE27CEC860D}"/>
+												</Reference>
+												<Reference>
+													<ObjectRef Name="Combat" ID="{FBFB5449-185B-4490-A187-B1C989052DC5}" WorkUnitID="{2AEE6FD0-60E0-4FF4-867E-61F7A80294FB}"/>
+												</Reference>
+											</ObjectList>
+										</ObjectLists>
+									</MultiSwitchEntry>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MultiSwitchEntry Name="" ID="{621BB9CA-E341-4D45-8484-3B1ED1C445CE}">
+										<ReferenceList>
+											<Reference Name="AudioNode">
+												<ObjectRef Name="Village" ID="{7A13AF6A-DCF4-4A34-8E34-5D4DF6C1825F}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+											</Reference>
+										</ReferenceList>
+										<ObjectLists>
+											<ObjectList Name="EntryPath">
+												<Reference>
+													<ObjectRef Name="Village" ID="{B19D70E7-FB8B-4CB2-9EF8-13305456A991}" WorkUnitID="{8C94B53F-F418-4C5E-A1DF-0CE27CEC860D}"/>
+												</Reference>
+												<Reference>
+													<ObjectRef Name="None" ID="{02374B2D-9DDA-4DCE-94AA-D5FC0AD37D7E}" WorkUnitID="{2AEE6FD0-60E0-4FF4-867E-61F7A80294FB}"/>
+												</Reference>
+											</ObjectList>
+										</ObjectLists>
+									</MultiSwitchEntry>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MultiSwitchEntry Name="" ID="{104A2596-7592-4731-A062-635832160B32}">
+										<ReferenceList>
+											<Reference Name="AudioNode">
+												<ObjectRef Name="Dungeons" ID="{42671B7E-710B-4C57-820E-23A847C57C70}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+											</Reference>
+										</ReferenceList>
+										<ObjectLists>
+											<ObjectList Name="EntryPath">
+												<Reference>
+													<ObjectRef Name="Tutorial" ID="{9DDC4CD8-0E86-4970-A1A4-90649B7F50A6}" WorkUnitID="{8C94B53F-F418-4C5E-A1DF-0CE27CEC860D}"/>
+												</Reference>
+												<Reference>
+													<ObjectRef Name="Explore" ID="{CB187DF8-138A-4101-A61B-72F1E3A403E7}" WorkUnitID="{2AEE6FD0-60E0-4FF4-867E-61F7A80294FB}"/>
+												</Reference>
+											</ObjectList>
+										</ObjectLists>
+									</MultiSwitchEntry>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MultiSwitchEntry Name="" ID="{4FFA253D-6AF8-404A-A9F7-EF83AA5CADA9}">
+										<ReferenceList>
+											<Reference Name="AudioNode">
+												<ObjectRef Name="Dungeons" ID="{42671B7E-710B-4C57-820E-23A847C57C70}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+											</Reference>
+										</ReferenceList>
+										<ObjectLists>
+											<ObjectList Name="EntryPath">
+												<Reference>
+													<ObjectRef Name="Tutorial" ID="{9DDC4CD8-0E86-4970-A1A4-90649B7F50A6}" WorkUnitID="{8C94B53F-F418-4C5E-A1DF-0CE27CEC860D}"/>
+												</Reference>
+												<Reference>
+													<ObjectRef Name="Combat" ID="{FBFB5449-185B-4490-A187-B1C989052DC5}" WorkUnitID="{2AEE6FD0-60E0-4FF4-867E-61F7A80294FB}"/>
+												</Reference>
+											</ObjectList>
+										</ObjectLists>
+									</MultiSwitchEntry>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MultiSwitchEntry Name="" ID="{5904974C-92AA-4586-8C51-EADAC90E8362}">
+										<ReferenceList>
+											<Reference Name="AudioNode">
+												<ObjectRef Name="Village" ID="{7A13AF6A-DCF4-4A34-8E34-5D4DF6C1825F}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+											</Reference>
+										</ReferenceList>
+										<ObjectLists>
+											<ObjectList Name="EntryPath">
+												<Reference>
+													<ObjectRef Name="Tutorial" ID="{9DDC4CD8-0E86-4970-A1A4-90649B7F50A6}" WorkUnitID="{8C94B53F-F418-4C5E-A1DF-0CE27CEC860D}"/>
+												</Reference>
+												<Reference>
+													<ObjectRef Name="None" ID="{02374B2D-9DDA-4DCE-94AA-D5FC0AD37D7E}" WorkUnitID="{2AEE6FD0-60E0-4FF4-867E-61F7A80294FB}"/>
+												</Reference>
+											</ObjectList>
+										</ObjectLists>
+									</MultiSwitchEntry>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MultiSwitchEntry Name="" ID="{13C45013-11FB-4E69-913D-CA309FDA4BC0}">
+										<ReferenceList>
+											<Reference Name="AudioNode">
+												<ObjectRef Name="Village" ID="{7A13AF6A-DCF4-4A34-8E34-5D4DF6C1825F}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+											</Reference>
+										</ReferenceList>
+										<ObjectLists>
+											<ObjectList Name="EntryPath">
+												<Reference>
+													<ObjectRef Name="None" ID="{B42BC888-C4F5-4750-89B0-0886BDFCA55C}" WorkUnitID="{8C94B53F-F418-4C5E-A1DF-0CE27CEC860D}"/>
+												</Reference>
+												<Reference>
+													<ObjectRef Name="Explore" ID="{CB187DF8-138A-4101-A61B-72F1E3A403E7}" WorkUnitID="{2AEE6FD0-60E0-4FF4-867E-61F7A80294FB}"/>
+												</Reference>
+											</ObjectList>
+										</ObjectLists>
+									</MultiSwitchEntry>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MultiSwitchEntry Name="" ID="{50340DC2-BF8C-4D72-B21E-36B61912C04C}">
+										<ReferenceList>
+											<Reference Name="AudioNode">
+												<ObjectRef Name="Village" ID="{7A13AF6A-DCF4-4A34-8E34-5D4DF6C1825F}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+											</Reference>
+										</ReferenceList>
+										<ObjectLists>
+											<ObjectList Name="EntryPath">
+												<Reference>
+													<ObjectRef Name="None" ID="{B42BC888-C4F5-4750-89B0-0886BDFCA55C}" WorkUnitID="{8C94B53F-F418-4C5E-A1DF-0CE27CEC860D}"/>
+												</Reference>
+												<Reference>
+													<ObjectRef Name="Combat" ID="{FBFB5449-185B-4490-A187-B1C989052DC5}" WorkUnitID="{2AEE6FD0-60E0-4FF4-867E-61F7A80294FB}"/>
+												</Reference>
+											</ObjectList>
+										</ObjectLists>
+									</MultiSwitchEntry>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MultiSwitchEntry Name="" ID="{FA2A35D5-F394-4C2F-89C0-7B2ACA7D7857}">
+										<ReferenceList>
+											<Reference Name="AudioNode">
+												<ObjectRef Name="Village" ID="{7A13AF6A-DCF4-4A34-8E34-5D4DF6C1825F}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+											</Reference>
+										</ReferenceList>
+										<ObjectLists>
+											<ObjectList Name="EntryPath">
+												<Reference>
+													<ObjectRef Name="None" ID="{B42BC888-C4F5-4750-89B0-0886BDFCA55C}" WorkUnitID="{8C94B53F-F418-4C5E-A1DF-0CE27CEC860D}"/>
+												</Reference>
+												<Reference>
+													<ObjectRef Name="None" ID="{02374B2D-9DDA-4DCE-94AA-D5FC0AD37D7E}" WorkUnitID="{2AEE6FD0-60E0-4FF4-867E-61F7A80294FB}"/>
+												</Reference>
+											</ObjectList>
+										</ObjectLists>
+									</MultiSwitchEntry>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MultiSwitchEntry Name="" ID="{88788062-B5E1-4CB0-B876-87E699A36075}">
+										<ReferenceList>
+											<Reference Name="AudioNode">
+												<ObjectRef Name="Boss" ID="{FAEE64E4-22F0-4070-B3C0-23CCDF17CA88}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+											</Reference>
+										</ReferenceList>
+										<ObjectLists>
+											<ObjectList Name="EntryPath">
+												<Reference>
+													<ObjectRef Name="Boss" ID="{DFCEDA1B-747B-4DF9-B420-E009B2585F1D}" WorkUnitID="{8C94B53F-F418-4C5E-A1DF-0CE27CEC860D}"/>
+												</Reference>
+												<Reference>
+													<ObjectRef Name="Explore" ID="{CB187DF8-138A-4101-A61B-72F1E3A403E7}" WorkUnitID="{2AEE6FD0-60E0-4FF4-867E-61F7A80294FB}"/>
+												</Reference>
+											</ObjectList>
+										</ObjectLists>
+									</MultiSwitchEntry>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MultiSwitchEntry Name="" ID="{668DD060-8C3F-4952-A557-10F5F30FABF5}">
+										<ReferenceList>
+											<Reference Name="AudioNode">
+												<ObjectRef Name="Boss" ID="{FAEE64E4-22F0-4070-B3C0-23CCDF17CA88}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+											</Reference>
+										</ReferenceList>
+										<ObjectLists>
+											<ObjectList Name="EntryPath">
+												<Reference>
+													<ObjectRef Name="Dungeon3" ID="{523897CB-966A-41DE-9196-B9049F544951}" WorkUnitID="{8C94B53F-F418-4C5E-A1DF-0CE27CEC860D}"/>
+												</Reference>
+												<Reference>
+													<ObjectRef Name="Explore" ID="{CB187DF8-138A-4101-A61B-72F1E3A403E7}" WorkUnitID="{2AEE6FD0-60E0-4FF4-867E-61F7A80294FB}"/>
+												</Reference>
+											</ObjectList>
+										</ObjectLists>
+									</MultiSwitchEntry>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MultiSwitchEntry Name="" ID="{E887EBC3-68B9-43F2-84AD-04C5BE548155}">
+										<ReferenceList>
+											<Reference Name="AudioNode">
+												<ObjectRef Name="Boss" ID="{FAEE64E4-22F0-4070-B3C0-23CCDF17CA88}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+											</Reference>
+										</ReferenceList>
+										<ObjectLists>
+											<ObjectList Name="EntryPath">
+												<Reference>
+													<ObjectRef Name="Boss" ID="{DFCEDA1B-747B-4DF9-B420-E009B2585F1D}" WorkUnitID="{8C94B53F-F418-4C5E-A1DF-0CE27CEC860D}"/>
+												</Reference>
+												<Reference>
+													<ObjectRef Name="Combat" ID="{FBFB5449-185B-4490-A187-B1C989052DC5}" WorkUnitID="{2AEE6FD0-60E0-4FF4-867E-61F7A80294FB}"/>
+												</Reference>
+											</ObjectList>
+										</ObjectLists>
+									</MultiSwitchEntry>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MultiSwitchEntry Name="" ID="{95C1E6EB-B1C0-4E2C-86B6-48DCD73C5541}">
+										<ReferenceList>
+											<Reference Name="AudioNode">
+												<ObjectRef Name="Boss" ID="{FAEE64E4-22F0-4070-B3C0-23CCDF17CA88}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+											</Reference>
+										</ReferenceList>
+										<ObjectLists>
+											<ObjectList Name="EntryPath">
+												<Reference>
+													<ObjectRef Name="Dungeon3" ID="{523897CB-966A-41DE-9196-B9049F544951}" WorkUnitID="{8C94B53F-F418-4C5E-A1DF-0CE27CEC860D}"/>
+												</Reference>
+												<Reference>
+													<ObjectRef Name="Combat" ID="{FBFB5449-185B-4490-A187-B1C989052DC5}" WorkUnitID="{2AEE6FD0-60E0-4FF4-867E-61F7A80294FB}"/>
+												</Reference>
+											</ObjectList>
+										</ObjectLists>
+									</MultiSwitchEntry>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MultiSwitchEntry Name="" ID="{E9DEEEBC-3E07-42BF-9C8F-711FFBB010A9}">
+										<ReferenceList>
+											<Reference Name="AudioNode">
+												<ObjectRef Name="Dungeons" ID="{42671B7E-710B-4C57-820E-23A847C57C70}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+											</Reference>
+										</ReferenceList>
+										<ObjectLists>
+											<ObjectList Name="EntryPath">
+												<Reference>
+													<ObjectRef Name="Dungeon2" ID="{6C0E0F62-C1BC-4F2C-B585-F610877EC128}" WorkUnitID="{8C94B53F-F418-4C5E-A1DF-0CE27CEC860D}"/>
+												</Reference>
+												<Reference>
+													<ObjectRef Name="GameplayStatus" ID="{34FB17A7-5FD3-49AE-A6D9-0FCBA3B2D518}" WorkUnitID="{2AEE6FD0-60E0-4FF4-867E-61F7A80294FB}"/>
+												</Reference>
+											</ObjectList>
+										</ObjectLists>
+									</MultiSwitchEntry>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MultiSwitchEntry Name="" ID="{11D8DBDF-7E86-461B-B2EE-CA81F31F4CE6}">
+										<ReferenceList>
+											<Reference Name="AudioNode">
+												<ObjectRef Name="Boss" ID="{FAEE64E4-22F0-4070-B3C0-23CCDF17CA88}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+											</Reference>
+										</ReferenceList>
+										<ObjectLists>
+											<ObjectList Name="EntryPath">
+												<Reference>
+													<ObjectRef Name="Boss" ID="{DFCEDA1B-747B-4DF9-B420-E009B2585F1D}" WorkUnitID="{8C94B53F-F418-4C5E-A1DF-0CE27CEC860D}"/>
+												</Reference>
+												<Reference>
+													<ObjectRef Name="GameplayStatus" ID="{34FB17A7-5FD3-49AE-A6D9-0FCBA3B2D518}" WorkUnitID="{2AEE6FD0-60E0-4FF4-867E-61F7A80294FB}"/>
+												</Reference>
+											</ObjectList>
+										</ObjectLists>
+									</MultiSwitchEntry>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MultiSwitchEntry Name="" ID="{37A734AA-32BC-4545-8B8E-AB4942D834E4}">
+										<ReferenceList>
+											<Reference Name="AudioNode">
+												<ObjectRef Name="Dungeons" ID="{42671B7E-710B-4C57-820E-23A847C57C70}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+											</Reference>
+										</ReferenceList>
+										<ObjectLists>
+											<ObjectList Name="EntryPath">
+												<Reference>
+													<ObjectRef Name="Dungeon1" ID="{E2F08518-7AE9-424A-AED6-175926138EC0}" WorkUnitID="{8C94B53F-F418-4C5E-A1DF-0CE27CEC860D}"/>
+												</Reference>
+												<Reference>
+													<ObjectRef Name="GameplayStatus" ID="{34FB17A7-5FD3-49AE-A6D9-0FCBA3B2D518}" WorkUnitID="{2AEE6FD0-60E0-4FF4-867E-61F7A80294FB}"/>
+												</Reference>
+											</ObjectList>
+										</ObjectLists>
+									</MultiSwitchEntry>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MultiSwitchEntry Name="" ID="{0D050D51-4085-49EE-B80B-DBA41131B1A4}">
+										<ReferenceList>
+											<Reference Name="AudioNode">
+												<ObjectRef Name="Boss" ID="{FAEE64E4-22F0-4070-B3C0-23CCDF17CA88}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+											</Reference>
+										</ReferenceList>
+										<ObjectLists>
+											<ObjectList Name="EntryPath">
+												<Reference>
+													<ObjectRef Name="Boss" ID="{DFCEDA1B-747B-4DF9-B420-E009B2585F1D}" WorkUnitID="{8C94B53F-F418-4C5E-A1DF-0CE27CEC860D}"/>
+												</Reference>
+												<Reference>
+													<ObjectRef Name="None" ID="{02374B2D-9DDA-4DCE-94AA-D5FC0AD37D7E}" WorkUnitID="{2AEE6FD0-60E0-4FF4-867E-61F7A80294FB}"/>
+												</Reference>
+											</ObjectList>
+										</ObjectLists>
+									</MultiSwitchEntry>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MultiSwitchEntry Name="" ID="{443B3659-53B6-466B-8E7B-F1C5BAB2B2A9}">
+										<ReferenceList>
+											<Reference Name="AudioNode">
+												<ObjectRef Name="Boss" ID="{FAEE64E4-22F0-4070-B3C0-23CCDF17CA88}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+											</Reference>
+										</ReferenceList>
+										<ObjectLists>
+											<ObjectList Name="EntryPath">
+												<Reference>
+													<ObjectRef Name="Dungeon3" ID="{523897CB-966A-41DE-9196-B9049F544951}" WorkUnitID="{8C94B53F-F418-4C5E-A1DF-0CE27CEC860D}"/>
+												</Reference>
+												<Reference>
+													<ObjectRef Name="None" ID="{02374B2D-9DDA-4DCE-94AA-D5FC0AD37D7E}" WorkUnitID="{2AEE6FD0-60E0-4FF4-867E-61F7A80294FB}"/>
 												</Reference>
 											</ObjectList>
 										</ObjectLists>
