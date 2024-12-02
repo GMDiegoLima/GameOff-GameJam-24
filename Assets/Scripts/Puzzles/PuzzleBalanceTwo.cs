@@ -94,6 +94,7 @@ public class PuzzleBalanceTwo : MonoBehaviour
     {
         if (other.CompareTag("Item"))
         {
+            player.isInteractingWithBalance = true;
             canAdd = true;
             addWeightText.enabled = true;
             item = other.gameObject;
@@ -104,6 +105,7 @@ public class PuzzleBalanceTwo : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
+        player.isInteractingWithBalance = false;
         canAdd = false;
         addWeightText.enabled = false;
     }

@@ -50,6 +50,7 @@ public class PlayerController : MonoBehaviour
     public GameObject gameOver;
 
     public GameObject heldItem = null;
+    public bool isInteractingWithBalance = false;
     public Transform glassesPosition;
     public Transform itemHoldPosition;
     List<GameObject> nearbyItems = new List<GameObject>();
@@ -153,6 +154,8 @@ public class PlayerController : MonoBehaviour
                 }
                 if (Input.GetKeyDown(dropKey) && heldItem != null)
                 {
+                    if (isInteractingWithBalance)
+                    {return;}
                     DropItem();
                 }
                 if (heldItem != null)

@@ -8844,6 +8844,7 @@ MonoBehaviour:
   flying: 0
   gameOver: {fileID: 1225693969533668786}
   heldItem: {fileID: 0}
+  isInteractingWithBalance: 0
   glassesPosition: {fileID: 6635667433717572709}
   itemHoldPosition: {fileID: 8366464045760755937}
   stepInterval: 0.3
@@ -8890,7 +8891,7 @@ MonoBehaviour:
     m_Bits: 128
   bonePrefab: {fileID: 8306940293054401521, guid: 2b005f546af4c4ba7b3a68764b4e449f, type: 3}
   blowForce: 5
-  throwForce: 3
+  throwForce: 10
   attackCDTimer: 0
 --- !u!114 &3666151093451807533
 MonoBehaviour:

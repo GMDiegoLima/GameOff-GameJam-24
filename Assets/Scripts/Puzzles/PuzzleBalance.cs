@@ -18,6 +18,7 @@ public class PuzzleBalance : MonoBehaviour
     int checkWeight = 0;
     bool canAdd;
     GameObject item;
+    Collider2D collider;
     Collider2D itemCollider;
     List<int> weights = new List<int>();
     public UnityEvent onPuzzleSolved;
@@ -27,6 +28,8 @@ public class PuzzleBalance : MonoBehaviour
     {
         plateOrigin = plate.transform.position;
         weightIndicator.SetActive(false);
+        collider = GetComponent<Collider2D>();
+        collider.enabled = true;
     }
 
     void Update()
@@ -88,6 +91,7 @@ public class PuzzleBalance : MonoBehaviour
     {
         if (other.CompareTag("Item"))
         {
+            player.isInteractingWithBalance = true;
             canAdd = true;
             addWeightText.enabled = true;
             item = other.gameObject;
@@ -98,6 +102,7 @@ public class PuzzleBalance : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
+        player.isInteractingWithBalance = false;
         canAdd = false;
         addWeightText.enabled = false;
     }
