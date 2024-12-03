@@ -1299,6 +1299,15 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="sfx_obj_spike_trap" ID="{6EADD1D7-99C8-423F-BB0A-D1CBACF5FF6A}" ShortID="150377596">
+							<PropertyList>
+								<Property Name="AttenuationDistanceScaling" Type="Real32" Value="0.45"/>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
 									<ObjectRef Name="traps" ID="{CEAA53AA-4969-4B57-BC15-B42445CB9C37}" WorkUnitID="{0E4421BD-92FF-48EE-AA81-677D0239E88B}"/>
@@ -1495,7 +1504,6 @@
 						</RandomSequenceContainer>
 						<Sound Name="sfx_obj_door" ID="{72CD6533-A0EC-4FC2-A1A1-4FC4F1F40F65}" ShortID="867480429">
 							<PropertyList>
-								<Property Name="AttenuationDistanceScaling" Type="Real32" Value="0.4"/>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
 								<Property Name="MaxSoundPerInstance" Type="int16">

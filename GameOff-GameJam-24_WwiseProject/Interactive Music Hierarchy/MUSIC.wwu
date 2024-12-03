@@ -709,6 +709,11 @@
 						<MusicPlaylistContainer Name="Boss" ID="{FAEE64E4-22F0-4070-B3C0-23CCDF17CA88}" ShortID="411101874">
 							<PropertyList>
 								<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -6264,7 +6269,7 @@
 									<MultiSwitchEntry Name="" ID="{5904974C-92AA-4586-8C51-EADAC90E8362}">
 										<ReferenceList>
 											<Reference Name="AudioNode">
-												<ObjectRef Name="Village" ID="{7A13AF6A-DCF4-4A34-8E34-5D4DF6C1825F}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
+												<ObjectRef Name="Dungeons" ID="{42671B7E-710B-4C57-820E-23A847C57C70}" WorkUnitID="{6C48BA93-C11A-4183-AF15-128C86EE74B6}"/>
 											</Reference>
 										</ReferenceList>
 										<ObjectLists>
