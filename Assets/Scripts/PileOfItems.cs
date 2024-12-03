@@ -14,6 +14,7 @@ public class PileOfItems : MonoBehaviour
             if (item != null)
             {
                 GameObject spawnedItem = Instantiate(item, transform.position, Quaternion.identity);
+                item = spawnedItem;
                 spawnedItemCollider = spawnedItem.GetComponent<Collider2D>();
                 switch (item.name)
                 {

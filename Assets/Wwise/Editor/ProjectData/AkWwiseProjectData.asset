@@ -686,8 +686,8 @@ MonoBehaviour:
         guid: 34c3b1de06357b4c87d400bd4ff6d19c
       Path: Events\Sfx\Creatures_npcs\skeleton\skeleton_attack
       maxAttenuation: 0
-      maxDuration: 0.24310416
-      minDuration: 0.24310416
+      maxDuration: 1.6533333
+      minDuration: 1.6533333
     - name: wolf
       guid: 2dab92ddb927404f857929765794ad8e
       id: 2041272125
@@ -1034,7 +1034,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 7a7d38c86f6bda4aa4cd3b80d3dac471
       Path: Events\Sfx\Objects\door_opens
-      maxAttenuation: 70
+      maxAttenuation: 28
       maxDuration: 0
       minDuration: 0
     - name: door_opens_stop

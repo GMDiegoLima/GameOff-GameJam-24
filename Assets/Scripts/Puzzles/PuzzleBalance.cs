@@ -77,6 +77,7 @@ public class PuzzleBalance : MonoBehaviour
     {
         weights.Clear();
         checkWeight = 0;
+        weightIndicatorText.text = "0";
         plate.transform.position = plateOrigin;
         foreach (Transform weightPosition in weightsPositions)
         {
