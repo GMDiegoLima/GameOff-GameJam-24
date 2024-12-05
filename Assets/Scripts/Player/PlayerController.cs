@@ -304,6 +304,7 @@ public class PlayerController : MonoBehaviour
     {
         AkSoundEngine.PostEvent("item_drop", gameObject);
         heldItem.transform.SetParent(null);
+        nearbyItems.Remove(heldItem);
         heldItem = null;
     }
 
